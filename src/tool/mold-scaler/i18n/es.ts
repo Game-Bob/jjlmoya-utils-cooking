@@ -2,11 +2,11 @@ import type { ToolLocaleContent } from '../../../types';
 
 export const content: ToolLocaleContent = {
 	slug: 'escalador-moldes',
-	title: 'Escalador de Moldes para Repostería',
+	title: 'Calculadora para Escalar Moldes de Repostería',
 	description:
-		'Calcula automáticamente el factor multiplicador de ingredientes al cambiar de molde. Soporta moldes redondos, cuadrados y rectangulares.',
-	faqTitle: 'Preguntas Frecuentes',
-	bibliographyTitle: 'Referencias',
+		'Adapta cualquier receta de repostería a tus moldes. Calcula automáticamente el factor de conversión para moldes redondos, cuadrados y rectangulares con precisión profesional.',
+	faqTitle: 'Preguntas Frecuentes sobre el Escalado',
+	bibliographyTitle: 'Fuentes y Referencias Científicas',
 
 	ui: {
 		originalRecipe: 'Receta Original',
@@ -39,148 +39,141 @@ export const content: ToolLocaleContent = {
 
 	faq: [
 		{
-			question: '¿Cómo calcula el escalador el factor multiplicador?',
+			question: '¿Cómo funciona exactamente el factor multiplicador?',
 			answer:
-				'Calcula el área total de cada molde: para moldes redondos usa π×r², para cuadrados lado², y para rectangulares ancho×largo. El factor es la razón entre el área del molde objetivo y la del original.',
+				'El factor se obtiene dividiendo el área de tu molde objetivo entre el área del molde de la receta original. Si el resultado es 1.5, significa que debes multiplicar cada ingrediente por esa cifra para obtener el volumen correcto.',
 		},
 		{
-			question: '¿Puedo cambiar entre diferentes formas de molde?',
+			question: '¿Puedo convertir un molde redondo a uno cuadrado?',
 			answer:
-				'Sí, completamente. Puedes cambiar el molde original de redondo a rectangular, y tu molde objetivo de cuadrado a redondo. El cálculo se actualiza automáticamente.',
+				'Sí, la herramienta utiliza fórmulas geométricas precisas para comparar superficies sin importar la forma. Solo introduce las medidas y el sistema hará la equivalencia de áreas automáticamente.',
 		},
 		{
-			question: '¿Qué pasa si los moldes tienen la misma área?',
+			question: '¿Qué ocurre con la altura de los moldes?',
 			answer:
-				'Si tienen la misma área, el factor multiplicador será x1.00 y podrás usar exactamente las mismas cantidades de ingredientes sin modificación.',
+				'Esta herramienta se centra en el área de la base, que es el factor más crítico. Si tu molde es significativamente más alto o bajo que el original, podrías necesitar un pequeño ajuste adicional en el tiempo de horneado.',
 		},
 		{
-			question: '¿Cómo añado más ingredientes?',
+			question: '¿Cómo añado ingredientes a la lista?',
 			answer:
-				'Haz clic en "Añadir Ingrediente" y aparecerá un nuevo campo. Escribe el nombre del ingrediente y su peso original en gramos. El sistema calculará automáticamente la cantidad final basada en el factor.',
+				'Haz clic en el botón inferior para añadir una nueva fila. Escribe el nombre y el peso original; la columna final se actualizará instantáneamente con la cantidad escalada.',
 		},
 		{
-			question: '¿Puedo editar los nombres de los ingredientes?',
+			question: '¿Es fiable el escalado para moldes muy grandes?',
 			answer:
-				'Sí, todos los campos son editables. Cambia el nombre del ingrediente, el peso original, y la cantidad final se recalculará automáticamente cuando cambies el factor.',
+				'Matemáticamente es exacto, pero ten en cuenta que los pasteles muy grandes tardan más en cocinarse en el centro y pueden necesitar una temperatura ligeramente inferior para evitar que se quemen los bordes.',
 		},
 	],
 
 	bibliography: [
 		{
-			name: 'Ciencia de la Repostería: Escalado de Recetas',
-			url: 'https://www.scienceofdough.com/',
+			name: 'Baking Science and Technology - E.J. Pyler',
+			url: 'https://www.bakingbusiness.com/',
 		},
 		{
-			name: 'Professional Pastry Chef - The Culinary Institute of America',
-			url: 'https://www.ciachef.edu/',
+			name: 'The Professional Pastry Chef - Bo Friberg',
+			url: 'https://www.wiley.com/',
 		},
 	],
 
 	howTo: [
 		{
-			name: 'Selecciona la forma del molde original',
-			text: 'Elige si tu molde original es redondo, cuadrado o rectangular.',
+			name: 'Define el molde de la receta',
+			text: 'Selecciona la forma y dimensiones del molde para el que está diseñada originalmente la receta que quieres preparar.',
 		},
 		{
-			name: 'Ingresa las dimensiones',
-			text: 'Introduce el diámetro (redondo), lado (cuadrado) o ancho y largo (rectangular) en centímetros.',
+			name: 'Configura tu propio molde',
+			text: 'Introduce las medidas del molde que tienes en casa. El sistema calculará el factor de conversión inmediatamente.',
 		},
 		{
-			name: 'Configura tu molde objetivo',
-			text: 'Selecciona la forma y dimensiones del molde que quieres usar para la receta escalada.',
+			name: 'Utiliza la calculadora de ingredientes',
+			text: 'Añade los ingredientes de tu receta para ver las cantidades exactas que necesitas para que el pastel tenga el mismo grosor.',
 		},
 		{
-			name: 'Observa el factor y ajusta ingredientes',
-			text: 'El sistema mostrará automáticamente el factor multiplicador y te permitirá añadir ingredientes para calcular sus cantidades finales.',
+			name: 'Ajusta el horneado',
+			text: 'Recuerda que un cambio de tamaño suele implicar una variación en el tiempo de horno aunque la temperatura sea la misma.',
 		},
 	],
 
 	seo: [
 		{
 			type: 'title',
-			text: 'Escalado Profesional de Recetas de Repostería',
+			text: 'Guía Avanzada para Escalar Recetas según el Molde',
 			level: 2,
 		},
 		{
 			type: 'paragraph',
-			html: 'En repostería, el escalado de recetas no es tan simple como multiplicar cada ingrediente por una constante. El verdadero desafío radica en entender cómo los <strong>moldes de diferentes tamaños y formas</strong> afectan la proporción de ingredientes y, por lo tanto, el resultado final del pastel, tarta o postre.',
+			html: 'Convertir las cantidades de una receta para un molde diferente es una de las tareas más comunes y, a la vez, más propensas a errores en la repostería profesional. No se trata simplemente de sumar un poco más de cada cosa, sino de respetar las <strong>proporciones geométricas</strong> para mantener la textura y el punto de cocción ideales.',
 		},
 		{
-			type: 'paragraph',
-			html: 'Una receta diseñada para un molde redondo de 20 cm de diámetro no puede simplemente multiplicarse por 1.5 cuando usas un molde de 25 cm. El cálculo correcto requiere entender <strong>geometría y proporciones de área</strong>.',
+			type: 'diagnostic',
+			variant: 'info',
+			title: 'El Secreto del Área',
+			html: 'El secreto de un buen escalado reside en el área, no en el diámetro. Un aumento del 25% en el diámetro de un molde redondo casi duplica su superficie total.',
 		},
 		{
 			type: 'title',
-			text: 'Fundamentos Matemáticos del Escalado',
+			text: 'Fundamentos Matemáticos del Escalado de Superficies',
 			level: 3,
 		},
 		{
 			type: 'paragraph',
-			html: 'El factor multiplicador se basa en la <strong>razón de áreas</strong> entre los moldes. Si el molde objetivo tiene el doble de área que el original, necesitarás multiplicar cada ingrediente por 2 (aproximadamente). Para moldes circulares, el área se calcula como A = π × r², donde r es el radio. Un cambio de diámetro implica un cambio cuadrático en área, no lineal.',
+			html: 'Para calcular el factor de conversión adecuado, debemos comparar las áreas de la base de ambos moldes siguiendo estas fórmulas estándar:',
 		},
 		{
 			type: 'table',
-			headers: ['Forma', 'Fórmula de Área', 'Ejemplo'],
+			headers: ['Forma de Molde', 'Fórmula de Área', 'Consideración Clave'],
 			rows: [
-				['Redondo', 'π × r²', 'r = 10 cm → 314.16 cm²'],
-				['Cuadrado', 'lado²', 'lado = 20 cm → 400 cm²'],
-				['Rectangular', 'ancho × largo', 'ancho = 20 cm, largo = 30 cm → 600 cm²'],
+				['Circular', 'π × Radio²', 'El radio es la mitad del diámetro'],
+				['Cuadrado', 'Lado × Lado', 'Misma medida para ambos ejes'],
+				['Rectangular', 'Ancho × Largo', 'Ideal para bandejas y brownies'],
 			],
 		},
 		{
 			type: 'title',
-			text: 'Por Qué No Puedes Simplemente Multiplicar Ingredientes',
+			text: 'Errores Comunes al Cambiar el Tamaño de un Pastel',
 			level: 3,
 		},
 		{
 			type: 'paragraph',
-			html: 'Muchos panaderos principiantes cometen el error de multiplicar todos los ingredientes de forma lineal. Por ejemplo, si duplican el tamaño del molde, multiplican cada ingrediente por 2. <strong>Esto es matemáticamente incorrecto</strong> cuando el cambio es en área, no en volumen lineal.',
-		},
-		{
-			type: 'paragraph',
-			html: 'Los factores que se ven afectados de manera <strong>no lineal</strong> incluyen el tiempo de cocción (que puede variar no proporcionalmente con el tamaño), la distribución del calor, y en ciertos casos, la concentración de ingredientes químicos activos como levadura o polvo de hornear.',
-		},
-		{
-			type: 'title',
-			text: 'Aplicación Práctica: Ejemplo Detallado',
-			level: 3,
-		},
-		{
-			type: 'paragraph',
-			html: 'Imagine que tiene una receta para un molde redondo de 20 cm de diámetro (radio = 10 cm, área = 314.16 cm²). Ahora quiere usar un molde redondo de 25 cm de diámetro (radio = 12.5 cm, área = 490.87 cm²).',
-		},
-		{
-			type: 'paragraph',
-			html: 'El factor multiplicador es: 490.87 ÷ 314.16 = <strong>1.56</strong>. Si la receta original lleva 200 g de harina, necesitarás 200 × 1.56 = <strong>312 g</strong> de harina, no 250 g como erróneamente podrías pensar al pensar en un aumento del 25% en diámetro.',
-		},
-		{
-			type: 'title',
-			text: 'Moldes Rectangulares: Complejidad Adicional',
-			level: 3,
-		},
-		{
-			type: 'paragraph',
-			html: 'Cuando cambias de un molde redondo a uno rectangular (o viceversa), además de considerar el área, debes tener en cuenta cómo la <strong>forma afecta la distribución del calor</strong> durante el horneado. Un pastel en un molde rectangular estrecho será más alto y cocerá diferente que el mismo volumen en un molde redondo ancho.',
-		},
-		{
-			type: 'title',
-			text: 'Ajustes Adicionales Más Allá del Escalado',
-			level: 2,
+			html: 'Muchos aficionados cometen el error de escalar los ingredientes de forma lineal basándose en el diámetro. Evita estos fallos típicos para asegurar el éxito en tu cocina:',
 		},
 		{
 			type: 'list',
 			items: [
-				'<strong>Tiempo de cocción:</strong> Aumenta en un 10-25% si el molde es significativamente más grande. Usa un palillo o termómetro para verificar el punto de cocción.',
-				'<strong>Temperatura:</strong> Algunos panaderos reducen la temperatura en 10-15°C para moldes muy grandes, permitiendo que el centro se cocine sin que los bordes se quemen.',
-				'<strong>Levaduras y agentes activos:</strong> Si usas polvo de hornear o levadura, el escalado puede requerir ajustes. No todos los ingredientes activos escalan linealmente con el área.',
-				'<strong>Humedad:</strong> Un molde más grande puede perder humedad diferente. Considera cubrir con papel aluminio si es necesario.',
+				'<strong>Escalado lineal:</strong> Doblar el diámetro no dobla los ingredientes, los cuadruplica.',
+				'<strong>Ignorar la altura:</strong> Si el molde es más profundo, el centro tardará mucho más en cocinarse.',
+				'<strong>No ajustar agentes leudantes:</strong> A veces, la levadura química no necesita un escalado estrictamente lineal.',
+				'<strong>Temperatura constante:</strong> En moldes masivos, es mejor bajar 10 grados y hornear más tiempo.',
 			],
 		},
 		{
+			type: 'diagnostic',
+			variant: 'warning',
+			title: 'Límite de Capacidad',
+			html: 'Nunca llenes un molde más de 2/3 de su capacidad total, independientemente del factor de conversión que hayas calculado.',
+		},
+		{
+			type: 'title',
+			text: 'Consejos para el Horneado de Recetas Escaladas',
+			level: 3,
+		},
+		{
 			type: 'tip',
-			html: '<strong>Consejo profesional:</strong> Antes de confiar en una receta escalada, realiza una prueba pequeña. El escalado matemático es correcto para la mayoría de casos, pero cada horno y molde tiene sus propias características. Documenta los resultados para futuras referencias.',
+			html: 'Si pasas a un molde mucho más grande, utiliza tiras de horneado o un núcleo de calor en el centro para asegurar que el calor se distribuya uniformemente sin secar los bordes.',
 		},
 	],
 
-	schemas: [],
+	schemas: [
+		{
+			'@context': 'https://schema.org',
+			'@type': 'WebApplication',
+			'name': 'Escalador de Moldes JJLMoya',
+			'url': 'https://utils.jjlmoya.com/es/escalador-moldes',
+			'description': 'Herramienta profesional para convertir cantidades de ingredientes entre diferentes tamaños de moldes de repostería.',
+			'applicationCategory': 'UtilitiesApplication',
+			'operatingSystem': 'All',
+		},
+	],
 };
+
