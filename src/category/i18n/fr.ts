@@ -139,7 +139,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'La gastronomie mondiale s\'oriente vers la <strong>précision instrumentée</strong>. Les chefs Michelin utilisent des thermomètres infrarouges, des balances de précision au gramme, des pH-mètres. Les cuisines professionnelles disposent de laboratoires d\'analyse des saveurs. Cette tendance atteint désormais les cuisines domestiques : applications de contrôle de la température, balances connectées, bases de données de recettes exactes. Ce n\'est plus réservé aux élites ; c\'est accessible à toute personne désireuse d'apprendre.',
+      html: 'La gastronomie mondiale s\'oriente vers la <strong>précision instrumentée</strong>. Les chefs Michelin utilisent des thermomètres infrarouges, des balances de précision au gramme, des pH-mètres. Les cuisines professionnelles disposent de laboratoires d\'analyse des saveurs. Cette tendance atteint désormais les cuisines domestiques : applications de contrôle de la température, balances connectées, bases de données de recettes exactes. Ce n\'est plus réservé aux élites ; c\'est accessible à toute personne désireuse d\'apprendre.',
     },
     {
       type: 'list',
