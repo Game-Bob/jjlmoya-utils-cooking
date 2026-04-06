@@ -90,134 +90,133 @@ export const content: ToolLocaleContent = {
       url: "https://michaelpollan.com/",
     },
   ],
-  seo: [
-    {
-      type: "title",
-      text: "¿Por Qué el Método del Equilibrio?",
-    },
-    {
-      type: "paragraph",
-      html: "La <strong>salmuera por equilibrio</strong> es la técnica profesional para garantizar resultados consistentes, seguros y deliciosos en cada fermentación. A diferencia de las recetas tradicionales que miden la sal solo por el volumen de agua (ej. \"100g por litro\"), este método considera el <strong>peso total</strong> (Agua + Ingrediente).",
-    },
-    {
-      type: "tip",
-      html: "El Problema de las Recetas Antiguas: Si llenas un frasco de pepinos, hay poca agua. Si pones un solo pepino, hay mucha agua. Usar la misma salmuera en ambos casos resulta en salinidades finales drásticamente diferentes, lo que puede llevar a <strong>moho</strong> (poca sal) o <strong>comida incomible</strong> (mucha sal).",
-    },
-    {
-      type: "title",
-      text: "La Importancia del Azúcar",
-    },
-    {
-      type: "paragraph",
-      html: "Añadir azúcar a una salmuera no la convierte en un postre. Es una herramienta química fundamental con dos funciones principales.",
-    },
-    {
-      type: "comparative",
-      columns: 2,
-      items: [
-        {
-          title: "Reacción de Maillard",
-          icon: "mdi:fire",
-          description: "Esencial para carnes.",
-          points: [
-            "El azúcar facilita el dorado al cocinar la carne (plancha, horno, parrilla)",
-            "Sin azúcar, una carne en salmuera puede quedar pálida y grisácea",
-            "Crucial para resultados profesionales",
-          ],
-        },
-        {
-          title: "Equilibrio de Sabor",
-          icon: "mdi:palette",
-          description: "Suaviza y redondea el sabor.",
-          points: [
-            "La sal es agresiva. El azúcar suaviza esa mordida salina",
-            "No hace que el producto sepa dulce",
-            "Crea un perfil de sabor más redondo y complejo",
-          ],
-        },
-      ],
-    },
-    {
-      type: "title",
-      text: "Ingredientes Críticos: Agua y Sal",
-    },
-    {
-      type: "paragraph",
-      html: "La calidad de los ingredientes base determina el éxito de tu salmuera. No todos los ingredientes son iguales.",
-    },
-    {
-      type: "list",
-      items: [
-        "<strong>Agua Filtrada/Mineral:</strong> La mejor opción. Limpia y sin químicos.",
-        "<strong>Agua del Grifo (Hervida):</strong> Hiérvela y déjala enfriar para evaporar el cloro. Nota: La cloramina no se evapora fácilmente.",
-        "<strong>Sal Marina / Kosher:</strong> Pura y sin aditivos. Ideal para fermentaciones.",
-        "<strong>Sal Yodada:</strong> Evítala. Puede oscurecer los vegetales e inhibir la fermentación.",
-        "<strong>Sal de Mesa (con antiaglomerantes):</strong> Puede enturbiar la salmuera y alterar el sabor.",
-      ],
-    },
-    {
-      type: "title",
-      text: "El Factor Tiempo",
-    },
-    {
-      type: "paragraph",
-      html: "La paciencia es el ingrediente secreto. El tiempo varía drásticamente según el objetivo y la temperatura de fermentación.",
-    },
-    {
-      type: "table",
-      headers: ["Tipo", "Salinidad", "Tiempo", "Temperatura Ideal"],
-      rows: [
-        ["Carnes (Dry/Wet Brine)", "1.5-2%", "4-48 horas", "4°C (nevera)"],
-        ["Fermentados Vegetales", "2-3%", "1-3 semanas", "18-22°C"],
-        ["Salsas Picantes", "3.5%", "2+ semanas", "18-22°C"],
-        ["Conservas Largo Plazo", "5%+", "1+ mes", "18-22°C"],
-      ],
-    },
-    {
-      type: "tip",
-      html: "<strong>El Papel de la Temperatura:</strong> A mayor temperatura, la fermentación es más rápida pero menos controlable. 18-22°C es el rango ideal para desarrollar sabor sin riesgo de patógenos. Si tu cocina es más fría, aumenta el tiempo de fermentación.",
-    },
-    {
-      type: "title",
-      text: "Congelación y Descongelación",
-    },
-    {
-      type: "paragraph",
-      html: "¿Se puede congelar en salmuera? La respuesta depende del tipo de producto.",
-    },
-    {
-      type: "list",
-      items: [
-        "<strong>Carnes en Salmuera:</strong> ¡Excelente! La salmuera protege contra quemaduras por congelación. Una técnica profesional es hacer \"Equilibrium Thawing\": congela la carne directamente en salmuera y se descongela mientras se cura.",
-        "<strong>Vegetales Fermentados:</strong> Evítalo. La congelación rompe las paredes celulares y al descongelar se vuelven papilla.",
-        "<strong>Conservas:</strong> Solo si planeas usarlas de inmediato después de descongelar. La congelación altera la textura final.",
-      ],
-    },
-    {
-      type: "title",
-      text: "Porcentajes de Sal por Aplicación",
-    },
-    {
-      type: "list",
-      items: [
-        "<strong>1.5-2.0%:</strong> Carnes y aves (pechugas de pollo, pavo, chuletas). Jugosidad máxima.",
-        "<strong>2.0-3.0%:</strong> Vegetales en lacto-fermentación (chucrut, kimchi, pepinillos). Seguridad contra patógenos.",
-        "<strong>3.0-5.0%:</strong> Salsas picantes y fermentados especiales (ajos, jengibre). Sabor más intenso.",
-        "<strong>5.0%+:</strong> Conservas de larga duración (quesos, aceitunas, limones). Fermentación muy lenta.",
-      ],
-    },
-    {
-      type: "title",
-      text: "Ciencia Detrás del Proceso",
-    },
-    {
-      type: "paragraph",
-      html: "La sal en salmuera no solo da sabor. Actúa en tres niveles: <strong>desnaturaliza las proteínas</strong> (haciéndolas más retentivas de humedad), <strong>controla el crecimiento bacteriano</strong> (mata patógenos pero favorece bacterias lácticas beneficiosas), y <strong>extrae sabores</strong> de los ingredientes.",
-    },
-    {
-      type: "paragraph",
-      html: "La fermentación es un proceso anaeróbico donde bacterias lácticas beneficiosas convierten azúcares en ácido láctico. Este proceso requiere el porcentaje correcto de sal: muy poca y crece moho, demasiada y se inhiben incluso las bacterias buenas.",
-    },
-  ],
+	seo: [
+		{
+			type: 'title',
+			text: 'Guía Maestro de Salmuera por Equilibrio y Fermentación',
+			level: 2,
+		},
+		{
+			type: 'paragraph',
+			html: 'La <strong>salmuera por equilibrio</strong> es la técnica definitiva para garantizar resultados jugosos y seguros. A diferencia de los métodos tradicionales, este calcula la sal basándose en el <strong>peso total</strong> del agua y el producto, asegurando una salinidad constante independientemente del volumen del recipiente.',
+		},
+		{
+			type: 'stats',
+			columns: 4,
+			items: [
+				{
+					value: '1.5 - 2%',
+					label: 'Ratio Ideal Carnes',
+					icon: 'mdi:food-steak',
+				},
+				{
+					value: '2.5 - 3%',
+					label: 'Ratio Fermentados',
+					icon: 'mdi:flask-outline',
+				},
+				{
+					value: '18-22°C',
+					label: 'Temp. Fermentación',
+					icon: 'mdi:thermometer',
+				},
+				{
+					value: '0.5%',
+					label: 'Azúcar de Equilibrio',
+					icon: 'mdi:shaker-outline',
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Diferencias entre Salmuera Seca y Humeda',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 2,
+			items: [
+				{
+					title: 'Salmuera Seca (Dry Brining)',
+					icon: 'mdi:shaker-outline',
+					description: 'Se aplica la sal directamente sobre la superficie del producto sin usar agua adicional.',
+					points: [
+						'Piel mucho más crujiente en aves',
+						'Sabor más concentrado del ingrediente',
+						'Ocupa menos espacio en la nevera',
+						'Ideal para filetes y pollos enteros',
+					],
+				},
+				{
+					title: 'Salmuera Húmeda (Wet Brining)',
+					icon: 'mdi:water',
+					description: 'El producto se sumerge en una solución de agua y sal calculada por equilibrio.',
+					highlight: true,
+					points: [
+						'Transferencia de humedad superior',
+						'Permite introducir aromas (especias)',
+						'Curado más uniforme en piezas grandes',
+						'Ideal para pavo, lomo de cerdo y pescados',
+					],
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Tiempos y Salinidades según la Aplicación',
+			level: 3,
+		},
+		{
+			type: 'table',
+			headers: ['Categoría', 'Salinidad (%)', 'Tiempo Mínimo', 'Objetivo Principal'],
+			rows: [
+				['Aves y Cerdo', '1.5% - 2.0%', '12 - 24 horas', 'Jugosidad y ternura'],
+				['Pescados Blancos', '1.0% - 1.5%', '20 - 45 minutos', 'Firmeza de la carne'],
+				['Lacto-fermentados', '2.5% - 3.0%', '7 - 21 días', 'Seguridad microbiológica'],
+				['Salsas y Conservas', '3.5% - 5.0%', '1+ mes', 'Preservación a largo plazo'],
+			],
+		},
+		{
+			type: 'diagnostic',
+			variant: 'warning',
+			title: 'Identificación de Problemas en la Salmuera',
+			html: 'Si la salmuera presenta un olor fétido (no ácido), moho de colores (negro, rosa) o el producto se vuelve extremadamente blando, deséchalo. El moho blanco superficial (levadura Kahm) es normal en fermentados y se puede retirar.',
+		},
+		{
+			type: 'title',
+			text: 'Glosario del Experto en Curados',
+			level: 3,
+		},
+		{
+			type: 'glossary',
+			items: [
+				{
+					term: 'Ósmosis',
+					definition: 'Proceso físico por el cual la sal penetra en las células del alimento para equilibrar las concentraciones.',
+				},
+				{
+					term: 'Desnaturalización',
+					definition: 'Efecto de la sal sobre las proteínas que permite que estas retengan más agua durante la cocción.',
+				},
+				{
+					term: 'Levadura Kahm',
+					definition: 'Capa blanca y fina que aparece a veces en la superficie de los fermentados; es inofensiva pero indica falta de acidez.',
+				},
+				{
+					term: 'Lacto-fermentación',
+					definition: 'Fermentación anaeróbica donde las bacterias convierten azúcares en ácido láctico, preservando el alimento.',
+				},
+			],
+		},
+		{
+			type: 'tip',
+			title: 'Calidad del Agua',
+			html: 'Evita siempre el agua del grifo con mucho cloro, ya que puede inhibir el crecimiento de las bacterias buenas en tus fermentaciones. Usa agua filtrada o deja reposar el agua 24h.',
+		},
+		{
+			type: 'paragraph',
+			html: 'Nuestra calculadora de equilibrio elimina las conjeturas de tus recetas, permitiéndote cocinar con la confianza de un profesional del sector.',
+		},
+	],
+
   schemas: [],
 };

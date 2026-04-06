@@ -112,6 +112,74 @@ export const content: ToolLocaleContent = {
 			html: 'The secret to proper scaling lies in surface area, not diameter. A 25% increase in diameter for a round pan nearly doubles the total surface area and ingredient requirements.',
 		},
 		{
+			type: 'stats',
+			columns: 4,
+			items: [
+				{
+					value: 'x1.56',
+					label: 'Factor 20cm to 25cm',
+					icon: 'mdi:resize',
+				},
+				{
+					value: 'x2.25',
+					label: 'Factor 15cm to 22.5cm',
+					icon: 'mdi:arrow-up-bold-outline',
+				},
+				{
+					value: '0.64',
+					label: 'Factor 25cm to 20cm',
+					icon: 'mdi:arrow-down-bold-outline',
+				},
+				{
+					value: 'πr²',
+					label: 'Circular Area Formula',
+					icon: 'mdi:math-compass',
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Shape Comparison and Oven Efficiency',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 3,
+			items: [
+				{
+					title: 'Round Pans',
+					icon: 'mdi:circle-outline',
+					description: 'The standard of baking. They offer very even cooking from the periphery toward the center.',
+					points: [
+						'Optimal heat distribution',
+						'Ideal for tall sponges',
+						'Calculated using radius',
+					],
+				},
+				{
+					title: 'Square Pans',
+					icon: 'mdi:square-outline',
+					description: 'Allows for maximum use of oven space. Ideal for brownies and perfect clean individual cuts.',
+					highlight: true,
+					points: [
+						'Faster corner cooking',
+						'Easy to portion out',
+						'Calculated Side x Side',
+					],
+				},
+				{
+					title: 'Rectangular Pans',
+					icon: 'mdi:rectangle-outline',
+					description: 'Perfect for large traybakes and sheet cakes. Requires monitoring the center for doneness.',
+					points: [
+						'Highest total capacity',
+						'Multi-purpose use',
+						'Calculated Width x Length',
+					],
+				},
+			],
+		},
+		{
 			type: 'title',
 			text: 'Mathematics Behind Surface Area Scaling',
 			level: 3,
@@ -135,10 +203,6 @@ export const content: ToolLocaleContent = {
 			level: 3,
 		},
 		{
-			type: 'paragraph',
-			html: 'Many home bakers make the mistake of scaling ingredients linearly based on diameter. Avoid these common pitfalls for better results:',
-		},
-		{
 			type: 'list',
 			items: [
 				'<strong>Linear scaling:</strong> Doubling the diameter does not double the ingredients; it quadruples them.',
@@ -155,14 +219,40 @@ export const content: ToolLocaleContent = {
 		},
 		{
 			type: 'title',
-			text: 'Pro Tips for Baking Scaled Recipes',
+			text: 'Scaling and Geometric Terms Glossary',
 			level: 3,
+		},
+		{
+			type: 'glossary',
+			items: [
+				{
+					term: 'Scaling Factor',
+					definition: ' The number you must multiply all ingredients by to adapt the recipe to the new pan.',
+				},
+				{
+					term: 'Surface Area',
+					definition: ' The measurement of the pan base. In baking, this is the most relevant data for cake volume.',
+				},
+				{
+					term: 'Radius',
+					definition: ' The distance from the center to the edge of a circle. Critical for the πr² formula.',
+				},
+				{
+					term: 'Heat Transfer',
+					definition: ' How thermal energy moves through the pan. Changes drastically based on shape and material.',
+				},
+			],
 		},
 		{
 			type: 'tip',
 			html: 'When moving to a much larger pan, use bake-even strips or a heating core in the center to ensure even heat distribution without drying out the edges.',
 		},
+		{
+			type: 'paragraph',
+			html: 'Mastering pan scaling gives you total creative freedom in the kitchen. Use this calculator to eliminate guesswork and achieve consistent professional results in every bake.',
+		},
 	],
+
 
 	schemas: [
 		{

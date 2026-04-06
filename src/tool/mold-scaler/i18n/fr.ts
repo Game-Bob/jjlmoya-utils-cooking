@@ -112,6 +112,74 @@ export const content: ToolLocaleContent = {
 			html: 'Le secret d’une bonne adaptation réside dans la surface, pas dans le diamètre. Une augmentation de 25 % du diamètre d’un moule rond double presque sa surface totale.',
 		},
 		{
+			type: 'stats',
+			columns: 4,
+			items: [
+				{
+					value: 'x1.56',
+					label: 'Facteur 20cm à 25cm',
+					icon: 'mdi:resize',
+				},
+				{
+					value: 'x2.25',
+					label: 'Facteur 15cm à 22.5cm',
+					icon: 'mdi:arrow-up-bold-outline',
+				},
+				{
+					value: '0.64',
+					label: 'Facteur 25cm à 20cm',
+					icon: 'mdi:arrow-down-bold-outline',
+				},
+				{
+					value: 'πr²',
+					label: 'Formule d’aire circulaire',
+					icon: 'mdi:math-compass',
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Comparaison des Formes et Efficacité Thermique',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 3,
+			items: [
+				{
+					title: 'Moules Ronds',
+					icon: 'mdi:circle-outline',
+					description: 'Le standard de la pâtisserie. Ils offrent une cuisson très uniforme de la périphérie vers le centre.',
+					points: [
+						'Distribution de chaleur optimale',
+						'Idéal pour gâteaux hauts',
+						'Calcul basé sur le rayon',
+					],
+				},
+				{
+					title: 'Moules Carrés',
+					icon: 'mdi:square-outline',
+					description: 'Permettent une utilisation maximale de l’espace. Idéal pour les brownies et les coupes individuelles nettes.',
+					highlight: true,
+					points: [
+						'Cuisson rapide des coins',
+						'Facile à portionner',
+						'Calcul Côté x Côté',
+					],
+				},
+				{
+					title: 'Moules Rectangulaires',
+					icon: 'mdi:rectangle-outline',
+					description: 'Parfaits pour les grands plateaux et les génoises. Nécessitent une surveillance au centre.',
+					points: [
+						'Capacité totale élevée',
+						'Polyvalence d’usage',
+						'Calcul Largeur x Longueur',
+					],
+				},
+			],
+		},
+		{
 			type: 'title',
 			text: 'Mathématiques de la Conversion de Surface',
 			level: 3,
@@ -155,12 +223,42 @@ export const content: ToolLocaleContent = {
 		},
 		{
 			type: 'title',
+			text: 'Glossaire des Termes de Conversion Géométrique',
+			level: 3,
+		},
+		{
+			type: 'glossary',
+			items: [
+				{
+					term: 'Facteur de Conversion',
+					definition: 'Le nombre par lequel multiplier tous les ingrédients pour adapter la recette au nouveau moule.',
+				},
+				{
+					term: 'Surface de Base',
+					definition: 'La mesure de l’aire du fond du moule. En pâtisserie, c’est la donnée la plus pertinente pour le volume.',
+				},
+				{
+					term: 'Rayon',
+					definition: 'Distance du centre vers le bord d’un cercle. Essentiel pour la formule πr².',
+				},
+				{
+					term: 'Transfert Thermique',
+					definition: 'La manière dont l’énergie voyage dans le moule. Change drastiquement selon la forme et le matériau.',
+				},
+			],
+		},
+		{
+			type: 'title',
 			text: 'Conseils de Pro pour la Cuisson des Recettes Adaptées',
 			level: 3,
 		},
 		{
 			type: 'tip',
 			html: 'Si vous passez à un moule beaucoup plus grand, utilisez des bandes de cuisson ou un noyau thermique au centre pour assurer une distribution uniforme de la chaleur sans dessécher les bords.',
+		},
+		{
+			type: 'paragraph',
+			html: 'Maîtriser l’adaptation des moules vous donne une liberté créative totale. Utilisez cette calculatrice pour éliminer les approximations et obtenir des résultats professionnels constants.',
 		},
 	],
 

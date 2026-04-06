@@ -1,0 +1,120 @@
+{
+  "timestamp": "2026-04-06T19:29:40.616Z",
+  "summary": {
+    "total": 34,
+    "ok": 17,
+    "errors": 17,
+    "unknown": 0
+  },
+  "errors": [
+    {
+      "tool": "banana-ripeness",
+      "name": "Ethylene and Fruit Ripening: A Biological Review (Nature Research)",
+      "url": "https://www.researchgate.net/profile/Jean-Claude-Pech/publication/284632414_Ethylene_and_Fruit_Ripening/links/5aef0bcbaca2727bc006482c/Ethylene-and-Fruit-Ripening.pdf",
+      "status": 403
+    },
+    {
+      "tool": "brine",
+      "name": "The Noma Guide to Fermentation - René Redzepi & David Zilber",
+      "url": "https://www.nomacph.com/",
+      "error": "fetch failed",
+      "status": "ERROR"
+    },
+    {
+      "tool": "cookware-guide",
+      "name": "The Flavor Bible - Pairing, and Progress in Food",
+      "url": "https://www.flavorprints.com/",
+      "status": 405
+    },
+    {
+      "tool": "cookware-guide",
+      "name": "On Food and Cooking - Harold McGee (La Ciencia de la Cocina)",
+      "url": "https://www.foodscience.org/",
+      "error": "fetch failed",
+      "status": "ERROR"
+    },
+    {
+      "tool": "egg-timer",
+      "name": "The Food Lab: The Science of the Best Hard Boiled Eggs - J. Kenji López-Alt",
+      "url": "https://www.seriouseats.com/the-food-lab-hard-boiled-eggs-recipe",
+      "status": 402
+    },
+    {
+      "tool": "egg-timer",
+      "name": "The Food Lab: Perfect Soft Boiled Eggs",
+      "url": "https://www.seriouseats.com/soft-boiled-eggs-recipe",
+      "status": 402
+    },
+    {
+      "tool": "ingredient-rescaler",
+      "name": "The Flavor Bible by Karen Page and Andrew Dornenburg",
+      "url": "https://www.flavorprints.com/",
+      "status": 405
+    },
+    {
+      "tool": "kitchen-timer",
+      "name": "Seguridad Alimentaria: USDA Guidelines",
+      "url": "https://www.fsis.usda.gov/",
+      "status": 403
+    },
+    {
+      "tool": "meringue-peak",
+      "name": "Exploratorium: The Science of Cooking - Egg Science",
+      "url": "https://www.exploratorium.edu/explore/cooking/egg-science",
+      "status": 403
+    },
+    {
+      "tool": "mold-scaler",
+      "name": "Baking Science and Technology - E.J. Pyler",
+      "url": "https://www.bakingbusiness.com/",
+      "status": 403
+    },
+    {
+      "tool": "pizza",
+      "name": "Franco Pepe - Pepe in Grani",
+      "url": "https://www.pepeingranitalia.com/",
+      "error": "fetch failed",
+      "status": "ERROR"
+    },
+    {
+      "tool": "pizza",
+      "name": "Harina Caputo",
+      "url": "https://www.caputoprepara.com/",
+      "error": "fetch failed",
+      "status": "ERROR"
+    },
+    {
+      "tool": "roux-guide",
+      "name": "Larousse Gastronomique - La Biblia de la Cocina",
+      "url": "https://www.laroussecocina.com/",
+      "status": 405
+    },
+    {
+      "tool": "roux-guide",
+      "name": "Mastering the Art of French Cooking - Julia Child",
+      "url": "https://www.juliachild.com/",
+      "status": 405
+    },
+    {
+      "tool": "roux-guide",
+      "name": "On Food and Cooking - Harold McGee (La Ciencia del Roux)",
+      "url": "https://www.foodscience.org/",
+      "error": "fetch failed",
+      "status": "ERROR"
+    },
+    {
+      "tool": "sourdough-calculator",
+      "name": "The Flavor Bible - Scaling and Ratios",
+      "url": "https://www.flavorprints.com/",
+      "status": 405
+    },
+    {
+      "tool": "sourdough-calculator",
+      "name": "Full Proof Baking - Guides on Sourdough",
+      "url": "https://www.fullproofbaking.com/",
+      "error": "fetch failed",
+      "status": "ERROR"
+    }
+  ],
+  "unknown": []
+}

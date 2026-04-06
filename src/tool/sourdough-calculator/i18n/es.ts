@@ -2,7 +2,7 @@ import type { ToolLocaleContent } from '../../../types';
 
 export const content: ToolLocaleContent = {
   slug: 'calculadora-masa-madre',
-  title: 'Calculadora de Masa Madre - Ratios Exactos para Fermentación',
+  title: 'Calculadora de Masa Madre Ratios de Fermentación',
   description: 'Calcula automáticamente las proporciones de masa madre, harina y agua para mantener tu cultivo. Ratios predefinidos o personalizados.',
   faqTitle: 'Preguntas Frecuentes',
   faq: [
@@ -56,50 +56,169 @@ export const content: ToolLocaleContent = {
       text: 'La calculadora te muestra cuánto de masa madre, harina y agua necesitas. Mezcla estos ingredientes y deja fermentar según tu protocolo.',
     },
   ],
-  seo: [
-    {
-      type: 'title',
-      text: 'Ciencia y Precisión en la Masa Madre',
-      level: 2,
-    },
-    {
-      type: 'paragraph',
-      html: 'La <strong>masa madre</strong> es un cultivo vivo de bacterias lácticas y levaduras salvajes. Su fuerza y comportamiento dependen de cuándo y cómo la refrescas. Los <strong>ratios de refresco</strong> (el balance entre masa madre, harina y agua) determinan la velocidad de fermentación y la actividad del cultivo.',
-    },
-    {
-      type: 'title',
-      text: 'Ratios Predefinidos Explicados',
-      level: 3,
-    },
-    {
-      type: 'list',
-      items: [
-        '<strong>1:1:1 (Mantener):</strong> Ideal para refrescos diarios a temperatura ambiente. La masa madre duplica su volumen en 4-8 horas.',
-        '<strong>1:2:2 (Activar):</strong> Más alimento relativo. Si tu cultivo está dormido (refrigerado), este ratio lo despierta rápidamente en 6-12 horas.',
-        '<strong>1:3:3 (Retardar):</strong> Proporciona aún más comida. Excelente para fermentaciones controladas y predecibles de 8-16 horas.',
-        '<strong>1:4:4 (Fuerte):</strong> Exceso de alimento significa fermentación muy lenta (12-24h). Útil si necesitas horarios flexibles o si buscas sabores más complejos.',
-        '<strong>1:5:5 (Sweet Spot):</strong> El balance perfecto para muchos. Fermenta en 8-12 horas, produciendo una masa madre activa y predecible. El estándar de la industria artesanal.',
-      ],
-    },
-    {
-      type: 'title',
-      text: 'Hidratación y Comportamiento',
-      level: 3,
-    },
-    {
-      type: 'paragraph',
-      html: 'Por defecto, esta calculadora usa <strong>100% de hidratación</strong> (agua = harina en peso). Esto significa que el agua y la harina tienen pesos iguales. Si tu protocolo requiere menor hidratación, puedes ajustar manualmente los ratios personalizados.',
-    },
-    {
-      type: 'title',
-      text: 'Temperatura y Tiempo de Fermentación',
-      level: 3,
-    },
-    {
-      type: 'paragraph',
-      html: 'Recuerda que estos tiempos asumen <strong>68-72°F (20-22°C)</strong>. A temperaturas más altas (75-80°F), la fermentación es 20-30% más rápida. A temperaturas más bajas, es considerablemente más lenta. Ajusta tu protocolo según tu clima.',
-    },
-  ],
+	seo: [
+		{
+			type: 'title',
+			text: 'Guía Maestra para el Mantenimiento y Refresco de Masa Madre',
+			level: 2,
+		},
+		{
+			type: 'paragraph',
+			html: 'La <strong>masa madre</strong> no es solo un ingrediente, es un ecosistema vivo de levaduras salvajes y bacterias lácticas (LAB). La clave de un pan excepcional reside en la salud de este cultivo, la cual se gestiona mediante la precisión en los ratios de refresco y el control de la temperatura.',
+		},
+		{
+			type: 'stats',
+			columns: 4,
+			items: [
+				{
+					value: '24-26°C',
+					label: 'Temp. Actividad Óptima',
+					icon: 'mdi:thermometer',
+				},
+				{
+					value: '3.8 - 4.2',
+					label: 'pH Ideal del Cultivo',
+					icon: 'mdi:test-tube',
+				},
+				{
+					value: '100%',
+					label: 'Hidratación Estándar',
+					icon: 'mdi:water-percent',
+				},
+				{
+					value: 'x2 - x3',
+					label: 'Crecimiento en Pico',
+					icon: 'mdi:trending-up',
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Comparativa de Tipos de Cultivo de Masa Madre',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 2,
+			items: [
+				{
+					title: 'Masa Madre Líquida (100% Hid.)',
+					icon: 'mdi:water',
+					description: 'La más común en la panadería artesanal moderna. Muy fácil de mezclar y de incorporar a las masas finales.',
+					points: [
+						'Fermentación más rápida',
+						'Perfil de sabor más láctico (suave)',
+						'Fácil de medir y refrescar',
+						'Ideal para baguettes y hogazas',
+					],
+				},
+				{
+					title: 'Masa Madre Sólida o Pasta Madre',
+					icon: 'mdi:bread-slice-outline',
+					description: 'Tradicional en la panadería italiana (Lievito Madre). Hidratación en torno al 50%.',
+					highlight: true,
+					points: [
+						'Fermentación más lenta y estable',
+						'Perfil de sabor más acético',
+						'Mayor fuerza para masas enriquecidas',
+						'Ideal para Panettone y Brioche',
+					],
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Entendiendo los Ratios de Refresco Matemáticos',
+			level: 3,
+		},
+		{
+			type: 'paragraph',
+			html: 'El ratio representa las partes de Inóculo (masa madre vieja) respecto a la Harina y el Agua. Por ejemplo, un ratio 1:2:2 significa 1 parte de cultivo por 2 de harina y 2 de agua.',
+		},
+		{
+			type: 'table',
+			headers: ['Ratio', 'Uso Recomendado', 'Tiempo Estimado (24°C)', 'Ventaja Principal'],
+			rows: [
+				['1:1:1', 'Refresco diario', '4-6 horas', 'Mantenimiento rápido'],
+				['1:2:2', 'Activación previa', '6-8 horas', 'Balance de acidez'],
+				['1:5:5', 'Uso en panadería', '8-12 horas', 'Pico de actividad predecible'],
+				['1:10:10', 'Retardo largo', '16-24 horas', 'Gestión de horarios flexibles'],
+			],
+		},
+		{
+			type: 'title',
+			text: 'Elección de Harinas para el Refresco',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 2,
+			items: [
+				{
+					title: 'Harina de Centeno Integral',
+					icon: 'mdi:grain',
+					description: 'El "superalimento" para las levaduras salvajes. Contiene más nutrientes y enzimas que el trigo.',
+					points: [
+						'Actividad fermentativa explosiva',
+						'Aporta aromas terrosos y profundos',
+						'Mantiene mejor la acidez',
+					],
+				},
+				{
+					title: 'Harina de Trigo Blanca',
+					icon: 'mdi:shaker-outline',
+					description: 'Ideal para quienes buscan un sabor más suave y una masa madre que no domine el perfil del pan.',
+					points: [
+						'Sabor más neutro y versátil',
+						'Observación visual de burbujas clara',
+						'Menos propensa a la sobrefermentación',
+					],
+				},
+			],
+		},
+		{
+			type: 'diagnostic',
+			variant: 'warning',
+			title: 'Signos de una Masa Madre Hambrienta',
+			html: 'Si tu cultivo presenta un líquido oscuro en la superficie (hooch), huele intensamente a vinagre o acetona, o colapsa muy rápido después del pico, necesita un ratio de refresco mayor (más comida) o una temperatura más baja.',
+		},
+		{
+			type: 'title',
+			text: 'Glosario Técnico de Fermentación Natural',
+			level: 3,
+		},
+		{
+			type: 'glossary',
+			items: [
+				{
+					term: 'Levain',
+					definition: 'El prefermento preparado a partir de la masa madre madre (el cultivo básico) destinado a usarse en una receta específica.',
+				},
+				{
+					term: 'Hooch',
+					definition: 'La capa de alcohol y agua que se acumula cuando la masa madre ha agotado su alimento. No es malo, solo indica hambre.',
+				},
+				{
+					term: 'Pico de Actividad',
+					definition: 'El momento de máxima expansión y población de levaduras. Es el punto ideal para mezclar la masa del pan.',
+				},
+				{
+					term: 'Bacterias Lácticas (LAB)',
+					definition: 'Microorganismos responsables de la producción de ácidos orgánicos que dan el sabor característico y mejoran la conservación.',
+				},
+			],
+		},
+		{
+			type: 'tip',
+			title: 'La Prueba del Flotado',
+			html: 'Para saber si tu masa madre está lista, pon una cucharadita en un vaso con agua. Si flota, significa que ha atrapado suficiente CO2 y las levaduras están en su pico de actividad.',
+		},
+		{
+			type: 'paragraph',
+			html: 'Usar nuestra calculadora te permite estandarizar tus procesos y entender mejor la biología de tu pan. La constancia es el secreto de la excelencia artesanal.',
+		},
+	],
+
   ui: {
     totalAmount: 'Cantidad Final',
     refreshRatio: 'Ratio de Refresco',

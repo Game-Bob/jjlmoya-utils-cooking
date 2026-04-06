@@ -75,8 +75,8 @@ export const content: ToolLocaleContent = {
   ],
   bibliography: [
     {
-      name: 'Ethylene and Fruit Ripening: A Biological Review (Nature Research)',
-      url: 'https://www.researchgate.net/profile/Jean-Claude-Pech/publication/284632414_Ethylene_and_Fruit_Ripening/links/5aef0bcbaca2727bc006482c/Ethylene-and-Fruit-Ripening.pdf',
+      name: 'Ethylene and Fruit Ripening: A Biological Review',
+      url: '',
     },
     {
       name: 'Biochemical Changes in Musa acuminata during Ripening (Journal of Food Science)',

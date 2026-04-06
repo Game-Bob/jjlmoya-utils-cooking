@@ -23,12 +23,12 @@ export class KitchenTimer extends EventTarget {
 		const minutesInput = element.querySelector(".minutes") as HTMLInputElement | null;
 		const secondsInput = element.querySelector(".seconds") as HTMLInputElement | null;
 
-		if (!hoursInput || !minutesInput || !secondsInput) {
+		if (!minutesInput || !secondsInput) {
 			throw new Error("Missing required time input elements");
 		}
 
 		this.inputs = {
-			h: hoursInput,
+			h: hoursInput || document.createElement('input'),
 			m: minutesInput,
 			s: secondsInput,
 		};
@@ -79,8 +79,12 @@ export class KitchenTimer extends EventTarget {
 		const m = Math.floor((totalSec % 3600) / 60);
 		const s = totalSec % 60;
 
-		this.inputs.h.value = h.toString().padStart(2, "0");
-		this.inputs.m.value = m.toString().padStart(2, "0");
+		if (this.element.querySelector(".hours")) {
+			this.inputs.h.value = h.toString().padStart(2, "0");
+			this.inputs.m.value = m.toString().padStart(2, "0");
+		} else {
+			this.inputs.m.value = Math.floor(totalSec / 60).toString().padStart(2, "0");
+		}
 		this.inputs.s.value = s.toString().padStart(2, "0");
 	}
 
@@ -119,7 +123,7 @@ export class KitchenTimer extends EventTarget {
 
 		if (!this.audioContext) {
 			try {
-				const AudioContextClass = window.AudioContext || (window as Window & { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+				const AudioContextClass = (window as any).AudioContext || (window as any).webkitAudioContext;
 				this.audioContext = new AudioContextClass();
 			} catch {
 				console.warn("AudioContext not available");

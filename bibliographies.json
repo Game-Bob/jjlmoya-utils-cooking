@@ -1,0 +1,172 @@
+[
+  {
+    "tool": "american-kitchen-converter",
+    "name": "King Arthur Baking: Ingredient Weight Chart",
+    "url": "https://www.kingarthurbaking.com/learn/ingredient-weight-chart"
+  },
+  {
+    "tool": "american-kitchen-converter",
+    "name": "Culinary Institute of America: Conversions and Equivalents",
+    "url": "https://www.ciachef.edu/"
+  },
+  {
+    "tool": "banana-ripeness",
+    "name": "Ethylene and Fruit Ripening: A Biological Review (Nature Research)",
+    "url": "https://www.researchgate.net/profile/Jean-Claude-Pech/publication/284632414_Ethylene_and_Fruit_Ripening/links/5aef0bcbaca2727bc006482c/Ethylene-and-Fruit-Ripening.pdf"
+  },
+  {
+    "tool": "banana-ripeness",
+    "name": "Biochemical Changes in Musa acuminata during Ripening (Journal of Food Science)",
+    "url": "https://www.foodsciencejournal.com/assets/archives/2017/vol2issue5/2-5-31-566.pdf"
+  },
+  {
+    "tool": "banana-ripeness",
+    "name": "The Role of Respiration in Climacteric Fruits (Scientific American)",
+    "url": "https://www.nature.com/articles/226976b0"
+  },
+  {
+    "tool": "brine",
+    "name": "The Noma Guide to Fermentation - René Redzepi & David Zilber",
+    "url": "https://www.nomacph.com/"
+  },
+  {
+    "tool": "brine",
+    "name": "Salt, Fat, Acid, Heat - Samin Nosrat",
+    "url": "https://www.saltfatacidheat.com/"
+  },
+  {
+    "tool": "brine",
+    "name": "Pollan, Michael - Cooked",
+    "url": "https://michaelpollan.com/"
+  },
+  {
+    "tool": "cookware-guide",
+    "name": "The Flavor Bible - Pairing, and Progress in Food",
+    "url": "https://www.flavorprints.com/"
+  },
+  {
+    "tool": "cookware-guide",
+    "name": "On Food and Cooking - Harold McGee (La Ciencia de la Cocina)",
+    "url": "https://www.foodscience.org/"
+  },
+  {
+    "tool": "cookware-guide",
+    "name": "Salt Fat Acid Heat - Samin Nosrat",
+    "url": "https://www.saltfatacidheat.com/"
+  },
+  {
+    "tool": "egg-timer",
+    "name": "The Science of Boiling an Egg - Charles D. H. Williams",
+    "url": "https://newton.ex.ac.uk/teaching/CDHW/Egg/"
+  },
+  {
+    "tool": "egg-timer",
+    "name": "The Food Lab: The Science of the Best Hard Boiled Eggs - J. Kenji López-Alt",
+    "url": "https://www.seriouseats.com/the-food-lab-hard-boiled-eggs-recipe"
+  },
+  {
+    "tool": "egg-timer",
+    "name": "The Food Lab: Perfect Soft Boiled Eggs",
+    "url": "https://www.seriouseats.com/soft-boiled-eggs-recipe"
+  },
+  {
+    "tool": "ingredient-rescaler",
+    "name": "Harold McGee - On Food and Cooking: The Science and Lore of the Kitchen",
+    "url": "https://en.wikipedia.org/wiki/Harold_McGee"
+  },
+  {
+    "tool": "ingredient-rescaler",
+    "name": "The Flavor Bible by Karen Page and Andrew Dornenburg",
+    "url": "https://www.flavorprints.com/"
+  },
+  {
+    "tool": "ingredient-rescaler",
+    "name": "Modernist Cuisine - Técnicas de escalado científico",
+    "url": "https://www.modernistcuisine.com/"
+  },
+  {
+    "tool": "kitchen-timer",
+    "name": "Seguridad Alimentaria: USDA Guidelines",
+    "url": "https://www.fsis.usda.gov/"
+  },
+  {
+    "tool": "kitchen-timer",
+    "name": "Mise en Place - La Cocina Profesional",
+    "url": "https://www.escoffier.edu/"
+  },
+  {
+    "tool": "meringue-peak",
+    "name": "Larousse Cocina: Tipos de Merengues y cómo prepararlos",
+    "url": "https://laroussecocina.mx/palabra/merengue/"
+  },
+  {
+    "tool": "meringue-peak",
+    "name": "Exploratorium: The Science of Cooking - Egg Science",
+    "url": "https://www.exploratorium.edu/explore/cooking/egg-science"
+  },
+  {
+    "tool": "meringue-peak",
+    "name": "Directo al Paladar: Guía completa del Merengue Francés",
+    "url": "https://www.directoalpaladar.com/curso-de-cocina/como-hacer-merengue-frances-facil-trucos-consejos-quede-perfecto"
+  },
+  {
+    "tool": "mold-scaler",
+    "name": "Baking Science and Technology - E.J. Pyler",
+    "url": "https://www.bakingbusiness.com/"
+  },
+  {
+    "tool": "mold-scaler",
+    "name": "The Professional Pastry Chef - Bo Friberg",
+    "url": "https://www.wiley.com/"
+  },
+  {
+    "tool": "pizza",
+    "name": "Associazione Verace Pizza Napoletana",
+    "url": "https://www.pizzanapoletana.org/"
+  },
+  {
+    "tool": "pizza",
+    "name": "The Pizza Bible - Tony Gemignani",
+    "url": "https://www.amazon.es/Pizza-Bible-Everything-Need-Perfect/dp/0393634039/"
+  },
+  {
+    "tool": "pizza",
+    "name": "Franco Pepe - Pepe in Grani",
+    "url": "https://www.pepeingranitalia.com/"
+  },
+  {
+    "tool": "pizza",
+    "name": "Harina Caputo",
+    "url": "https://www.caputoprepara.com/"
+  },
+  {
+    "tool": "roux-guide",
+    "name": "Larousse Gastronomique - La Biblia de la Cocina",
+    "url": "https://www.laroussecocina.com/"
+  },
+  {
+    "tool": "roux-guide",
+    "name": "Mastering the Art of French Cooking - Julia Child",
+    "url": "https://www.juliachild.com/"
+  },
+  {
+    "tool": "roux-guide",
+    "name": "On Food and Cooking - Harold McGee (La Ciencia del Roux)",
+    "url": "https://www.foodscience.org/"
+  },
+  {
+    "tool": "sourdough-calculator",
+    "name": "Tartine Bread - Chad Robertson",
+    "url": "https://www.penguinrandomhouse.com/books/310016/tartine-bread-by-chad-robertson/"
+  },
+  {
+    "tool": "sourdough-calculator",
+    "name": "The Flavor Bible - Scaling and Ratios",
+    "url": "https://www.flavorprints.com/"
+  },
+  {
+    "tool": "sourdough-calculator",
+    "name": "Full Proof Baking - Guides on Sourdough",
+    "url": "https://www.fullproofbaking.com/"
+  }
+]

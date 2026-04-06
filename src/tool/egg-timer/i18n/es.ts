@@ -79,99 +79,144 @@ export const content: ToolLocaleContent = {
       text: "Cuando el temporizador suene, sumerge inmediatamente en agua con hielo. Esto detiene la cocción y facilita el pelado. El choque térmico es crítico para la precisión.",
     },
   ],
-  seo: [
-    {
-      type: "title",
-      text: "La Ciencia del Huevo Perfecto",
-      level: 2,
-    },
-    {
-      type: "paragraph",
-      html: "Cocer un huevo parece la tarea culinaria más simple, pero es un problema de <strong>termodinámica compleja</strong>. La diferencia entre un huevo perfecto y uno mediocre es cuestión de grados y segundos. Esta herramienta no es un simple temporizador; es una calculadora física basada en el modelo de <strong>Charles Williams</strong> de la Universidad de Exeter.",
-    },
-    {
-      type: "title",
-      text: "¿Por qué importa la altitud?",
-      level: 3,
-    },
-    {
-      type: "paragraph",
-      html: "El agua no siempre hierve a 100°C. A medida que subimos en altitud, la presión atmosférica disminuye, facilitando que las moléculas de agua escapen al aire. Por cada 300 metros de elevación, el punto de ebullición desciende aproximadamente <strong>1°C</strong>.",
-    },
-    {
-      type: "paragraph",
-      html: "En el Everest, el agua hierve a 70°C, lo que hace imposible cocer un huevo duro (las proteínas necesitan más temperatura para desnaturalizarse completamente). En Madrid (600m), el agua hierve a 98°C, requiriendo más tiempo de cocción que en Alicante a nivel del mar.",
-    },
-    {
-      type: "title",
-      text: "La Fórmula Termodinámica",
-      level: 3,
-    },
-    {
-      type: "paragraph",
-      html: "Este cálculo se basa en la <strong>ecuación de conducción de calor</strong> derivada por Charles Williams. La fórmula asume que el huevo es una esfera, que el calor se transfiere uniformemente desde la superficie, y que el punto objetivo es el centro de la yema.",
-    },
-    {
-      type: "code",
-      text: "t = 0.451 * M^(2/3) * ln((Tw - To) / (Tw - Ty))",
-    },
-    {
-      type: "list",
-      items: [
-        "<strong>M:</strong> Masa del huevo en gramos",
-        "<strong>Tw:</strong> Temperatura de ebullición del agua (depende de la altitud)",
-        "<strong>To:</strong> Temperatura inicial del huevo (4°C o 20°C)",
-        "<strong>Ty:</strong> Temperatura objetivo deseada en la yema",
-      ],
-    },
-    {
-      type: "title",
-      text: "Guía de Temperaturas Internas",
-      level: 3,
-    },
-    {
-      type: "paragraph",
-      html: "Cada temperatura produce una estructura proteica diferente. Las proteínas del huevo desnaturalizan en rangos específicos:",
-    },
-    {
-      type: "table",
-      headers: ["Temperatura", "Estado", "Descripción"],
-      rows: [
-        [
-          "62°C - 65°C",
-          "Clara Cuajada",
-          "La proteína <em>ovotransferrina</em> coagula. Clara blanca y suave, yema líquida.",
-        ],
-        [
-          "65°C - 70°C",
-          "Mollet/Ceroso",
-          "La yema empieza a espesar. <em>Ovalbúmina</em> coagulada, estructura tierna.",
-        ],
-        [
-          "&gt; 77°C",
-          "Duro",
-          "Coagulación total. Si superas 80°C, forma sulfuro ferroso (anillo verde).",
-        ],
-      ],
-    },
-    {
-      type: "title",
-      text: "Consejos Profesionales",
-      level: 3,
-    },
-    {
-      type: "list",
-      items: [
-        "<strong>Choque Térmico:</strong> Sumerge en agua con hielo inmediatamente. Detiene la cocción y contrae el huevo dentro de la cáscara, facilitando el pelado.",
-        "<strong>Huevos Frescos vs Viejos:</strong> Los huevos muy frescos adhieren a la membrana (pH bajo). Para duros, usa huevos de 1-2 semanas.",
-        "<strong>Agua Hirviendo:</strong> Introduce el huevo en agua ya hirviendo (no fría). Ofrece control de tiempo más preciso y facilita el pelado.",
-        "<strong>Precisión del Tiempo:</strong> Cada 5-10 segundos cuenta. La diferencia entre una yema cremosa y sobrecocida es mínima.",
-      ],
-    },
-    {
-      type: "tip",
-      html: "<strong>Dato científico:</strong> La transferencia de calor en un huevo es un problema de conducción térmica tridimensional. Por eso la fórmula de Williams usa la masa elevada a la potencia 2/3 (relación entre volumen y superficie).",
-    },
-  ],
+	seo: [
+		{
+			type: 'title',
+			text: 'Guía Maestro para la Cocción Perfecta del Huevo',
+			level: 2,
+		},
+		{
+			type: 'paragraph',
+			html: 'Cocer un huevo es un ejercicio de <strong>termodinámica aplicada</strong>. La precisión en la temperatura inicial, el tamaño del huevo y la altitud geográfica determina si obtendrás una yema líquida sedosa o un sólido sobrecocido con el indeseado anillo verde.',
+		},
+		{
+			type: 'stats',
+			columns: 4,
+			items: [
+				{
+					value: '62°C',
+					label: 'Coagulación Clara',
+					icon: 'mdi:egg-outline',
+				},
+				{
+					value: '68°C',
+					label: 'Coagulación Yema',
+					icon: 'mdi:egg-fried',
+				},
+				{
+					value: '-1°C',
+					label: 'Ebullición / 300m',
+					icon: 'mdi:mountain',
+				},
+				{
+					value: '0s',
+					label: 'Error Tolerado',
+					icon: 'mdi:timer-check-outline',
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Comparativa de Estados de Cocción',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 3,
+			items: [
+				{
+					title: 'Huevo Pasado por Agua',
+					icon: 'mdi:coffee-outline',
+					description: 'Clara parcialmente cuajada y yema totalmente líquida.',
+					points: [
+						'Textura muy delicada',
+						'Ideal para mojar pan',
+						'Cocción rápida (3-4 min)',
+						'Difícil de pelar',
+					],
+				},
+				{
+					title: 'Huevo Mollet / Ceroso',
+					icon: 'mdi:water-percent',
+					description: 'Clara firme y yema cremosa, densa pero no sólida.',
+					highlight: true,
+					points: [
+						'El estándar gourmet',
+						'Yema con textura de miel',
+						'Piel elástica y firme',
+						'Perfecto para ensaladas',
+					],
+				},
+				{
+					title: 'Huevo Duro / Cocido',
+					icon: 'mdi:circle-slice-8',
+					description: 'Totalmente sólido pero tierno, sin anillo verde.',
+					points: [
+						'Yema opaca y firme',
+						'Fácil transporte y pelado',
+						'Ideal para rellenar',
+						'Requiere enfriado rápido',
+					],
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Punto de Ebullición según la Altitud',
+			level: 3,
+		},
+		{
+			type: 'table',
+			headers: ['Ciudad / Altitud', 'Metros (msnm)', 'Ebullición (°C)', 'Tiempo Extra'],
+			rows: [
+				['Nivel del Mar (Cádiz)', '0m', '100°C', '0s'],
+				['Madrid', '650m', '97.8°C', '+25s'],
+				['Ciudad de México', '2240m', '92.6°C', '+75s'],
+				['La Paz (Bolivia)', '3640m', '88.1°C', '+140s'],
+			],
+		},
+		{
+			type: 'diagnostic',
+			variant: 'warning',
+			title: '¿Yema con Anillo Verde o Difícil de Pelar?',
+			html: 'El anillo verde es <strong>sulfuro ferroso</strong> caused por sobrecocción (reacción del azufre de la clara con el hierro de la yema). Si el huevo no se pela bien, es por ser demasiado fresco; el pH bajo hace que la clara se pegue a la membrana. Usa huevos de 1 semana y choque térmico en hielo.',
+		},
+		{
+			type: 'title',
+			text: 'Glosario de Ciencias del Huevo',
+			level: 3,
+		},
+		{
+			type: 'glossary',
+			items: [
+				{
+					term: 'Ovotransferrina',
+					definition: 'Proteína de la clara que coagula primero (62°C), dando la estructura blanca inicial.',
+				},
+				{
+					term: 'Ovalbúmina',
+					definition: 'Proteína mayoritaria que requiere más calor (80°C) para una firmeza total.',
+				},
+				{
+					term: 'Presión Atmosférica',
+					definition: 'Factor que determina la temperatura del agua hirviendo; a menor presión, menor temperatura.',
+				},
+				{
+					term: 'Choque Térmico',
+					definition: 'Inmersión en agua helada para detener la cocción residual de forma instantánea.',
+				},
+			],
+		},
+		{
+			type: 'tip',
+			title: 'El truco del Vinagre',
+			html: 'Añade un chorro de vinagre al agua. Si la cáscara se agrieta, el ácido ayudará a coagular la clara que escape rápidamente, sellando la grieta y salvando el huevo.',
+		},
+		{
+			type: 'paragraph',
+			html: 'Nuestra calculadora utiliza la ecuación de Charles Williams para ajustar cada segundo según tu ubicación exacta y el estado de tu nevera.',
+		},
+	],
+
   schemas: [],
 };

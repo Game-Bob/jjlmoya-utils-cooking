@@ -1,134 +1,205 @@
 import type { ToolLocaleContent } from '../../../types';
 
 export const content: ToolLocaleContent = {
-  slug: 'ingredient-rescaler',
-  title: 'Ingredient Rescaler - Scale Your Recipes Easily',
-  description: 'Scale recipes automatically based on the number of servings. Calculate exact ingredient quantities by multiplying or reducing your recipe without complications.',
+  slug: "recipe-ingredient-scaler-converter-servings",
+  title: "Professional Recipe Ingredient Scaler",
+  description:
+    "Automatically scale your recipes based on serving count. Calculate exact ingredient amounts to multiply or reduce any recipe with professional precision.",
   ui: {
-    servings: 'Servings',
-    original: 'Original',
-    desired: 'Desired',
-    multiplyingFactor: 'Multiplying Factor',
-    ingredientsList: 'Ingredient List',
-    pasteHere: 'Paste your list here.',
-    exampleLine1: 'E.g.:',
-    exampleLine2: '500g Flour',
-    exampleLine3: '300ml Water',
-    exampleLine4: '10g Salt',
-    result: 'Result',
-    copy: 'Copy',
-    copied: 'Copied!',
-    emptyState: 'Your scaled ingredients will appear here...',
-    defaultIngredient1: '200g Flour',
-    defaultIngredient2: '100ml Milk',
-    defaultIngredient3: '2 Eggs',
+    servings: "Servings",
+    original: "Original",
+    desired: "Desired",
+    multiplyingFactor: "Conversion Factor",
+    ingredientsList: "Ingredient List",
+    pasteHere: "Paste your ingredients here.",
+    exampleLine1: "Ex:",
+    exampleLine2: "500g Flour",
+    exampleLine3: "300ml Water",
+    exampleLine4: "10g Salt",
+    result: "Result",
+    copy: "Copy",
+    copied: "Copied!",
+    emptyState: "Your adjusted ingredients will appear here...",
+    defaultIngredient1: "200g Flour",
+    defaultIngredient2: "100ml Milk",
+    defaultIngredient3: "2 Eggs",
   },
-  faqTitle: 'Frequently Asked Questions',
+  faqTitle: "Frequently Asked Questions",
   faq: [
     {
-      question: 'Why does my conversion factor include decimals?',
-      answer: 'Because culinary proportions are not always round. If you scale a recipe from 4 to 7 servings, the factor is exactly 1.75. Ingredients are multiplied by that number, even if you encounter fractions. It\'s more accurate than arbitrary rounding.',
+      question: "Why does my conversion factor include decimals?",
+      answer: "Because culinary proportions aren't always whole numbers. If you scale a 4-person recipe for 7 people, the factor is exactly 1.75. Multiplying by this specific ratio is more accurate than arbitrary rounding.",
     },
     {
-      question: 'What if I input "1/2 teaspoon of salt"?',
-      answer: 'The parser looks for the number first. It will recognize "1" as the quantity, then "/2" as part of the unit. The result will be "0.5", and when scaled it will multiply correctly. For fractions like "1/2", entering "0.5" directly is clearer, or the tool interprets them as division.',
+      question: "How do I handle fractions like '1/2 tsp'?",
+      answer: "The parser automatically identifies numbers. It will read '1/2' as '0.5' and scale it accordingly. For maximum clarity, you can also enter decimals directly.",
     },
     {
-      question: 'Should I round the final results?',
-      answer: 'It depends on the ingredient. For flours, yes. For yeast or spices, precision matters less (scale to 75% of indicated). For eggs: if you get 2.3, use 2 whole ones plus part of a third (weighed), or round to 2 if the dish allows.',
+      question: "Should I round the final results?",
+      answer: "It depends on the ingredient. For flours and liquids, yes. For potent spices or yeast, we recommend scaling to about 75% of the calculated total to avoid overpowering the dish.",
     },
     {
-      question: 'Why doesn\'t the result change when I adjust servings?',
-      answer: 'Make sure the ingredients field has content. If it\'s empty, there\'s nothing to scale. Also verify that the numbers in your ingredients are recognizable (e.g., "500g", "1/2 teaspoon").',
-    },
-    {
-      question: 'Does it work with imperial measurements (ounces, cups)?',
-      answer: 'Technically yes, the tool reads numbers and scales. But precision is limited with cups (inconsistent volume). It\'s recommended to convert to grams before scaling.',
+      question: "Does it work with cups and ounces?",
+      answer: "Yes, the tool scales any numerical value. However, we strongly recommend converting to grams first for professional-grade consistency across larger batches.",
     },
   ],
-  bibliographyTitle: 'Bibliography',
+  bibliographyTitle: "Bibliography & Resources",
   bibliography: [
     {
-      name: 'Harold McGee - On Food and Cooking: The Science and Lore of the Kitchen',
-      url: 'https://en.wikipedia.org/wiki/Harold_McGee',
+      name: "Harold McGee - On Food and Cooking",
+      url: "https://en.wikipedia.org/wiki/Harold_McGee",
     },
     {
-      name: 'The Flavor Bible by Karen Page and Andrew Dornenburg',
-      url: 'https://www.flavorprints.com/',
+      name: "The Flavor Bible - Page & Dornenburg",
+      url: "https://www.flavorprints.com/",
     },
     {
-      name: 'Modernist Cuisine - Scientific Scaling Techniques',
-      url: 'https://www.modernistcuisine.com/',
+      name: "Modernist Cuisine - Scaling Techniques",
+      url: "https://www.modernistcuisine.com/",
     },
   ],
   howTo: [
     {
-      name: 'Enter your servings',
-      text: 'In the "Original" field, enter the number of people the recipe is designed for. In "Desired", enter the number of people you\'re going to cook for.',
+      name: "Enter your servings count",
+      text: "Define how many people the recipe was originally for, and how many you want to cook for now.",
     },
     {
-      name: 'Paste your ingredient list',
-      text: 'Copy and paste your list as is. Each ingredient on a new line. The tool recognizes numbers at the start (500g, 1/2, 2.5) and scales automatically.',
+      name: "Paste your ingredient list",
+      text: "Copy and paste your entire list. Our tool recognizes numbers at the start of each line (e.g., 500g, 1/2, 2.5) and scales them instantly.",
     },
     {
-      name: 'Adjust according to context',
-      text: 'Results are mathematically exact, but cooking is an art. Spices: scale to 75%. Yeast: less than theoretical in large quantities. Cooking times: never scale.',
+      name: "Apply professional adjustments",
+      text: "Math is exact, but cooking is situational. Scale spices to 75%. Don't scale cooking times. Use your chef's intuition for the final touch.",
     },
   ],
   seo: [
     {
-      type: 'title',
-      text: 'The Science Behind Recipe Scaling',
+      type: "title",
+      text: "Master Guide for Recipe Scaling and Converter Logic",
       level: 2,
     },
     {
-      type: 'paragraph',
-      html: 'Cooking is not just art, it\'s <strong>applied mathematics</strong>. Understanding how to adapt the proportions of your ingredients is the difference between a decent dish and a masterpiece, whether you\'re cooking for 2 or 20.',
+      type: "paragraph",
+      html: "<strong>Ingredient scaling</strong> is one of the most critical yet error-prone tasks in professional kitchens. It's not just about multiplying numbers; it's about understanding how food chemistry and physics react to changes in volume and surface area.",
     },
     {
-      type: 'title',
-      text: 'How Does the Conversion Factor Work?',
-      level: 3,
-    },
-    {
-      type: 'paragraph',
-      html: 'The heart of any culinary adaptation is the <strong>Conversion Factor (CF)</strong>. Although our tool does it automatically, understanding the logic gives you full control over your cooking. It\'s a simple direct proportion: <strong>Desired Amount ÷ Original Amount = Factor (CF)</strong>.',
-    },
-    {
-      type: 'paragraph',
-      html: 'If your recipe is for 4 people and you want to cook for 7, the factor is 1.75. Each ingredient is multiplied by that number.',
-    },
-    {
-      type: 'title',
-      text: 'What Does NOT Scale Linearly',
-      level: 3,
-    },
-    {
-      type: 'paragraph',
-      html: 'Multiplying all ingredients by 2 works for flour and water, but cooking is chemistry and thermodynamics. There are elements that behave exponentially or logarithmically, not linearly.',
-    },
-    {
-      type: 'list',
+      type: "stats",
+      columns: 4,
       items: [
-        '<strong>Spices and salt:</strong> Taste perception saturates. Tripling cayenne pepper can make a stew inedible. Golden rule: scale spices to 75% and adjust at the end.',
-        '<strong>Yeast:</strong> In large fermented doughs, friction generates more heat and accelerates fermentation. Doubling the dough requires less than double the yeast.',
-        '<strong>Cooking times:</strong> A 10kg turkey doesn\'t take twice as long as a 5kg one. Heat transmission depends on thickness. Always use a probe thermometer.',
+        {
+          value: "x1.75",
+          label: "Factor 4 to 7 per.",
+          icon: "mdi:calculator",
+        },
+        {
+          value: "75%",
+          label: "Spice Adjustment",
+          icon: "mdi:shaker-outline",
+        },
+        {
+          value: "0%",
+          label: "Time Scaling",
+          icon: "mdi:timer-off",
+        },
+        {
+          value: "100g",
+          label: "Reference Base",
+          icon: "mdi:weight-gram",
+        },
       ],
     },
     {
-      type: 'title',
-      text: 'Professional Cooking Tricks',
+      type: "title",
+      text: "Differences Between Linear and Contextual Scaling",
       level: 3,
     },
     {
-      type: 'list',
+      type: "comparative",
+      columns: 2,
       items: [
-        '<strong>Egg as a unit:</strong> If scaling asks for 2.3 eggs, weigh the exact amount or round as needed.',
-        '<strong>Surface vs Volume:</strong> When reducing sauces, evaporation is faster. Watch the reduction carefully.',
-        '<strong>Metric System:</strong> Always weigh in grams. It\'s more accurate when scaling.',
+        {
+          title: "Mathematical Linear Scaling",
+          icon: "mdi:math-log",
+          description: "Direct multiplication of all values by the calculated conversion factor.",
+          points: [
+            "Perfect for flour and base liquids",
+            "Ideal for cold precision pastry",
+            "Works well for small shifts (x2, x0.5)",
+            "Easy to calculate automatically",
+          ],
+        },
+        {
+          title: "Chef's Contextual Scaling",
+          icon: "mdi:chef-hat",
+          description: "Adjusting proportions based on flavor saturation and evaporation.",
+          highlight: true,
+          points: [
+            "Prevents excess salt and spice levels",
+            "Considers evaporation surface area",
+            "Adjusts yeast based on friction heat",
+            "Requires professional culinary judgment",
+          ],
+        },
       ],
+    },
+    {
+      type: "title",
+      text: "Common Conversion Factors by Serving Size",
+      level: 3,
+    },
+    {
+      type: "table",
+      headers: ["From Servings", "To Servings", "Factor (CF)", "Adjustment Difficulty"],
+      rows: [
+        ["2 persons", "4 persons", "x 2.0", "Low (Linear)"],
+        ["4 persons", "6 persons", "x 1.5", "Low (Linear)"],
+        ["4 persons", "10 persons", "x 2.5", "Medium (Watch spices)"],
+        ["4 persons", "25 persons", "x 6.25", "High (Contextual)"],
+      ],
+    },
+    {
+      type: "diagnostic",
+      variant: "warning",
+      title: "Common Pitfalls When Doubling a Recipe",
+      html: "If you notice flavors becoming too intense after scaling—especially with chili or salt—reduce the specific scale for those ingredients to 75%. Never double the cooking time; internal temperature is reached based on thickness, not total batch weight.",
+    },
+    {
+      type: "title",
+      text: "Standardization Terminology Glossary",
+      level: 3,
+    },
+    {
+      type: "glossary",
+      items: [
+        {
+          term: "Conversion Factor",
+          definition: "The number used to multiply ingredients: Desired Quantity / Original Quantity.",
+        },
+        {
+          term: "Cooking Shrinkage",
+          definition: "Weight loss due to evaporation or fat loss. This does not scale linearly with batch size.",
+        },
+        {
+          term: "Gross vs Net Weight",
+          definition: "Weight before and after cleaning. Always scale based on the recipe's specified net weight.",
+        },
+        {
+          term: "Batch Yield",
+          definition: "The total amount of finished product after scaling and cooking processes.",
+        },
+      ],
+    },
+    {
+      type: "tip",
+      title: "The Beaten Egg Trick",
+      html: "If the calculator asks for 2.3 eggs, beat one whole egg, weigh it, and use only 30% of that weight. This is the only way to maintain precision in fine pâtisserie.",
+    },
+    {
+      type: "paragraph",
+      html: "Our tool simplifies the math so you can focus on what truly matters: creativity and flavor.",
     },
   ],
+
   schemas: [
     {
       '@context': 'https://schema.org',

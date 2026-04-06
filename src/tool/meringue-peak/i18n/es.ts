@@ -91,127 +91,144 @@ export const content: ToolLocaleContent = {
       url: 'https://www.directoalpaladar.com/curso-de-cocina/como-hacer-merengue-frances-facil-trucos-consejos-quede-perfecto',
     },
   ],
-  seo: [
-    {
-      type: 'title',
-      text: '¿Cómo hacer el merengue perfecto? Ciencia y proporciones',
-      level: 2,
-    },
-    {
-      type: 'paragraph',
-      html: 'El merengue es una de las preparaciones más fundamentales y, a la vez, intimidantes de la repostería clásica. Aunque sus ingredientes son engañosamente simples —claras de huevo y azúcar—, la magia reside en la técnica y en el respeto estricto por las proporciones físico-químicas. Montar claras a punto de nieve no es solo agitar un brazo o una máquina; es un proceso de desnaturalización de proteínas donde creamos una estructura capaz de atrapar millones de microburbujas de aire.',
-    },
-    {
-      type: 'paragraph',
-      html: 'Nuestra <strong>calculadora de merengue</strong> ha sido diseñada para eliminar las dudas. Ya sea que tengas tres claras sobrantes de otra receta o estés preparando una gran tarta para un evento, conocer el peso exacto del azúcar y los tiempos estimados de batido es la diferencia entre un merengue firme y brillante y un líquido triste que se desinfla en minutos.',
-    },
-    {
-      type: 'title',
-      text: 'Tipos de Merengue: ¿Cuál elegir para tu receta?',
-      level: 3,
-    },
-    {
-      type: 'paragraph',
-      html: 'No todos los merengues son iguales. Dependiendo de cómo apliques el azúcar y la temperatura, obtendrás texturas y estabilidades diferentes:',
-    },
-    {
-      type: 'list',
-      items: [
-        '<strong>Merengue Francés:</strong> Es el más sencillo. Se baten las claras y se añade el azúcar poco a poco. Es ideal para preparar suspiros (merenguitos horneados) o pavlovas, ya que debe cocinarse necesariamente.',
-        '<strong>Merengue Italiano:</strong> Considerado el más estable y seguro. El azúcar se añade en forma de almíbar a 118°C. El calor del almíbar \'cocina\' las claras, haciéndolo apto para comer sin horneado adicional. Es el preferido para decorar tartas y pies.',
-        '<strong>Merengue Suizo:</strong> Se prepara calentando las claras y el azúcar al baño maría hasta los 60°C antes de batir. Tiene una consistencia muy sedosa y es la base perfecta para las cremas de mantequilla o buttercream suizo.',
-      ],
-    },
-    {
-      type: 'title',
-      text: 'La Regla de Oro: Proporciones de Azúcar',
-      level: 3,
-    },
-    {
-      type: 'paragraph',
-      html: 'La proporción estándar en casi cualquier manual de pastelería es de <strong>1:2</strong>. Esto significa que por cada gramo de clara de huevo, utilizaremos dos gramos de azúcar. Esta cantidad no es arbitraria; el azúcar actúa como estabilizador. Sin suficiente azúcar, la red de proteínas de la clara (principalmente la ovoalbúmina) se estira demasiado y termina colapsando, expulsando el agua y arruinando la mezcla.',
-    },
-    {
-      type: 'paragraph',
-      html: 'Sin embargo, dependiendo del tipo de merengue, el tipo de azúcar puede variar. En el merengue francés, por ejemplo, es común usar una mezcla de azúcar blanquilla y azúcar glas para lograr un secado superior en el horno. Nuestra calculadora desglosa estas necesidades automáticamente según el peso de tus claras.',
-    },
-    {
-      type: 'title',
-      text: 'Los 3 estados del batido: De espumoso a pico firme',
-      level: 3,
-    },
-    {
-      type: 'paragraph',
-      html: 'Es crucial identificar visualmente en qué punto se encuentra tu merengue para saber cuándo dejar de batir. El sobrebatido es un error común que rompe la estructura y hace que el merengue \'se corte\'.',
-    },
-    {
-      type: 'list',
-      items: [
-        '<strong>Punto Espumoso:</strong> Las claras comienzan a burbujear y se vuelven blancas, pero aún son líquidas. Es el momento de empezar a añadir el azúcar.',
-        '<strong>Pico Blando (Soft Peaks):</strong> Al levantar la varilla, el merengue forma una punta que se dobla suavemente hacia abajo. Ideal para mousses ligeras.',
-        '<strong>Punto de Nieve / Pico Firme (Stiff Peaks):</strong> El merengue es brillante y al levantar la varilla, la punta se mantiene vertical sin moverse. Si giras el bol, el contenido no debe caer.',
-      ],
-    },
-    {
-      type: 'title',
-      text: 'Factores que arruinan un merengue',
-      level: 3,
-    },
-    {
-      type: 'paragraph',
-      html: 'Incluso con las proporciones perfectas de nuestra calculadora, existen enemigos invisibles que pueden hacer fracasar tu preparación:',
-    },
-    {
-      type: 'list',
-      items: [
-        '<strong>Grasa:</strong> Es el enemigo número uno. La más mínima gota de yema o un rastro de grasa en el bol impedirá que las claras monten. Usa recipientes de metal o vidrio, evitando el plástico que suele retener residuos grasos.',
-        '<strong>Temperatura:</strong> Para el merengue francés, las claras a temperatura ambiente montan más rápido y con más volumen. Para el italiano, el control térmico del almíbar es innegociable.',
-        '<strong>Humedad:</strong> El azúcar es higroscópico, lo que significa que absorbe la humedad del aire. En días muy lluviosos o húmedos, el merengue puede volverse pegajoso o costarle mucho secar en el horno.',
-      ],
-    },
-    {
-      type: 'tip',
-      html: '<strong>Consejo profesional:</strong> Añade una pizca de cremor tártaro o unas gotas de limón al inicio del batido. El ácido ayuda a estabilizar la red de proteínas, haciendo que el merengue sea mucho más difícil de sobrebatir.',
-    },
-    {
-      type: 'title',
-      text: 'Preguntas frecuentes sobre el punto de nieve',
-      level: 3,
-    },
-    {
-      type: 'paragraph',
-      html: '<strong>¿Cuánto pesa una clara de huevo?</strong><br />De media, una clara de un huevo tamaño L pesa unos 30-35 gramos. No obstante, siempre recomendamos usar una báscula digital para precisión absoluta, ya que el tamaño del huevo varía considerablemente.',
-    },
-    {
-      type: 'paragraph',
-      html: '<strong>¿Se puede sobrebatir el merengue?</strong><br />Sí. Si bates demasiado una vez alcanzado el pico firme, las proteínas se aglutinarán tanto que expulsarán el agua, creando una textura granulosa y con aspecto seco. Llegado a ese punto, es difícil recuperarlo.',
-    },
-    {
-      type: 'paragraph',
-      html: '<strong>¿Por qué mi merengue \'llora\'?</strong><br />Si ves gotas de almíbar saliendo del merengue horneado, suele ser señal de que el azúcar no se disolvió correctamente durante el batido o que el horno estaba demasiado fuerte.',
-    },
-    {
-      type: 'title',
-      text: 'Usos gastronómicos del merengue',
-      level: 3,
-    },
-    {
-      type: 'paragraph',
-      html: 'Una vez domines la técnica con nuestra herramienta, las posibilidades son infinitas. El merengue no solo es un postre en sí mismo como los suspiros o la Pavlova australiana, sino que es un componente estructural de:',
-    },
-    {
-      type: 'list',
-      items: [
-        '<strong>Macarons:</strong> Requieren un merengue francés o italiano muy preciso para conseguir la \'pie\' característica.',
-        '<strong>Mousses clásicas:</strong> Donde aporta la ligereza y aireado sin necesidad de añadir grasas pesadas.',
-        '<strong>Soufflés:</strong> Donde el aire atrapado en las claras es el motor de la elevación en el horno.',
-        '<strong>Tartas Lemon Pie:</strong> Decoradas con un merengue italiano flambeado que resiste horas sin perder la forma.',
-      ],
-    },
-    {
-      type: 'paragraph',
-      html: 'Como ves, la repostería es química aplicada. Nuestra calculadora de punto de nieve te permite centrarte en la creatividad mientras nosotros nos encargamos de las matemáticas. ¡Feliz horneado!',
-    },
-  ],
+	seo: [
+		{
+			type: 'title',
+			text: 'Guía Maestro para el Cálculo de Merengue y Punto de Nieve',
+			level: 2,
+		},
+		{
+			type: 'paragraph',
+			html: 'Dominar el <strong>punto de nieve</strong> y los diferentes tipos de merengue es elevar tu repostería al nivel profesional. La clave reside en la precisión del peso de las claras y la relación exacta de azúcar para estabilizar la red de proteínas.',
+		},
+		{
+			type: 'stats',
+			columns: 4,
+			items: [
+				{
+					value: '1:2',
+					label: 'Ratio Clara:Azúcar',
+					icon: 'mdi:scale-balance',
+				},
+				{
+					value: '118°C',
+					label: 'Almíbar Italiano',
+					icon: 'mdi:thermometer-high',
+				},
+				{
+					value: '60°C',
+					label: 'Baño María Suizo',
+					icon: 'mdi:beaker-question-outline',
+				},
+				{
+					value: '0%',
+					label: 'Tolerancia a Grasa',
+					icon: 'mdi:close-circle-outline',
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Comparativa de Técnicas de Merengue',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 3,
+			items: [
+				{
+					title: 'Merengue Francés',
+					icon: 'mdi:baguette',
+					description: 'El más simple pero menos estable. Se baten las claras con azúcar en frío.',
+					points: [
+						'Ideal para hornear (suspiros)',
+						'Textura ligera y aireada',
+						'Requiere cocción obligatoria',
+						'Rápido de preparar',
+					],
+				},
+				{
+					title: 'Merengue Italiano',
+					icon: 'mdi:pizza',
+					description: 'El más estable de todos. Se usa almíbar a punto de bola blanda.',
+					highlight: true,
+					points: [
+						'Perfecto para decorar tartas',
+						'Apto para comer en crudo',
+						'Resiste mejor la humedad',
+						'Estructura densa y brillante',
+					],
+				},
+				{
+					title: 'Merengue Suizo',
+					icon: 'mdi:cheese',
+					description: 'Calentado al baño maría. Equilibrio entre facilidad y estabilidad.',
+					points: [
+						'Base para Buttercreams',
+						'Textura muy sedosa',
+						'Excelente para rellenos',
+						'Seguridad alimentaria media',
+					],
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Estados Visuales del Batido de Claras',
+			level: 3,
+		},
+		{
+			type: 'table',
+			headers: ['Estado', 'Descripción Visual', 'Uso Recomendado', 'Estabilidad'],
+			rows: [
+				['Espumado', 'Burbujas grandes, transparente', 'Añadir ácidos/azúcar', 'Nula'],
+				['Picos Blandos', 'La punta se dobla hacia abajo', 'Mousses y soufflés', 'Baja'],
+				['Pico Firme', 'Punta vertical y rígida', 'Decoración y horneado', 'Alta'],
+				['Sobrebatido', 'Textura granulosa y seca', 'Inservible (se corta)', 'Colapso'],
+			],
+		},
+		{
+			type: 'diagnostic',
+			variant: 'warning',
+			title: '¿Tu Merengue Llora o suelta Líquido?',
+			html: 'Si ves almíbar escapando del merengue (sinéresis), se debe a que el azúcar no se disolvió totalmente o a un exceso de humedad ambiental. En el merengue italiano, asegura que el almíbar caiga en hilo fino sobre las claras en movimiento, nunca sobre las varillas.',
+		},
+		{
+			type: 'title',
+			text: 'Glosario de Repostería Técnica',
+			level: 3,
+		},
+		{
+			type: 'glossary',
+			items: [
+				{
+					term: 'Ovoalbúmina',
+					definition: 'Principal proteína de la clara responsable de atrapar el aire en el batido.',
+				},
+				{
+					term: 'Higroscópico',
+					definition: 'Propiedad del azúcar de absorber humedad del aire, lo que puede ablandar el merengue.',
+				},
+				{
+					term: 'Cremor Tártaro',
+					definition: 'Sal ácida que ayuda a prevenir el sobrebatido y estabiliza la espuma.',
+				},
+				{
+					term: 'Baño María',
+					definition: 'Método de calor indirecto crucial para disolver el azúcar en el merengue suizo.',
+				},
+			],
+		},
+		{
+			type: 'tip',
+			title: 'El truco del Bol de Metal',
+			html: 'Limpia tu bol con una servilleta y un chorro de vinagre o limón antes de empezar. Cualquier rastro de grasa impedirá que las claras suban, por mucha energía que apliques.',
+		},
+		{
+			type: 'paragraph',
+			html: 'Nuestra calculadora automatiza las proporciones para que tú solo tengas que preocuparte de batir hasta alcanzar ese brillo perfecto.',
+		},
+	],
+
   schemas: [],
 };

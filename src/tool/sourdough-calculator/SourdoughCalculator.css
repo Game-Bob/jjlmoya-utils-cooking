@@ -52,6 +52,10 @@
 	.sc-grid {
 		grid-template-columns: 2fr 3fr;
 	}
+
+	.sc-grid > * {
+		min-width: 0;
+	}
 }
 
 .sc-section {
@@ -159,8 +163,8 @@ input[type='number']::-webkit-inner-spin-button {
 
 .sc-custom-inputs {
 	display: none;
-	gap: 0.5rem;
-	padding: 1rem;
+	gap: 1.5rem;
+	padding: 1.5rem;
 	background: var(--sc-bg-app);
 	border-radius: 0.75rem;
 	border: 1px solid var(--sc-border);
@@ -168,17 +172,27 @@ input[type='number']::-webkit-inner-spin-button {
 
 .sc-custom-inputs.visible {
 	display: flex;
+	justify-content: space-around;
+	align-items: flex-end;
+}
+
+.sc-custom-input-group {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
 }
 
 .custom-input {
-	flex: 1;
-	padding: 0.5rem;
+	padding: 0.75rem;
 	border: 1px solid var(--sc-border);
 	border-radius: 0.5rem;
 	background: var(--sc-bg-card);
 	color: var(--sc-text-main);
-	font-weight: 600;
+	width: 80px;
 	text-align: center;
+	font-weight: 600;
+	font-size: 1rem;
 	transition: var(--sc-transition);
 }
 

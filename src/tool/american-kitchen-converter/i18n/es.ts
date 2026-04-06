@@ -2,7 +2,7 @@ import type { ToolLocaleContent } from '../../../types';
 
 export const content: ToolLocaleContent = {
   slug: 'conversor-unidades-cocina-americana',
-  title: 'Conversor Cocina Americana: Cups a Gramos, Fahrenheit a Celsius',
+  title: 'Conversor Cocina Americana Cups a Gramos y Temperaturas',
   description: 'Convierte cups, tablespoons y Fahrenheit al sistema métrico. La brújula para descifrar recetas estadounidenses con precisión profesional.',
   faqTitle: 'Preguntas Frecuentes',
   bibliographyTitle: 'Bibliografía',
@@ -102,81 +102,129 @@ export const content: ToolLocaleContent = {
   seo: [
     {
       type: 'title',
-      text: 'Guía de Conversión de Unidades de Cocina Americana: Cups a Gramos',
+      text: 'Guía Maestro para el Conversor de Medidas de Cocina Americana',
       level: 2,
     },
     {
       type: 'paragraph',
-      html: 'Si alguna vez has intentado seguir una receta de un blog estadounidense, te habrás encontrado con el desafío de las <strong>"Cups"</strong>. A diferencia del sistema métrico, donde medimos por peso (gramos), la cocina americana se basa en el volumen. Esto supone un problema crítico: la densidad de los ingredientes varía enormemente.',
+      html: 'Convertir <strong>cups a gramos</strong> o <strong>Fahrenheit a Celsius</strong> es el primer paso para dominar las recetas internacionales. La cocina estadounidense se basa en el volumen, lo que introduce una variabilidad de hasta el 25% en ingredientes secos como la harina.',
+    },
+    {
+      type: 'stats',
+      columns: 4,
+      items: [
+        {
+          value: '120g',
+          label: '1 Cup de Harina',
+          icon: 'mdi:grain',
+        },
+        {
+          value: '227g',
+          label: 'Stick de Mantequilla',
+          icon: 'mdi:cube-outline',
+        },
+        {
+          value: '175°C',
+          label: 'Equivalente 350°F',
+          icon: 'mdi:thermometer',
+        },
+        {
+          value: '240ml',
+          label: 'Volumen 1 Cup',
+          icon: 'mdi:water-percent',
+        },
+      ],
     },
     {
       type: 'title',
-      text: 'Volumen vs Peso: ¿Por qué es Vital Convertir?',
+      text: 'Diferencias Críticas entre Volumen y Peso',
       level: 3,
     },
     {
-      type: 'paragraph',
-      html: 'Medir harina por volumen es arriesgado. Si hundes la taza en el saco, la harina se compacta y puedes estar usando 150g en lugar de los 120g que indica la receta. Esta diferencia del 25% es la responsable de que bizcochos y panes queden secos o no suban correctamente. Por eso, <strong>convertir tazas a gramos</strong> no es opcional, es una necesidad técnica.',
+      type: 'comparative',
+      columns: 2,
+      items: [
+        {
+          title: 'Medición por Volumen (Cups)',
+          icon: 'mdi:cup-water',
+          description: 'Utilizado en recetas domésticas de EE.UU. Mide el espacio que ocupa el ingrediente.',
+          points: [
+            'Muy dependiente de la compactación',
+            'Error común del 20-30% en harinas',
+            'Inconsistente entre marcas de tazas',
+            'Requiere tamizar antes para mayor precisión',
+          ],
+        },
+        {
+          title: 'Medición por Peso (Gramos)',
+          icon: 'mdi:scale-balance',
+          description: 'El estándar de la repostería profesional y europea. Precisión absoluta.',
+          highlight: true,
+          points: [
+            'Precisión de +/- 1g siempre',
+            'Resultados consistentes y repetibles',
+            'Menos limpieza (un solo bol)',
+            'Facilita el escalado matemático',
+          ],
+        },
+      ],
     },
     {
       type: 'title',
-      text: 'Sistema Imperial vs Sistema Métrico',
+      text: 'Equivalencias de Ingredientes Comunes',
       level: 3,
-    },
-    {
-      type: 'paragraph',
-      html: '<strong>Sistema Imperial (Volumen):</strong> Basado en tazas (cups) y cucharas. Es impreciso para sólidos porque depende de cuánto compactes el ingrediente, con margen de error de hasta un 30% en harinas. Requiere múltiples cacharros medidores e es inconsistente según el país (US vs UK).',
-    },
-    {
-      type: 'paragraph',
-      html: '<strong>Sistema Métrico (Peso):</strong> Basado en gramos y mililitros. Es el estándar de la repostería profesional. Ofrece precisión absoluta: 100g siempre son 100g. Los resultados son consistentes y repetibles, menos limpieza al pesar todo en un mismo bol, y facilita el escalado de recetas.',
-    },
-    {
-      type: 'title',
-      text: 'Equivalencias de Harinas y Polvos',
-      level: 3,
-    },
-    {
-      type: 'paragraph',
-      html: 'Cada tipo de harina tiene un peso distinto por taza. No es lo mismo una harina de fuerza que una integral o de repostería:',
     },
     {
       type: 'table',
-      headers: ['Ingrediente', 'Volumen (Cup)', 'Peso (Gramos)'],
+      headers: ['Ingrediente', '1 Cup (Volumen)', 'Gramos (Peso)', 'Densidad'],
       rows: [
-        ['Harina de trigo (todo uso)', '1 taza (cup)', '<strong>120 g</strong>'],
-        ['Harina integral', '1 taza (cup)', '<strong>113 g</strong>'],
-        ['Harina de repostería', '1 taza (cup)', '<strong>110 g</strong>'],
-        ['Harina de fuerza', '1 taza (cup)', '<strong>130 g</strong>'],
-        ['Almidón de maíz', '1 taza (cup)', '<strong>128 g</strong>'],
+        ['Harina de Trigo', '1 Cup', '120g', 'Baja'],
+        ['Azúcar Blanco', '1 Cup', '200g', 'Media'],
+        ['Azúcar Moreno', '1 Cup', '220g (compactado)', 'Alta'],
+        ['Mantequilla', '1 Cup (2 sticks)', '227g', 'Alta'],
+        ['Cacao en Polvo', '1 Cup', '85g', 'Muy Baja'],
       ],
     },
     {
-      type: 'title',
-      text: 'Azúcares: La Densidad Cambia Dramáticamente',
-      level: 3,
-    },
-    {
-      type: 'paragraph',
-      html: 'El azúcar granulado pesa casi el doble que la harina por volumen. El azúcar moreno, al estar compactado, es aún más denso. Esta es la razón por la cual una receta con proporción incorrecta de azúcar resulta en postres demasiado dulces o con textura grasienta.',
+      type: 'diagnostic',
+      variant: 'warning',
+      title: '¿Tu Bizcocho ha Salido Seco?',
+      html: 'El problema más común al usar cups es "hundir la taza" en el saco de harina. Esto compacta el polvo y puedes estar añadiendo hasta 40g extras de harina por cada taza. La solución es <strong>siempre convertir a gramos</strong> usando nuestra calculadora.',
     },
     {
       type: 'title',
-      text: 'Temperaturas del Horno: Fahrenheit a Celsius',
+      text: 'Glosario de Unidades Estadounidenses',
       level: 3,
     },
     {
-      type: 'paragraph',
-      html: 'Las recetas estadounidenses siempre indican temperaturas en Fahrenheit. La conversión es crítica porque 25°C de diferencia puede ser la línea entre un bizcocho perfecto y uno quemado. La fórmula es: <strong>°C = (°F - 32) × 5/9</strong>',
-    },
-    {
-      type: 'list',
+      type: 'glossary',
       items: [
-        '<strong>350°F = 175°C</strong> - La temperatura más común para horneado',
-        '<strong>375°F = 190°C</strong> - Para masas que necesitan color dorado rápido',
-        '<strong>400°F = 200°C</strong> - Para pizzas y panes',
-        '<strong>325°F = 160°C</strong> - Para pasteles delicados',
+        {
+          term: 'Cup (Taza)',
+          definition: 'Unidad de volumen equivalente a unos 240ml. Es la base de la cocina americana.',
+        },
+        {
+          term: 'Tbsp (Tablespoon)',
+          definition: 'Cucharada sopera, equivalente a 15ml o 3 teaspoons.',
+        },
+        {
+          term: 'tsp (Teaspoon)',
+          definition: 'Cucharadita de café, equivalente a 5ml. Crucial para levaduras y sal.',
+        },
+        {
+          term: 'Stick of Butter',
+          definition: 'Formato común de mantequilla en EE.UU. que pesa exactamente 113.5g (media cup).',
+        },
       ],
+    },
+    {
+      type: 'tip',
+      title: 'El truco de la Cuchara',
+      html: 'Si no tienes báscula y DEBES usar cups, llena la taza a cucharadas sin apretar y nivela con un cuchillo. Es mucho más preciso que hundir la taza.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Usar un conversor profesional transforma la frustración de las recetas extranjeras en el éxito de un horneado perfecto.',
     },
   ],
   faq: [

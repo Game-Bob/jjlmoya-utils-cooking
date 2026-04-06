@@ -112,6 +112,74 @@ export const content: ToolLocaleContent = {
 			html: 'El secreto de un buen escalado reside en el área, no en el diámetro. Un aumento del 25% en el diámetro de un molde redondo casi duplica su superficie total.',
 		},
 		{
+			type: 'stats',
+			columns: 4,
+			items: [
+				{
+					value: 'x1.56',
+					label: 'Factor de 20cm a 25cm',
+					icon: 'mdi:resize',
+				},
+				{
+					value: 'x2.25',
+					label: 'Factor de 15cm a 22.5cm',
+					icon: 'mdi:arrow-up-bold-outline',
+				},
+				{
+					value: '0.64',
+					label: 'Factor de 25cm a 20cm',
+					icon: 'mdi:arrow-down-bold-outline',
+				},
+				{
+					value: 'πr²',
+					label: 'Fórmula de área circular',
+					icon: 'mdi:math-compass',
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Comparativa de Formas y su Eficiencia en el Horno',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 3,
+			items: [
+				{
+					title: 'Moldes Redondos',
+					icon: 'mdi:circle-outline',
+					description: 'El estándar de la repostería. Ofrecen una cocción muy uniforme desde los bordes hacia el centro.',
+					points: [
+						'Distribución de calor óptima',
+						'Ideal para bizcochos altos',
+						'Cálculo basado en el radio',
+					],
+				},
+				{
+					title: 'Moldes Cuadrados',
+					icon: 'mdi:square-outline',
+					description: 'Permiten un aprovechamiento total del espacio. Ideales para brownies y cortes individuales perfectos.',
+					highlight: true,
+					points: [
+						'Esquinas con cocción rápida',
+						'Fácil de porcionar',
+						'Cálculo Lado x Lado',
+					],
+				},
+				{
+					title: 'Moldes Rectangulares',
+					icon: 'mdi:rectangle-outline',
+					description: 'Perfectos para tartas grandes y bandejas de horno. Requieren vigilar los tiempos en el centro.',
+					points: [
+						'Gran capacidad total',
+						'Versatilidad de uso',
+						'Cálculo Ancho x Largo',
+					],
+				},
+			],
+		},
+		{
 			type: 'title',
 			text: 'Fundamentos Matemáticos del Escalado de Superficies',
 			level: 3,
@@ -135,10 +203,6 @@ export const content: ToolLocaleContent = {
 			level: 3,
 		},
 		{
-			type: 'paragraph',
-			html: 'Muchos aficionados cometen el error de escalar los ingredientes de forma lineal basándose en el diámetro. Evita estos fallos típicos para asegurar el éxito en tu cocina:',
-		},
-		{
 			type: 'list',
 			items: [
 				'<strong>Escalado lineal:</strong> Doblar el diámetro no dobla los ingredientes, los cuadruplica.',
@@ -155,14 +219,40 @@ export const content: ToolLocaleContent = {
 		},
 		{
 			type: 'title',
-			text: 'Consejos para el Horneado de Recetas Escaladas',
+			text: 'Glosario de Términos para el Escalado',
 			level: 3,
+		},
+		{
+			type: 'glossary',
+			items: [
+				{
+					term: 'Factor de Escalado',
+					definition: 'Número por el cual se deben multiplicar todos los ingredientes para adaptar la receta al nuevo molde.',
+				},
+				{
+					term: 'Área Superficial',
+					definition: 'La medida de la base del molde. En repostería, es el dato más relevante para el volumen del bizcocho.',
+				},
+				{
+					term: 'Radio',
+					definition: 'Distancia desde el centro hasta el borde de un círculo. Crucial para la fórmula πr².',
+				},
+				{
+					term: 'Transferencia de Calor',
+					definition: 'Cómo viaja la energía térmica en el molde. Cambia drásticamente según la forma y material.',
+				},
+			],
 		},
 		{
 			type: 'tip',
 			html: 'Si pasas a un molde mucho más grande, utiliza tiras de horneado o un núcleo de calor en el centro para asegurar que el calor se distribuya uniformemente sin secar los bordes.',
 		},
+		{
+			type: 'paragraph',
+			html: 'Dominar el escalado de moldes te permite libertad creativa total en la cocina. Usa esta calculadora para eliminar las suposiciones y obtener resultados profesionales consistentes en cada horneado.',
+		},
 	],
+
 
 	schemas: [
 		{

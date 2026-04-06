@@ -1,33 +1,33 @@
 import type { ToolLocaleContent } from '../../../types';
 
 export const content: ToolLocaleContent = {
-  slug: 'sourdough-calculator',
-  title: 'Sourdough Calculator - Exact Ratios for Fermentation',
-  description: 'Calculate the exact proportions of sourdough starter, flour, and water to maintain your culture. Predefined or custom ratios.',
+  slug: 'sourdough-starter-feeding-calculator-ratio-proportions',
+  title: 'Sourdough Starter Feeding Calculator',
+  description: 'Automatically calculate exact proportions of starter, flour, and water for your sourdough maintenance and feeding. Preset or custom ratios available.',
   faqTitle: 'Frequently Asked Questions',
   faq: [
     {
       question: 'What is a 1:1:1 ratio?',
-      answer: 'It\'s the most common ratio for maintaining sourdough at room temperature. It means 1 part starter, 1 part flour, and 1 part water. Useful when feeding daily.',
+      answer: 'It\'s the most common ratio for maintaining sourdough starter at room temperature. It means 1 part starter, 1 part flour, and 1 part water. Best for daily feedings.',
     },
     {
-      question: 'When do I use 1:2:2?',
-      answer: 'The 1:2:2 ratio is for activating sourdough. It creates a slower but more predictable fermentation. Ideal if you\'ll store the culture cold and want to revive it.',
+      question: 'When should I use a 1:2:2 ratio?',
+      answer: 'A 1:2:2 ratio is often used to reactive or wake up a starter. It provides a more predictable fermentation curve, ideal for reinvigorating a culture after refrigeration.',
     },
     {
-      question: 'What is the "sweet spot" 1:5:5?',
-      answer: 'The 1:5:5 ratio is the sweet spot for many bakers. It allows 8-12 hours of fermentation at room temperature before the sourdough is ready. It balances convenience with time control.',
+      question: 'Why use the 1:5:5 "sweet spot"?',
+      answer: 'The 1:5:5 ratio is a favorite for many bakers. It allows for an 8-12 hour fermentation window at room temperature before the starter peaks, balancing convenience with time control.',
     },
     {
       question: 'Can I use custom ratios?',
-      answer: 'Absolutely. If you have a specific protocol, you can enter your own ratios. Some bakers use 1:10:10 for ultra-slow fermentation, others 1:1:0.8 for less water.',
+      answer: 'Absolutely. If you have a specific feeding protocol, you can enter your own ratios. Some bakers use 1:10:10 for very slow fermentation, others use 1:1:0.8 for a stiffer starter.',
     },
     {
       question: 'Does the calculator round the grams?',
-      answer: 'Yes. It rounds to the nearest whole number for practicality. If you need maximum precision, use a digital scale. Small rounding doesn\'t significantly affect fermentation.',
+      answer: 'Yes. It rounds to the nearest whole number for practicality. For maximum precision, use a digital scale; however, small rounding differences won\'t significantly impact fermentation.',
     },
   ],
-  bibliographyTitle: 'Bibliography',
+  bibliographyTitle: 'Bibliography & Resources',
   bibliography: [
     {
       name: 'Tartine Bread - Chad Robertson',
@@ -44,60 +44,178 @@ export const content: ToolLocaleContent = {
   ],
   howTo: [
     {
-      name: 'Enter the total amount you need',
-      text: 'Define the total weight of sourdough starter required for your recipe (e.g., 300g for a typical loaf).',
+      name: 'Enter total amount needed',
+      text: 'Define the total weight of sourdough starter you need for your recipe (e.g., 300g for a typical loaf).',
     },
     {
-      name: 'Select your feeding ratio',
-      text: 'Choose from predefined ratios (Maintain, Activate, Retard, Strong, Sweet Spot) or create a custom one.',
+      name: 'Select feeding ratio',
+      text: 'Choose from preset ratios (Maintain, Activate, Retard, Strong, Sweet Spot) or create your own custom ratio.',
     },
     {
-      name: 'Get exact quantities',
-      text: 'The calculator shows you how much starter, flour, and water you need. Mix these ingredients and ferment according to your protocol.',
+      name: 'Get your exact measurements',
+      text: 'The calculator shows you exactly how much starter, flour, and water to mix. Combine and ferment according to your schedule.',
     },
   ],
   seo: [
     {
       type: 'title',
-      text: 'Science and Precision in Sourdough',
+      text: 'Master Guide for Sourdough Starter Maintenance and Feeding',
       level: 2,
     },
     {
       type: 'paragraph',
-      html: 'A <strong>sourdough starter</strong> is a living culture of lactic acid bacteria and wild yeast. Its strength and behavior depend on when and how you feed it. The <strong>feeding ratios</strong> (the balance between starter, flour, and water) determine the speed of fermentation and the activity of the culture.',
+      html: '<strong>Sourdough starter</strong> isn\'t just an ingredient; it\'s a living ecosystem of wild yeasts and lactic acid bacteria (LAB). Exceptional bread starts with the health of this culture, managed through precise feeding ratios and temperature control.',
     },
     {
-      type: 'title',
-      text: 'Predefined Ratios Explained',
-      level: 3,
-    },
-    {
-      type: 'list',
+      type: 'stats',
+      columns: 4,
       items: [
-        '<strong>1:1:1 (Maintain):</strong> Ideal for daily feedings at room temperature. Starter doubles in volume in 4-8 hours.',
-        '<strong>1:2:2 (Activate):</strong> More relative food. If your culture is dormant (refrigerated), this ratio wakes it up quickly in 6-12 hours.',
-        '<strong>1:3:3 (Retard):</strong> Even more food. Excellent for controlled and predictable fermentations of 8-16 hours.',
-        '<strong>1:4:4 (Strong):</strong> Excess food means very slow fermentation (12-24h). Useful if you need flexible schedules or seek more complex flavors.',
-        '<strong>1:5:5 (Sweet Spot):</strong> The perfect balance for many. Ferments in 8-12 hours, producing an active and predictable starter. The artisanal industry standard.',
+        {
+          value: '24-26°C',
+          label: 'Optimum Activity Temp',
+          icon: 'mdi:thermometer',
+        },
+        {
+          value: '3.8 - 4.2',
+          label: 'Ideal Culture pH',
+          icon: 'mdi:test-tube',
+        },
+        {
+          value: '100%',
+          label: 'Standard Hydration',
+          icon: 'mdi:water-percent',
+        },
+        {
+          value: 'x2 - x3',
+          label: 'Growth at Peak',
+          icon: 'mdi:trending-up',
+        },
       ],
     },
     {
       type: 'title',
-      text: 'Hydration and Behavior',
+      text: 'Comparison of Sourdough Culture Types',
       level: 3,
     },
     {
-      type: 'paragraph',
-      html: 'By default, this calculator uses <strong>100% hydration</strong> (water = flour by weight). This means water and flour have equal weights. If your protocol requires lower hydration, you can manually adjust the custom ratios.',
+      type: 'comparative',
+      columns: 2,
+      items: [
+        {
+          title: 'Liquid Starter (100% Hyd.)',
+          icon: 'mdi:water',
+          description: 'The most common choice in modern artisanal baking. Easy to mix and incorporate into final doughs.',
+          points: [
+            'Faster fermentation speed',
+            'More lactic flavor profile (mild)',
+            'Easy to measure and refresh',
+            'Ideal for baguettes and loaves',
+          ],
+        },
+        {
+          title: 'Stiff Starter (Pasta Madre)',
+          icon: 'mdi:bread-slice-outline',
+          description: 'Traditional in Italian baking. Hydration usually around 50%. Known for its strength.',
+          highlight: true,
+          points: [
+            'Slower, more stable fermentation',
+            'More acetic flavor profile',
+            'Greater strength for enriched doughs',
+            'Ideal for Panettone and Brioche',
+          ],
+        },
+      ],
     },
     {
       type: 'title',
-      text: 'Temperature and Fermentation Time',
+      text: 'Understanding Mathematical Feeding Ratios',
       level: 3,
     },
     {
       type: 'paragraph',
-      html: 'Remember that these times assume <strong>68-72°F (20-22°C)</strong>. At warmer temperatures (75-80°F), fermentation is 20-30% faster. At cooler temperatures, it\'s considerably slower. Adjust your protocol according to your climate.',
+      html: 'The ratio represents parts of Inoculum (old starter) relative to Flour and Water. For example, a 1:2:2 ratio means 1 part culture by 2 parts flour and 2 parts water.',
+    },
+    {
+      type: 'table',
+      headers: ['Ratio', 'Recommended Use', 'Est. Time (24°C)', 'Key Advantage'],
+      rows: [
+        ['1:1:1', 'Daily feeding', '4-6 hours', 'Quick maintenance'],
+        ['1:2:2', 'Pre-bake activation', '6-8 hours', 'Acidity balance'],
+        ['1:5:5', 'Standard baking use', '8-12 hours', 'Predictable activity peak'],
+        ['1:10:10', 'Long-term retard', '16-24 hours', 'Flexible schedule management'],
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Flour Selection for Starter Feeding',
+      level: 3,
+    },
+    {
+      type: 'comparative',
+      columns: 2,
+      items: [
+        {
+          title: 'Whole Rye Flour',
+          icon: 'mdi:grain',
+          description: 'A superfood for wild yeasts. Contains more nutrients and enzymes than wheat.',
+          points: [
+            'Explosive fermentation activity',
+            'Brings deep, earthy aromas',
+            'Maintains acidity levels better',
+          ],
+        },
+        {
+          title: 'White Wheat Flour',
+          icon: 'mdi:shaker-outline',
+          description: 'Ideal for those seeking a milder flavor where the starter doesn\'t dominate the bread profile.',
+          points: [
+            'More neutral and versatile flavor',
+            'Very clear bubble observation',
+            'Less prone to over-fermentation',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'Signs of a Hungry Starter',
+      html: 'If your culture has a dark liquid on the surface (hooch), smells intensely like vinegar or acetone, or collapses very quickly after peaking, it needs a higher feeding ratio (more food) or a lower storage temperature.',
+    },
+    {
+      type: 'title',
+      text: 'Technical Sourdough Glossary',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Levain',
+          definition: 'An intermediate starter prepared from the mother culture intended for use in a specific bread recipe.',
+        },
+        {
+          term: 'Hooch',
+          definition: 'A layer of alcohol and water that accumulates when a starter has exhausted its food source. It\'s not harmful but indicates hunger.',
+        },
+        {
+          term: 'Activity Peak',
+          definition: 'The moment of maximum expansion and yeast population density. The ideal point for mixing your bread dough.',
+        },
+        {
+          term: 'Lactic Acid Bacteria (LAB)',
+          definition: 'Microorganisms responsible for producing organic acids that provide characteristic flavor and improve shelf life.',
+        },
+      ],
+    },
+    {
+      type: 'tip',
+      title: 'The Float Test',
+      html: 'To check if your starter is ready, drop a teaspoon into a glass of water. If it floats, it has trapped enough CO2 and yeasts are at their peak activity.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Using our calculator allows you to standardize your baking process and better understand the biology of your bread. Consistency is the secret to artisanal excellence.',
     },
   ],
   ui: {

@@ -112,322 +112,178 @@ export const content: ToolLocaleContent = {
       url: "https://www.caputoprepara.com/",
     },
   ],
-  seo: [
-    {
-      type: "title",
-      text: "La Ciencia detrás de la Masa de Pizza Napolitana",
-    },
-    {
-      type: "paragraph",
-      html: "La <strong>pizza napolitana</strong> es mucho más que una receta: es un protocolo científico certificado por la Associazione Verace Pizza Napoletana (AVPN) que define con precisión milimétrica cada variable de la masa. La harina debe tener entre 11 y 13 gramos de proteína por cada 100 gramos, el agua debe estar entre 22 y 25°C, la sal se disuelve antes que la levadura, y la fermentación no baja nunca de 8 horas a temperatura ambiente ni de 24 horas en nevera.",
-    },
-    {
-      type: "paragraph",
-      html: "La diferencia entre una pizza memorable y una pizza mediocre no está en la salsa ni en los ingredientes: está en la <strong>hidratación</strong>, la <strong>fuerza de la harina</strong> y el <strong>tiempo de fermentación</strong>. Estos tres factores determinan la extensibilidad de la masa, la textura del cornicione (el borde), el desarrollo de los alvéolos y la digestibilidad final del producto.",
-    },
-    {
-      type: "title",
-      text: "Hidratación: El Parámetro que lo Cambia Todo",
-    },
-    {
-      type: "paragraph",
-      html: "La hidratación es el porcentaje de agua respecto al peso de la harina. Es el parámetro más influyente en la textura final de la pizza: a mayor hidratación, mayor extensibilidad, alvéolos más grandes y miga más abierta; pero también una masa más pegajosa que requiere más técnica para manejar.",
-    },
-    {
-      type: "title",
-      text: "Harinas para Pizza: Comparativa Completa",
-    },
-    {
-      type: "paragraph",
-      html: "No todas las harinas son iguales para la pizza. El índice <strong>W</strong> mide la fuerza del gluten (su capacidad de retener gases durante la fermentación) y es el parámetro más importante para elegir harina para masa de pizza. Una harina W150 es buena para bizcochos pero se destruye en una fermentación de 48 horas.",
-    },
-    {
-      type: "table",
-      headers: [
-        "Harina",
-        "Fuerza (W)",
-        "Proteína",
-        "Hidratación máx.",
-        "Fermentación óptima",
-      ],
-      rows: [
-        [
-          "00 Napolitana (Caputo Pizzeria)",
-          "260-280",
-          "12.5g/100g",
-          "67%",
-          "24-48h nevera",
-        ],
-        ["00 Manitoba", "350-400", "13-14g/100g", "75-80%", "48-72h nevera"],
-        [
-          "Fuerza / Gran Fuerza",
-          "300-350",
-          "12-13g/100g",
-          "70-75%",
-          "36-60h nevera",
-        ],
-        [
-          "Harina 0 normal (supermercado)",
-          "180-220",
-          "10-11g/100g",
-          "60%",
-          "8-16h TA",
-        ],
-      ],
-    },
-    {
-      type: "tip",
-      html: "Con harina de supermercado genérica (W130-160), la masa se convierte en una papilla ácida y sin estructura después de 24 horas en nevera. Si no encuentras harina específica para pizza, busca en la etiqueta al menos 11g de proteína por 100g.",
-    },
-    {
-      type: "title",
-      text: "Fermentación: La Variable que Más Marca la Diferencia",
-    },
-    {
-      type: "paragraph",
-      html: "La fermentación es el proceso por el que las levaduras convierten los azúcares de la harina en CO₂ (que infla la masa) y alcohol (que aporta sabor). Pero más importante aún es la <strong>maduración</strong>: las enzimas presentes en la harina descomponen lentamente las proteínas del gluten y el almidón.",
-    },
-    {
-      type: "list",
-      items: [
-        "<strong>4h a temperatura ambiente (25°C):</strong> Fermentación de urgencia.",
-        "<strong>8-12h a temperatura ambiente:</strong> Aceptable para uso doméstico frecuente.",
-        "<strong>24h en nevera (4°C):</strong> El estándar mínimo de calidad.",
-        "<strong>48-72h en nevera:</strong> El óptimo para masa napolitana de calidad.",
-      ],
-    },
-    {
-      type: "title",
-      text: "Levaduras: Fresca, Seca Instantánea y Masa Madre",
-    },
-    {
-      type: "paragraph",
-      html: "La levadura es el motor de la fermentación, pero no todas las formas funcionan igual. La equivalencia entre tipos es fundamental para no cometer errores de cálculo: demasiada levadura produce una fermentación demasiado rápida.",
-    },
-    {
-      type: "table",
-      headers: ["Tipo", "Equivalencia", "Activación", "Conservación", "Sabor"],
-      rows: [
-        [
-          "Fresca (prensada)",
-          "Referencia (x1)",
-          "Directa, 5 min en agua tibia",
-          "2-3 semanas en nevera",
-          "Suave y limpio",
-        ],
-        [
-          "Seca activa",
-          "x0.4 (1g seca = 2.5g fresca)",
-          "Rehidratar en agua 5-10 min",
-          "1-2 años en despensa",
-          "Similar a fresca",
-        ],
-        [
-          "Instantánea (instant dry)",
-          "x0.33 (1g inst. = 3g fresca)",
-          "Directa a la harina sin disolver",
-          "1-2 años en despensa",
-          "Muy neutro",
-        ],
-      ],
-    },
-    {
-      type: "title",
-      text: "El Horno: Por Qué la Temperatura lo Es Todo",
-    },
-    {
-      type: "paragraph",
-      html: "La temperatura del horno es el factor que más diferencia a la pizza napolitana de cualquier otra pizza. A 480°C, la masa pasa de cruda a perfectamente cocida en 60-90 segundos.",
-    },
-    {
-      type: "stats",
-      columns: 4,
-      items: [
-        {
-          value: "480°C",
-          label: "Temperatura horno napolitano",
-          icon: "mdi:fire",
-        },
-        {
-          value: "60-90s",
-          label: "Tiempo cocción en horno de leña",
-          icon: "mdi:timer-outline",
-        },
-        {
-          value: "24-72h",
-          label: "Fermentación óptima en nevera",
-          icon: "mdi:clock-outline",
-        },
-        {
-          value: "11-13g",
-          label: "Proteína por 100g harina ideal",
-          icon: "mdi:grain",
-        },
-      ],
-    },
-    {
-      type: "title",
-      text: "Hidratación: El Parámetro que lo Cambia Todo",
-    },
-    {
-      type: "paragraph",
-      html: "La hidratación es el porcentaje de agua respecto al peso de la harina. Es el parámetro más influyente en la textura final de la pizza: a mayor hidratación, mayor extensibilidad, alvéolos más grandes y miga más abierta; pero también una masa más pegajosa que requiere más técnica para manejar. Elegir bien la hidratación depende de tu nivel, de la harina disponible y del resultado que buscas.",
-    },
-    {
-      type: "comparative",
-      columns: 3,
-      items: [
-        {
-          title: "Hidratación Baja — 55-60%",
-          icon: "mdi:water-minus",
-          description: "El punto de partida para principiantes. La masa es firme, manejable y perdona los errores de técnica. Ideal para hornos domésticos sin piedra refractaria.",
-          points: [
-            "Fácil de estirar sin que se rompa",
-            "Menos alvéolos en el cornicione",
-            "Funciona bien con harina de supermercado",
-            "Corteza más crujiente y compacta",
-          ],
-        },
-        {
-          title: "Hidratación Media — 63-67%",
-          icon: "mdi:water",
-          description: "El rango de la pizza napolitana clásica según el protocolo AVPN. Equilibrio perfecto entre manejabilidad y resultado. El objetivo para la mayoría de cocineros en casa.",
-          highlight: true,
-          points: [
-            "Cornicione aireado con alvéolos visibles",
-            "Textura elástica y extensible",
-            "Requiere harina W260 o superior",
-            "Fermentación mínima 24h en nevera",
-          ],
-        },
-        {
-          title: "Hidratación Alta — 70-80%",
-          icon: "mdi:water-plus",
-          description: "Territorio de pizzeros avanzados y hornos de alta temperatura. Produce masas extraordinariamente ligeras con burbujas espectaculares, pero exige técnica y harina fuerte.",
-          points: [
-            "Alvéolos grandes, miga muy abierta",
-            "Necesita harina W320+ (Manitoba)",
-            "Difícil de manejar sin experiencia",
-            "Mejor resultado con horno 350°C+",
-          ],
-        },
-      ],
-    },
-    {
-      type: "tip",
-      title: "La harina define el techo de hidratación",
-      html: "Una harina de fuerza W280 admite hasta 70% de hidratación; con una W200 de supermercado no pases de 60% o la masa se romperá durante la fermentación. La proteína de la harina (indicada en la etiqueta nutricional) es el mejor indicador rápido: 11g/100g = hidratación máx 65%; 13g/100g = admite hasta 75%.",
-    },
-    {
-      type: "title",
-      text: "Problemas Comunes al Hacer Masa de Pizza",
-    },
-    {
-      type: "diagnostic",
-      variant: "warning",
-      icon: "mdi:alert-outline",
-      title: "Masa que Se Rompe al Estirar",
-      html: "<p>Si la masa se rompe o desgarra al intentar estirarla, el gluten no está relajado. Puede deberse a tres causas principales:</p><ul><li><strong>Reposo insuficiente:</strong> La bola necesita al menos 2-3 horas a temperatura ambiente antes de estirar (incluso si venía de la nevera). Cúbrela y espera.</li><li><strong>Amasado excesivo o poco:</strong> El gluten mal desarrollado no tiene extensibilidad. Con amasadora, 8-10 minutos a velocidad media es suficiente. A mano, 15-20 minutos.</li><li><strong>Harina demasiado débil:</strong> Con W inferior a 200, el gluten se cansa rápido. Cambia a harina de fuerza o mezcla 50/50.</li></ul><p>Solución rápida: deja reposar la bola tapada a temperatura ambiente durante 30 minutos más antes de volver a intentarlo.</p>",
-    },
-    {
-      type: "diagnostic",
-      variant: "error",
-      icon: "mdi:water-alert",
-      title: "Masa Pegajosa que No Se Puede Manejar",
-      html: "<p>Una masa que se pega a todo y no tiene estructura puede tener varios orígenes:</p><ul><li><strong>Hidratación mal calculada:</strong> Comprueba que usaste la balanza, no tazas ni cucharas. Incluso 5g de diferencia en el agua cambia la consistencia.</li><li><strong>Temperatura de la cocina:</strong> Por encima de 28°C la masa se calienta y se vuelve pegajosa. Trabaja con las manos mojadas (no enharinadas) o refrigera la masa 20 minutos antes de estirar.</li><li><strong>Sobrefermentación:</strong> Si la masa lleva demasiado tiempo y huele claramente ácida, el gluten se ha degradado. No tiene solución; hay que empezar de nuevo con más harina.</li></ul><p>Truco profesional: para masas de alta hidratación, usa la técnica de <em>slap and fold</em> (amasado por golpes) en lugar del amasado tradicional, que genera calor y empeora la pegajosidad.</p>",
-    },
-    {
-      type: "diagnostic",
-      variant: "info",
-      icon: "mdi:pizza",
-      title: "Pizza Plana sin Alvéolos en el Cornicione",
-      html: "<p>Si el borde de tu pizza no sube ni forma burbujas durante el horneado, el problema suele estar en la temperatura del horno o en la levadura:</p><ul><li><strong>Horno doméstico a baja temperatura:</strong> Un horno a 220°C no genera el \"shock térmico\" necesario para el desarrollo rápido de gas. Precalienta al máximo (250-280°C) durante al menos 45 minutos con la piedra refractaria dentro.</li><li><strong>Levadura muerta:</strong> Si el agua estaba a más de 40°C al mezclar, mató la levadura. La masa subirá poco o nada. Comprueba que la levadura fresca está activa disolviéndola en agua tibia (25°C) con una pizca de azúcar: debe hacer espuma en 10 minutos.</li><li><strong>Fermentación insuficiente:</strong> Una masa que fermenta menos de 6 horas no tiene suficiente gas retenido. Amplía el tiempo de fermentación.</li></ul>",
-    },
-    {
-      type: "title",
-      text: "Biga y Poolish: Los Pre-fermentos que Usan las Pizzerías de Élite",
-    },
-    {
-      type: "paragraph",
-      html: "Los pre-fermentos son masas parciales que fermentan por separado antes de incorporarse a la masa final. Permiten desarrollar sabores más complejos con menor cantidad de levadura porque la fermentación previa genera una mayor cantidad de compuestos aromáticos. Son el secreto detrás del sabor irrepetible de muchas pizzerías napolitanas de élite que no usan levadura directa en la masa final sino que trabajan con un porcentaje de biga o poolish.",
-    },
-    {
-      type: "comparative",
-      columns: 2,
-      items: [
-        {
-          title: "Biga — Pre-fermento Rígido",
-          icon: "mdi:bread-slice-outline",
-          description: "La biga es una masa seca con hidratación del 44-50% que fermenta entre 16 y 24 horas a temperatura ambiente (16-18°C idealmente). Es el pre-fermento más utilizado en las pizzerías napolitanas de élite.",
-          points: [
-            "Hidratación 44-50% (masa muy rígida)",
-            "16-24h a 16-18°C (o 8-12h a 20°C)",
-            "Usa el 50-70% del total de harina",
-            "Genera sabor profundo y complejo",
-            "Mejora la estructura de gluten significativamente",
-          ],
-        },
-        {
-          title: "Poolish — Pre-fermento Líquido",
-          icon: "mdi:beaker-outline",
-          description: "El poolish es una mezcla al 100% de hidratación (igual peso de harina y agua) con muy poca levadura. Fermenta 8-16 horas y aporta una miga extraordinariamente alveolada y ligera.",
-          highlight: true,
-          points: [
-            "Hidratación 100% (consistencia de masa líquida)",
-            "8-16h a temperatura ambiente",
-            "0.1-0.5% de levadura fresca sobre la harina",
-            "Alvéolos grandes y distribución uniforme",
-            "Más fácil de preparar que la biga",
-          ],
-        },
-      ],
-    },
-    {
-      type: "tip",
-      title: "Cómo incorporar un poolish a esta calculadora",
-      html: "Si quieres usar poolish, reserva el 30-40% de la harina y el mismo peso de agua de la receta calculada. Mezcla con 0.1g de levadura fresca y deja fermentar 12h. Al día siguiente, añade el poolish a la harina restante, el agua restante, la sal y la levadura calculada para el resto (que puedes reducir un 50% gracias al pre-fermento).",
-    },
-    {
-      type: "title",
-      text: "Glosario de Pizza Napolitana para Entender la Receta",
-    },
-    {
-      type: "glossary",
-      items: [
-        {
-          term: "Hidratación",
-          definition: "Porcentaje de agua respecto al peso total de harina. 65% significa 650g de agua por cada kilogramo de harina. Es la variable más influyente en la textura de la masa.",
-        },
-        {
-          term: "W (Fuerza de la Harina)",
-          definition: "Índice que mide la capacidad del gluten para retener gases durante la fermentación. W130 = harina débil para bizcochos; W280 = harina de pizza estándar; W400 = Manitoba para fermentaciones muy largas.",
-        },
-        {
-          term: "Biga",
-          definition: "Pre-fermento rígido (hidratación 44-50%) que fermenta 16-24 horas antes de incorporarse a la masa final. Aporta complejidad de sabor y mejora la estructura del gluten.",
-        },
-        {
-          term: "Poolish",
-          definition: "Pre-fermento líquido al 100% de hidratación. Fermenta 8-16 horas y produce una miga muy alveolada. Es el pre-fermento más utilizado en panadería artesanal francesa y en pizzas modernas.",
-        },
-        {
-          term: "Cornicione",
-          definition: "El borde elevado y aireado de la pizza napolitana. En italiano significa 'cornisa'. Un cornicione auténtico tiene alvéolos irregulares visibles, manchas de leopardo y un interior húmedo y elástico.",
-        },
-        {
-          term: "Leopardatura",
-          definition: "Las manchas oscuras características del cornicione de la pizza napolitana horneada en horno de leña a alta temperatura. Indican una cocción correcta y rápida; no son quemado sino caramelización del gluten.",
-        },
-        {
-          term: "Maturazione (Maduración)",
-          definition: "Proceso enzimático durante el que las enzimas de la harina descomponen las proteínas y el almidón, haciendo la masa más extensible y digestible. Distinto a la fermentación (que es la producción de gas por levaduras).",
-        },
-        {
-          term: "AVPN / Verace Pizza Napoletana",
-          definition: "Associazione Verace Pizza Napoletana, fundada en Nápoles en 1984. Organismo que certifica la auténtica pizza napolitana y define los estándares oficiales: tipo de harina, hidratación, levadura, temperatura de horno y técnica de amasado.",
-        },
-      ],
-    },
-  ],
+	seo: [
+		{
+			type: 'title',
+			text: 'Guía Maestro para la Masa de Pizza Napolitana Auténtica',
+			level: 2,
+		},
+		{
+			type: 'paragraph',
+			html: 'La <strong>pizza napolitana</strong> es mucho más que una receta: es un legado cultural protegido que exige precisión milimétrica. La base del éxito no reside solo en los ingredientes, sino en entender la interacción de las variables de tiempo, temperatura e hidratación.',
+		},
+		{
+			type: 'stats',
+			columns: 4,
+			items: [
+				{
+					value: '480°C',
+					label: 'Temp. Cocción Ideal',
+					icon: 'mdi:fire',
+				},
+				{
+					value: '60-90s',
+					label: 'Tiempo en Horno',
+					icon: 'mdi:clock-fast',
+				},
+				{
+					value: '65%',
+					label: 'Hidratación Estándar',
+					icon: 'mdi:water-percent',
+				},
+				{
+					value: 'W280',
+					label: 'Fuerza de Harina',
+					icon: 'mdi:grain',
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'La Importancia Crucial de la Hidratación',
+			level: 3,
+		},
+		{
+			type: 'paragraph',
+			html: 'La hidratación (porcentaje de agua respecto al peso de la harina) determina la textura del <strong>cornicione</strong>. Dominar este parámetro es lo que separa a un aficionado de un maestro pizzero.',
+		},
+		{
+			type: 'comparative',
+			columns: 3,
+			items: [
+				{
+					title: 'Hidratación 55-60%',
+					icon: 'mdi:water-minus',
+					description: 'Masa muy manejable, ideal para principiantes y hornos domésticos de baja temperatura.',
+					points: [
+						'Formación fácil de la malla de gluten',
+						'Masa menos pegajosa',
+						'Corteza crujiente y firme',
+					],
+				},
+				{
+					title: 'Hidratación 63-67%',
+					icon: 'mdi:water',
+					description: 'El estándar de la AVPN. Equilibrio perfecto para una masa ligera con alveolatura visible.',
+					highlight: true,
+					points: [
+						'Textura elástica tradicional',
+						'Ideal para hornos de leña',
+						'Requiere técnica de amasado media',
+					],
+				},
+				{
+					title: 'Hidratación 70%+',
+					icon: 'mdi:water-plus',
+					description: 'Pizzas contemporáneas con bordes gigantes. Muy difícil de manejar sin técnica avanzada.',
+					points: [
+						'Alvéolos extremadamente grandes',
+						'Masa muy ligera y digestible',
+						'Necesita harinas de gran fuerza',
+					],
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Tipos de Levadura y Cuál Elegir',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 2,
+			items: [
+				{
+					title: 'Levadura Fresca Prensada',
+					icon: 'mdi:bread-slice-outline',
+					description: 'La opción tradicional preferida por los maestros pizzeros. Aporta un perfil de sabor más complejo.',
+					points: [
+						'Sabor más profundo y limpio',
+						'Acción enzimática más equilibrada',
+						'Se disuelve fácilmente en agua tibia',
+						'Caducidad corta (requiere frescura)',
+					],
+				},
+				{
+					title: 'Levadura Seca Instantánea',
+					icon: 'mdi:shaker-outline',
+					description: 'Mucho más estable y fácil de almacenar. Ideal para tener siempre disponible en la despensa.',
+					points: [
+						'Larga conservación (hasta 2 años)',
+						'No necesita rehidratación previa',
+						'Tres veces más potente que la fresca',
+						'Sabor ligeramente más neutro',
+					],
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Guía de Harinas por su Índice de Fuerza W',
+			level: 3,
+		},
+		{
+			type: 'table',
+			headers: ['Tipo de Harina', 'Fuerza (W)', 'Tiempo de Fermentación', 'Uso Recomendado'],
+			rows: [
+				['Harina Débil', 'W130-180', '4-8 horas', 'Repostería rápida'],
+				['Media Fuerza', 'W200-240', '8-24 horas', 'Pizza rápida o pan simple'],
+				['Harina de Fuerza', 'W260-320', '24-72 horas', 'Auténtica Pizza Napolitana'],
+				['Gran Fuerza', 'W350+', '72+ horas', 'Panettones o masas de alta hidratación'],
+			],
+		},
+		{
+			type: 'diagnostic',
+			variant: 'warning',
+			title: 'Control de Temperatura de Amasado',
+			html: 'La masa no debe superar los 24°C al terminar el amasado. El calor excesivo de la fricción degrada el gluten y acelera la fermentación erráticamente.',
+		},
+		{
+			type: 'title',
+			text: 'Glosario para el Futuro Maestro Pizzero',
+			level: 3,
+		},
+		{
+			type: 'glossary',
+			items: [
+				{
+					term: 'Cornicione',
+					definition: 'El borde elevado y aireado de la pizza. Debe estar lleno de alvéolos y no tener miga compacta.',
+				},
+				{
+					term: 'Maduración',
+					definition: 'Proceso enzimático distinto a la fermentación donde las proteínas y azúcares se descomponen para mejorar sabor y digestibilidad.',
+				},
+				{
+					term: 'Punto de Pasta',
+					definition: 'Momento en que la masa alcanza su elasticidad y resistencia óptima sin ser pegajosa.',
+				},
+				{
+					term: 'Autólisis',
+					definition: 'Reposo tras mezclar solo harina y agua que facilita el desarrollo del gluten sin esfuerzo mecánico.',
+				},
+			],
+		},
+		{
+			type: 'tip',
+			title: 'El truco de la Nevera',
+			html: 'La fermentación en bloque de 24 horas a 4°C no solo facilita el manejo de la masa, sino que crea sabores complejos imposibles de obtener a temperatura ambiente.',
+		},
+		{
+			type: 'paragraph',
+			html: 'Nuestra calculadora automatiza las proporciones para que puedas centrarte en lo más importante: la técnica y el amor por el producto final.',
+		},
+	],
+
   schemas: [],
 };

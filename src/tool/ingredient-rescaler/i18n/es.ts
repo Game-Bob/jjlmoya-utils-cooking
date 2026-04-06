@@ -2,7 +2,7 @@ import type { ToolLocaleContent } from '../../../types';
 
 export const content: ToolLocaleContent = {
   slug: 'escalador-ingredientes',
-  title: 'Escalador de Ingredientes - Ajusta tus Recetas Fácilmente',
+  title: 'Escalador de Ingredientes Ajuste de Recetas',
   description: 'Escala recetas automáticamente según el número de raciones. Calcula las cantidades exactas de ingredientes multiplicando o reduciendo tu receta sin complicaciones.',
   ui: {
     servings: 'Raciones',
@@ -75,60 +75,134 @@ export const content: ToolLocaleContent = {
       text: 'Los resultados son matemáticamente exactos, pero la cocina es arte. Especias: escala al 75%. Levaduras: menos de lo teórico en grandes cantidades. Tiempos: no se escalan nunca.',
     },
   ],
-  seo: [
-    {
-      type: 'title',
-      text: 'La Ciencia detrás del Escalado de Recetas',
-      level: 2,
-    },
-    {
-      type: 'paragraph',
-      html: 'Cocinar no es solo arte, es <strong>matemática aplicada</strong>. Entender cómo adaptar las proporciones de tus ingredientes es la diferencia entre un plato decente y una obra maestra, sin importar si cocinas para 2 o para 20.',
-    },
-    {
-      type: 'title',
-      text: '¿Cómo funciona el Factor de Conversión?',
-      level: 3,
-    },
-    {
-      type: 'paragraph',
-      html: 'El corazón de cualquier adaptación culinaria es el <strong>Factor de Conversión (FC)</strong>. Aunque nuestra herramienta lo hace automáticamente, conocer la lógica te da control total sobre tu cocina. Es una simple proporción directa: <strong>Cantidad Deseada ÷ Cantidad Original = Factor (FC)</strong>.',
-    },
-    {
-      type: 'paragraph',
-      html: 'Si tu receta es para 4 personas y quieres cocinar para 7, el factor es 1.75. Cada ingrediente se multiplica por ese número.',
-    },
-    {
-      type: 'title',
-      text: 'Lo que NO escala linealmente',
-      level: 3,
-    },
-    {
-      type: 'paragraph',
-      html: 'Multiplicar todos los ingredientes por 2 funciona para la harina y el agua, pero la cocina es química y termodinámica. Hay elementos que se comportan de forma exponencial o logarítmica, no lineal.',
-    },
-    {
-      type: 'list',
-      items: [
-        '<strong>Especias y sal:</strong> La percepción del sabor se satura. Si triplicas un guiso, triplicar la pimienta cayena puede hacerlo incomible. Regla de oro: escala especias al 75% y ajusta al final.',
-        '<strong>Levaduras:</strong> En grandes masas fermentadas, la fricción genera más calor y acelera la fermentación. Doblar la masa requiere menos del doble de levadura.',
-        '<strong>Tiempos de cocción:</strong> Un pavo de 10kg no tarda el doble que uno de 5kg. La transmisión de calor depende del grosor. Usa siempre un termómetro sonda.',
-      ],
-    },
-    {
-      type: 'title',
-      text: 'Trucos de Cocina Profesional',
-      level: 3,
-    },
-    {
-      type: 'list',
-      items: [
-        '<strong>Huevo como unidad:</strong> Si obtienes 2.3 huevos, pesa la cantidad exacta o redondea según el plato.',
-        '<strong>Superficie vs Volumen:</strong> Al reducir salsas, la evaporación es más rápida. Vigila la reducción.',
-        '<strong>Sistema Métrico:</strong> Pesa siempre en gramos, no en tazas. Es más preciso al escalar.',
-      ],
-    },
-  ],
+	seo: [
+		{
+			type: 'title',
+			text: 'Guía Maestro para el Escalado y Conversión de Recetas',
+			level: 2,
+		},
+		{
+			type: 'paragraph',
+			html: 'El <strong>escalado de ingredientes</strong> es una de las tareas más críticas y propensas a errores en la cocina profesional. No se trata simplemente de multiplicar números, sino de entender cómo la química y la física de los alimentos reaccionan ante cambios de volumen y superficie.',
+		},
+		{
+			type: 'stats',
+			columns: 4,
+			items: [
+				{
+					value: 'x1.75',
+					label: 'Factor de 4 a 7 per.',
+					icon: 'mdi:calculator',
+				},
+				{
+					value: '75%',
+					label: 'Ajuste de Especias',
+					icon: 'mdi:shaker-outline',
+				},
+				{
+					value: '0%',
+					label: 'Escalado del Tiempo',
+					icon: 'mdi:timer-off',
+				},
+				{
+					value: '100g',
+					label: 'Base de Referencia',
+					icon: 'mdi:weight-gram',
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Diferencias entre Escalado Lineal y Contextual',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 2,
+			items: [
+				{
+					title: 'Escalado Lineal Matemático',
+					icon: 'mdi:math-log',
+					description: 'Multiplicación directa de todos los valores por el factor de conversión obtenido.',
+					points: [
+						'Perfecto para harinas y líquidos base',
+						'Ideal para repostería de precisión fría',
+						'Funciona bien en cambios pequeños (x2, x0.5)',
+						'Fácil de calcular automáticamente',
+					],
+				},
+				{
+					title: 'Escalado Contextual de Cocina',
+					icon: 'mdi:chef-hat',
+					description: 'Ajuste de proporciones basado en la saturación de sabor y evaporación.',
+					highlight: true,
+					points: [
+						'Evita el exceso de sal y especias',
+						'Considera la superficie de evaporación',
+						'Ajusta levaduras según fricción',
+						'Requiere experiencia y criterio del chef',
+					],
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Factores de Conversión por Número de Comensales',
+			level: 3,
+		},
+		{
+			type: 'table',
+			headers: ['De Raciones', 'A Raciones', 'Factor (FC)', 'Dificultad de Ajuste'],
+			rows: [
+				['2 personas', '4 personas', 'x 2.0', 'Baja (Lineal)'],
+				['4 personas', '6 personas', 'x 1.5', 'Baja (Lineal)'],
+				['4 personas', '10 personas', 'x 2.5', 'Media (Ojo con especias)'],
+				['4 personas', '25 personas', 'x 6.25', 'Alta (Contextual)'],
+			],
+		},
+		{
+			type: 'diagnostic',
+			variant: 'warning',
+			title: 'Problemas Comunes al Doblar una Receta',
+			html: 'Si notas que el sabor es demasiado intenso tras escalar (especialmente con picantes o sal), reduce el escalado de estos ingredientes específicos al 75%. Nunca dupliques el tiempo de cocción; la temperatura interna se alcanza según el grosor de la pieza, no según el peso total de la masa.',
+		},
+		{
+			type: 'title',
+			text: 'Glosario de Terminología de Estandarización',
+			level: 3,
+		},
+		{
+			type: 'glossary',
+			items: [
+				{
+					term: 'Factor de Conversión',
+					definition: 'Número por el que se multiplican todos los ingredientes: Cantidad Deseada / Cantidad Original.',
+				},
+				{
+					term: 'Merma de Cocción',
+					definition: 'Pérdida de peso de un ingrediente por evaporación o pérdida de grasa. No escala de forma lineal.',
+				},
+				{
+					term: 'Peso Bruto vs Neto',
+					definition: 'El peso antes y después de limpiar el ingrediente. Escalamos siempre sobre el peso de la receta original.',
+				},
+				{
+					term: 'Rendimiento',
+					definition: 'Cantidad total de producto terminado tras el escalado y la cocción.',
+				},
+			],
+		},
+		{
+			type: 'tip',
+			title: 'El truco del Huevo Batido',
+			html: 'Si la calculadora indica 2.3 huevos, bate un huevo entero, pésalo y utiliza solo el porcentaje correspondiente (0.3). Es la única forma de mantener la precisión en repostería fina.',
+		},
+		{
+			type: 'paragraph',
+			html: 'Nuestra herramienta simplifica la matemática para que puedas dedicar tu energía a lo que realmente importa: la creatividad y el sabor.',
+		},
+	],
+
   schemas: [
     {
       '@context': 'https://schema.org',

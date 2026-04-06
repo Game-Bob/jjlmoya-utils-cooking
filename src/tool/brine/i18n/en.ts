@@ -1,10 +1,10 @@
 import type { ToolLocaleContent } from "../../../types";
 
 export const content: ToolLocaleContent = {
-  slug: "brine",
-  title: "Equilibrium Brine Calculator",
+  slug: "equilibrium-brining-calculator-meat-fermentation-ratios",
+  title: "Equilibrium Brining and Fermentation Calculator",
   description:
-    "The science of balance for juicy meats and perfect ferments. Calculate exact salinity based on total weight of ingredient and water.",
+    "Master the science of equilibrium brining for juicy meats and perfect fermentations. Calculate exact salinity based on total product and water weight.",
   ui: {
     calculator: "Calculator",
     subtitle: "Enter weights to calculate the perfect balance.",
@@ -12,11 +12,11 @@ export const content: ToolLocaleContent = {
     waterWeight: "Water Weight (g)",
     desiredSalinity: "Desired Salinity",
     meat: "Meats (1.5%)",
-    fermented: "Ferments (2.0%)",
+    fermented: "Fermenteds (2.0%)",
     sauces: "Sauces (3.5%)",
     preserves: "Preserves (5.0%)",
     addSugar: "Add Sugar",
-    sugarHint: "Balances flavor and aids browning (50% of salt)",
+    sugarHint: "Balances flavor and helps browning (50% of salt)",
     saltNeeded: "Salt Needed",
     sugarOptional: "Sugar (Optional)",
     estimatedTime: "Estimated Time",
@@ -34,46 +34,46 @@ export const content: ToolLocaleContent = {
   bibliographyTitle: "Sources and References",
   faq: [
     {
-      question: "What is the equilibrium brine method?",
+      question: "What is the equilibrium brining method?",
       answer:
-        "The equilibrium method calculates salt based on total weight (water + ingredient), not just water. This guarantees consistent salt concentration regardless of ingredient quantity.",
+        "The equilibrium method calculates salt based on total weight (water + ingredient), not just weighted water. it guarantees consistent salt concentration regardless of the amount of ingredient you use.",
     },
     {
-      question: "How much salt do I need to make pickles?",
+      question: "How much salt do I need for pickles?",
       answer:
-        "For fermented vegetables (pickles, sauerkraut, kimchi) 2-3% salt is recommended. For meats, 1.5-2%. The calculator gives exact amounts based on your ingredient weight.",
+        "For fermented vegetables (pickles, sauerkraut, kimchi), 2% to 3% salt is recommended. For meats, between 1.5% and 2%. The calculator gives the exact amount based on your ingredient weight.",
     },
     {
       question: "Can I freeze meat after brining?",
       answer:
-        "Yes, it's ideal. Brine protects against freezer burn and meat is ready to cook when thawed. However, avoid freezing fermented vegetables as they'll become mushy.",
+        "Yes, it's ideal. Brine protects against freezer burn and the meat will be ready to cook upon thawing. However, avoid freezing fermented vegetables as they will turn mushy.",
     },
     {
-      question: "Why add sugar to brine?",
+      question: "Why add sugar to the brine?",
       answer:
-        "Sugar has two functions: it aids the Maillard reaction (browning) in meats and balances salty flavor without making it taste sweet. It doesn't turn your brine into dessert.",
+        "Sugar has two functions: it facilitates the Maillard reaction (browning) in meats and balances the saline flavor without making the product taste sweet.",
     },
   ],
   howTo: [
     {
       name: "Determine your goal",
-      text: "Decide if you're making brined meats (1.5-2%), ferments (2-3%), sauces (3.5%), or long-term preserves (5%+). Each has different time and purpose.",
+      text: "Decide if you are brining meats (1.5-2%), fermenting (2-3%), making sauces (3.5%), or long-term preserves (5%+). Each has a different time and purpose.",
     },
     {
       name: "Weigh ingredient and water",
-      text: "Weigh product (meat, vegetables) and water precisely. Accuracy is critical: even 5g difference changes the result. Use a precision scale.",
+      text: "Weigh the product (meat, vegetables) and water exactly. Precision is critical: even 5g difference changes result accuracy. Use a precision scale.",
     },
     {
       name: "Calculate with the tool",
-      text: "Enter weights in the calculator and adjust salinity for your product type. Tool shows exactly how much salt and sugar you need.",
+      text: "Enter the weights into the calculator and adjust salinity according to your product type. The tool tells you exactly how much salt and sugar you need.",
     },
     {
       name: "Dissolve and mix",
-      text: "Completely dissolve salt in cold water before adding product. For meats, ensure brine covers everything. For ferments, weight must be submerged.",
+      text: "Completely dissolve salt in cold water before adding product. For meats, ensure brine covers everything. For fermenteds, ensure product is submerged.",
     },
     {
       name: "Ferment or cure",
-      text: "Refrigerate based on type: 4-48 hours for meats, 1-3 weeks for ferments. Exact time depends on temperature and your taste.",
+      text: "Refrigerate based on type: 4-48 hours for meats, 1-3 weeks for fermenteds. Exact time depends on temperature and personal taste.",
     },
   ],
   bibliography: [
@@ -86,144 +86,135 @@ export const content: ToolLocaleContent = {
       url: "https://www.saltfatacidheat.com/",
     },
     {
-      name: "Cooked - Michael Pollan",
+      name: "Pollan, Michael - Cooked",
       url: "https://michaelpollan.com/",
     },
   ],
   seo: [
     {
       type: "title",
-      text: "Why the Equilibrium Method?",
+      text: "Master Guide for Equilibrium Brining and Fermentation",
       level: 2,
     },
     {
       type: "paragraph",
-      html: "<strong>Equilibrium brine</strong> is the professional technique to guarantee consistent, safe, and delicious results in every fermentation. Unlike traditional recipes that measure salt only by water volume, this method considers <strong>total weight</strong> (Water + Ingredient).",
+      html: "<strong>Equilibrium brining</strong> is the ultimate technique to ensure juicy and safe results. Unlike traditional methods, this calculates salt based on the <strong>total weight</strong> of water and product, ensuring constant salinity regardless of container volume.",
     },
     {
-      type: "tip",
-      html: "The Old Recipe Problem: If you fill a jar with pickles, there's little water. If you put a single pickle, there's lots of water. Using the same brine in both cases results in drastically different final salinities, which can lead to <strong>mold</strong> (too little salt) or <strong>inedible food</strong> (too much salt).",
+      type: "stats",
+      columns: 4,
+      items: [
+        {
+          value: "1.5 - 2%",
+          label: "Ideal Meat Ratio",
+          icon: "mdi:food-steak",
+        },
+        {
+          value: "2.5 - 3%",
+          label: "Fermentation Ratio",
+          icon: "mdi:flask-outline",
+        },
+        {
+          value: "18-22°C",
+          label: "Fermentation Temp",
+          icon: "mdi:thermometer",
+        },
+        {
+          value: "0.5%",
+          label: "Balance Sugar",
+          icon: "mdi:shaker-outline",
+        },
+      ],
     },
     {
       type: "title",
-      text: "The Importance of Sugar",
+      text: "Differences Between Dry and Wet Brining",
       level: 3,
-    },
-    {
-      type: "paragraph",
-      html: "Adding sugar to brine doesn't turn it into dessert. It's a fundamental chemical tool with two main functions.",
     },
     {
       type: "comparative",
       columns: 2,
       items: [
         {
-          title: "Maillard Reaction",
-          icon: "mdi:fire",
-          description: "Essential for meats.",
+          title: "Dry Brining",
+          icon: "mdi:shaker-outline",
+          description: "Salt is applied directly to product surface without additional water.",
           points: [
-            "Sugar aids browning when cooking meat (pan, oven, grill)",
-            "Without sugar, brined meat can turn pale and grayish",
-            "Crucial for professional results",
+            "Much crispier skin on poultry",
+            "More concentrated ingredient flavor",
+            "Takes up less fridge space",
+            "Ideal for steaks and whole chickens",
           ],
         },
         {
-          title: "Flavor Balance",
-          icon: "mdi:palette",
-          description: "Softens and rounds out flavor.",
+          title: "Wet Brining",
+          icon: "mdi:water",
+          description: "Product is submerged in water and salt solution calculated by equilibrium.",
+          highlight: true,
           points: [
-            "Salt is aggressive. Sugar softens that salty bite",
-            "Doesn't make the product taste sweet",
-            "Creates a rounder, more complex flavor profile",
+            "Superior moisture transfer",
+            "Allows introduction of aromatics (spices)",
+            "More uniform curing in large pieces",
+            "Ideal for turkey, pork loin, and fish",
           ],
         },
       ],
     },
     {
       type: "title",
-      text: "Critical Ingredients: Water and Salt",
+      text: "Times and Salinities by Application",
       level: 3,
-    },
-    {
-      type: "paragraph",
-      html: "The quality of base ingredients determines your brine's success. Not all ingredients are created equal.",
-    },
-    {
-      type: "list",
-      items: [
-        "<strong>Filtered/Mineral Water:</strong> Best option. Clean and chemical-free.",
-        "<strong>Tap Water (Boiled):</strong> Boil and cool to evaporate chlorine. Note: Chloramine doesn't evaporate easily.",
-        "<strong>Sea / Kosher Salt:</strong> Pure and additive-free. Ideal for fermentations.",
-        "<strong>Iodized Salt:</strong> Avoid. Can darken vegetables and inhibit fermentation.",
-        "<strong>Table Salt (with anti-caking agents):</strong> Can cloud brine and alter flavor.",
-      ],
-    },
-    {
-      type: "title",
-      text: "The Time Factor",
-      level: 3,
-    },
-    {
-      type: "paragraph",
-      html: "Patience is the secret ingredient. Time varies dramatically depending on your goal and fermentation temperature.",
     },
     {
       type: "table",
-      headers: ["Type", "Salinity", "Time", "Ideal Temperature"],
+      headers: ["Category", "Salinity (%)", "Min. Time", "Primary Goal"],
       rows: [
-        ["Meats (Dry/Wet Brine)", "1.5-2%", "4-48 hours", "4°C (fridge)"],
-        ["Fermented Vegetables", "2-3%", "1-3 weeks", "18-22°C"],
-        ["Hot Sauces", "3.5%", "2+ weeks", "18-22°C"],
-        ["Long-term Preserves", "5%+", "1+ month", "18-22°C"],
+        ["Poultry & Pork", "1.5% - 2.0%", "12 - 24 hours", "Juiciness and tenderness"],
+        ["White Fish", "1.0% - 1.5%", "20 - 45 minutes", "Meat firmness"],
+        ["Lacto-fermentation", "2.5% - 3.0%", "7 - 21 days", "Microbiological safety"],
+        ["Sauces & Preserves", "3.5% - 5.0%", "1+ month", "Long-term preservation"],
+      ],
+    },
+    {
+      type: "diagnostic",
+      variant: "warning",
+      title: "Identifying Brining Issues",
+      html: "If brine has a foul (non-acidic) smell, colored mold (black, pink), or product becomes extremely soft, discard it. Surface white mold (Kahm yeast) is normal in fermenteds and can be removed.",
+    },
+    {
+      type: "title",
+      text: "Expert Curing Glossary",
+      level: 3,
+    },
+    {
+      type: "glossary",
+      items: [
+        {
+          term: "Osmosis",
+          definition: "Physical process where salt penetrates food cells to balance concentrations.",
+        },
+        {
+          term: "Denaturation",
+          definition: "Salt's effect on proteins allowing them to retain more water during cooking.",
+        },
+        {
+          term: "Kahm Yeast",
+          definition: "Thin white layer sometimes appearing on ferment surface; harmless but indicates low acidity.",
+        },
+        {
+          term: "Lacto-fermentation",
+          definition: "Anaerobic fermentation where bacteria convert sugars into lactic acid, preserving food.",
+        },
       ],
     },
     {
       type: "tip",
-      html: "<strong>The Role of Temperature:</strong> Higher temperature means faster fermentation but less control. 18-22°C is ideal for developing flavor without pathogen risk. If your kitchen is cooler, increase fermentation time.",
-    },
-    {
-      type: "title",
-      text: "Freezing and Thawing",
-      level: 3,
+      title: "Water Quality",
+      html: "Always avoid tap water with high chlorine, as it can inhibit good bacteria growth in fermentations. Use filtered water or let water stand for 24h.",
     },
     {
       type: "paragraph",
-      html: "Can you freeze in brine? The answer depends on product type.",
-    },
-    {
-      type: "list",
-      items: [
-        "<strong>Brined Meats:</strong> Excellent! Brine protects against freezer burn. A professional technique is 'Equilibrium Thawing': freeze meat directly in brine and it thaws while curing.",
-        "<strong>Fermented Vegetables:</strong> Avoid. Freezing breaks cell walls and thawing turns them to mush.",
-        "<strong>Preserves:</strong> Only if you plan to use immediately after thawing. Freezing alters final texture.",
-      ],
-    },
-    {
-      type: "title",
-      text: "Salt Percentages by Application",
-      level: 3,
-    },
-    {
-      type: "list",
-      items: [
-        "<strong>1.5-2.0%:</strong> Meats and poultry (chicken breast, turkey, chops). Maximum juiciness.",
-        "<strong>2.0-3.0%:</strong> Vegetables in lacto-fermentation (sauerkraut, kimchi, pickles). Pathogen protection.",
-        "<strong>3.0-5.0%:</strong> Hot sauces and special ferments (garlic, ginger). More intense flavor.",
-        "<strong>5.0%+:</strong> Long-term preserves (cheeses, olives, lemons). Very slow fermentation.",
-      ],
-    },
-    {
-      type: "title",
-      text: "Science Behind the Process",
-      level: 3,
-    },
-    {
-      type: "paragraph",
-      html: "Salt in brine isn't just for flavor. It works on three levels: <strong>denatures proteins</strong> (making them more moisture-retentive), <strong>controls bacterial growth</strong> (kills pathogens but favors beneficial lactic bacteria), and <strong>extracts flavors</strong> from ingredients.",
-    },
-    {
-      type: "paragraph",
-      html: "Fermentation is an anaerobic process where beneficial lactic bacteria convert sugars into lactic acid. This process requires the correct salt percentage: too little and mold grows, too much and even good bacteria are inhibited.",
+      html: "Our equilibrium calculator eliminates guesswork from your recipes, allowing you to cook with the confidence of a professional.",
     },
   ],
   schemas: [],
