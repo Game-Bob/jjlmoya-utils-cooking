@@ -1,7 +1,7 @@
 import type { ToolLocaleContent } from '../../../types';
 
 export const content: ToolLocaleContent = {
-  slug: 'escalador-ingredientes',
+  slug: 'reescalador-ingredientes',
   title: 'Escalador de Ingredientes Ajuste de Recetas',
   description: 'Escala recetas automáticamente según el número de raciones. Calcula las cantidades exactas de ingredientes multiplicando o reduciendo tu receta sin complicaciones.',
   ui: {
