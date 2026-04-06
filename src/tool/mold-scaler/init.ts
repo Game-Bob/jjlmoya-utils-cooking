@@ -1,6 +1,6 @@
 type Shape = 'round' | 'square' | 'rectangular';
 
-interface MoldState {
+interface Mold {
 	shape: Shape;
 	dim1: number;
 	dim2: number;
@@ -12,215 +12,245 @@ interface Ingredient {
 	weight: number;
 }
 
-interface WindowGlobal extends Window {
-	updateIngredient: (id: string, field: 'name' | 'weight', value: number | string) => void;
-	removeIngredient: (id: string) => void;
+class MoldLogic {
+	static getArea(mold: Mold): number {
+		if (mold.shape === 'round') {
+			return Math.PI * Math.pow(mold.dim1 / 2, 2);
+		}
+		if (mold.shape === 'square') {
+			return mold.dim1 * mold.dim1;
+		}
+		return mold.dim1 * mold.dim2;
+	}
+
+	static getPath(mold: Mold, scale = 6): string {
+		if (mold.shape === 'round') {
+			const r = (mold.dim1 / 2) * scale;
+			return `M 0,${-r} A ${r},${r} 0 1,1 0,${r} A ${r},${r} 0 1,1 0,${-r}`;
+		}
+		const w = mold.dim1 * scale;
+		const h = (mold.shape === 'square' ? mold.dim1 : mold.dim2) * scale;
+		const x = -w / 2;
+		const y = -h / 2;
+		return `M ${x},${y} h ${w} v ${h} h ${-w} Z`;
+	}
+
+	static calculateFactor(original: Mold, target: Mold): number {
+		const area1 = this.getArea(original);
+		const area2 = this.getArea(target);
+		return Math.round((area2 / area1) * 100) / 100;
+	}
 }
 
-// eslint-disable-next-line max-lines-per-function
 export function initMoldScaler(ui: Record<string, string>): void {
 	const state = {
-		original: { shape: 'round' as Shape, dim1: 20, dim2: 20 } as MoldState,
-		target: { shape: 'round' as Shape, dim1: 20, dim2: 20 } as MoldState,
+		original: { shape: 'round' as Shape, dim1: 20, dim2: 20 },
+		target: { shape: 'round' as Shape, dim1: 20, dim2: 20 },
 		ingredients: [
 			{ id: '1', name: ui.defaultIngredient1, weight: 0 },
 			{ id: '2', name: ui.defaultIngredient2, weight: 0 },
 		] as Ingredient[],
-		currentFactor: 1,
+		factor: 1,
 	};
 
 	const els = {
-		originalInputs: document.getElementById('original-inputs'),
-		targetInputs: document.getElementById('target-inputs'),
-		resultFactor: document.getElementById('result-factor'),
-		resultText: document.getElementById('result-text'),
-		shapeOriginal: document.getElementById('shape-original'),
-		shapeTarget: document.getElementById('shape-target'),
-		ingredientsList: document.getElementById('ingredients-list'),
-		addIngredientBtn: document.getElementById('add-ingredient-btn'),
+		originalInputs: document.getElementById('original-inputs') as HTMLElement | null,
+		targetInputs: document.getElementById('target-inputs') as HTMLElement | null,
+		resultFactor: document.getElementById('result-factor') as HTMLElement | null,
+		resultText: document.getElementById('result-text') as HTMLElement | null,
+		shapeOriginal: document.getElementById('shape-original') as SVGPathElement | null,
+		shapeTarget: document.getElementById('shape-target') as SVGPathElement | null,
+		ingredientsList: document.getElementById('ingredients-list') as HTMLElement | null,
+		addBtn: document.getElementById('add-ingredient-btn') as HTMLElement | null,
 	};
 
-	const getRoundInput = (labelClass: string, inputClass: string, type: string, values: MoldState) => `
-		<div class="ingredient-field">
-			<label class="${labelClass}">${ui.diameter}</label>
-			<input class="${inputClass}" type="number" value="${values.dim1}" min="1" step="0.5" data-type="${type}" data-key="dim1">
-		</div>
-	`;
+	const renderInput = (type: 'original' | 'target', mold: Mold) => {
+		const container = type === 'original' ? els.originalInputs : els.targetInputs;
+		if (!container) return;
 
-	const getSquareInput = (labelClass: string, inputClass: string, type: string, values: MoldState) => `
-		<div class="ingredient-field">
-			<label class="${labelClass}">${ui.side}</label>
-			<input class="${inputClass}" type="number" value="${values.dim1}" min="1" step="0.5" data-type="${type}" data-key="dim1">
-		</div>
-	`;
-
-	const getRectangularInput = (labelClass: string, inputClass: string, type: string, values: MoldState) => `
-		<div class="ingredient-row" style="grid-template-columns: 1fr 1fr;">
-			<div class="ingredient-field">
-				<label class="${labelClass}">${ui.width}</label>
-				<input class="${inputClass}" type="number" value="${values.dim1}" min="1" step="0.5" data-type="${type}" data-key="dim1">
-			</div>
-			<div class="ingredient-field">
-				<label class="${labelClass}">${ui.length}</label>
-				<input class="${inputClass}" type="number" value="${values.dim2}" min="1" step="0.5" data-type="${type}" data-key="dim2">
-			</div>
-		</div>
-	`;
-
-	const getInputsHTML = (type: 'original' | 'target', shape: Shape, values: MoldState) => {
-		const labelClass = 'ingredient-field-label';
-		const inputClass = 'ingredient-input';
-
-		if (shape === 'round') return getRoundInput(labelClass, inputClass, type, values);
-		if (shape === 'square') return getSquareInput(labelClass, inputClass, type, values);
-		return getRectangularInput(labelClass, inputClass, type, values);
-	};
-
-	const getArea = (s: MoldState) => {
-		if (s.shape === 'round') {
-			return Math.PI * Math.pow(s.dim1 / 2, 2);
-		} else if (s.shape === 'square') {
-			return s.dim1 * s.dim1;
+		let html = '';
+		if (mold.shape === 'round') {
+			html = `
+				<div class="ms-input-group">
+					<label class="ms-label">${ui.diameter}</label>
+					<input type="number" class="ms-input" value="${mold.dim1}" min="1" step="0.5" data-type="${type}" data-key="dim1">
+				</div>
+			`;
+		} else if (mold.shape === 'square') {
+			html = `
+				<div class="ms-input-group">
+					<label class="ms-label">${ui.side}</label>
+					<input type="number" class="ms-input" value="${mold.dim1}" min="1" step="0.5" data-type="${type}" data-key="dim1">
+				</div>
+			`;
 		} else {
-			return s.dim1 * s.dim2;
-		}
-	};
-
-	const getPath = (s: MoldState, scale = 5) => {
-		if (s.shape === 'round') {
-			const r = (s.dim1 / 2) * scale;
-			return `M 0,${-r} A ${r},${r} 0 1,1 0,${r} A ${r},${r} 0 1,1 0,${-r}`;
-		} else {
-			const w = s.dim1 * scale;
-			const h = (s.shape === 'square' ? s.dim1 : s.dim2) * scale;
-			const x = -w / 2;
-			const y = -h / 2;
-			return `M ${x},${y} h ${w} v ${h} h ${-w} Z`;
-		}
-	};
-
-	const update = () => {
-		const areaOriginal = getArea(state.original);
-		const areaTarget = getArea(state.target);
-
-		let factor = areaTarget / areaOriginal;
-		factor = Math.round(factor * 100) / 100;
-
-		if (els.resultFactor) els.resultFactor.textContent = `x${factor.toFixed(2)}`;
-
-		if (els.resultText) {
-			if (factor === 1) {
-				els.resultText.textContent = ui.equivalentMolds;
-			} else if (factor < 1) {
-				els.resultText.innerHTML = `${ui.smallerMold} <span class="reduce-text"><strong>${factor}</strong></span>.`;
-			} else {
-				els.resultText.innerHTML = `${ui.largerMold} <span class="increase-text"><strong>${factor}</strong></span>.`;
-			}
-		}
-
-		const scale = 6;
-
-		if (els.shapeOriginal) els.shapeOriginal.setAttribute('d', getPath(state.original, scale));
-		if (els.shapeTarget) els.shapeTarget.setAttribute('d', getPath(state.target, scale));
-
-		state.currentFactor = factor;
-		renderIngredients();
-	};
-
-	const getIngredientRowHTML = (ing: Ingredient) => {
-		const finalWeight = Math.round(ing.weight * state.currentFactor);
-		const isCalculated = ing.weight > 0;
-		return `
-			<div class="ingredient-row">
-				<div class="ingredient-field">
-					<label class="ingredient-field-label">${ui.ingredient}</label>
-					<input type="text" value="${ing.name}" class="ingredient-input" onchange="window.updateIngredient('${ing.id}', 'name', this.value)" placeholder="${ui.exampleIngredient}">
+			html = `
+				<div class="ms-inputs-grid">
+					<div class="ms-input-group">
+						<label class="ms-label">${ui.width}</label>
+						<input type="number" class="ms-input" value="${mold.dim1}" min="1" step="0.5" data-type="${type}" data-key="dim1">
+					</div>
+					<div class="ms-input-group">
+						<label class="ms-label">${ui.length}</label>
+						<input type="number" class="ms-input" value="${mold.dim2}" min="1" step="0.5" data-type="${type}" data-key="dim2">
+					</div>
 				</div>
-				<div class="ingredient-field">
-					<label class="ingredient-field-label">${ui.original}</label>
-					<input type="number" value="${ing.weight || ''}" class="ingredient-input" onchange="window.updateIngredient('${ing.id}', 'weight', parseFloat(this.value))" placeholder="0">
-				</div>
-				<div class="ingredient-field">
-					<label class="ingredient-field-label final">${ui.final}</label>
-					<div class="ingredient-final">${isCalculated ? finalWeight : '-'}</div>
-				</div>
-				<button onclick="window.removeIngredient('${ing.id}')" class="ingredient-delete" title="${ui.delete}">
-					<svg xmlns="http://www.w3.org/2000/svg" class="ingredient-delete-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-				</button>
-			</div>
-		`;
+			`;
+		}
+		container.innerHTML = html;
 	};
 
 	const renderIngredients = () => {
 		if (!els.ingredientsList) return;
-		els.ingredientsList.innerHTML = state.ingredients.map(getIngredientRowHTML).join('');
+		
+		if (state.ingredients.length === 0) {
+			els.ingredientsList.innerHTML = `<div class="ms-empty-state">${ui.addIngredient}</div>`;
+			return;
+		}
+
+		els.ingredientsList.innerHTML = state.ingredients.map(ing => {
+			const finalValue = Math.round(ing.weight * state.factor);
+			return `
+				<div class="ms-ingredient-row" data-id="${ing.id}">
+					<div class="ms-input-group">
+						<label class="ms-label">${ui.ingredient}</label>
+						<input type="text" class="ms-input ms-ing-name" value="${ing.name}" placeholder="${ui.exampleIngredient}">
+					</div>
+					<div class="ms-input-group">
+						<label class="ms-label">${ui.original}</label>
+						<input type="number" class="ms-input ms-ing-weight" value="${ing.weight || ''}" placeholder="0">
+					</div>
+					<div class="ms-input-group">
+						<label class="ms-label">${ui.final}</label>
+						<div class="ms-ingredient-final">${ing.weight > 0 ? `${finalValue}g` : '-'}</div>
+					</div>
+					<button class="ms-del-btn" data-id="${ing.id}" title="${ui.delete}">
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+					</button>
+				</div>
+			`;
+		}).join('');
+
+		els.ingredientsList.querySelectorAll('.ms-ing-name').forEach(input => {
+			input.addEventListener('change', (e) => {
+				const target = e.target as HTMLInputElement;
+				const id = target.closest('.ms-ingredient-row')?.getAttribute('data-id') ?? '';
+				if (id) {
+					const ing = state.ingredients.find(i => i.id === id);
+					if (ing) ing.name = target.value;
+				}
+			});
+		});
+
+		els.ingredientsList.querySelectorAll('.ms-ing-weight').forEach(input => {
+			input.addEventListener('input', (e) => {
+				const target = e.target as HTMLInputElement;
+				const id = target.closest('.ms-ingredient-row')?.getAttribute('data-id') ?? '';
+				if (id) {
+					const ing = state.ingredients.find(i => i.id === id);
+					if (ing) {
+						ing.weight = parseFloat(target.value) || 0;
+						updateUI();
+					}
+				}
+			});
+		});
+
+		els.ingredientsList.querySelectorAll('.ms-del-btn').forEach(btn => {
+			btn.addEventListener('click', (e) => {
+				const id = (e.currentTarget as HTMLElement).getAttribute('data-id') ?? '';
+				if (id) {
+					state.ingredients = state.ingredients.filter(i => i.id !== id);
+					renderIngredients();
+				}
+			});
+		});
 	};
 
-	(window as unknown as WindowGlobal).updateIngredient = (id: string, field: 'name' | 'weight', value: number | string) => {
-		const ing = state.ingredients.find((i) => i.id === id);
-		if (ing) {
-			if (field === 'weight') ing.weight = (typeof value === 'number' ? value : 0) || 0;
-			else ing.name = String(value);
+
+
+	const updateUI = () => {
+		state.factor = MoldLogic.calculateFactor(state.original, state.target);
+		
+		if (els.resultFactor) {
+			els.resultFactor.textContent = `x${state.factor.toFixed(2)}`;
+		}
+
+		if (els.resultText) {
+			if (state.factor === 1) {
+				els.resultText.innerHTML = ui.equivalentMolds;
+			} else if (state.factor < 1) {
+				els.resultText.innerHTML = `${ui.smallerMold} <strong>${state.factor}</strong>.`;
+			} else {
+				els.resultText.innerHTML = `${ui.largerMold} <strong>${state.factor}</strong>.`;
+			}
+		}
+
+		if (els.shapeOriginal) {
+			els.shapeOriginal.setAttribute('d', MoldLogic.getPath(state.original));
+		}
+		if (els.shapeTarget) {
+			els.shapeTarget.setAttribute('d', MoldLogic.getPath(state.target));
+		}
+
+		const finalElements = document.querySelectorAll('.ms-ingredient-final');
+		state.ingredients.forEach((ing, index) => {
+			const el = finalElements[index];
+			if (el) {
+				const final = Math.round(ing.weight * state.factor);
+				el.textContent = ing.weight > 0 ? `${final}g` : '-';
+			}
+		});
+	};
+
+	const bindEvents = () => {
+		document.querySelectorAll('.ms-shape-btn').forEach(btn => {
+			btn.addEventListener('click', (e) => {
+				const b = e.currentTarget as HTMLElement;
+				const target = b.dataset.target;
+				const shape = b.dataset.shape as Shape | undefined;
+
+				if ((target === 'original' || target === 'target') && shape) {
+					state[target].shape = shape;
+					
+					document.querySelectorAll(`.ms-shape-btn[data-target="${target}"]`).forEach(btn => {
+						btn.classList.toggle('active', btn === b);
+					});
+
+					renderInput(target, state[target]);
+					updateUI();
+				}
+			});
+		});
+
+		[els.originalInputs, els.targetInputs].forEach(container => {
+			container?.addEventListener('input', (e) => {
+				const input = e.target as HTMLInputElement;
+				const type = input.dataset.type;
+				const key = input.dataset.key;
+				
+				if ((type === 'original' || type === 'target') && (key === 'dim1' || key === 'dim2')) {
+					state[type][key] = parseFloat(input.value) || 0;
+					updateUI();
+				}
+			});
+		});
+
+		els.addBtn?.addEventListener('click', () => {
+			state.ingredients.push({
+				id: Math.random().toString(36).slice(2, 11),
+				name: '',
+				weight: 0
+			});
 			renderIngredients();
-		}
-	};
-
-	(window as unknown as WindowGlobal).removeIngredient = (id: string) => {
-		state.ingredients = state.ingredients.filter((i) => i.id !== id);
-		renderIngredients();
-	};
-
-	const handleShapeClick = (e: Event) => {
-		const btn = e.currentTarget as HTMLElement;
-		const target = btn.dataset.target as 'original' | 'target';
-		const shape = btn.dataset.shape as Shape;
-
-		state[target].shape = shape;
-		if (shape === 'rectangular' && state[target].dim2 === state[target].dim1) {
-			state[target].dim2 = state[target].dim1 + 5;
-		}
-
-		document.querySelectorAll(`.shape-btn[data-target="${target}"]`).forEach((b) => {
-			b.classList.remove('active');
-		});
-		btn.classList.add('active');
-		renderInputs(target);
-		update();
-	};
-
-	const handleInput = (e: Event) => {
-		const input = e.target as HTMLInputElement;
-		const type = input.dataset.type as 'original' | 'target';
-		const key = input.dataset.key as 'dim1' | 'dim2';
-
-		if (type && key) {
-			state[type][key] = parseFloat(input.value) || 0;
-			update();
-		}
-	};
-
-	const setupListeners = () => {
-		document.querySelectorAll('.shape-btn').forEach((btn) => {
-			btn.addEventListener('click', handleShapeClick);
-		});
-		els.originalInputs?.addEventListener('input', handleInput);
-		els.targetInputs?.addEventListener('input', handleInput);
-		els.addIngredientBtn?.addEventListener('click', () => {
-			const newId = Math.random().toString(36).slice(2, 11);
-			state.ingredients.push({ id: newId, name: '', weight: 0 });
-			renderIngredients();
 		});
 	};
 
-	const renderInputs = (target: 'original' | 'target') => {
-		const container = target === 'original' ? els.originalInputs : els.targetInputs;
-		if (container) {
-			container.innerHTML = getInputsHTML(target, state[target].shape, state[target]);
-		}
-	};
-
-	renderInputs('original');
-	renderInputs('target');
-	setupListeners();
-	update();
+	renderInput('original', state.original);
+	renderInput('target', state.target);
+	renderIngredients();
+	bindEvents();
+	updateUI();
 }
+
+

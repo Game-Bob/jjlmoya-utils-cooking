@@ -1,0 +1,313 @@
+:root {
+	--ir-primary: hsl(25, 95%, 53%);
+	--ir-primary-light: hsl(25, 95%, 90%);
+	--ir-primary-dark: hsl(25, 85%, 45%);
+	--ir-success: hsl(142, 72%, 45%);
+	--ir-danger: hsl(0, 84%, 60%);
+
+	--ir-bg-card: hsl(0, 0%, 100%);
+	--ir-bg-app: hsl(210, 20%, 98%);
+	--ir-border: hsl(210, 20%, 90%);
+	--ir-text-main: hsl(210, 30%, 20%);
+	--ir-text-muted: hsl(210, 15%, 50%);
+	--ir-text-disabled: hsl(210, 15%, 75%);
+
+	--ir-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+	--ir-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+	--ir-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+	--ir-radius: 1rem;
+	--ir-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-dark {
+	--ir-bg-card: hsl(220, 25%, 12%);
+	--ir-bg-app: hsl(220, 30%, 7%);
+	--ir-border: hsl(220, 20%, 20%);
+	--ir-text-main: hsl(210, 20%, 95%);
+	--ir-text-muted: hsl(210, 15%, 70%);
+	--ir-text-disabled: hsl(210, 15%, 50%);
+	--ir-primary-light: hsl(25, 95%, 15%);
+}
+
+.ingredient-rescaler-container {
+	max-width: 100%;
+	padding: 1.5rem;
+	background: var(--ir-bg-card);
+	border: 1px solid var(--ir-border);
+	border-radius: var(--ir-radius);
+	box-shadow: var(--ir-shadow-lg);
+}
+
+.ir-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+	margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+	.ir-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.ir-section {
+	background: var(--ir-bg-app);
+	padding: 1.5rem;
+	border-radius: 1.25rem;
+	border: 1px solid var(--ir-border);
+}
+
+.ir-section-primary {
+	background: linear-gradient(to bottom, var(--ir-bg-card), var(--ir-primary-light));
+	border-color: var(--ir-primary);
+}
+
+.ir-section-title {
+	font-size: 1.125rem;
+	font-weight: 700;
+	color: var(--ir-text-main);
+	margin-bottom: 1rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.ir-section-primary .ir-section-title {
+	color: var(--ir-primary);
+}
+
+.ir-fields {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.ir-field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.ir-label {
+	font-size: 0.75rem;
+	font-weight: 700;
+	color: var(--ir-text-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.ir-input {
+	width: 100%;
+	padding: 0.75rem 1rem;
+	border-radius: 0.75rem;
+	border: 1px solid var(--ir-border);
+	background: var(--ir-bg-card);
+	color: var(--ir-text-main);
+	font-weight: 600;
+	font-size: 1.125rem;
+	text-align: center;
+	transition: var(--ir-transition);
+}
+
+.ir-input:focus {
+	outline: none;
+	border-color: var(--ir-primary);
+	box-shadow: 0 0 0 3px hsl(25 95% 53% / 0.1);
+}
+
+.ir-factor-display {
+	margin-top: 1rem;
+	padding: 1rem;
+	background: linear-gradient(to right, var(--ir-primary-light), transparent);
+	border-radius: 0.75rem;
+	border: 1px solid var(--ir-primary);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.ir-factor-label {
+	font-size: 0.875rem;
+	font-weight: 600;
+	color: var(--ir-text-muted);
+}
+
+.ir-factor-value {
+	font-size: 2rem;
+	font-weight: 800;
+	color: var(--ir-primary);
+	font-family: monospace;
+}
+
+.ir-textarea-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	gap: 0.5rem;
+}
+
+.ir-textarea {
+	width: 100%;
+	flex: 1;
+	min-height: 200px;
+	padding: 1rem;
+	border-radius: 0.75rem;
+	border: 1px solid var(--ir-border);
+	background: var(--ir-bg-card);
+	color: var(--ir-text-main);
+	font-family: monospace;
+	font-size: 0.875rem;
+	resize: none;
+	line-height: 1.6;
+	transition: var(--ir-transition);
+}
+
+.ir-textarea:focus {
+	outline: none;
+	border-color: var(--ir-primary);
+	box-shadow: 0 0 0 3px hsl(25 95% 53% / 0.1);
+}
+
+.ir-textarea::placeholder {
+	color: var(--ir-text-disabled);
+}
+
+.ir-results-card {
+	background: var(--ir-text-main);
+	border-radius: 1.25rem;
+	border: 1px solid var(--ir-border);
+	overflow: hidden;
+	box-shadow: var(--ir-shadow-md);
+}
+
+.ir-results-header {
+	padding: 1rem 1.5rem;
+	background: hsl(210 30% 15%);
+	border-bottom: 1px solid hsl(210 30% 25%);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.theme-dark .ir-results-header {
+	background: hsl(220 25% 8%);
+	border-bottom-color: hsl(220 25% 20%);
+}
+
+.ir-results-title {
+	color: white;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.ir-copy-btn {
+	font-size: 0.75rem;
+	background: hsl(210 30% 35%);
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	border: none;
+	cursor: pointer;
+	transition: var(--ir-transition);
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.theme-dark .ir-copy-btn {
+	background: hsl(220 25% 30%);
+}
+
+.ir-copy-btn:hover {
+	background: hsl(210 30% 45%);
+}
+
+.theme-dark .ir-copy-btn:hover {
+	background: hsl(220 25% 40%);
+}
+
+.ir-copy-btn.ir-copied {
+	background: var(--ir-success);
+}
+
+.ir-copy-btn.ir-copied:hover {
+	background: hsl(142 72% 35%);
+}
+
+.ir-results-container {
+	padding: 2rem;
+	font-family: monospace;
+	font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	min-height: 200px;
+	background: var(--ir-bg-card);
+	color: var(--ir-text-main);
+}
+
+.ir-empty-state {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	opacity: 0.5;
+	color: var(--ir-text-muted);
+}
+
+.ir-empty-icon {
+	font-size: 3rem;
+}
+
+.ir-result-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: var(--ir-bg-app);
+	padding: 0.75rem;
+	border-radius: 0.5rem;
+	border-left: 4px solid transparent;
+	transition: var(--ir-transition);
+}
+
+.ir-result-row:hover {
+	background: linear-gradient(to right, var(--ir-primary-light), transparent);
+	border-left-color: var(--ir-primary);
+}
+
+.ir-original-amount {
+	color: var(--ir-text-disabled);
+	font-size: 0.75rem;
+	text-decoration: line-through;
+	opacity: 0.75;
+	max-width: 30%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.ir-new-amount {
+	font-weight: 500;
+	color: var(--ir-text-main);
+}
+
+.ir-new-value {
+	color: var(--ir-primary);
+	font-weight: 800;
+	font-size: 1.125rem;
+}
+
+.ir-no-amount-row {
+	color: var(--ir-text-muted);
+	font-style: italic;
+	font-size: 0.875rem;
+	padding: 0.5rem;
+	background: transparent;
+}

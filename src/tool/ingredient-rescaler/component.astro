@@ -1,0 +1,106 @@
+---
+import './IngredientRescaler.css';
+
+interface Props {
+	ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+const placeholderText = `${ui.pasteHere}
+${ui.exampleLine1}
+${ui.exampleLine2}
+${ui.exampleLine3}
+${ui.exampleLine4}`;
+---
+
+<div class="ingredient-rescaler-container">
+	<div class="ir-grid" id="calculator-interface">
+		<div>
+			<section class="ir-section ir-section-primary">
+				<h3 class="ir-section-title">
+					<span>1.</span> {ui.servings}
+				</h3>
+
+				<div class="ir-fields">
+					<div class="ir-field">
+						<label for="original-servings" class="ir-label">{ui.original}</label>
+						<input
+							type="number"
+							id="original-servings"
+							value="4"
+							min="1"
+							class="ir-input"
+						/>
+					</div>
+					<div class="ir-field">
+						<label for="target-servings" class="ir-label">{ui.desired}</label>
+						<input
+							type="number"
+							id="target-servings"
+							value="7"
+							min="1"
+							class="ir-input"
+						/>
+					</div>
+				</div>
+
+				<div class="ir-factor-display">
+					<span class="ir-factor-label">{ui.multiplyingFactor}</span>
+					<span id="multiplier-display" class="ir-factor-value">1.75x</span>
+				</div>
+			</section>
+		</div>
+
+		<div class="ir-textarea-container">
+			<section class="ir-section">
+				<h3 class="ir-section-title">
+					<span>2.</span> {ui.ingredientsList}
+				</h3>
+
+				<textarea
+					id="ingredients-input"
+					placeholder={placeholderText}
+					class="ir-textarea"
+					spellcheck="false"
+				></textarea>
+			</section>
+		</div>
+	</div>
+
+	<div class="ir-results-card">
+		<div class="ir-results-header">
+			<h3 class="ir-results-title">
+				<span>🍳</span> {ui.result}
+			</h3>
+			<button id="copy-btn" class="ir-copy-btn ir-default">
+				<span>📋</span> {ui.copy}
+			</button>
+		</div>
+
+		<div id="results-container" class="ir-results-container">
+			<div class="ir-empty-state">
+				<span class="ir-empty-icon">🍲</span>
+				<p>{ui.emptyState}</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	import { initIngredientRescaler } from './init';
+	window.__initIngredientRescaler = initIngredientRescaler;
+</script>
+
+<script define:vars={{ ui }}>
+	const init = () => {
+		if (window.__initIngredientRescaler) {
+			window.__initIngredientRescaler(ui);
+		}
+	};
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', init);
+	} else {
+		init();
+	}
+</script>
