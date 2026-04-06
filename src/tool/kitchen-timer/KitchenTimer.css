@@ -27,6 +27,7 @@
     --text-gray-muted: #71717a;
     --separator: #3f3f46;
     --btn-dark: #fff;
+    --btn-text-color: #1e293b;
     --status-ready: rgba(249, 115, 22, 0.9);
     --box-light: rgba(255, 255, 255, 0.05);
 }
@@ -267,7 +268,7 @@
 
 .theme-dark .btn-toggle {
     background-color: #fff;
-    color: #1e293b;
+    color: var(--btn-text-color);
 }
 
 .btn-toggle:hover:not(:disabled) {
