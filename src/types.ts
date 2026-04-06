@@ -54,6 +54,7 @@ export interface CookingToolEntry<TUI extends Record<string, string> = Record<st
     bg: string;
     fg: string;
   };
+  appSlug?: string;
   i18n: LocaleMap<ToolLocaleContent<TUI>>;
 }
 

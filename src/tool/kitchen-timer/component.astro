@@ -1,0 +1,1046 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<div class="kitchen-timer-wrapper">
+	<div id="timers-grid" class="timers-grid">
+		<div class="timer-card" data-index="0">
+			<div class="progress-bar">
+				<div class="progress-fill"></div>
+			</div>
+
+			<div class="timer-content">
+				<div class="timer-header">
+					<div class="timer-name-wrapper">
+						<input
+							type="text"
+							value="Temporizador 1"
+							class="timer-name"
+							placeholder="Etiqueta"
+						/>
+					</div>
+					<div class="status-badge">
+						<span class="status-text">Listo</span>
+					</div>
+				</div>
+
+				<div class="timer-display">
+					<div class="time-input-group">
+						<div class="time-input-box">
+							<input
+								type="number"
+								min="0"
+								max="99"
+								value="00"
+								class="time-input hours"
+								placeholder="00"
+							/>
+						</div>
+						<label class="time-label">Horas</label>
+					</div>
+
+					<span class="time-separator">:</span>
+
+					<div class="time-input-group">
+						<div class="time-input-box">
+							<input
+								type="number"
+								min="0"
+								max="59"
+								value="00"
+								class="time-input minutes"
+								placeholder="00"
+							/>
+						</div>
+						<label class="time-label">Min</label>
+					</div>
+
+					<span class="time-separator">:</span>
+
+					<div class="time-input-group">
+						<div class="time-input-box">
+							<input
+								type="number"
+								min="0"
+								max="59"
+								value="00"
+								class="time-input seconds"
+								placeholder="00"
+							/>
+						</div>
+						<label class="time-label">Seg</label>
+					</div>
+				</div>
+
+				<div class="timer-controls">
+					<div class="timer-buttons">
+						<button class="btn-toggle" disabled>
+							<span class="icon-play">
+								<Icon name="mdi:play" />
+							</span>
+							<span class="icon-pause" style="display: none;">
+								<Icon name="mdi:pause" />
+							</span>
+							<span class="btn-text">Iniciar</span>
+						</button>
+
+						<button class="btn-reset">
+							<Icon name="mdi:refresh" />
+							Reset
+						</button>
+					</div>
+
+					<div class="timer-quick-buttons">
+						<button class="btn-add-1m">+1 min</button>
+						<button class="btn-add-5m">+5 min</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="timer-card" data-index="1">
+			<div class="progress-bar">
+				<div class="progress-fill"></div>
+			</div>
+
+			<div class="timer-content">
+				<div class="timer-header">
+					<div class="timer-name-wrapper">
+						<input
+							type="text"
+							value="Temporizador 2"
+							class="timer-name"
+							placeholder="Etiqueta"
+						/>
+					</div>
+					<div class="status-badge">
+						<span class="status-text">Listo</span>
+					</div>
+				</div>
+
+				<div class="timer-display">
+					<div class="time-input-group">
+						<div class="time-input-box">
+							<input
+								type="number"
+								min="0"
+								max="99"
+								value="00"
+								class="time-input hours"
+								placeholder="00"
+							/>
+						</div>
+						<label class="time-label">Horas</label>
+					</div>
+
+					<span class="time-separator">:</span>
+
+					<div class="time-input-group">
+						<div class="time-input-box">
+							<input
+								type="number"
+								min="0"
+								max="59"
+								value="00"
+								class="time-input minutes"
+								placeholder="00"
+							/>
+						</div>
+						<label class="time-label">Min</label>
+					</div>
+
+					<span class="time-separator">:</span>
+
+					<div class="time-input-group">
+						<div class="time-input-box">
+							<input
+								type="number"
+								min="0"
+								max="59"
+								value="00"
+								class="time-input seconds"
+								placeholder="00"
+							/>
+						</div>
+						<label class="time-label">Seg</label>
+					</div>
+				</div>
+
+				<div class="timer-controls">
+					<div class="timer-buttons">
+						<button class="btn-toggle" disabled>
+							<span class="icon-play">
+								<Icon name="mdi:play" />
+							</span>
+							<span class="icon-pause" style="display: none;">
+								<Icon name="mdi:pause" />
+							</span>
+							<span class="btn-text">Iniciar</span>
+						</button>
+
+						<button class="btn-reset">
+							<Icon name="mdi:refresh" />
+							Reset
+						</button>
+					</div>
+
+					<div class="timer-quick-buttons">
+						<button class="btn-add-1m">+1 min</button>
+						<button class="btn-add-5m">+5 min</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="timer-card" data-index="2">
+			<div class="progress-bar">
+				<div class="progress-fill"></div>
+			</div>
+
+			<div class="timer-content">
+				<div class="timer-header">
+					<div class="timer-name-wrapper">
+						<input
+							type="text"
+							value="Temporizador 3"
+							class="timer-name"
+							placeholder="Etiqueta"
+						/>
+					</div>
+					<div class="status-badge">
+						<span class="status-text">Listo</span>
+					</div>
+				</div>
+
+				<div class="timer-display">
+					<div class="time-input-group">
+						<div class="time-input-box">
+							<input
+								type="number"
+								min="0"
+								max="99"
+								value="00"
+								class="time-input hours"
+								placeholder="00"
+							/>
+						</div>
+						<label class="time-label">Horas</label>
+					</div>
+
+					<span class="time-separator">:</span>
+
+					<div class="time-input-group">
+						<div class="time-input-box">
+							<input
+								type="number"
+								min="0"
+								max="59"
+								value="00"
+								class="time-input minutes"
+								placeholder="00"
+							/>
+						</div>
+						<label class="time-label">Min</label>
+					</div>
+
+					<span class="time-separator">:</span>
+
+					<div class="time-input-group">
+						<div class="time-input-box">
+							<input
+								type="number"
+								min="0"
+								max="59"
+								value="00"
+								class="time-input seconds"
+								placeholder="00"
+							/>
+						</div>
+						<label class="time-label">Seg</label>
+					</div>
+				</div>
+
+				<div class="timer-controls">
+					<div class="timer-buttons">
+						<button class="btn-toggle" disabled>
+							<span class="icon-play">
+								<Icon name="mdi:play" />
+							</span>
+							<span class="icon-pause" style="display: none;">
+								<Icon name="mdi:pause" />
+							</span>
+							<span class="btn-text">Iniciar</span>
+						</button>
+
+						<button class="btn-reset">
+							<Icon name="mdi:refresh" />
+							Reset
+						</button>
+					</div>
+
+					<div class="timer-quick-buttons">
+						<button class="btn-add-1m">+1 min</button>
+						<button class="btn-add-5m">+5 min</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="add-timer-container">
+		<button id="add-timer-btn" class="add-timer-btn">
+			<div class="add-timer-icon">
+				<Icon name="mdi:plus" />
+			</div>
+			<span>Añadir Temporizador</span>
+		</button>
+	</div>
+
+	<div class="stop-all-container">
+		<button id="stop-all" class="stop-all-btn">
+			<Icon name="mdi:stop-circle-outline" />
+			Detener Todas
+		</button>
+	</div>
+
+	<template id="timer-template">
+		<div class="timer-card" data-index="-1">
+			<div class="progress-bar">
+				<div class="progress-fill"></div>
+			</div>
+
+			<div class="timer-content">
+				<div class="timer-header">
+					<div class="timer-name-wrapper">
+						<input
+							type="text"
+							value="Nuevo Temporizador"
+							class="timer-name"
+							placeholder="Etiqueta"
+						/>
+					</div>
+					<div class="status-badge">
+						<span class="status-text">Listo</span>
+					</div>
+				</div>
+
+				<div class="timer-display">
+					<div class="time-input-group">
+						<div class="time-input-box">
+							<input
+								type="number"
+								min="0"
+								max="99"
+								value="00"
+								class="time-input hours"
+								placeholder="00"
+							/>
+						</div>
+						<label class="time-label">Horas</label>
+					</div>
+
+					<span class="time-separator">:</span>
+
+					<div class="time-input-group">
+						<div class="time-input-box">
+							<input
+								type="number"
+								min="0"
+								max="59"
+								value="00"
+								class="time-input minutes"
+								placeholder="00"
+							/>
+						</div>
+						<label class="time-label">Min</label>
+					</div>
+
+					<span class="time-separator">:</span>
+
+					<div class="time-input-group">
+						<div class="time-input-box">
+							<input
+								type="number"
+								min="0"
+								max="59"
+								value="00"
+								class="time-input seconds"
+								placeholder="00"
+							/>
+						</div>
+						<label class="time-label">Seg</label>
+					</div>
+				</div>
+
+				<div class="timer-controls">
+					<div class="timer-buttons">
+						<button class="btn-toggle" disabled>
+							<span class="icon-play">
+								<Icon name="mdi:play" />
+							</span>
+							<span class="icon-pause" style="display: none;">
+								<Icon name="mdi:pause" />
+							</span>
+							<span class="btn-text">Iniciar</span>
+						</button>
+
+						<button class="btn-reset">
+							<Icon name="mdi:refresh" />
+							Reset
+						</button>
+					</div>
+
+					<div class="timer-quick-buttons">
+						<button class="btn-add-1m">+1 min</button>
+						<button class="btn-add-5m">+5 min</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
+
+	<div id="mobile-dock" class="mobile-dock" data-visible="false">
+		<div id="mobile-dock-container" class="mobile-dock-container"></div>
+	</div>
+</div>
+
+<script>
+	import { initKitchenTimers } from "./init";
+
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", initKitchenTimers);
+	} else {
+		initKitchenTimers();
+	}
+</script>
+
+<style>
+	:root {
+		--kitchen-timer-primary: #f97316;
+		--kitchen-timer-secondary: #fb923c;
+		--kitchen-timer-bg-light: #fff;
+		--kitchen-timer-bg-dark: #18181b;
+		--kitchen-timer-border-light: #e2e8f0;
+		--kitchen-timer-border-dark: #27272a;
+		--kitchen-timer-text-light: #0f172a;
+		--kitchen-timer-text-dark: #fff;
+		--kitchen-timer-status-ready: #ea580c;
+		--kitchen-timer-status-running: #16a34a;
+		--kitchen-timer-status-finished: #dc2626;
+		--kitchen-timer-text-gray: #64748b;
+		--kitchen-timer-text-gray-dark: #a1a1aa;
+		--kitchen-timer-text-gray-muted: #94a3b8;
+		--kitchen-timer-text-gray-muted-dark: #71717a;
+		--kitchen-timer-separator: #cbd5e1;
+		--kitchen-timer-separator-dark: #3f3f46;
+		--kitchen-timer-btn-dark: #1e293b;
+		--kitchen-timer-stop-color: #dc2626;
+		--kitchen-timer-white: #fff;
+	}
+
+	.kitchen-timer-wrapper {
+		width: 100%;
+	}
+
+	.timers-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1.5rem;
+		margin-bottom: 2rem;
+		transition: all 0.3s ease;
+	}
+
+	@media (max-width: 768px) {
+		.timers-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.timer-card {
+		background-color: var(--kitchen-timer-bg-light);
+		color: var(--kitchen-timer-text-light);
+		border-radius: 2.5rem;
+		padding: 2rem;
+		box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+		border: 1px solid var(--kitchen-timer-border-light);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+		transition: all 0.5s ease;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.timer-card {
+			background-color: var(--kitchen-timer-bg-dark);
+			color: var(--kitchen-timer-text-dark);
+			border-color: var(--kitchen-timer-border-dark);
+			box-shadow: none;
+		}
+	}
+
+	.timer-card:hover {
+		border-color: rgba(249, 115, 22, 0.3);
+	}
+
+	.progress-bar {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 0.375rem;
+		background-color: var(--kitchen-timer-border-light);
+		overflow: hidden;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.progress-bar {
+			background-color: var(--kitchen-timer-border-dark);
+		}
+	}
+
+	.progress-fill {
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to right, var(--kitchen-timer-primary), var(--kitchen-timer-secondary));
+		transform-origin: left;
+		transform: scaleX(0);
+		transition: transform 1s linear;
+	}
+
+	.timer-content {
+		position: relative;
+		z-index: 10;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.timer-header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.timer-name-wrapper {
+		width: 100%;
+		max-width: 200px;
+		margin-bottom: 0.5rem;
+	}
+
+	.timer-name {
+		width: 100%;
+		text-align: center;
+		font-size: 1.125rem;
+		font-weight: 900;
+		background: transparent;
+		border: none;
+		border-bottom: 2px solid transparent;
+		padding: 0.5rem;
+		color: inherit;
+		transition: border-color 0.2s ease;
+	}
+
+	.timer-name:hover {
+		border-bottom-color: var(--kitchen-timer-border-light);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.timer-name:hover {
+			border-bottom-color: var(--kitchen-timer-border-dark);
+		}
+	}
+
+	.timer-name:focus {
+		outline: none;
+		border-bottom-color: var(--kitchen-timer-primary);
+	}
+
+	.status-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.375rem;
+		padding: 0.25rem 0.75rem;
+		border-radius: 9999px;
+		background-color: rgba(249, 115, 22, 0.1);
+		border: 1px solid rgba(249, 115, 22, 0.2);
+		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+		margin-top: 0.5rem;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.status-badge {
+			background-color: rgba(249, 115, 22, 0.1);
+			border-color: rgba(249, 115, 22, 0.3);
+		}
+	}
+
+	.status-text {
+		font-size: 0.625rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: var(--kitchen-timer-status-ready);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.status-text {
+			color: rgba(249, 115, 22, 0.9);
+		}
+	}
+
+	.timer-display {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem 0;
+		gap: 0.5rem;
+	}
+
+	.time-input-group {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.time-input-box {
+		padding: 0.375rem;
+		border-radius: 1rem;
+		background-color: var(--kitchen-timer-border-light);
+		border: 1px solid var(--kitchen-timer-border-light);
+		transition: all 0.2s ease;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.time-input-box {
+			background-color: rgba(255, 255, 255, 0.05);
+			border-color: var(--kitchen-timer-border-dark);
+		}
+	}
+
+	.time-input {
+		width: 2.4em;
+		padding: 0.375rem;
+		font-size: 3rem;
+		font-weight: 900;
+		text-align: center;
+		background: transparent;
+		border: none;
+		color: inherit;
+		letter-spacing: -0.05em;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.time-input {
+			color: var(--kitchen-timer-text-dark);
+		}
+	}
+
+	.time-input:focus {
+		outline: none;
+		color: var(--kitchen-timer-primary);
+	}
+
+	.time-input::-webkit-outer-spin-button,
+	.time-input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	.time-input[type="number"] {
+		-moz-appearance: textfield;
+	}
+
+	.time-label {
+		font-size: 0.5625rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--kitchen-timer-text-gray-muted);
+		margin-top: 0.5rem;
+		transition: color 0.2s ease;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.time-label {
+			color: var(--kitchen-timer-text-gray-muted-dark);
+		}
+	}
+
+	.time-input-box:has(.time-input:focus-within) .time-label {
+		color: var(--kitchen-timer-primary);
+	}
+
+	.time-input-box:focus-within {
+		border-color: var(--kitchen-timer-primary);
+		background-color: var(--kitchen-timer-bg-light);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.time-input-box:focus-within {
+			background-color: var(--kitchen-timer-bg-dark);
+		}
+	}
+
+	.time-separator {
+		color: var(--kitchen-timer-separator);
+		margin-bottom: 1.5rem;
+		font-weight: 900;
+		font-size: 2.25rem;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.time-separator {
+			color: var(--kitchen-timer-separator-dark);
+		}
+	}
+
+	.timer-controls {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.timer-buttons {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.75rem;
+	}
+
+	.btn-toggle {
+		padding: 1rem;
+		border-radius: 1rem;
+		background-color: var(--kitchen-timer-btn-dark);
+		color: var(--kitchen-timer-text-dark);
+		font-weight: 900;
+		font-size: 0.875rem;
+		border: none;
+		cursor: pointer;
+		transition: all 0.2s ease;
+		box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.btn-toggle {
+			background-color: var(--kitchen-timer-bg-light);
+			color: var(--kitchen-timer-btn-dark);
+		}
+	}
+
+	.btn-toggle:hover:not(:disabled) {
+		background-color: #0f172a;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.btn-toggle:hover:not(:disabled) {
+			background-color: #e2e8f0;
+		}
+	}
+
+	.btn-toggle:active:not(:disabled) {
+		transform: scale(0.95);
+	}
+
+	.btn-toggle:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	.icon-play,
+	.icon-pause {
+		display: inline-flex;
+		align-items: center;
+		width: 1.25rem;
+		height: 1.25rem;
+	}
+
+	.btn-reset {
+		padding: 1rem;
+		border-radius: 1rem;
+		background-color: var(--kitchen-timer-border-light);
+		color: var(--kitchen-timer-text-gray);
+		font-weight: 700;
+		font-size: 0.875rem;
+		border: 1px solid var(--kitchen-timer-border-light);
+		cursor: pointer;
+		transition: all 0.2s ease;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.btn-reset {
+			background-color: rgba(255, 255, 255, 0.05);
+			border-color: var(--kitchen-timer-border-dark);
+			color: var(--kitchen-timer-text-gray-dark);
+		}
+	}
+
+	.btn-reset:hover {
+		background-color: #f1f5f9;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.btn-reset:hover {
+			background-color: rgba(255, 255, 255, 0.1);
+		}
+	}
+
+	.btn-reset :global(svg) {
+		width: 1.25rem;
+		height: 1.25rem;
+	}
+
+	.timer-quick-buttons {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	.btn-add-1m,
+	.btn-add-5m {
+		flex: 1;
+		padding: 0.5rem;
+		border-radius: 0.75rem;
+		font-size: 0.625rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		background-color: var(--kitchen-timer-bg-light);
+		color: var(--kitchen-timer-text-gray);
+		border: 1px solid var(--kitchen-timer-border-light);
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.btn-add-1m,
+		.btn-add-5m {
+			background-color: var(--kitchen-timer-bg-dark);
+			color: var(--kitchen-timer-text-gray-dark);
+			border-color: var(--kitchen-timer-border-dark);
+		}
+	}
+
+	.btn-add-1m:hover,
+	.btn-add-5m:hover {
+		border-color: var(--kitchen-timer-primary);
+		color: var(--kitchen-timer-primary);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.btn-add-1m:hover,
+		.btn-add-5m:hover {
+			border-color: var(--kitchen-timer-primary);
+			color: var(--kitchen-timer-secondary);
+		}
+	}
+
+	.add-timer-container {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 2rem;
+	}
+
+	.add-timer-btn {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 1.5rem;
+		border-radius: 2rem;
+		border: 2px dashed var(--kitchen-timer-border-light);
+		background: transparent;
+		color: var(--kitchen-timer-text-gray-muted);
+		cursor: pointer;
+		transition: all 0.2s ease;
+		font-weight: 500;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.add-timer-btn {
+			border-color: var(--kitchen-timer-border-dark);
+			color: var(--kitchen-timer-text-gray-muted-dark);
+		}
+	}
+
+	.add-timer-btn:hover {
+		border-color: var(--kitchen-timer-primary);
+		color: var(--kitchen-timer-primary);
+		background-color: rgba(249, 115, 22, 0.05);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.add-timer-btn:hover {
+			background-color: rgba(249, 115, 22, 0.1);
+		}
+	}
+
+	.add-timer-icon {
+		width: 3rem;
+		height: 3rem;
+		border-radius: 9999px;
+		background-color: var(--kitchen-timer-border-light);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.2s ease;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.add-timer-icon {
+			background-color: var(--kitchen-timer-border-dark);
+		}
+	}
+
+	.add-timer-btn:hover .add-timer-icon {
+		background-color: rgba(249, 115, 22, 0.2);
+	}
+
+	.add-timer-icon :global(svg) {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
+	.stop-all-container {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		margin-bottom: 6rem;
+	}
+
+	.stop-all-btn {
+		padding: 1rem 2rem;
+		border-radius: 9999px;
+		background-color: var(--kitchen-timer-stop-color);
+		color: var(--kitchen-timer-white);
+		font-weight: 700;
+		border: 4px solid var(--kitchen-timer-white);
+		cursor: pointer;
+		box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+		transition: all 0.2s ease;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.stop-all-btn {
+			border-color: var(--kitchen-timer-bg-dark);
+		}
+	}
+
+	.stop-all-btn:hover {
+		background-color: #991b1b;
+		transform: scale(1.05);
+	}
+
+	.stop-all-btn:active {
+		transform: scale(0.95);
+	}
+
+	.stop-all-btn :global(svg) {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
+	.mobile-dock {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 40;
+		padding: 1rem;
+		background-color: rgba(255, 255, 255, 0.8);
+		backdrop-filter: blur(1rem);
+		border-top: 1px solid var(--kitchen-timer-border-light);
+		transition: all 0.3s ease;
+		transform: translateY(100%);
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.mobile-dock[data-visible="true"] {
+		transform: translateY(0);
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.mobile-dock {
+			background-color: rgba(24, 24, 27, 0.8);
+			border-color: var(--kitchen-timer-border-dark);
+		}
+	}
+
+	@media (min-width: 768px) {
+		.mobile-dock {
+			display: none;
+		}
+	}
+
+	.mobile-dock-container {
+		display: flex;
+		gap: 1rem;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		pointer-events: auto;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+
+	.mobile-dock-container::-webkit-scrollbar {
+		display: none;
+	}
+
+	.timer-card.running .btn-toggle {
+		background-color: rgba(249, 115, 22, 0.1);
+		color: var(--kitchen-timer-primary);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.timer-card.running .btn-toggle {
+			background-color: rgba(249, 115, 22, 0.1);
+			color: var(--kitchen-timer-secondary);
+		}
+	}
+
+	.timer-card.finished {
+		border-color: var(--kitchen-timer-status-finished);
+		background-color: rgba(220, 38, 38, 0.05);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.timer-card.finished {
+			background-color: rgba(220, 38, 38, 0.05);
+		}
+	}
+
+	.status-text.running {
+		color: var(--kitchen-timer-status-running);
+	}
+
+	.status-text.finished {
+		color: var(--kitchen-timer-status-finished);
+		animation: bounce 0.5s infinite;
+	}
+
+	@keyframes bounce {
+		0%, 100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-0.25rem);
+		}
+	}
+</style>

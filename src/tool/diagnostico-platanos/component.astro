@@ -1,0 +1,228 @@
+---
+import "./BananaCare.css";
+---
+
+<div class="banana-care-container">
+    <div class="banana-card">
+        <div class="glow-bg"></div>
+        <div class="glow-bg-2"></div>
+
+        <div class="banana-grid">
+            <div class="banana-visual-section">
+                <div class="status-card">
+                    <div id="glow-indicator" class="glow-indicator"></div>
+
+                    <div id="status-visual-indicator" class="status-visual">
+                        <svg viewBox="0 0 240 200" class="banana-svg" xmlns="http://www.w3.org/2000/svg">
+                            <g id="banana-group" class="banana-group">
+                                <path
+                                    id="banana-body"
+                                    d="M50,20 Q10,120 100,170 Q180,190 200,140 Q110,175 50,20"
+                                    fill="currentColor"
+                                    class="banana-body"></path>
+
+                                <path
+                                    d="M55,25 Q25,115 105,160 Q170,175 195,138"
+                                    fill="none"
+                                    stroke="rgba(0,0,0,0.1)"
+                                    stroke-width="2"
+                                    stroke-linecap="round"></path>
+
+                                <path d="M50,20 L40,5 C38,2 45,-2 50,2 L58,16 Z" fill="#2d1302"></path>
+                                <path d="M200,140 L206,142 L202,148 Z" fill="#2d1302"></path>
+
+                                <g id="dots-container">
+                                    <circle class="banana-dot" cx="75" cy="110" r="4.5" fill="#311102"></circle>
+                                    <circle class="banana-dot" cx="105" cy="148" r="3.2" fill="#311102"></circle>
+                                    <circle class="banana-dot" cx="150" cy="165" r="5" fill="#311102"></circle>
+                                    <circle class="banana-dot" cx="50" cy="80" r="2.8" fill="#311102"></circle>
+                                    <circle class="banana-dot" cx="125" cy="158" r="3.8" fill="#311102"></circle>
+                                    <circle class="banana-dot" cx="178" cy="155" r="2.5" fill="#311102"></circle>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="status-info">
+                    <div class="status-badge">
+                        <div id="status-color-dot" class="status-dot"></div>
+                        <span id="status-name" class="status-name">...</span>
+                    </div>
+                    <p id="status-description" class="status-description"></p>
+                </div>
+            </div>
+
+            <div class="banana-controls">
+                <div class="controls-panel">
+                    <div class="control-group">
+                        <div class="ripeness-header">
+                            <span class="ripeness-label">Estado de Maduración</span>
+                            <span id="level-display" class="level-value">2.0</span>
+                        </div>
+                        <input
+                            type="range"
+                            id="ripeness-slider"
+                            min="1"
+                            max="5"
+                            step="0.01"
+                            value="2"
+                            class="ripeness-slider"
+                        />
+                    </div>
+
+                    <div class="grid-2-cols">
+                        <div class="prediction-box">
+                            <span class="prediction-label">Próxima Etapa en</span>
+                            <div class="prediction-value">
+                                <span id="days-prediction" class="days-number">2.5</span>
+                                <span class="days-unit">Días</span>
+                            </div>
+                        </div>
+
+                        <div class="settings-column">
+                            <div class="setting-item temp">
+                                <div class="setting-header">
+                                    <span class="setting-label">Temperatura</span>
+                                    <span id="temp-display" class="setting-value">20°C</span>
+                                </div>
+                                <input
+                                    type="range"
+                                    id="temp-slider"
+                                    min="5"
+                                    max="40"
+                                    value="20"
+                                    class="setting-slider"
+                                />
+                            </div>
+                            <div class="setting-item humidity">
+                                <div class="setting-header">
+                                    <span class="setting-label">Humedad</span>
+                                    <span id="humidity-display" class="setting-value">50%</span>
+                                </div>
+                                <input
+                                    type="range"
+                                    id="humidity-slider"
+                                    min="10"
+                                    max="95"
+                                    value="50"
+                                    class="setting-slider"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="partner-toggle" class="partner-btn">
+                        <div class="partner-content">
+                            <div class="partner-icon"></div>
+                            <div class="partner-text">
+                                <h4 class="partner-title">Acompañamiento Climatérico</h4>
+                                <p class="partner-subtitle">Efecto etileno externo</p>
+                            </div>
+                        </div>
+                        <div class="toggle-switch">
+                            <div id="toggle-circle" class="toggle-circle"></div>
+                        </div>
+                    </button>
+
+                    <div class="grid-2-cols info-grid">
+                        <div class="info-box conservation">
+                            <h5 class="info-title">Conservación</h5>
+                            <p id="status-conservation" class="info-text"></p>
+                        </div>
+                        <div class="info-box acceleration">
+                            <h5 class="info-title">Aceleración</h5>
+                            <p id="status-acceleration" class="info-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    import { BananaEngine } from "./BananaEngine";
+
+    const slider = document.getElementById("ripeness-slider");
+    const tempSlider = document.getElementById("temp-slider");
+    const humiditySlider = document.getElementById("humidity-slider");
+    const partnerToggle = document.getElementById("partner-toggle");
+
+    const levelDisplay = document.getElementById("level-display");
+    const tempDisplay = document.getElementById("temp-display");
+    const humidityDisplay = document.getElementById("humidity-display");
+
+    const statusName = document.getElementById("status-name");
+    const statusDesc = document.getElementById("status-description");
+    const statusCons = document.getElementById("status-conservation");
+    const statusAccel = document.getElementById("status-acceleration");
+    const daysPrediction = document.getElementById("days-prediction");
+    const bananaBody = document.getElementById("banana-body");
+    const bananaGroup = document.getElementById("banana-group");
+    const glowIndicator = document.getElementById("glow-indicator");
+    const colorDot = document.getElementById("status-color-dot");
+    const toggleCircle = document.getElementById("toggle-circle");
+    const dots = document.querySelectorAll(".banana-dot");
+
+    let hasPartners = false;
+
+    partnerToggle.addEventListener("click", () => {
+        hasPartners = !hasPartners;
+        partnerToggle.classList.toggle("active", hasPartners);
+        toggleCircle.classList.toggle("active", hasPartners);
+        update();
+    });
+
+    function getGlowColor(statusColor: string): string {
+        const isDark = document.documentElement.classList.contains("theme-dark");
+        if (isDark && statusColor === "#fbbf24") {
+            return "#f1f5f9";
+        }
+        return statusColor;
+    }
+
+    function update() {
+        const level = parseFloat(slider.value);
+        const temp = parseInt(tempSlider.value);
+        const humidity = parseInt(humiditySlider.value);
+        const status = BananaEngine.getStatus(level);
+
+        if (levelDisplay) levelDisplay.innerText = level.toFixed(1);
+        if (tempDisplay) tempDisplay.innerText = `${temp}°C`;
+        if (humidityDisplay) humidityDisplay.innerText = `${humidity}%`;
+
+        if (statusName) statusName.innerText = status.name;
+        if (statusDesc) statusDesc.innerText = status.description;
+        if (statusCons) statusCons.innerText = status.conservation;
+        if (statusAccel) statusAccel.innerText = status.acceleration;
+
+        bananaBody.style.color = status.color;
+        colorDot.style.backgroundColor = status.color;
+        colorDot.style.boxShadow = `0 0 15px ${status.color}`;
+
+        bananaGroup.style.transform = `rotate(${level * 5 - 12}deg) scale(${1 + (level - 2.5) * 0.05})`;
+
+        const glowColor = getGlowColor(status.color);
+        glowIndicator.style.backgroundColor = glowColor;
+        glowIndicator.style.opacity = (level / 12).toString();
+
+        dots.forEach((dot, index) => {
+            const threshold = 2.4 + index * 0.35;
+            if (level >= threshold) {
+                dot.style.opacity = "0.8";
+            } else {
+                dot.style.opacity = "0";
+            }
+        });
+
+        const days = BananaEngine.calculateDays(level, temp, humidity, hasPartners);
+        daysPrediction.innerText = days.toString();
+    }
+
+    slider.addEventListener("input", update);
+    tempSlider.addEventListener("input", update);
+    humiditySlider.addEventListener("input", update);
+
+    update();
+</script>

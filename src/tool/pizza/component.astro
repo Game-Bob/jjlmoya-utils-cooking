@@ -1,0 +1,789 @@
+---
+import { Icon } from "astro-icon/components";
+import type { ToolLocaleContent } from "../../types";
+
+interface Props {
+  ui: ToolLocaleContent["ui"];
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="pizza-container">
+  <div class="pizza-grid">
+    <div class="pizza-controls">
+      <div class="pizza-card">
+        <h2 class="pizza-title">
+          <Icon name="mdi:tune" class="pizza-icon" />
+          {ui.parameters}
+        </h2>
+
+        <div class="pizza-controls-space">
+          <div class="pizza-control-group">
+            <div class="pizza-label-row">
+              <label class="pizza-label">{ui.quantity}</label>
+              <span class="pizza-value">
+                <span id="display-pizzas">4</span>
+                <span class="pizza-unit">{ui.pizzas}</span>
+              </span>
+            </div>
+            <input
+              type="range"
+              id="input-pizzas"
+              min="1"
+              max="20"
+              value="4"
+              step="1"
+              class="pizza-slider"
+            />
+          </div>
+
+          <div class="pizza-control-group">
+            <div class="pizza-label-row">
+              <label class="pizza-label">{ui.weight}</label>
+              <span class="pizza-value">
+                <span id="display-weight">260</span>
+                <span class="pizza-unit">g</span>
+              </span>
+            </div>
+            <input
+              type="range"
+              id="input-weight"
+              min="180"
+              max="350"
+              value="260"
+              step="5"
+              class="pizza-slider"
+            />
+            <div class="pizza-range-labels">
+              <span>{ui.small}</span>
+              <span>{ui.standard}</span>
+              <span>{ui.large}</span>
+            </div>
+          </div>
+
+          <div class="pizza-control-group">
+            <div class="pizza-label-row">
+              <label class="pizza-label">{ui.hydration}</label>
+              <span class="pizza-value pizza-value-blue">
+                <span id="display-hydration">65</span>%
+              </span>
+            </div>
+            <input
+              type="range"
+              id="input-hydration"
+              min="55"
+              max="85"
+              value="65"
+              step="1"
+              class="pizza-slider pizza-slider-blue"
+            />
+            <div class="pizza-range-labels">
+              <span>{ui.classic}</span>
+              <span>{ui.modern}</span>
+              <span>{ui.high}</span>
+            </div>
+          </div>
+
+          <div class="pizza-control-group">
+            <div class="pizza-label-row">
+              <label class="pizza-label">{ui.salt}</label>
+              <span class="pizza-value">
+                <span id="display-salt">3.0</span>%
+              </span>
+            </div>
+            <input
+              type="range"
+              id="input-salt"
+              min="1.5"
+              max="4.0"
+              value="3.0"
+              step="0.1"
+              class="pizza-slider"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="pizza-tip">
+        <div class="pizza-tip-icon-wrapper">
+          <Icon name="mdi:lightbulb-on" class="pizza-tip-icon" />
+        </div>
+        <div>
+          <h3 class="pizza-tip-title">{ui.fermentation_tip_title}</h3>
+          <p class="pizza-tip-text" set:html={ui.fermentation_tip}></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pizza-recipe">
+      <div class="pizza-recipe-card">
+        <div class="pizza-recipe-header">
+          <h2 class="pizza-recipe-title">{ui.your_recipe}</h2>
+          <div class="pizza-yeast-buttons">
+            <button
+              id="btn-yeast-fresh"
+              class="pizza-yeast-btn pizza-yeast-btn-active"
+            >
+              {ui.fresh_yeast}
+            </button>
+            <button id="btn-yeast-dry" class="pizza-yeast-btn">
+              {ui.dry_yeast}
+            </button>
+          </div>
+        </div>
+
+        <div class="pizza-recipe-grid">
+          <div class="pizza-recipe-group">
+            <div class="pizza-recipe-label pizza-recipe-label-white">
+              <Icon name="mdi:barley" class="pizza-recipe-icon" />
+              <span>{ui.flour}</span>
+            </div>
+            <div class="pizza-recipe-value">
+              <span id="result-flour">0</span>
+              <span class="pizza-recipe-unit">g</span>
+            </div>
+            <div class="pizza-recipe-bar">
+              <div class="pizza-recipe-bar-fill"></div>
+            </div>
+          </div>
+
+          <div class="pizza-recipe-group">
+            <div class="pizza-recipe-label pizza-recipe-label-blue">
+              <Icon name="mdi:water" class="pizza-recipe-icon" />
+              <span>{ui.water}</span>
+            </div>
+            <div class="pizza-recipe-value pizza-recipe-value-blue">
+              <span id="result-water">0</span>
+              <span class="pizza-recipe-unit">ml</span>
+            </div>
+            <div class="pizza-recipe-bar">
+              <div
+                id="bar-water"
+                class="pizza-recipe-bar-fill pizza-recipe-bar-fill-blue"
+                style="width: 65%;"
+              >
+              </div>
+            </div>
+          </div>
+
+          <div class="pizza-recipe-group">
+            <div class="pizza-recipe-label pizza-recipe-label-gray">
+              <Icon name="mdi:grain" class="pizza-recipe-icon" />
+              <span>{ui.salt_label}</span>
+            </div>
+            <div class="pizza-recipe-value">
+              <span id="result-salt">0</span>
+              <span class="pizza-recipe-unit">g</span>
+            </div>
+          </div>
+
+          <div class="pizza-recipe-group">
+            <div class="pizza-recipe-label pizza-recipe-label-orange">
+              <Icon name="mdi:bacteria" class="pizza-recipe-icon" />
+              <span>{ui.yeast}</span>
+            </div>
+            <div class="pizza-recipe-value pizza-recipe-value-orange">
+              <span id="result-yeast">0</span>
+              <span class="pizza-recipe-unit">g</span>
+            </div>
+            <p class="pizza-recipe-note">{ui.yeast_note}</p>
+          </div>
+        </div>
+
+        <div class="pizza-recipe-total">
+          <div class="pizza-recipe-total-label">{ui.total_weight}</div>
+          <div class="pizza-recipe-total-value">
+            <span id="result-total">0</span>
+            <span class="pizza-recipe-unit">g</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pizza-visual">
+      <div class="pizza-visual-card">
+        <div class="pizza-visual-container">
+          <div class="pizza-visual-dough" id="dough-visual"></div>
+
+          <div class="pizza-visual-reference">
+            <Icon
+              name="mdi:hand-back-right"
+              class="pizza-visual-reference-icon"
+            />
+            <span class="pizza-visual-reference-label">Ref.</span>
+          </div>
+
+          <div class="pizza-visual-diameter">
+            Ø <span id="visual-diameter">30</span>cm {ui.approx}
+          </div>
+        </div>
+        <p class="pizza-visual-text">{ui.visual_note}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  :root {
+    --color-primary: #f97316;
+    --color-primary-dark: #ea580c;
+    --color-primary-light: #fed7aa;
+    --color-secondary: #3b82f6;
+    --color-secondary-dark: #1e40af;
+    --color-secondary-light: #bfdbfe;
+    --color-bg-white: #fff;
+    --color-bg-dark: #0f172a;
+    --color-border: #e2e8f0;
+    --color-border-dark: #1e293b;
+    --color-text-primary: #1e293b;
+    --color-text-secondary: #64748b;
+    --color-text-tertiary: #94a3b8;
+    --color-white: #fff;
+    --color-blue-400: #60a5fa;
+    --color-blue-500: #3b82f6;
+    --color-blue-100: #dbeafe;
+    --color-blue-300: #93c5fd;
+    --color-orange-100: #fed7aa;
+    --color-orange-300: #fdba74;
+    --color-slate-200: #e2e8f0;
+    --color-slate-400: #cbd5e1;
+    --color-slate-800: #1e293b;
+    --color-slate-900: #0f172a;
+    --color-amber-100: #fef08a;
+    --color-orange-400: #fb923c;
+    --color-orange-600: #b45309;
+    --color-orange-700: #92400e;
+    --color-orange-900: #78350f;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bg-white: #0f172a;
+      --color-border: #1e293b;
+      --color-text-primary: #f1f5f9;
+      --color-text-secondary: #cbd5e1;
+      --color-text-tertiary: #64748b;
+    }
+  }
+
+  .pizza-container {
+    width: 100%;
+  }
+
+  .pizza-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  .pizza-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @media (min-width: 1024px) {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+  }
+
+  .pizza-card {
+    background-color: var(--color-bg-white);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-border);
+
+    @media (min-width: 768px) {
+      padding: 2rem;
+    }
+  }
+
+  .pizza-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-text-primary);
+  }
+
+  .pizza-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--color-primary);
+  }
+
+  .pizza-controls-space {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .pizza-control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pizza-label-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+
+  .pizza-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .pizza-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-text-primary);
+  }
+
+  .pizza-value-blue {
+    color: var(--color-secondary);
+  }
+
+  .pizza-unit {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--color-text-tertiary);
+    margin-left: 0.25rem;
+  }
+
+  .pizza-slider {
+    width: 100%;
+    height: 0.5rem;
+    background-color: #e2e8f0;
+    border-radius: 0.5rem;
+    appearance: none;
+    cursor: pointer;
+    accent-color: var(--color-primary);
+    transition: all 0.2s;
+
+    &:hover {
+      accent-color: var(--color-primary-dark);
+    }
+  }
+
+  .pizza-slider-blue {
+    accent-color: var(--color-secondary);
+
+    &:hover {
+      accent-color: var(--color-secondary-dark);
+    }
+  }
+
+  .pizza-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background: currentcolor;
+    cursor: pointer;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+  }
+
+  .pizza-slider::-moz-range-thumb {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background: currentcolor;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .pizza-slider::-webkit-slider-thumb {
+      box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.5);
+    }
+
+    .pizza-slider::-moz-range-thumb {
+      box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.5);
+    }
+  }
+
+  .pizza-range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--color-text-tertiary);
+    margin-top: 0.5rem;
+  }
+
+  .pizza-tip {
+    background-color: rgba(249, 115, 22, 0.05);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(249, 115, 22, 0.1);
+    display: flex;
+    gap: 1rem;
+  }
+
+  .pizza-tip-icon-wrapper {
+    padding: 0.75rem;
+    background-color: rgba(249, 115, 22, 0.1);
+    border-radius: 0.75rem;
+    height: fit-content;
+    flex-shrink: 0;
+  }
+
+  .pizza-tip-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--color-orange-600);
+  }
+
+  .pizza-tip-title {
+    font-weight: 700;
+    color: var(--color-orange-900);
+    margin-bottom: 0.25rem;
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-orange-100);
+    }
+  }
+
+  .pizza-tip-text {
+    font-size: 0.875rem;
+    color: var(--color-orange-700);
+    line-height: 1.5;
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-amber-100);
+    }
+  }
+
+  .pizza-recipe {
+    @media (min-width: 1024px) {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+  }
+
+  .pizza-recipe-card {
+    background-color: var(--color-bg-dark);
+    color: var(--color-white);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+
+    @media (min-width: 768px) {
+      padding: 3rem;
+    }
+  }
+
+  .pizza-recipe-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+  }
+
+  .pizza-recipe-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+  }
+
+  .pizza-yeast-buttons {
+    display: flex;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem;
+    border-radius: 0.75rem;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      width: auto;
+    }
+  }
+
+  .pizza-yeast-btn {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: var(--color-text-tertiary);
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    @media (min-width: 768px) {
+      flex: none;
+    }
+  }
+
+  .pizza-yeast-btn-active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+  }
+
+  .pizza-recipe-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  .pizza-recipe-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pizza-recipe-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+  }
+
+  .pizza-recipe-label-white {
+    color: var(--color-slate-400);
+
+    &:hover {
+      color: var(--color-white);
+    }
+  }
+
+  .pizza-recipe-label-blue {
+    color: var(--color-blue-400);
+
+    &:hover {
+      color: var(--color-blue-300);
+    }
+  }
+
+  .pizza-recipe-label-gray {
+    color: var(--color-slate-400);
+
+    &:hover {
+      color: var(--color-slate-200);
+    }
+  }
+
+  .pizza-recipe-label-orange {
+    color: var(--color-orange-400);
+
+    &:hover {
+      color: var(--color-orange-300);
+    }
+  }
+
+  .pizza-recipe-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .pizza-recipe-value {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    font-variant-numeric: tabular-nums;
+
+    @media (min-width: 768px) {
+      font-size: 3.75rem;
+    }
+  }
+
+  .pizza-recipe-value-blue {
+    color: var(--color-blue-100);
+  }
+
+  .pizza-recipe-value-orange {
+    color: var(--color-orange-100);
+  }
+
+  .pizza-recipe-unit {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    margin-left: 0.25rem;
+  }
+
+  .pizza-recipe-bar {
+    height: 0.25rem;
+    width: 100%;
+    background-color: var(--color-slate-800);
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+
+  .pizza-recipe-bar-fill {
+    height: 100%;
+    background-color: var(--color-white);
+    width: 100%;
+    transform-origin: left;
+    transition: transform 1s;
+    border-radius: 0.25rem;
+  }
+
+  .pizza-recipe-bar-fill-blue {
+    background-color: var(--color-blue-500);
+  }
+
+  .pizza-recipe-note {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    margin-top: 0.5rem;
+  }
+
+  .pizza-recipe-total {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .pizza-recipe-total-label {
+    font-size: 0.875rem;
+    color: var(--color-slate-400);
+  }
+
+  .pizza-recipe-total-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .pizza-visual {
+    @media (min-width: 1024px) {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+  }
+
+  .pizza-visual-card {
+    background-color: var(--color-bg-white);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 20rem;
+  }
+
+  .pizza-visual-container {
+    position: relative;
+    width: 100%;
+    max-width: 20rem;
+    height: 16rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pizza-visual-dough {
+    border-radius: 50%;
+    background-color: #f3e5ab;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s;
+    position: relative;
+    z-index: 10;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.05) 100%
+      );
+    }
+  }
+
+  .pizza-visual-reference {
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .pizza-visual-reference-icon {
+    width: 6rem;
+    height: 6rem;
+    color: var(--color-slate-400);
+  }
+
+  .pizza-visual-reference-label {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    color: var(--color-slate-400);
+  }
+
+  .pizza-visual-diameter {
+    position: absolute;
+    bottom: -2rem;
+    font-size: 0.75rem;
+    color: var(--color-text-tertiary);
+  }
+
+  .pizza-visual-text {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    max-width: 16rem;
+  }
+</style>
+
+<script>
+  import { initPizzaCalculator } from "./calculator.ts";
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initPizzaCalculator);
+  } else {
+    initPizzaCalculator();
+  }
+</script>

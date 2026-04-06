@@ -1,0 +1,22 @@
+import type { CookingToolEntry, ToolDefinition } from '../../types';
+import MeringueComponent from './component.astro';
+import MeringueComponentSEO from './seo.astro';
+import MeringueComponentBibliography from './bibliography.astro';
+
+export const meringueCalculator: CookingToolEntry = {
+  id: 'calculadora-punto-de-nieve-merengue',
+  icons: {
+    bg: 'mdi:egg',
+    fg: 'mdi:fire',
+  },
+  i18n: {
+    es: () => import('./i18n/es').then((m) => m.content),
+  },
+};
+
+export const MERENGUE_CALCULATOR_TOOL: ToolDefinition = {
+  entry: meringueCalculator,
+  Component: MeringueComponent,
+  SEOComponent: MeringueComponentSEO,
+  BibliographyComponent: MeringueComponentBibliography,
+};
