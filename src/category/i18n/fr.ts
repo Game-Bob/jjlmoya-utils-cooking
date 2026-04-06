@@ -188,7 +188,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Quand j\'ai travaillé dans des cuisines professionnelles, j\'ai vu que la différence entre un chef médiocre et un chef exceptionnel n'était pas le talent brut ; c\'était la <strong>rigueur technique</strong>. Les bons cuisiniers pèsent les ingrédients. Ils mesurent les températures. Ils documentent les temps. Ils reproduisent les processus. Ils n\'improvisent pas.',
+      html: 'Quand j\'ai travaillé dans des cuisines professionnelles, j\'ai vu que la différence entre un chef médiocre et un chef exceptionnel n\'était pas le talent brut ; c\'était la <strong>rigueur technique</strong>. Les bons cuisiniers pèsent les ingrédients. Ils mesurent les températures. Ils documentent les temps. Ils reproduisent les processus. Ils n\'improvisent pas.',
     },
     {
       type: 'paragraph',
