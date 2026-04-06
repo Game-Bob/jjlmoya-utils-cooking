@@ -4,7 +4,7 @@ import MeringueComponentSEO from './seo.astro';
 import MeringueComponentBibliography from './bibliography.astro';
 
 export const meringueCalculator: CookingToolEntry = {
-  id: 'calculadora-punto-de-nieve-merengue',
+  id: 'meringue-peak',
   icons: {
     bg: 'mdi:egg',
     fg: 'mdi:fire',

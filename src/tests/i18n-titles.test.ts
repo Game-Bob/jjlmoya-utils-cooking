@@ -44,8 +44,8 @@ describe("i18n titles for FAQ and Bibliography", () => {
     }
   });
 
-  it("should have 7 tools with complete i18n setup", async () => {
-    expect(ALL_TOOLS.length).toBe(7);
+  it("should have 8 tools with complete i18n setup", async () => {
+    expect(ALL_TOOLS.length).toBe(8);
   });
 
   it("tool IDs should be correctly registered", () => {
@@ -55,7 +55,8 @@ describe("i18n titles for FAQ and Bibliography", () => {
     expect(toolIds).toContain("kitchen-timer");
     expect(toolIds).toContain("pizza");
     expect(toolIds).toContain("egg-timer");
-    expect(toolIds).toContain("diagnostico-platanos");
-    expect(toolIds).toContain("calculadora-punto-de-nieve-merengue");
+    expect(toolIds).toContain("banana-ripeness");
+    expect(toolIds).toContain("meringue-peak");
+    expect(toolIds).toContain("mold-scaler");
   });
 });

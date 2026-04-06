@@ -4,7 +4,7 @@ import BananaComponentSEO from './seo.astro';
 import BananaComponentBibliography from './bibliography.astro';
 
 export const bananaCare: CookingToolEntry = {
-  id: 'diagnostico-platanos',
+  id: 'banana-ripeness',
   icons: {
     bg: 'mdi:fruit-watermelon',
     fg: 'mdi:leaf',

@@ -26,9 +26,6 @@ export const content: ToolLocaleContent = {
 		reset: 'Reset',
 		addOneMin: '+1 min',
 		addFiveMin: '+5 min',
-		reset: 'Reset',
-		add1m: '+1 min',
-		add5m: '+5 min',
 		status: {
 			ready: 'Listo',
 			running: 'Corriendo',

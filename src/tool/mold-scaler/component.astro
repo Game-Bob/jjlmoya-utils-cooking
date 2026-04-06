@@ -1,0 +1,181 @@
+---
+import './MoldScaler.css';
+
+interface Props {
+	ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="mold-scaler-wrapper">
+	<div class="space-y-6">
+		<div class="mold-section">
+			<div class="section-header">
+				<div class="section-number">1</div>
+				<h2 class="section-title">{ui.originalRecipe}</h2>
+			</div>
+
+			<div class="shape-buttons">
+				<button
+					class="shape-btn active"
+					data-target="original"
+					data-shape="round"
+				>
+					<div class="shape-icon"></div>
+					<span>{ui.round}</span>
+				</button>
+				<button
+					class="shape-btn"
+					data-target="original"
+					data-shape="square"
+				>
+					<div class="shape-icon"></div>
+					<span>{ui.square}</span>
+				</button>
+				<button
+					class="shape-btn"
+					data-target="original"
+					data-shape="rectangular"
+				>
+					<div class="shape-icon"></div>
+					<span>{ui.rectangular}</span>
+				</button>
+			</div>
+
+			<div id="original-inputs" class="shape-inputs"></div>
+		</div>
+
+		<div class="mold-section">
+			<div class="section-header">
+				<div class="section-number">2</div>
+				<h2 class="section-title">{ui.yourMold}</h2>
+			</div>
+
+			<div class="shape-buttons">
+				<button
+					class="shape-btn active"
+					data-target="target"
+					data-shape="round"
+				>
+					<div class="shape-icon"></div>
+					<span>{ui.round}</span>
+				</button>
+				<button
+					class="shape-btn"
+					data-target="target"
+					data-shape="square"
+				>
+					<div class="shape-icon"></div>
+					<span>{ui.square}</span>
+				</button>
+				<button
+					class="shape-btn"
+					data-target="target"
+					data-shape="rectangular"
+				>
+					<div class="shape-icon"></div>
+					<span>{ui.rectangular}</span>
+				</button>
+			</div>
+
+			<div id="target-inputs" class="shape-inputs"></div>
+		</div>
+	</div>
+
+	<div class="right-column">
+		<div class="factor-display">
+			<p class="factor-label">{ui.multiplyingFactor}</p>
+			<div class="factor-value" id="result-factor">x1.00</div>
+			<p class="factor-text" id="result-text">{ui.equivalentMolds}</p>
+		</div>
+
+		<div class="visualizer-container">
+			<div class="visualizer-bg"></div>
+			<svg
+				id="visualizer"
+				width="100%"
+				height="300"
+				viewBox="0 0 400 300"
+				class="visualizer-svg"
+			>
+				<g id="viz-container" transform="translate(200, 150)">
+					<path
+						id="shape-original"
+						d=""
+						fill="rgba(139, 92, 246, 0.2)"
+						stroke="#8b5cf6"
+						stroke-width="2"
+						stroke-dasharray="4 4"></path>
+					<path
+						id="shape-target"
+						d=""
+						fill="rgba(16, 185, 129, 0.2)"
+						stroke="#10b981"
+						stroke-width="2"></path>
+				</g>
+			</svg>
+
+			<div class="visualizer-legend">
+				<div class="legend-item original">
+					<div class="legend-color"></div>
+					<span>{ui.originalVisualization}</span>
+				</div>
+				<div class="legend-item target">
+					<div class="legend-color"></div>
+					<span>{ui.yourVisualization}</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="ingredients-section">
+			<h3 class="section-subtitle">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="ingredient-icon"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					><path d="M3 3v18h18"></path><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"
+					></path></svg>
+				{ui.ingredientCalculator}
+			</h3>
+
+			<div id="ingredients-list" class="ingredients-list"></div>
+
+			<button id="add-ingredient-btn" class="add-ingredient-btn">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="add-icon"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					><line x1="12" y1="5" x2="12" y2="19"></line><line
+						x1="5"
+						y1="12"
+						x2="19"
+						y2="12"></line></svg>
+				{ui.addIngredient}
+			</button>
+		</div>
+	</div>
+</div>
+
+<script>
+	import { initMoldScaler } from './init';
+	window.__initMoldScaler = initMoldScaler;
+</script>
+
+<script define:vars={{ ui }}>
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', () => window.__initMoldScaler(ui));
+	} else {
+		window.__initMoldScaler(ui);
+	}
+</script>

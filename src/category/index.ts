@@ -1,7 +1,7 @@
 import type { CookingCategoryEntry } from '../types';
 import { americanKitchenConverter } from '../tool/american-kitchen-converter';
-import { meringueCalculator } from '../tool/calculadora-punto-de-nieve-merengue';
-import { bananaCare } from '../tool/diagnostico-platanos';
+import { meringueCalculator } from '../tool/meringue-peak';
+import { bananaCare } from '../tool/banana-ripeness';
 import { kitchenTimer } from '../tool/kitchen-timer';
 import { pizza } from '../tool/pizza';
 
