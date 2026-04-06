@@ -121,6 +121,17 @@ export const content: ToolLocaleContent = {
       answer: "Le Thermostat 6 correspond à 180°C, soit environ 350°F. C'est la température de cuisson la plus courante.",
     },
   ],
+  bibliographyTitle: "Bibliographie et Ressources",
+  bibliography: [
+    {
+      name: "King Arthur Baking: Ingredient Weight Chart",
+      url: "https://www.kingarthurbaking.com/learn/ingredient-weight-chart",
+    },
+    {
+      name: "Culinary Institute of America: Conversions and Equivalents",
+      url: "https://www.ciachef.edu/",
+    },
+  ],
   howTo: [
     {
       name: "Sélectionnez le type de conversion",

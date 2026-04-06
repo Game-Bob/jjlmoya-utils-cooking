@@ -4,8 +4,8 @@ export const content: ToolLocaleContent = {
   slug: 'banana-ripeness',
   title: 'Banana Diagnostics and Conservation: Scientific Guide',
   description: 'Analyze your banana ripening stage with scientific precision. Learn conservation techniques, ethylene biochemistry, and nutritional optimization.',
-  faqTitle: 'Frequently Asked Questions',
-  bibliographyTitle: 'Sources and References',
+  faqTitle: 'Questions Fréquemment Posées',
+  bibliographyTitle: 'Sources et Références',
   ui: {
     ripesnessLabel: 'Ripeness State',
     nextStageLabel: 'Next Stage in',

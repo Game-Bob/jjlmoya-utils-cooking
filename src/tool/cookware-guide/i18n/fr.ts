@@ -4,7 +4,8 @@ export const content: ToolLocaleContent = {
   slug: 'cookware-selector',
   title: 'Smart Cookware Selector | Kitchen Utensils Guide',
   description: 'Interactive guide to choose the best pan or pot based on your cooking style. Iron vs Stainless Steel vs Teflon. Find your perfect tool.',
-  faqTitle: 'Frequently Asked Questions',
+  faqTitle: 'Questions Fréquemment Posées',
+  bibliographyTitle: 'Bibliographie',
   faq: [
     {
       question: 'What is the best pan for daily use?',

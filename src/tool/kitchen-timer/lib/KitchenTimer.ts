@@ -1,3 +1,5 @@
+import { getAudioContext, playBeep } from "./AudioHelper";
+
 export class KitchenTimer extends EventTarget {
 	element: HTMLElement;
 	private inputs: { h: HTMLInputElement; m: HTMLInputElement; s: HTMLInputElement };
@@ -122,12 +124,7 @@ export class KitchenTimer extends EventTarget {
 		this.dispatchUpdate();
 
 		if (!this.audioContext) {
-			try {
-				const AudioContextClass = (window as any).AudioContext || (window as any).webkitAudioContext;
-				this.audioContext = new AudioContextClass();
-			} catch {
-				console.warn("AudioContext not available");
-			}
+			this.audioContext = getAudioContext();
 		}
 
 		if (this.audioContext?.state === "suspended") {
@@ -191,22 +188,9 @@ export class KitchenTimer extends EventTarget {
 
 		const playTone = () => {
 			try {
-				const osc = this.audioContext!.createOscillator();
-				const gain = this.audioContext!.createGain();
-
-				osc.connect(gain);
-				gain.connect(this.audioContext!.destination);
-
-				osc.type = "square";
-				osc.frequency.setValueAtTime(880, this.audioContext!.currentTime);
-				osc.frequency.setValueAtTime(440, this.audioContext!.currentTime + 0.2);
-				osc.frequency.setValueAtTime(880, this.audioContext!.currentTime + 0.4);
-
-				gain.gain.setValueAtTime(0.3, this.audioContext!.currentTime);
-				gain.gain.exponentialRampToValueAtTime(0.01, this.audioContext!.currentTime + 0.6);
-
-				osc.start();
-				osc.stop(this.audioContext!.currentTime + 0.6);
+				playBeep(this.audioContext!, 880, 0.1);
+				setTimeout(() => playBeep(this.audioContext!, 440, 0.1), 200);
+				setTimeout(() => playBeep(this.audioContext!, 880, 0.2), 400);
 			} catch {
 				console.warn("Could not play alarm tone");
 			}
@@ -215,9 +199,8 @@ export class KitchenTimer extends EventTarget {
 		playTone();
 		let count = 0;
 		const alarmInterval = setInterval(() => {
-			count++;
-			if (count > 5) clearInterval(alarmInterval);
-			playTone();
+			if (++count > 5) clearInterval(alarmInterval);
+			else playTone();
 		}, 1000);
 	}
 
@@ -234,15 +217,12 @@ export class KitchenTimer extends EventTarget {
 		const btnText = this.element.querySelector(".btn-toggle .btn-text");
 		const iconPlay = this.element.querySelector(".icon-play");
 		const iconPause = this.element.querySelector(".icon-pause");
-
+		if (btnText) btnText.textContent = "Pausar";
 		iconPlay?.setAttribute("style", "display: none;");
 		iconPause?.removeAttribute("style");
-		if (btnText) btnText.textContent = "Pausar";
-
 		this.element.classList.add("running");
 		this.statusText.classList.add("running");
 		this.statusText.textContent = "Corriendo";
-
 		Object.values(this.inputs).forEach((i) => (i.disabled = true));
 	}
 
@@ -250,36 +230,19 @@ export class KitchenTimer extends EventTarget {
 		const btnText = this.element.querySelector(".btn-toggle .btn-text");
 		const iconPlay = this.element.querySelector(".icon-play");
 		const iconPause = this.element.querySelector(".icon-pause");
-
+		if (btnText) btnText.textContent = "Iniciar";
 		iconPlay?.removeAttribute("style");
 		iconPause?.setAttribute("style", "display: none;");
-		if (btnText) btnText.textContent = "Iniciar";
-
 		this.element.classList.remove("running");
 		this.statusText.classList.remove("running");
-		this.statusText.textContent =
-			this.remainingSeconds > 0 && this.remainingSeconds < this.totalSeconds
-				? "Pausado"
-				: "Listo";
-
+		this.statusText.textContent = this.remainingSeconds > 0 && this.remainingSeconds < this.totalSeconds ? "Pausado" : "Listo";
 		Object.values(this.inputs).forEach((i) => (i.disabled = false));
 	}
 
 	private checkStartButton() {
-		if (this.isRunning) {
-			this.btnToggle.disabled = false;
-			this.btnToggle.classList.remove("disabled");
-			return;
-		}
-
-		const currentSeconds = this.getInputSeconds();
-		if (currentSeconds > 0) {
-			this.btnToggle.disabled = false;
-			this.btnToggle.classList.remove("disabled");
-		} else {
-			this.btnToggle.disabled = true;
-			this.btnToggle.classList.add("disabled");
-		}
+		const canStart = this.isRunning || this.getInputSeconds() > 0;
+		this.btnToggle.disabled = !canStart;
+		this.btnToggle.classList.toggle("disabled", !canStart);
 	}
 
 	private updateProgressBar() {

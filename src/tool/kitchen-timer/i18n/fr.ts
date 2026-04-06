@@ -5,8 +5,8 @@ export const content: ToolLocaleContent = {
 	title: 'Multiple Kitchen Timer',
 	description:
 		'Manage multiple cooking times simultaneously. Independent alarms, ideal for chefs and kitchen organization (Mise en Place).',
-	faqTitle: 'Frequently Asked Questions',
-	bibliographyTitle: 'References',
+	faqTitle: 'Questions Fréquemment Posées',
+	bibliographyTitle: 'Références',
 
 	ui: {
 		addTimer: 'Add Timer',
