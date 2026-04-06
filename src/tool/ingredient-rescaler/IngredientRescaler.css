@@ -1,33 +1,30 @@
 :root {
-	--ir-primary: hsl(25, 95%, 53%);
-	--ir-primary-light: hsl(25, 95%, 90%);
-	--ir-primary-dark: hsl(25, 85%, 45%);
-	--ir-success: hsl(142, 72%, 45%);
-	--ir-danger: hsl(0, 84%, 60%);
-
-	--ir-bg-card: hsl(0, 0%, 100%);
-	--ir-bg-app: hsl(210, 20%, 98%);
-	--ir-border: hsl(210, 20%, 90%);
-	--ir-text-main: hsl(210, 30%, 20%);
-	--ir-text-muted: hsl(210, 15%, 50%);
-	--ir-text-disabled: hsl(210, 15%, 75%);
-
-	--ir-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-	--ir-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-	--ir-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-
+	--ir-primary: hsl(220deg, 90%, 56%);
+	--ir-primary-light: hsl(220deg, 90%, 92%);
+	--ir-primary-dark: hsl(220deg, 85%, 45%);
+	--ir-success: hsl(142deg, 72%, 45%);
+	--ir-danger: hsl(0deg, 84%, 60%);
+	--ir-bg-card: hsl(0deg, 0%, 100%);
+	--ir-bg-app: hsl(210deg, 20%, 98%);
+	--ir-border: hsl(210deg, 20%, 90%);
+	--ir-text-main: hsl(210deg, 30%, 20%);
+	--ir-text-muted: hsl(210deg, 15%, 50%);
+	--ir-text-disabled: hsl(210deg, 15%, 75%);
+	--ir-shadow-sm: 0 1px 2px 0 rgb(0, 0, 0, 0.05);
+	--ir-shadow-md: 0 4px 6px -1px rgb(0, 0, 0, 0.1), 0 2px 4px -2px rgb(0, 0, 0, 0.1);
+	--ir-shadow-lg: 0 10px 15px -3px rgb(0, 0, 0, 0.1), 0 4px 6px -4px rgb(0, 0, 0, 0.1);
 	--ir-radius: 1rem;
 	--ir-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .theme-dark {
-	--ir-bg-card: hsl(220, 25%, 12%);
-	--ir-bg-app: hsl(220, 30%, 7%);
-	--ir-border: hsl(220, 20%, 20%);
-	--ir-text-main: hsl(210, 20%, 95%);
-	--ir-text-muted: hsl(210, 15%, 70%);
-	--ir-text-disabled: hsl(210, 15%, 50%);
-	--ir-primary-light: hsl(25, 95%, 15%);
+	--ir-bg-card: hsl(220deg, 25%, 12%);
+	--ir-bg-app: hsl(220deg, 30%, 7%);
+	--ir-border: hsl(220deg, 20%, 20%);
+	--ir-text-main: hsl(210deg, 20%, 95%);
+	--ir-text-muted: hsl(210deg, 15%, 70%);
+	--ir-text-disabled: hsl(210deg, 15%, 50%);
+	--ir-primary-light: hsl(220deg, 90%, 12%);
 }
 
 .ingredient-rescaler-container {
@@ -60,8 +57,8 @@
 }
 
 .ir-section-primary {
-	background: linear-gradient(to bottom, var(--ir-bg-card), var(--ir-primary-light));
-	border-color: var(--ir-primary);
+	background: var(--ir-bg-card);
+	border: 2px solid var(--ir-primary);
 }
 
 .ir-section-title {
@@ -115,13 +112,13 @@
 .ir-input:focus {
 	outline: none;
 	border-color: var(--ir-primary);
-	box-shadow: 0 0 0 3px hsl(25 95% 53% / 0.1);
+	box-shadow: 0 0 0 3px hsl(25deg, 95%, 53%, 0.1);
 }
 
 .ir-factor-display {
 	margin-top: 1rem;
 	padding: 1rem;
-	background: linear-gradient(to right, var(--ir-primary-light), transparent);
+	background: var(--ir-primary-light);
 	border-radius: 0.75rem;
 	border: 1px solid var(--ir-primary);
 	display: flex;
@@ -139,7 +136,6 @@
 	font-size: 2rem;
 	font-weight: 800;
 	color: var(--ir-primary);
-	font-family: monospace;
 }
 
 .ir-textarea-container {
@@ -158,7 +154,6 @@
 	border: 1px solid var(--ir-border);
 	background: var(--ir-bg-card);
 	color: var(--ir-text-main);
-	font-family: monospace;
 	font-size: 0.875rem;
 	resize: none;
 	line-height: 1.6;
@@ -168,7 +163,7 @@
 .ir-textarea:focus {
 	outline: none;
 	border-color: var(--ir-primary);
-	box-shadow: 0 0 0 3px hsl(25 95% 53% / 0.1);
+	box-shadow: 0 0 0 3px hsl(25deg, 95%, 53%, 0.1);
 }
 
 .ir-textarea::placeholder {
@@ -185,20 +180,20 @@
 
 .ir-results-header {
 	padding: 1rem 1.5rem;
-	background: hsl(210 30% 15%);
-	border-bottom: 1px solid hsl(210 30% 25%);
+	background: hsl(210deg, 30%, 15%);
+	border-bottom: 1px solid hsl(210deg, 30%, 25%);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
 .theme-dark .ir-results-header {
-	background: hsl(220 25% 8%);
-	border-bottom-color: hsl(220 25% 20%);
+	background: hsl(220deg, 25%, 8%);
+	border-bottom-color: hsl(220deg, 25%, 20%);
 }
 
 .ir-results-title {
-	color: white;
+	color: var(--ir-bg-card);
 	font-weight: 700;
 	display: flex;
 	align-items: center;
@@ -207,8 +202,8 @@
 
 .ir-copy-btn {
 	font-size: 0.75rem;
-	background: hsl(210 30% 35%);
-	color: white;
+	background: hsl(210deg, 30%, 35%);
+	color: var(--ir-bg-card);
 	padding: 0.5rem 1rem;
 	border-radius: 0.5rem;
 	border: none;
@@ -221,15 +216,15 @@
 }
 
 .theme-dark .ir-copy-btn {
-	background: hsl(220 25% 30%);
+	background: hsl(220deg, 25%, 30%);
 }
 
 .ir-copy-btn:hover {
-	background: hsl(210 30% 45%);
+	background: hsl(210deg, 30%, 45%);
 }
 
 .theme-dark .ir-copy-btn:hover {
-	background: hsl(220 25% 40%);
+	background: hsl(220deg, 25%, 40%);
 }
 
 .ir-copy-btn.ir-copied {
@@ -237,12 +232,11 @@
 }
 
 .ir-copy-btn.ir-copied:hover {
-	background: hsl(142 72% 35%);
+	background: hsl(142deg, 72%, 35%);
 }
 
 .ir-results-container {
 	padding: 2rem;
-	font-family: monospace;
 	font-size: 1rem;
 	display: flex;
 	flex-direction: column;
@@ -264,7 +258,8 @@
 }
 
 .ir-empty-icon {
-	font-size: 3rem;
+	width: 3rem;
+	height: 3rem;
 }
 
 .ir-result-row {
@@ -279,7 +274,7 @@
 }
 
 .ir-result-row:hover {
-	background: linear-gradient(to right, var(--ir-primary-light), transparent);
+	background: var(--ir-primary-light);
 	border-left-color: var(--ir-primary);
 }
 

@@ -1,0 +1,198 @@
+---
+import { Icon } from 'astro-icon/components';
+import './SourdoughCalculator.css';
+
+interface Props {
+	ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="sourdough-calculator">
+	<div class="sc-header"></div>
+
+	<div class="sc-grid">
+		<div class="sc-section">
+			<div class="sc-control-group">
+				<label for="total-amount" class="sc-label">
+					<Icon name="mdi:scale-balance" />
+					{ui.totalAmount}
+				</label>
+				<div style="position: relative; display: flex; align-items: center;">
+					<input
+						type="number"
+						id="total-amount"
+						value="300"
+						min="1"
+						class="sc-input"
+						style="padding-right: 2rem;"
+					/>
+					<span style="position: absolute; right: 1rem; color: var(--sc-text-disabled); font-weight: 600;">
+						g
+					</span>
+				</div>
+				<p style="margin-top: 0.5rem; font-size: 0.75rem; color: var(--sc-text-muted); font-weight: 500;">
+					{ui.activeCulture}
+				</p>
+			</div>
+
+			<div class="sc-control-group">
+				<label class="sc-label">
+					<Icon name="mdi:tune" />
+					{ui.refreshRatio}
+				</label>
+
+				<div class="sc-ratio-buttons">
+					<button class="ratio-btn ratio-active" data-ratio="1:1:1">
+						<span class="sc-ratio-label">{ui.maintain}</span>
+						<span class="sc-ratio-value">1:1:1</span>
+					</button>
+
+					<button class="ratio-btn ratio-inactive" data-ratio="1:2:2">
+						<span class="sc-ratio-label">{ui.activate}</span>
+						<span class="sc-ratio-value">1:2:2</span>
+					</button>
+
+					<button class="ratio-btn ratio-inactive" data-ratio="1:3:3">
+						<span class="sc-ratio-label">{ui.retard}</span>
+						<span class="sc-ratio-value">1:3:3</span>
+					</button>
+
+					<button class="ratio-btn ratio-inactive" data-ratio="1:4:4">
+						<span class="sc-ratio-label">{ui.strong}</span>
+						<span class="sc-ratio-value">1:4:4</span>
+					</button>
+
+					<button class="ratio-btn ratio-inactive" data-ratio="1:5:5">
+						<span class="sc-ratio-label">{ui.sweetSpot}</span>
+						<span class="sc-ratio-value">1:5:5</span>
+					</button>
+
+					<button class="ratio-btn ratio-inactive" id="custom-ratio-btn">
+						<span class="sc-ratio-label">{ui.custom}</span>
+						<Icon name="mdi:cog" style="font-size: 1.25rem;" />
+					</button>
+				</div>
+
+				<div id="custom-ratio-inputs" class="sc-custom-inputs">
+					<div style="flex: 1; text-align: center;">
+						<span class="sc-custom-label">{ui.mm}</span>
+						<input
+							type="number"
+							id="custom-s"
+							value="1"
+							min="1"
+							class="custom-input"
+						/>
+					</div>
+					<span style="color: var(--sc-text-disabled); font-weight: 700;">:</span>
+					<div style="flex: 1; text-align: center;">
+						<span class="sc-custom-label">{ui.flour}</span>
+						<input
+							type="number"
+							id="custom-f"
+							value="1"
+							min="1"
+							class="custom-input"
+						/>
+					</div>
+					<span style="color: var(--sc-text-disabled); font-weight: 700;">:</span>
+					<div style="flex: 1; text-align: center;">
+						<span class="sc-custom-label">{ui.water}</span>
+						<input
+							type="number"
+							id="custom-w"
+							value="1"
+							min="1"
+							class="custom-input"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="sc-section">
+			<div class="sc-results">
+				<div class="sc-results-header">
+					<h3 class="sc-results-title">{ui.todayFormula}</h3>
+					<span class="sc-hydration-badge">{ui.hydration}</span>
+				</div>
+
+				<div class="sc-result-rows">
+					<div class="sc-result-row">
+						<div class="sc-result-content">
+							<div class="sc-result-icon starter">
+								<Icon name="mdi:bacteria" />
+							</div>
+							<div>
+								<div class="sc-result-name">{ui.sourdough}</div>
+								<div class="sc-result-desc">{ui.activeCulture}</div>
+							</div>
+						</div>
+						<div class="sc-result-value">
+							<span class="sc-result-amount"><span id="val-starter">100</span></span>
+							<span class="sc-result-unit">g</span>
+						</div>
+					</div>
+
+					<div class="sc-result-row">
+						<div class="sc-result-content">
+							<div class="sc-result-icon flour">
+								<Icon name="mdi:barley" />
+							</div>
+							<div>
+								<div class="sc-result-name">{ui.flour}</div>
+								<div class="sc-result-desc">{ui.flourType}</div>
+							</div>
+						</div>
+						<div class="sc-result-value">
+							<span class="sc-result-amount"><span id="val-flour">100</span></span>
+							<span class="sc-result-unit">g</span>
+						</div>
+					</div>
+
+					<div class="sc-result-row">
+						<div class="sc-result-content">
+							<div class="sc-result-icon water">
+								<Icon name="mdi:water-outline" />
+							</div>
+							<div>
+								<div class="sc-result-name">{ui.water}</div>
+								<div class="sc-result-desc">{ui.chlorineFree}</div>
+							</div>
+						</div>
+						<div class="sc-result-value">
+							<span class="sc-result-amount"><span id="val-water">100</span></span>
+							<span class="sc-result-unit">g</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="sc-total">
+					<span class="sc-total-label">{ui.totalDough}:</span>
+					<span class="sc-total-value" id="val-total">300 g</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	import { initSourdoughCalculator } from './init';
+	window.__initSourdoughCalculator = initSourdoughCalculator;
+</script>
+
+<script define:vars={{ ui }}>
+	const init = () => {
+		if (window.__initSourdoughCalculator) {
+			window.__initSourdoughCalculator(ui);
+		}
+	};
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', init);
+	} else {
+		init();
+	}
+</script>

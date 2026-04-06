@@ -1,6 +1,9 @@
 import type { ToolLocaleContent } from '../../../types';
 
 export const content: ToolLocaleContent = {
+  slug: 'escalador-ingredientes',
+  title: 'Escalador de Ingredientes - Ajusta tus Recetas Fácilmente',
+  description: 'Escala recetas automáticamente según el número de raciones. Calcula las cantidades exactas de ingredientes multiplicando o reduciendo tu receta sin complicaciones.',
   ui: {
     servings: 'Raciones',
     original: 'Original',
@@ -46,16 +49,16 @@ export const content: ToolLocaleContent = {
   bibliographyTitle: 'Bibliografía',
   bibliography: [
     {
-      name: 'The Flavor Bible - Scaling Principles',
-      url: 'https://www.worldcat.org/title/flavor-bible-the-essential-reference-for-more-than-150-essential-ingredients-and-how-to-cook-with-them/oclc/173496220',
+      name: 'Harold McGee - On Food and Cooking: The Science and Lore of the Kitchen',
+      url: 'https://en.wikipedia.org/wiki/Harold_McGee',
     },
     {
-      name: 'Harold McGee - On Food and Cooking',
-      url: 'https://www.worldcat.org/title/on-food-and-cooking-the-science-and-lore-of-the-kitchen/oclc/1048131836',
+      name: 'The Flavor Bible by Karen Page and Andrew Dornenburg',
+      url: 'https://www.flavorprints.com/',
     },
     {
-      name: 'The Science of Cooking - Conversión de Recetas',
-      url: 'https://www.worldcat.org/title/the-science-of-cooking/oclc/911012387',
+      name: 'Modernist Cuisine - Técnicas de escalado científico',
+      url: 'https://www.modernistcuisine.com/',
     },
   ],
   howTo: [
@@ -72,34 +75,120 @@ export const content: ToolLocaleContent = {
       text: 'Los resultados son matemáticamente exactos, pero la cocina es arte. Especias: escala al 75%. Levaduras: menos de lo teórico en grandes cantidades. Tiempos: no se escalan nunca.',
     },
   ],
-  seo: {
-    title: 'Escalador de Ingredientes - Escala tus Recetas Fácilmente',
-    description: 'Escala recetas automáticamente según el número de raciones. Cálculos exactos para multiplicar o reducir ingredientes sin complicaciones.',
-    sections: [
-      {
-        heading: 'La Ciencia detrás del Escalado de Recetas',
-        content: 'Cocinar no es solo arte, es matemática aplicada. Entender cómo adaptar las proporciones de tus ingredientes es la diferencia entre un plato decente y una obra maestra, sin importar si cocinas para 2 o para 20.',
+  seo: [
+    {
+      type: 'title',
+      text: 'La Ciencia detrás del Escalado de Recetas',
+      level: 2,
+    },
+    {
+      type: 'paragraph',
+      html: 'Cocinar no es solo arte, es <strong>matemática aplicada</strong>. Entender cómo adaptar las proporciones de tus ingredientes es la diferencia entre un plato decente y una obra maestra, sin importar si cocinas para 2 o para 20.',
+    },
+    {
+      type: 'title',
+      text: '¿Cómo funciona el Factor de Conversión?',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'El corazón de cualquier adaptación culinaria es el <strong>Factor de Conversión (FC)</strong>. Aunque nuestra herramienta lo hace automáticamente, conocer la lógica te da control total sobre tu cocina. Es una simple proporción directa: <strong>Cantidad Deseada ÷ Cantidad Original = Factor (FC)</strong>.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Si tu receta es para 4 personas y quieres cocinar para 7, el factor es 1.75. Cada ingrediente se multiplica por ese número.',
+    },
+    {
+      type: 'title',
+      text: 'Lo que NO escala linealmente',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Multiplicar todos los ingredientes por 2 funciona para la harina y el agua, pero la cocina es química y termodinámica. Hay elementos que se comportan de forma exponencial o logarítmica, no lineal.',
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Especias y sal:</strong> La percepción del sabor se satura. Si triplicas un guiso, triplicar la pimienta cayena puede hacerlo incomible. Regla de oro: escala especias al 75% y ajusta al final.',
+        '<strong>Levaduras:</strong> En grandes masas fermentadas, la fricción genera más calor y acelera la fermentación. Doblar la masa requiere menos del doble de levadura.',
+        '<strong>Tiempos de cocción:</strong> Un pavo de 10kg no tarda el doble que uno de 5kg. La transmisión de calor depende del grosor. Usa siempre un termómetro sonda.',
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Trucos de Cocina Profesional',
+      level: 3,
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Huevo como unidad:</strong> Si obtienes 2.3 huevos, pesa la cantidad exacta o redondea según el plato.',
+        '<strong>Superficie vs Volumen:</strong> Al reducir salsas, la evaporación es más rápida. Vigila la reducción.',
+        '<strong>Sistema Métrico:</strong> Pesa siempre en gramos, no en tazas. Es más preciso al escalar.',
+      ],
+    },
+  ],
+  schemas: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebApplication',
+      name: 'Escalador de Ingredientes',
+      description: 'Escala recetas automáticamente según el número de raciones. Calcula las cantidades exactas de ingredientes multiplicando o reduciendo tu receta sin complicaciones.',
+      url: 'https://jjlmoya.es/utilidades/escalador-ingredientes',
+      applicationCategory: 'Utilities',
+      inLanguage: 'es-ES',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'EUR',
       },
-      {
-        heading: '¿Cómo funciona el Factor de Conversión?',
-        content: 'El corazón de cualquier adaptación culinaria es el Factor de Conversión (FC). Aunque nuestra herramienta lo hace automáticamente, conocer la lógica te da control total sobre tu cocina. Es una simple proporción directa: Cantidad Deseada ÷ Cantidad Original = Factor (FC). Si tu receta es para 4 personas y quieres cocinar para 7, el factor es 1.75. Cada ingrediente se multiplica por ese número.',
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Escalador de Ingredientes - Ajusta tus Recetas Fácilmente',
+      description: 'Escala recetas automáticamente según el número de raciones. Calcula las cantidades exactas de ingredientes multiplicando o reduciendo tu receta sin complicaciones.',
+      author: {
+        '@type': 'Person',
+        name: 'jjlmoya',
       },
-      {
-        heading: 'Lo que NO escala linealmente',
-        content: 'Multiplicar todos los ingredientes por 2 funciona para la harina y el agua, pero la cocina es química y termodinámica. Hay elementos que se comportan de forma exponencial o logarítmica, no lineal. Las especias y la sal: la percepción del sabor se satura. Si triplicas un guiso, triplicar la pimienta cayena o el clavo puede hacerlo incomible. Regla de oro: escala especias al 75% y ajusta al final. Las levaduras: en grandes masas fermentadas, la fricción genera más calor y acelera la fermentación. A menudo, doblar la masa requiere menos del doble de levadura para mantener los tiempos controlados. Tiempos de cocción: quizás el error más común. Un pavo de 10kg no tarda el doble que uno de 5kg. La transmisión de calor depende del grosor, no solo del peso total. Usa siempre un termómetro sonda.',
+      inLanguage: 'es-ES',
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'Utilidades jjlmoya',
+        url: 'https://jjlmoya.es',
       },
-      {
-        heading: 'Trucos de Cocina Profesional',
-        content: 'Huevo como unidad: si el escalado te pide "2.3 huevos", bate 3 huevos ligeramente y pesa la cantidad exacta (un huevo L son ~50g-55g sin cáscara), o simplemente redondea si la repostería no es crítica. Superficie vs Volumen: al reducir recetas de salsas, la evaporación será mucho más rápida porque la superficie relativa es mayor. Vigila la reducción o añade un poco más de líquido. El Sistema Métrico es tu amigo: olvida las "tazas" y "cucharas". Escalar "1 taza + 1/4" es una pesadilla. Escalar "180g" es multiplicar un número. Pesa siempre tus ingredientes.',
-      },
-      {
-        heading: 'Ventajas de Escalar Correctamente',
-        content: 'Entender y aplicar correctamente el escalado de recetas tiene múltiples beneficios: consistencia en los platos (el mismo sabor y textura cada vez), economia de ingredientes (no desperdiciar), adaptabilidad (cocinar para diferentes cantidades de personas sin perder calidad), y control culinario (saber exactamente qué estás haciendo en tu cocina).',
-      },
-      {
-        heading: 'Herramientas Complementarias',
-        content: 'Este escalador de ingredientes es perfecto para ajustar recetas, pero complementa bien con otras herramientas culinarias: un calculador de conversiones de medidas (para convertir entre tazas y gramos), un temporizador de cocina para controlar tiempos, y un analizador de proporciones (como nuestro Calculador de Punto de Nieve de Merengue o Escalador de Moldes para repostería).',
-      },
-    ],
-  },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Inicio',
+          item: 'https://jjlmoya.es',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Utilidades',
+          item: 'https://jjlmoya.es/utilidades',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Cocina',
+          item: 'https://jjlmoya.es/utilidades/cocina',
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: 'Escalador de Ingredientes',
+          item: 'https://jjlmoya.es/utilidades/escalador-ingredientes',
+        },
+      ],
+    },
+  ],
 };

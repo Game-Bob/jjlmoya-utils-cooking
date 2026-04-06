@@ -1,6 +1,9 @@
 import type { ToolLocaleContent } from '../../../types';
 
 export const content: ToolLocaleContent = {
+  slug: 'ingredient-rescaler',
+  title: 'Ingredient Rescaler - Scale Your Recipes Easily',
+  description: 'Scale recipes automatically based on the number of servings. Calculate exact ingredient quantities by multiplying or reducing your recipe without complications.',
   ui: {
     servings: 'Servings',
     original: 'Original',
@@ -46,16 +49,16 @@ export const content: ToolLocaleContent = {
   bibliographyTitle: 'Bibliography',
   bibliography: [
     {
-      name: 'The Flavor Bible - Scaling Principles',
-      url: 'https://www.worldcat.org/title/flavor-bible-the-essential-reference-for-more-than-150-essential-ingredients-and-how-to-cook-with-them/oclc/173496220',
+      name: 'Harold McGee - On Food and Cooking: The Science and Lore of the Kitchen',
+      url: 'https://en.wikipedia.org/wiki/Harold_McGee',
     },
     {
-      name: 'Harold McGee - On Food and Cooking',
-      url: 'https://www.worldcat.org/title/on-food-and-cooking-the-science-and-lore-of-the-kitchen/oclc/1048131836',
+      name: 'The Flavor Bible by Karen Page and Andrew Dornenburg',
+      url: 'https://www.flavorprints.com/',
     },
     {
-      name: 'The Science of Cooking - Recipe Conversion',
-      url: 'https://www.worldcat.org/title/the-science-of-cooking/oclc/911012387',
+      name: 'Modernist Cuisine - Scientific Scaling Techniques',
+      url: 'https://www.modernistcuisine.com/',
     },
   ],
   howTo: [
@@ -72,34 +75,120 @@ export const content: ToolLocaleContent = {
       text: 'Results are mathematically exact, but cooking is an art. Spices: scale to 75%. Yeast: less than theoretical in large quantities. Cooking times: never scale.',
     },
   ],
-  seo: {
-    title: 'Ingredient Scaler - Scale Your Recipes Easily',
-    description: 'Scale recipes automatically based on the number of servings. Exact calculations to multiply or reduce ingredients without complications.',
-    sections: [
-      {
-        heading: 'The Science Behind Recipe Scaling',
-        content: 'Cooking is not just art, it\'s applied mathematics. Understanding how to adapt the proportions of your ingredients is the difference between a decent dish and a masterpiece, whether you\'re cooking for 2 or 20.',
+  seo: [
+    {
+      type: 'title',
+      text: 'The Science Behind Recipe Scaling',
+      level: 2,
+    },
+    {
+      type: 'paragraph',
+      html: 'Cooking is not just art, it\'s <strong>applied mathematics</strong>. Understanding how to adapt the proportions of your ingredients is the difference between a decent dish and a masterpiece, whether you\'re cooking for 2 or 20.',
+    },
+    {
+      type: 'title',
+      text: 'How Does the Conversion Factor Work?',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'The heart of any culinary adaptation is the <strong>Conversion Factor (CF)</strong>. Although our tool does it automatically, understanding the logic gives you full control over your cooking. It\'s a simple direct proportion: <strong>Desired Amount ÷ Original Amount = Factor (CF)</strong>.',
+    },
+    {
+      type: 'paragraph',
+      html: 'If your recipe is for 4 people and you want to cook for 7, the factor is 1.75. Each ingredient is multiplied by that number.',
+    },
+    {
+      type: 'title',
+      text: 'What Does NOT Scale Linearly',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Multiplying all ingredients by 2 works for flour and water, but cooking is chemistry and thermodynamics. There are elements that behave exponentially or logarithmically, not linearly.',
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Spices and salt:</strong> Taste perception saturates. Tripling cayenne pepper can make a stew inedible. Golden rule: scale spices to 75% and adjust at the end.',
+        '<strong>Yeast:</strong> In large fermented doughs, friction generates more heat and accelerates fermentation. Doubling the dough requires less than double the yeast.',
+        '<strong>Cooking times:</strong> A 10kg turkey doesn\'t take twice as long as a 5kg one. Heat transmission depends on thickness. Always use a probe thermometer.',
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Professional Cooking Tricks',
+      level: 3,
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Egg as a unit:</strong> If scaling asks for 2.3 eggs, weigh the exact amount or round as needed.',
+        '<strong>Surface vs Volume:</strong> When reducing sauces, evaporation is faster. Watch the reduction carefully.',
+        '<strong>Metric System:</strong> Always weigh in grams. It\'s more accurate when scaling.',
+      ],
+    },
+  ],
+  schemas: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebApplication',
+      name: 'Ingredient Rescaler',
+      description: 'Scale recipes automatically based on the number of servings. Calculate exact ingredient quantities by multiplying or reducing your recipe without complications.',
+      url: 'https://jjlmoya.es/en/ingredient-rescaler',
+      applicationCategory: 'Utilities',
+      inLanguage: 'en-US',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'EUR',
       },
-      {
-        heading: 'How Does the Conversion Factor Work?',
-        content: 'The heart of any culinary adaptation is the Conversion Factor (CF). Although our tool does it automatically, understanding the logic gives you full control over your cooking. It\'s a simple direct proportion: Desired Amount ÷ Original Amount = Factor (CF). If your recipe is for 4 people and you want to cook for 7, the factor is 1.75. Each ingredient is multiplied by that number.',
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Ingredient Rescaler - Scale Your Recipes Easily',
+      description: 'Scale recipes automatically based on the number of servings. Calculate exact ingredient quantities by multiplying or reducing your recipe without complications.',
+      author: {
+        '@type': 'Person',
+        name: 'jjlmoya',
       },
-      {
-        heading: 'What Does NOT Scale Linearly',
-        content: 'Multiplying all ingredients by 2 works for flour and water, but cooking is chemistry and thermodynamics. There are elements that behave exponentially or logarithmically, not linearly. Spices and salt: taste perception saturates. If you triple a stew, tripling cayenne pepper or clove can make it inedible. Golden rule: scale spices to 75% and adjust at the end. Yeast: in large fermented doughs, friction generates more heat and accelerates fermentation. Often, doubling the dough requires less than double the yeast to keep times controlled. Cooking times: perhaps the most common mistake. A 10kg turkey doesn\'t take twice as long as a 5kg one. Heat transmission depends on thickness, not just total weight. Always use a probe thermometer.',
+      inLanguage: 'en-US',
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'jjlmoya Utilities',
+        url: 'https://jjlmoya.es',
       },
-      {
-        heading: 'Professional Cooking Tricks',
-        content: 'Egg as a unit: if scaling asks you for "2.3 eggs", beat 3 eggs lightly and weigh the exact amount (an L egg is ~50g-55g without shell), or simply round if baking is not critical. Surface vs Volume: when reducing sauces, evaporation will be much faster because the relative surface is larger. Watch the reduction or add a bit more liquid. The Metric System is your friend: forget "cups" and "spoons". Scaling "1 cup + 1/4" is a nightmare. Scaling "180g" is multiplying a number. Always weigh your ingredients.',
-      },
-      {
-        heading: 'Benefits of Scaling Correctly',
-        content: 'Understanding and correctly applying recipe scaling has multiple benefits: consistency in dishes (same taste and texture every time), ingredient economy (no waste), adaptability (cooking for different numbers of people without losing quality), and culinary control (knowing exactly what you\'re doing in your kitchen).',
-      },
-      {
-        heading: 'Complementary Tools',
-        content: 'This ingredient scaler is perfect for adjusting recipes, but works well with other culinary tools: a measurement conversion calculator (to convert between cups and grams), a kitchen timer to control cooking times, and a proportion analyzer (like our Meringue Peak Calculator or Mold Scaler for baking).',
-      },
-    ],
-  },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://jjlmoya.es/en',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Utilities',
+          item: 'https://jjlmoya.es/en/utilities',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Cooking',
+          item: 'https://jjlmoya.es/en/cooking',
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: 'Ingredient Rescaler',
+          item: 'https://jjlmoya.es/en/ingredient-rescaler',
+        },
+      ],
+    },
+  ],
 };

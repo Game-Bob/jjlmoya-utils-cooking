@@ -7,6 +7,8 @@ import { KITCHEN_TIMER_TOOL } from './tool/kitchen-timer';
 import { PIZZA_TOOL } from './tool/pizza';
 import { BRINE_TOOL } from './tool/brine';
 import { MOLD_SCALER_TOOL } from './tool/mold-scaler';
+import { INGREDIENT_RESCALER_TOOL } from './tool/ingredient-rescaler';
+import { SOURDOUGH_CALCULATOR_TOOL } from './tool/sourdough-calculator';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   AMERICAN_KITCHEN_CONVERTER_TOOL,
@@ -17,5 +19,7 @@ export const ALL_TOOLS: ToolDefinition[] = [
   PIZZA_TOOL,
   BRINE_TOOL,
   MOLD_SCALER_TOOL,
+  INGREDIENT_RESCALER_TOOL,
+  SOURDOUGH_CALCULATOR_TOOL,
 ];
 

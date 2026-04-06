@@ -1,0 +1,42 @@
+---
+import { SEOArticle, SEOTitle } from '@jjlmoya/utils-shared';
+
+interface Props {
+	ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<SEOArticle>
+	<SEOTitle level="h2">{ui.seo?.title || 'Escalador de Ingredientes'}</SEOTitle>
+
+	<p>
+		{ui.seo?.sections?.[0]?.content || 'Cocinar no es solo arte, es matemática aplicada. Entender cómo adaptar las proporciones de tus ingredientes es la diferencia entre un plato decente y una obra maestra.'}
+	</p>
+
+	<SEOTitle level="h3">{ui.seo?.sections?.[1]?.heading || '¿Cómo funciona el Factor de Conversión?'}</SEOTitle>
+	<p>
+		{ui.seo?.sections?.[1]?.content || 'El corazón de cualquier adaptación culinaria es el Factor de Conversión (FC). Aunque nuestra herramienta lo hace automáticamente, conocer la lógica te da control total.'}
+	</p>
+
+	<SEOTitle level="h3">{ui.seo?.sections?.[2]?.heading || 'Lo que NO escala linealmente'}</SEOTitle>
+	<p>
+		{ui.seo?.sections?.[2]?.content || 'Multiplicar todos los ingredientes por 2 funciona para la harina y el agua, pero la cocina es química y termodinámica. Hay elementos que se comportan de forma exponencial o logarítmica, no lineal.'}
+	</p>
+
+	<SEOTitle level="h3">{ui.seo?.sections?.[3]?.heading || 'Trucos de Cocina Profesional'}</SEOTitle>
+	<p>
+		{ui.seo?.sections?.[3]?.content || 'Huevo como unidad: si el escalado te pide "2.3 huevos", bate 3 huevos ligeramente y pesa la cantidad exacta.'}
+	</p>
+
+	<SEOTitle level="h3">{ui.seo?.sections?.[4]?.heading || 'Ventajas de Escalar Correctamente'}</SEOTitle>
+	<p>
+		{ui.seo?.sections?.[4]?.content || 'Entender y aplicar correctamente el escalado de recetas tiene múltiples beneficios: consistencia en los platos, economía de ingredientes, adaptabilidad y control culinario.'}
+	</p>
+
+	<SEOTitle level="h3">{ui.seo?.sections?.[5]?.heading || 'Herramientas Complementarias'}</SEOTitle>
+	<p>
+		{ui.seo?.sections?.[5]?.content || 'Este escalador de ingredientes es perfecto para ajustar recetas, pero complementa bien con otras herramientas culinarias.'}
+	</p>
+</SEOArticle>

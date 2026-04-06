@@ -4,6 +4,8 @@ import { meringueCalculator } from '../tool/meringue-peak';
 import { bananaCare } from '../tool/banana-ripeness';
 import { kitchenTimer } from '../tool/kitchen-timer';
 import { pizza } from '../tool/pizza';
+import { ingredientRescaler } from '../tool/ingredient-rescaler';
+import { sourdoughCalculator } from '../tool/sourdough-calculator';
 
 export const cookingCategory: CookingCategoryEntry = {
   icon: 'mdi:chef-hat',
@@ -13,6 +15,8 @@ export const cookingCategory: CookingCategoryEntry = {
     bananaCare,
     kitchenTimer,
     pizza,
+    ingredientRescaler,
+    sourdoughCalculator,
   ],
   i18n: {
     es: () => import('./i18n/es').then((m) => m.content),

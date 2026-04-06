@@ -1,0 +1,31 @@
+---
+import { SEOArticle, SEOTitle } from '@jjlmoya/utils-shared';
+
+interface Props {
+	ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<SEOArticle>
+	<SEOTitle level="h2">{ui.seo?.[0]?.text || 'Ciencia y Precisión en la Masa Madre'}</SEOTitle>
+
+	<p>
+		{ui.seo?.[1]?.html || 'La <strong>masa madre</strong> es un cultivo vivo de bacterias lácticas y levaduras salvajes. Su fuerza y comportamiento dependen de cuándo y cómo la refrescas.'}
+	</p>
+
+	<SEOTitle level="h3">{ui.seo?.[2]?.text || 'Ratios Predefinidos Explicados'}</SEOTitle>
+
+	<ul>
+		{ui.seo?.[3]?.items?.map((item: string) => <li set:html={item} />)}
+	</ul>
+
+	<SEOTitle level="h3">{ui.seo?.[4]?.text || 'Hidratación y Comportamiento'}</SEOTitle>
+
+	<p set:html={ui.seo?.[4]?.html || 'Por defecto, esta calculadora usa <strong>100% de hidratación</strong> (agua = harina en peso).'} />
+
+	<SEOTitle level="h3">{ui.seo?.[5]?.text || 'Temperatura y Tiempo de Fermentación'}</SEOTitle>
+
+	<p set:html={ui.seo?.[5]?.html || 'Recuerda que estos tiempos asumen <strong>68-72°F (20-22°C)</strong>.'} />
+</SEOArticle>

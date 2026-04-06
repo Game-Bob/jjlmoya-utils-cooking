@@ -11,7 +11,6 @@ const { ui } = Astro.props;
 <div class="mold-scaler-container">
 	<div class="ms-card">
 		<aside class="ms-sidebar">
-			<!-- Section 1: Original Mold -->
 			<section class="ms-section">
 				<h2 class="ms-section-title">
 					<span class="ms-section-badge">1</span>
@@ -36,7 +35,6 @@ const { ui } = Astro.props;
 				<div id="original-inputs" class="ms-inputs-container"></div>
 			</section>
 
-			<!-- Section 2: Target Mold -->
 			<section class="ms-section">
 				<h2 class="ms-section-title">
 					<span class="ms-section-badge">2</span>
@@ -61,7 +59,6 @@ const { ui } = Astro.props;
 				<div id="target-inputs" class="ms-inputs-container"></div>
 			</section>
 
-			<!-- Section 3: Visualization -->
 			<div class="ms-viz-container">
 				<svg id="visualizer" class="ms-viz-svg" viewBox="0 0 400 300">
 					<g transform="translate(200, 150)">
@@ -83,14 +80,12 @@ const { ui } = Astro.props;
 		</aside>
 
 		<main class="ms-main">
-			<!-- Hero Result -->
 			<div class="ms-hero-result">
 				<div class="ms-result-label">{ui.multiplyingFactor}</div>
 				<div class="ms-result-value" id="result-factor">x1.00</div>
 				<div class="ms-result-text" id="result-text">{ui.equivalentMolds}</div>
 			</div>
 
-			<!-- Ingredients Section -->
 			<section class="ms-ingredients-section">
 				<h3 class="ms-section-title">
 					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v5"/><path d="M16 19h6"/><path d="M19 16v6"/><circle cx="8" cy="12" r="2"/><circle cx="15" cy="12" r="2"/></svg>
@@ -98,9 +93,7 @@ const { ui } = Astro.props;
 				</h3>
 
 				<div class="ms-ingredients-card">
-					<div id="ingredients-list" class="ms-ingredients-list">
-						<!-- Dynamically populated -->
-					</div>
+					<div id="ingredients-list" class="ms-ingredients-list"></div>
 
 					<button id="add-ingredient-btn" class="ms-add-btn">
 						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>

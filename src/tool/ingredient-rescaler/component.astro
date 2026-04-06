@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 import './IngredientRescaler.css';
 
 interface Props {
@@ -70,16 +71,16 @@ ${ui.exampleLine4}`;
 	<div class="ir-results-card">
 		<div class="ir-results-header">
 			<h3 class="ir-results-title">
-				<span>🍳</span> {ui.result}
+				<Icon name="mdi:chef-hat" /> {ui.result}
 			</h3>
 			<button id="copy-btn" class="ir-copy-btn ir-default">
-				<span>📋</span> {ui.copy}
+				<Icon name="mdi:content-copy" /> {ui.copy}
 			</button>
 		</div>
 
 		<div id="results-container" class="ir-results-container">
 			<div class="ir-empty-state">
-				<span class="ir-empty-icon">🍲</span>
+				<Icon name="mdi:pot-steam" class="ir-empty-icon" />
 				<p>{ui.emptyState}</p>
 			</div>
 		</div>
