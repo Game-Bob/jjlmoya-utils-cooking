@@ -9,6 +9,7 @@ import { BRINE_TOOL } from './tool/brine';
 import { MOLD_SCALER_TOOL } from './tool/mold-scaler';
 import { INGREDIENT_RESCALER_TOOL } from './tool/ingredient-rescaler';
 import { SOURDOUGH_CALCULATOR_TOOL } from './tool/sourdough-calculator';
+import { ROUX_GUIDE_TOOL } from './tool/roux-guide';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   AMERICAN_KITCHEN_CONVERTER_TOOL,
@@ -21,5 +22,6 @@ export const ALL_TOOLS: ToolDefinition[] = [
   MOLD_SCALER_TOOL,
   INGREDIENT_RESCALER_TOOL,
   SOURDOUGH_CALCULATOR_TOOL,
+  ROUX_GUIDE_TOOL,
 ];
 

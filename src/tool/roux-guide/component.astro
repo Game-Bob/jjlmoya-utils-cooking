@@ -1,0 +1,194 @@
+---
+import { Icon } from 'astro-icon/components';
+import './RouxGuide.css';
+
+interface Props {
+	ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="rg-container" id="roux-calculator">
+	<div class="rg-card">
+		<div class="rg-progress-wrapper">
+			<div class="rg-progress-bar" id="progress-bar"></div>
+		</div>
+
+		<div class="rg-content">
+			<div class="rg-grid">
+				<div class="rg-controls">
+					<div class="rg-control-group">
+						<label class="rg-label">
+							<span class="rg-step">1</span>
+							{ui.baseLiquid}
+						</label>
+
+						<div class="rg-volume-wrapper">
+							<div class="rg-input-group">
+								<input
+									type="number"
+									id="volume-input"
+									value="1000"
+									min="50"
+									step="50"
+									class="rg-input"
+								/>
+								<span class="rg-unit">{ui.ml}</span>
+							</div>
+
+							<div class="rg-liquid-buttons">
+								<button
+									class="liquid-btn rg-liquid-btn active"
+									data-type="milk"
+									title={ui.milk}
+								>
+									<Icon name="mdi:cup-water" class="rg-btn-icon" />
+								</button>
+								<button
+									class="liquid-btn rg-liquid-btn"
+									data-type="lightStock"
+									title={ui.lightStock}
+								>
+									<Icon name="mdi:pot-mix-outline" class="rg-btn-icon" />
+								</button>
+								<button
+									class="liquid-btn rg-liquid-btn"
+									data-type="darkStock"
+									title={ui.darkStock}
+								>
+									<Icon name="mdi:food-steak" class="rg-btn-icon" />
+								</button>
+								<button
+									class="liquid-btn rg-liquid-btn"
+									data-type="tomato"
+									title={ui.tomato}
+								>
+									<Icon name="mdi:food-apple" class="rg-btn-icon" />
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="rg-control-group">
+						<label class="rg-label">
+							<span class="rg-step">2</span>
+							{ui.sauceTexture}
+						</label>
+
+						<div class="rg-texture-grid">
+							<button
+								class="texture-btn rg-texture-btn"
+								data-level="1"
+							>
+								<div class="rg-texture-visual">
+									<div class="rg-texture-bar"></div>
+								</div>
+								<span class="rg-texture-label">{ui.soup}</span>
+							</button>
+							<button
+								class="texture-btn rg-texture-btn active"
+								data-level="2"
+							>
+								<div class="rg-texture-visual">
+									<div class="rg-texture-bar"></div>
+								</div>
+								<span class="rg-texture-label">{ui.normalSauce}</span>
+							</button>
+							<button
+								class="texture-btn rg-texture-btn"
+								data-level="3"
+							>
+								<div class="rg-texture-visual">
+									<div class="rg-texture-bar"></div>
+								</div>
+								<span class="rg-texture-label">{ui.thick}</span>
+							</button>
+							<button
+								class="texture-btn rg-texture-btn"
+								data-level="4"
+							>
+								<div class="rg-texture-visual">
+									<div class="rg-texture-bar"></div>
+								</div>
+								<span class="rg-texture-label">{ui.croquette}</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="rg-results">
+					<div class="rg-result-hero">
+						<div class="rg-result-header">
+							<span class="rg-result-label">{ui.rouxMix}</span>
+							<div class="rg-roux-type" id="roux-type-label">Blanco</div>
+						</div>
+
+						<div class="rg-result-amounts">
+							<div class="rg-amount">
+								<div class="rg-amount-value" id="butter-output">50</div>
+								<div class="rg-amount-unit">{ui.butter} (g)</div>
+							</div>
+							<div class="rg-amount-plus">+</div>
+							<div class="rg-amount">
+								<div class="rg-amount-value" id="flour-output">50</div>
+								<div class="rg-amount-unit">{ui.flour} (g)</div>
+							</div>
+						</div>
+
+						<div class="rg-instructions-box">
+							<div class="rg-instructions-header">
+								<Icon name="mdi:fire" class="rg-instructions-icon" />
+								<span class="rg-instructions-title">{ui.instructions}</span>
+							</div>
+							<p class="rg-instructions-text" id="cooking-instructions">
+								Cocina 2-3 min. No dejes que coja color.
+							</p>
+						</div>
+					</div>
+
+					<div class="rg-sauce-info">
+						<div class="rg-sauce-header">
+							<div class="rg-sauce-icon">
+								<Icon name="mdi:bookmark-check" class="rg-icon-lg" />
+							</div>
+							<span class="rg-sauce-name" id="sauce-name">Bechamel</span>
+							<span class="rg-sauce-ratio" id="ratio-display">90g/L</span>
+						</div>
+
+						<p class="rg-sauce-tip" id="chef-tip">
+							"Añade la leche fría de golpe sobre el roux caliente y remueve vigorosamente para evitar grumos."
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	import { initRouxGuide } from './init';
+	window.__initRouxGuide = initRouxGuide;
+</script>
+
+<script define:vars={{ ui }}>
+	const init = () => {
+		if (window.__initRouxGuide) {
+			window.__initRouxGuide(ui);
+		}
+	};
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', init);
+	} else {
+		init();
+	}
+</script>
+
+<style>
+	input[type='number']::-webkit-outer-spin-button,
+	input[type='number']::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+</style>

@@ -6,6 +6,7 @@ import { kitchenTimer } from '../tool/kitchen-timer';
 import { pizza } from '../tool/pizza';
 import { ingredientRescaler } from '../tool/ingredient-rescaler';
 import { sourdoughCalculator } from '../tool/sourdough-calculator';
+import { rouxGuide } from '../tool/roux-guide';
 
 export const cookingCategory: CookingCategoryEntry = {
   icon: 'mdi:chef-hat',
@@ -17,6 +18,7 @@ export const cookingCategory: CookingCategoryEntry = {
     pizza,
     ingredientRescaler,
     sourdoughCalculator,
+    rouxGuide,
   ],
   i18n: {
     es: () => import('./i18n/es').then((m) => m.content),
