@@ -200,7 +200,7 @@
 .controls-panel {
     padding: 2rem;
     border-radius: 2rem;
-    background: #ffffff;
+    background: #fff;
     border: 1px solid #e4e4e7;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     backdrop-filter: blur(12px);
@@ -535,11 +535,11 @@
 }
 
 .info-box.conservation .info-title {
-    color: #18181b;
+    color: var(--bc-text-dark);
 }
 
 .info-box.conservation .info-text {
-    color: #1e293b;
+    color: var(--bc-slate-dark);
 }
 
 .info-box.acceleration {
@@ -552,13 +552,13 @@
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: #52525b;
+    color: var(--bc-text-gray-dark);
     margin-bottom: 0.5rem;
 }
 
 .info-text {
     font-size: 0.75rem;
-    color: #18181b;
+    color: var(--bc-text-dark);
     line-height: 1.5;
     font-weight: 700;
     margin: 0;

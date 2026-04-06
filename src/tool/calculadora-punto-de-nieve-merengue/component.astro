@@ -3,11 +3,11 @@ import "./MeringueCalculator.css";
 ---
 
 <div class="meringue-calculator-container">
-    <div class="calc-card fade-in">
-        <div class="input-section">
-            <div class="input-group">
+    <div class="meringue-card meringue-fade-in">
+        <div class="meringue-input-section">
+            <div class="meringue-input-group">
                 <label for="whites-input">Peso de las Claras</label>
-                <div class="input-wrapper">
+                <div class="meringue-input-wrapper">
                     <input
                         type="number"
                         id="whites-input"
@@ -16,32 +16,32 @@ import "./MeringueCalculator.css";
                         max="2000"
                         value="120"
                     />
-                    <span class="input-unit">g</span>
+                    <span class="meringue-input-unit">g</span>
                 </div>
             </div>
 
-            <div class="input-group">
+            <div class="meringue-input-group">
                 <label>Tipo de Merengue</label>
-                <div class="type-selector" id="type-selector">
-                    <button class="type-btn active" data-type="french">Francés</button>
-                    <button class="type-btn" data-type="italian">Italiano</button>
-                    <button class="type-btn" data-type="swiss">Suizo</button>
+                <div class="meringue-type-selector" id="type-selector">
+                    <button class="meringue-type-btn active" data-type="french">Francés</button>
+                    <button class="meringue-type-btn" data-type="italian">Italiano</button>
+                    <button class="meringue-type-btn" data-type="swiss">Suizo</button>
                 </div>
             </div>
         </div>
 
-        <div class="results-grid" id="main-results"></div>
+        <div class="meringue-results-grid" id="main-results"></div>
 
-        <div class="time-section">
+        <div class="meringue-time-section">
             <h3
                 style="font-size: 1.125rem; font-weight: 800; color: var(--text-dark); margin-bottom: 1.5rem;"
             >
                 Tiempos Estimados (Batido a media/alta velocidad)
             </h3>
-            <div class="time-grid" id="time-grid"></div>
+            <div class="meringue-time-grid" id="time-grid"></div>
         </div>
 
-        <div class="pro-tip" id="pro-tip">
+        <div class="meringue-pro-tip" id="pro-tip">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="10"></circle>
                 <line x1="12" y1="8" x2="12" y2="12"></line>
@@ -106,10 +106,10 @@ import "./MeringueCalculator.css";
         resultsGrid.innerHTML = "";
         mainResults.forEach((res) => {
             const item = document.createElement("div");
-            item.className = "result-item fade-in";
+            item.className = "meringue-result-item meringue-fade-in";
             item.innerHTML = `
-                <span class="result-label">${res.label}</span>
-                <span class="result-value">${res.val}<span class="result-unit">${res.unit}</span></span>
+                <span class="meringue-result-label">${res.label}</span>
+                <span class="meringue-result-value">${res.val}<span class="meringue-result-unit">${res.unit}</span></span>
             `;
             resultsGrid.appendChild(item);
         });
@@ -119,14 +119,14 @@ import "./MeringueCalculator.css";
         timeGrid.innerHTML = "";
         STAGES.forEach((stage, i) => {
             const row = document.createElement("div");
-            row.className = "time-row fade-in";
+            row.className = "meringue-time-row meringue-fade-in";
             row.style.animationDelay = `${i * 0.1}s`;
             row.innerHTML = `
-                <div class="time-info">
-                    <span class="time-stage">${stage.name}</span>
-                    <span class="time-desc">${stage.desc}</span>
+                <div class="meringue-time-info">
+                    <span class="meringue-time-stage">${stage.name}</span>
+                    <span class="meringue-time-desc">${stage.desc}</span>
                 </div>
-                <span class="time-val">${times[i]}</span>
+                <span class="meringue-time-val">${times[i]}</span>
             `;
             timeGrid.appendChild(row);
         });
@@ -150,8 +150,8 @@ import "./MeringueCalculator.css";
 
     typeSelector?.addEventListener("click", (e) => {
         const target = e.target;
-        if (target.classList.contains("type-btn")) {
-            const btns = typeSelector.querySelectorAll(".type-btn");
+        if (target.classList.contains("meringue-type-btn")) {
+            const btns = typeSelector.querySelectorAll(".meringue-type-btn");
             btns.forEach((b) => b.classList.remove("active"));
             target.classList.add("active");
             currentType = target.dataset.type || "french";
