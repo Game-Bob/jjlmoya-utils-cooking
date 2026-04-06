@@ -1,7 +1,7 @@
 import type { ToolLocaleContent } from '../../../types';
 
 export const content: ToolLocaleContent = {
-	slug: 'escalador-moldes',
+	slug: 'moldes',
 	title: 'Calculadora para Escalar Moldes de Repostería',
 	description:
 		'Adapta cualquier receta de repostería a tus moldes. Calcula automáticamente el factor de conversión para moldes redondos, cuadrados y rectangulares con precisión profesional.',
