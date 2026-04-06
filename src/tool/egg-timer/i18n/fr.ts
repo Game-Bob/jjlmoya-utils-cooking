@@ -1,5 +1,85 @@
 import type { ToolLocaleContent } from "../../../types";
 
+const title = "Minuteur Scientifique Précis pour Œufs et Calculatrice d";
+const description = "Jaune coulant, blancs juste figés.";
+const faq = [
+    {
+      question: "Pourquoi l'altitude affecte-t-elle le temps de cuisson des œufs?",
+      answer:
+        "À une altitude plus élevée, la pression atmosphérique est plus basse, ce qui réduit le point d'ébullition de l'eau. Par exemple, au niveau de la mer, l'eau bout à 100°C, mais à 1500m d'altitude, elle bout à seulement 95°C. Cela signifie que la cuisson prend plus de temps.",
+    },
+    {
+      question: "Quelle est la différence entre un œuf mollet et un œuf dur?",
+      answer:
+        "Un œuf mollet a un jaune crémeux et coulant au centre, tandis que les blancs sont fermes. Un œuf dur a complètement cuit le jaune et les blancs. La différence réside principalement dans le temps de cuisson et la température atteinte.",
+    },
+    {
+      question: "Comment puis-je obtenir des œufs durs parfaits?",
+      answer:
+        "Utilisez des œufs à température ambiante si possible, portez l'eau à ébullition, puis plongez les œufs et laissez-les cuire selon votre altitude. Refroidissez-les immédiatement dans de l'eau glacée pour arrêter la cuisson. Notre calculateur vous donne le temps exact pour votre localisation.",
+    },
+    {
+      question: "Pourquoi dois-je refroidir les œufs après la cuisson?",
+      answer:
+        "Refroidir les œufs rapidement dans de l'eau glacée arrête le processus de cuisson et facilite l'épluchage. Cela empêche la cuisson excessive du jaune qui pourrait créer une bordure grisâtre.",
+    },
+    {
+      question: "Quel est l'âge idéal des œufs pour les faire bouillir?",
+      answer:
+        "Les œufs plus anciens (au moins une semaine) sont plus faciles à éplucher car l'albumine se sépare plus facilement de la coquille. Les œufs très frais peuvent être plus difficiles à éplucher.",
+    },
+  ];
+const howTo = [
+    {
+      name: "Sélectionnez Vos Paramètres",
+      text: "Choisissez la température initiale de l'œuf, sa taille, et votre altitude. Notre calculateur déterminera automatiquement le temps de cuisson optimal.",
+    },
+    {
+      name: "Portez l'Eau à Ébullition",
+      text: "Utilisez une casserole avec suffisamment d'eau pour couvrir les œufs d'environ 2-3cm. Portez à ébullition complète.",
+    },
+    {
+      name: "Plongez et Laissez Cuire",
+      text: "Plongez délicatement les œufs dans l'eau bouillante et commencez le minuteur selon le temps recommandé. La précision est essentielle pour le résultat parfait.",
+    },
+    {
+      name: "Refroidissez Immédiatement",
+      text: "Quand le temps est écoulé, plongez les œufs dans de l'eau glacée pendant au moins 5 minutes pour arrêter la cuisson et faciliter l'épluchage.",
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: "minuteur-oeuf-parfait-calculatrice-altitude",
   title: "Minuteur Scientifique Précis pour Œufs et Calculatrice d'Altitude",
@@ -117,5 +197,5 @@ export const content: ToolLocaleContent = {
       ],
     },
   ],
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

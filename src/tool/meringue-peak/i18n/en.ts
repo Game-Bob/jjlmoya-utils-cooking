@@ -1,5 +1,80 @@
 import type { ToolLocaleContent } from "../../../types";
 
+const title = "Professional Meringue Sugar Ratio Calculator";
+const description = "The simplest but least stable. Whites and sugar whipped cold.";
+const faq = [
+    {
+      question: "What is the ideal egg white to sugar ratio?",
+      answer:
+        "The professional standard is a 1:2 ratio. For every gram of egg white, use two grams of sugar to provide enough literal 'weight' to stabilize the protein structure.",
+    },
+    {
+      question: "How can I tell if I've reached stiff peaks?",
+      answer:
+        "When you lift the whisk, the peaks should stand straight up without drooping. The mixture should also be thick, very glossy, and stay in the bowl even if held upside down.",
+    },
+    {
+      question: "Which meringue type is best for frosting?",
+      answer:
+        "Italian meringue is preferred for frosting because the hot syrup 'cooks' the whites, making it both safe and structural enough to hold its shape for hours.",
+    },
+    {
+      question: "Why do my egg whites refuse to whip up?",
+      answer:
+        "Even a microscopic trace of fat—from leftover grease on the bowl or a tiny drop of yolk—will prevent the whites from forming a stable foam. Always use a clean metal or glass bowl.",
+    },
+  ];
+const howTo = [
+    {
+      name: "Weigh your egg whites",
+      text: "Use a digital scale for precision. Even a 5-gram difference can change the required sugar amount.",
+    },
+    {
+      name: "Calculate sugar needs",
+      text: "Enter the weight into our tool to get exact granulated and/or powdered sugar measurements.",
+    },
+    {
+      name: "Choose your technique",
+      text: "Select French for simple baking, Italian for stability, or Swiss for silky fillings.",
+    },
+    {
+      name: "Whip to perfection",
+      text: "Follow the estimated timing guide until you reach that high-gloss, vertical stiff peak.",
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: "meringue-sugar-ratio-calculator-stiff-peaks",
   title: "Professional Meringue Sugar Ratio Calculator",
@@ -253,5 +328,5 @@ export const content: ToolLocaleContent = {
       html: "Our calculator automates the math so you can focus on whipping until you reach that perfect, high-gloss finish.",
     },
   ],
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

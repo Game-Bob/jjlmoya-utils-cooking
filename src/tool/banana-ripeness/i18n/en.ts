@@ -1,5 +1,76 @@
 import type { ToolLocaleContent } from '../../../types';
 
+const title = "Banana Diagnostics and Conservation: Scientific Guide";
+const description = "Analyze your banana ripening stage with scientific precision. Learn conservation techniques, ethylene biochemistry, and nutritional optimization.";
+const faq = [
+    {
+      question: 'Why do bananas turn black in the fridge?',
+      answer: 'Cold breaks down cell walls in the peel, releasing enzymes that oxidize phenols and create black polyphenols. However, the inside usually stays firm and sweet longer than outside.',
+    },
+    {
+      question: 'How can I ripen a banana quickly?',
+      answer: 'Put them in a closed paper bag with an apple or tomato. These emit ethylene gas, which accelerates ripening. If in a hurry, you can put them in the oven at low temperature for a few minutes.',
+    },
+    {
+      question: 'Is it safe to eat spotted bananas?',
+      answer: 'Yes, totally. Spots indicate starch has converted to sugar, making them sweeter and more digestible. Only discard if they have mold, smell bad, or are excessively soft.',
+    },
+    {
+      question: 'What is ethylene?',
+      answer: 'It\'s a plant hormone in gas form that regulates growth and ripening. Banana is a climacteric fruit, meaning it continues producing ethylene and ripening after harvest.',
+    },
+  ];
+const howTo = [
+    {
+      name: 'Observe the color',
+      text: 'Carefully examine peel color, from green to dark brown, to determine current ripening stage.',
+    },
+    {
+      name: 'Use the simulator',
+      text: 'Slide the ripeness indicator to see accurate predictions about when it reaches the next stage.',
+    },
+    {
+      name: 'Adjust conditions',
+      text: 'Modify temperature and humidity to see how they affect ripening speed.',
+    },
+    {
+      name: 'Apply conservation',
+      text: 'Follow specific conservation and acceleration recommendations based on current stage.',
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: 'banana-ripeness',
   title: 'Banana Diagnostics and Conservation: Scientific Guide',
@@ -173,5 +244,5 @@ export const content: ToolLocaleContent = {
       html: '<strong>Degradation Alert:</strong> External factors like relative humidity over 85% or temperatures above 25°C can drastically accelerate degradation, taking banana from optimal to inedible in hours. This simulator helps you anticipate these changes and plan strategically.',
     },
   ],
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,5 +1,80 @@
 import type { ToolLocaleContent } from "../../../types";
 
+const title = "Cronómetro de Huevos Científico";
+const description = "Calculadora termodinámica para la cocción perfecta de huevos según altitud, temperatura y tamaño.";
+const faq = [
+    {
+      question: "¿Por qué importa la altitud al cocer huevos?",
+      answer:
+        "El agua no siempre hierve a 100°C. A mayor altitud, menor presión atmosférica, y el agua hierve a menor temperatura. En Madrid (600m) hierve a 98°C, requiriendo más tiempo que a nivel del mar. En el Everest (70°C) es imposible cocer un huevo duro.",
+    },
+    {
+      question: "¿Huevo de nevera o temperatura ambiente?",
+      answer:
+        "Huevo de nevera (4°C) necesita más tiempo que uno a temperatura ambiente (20°C). La diferencia puede ser de 2-3 minutos. Esta calculadora ajusta el tiempo automáticamente según la temperatura inicial.",
+    },
+    {
+      question: "¿Por qué aparece un anillo verde en la yema?",
+      answer:
+        "Es sulfuro ferroso, resultado de sobrecocción. Cuando superas 80°C por mucho tiempo, el azufre de la clara reacciona con el hierro de la yema. No es tóxico, pero indica que te pasaste de tiempo. Usa baño de hielo inmediato para evitarlo.",
+    },
+    {
+      question: "¿Cómo pelo un huevo fácilmente?",
+      answer:
+        "Usa huevos de 1-2 semanas (no frescos del día), empieza con agua hirviendo (no fría), y sumerge en agua helada inmediatamente al terminar. El choque térmico contrae el huevo y facilita el pelado.",
+    },
+  ];
+const howTo = [
+    {
+      name: "Selecciona la temperatura inicial",
+      text: "Elige si tu huevo está en nevera (4°C) o a temperatura ambiente (20°C). Esta es la temperatura interna del huevo, no la del aire.",
+    },
+    {
+      name: "Elige el tamaño del huevo",
+      text: "S (pequeño, 53g), M (mediano, 58g), L (grande, 63g), o XL (muy grande, 73g). El tamaño determina cuánto tiempo tarda el calor en alcanzar el centro.",
+    },
+    {
+      name: "Especifica tu altitud",
+      text: "Introduce manualmente, usa el botón Mar para nivel del mar (0m), Madrid para 600m, o geoposiciona tu ubicación. Cada 300m baja 1°C el punto de ebullición del agua.",
+    },
+    {
+      name: "Aplica choque térmico",
+      text: "Cuando el temporizador suene, sumerge inmediatamente en agua con hielo. Esto detiene la cocción y facilita el pelado. El choque térmico es crítico para la precisión.",
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: "huevos",
   title: "Cronómetro de Huevos Científico",
@@ -218,5 +293,5 @@ export const content: ToolLocaleContent = {
 		},
 	],
 
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

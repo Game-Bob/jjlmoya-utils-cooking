@@ -1,5 +1,76 @@
 import type { ToolLocaleContent } from '../../../types';
 
+const title = "Smart Cookware Selector | Kitchen Utensils Guide";
+const description = "Interactive guide to choose the best pan or pot based on your cooking style. Iron vs Stainless Steel vs Teflon. Find your perfect tool.";
+const faq = [
+    {
+      question: 'What is the best pan for daily use?',
+      answer: 'For most people, a high-quality stainless steel pan or a well-seasoned cast iron are the best. Stainless is versatile and eternal, while iron offers natural non-stick without chemicals.',
+    },
+    {
+      question: 'Why does food stick to stainless steel?',
+      answer: 'Usually due to insufficient heat or adding food too early. Try the "Leidenfrost effect": heat the pan until a water droplet rolls like a pearl. Then it\'s ready.',
+    },
+    {
+      question: 'How do I know if my pan is safe?',
+      answer: 'Look for "PFOA Free" labels. Cast iron, carbon steel, and stainless steel are the safest and most durable options, as they have no coatings that degrade over time.',
+    },
+    {
+      question: 'What does it mean to "season" a pan?',
+      answer: 'It\'s the process of creating a layer of polymerized oil on the metal (iron or carbon). This protects against rust and creates a natural non-stick surface that improves with each use.',
+    },
+    {
+      question: 'How much should I spend on a good pan?',
+      answer: 'A set of 2-3 medium-high quality pans (stainless or iron) can last 20+ years. It\'s better to invest well in one pan than to buy 5 cheap ones lasting 2 years. Quality over quantity.',
+    },
+  ];
+const howTo = [
+    {
+      name: 'Select your cooking style',
+      text: 'Choose between high heat (searing), delicate (eggs), stews (slow cooking) or quick cooking. Each style has distinct requirements.',
+    },
+    {
+      name: 'Choose the ideal material',
+      text: 'Based on your style, the tool will recommend the best material: iron, stainless steel, copper, or teflon.',
+    },
+    {
+      name: 'Read the characteristics',
+      text: 'Understand advantages, disadvantages, maintenance, and durability. Then choose the specific pan that fits your budget and needs.',
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: 'cookware-selector',
   title: 'Smart Cookware Selector | Kitchen Utensils Guide',
@@ -159,5 +230,5 @@ export const content: ToolLocaleContent = {
     enamelCon: 'Very expensive. Enamel fragile to hard impacts.',
     enamelTip: 'Perfect for endless braises. Enamel handles acids (tomato) without issues.',
   },
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

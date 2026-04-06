@@ -1,5 +1,84 @@
 import type { ToolLocaleContent } from "../../../types";
 
+const title = "Equilibrium Brining and Fermentation Calculator";
+const description = "Master the science of equilibrium brining for juicy meats and perfect fermentations. Calculate exact salinity based on total product and water weight.";
+const faq = [
+    {
+      question: "What is the equilibrium brining method?",
+      answer:
+        "The equilibrium method calculates salt based on total weight (water + ingredient), not just weighted water. it guarantees consistent salt concentration regardless of the amount of ingredient you use.",
+    },
+    {
+      question: "How much salt do I need for pickles?",
+      answer:
+        "For fermented vegetables (pickles, sauerkraut, kimchi), 2% to 3% salt is recommended. For meats, between 1.5% and 2%. The calculator gives the exact amount based on your ingredient weight.",
+    },
+    {
+      question: "Can I freeze meat after brining?",
+      answer:
+        "Yes, it's ideal. Brine protects against freezer burn and the meat will be ready to cook upon thawing. However, avoid freezing fermented vegetables as they will turn mushy.",
+    },
+    {
+      question: "Why add sugar to the brine?",
+      answer:
+        "Sugar has two functions: it facilitates the Maillard reaction (browning) in meats and balances the saline flavor without making the product taste sweet.",
+    },
+  ];
+const howTo = [
+    {
+      name: "Determine your goal",
+      text: "Decide if you are brining meats (1.5-2%), fermenting (2-3%), making sauces (3.5%), or long-term preserves (5%+). Each has a different time and purpose.",
+    },
+    {
+      name: "Weigh ingredient and water",
+      text: "Weigh the product (meat, vegetables) and water exactly. Precision is critical: even 5g difference changes result accuracy. Use a precision scale.",
+    },
+    {
+      name: "Calculate with the tool",
+      text: "Enter the weights into the calculator and adjust salinity according to your product type. The tool tells you exactly how much salt and sugar you need.",
+    },
+    {
+      name: "Dissolve and mix",
+      text: "Completely dissolve salt in cold water before adding product. For meats, ensure brine covers everything. For fermenteds, ensure product is submerged.",
+    },
+    {
+      name: "Ferment or cure",
+      text: "Refrigerate based on type: 4-48 hours for meats, 1-3 weeks for fermenteds. Exact time depends on temperature and personal taste.",
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: "equilibrium-brining-calculator-meat-fermentation-ratios",
   title: "Equilibrium Brining and Fermentation Calculator",
@@ -217,5 +296,5 @@ export const content: ToolLocaleContent = {
       html: "Our equilibrium calculator eliminates guesswork from your recipes, allowing you to cook with the confidence of a professional.",
     },
   ],
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

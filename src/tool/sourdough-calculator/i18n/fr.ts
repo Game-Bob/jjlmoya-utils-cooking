@@ -1,5 +1,81 @@
 import type { ToolLocaleContent } from "../../../types";
 
+const title = "Calculateur de Rafraîchissement du Levain";
+const description = "Le choix le plus courant en boulangerie artisanale moderne. Très facile à mélanger et à incorporer.";
+const faq = [
+    {
+      question: "Qu'est-ce qu'un ratio 1:1:1 ?",
+      answer:
+        "C'est le ratio le plus courant pour entretenir le levain à température ambiante. Cela signifie 1 part de levain, 1 part de farine et 1 part d'eau. Idéal pour un rafraîchissement quotidien.",
+    },
+    {
+      question: "Quand utiliser un ratio 1:2:2 ?",
+      answer:
+        "Un ratio 1:2:2 est souvent utilisé pour réactiver ou réveiller un levain. Il offre une courbe de fermentation plus prévisible, idéale après un passage au réfrigérateur.",
+    },
+    {
+      question: "Pourquoi utiliser le ratio 1:5:5 ?",
+      answer:
+        "Le ratio 1:5:5 est le favori de nombreux boulangers. Il permet une fenêtre de fermentation de 8 à 12 heures avant que le levain n'atteigne son pic, équilibrant commodité et contrôle du temps.",
+    },
+    {
+      question: "Puis-je utiliser des ratios personnalisés ?",
+      answer:
+        "Absolument. Si vous avez un protocole spécifique, vous pouvez saisir vos propres ratios. Certains boulangers utilisent 1:10:10 pour une fermentation très lente, d'autres 1:1:0.8 pour un levain plus ferme.",
+    },
+    {
+      question: "Le calculateur arrondit-il les grammes ?",
+      answer:
+        "Oui. Il arrondit à l'entier le plus proche par praticité. Pour une précision maximale, utilisez une balance digitale ; toutefois, de petits écarts d'arrondi n'impactent pas significativement la fermentation.",
+    },
+  ];
+const howTo = [
+    {
+      name: "Entrez la quantité totale",
+      text: "Définissez le poids total de levain dont vous avez besoin pour votre recette (ex: 300g pour un pain classique).",
+    },
+    {
+      name: "Sélectionnez le ratio",
+      text: "Choisissez parmi les ratios prédéfinis (Maintenir, Activer, Retarder, Fort, Sweet Spot) ou créez votre propre ratio personnalisé.",
+    },
+    {
+      name: "Obtenez vos mesures exactes",
+      text: "Le calculateur vous montre exactement combien de levain, de farine et d'eau mélanger. Mélangez et laissez fermenter selon votre planning.",
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: "calculateur-rafraichissement-levain-proportions-ratio",
   title: "Calculateur de Rafraîchissement du Levain",
@@ -244,5 +320,5 @@ export const content: ToolLocaleContent = {
     totalDough: "Total Levain",
     mm: "Levain",
   },
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

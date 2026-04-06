@@ -1,5 +1,84 @@
 import type { ToolLocaleContent } from "../../../types";
 
+const title = "Calculateur de Saumure par Équilibre et Fermentation";
+const description = "Maîtrisez la science de la saumure par équilibre pour des viandes juteuses et des fermentations parfaites. Calculez la salinité exacte basée sur le poids total.";
+const faq = [
+    {
+      question: "Qu'est-ce que la méthode de saumure par équilibre ?",
+      answer:
+        "La méthode par équilibre calcule le sel en fonction du poids total (eau + ingrédient), pas seulement du poids de l'eau. Cela garantit une concentration de sel constante quelle que soit la quantité d'ingrédient utilisée.",
+    },
+    {
+      question: "Combien de sel faut-il pour les légumes fermentés ?",
+      answer:
+        "Pour les légumes fermentés (cornichons, choucroute, kimchi), il est recommandé d'utiliser entre 2% et 3% de sel. Pour les viandes, entre 1,5% et 2%. Le calculateur vous donne le montant exact selon vos poids.",
+    },
+    {
+      question: "Puis-je congeler de la viande après saumurage ?",
+      answer:
+        "Oui, c'est idéal. La saumure protège contre les brûlures de congélation et la viande sera prête à cuire dès la décongélation. Évitez toutefois de congeler des légumes fermentés car ils perdraient leur texture.",
+    },
+    {
+      question: "Pourquoi ajouter du sucre à la saumure ?",
+      answer:
+        "Le sucre a deux fonctions : il facilite la réaction de Maillard (brunissement) pour les viandes et équilibre la saveur saline sans rendre le produit sucré.",
+    },
+  ];
+const howTo = [
+    {
+      name: "Déterminez votre objectif",
+      text: "Décidez si vous saumurez des viandes (1,5-2%), fermentez des légumes (2-3%), faites des sauces (3,5%) ou des conserves (5%+).",
+    },
+    {
+      name: "Pesez l'ingrédient et l'eau",
+      text: "Pesez le produit et l'eau avec précision. Chaque gramme compte pour la sécurité alimentaire et le goût. Utilisez une balance de précision.",
+    },
+    {
+      name: "Calculez avec l'outil",
+      text: "Entrez les poids dans le calculateur et ajustez la salinité selon votre type de produit. L'outil vous indiquera les grammes exacts de sel et de sucre.",
+    },
+    {
+      name: "Dissolvez et mélangez",
+      text: "Dissolvez complètement le sel dans l'eau froide avant d'ajouter le produit. Pour les viandes, assurez-vous que la saumure recouvre tout.",
+    },
+    {
+      name: "Fermentez ou marinez",
+      text: "Réfrigérez selon le type : 4-48 h pour les viandes, 1-3 semaines pour les fermentations. Le temps dépend de la température ambiante.",
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: "calculateur-saumure-equilibre-fermentation-viande-ratios",
   title: "Calculateur de Saumure par Équilibre et Fermentation",
@@ -217,5 +296,5 @@ export const content: ToolLocaleContent = {
       html: "Notre calculateur d'équilibre supprime les approximations, vous permettant de cuisiner avec la confiance d'un professionnel.",
     },
   ],
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

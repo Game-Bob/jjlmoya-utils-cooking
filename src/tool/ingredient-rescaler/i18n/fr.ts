@@ -1,5 +1,76 @@
 import type { ToolLocaleContent } from "../../../types";
 
+const title = "Convertisseur de Portions et Ingrédients Professionnel";
+const description = "Multiplication directe de toutes les valeurs par le facteur de conversion calculé.";
+const faq = [
+    {
+      question: "Pourquoi mon facteur de conversion inclut-il des décimales ?",
+      answer:
+        "Parce que les proportions culinaires ne tombent pas toujours sur des chiffres ronds. Si vous passez d'une recette pour 4 à 7 personnes, le facteur est exactement 1,75. Multiplier par ce ratio précis est plus sûr que d'arrondir arbitrairement.",
+    },
+    {
+      question: "Comment gérer les fractions comme '1/2 cac de sel' ?",
+      answer:
+        "Notre outil reconnaît automatiquement les chiffres. Il lira '1/2' comme '0,5' et l'adaptera. Pour plus de clarté, vous pouvez aussi saisir directement des décimales.",
+    },
+    {
+      question: "Dois-je arrondir les résultats finaux ?",
+      answer:
+        "Cela dépend de l'ingrédient. Pour les farines et liquides, oui. Pour les épices fortes ou la levure, nous recommandons de ne monter qu'à 75% du total calculé pour éviter de saturer le plat.",
+    },
+    {
+      question: "L'outil fonctionne-t-il avec les onces ou les tasses ?",
+      answer:
+        "Oui, l'outil multiplie n'importe quelle valeur numérique. Cependant, nous conseillons vivement de convertir en grammes pour une précision professionnelle sur de gros volumes.",
+    },
+  ];
+const howTo = [
+    {
+      name: "Entrez le nombre de portions",
+      text: "Définissez le nombre de personnes prévu initialement dans la recette, et le nombre pour lequel vous souhaitez cuisiner.",
+    },
+    {
+      name: "Collez votre liste d'ingrédients",
+      text: "Copiez et collez l'intégralité de votre liste. L'outil reconnaît les chiffres en début de ligne (ex: 500g, 1/2, 2.5) et les convertit instantanément.",
+    },
+    {
+      name: "Appliquez les ajustements de chef",
+      text: "Le calcul est exact, mais la cuisine est intuitive. Réduisez les épices à 75%. Ne multipliez jamais les temps de cuisson par le même facteur.",
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: "calculateur-mise-echelle-recette-ingredients-portions",
   title: "Convertisseur de Portions et Ingrédients Professionnel",
@@ -203,5 +274,5 @@ export const content: ToolLocaleContent = {
       html: "Notre outil simplifie les calculs pour vous permettre de vous concentrer sur l'essentiel : la créativité et le goût.",
     },
   ],
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

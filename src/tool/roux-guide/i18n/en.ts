@@ -1,5 +1,80 @@
 import type { ToolLocaleContent } from "../../../types";
 
+const title = "Professional Roux Ratio Calculator and Sauce Guide";
+const description = "Master the foundation of French mother sauces. Calculate exact roux proportions for Béchamel, Velouté, and Espagnole with professional accuracy.";
+const faq = [
+    {
+      question: "What is a Roux and why is it used?",
+      answer:
+        "A Roux is a mixture of equal parts fat and flour cooked together. It acts as the primary structure for French mother sauces, providing a smooth, stable thickness that doesn't separate.",
+    },
+    {
+      question: "What is the ideal proportion for a Roux?",
+      answer:
+        "The professional standard is a 1:1 ratio by weight. For example, 50g of butter to 50g of flour. This specific amount is designed to thicken approximately 1 liter of liquid safely.",
+    },
+    {
+      question: "How do the different types of Roux differ?",
+      answer:
+        "White Roux is cooked for 2-3 mins (best for Béchamel). Blond Roux for 5-8 mins (Velouté). Brown Roux for 15-20 mins (Espagnole). Darker roux offers more depth of flavor but provides less thickening power.",
+    },
+    {
+      question: "How can I avoid lumps in my sauce?",
+      answer:
+        "Follow the 'thermal shock' rule: add cold liquid to hot roux, or hot liquid to cold roux. Whisk constantly while adding the liquid in small increments to ensure total integration.",
+    },
+  ];
+const howTo = [
+    {
+      name: "Select your base liquid",
+      text: "Choose between milk, light stock, or dark stock depending on the mother sauce you are creating.",
+    },
+    {
+      name: "Define desired thickness",
+      text: "Decide if you need a light cream, a standard coating sauce, or a thick base for croquettes or fillings.",
+    },
+    {
+      name: "Input your liquid volume",
+      text: "Enter the total amount of liquid. Our calculator will provide the exact butter and flour weights required.",
+    },
+    {
+      name: "Apply the correct cook time",
+      text: "Cook your butter-flour mix to the specified level (White, Blond, or Brown) to match your sauce's flavor profile.",
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: "roux-ratio-calculator-thickening-sauce-guide",
   title: "Professional Roux Ratio Calculator and Sauce Guide",
@@ -229,5 +304,5 @@ export const content: ToolLocaleContent = {
       html: "Our roux ratio calculator ensures your sauces always have the perfect technical consistency for every dish.",
     },
   ],
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

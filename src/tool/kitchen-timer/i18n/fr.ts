@@ -1,5 +1,80 @@
 import type { ToolLocaleContent } from '../../../types';
 
+const title = "Multiple Kitchen Timer";
+const description = "Manage multiple cooking times simultaneously. Independent alarms, ideal for chefs and kitchen organization (Mise en Place).";
+const faq = [
+		{
+			question: 'How many timers can I create?',
+			answer:
+				'Unlimited. Add as many as you need with the \'+\' button. Perfect for cooking multiple dishes simultaneously: pasta boiling, sauce reducing, meat resting, and oven baking, all at once.',
+		},
+		{
+			question: 'Why is resting time important for meat?',
+			answer:
+				'When you cut meat fresh from heat, juices escape onto the plate. If you rest 5-10 minutes, fibers relax and juices redistribute. Result: juicy meat instead of dry. Resting is passive cooking.',
+		},
+		{
+			question: 'Does it work with screen locked?',
+			answer:
+				'Yes, but you need to grant notification permissions. Timers keep running in background and will alert you with sound and browser notification even if you switch tabs or lock your phone.',
+		},
+		{
+			question: 'What is the food \'Danger Zone\'?',
+			answer:
+				'Between 5°C and 65°C bacteria multiply rapidly. Cooked foods shouldn\'t stay in this range more than 2 hours (1 hour if temperature exceeds 30°C). Use a timer to monitor cooling before refrigerating.',
+		},
+	];
+const howTo = [
+		{
+			name: 'Create multiple timers',
+			text: 'Use the \'+\' button to add as many timers as you need. Perfect for orchestrating multiple dishes simultaneously.',
+		},
+		{
+			name: 'Customize each timer',
+			text: 'Change the name of each timer to identify what\'s cooking: \'Oven\', \'Rice\', \'Sauce\', etc.',
+		},
+		{
+			name: 'Control from mobile dock',
+			text: 'On mobile, active timers appear in a sliding dock at the bottom. Pause or restart directly from there.',
+		},
+		{
+			name: 'Receive notifications',
+			text: 'Authorize notifications so the browser alerts you when time\'s up, even if you switch tabs.',
+		},
+	];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
 	slug: 'kitchen-timer',
 	title: 'Multiple Kitchen Timer',
@@ -150,5 +225,5 @@ export const content: ToolLocaleContent = {
 		},
 	],
 
-	schemas: [],
+	schemas: [faqSchema, howToSchema, appSchema],
 };

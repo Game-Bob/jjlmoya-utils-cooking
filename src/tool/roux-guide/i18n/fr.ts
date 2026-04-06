@@ -1,5 +1,76 @@
 import type { ToolLocaleContent } from "../../../types";
 
+const title = "Calculateur de Roux Professionnel et Sauces Mères";
+const description = "Maîtrisez la base des sauces mères françaises. Calculez les proportions exactes de roux pour la Béchamel, le Velouté et la Sauce Espagnole.";
+const faq = [
+    {
+      question: "Qu'est-ce qu'un Roux et à quoi sert-il ?",
+      answer: "Un Roux est un mélange à parts égales de matière grasse et de farine cuit à feu doux. C'est l'agent de liaison fondamental pour les sauces mères françaises comme la Béchamel ou le Velouté.",
+    },
+    {
+      question: "Quelle est la proportion idéale pour un Roux ?",
+      answer: "Le standard professionnel est un ratio de 1:1 en poids. Par exemple, 50g de beurre pour 50g de farine. Ce mélange est conçu pour lier environ 1 litre de liquide.",
+    },
+    {
+      question: "Quelle est la différence entre les types de Roux ?",
+      answer: "Le Roux Blanc cuit 2-3 min (Béchamel). Le Roux Blond 5-8 min (Velouté). Le Roux Brun 15-20 min (Espagnole). Plus il est foncé, plus il dégage de saveurs de noisette mais moins il a de pouvoir liant.",
+    },
+    {
+      question: "Comment éviter les grumeaux ?",
+      answer: "Appliquez la règle du choc thermique : versez un liquide froid sur un roux chaud, ou un liquide chaud sur un roux froid. Versez progressivement en fouettant énergiquement.",
+    },
+  ];
+const howTo = [
+    {
+      name: "Sélectionnez votre liquide",
+      text: "Choisissez entre le lait, un fond blanc ou un fond brun selon la sauce mère que vous souhaitez réaliser.",
+    },
+    {
+      name: "Définissez la texture",
+      text: "Décidez si vous avez besoin d'une crème légère, d'une sauce de nappage standard ou d'une base épaisse pour des croquettes.",
+    },
+    {
+      name: "Entrez le volume de liquide",
+      text: "Saisissez la quantité totale de liquide. Le calculateur vous donnera les poids exacts de beurre et de farine.",
+    },
+    {
+      name: "Respectez le temps de cuisson",
+      text: "Cuisez votre mélange beurre-farine jusqu'au stade souhaité (Blanc, Blond ou Brun) pour correspondre à votre recette.",
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: "calculateur-roux-proportions-sauce-bechamel-veloute",
   title: "Calculateur de Roux Professionnel et Sauces Mères",
@@ -221,5 +292,5 @@ export const content: ToolLocaleContent = {
       html: "Notre calculateur de roux garantit une consistance technique parfaite pour toutes vos créations culinaires.",
     },
   ],
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

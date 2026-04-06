@@ -1,5 +1,84 @@
 import type { ToolLocaleContent } from "../../../types";
 
+const title = "Calculadora de Salmuera por Equilibrio";
+const description = "La ciencia del equilibrio para carnes jugosas y fermentados perfectos. Calcula la salinidad exacta basada en el peso total de ingrediente y agua.";
+const faq = [
+    {
+      question: "¿Qué es el método de salmuera por equilibrio?",
+      answer:
+        "El método de equilibrio calcula la sal en función del peso total (agua + ingrediente), no solo del agua. Esto garantiza una concentración de sal consistente independientemente de la cantidad de ingrediente que uses.",
+    },
+    {
+      question: "¿Cuánta sal necesito para hacer encurtidos?",
+      answer:
+        "Para vegetales fermentados (pepinillos, chucrut, kimchi) se recomienda entre 2% y 3% de sal. Para carnes, entre 1.5% y 2%. La calculadora te da la cantidad exacta según tu peso de ingredientes.",
+    },
+    {
+      question: "¿Puedo congelar la carne después de la salmuera?",
+      answer:
+        "Sí, es ideal. La salmuera protege contra quemaduras por congelación y la carne estará lista para cocinar al descongelar. Sin embargo, evita congelar vegetales fermentados ya que se volverán papilla.",
+    },
+    {
+      question: "¿Por qué añadir azúcar a la salmuera?",
+      answer:
+        "El azúcar tiene dos funciones: facilita la reacción de Maillard (dorado) en carnes y equilibra el sabor salino sin hacer que el producto sepa dulce. No convierte tu salmuera en un postre.",
+    },
+  ];
+const howTo = [
+    {
+      name: "Determina tu objetivo",
+      text: "Decide si vas a hacer carnes en salmuera (1.5-2%), fermentados (2-3%), salsas (3.5%) o conservas de larga duración (5%+). Cada una tiene un tiempo y propósito diferente.",
+    },
+    {
+      name: "Pesa ingrediente y agua",
+      text: "Pesa el producto (carne, vegetales) y el agua exactamente. La precisión es crítica: incluso 5g de diferencia cambia el resultado. Usa una balanza de precisión.",
+    },
+    {
+      name: "Calcula con la herramienta",
+      text: "Introduce los pesos en la calculadora y ajusta la salinidad según tu tipo de producto. La herramienta te dirá exactamente cuánta sal y azúcar necesitas.",
+    },
+    {
+      name: "Disuelve y mezcla",
+      text: "Disuelve completamente la sal en agua fría antes de añadir el producto. Para carnes, asegúrate de que la salmuera cubra todo. Para fermentados, el peso debe estar sumergido.",
+    },
+    {
+      name: "Fermenta o cura",
+      text: "Refrigera según el tipo: 4-48 horas para carnes, 1-3 semanas para fermentados. El tiempo exacto depende de la temperatura y tu gusto personal.",
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: "salmuera",
   title: "Calculadora de Salmuera por Equilibrio",
@@ -218,5 +297,5 @@ export const content: ToolLocaleContent = {
 		},
 	],
 
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

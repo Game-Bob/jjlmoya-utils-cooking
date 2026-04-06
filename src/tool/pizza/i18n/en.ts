@@ -1,5 +1,98 @@
 import type { ToolLocaleContent } from "../../../types";
 
+const title = "Neapolitan Pizza Dough Calculator";
+const description = "Calculate the exact proportions of flour, water, salt and yeast to prepare authentic Neapolitan pizza at home with professional results.";
+const faq = [
+    {
+      question: "What is the ideal hydration for Neapolitan pizza?",
+      answer:
+        "According to AVPN protocol, standard hydration is 63-67%. For beginners, 60-62% is more manageable. For advanced pizzaiolos with strong flour (W300+), 70-75% produces extraordinary doughs but requires technique.",
+    },
+    {
+      question: "How long should the dough ferment?",
+      answer:
+        "Minimum 24 hours in fridge (4°C) to activate enzymes. Optimal is 48-72 hours. Beyond 72 hours, you need very strong flour (W300+) or the dough becomes too acidic.",
+    },
+    {
+      question: "Can I use dry yeast?",
+      answer:
+        "Yes. Dry yeast equals 0.4x fresh (1g dry = 2.5g fresh). Quality is similar, but fresh yeast provides more complex flavor.",
+    },
+    {
+      question: "Can I make Neapolitan pizza in a home oven?",
+      answer:
+        "Yes, but with adaptations. Preheat to maximum (250-280°C) with pizza stone for 45-60 minutes. Cooking will take 5-7 minutes instead of 60-90 seconds, but results are acceptable.",
+    },
+    {
+      question: "What flour should I use?",
+      answer:
+        "Ideal: Caputo Pizzeria (W260-280) or Manitoba (W350-400). Alternative: any flour with 11-13g protein per 100g. Avoid weak flours (W130-160) for long fermentations.",
+    },
+    {
+      question: "Why does the dough tear when stretching?",
+      answer:
+        "The gluten isn't relaxed. Let the ball rest 2-3 hours at room temperature. If it repeats, kneading was insufficient or flour is too weak.",
+    },
+  ];
+const howTo = [
+    {
+      name: "Calculate proportions",
+      text: "Use this calculator to get exact grams of each ingredient based on pizza quantity and ball weight.",
+    },
+    {
+      name: "Mix the dough",
+      text: "Combine flour with warm water (22-25°C), salt (dissolved first) and yeast. Knead 8-10 minutes with mixer or 15-20 minutes by hand.",
+    },
+    {
+      name: "Bulk ferment",
+      text: "Let entire dough ferment 1-2 hours at room temperature (20-25°C) until doubled in volume.",
+    },
+    {
+      name: "Divide into balls",
+      text: "Divide dough into portions of indicated weight. Rest 15-20 minutes before shaping balls.",
+    },
+    {
+      name: "Long fermentation",
+      text: "Place balls in sealed container in fridge (4°C) for 24-72 hours. This critical step generates flavor and digestibility.",
+    },
+    {
+      name: "Stretch and bake",
+      text: "Remove from cold 30 minutes before. Stretch from center outward. Bake at maximum temperature 60-90 seconds (wood) or 5-7 minutes (home).",
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: "neapolitan-pizza-dough-calculator-authentic-recipe",
   title: "Neapolitan Pizza Dough Calculator",
@@ -284,5 +377,5 @@ export const content: ToolLocaleContent = {
       html: "Our calculator automates specific proportions so you can focus on what matters most: technique and passion for the final product.",
     },
   ],
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

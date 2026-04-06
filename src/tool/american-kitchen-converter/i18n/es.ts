@@ -1,5 +1,80 @@
 import type { ToolLocaleContent } from '../../../types';
 
+const title = "Conversor Cocina Americana Cups a Gramos y Temperaturas";
+const description = "Convierte cups, tablespoons y Fahrenheit al sistema métrico. La brújula para descifrar recetas estadounidenses con precisión profesional.";
+const faq = [
+    {
+      question: '¿Cuál es la diferencia entre 1 cup y 250ml?',
+      answer: '1 cup estadounidense = 236.588ml, no 250ml. Para propósitos prácticos, usamos 240ml. Aunque parece pequeña, esta diferencia de 4% puede afectar en recetas sensibles como macarons o mousses.',
+    },
+    {
+      question: '¿Por qué la harina no siempre pesa lo mismo?',
+      answer: 'Porque la harina se compacta con el tiempo y el transporte. Una harina recién tamizada pesa menos que una que ha estado en la despensa. Por eso, los panaderos profesionales siempre pesan, nunca miden volumen.',
+    },
+    {
+      question: '¿Cuál es la diferencia entre Tbsp y tsp?',
+      answer: '1 Tablespoon (Tbsp) = 15ml. 1 Teaspoon (tsp) = 5ml. Una cucharada es 3 veces una cucharita. En recetas de repostería, los errores con especias (que se miden en tsp) son comunes.',
+    },
+    {
+      question: '¿Es lo mismo una cup US que una cup imperial?',
+      answer: 'No. 1 US cup = 236ml. 1 Imperial cup (UK) = 284ml. Una diferencia del 20%. La mayoría de blogs estadounidenses usan US cups. Si la receta no especifica, asume US.',
+    },
+    {
+      question: '¿A qué temperatura corresponde el "gas 4" del horno?',
+      answer: 'Gas 4 = 180°C = 350°F. Es la escala británica. En repostería española, buscamos el número equivalente en tu horno: algunos usan gas, otros electrónico.',
+    },
+  ];
+const howTo = [
+    {
+      name: 'Selecciona el tipo de conversión',
+      text: 'Elige entre Cups a Gramos, Tablespoons/Teaspoons a Gramos, o Fahrenheit a Celsius.',
+    },
+    {
+      name: 'Escoge el ingrediente',
+      text: 'Cada alimento tiene una densidad diferente. La harina, azúcar, mantequilla: todos pesan distinto.',
+    },
+    {
+      name: 'Ingresa la cantidad',
+      text: 'Escribe el número de cups, cucharas o grados. El conversor calcula el equivalente al instante.',
+    },
+    {
+      name: 'Ajusta tu receta',
+      text: 'Con la conversión exacta, ahora puedes seguir la receta estadounidense con precisión profesional.',
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: 'conversor-unidades-cocina-americana',
   title: 'Conversor Cocina Americana Cups a Gramos y Temperaturas',
@@ -277,5 +352,5 @@ export const content: ToolLocaleContent = {
       text: 'Con la conversión exacta, ahora puedes seguir la receta estadounidense con precisión profesional.',
     },
   ],
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

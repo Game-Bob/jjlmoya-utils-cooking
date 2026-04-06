@@ -1,5 +1,76 @@
 import type { ToolLocaleContent } from '../../../types';
 
+const title = "Sourdough Starter Feeding Calculator";
+const description = "Automatically calculate exact proportions of starter, flour, and water for your sourdough maintenance and feeding. Preset or custom ratios available.";
+const faq = [
+    {
+      question: 'What is a 1:1:1 ratio?',
+      answer: 'It\'s the most common ratio for maintaining sourdough starter at room temperature. It means 1 part starter, 1 part flour, and 1 part water. Best for daily feedings.',
+    },
+    {
+      question: 'When should I use a 1:2:2 ratio?',
+      answer: 'A 1:2:2 ratio is often used to reactive or wake up a starter. It provides a more predictable fermentation curve, ideal for reinvigorating a culture after refrigeration.',
+    },
+    {
+      question: 'Why use the 1:5:5 "sweet spot"?',
+      answer: 'The 1:5:5 ratio is a favorite for many bakers. It allows for an 8-12 hour fermentation window at room temperature before the starter peaks, balancing convenience with time control.',
+    },
+    {
+      question: 'Can I use custom ratios?',
+      answer: 'Absolutely. If you have a specific feeding protocol, you can enter your own ratios. Some bakers use 1:10:10 for very slow fermentation, others use 1:1:0.8 for a stiffer starter.',
+    },
+    {
+      question: 'Does the calculator round the grams?',
+      answer: 'Yes. It rounds to the nearest whole number for practicality. For maximum precision, use a digital scale; however, small rounding differences won\'t significantly impact fermentation.',
+    },
+  ];
+const howTo = [
+    {
+      name: 'Enter total amount needed',
+      text: 'Define the total weight of sourdough starter you need for your recipe (e.g., 300g for a typical loaf).',
+    },
+    {
+      name: 'Select feeding ratio',
+      text: 'Choose from preset ratios (Maintain, Activate, Retard, Strong, Sweet Spot) or create your own custom ratio.',
+    },
+    {
+      name: 'Get your exact measurements',
+      text: 'The calculator shows you exactly how much starter, flour, and water to mix. Combine and ferment according to your schedule.',
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: 'sourdough-starter-feeding-calculator-ratio-proportions',
   title: 'Sourdough Starter Feeding Calculator',
@@ -238,5 +309,5 @@ export const content: ToolLocaleContent = {
     totalDough: 'Total Dough',
     mm: 'ST',
   },
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

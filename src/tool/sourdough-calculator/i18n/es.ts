@@ -1,5 +1,76 @@
 import type { ToolLocaleContent } from '../../../types';
 
+const title = "Calculadora de Masa Madre Ratios de Fermentación";
+const description = "Calcula automáticamente las proporciones de masa madre, harina y agua para mantener tu cultivo. Ratios predefinidos o personalizados.";
+const faq = [
+    {
+      question: '¿Qué es el ratio 1:1:1?',
+      answer: 'Es el ratio más común para mantener la masa madre a temperatura ambiente. Significa 1 parte de masa madre, 1 parte de harina y 1 parte de agua. Útil cuando refrescas diariamente.',
+    },
+    {
+      question: '¿Cuándo uso 1:2:2?',
+      answer: 'El ratio 1:2:2 es para activar la masa madre. Genera una fermentación más lenta pero predecible. Ideal si guardarás el cultivo en frío y quieres revigorarlo.',
+    },
+    {
+      question: '¿Cuál es el "sweet spot" 1:5:5?',
+      answer: 'El ratio 1:5:5 es el "sweet spot" para muchos panaderos. Permite 8-12 horas de fermentación a temperatura ambiente antes de que la masa madre esté lista. Equilibra comodidad con control de tiempo.',
+    },
+    {
+      question: '¿Puedo usar ratios personalizados?',
+      answer: 'Absolutamente. Si tienes un protocolo específico, puedes ingresar tus propios ratios. Algunos panaderos usan 1:10:10 para fermentación lentísima, otros 1:1:0.8 para menos agua.',
+    },
+    {
+      question: '¿La calculadora redondea los gramos?',
+      answer: 'Sí. Redondea al número entero más cercano para practicidad. Si necesitas máxima precisión, usa una báscula digital. Los pequeños redondeos no afectan significativamente la fermentación.',
+    },
+  ];
+const howTo = [
+    {
+      name: 'Ingresa la cantidad total que necesitas',
+      text: 'Define el peso total de masa madre que requieres para tu receta (ej: 300g para un pan típico).',
+    },
+    {
+      name: 'Selecciona el ratio de refresco',
+      text: 'Elige entre los ratios predefinidos (Mantener, Activar, Retardar, Fuerte, Sweet Spot) o crea uno personalizado.',
+    },
+    {
+      name: 'Obtén las cantidades exactas',
+      text: 'La calculadora te muestra cuánto de masa madre, harina y agua necesitas. Mezcla estos ingredientes y deja fermentar según tu protocolo.',
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: 'calculadora-masa-madre',
   title: 'Calculadora de Masa Madre Ratios de Fermentación',
@@ -239,5 +310,5 @@ export const content: ToolLocaleContent = {
     totalDough: 'Total Masa',
     mm: 'MM',
   },
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

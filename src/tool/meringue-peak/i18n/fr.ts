@@ -1,5 +1,76 @@
 import type { ToolLocaleContent } from "../../../types";
 
+const title = "Calculateur de Meringue et Blancs en Neige Professionnel";
+const description = "La plus simple mais la moins stable. Blancs et sucre fouettés à froid.";
+const faq = [
+    {
+      question: "Quel est le ratio idéal blancs/sucre ?",
+      answer: "Le standard professionnel est un ratio de 1:2. Pour chaque gramme de blanc d'œuf, utilisez deux grammes de sucre pour assurer une structure stable et ferme.",
+    },
+    {
+      question: "Comment savoir si les blancs sont assez fermes ?",
+      answer: "Les blancs sont prêts quand ils forment une pointe verticale qui ne se courbe pas. Le mélange doit être très brillant, dense, et rester dans le bol même retourné.",
+    },
+    {
+      question: "Quelle meringue choisir pour un décor ?",
+      answer: "La meringue italienne est privilégiée car le sirop chaud 'cuit' les protéines, ce qui la rend stable et résistante à l'humidité pendant des heures.",
+    },
+    {
+      question: "Pourquoi mes blancs ne montent-ils pas ?",
+      answer: "La moindre trace de gras (jaune d'œuf, résidus sur le matériel) empêche la formation de la mousse. Utilisez toujours un bol en métal ou en verre parfaitement propre.",
+    },
+  ];
+const howTo = [
+    {
+      name: "Pesez vos blancs d'œufs",
+      text: "Utilisez une balance digitale. Une différence de 5g modifie déjà la quantité de sucre nécessaire.",
+    },
+    {
+      name: "Calculez le sucre",
+      text: "Entrez le poids dans l'outil pour obtenir les mesures exactes de sucre semoule et/ou glace.",
+    },
+    {
+      name: "Choisissez la technique",
+      text: "Française pour la cuisson simple, Italienne pour la stabilité, ou Suisse pour les crèmes soyeuses.",
+    },
+    {
+      name: "Fouettez jusqu'au brillant",
+      text: "Suivez le guide des temps jusqu'à obtenir une pointe ferme et verticale (le fameux bec d'oiseau).",
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: "calculateur-meringue-proportions-sucre-blancs-oeuf",
   title: "Calculateur de Meringue et Blancs en Neige Professionnel",
@@ -230,5 +301,5 @@ export const content: ToolLocaleContent = {
       html: "Notre calculateur automatise les calculs pour que vous puissiez vous concentrer sur le fouettage jusqu'au brillant parfait.",
     },
   ],
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

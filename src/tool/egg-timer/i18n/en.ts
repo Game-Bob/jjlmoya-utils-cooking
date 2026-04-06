@@ -1,5 +1,80 @@
 import type { ToolLocaleContent } from "../../../types";
 
+const title = "Precision Scientific Egg Timer and Altitude Calculator";
+const description = "Master the thermodynamics of the perfect egg. Calculate exact boiling times based on your altitude, egg size, and initial temperature.";
+const faq = [
+    {
+      question: "Why does altitude affect how long eggs take to boil?",
+      answer:
+        "Water boils at lower temperatures as you go higher in altitude because there is less atmospheric pressure. At 2,000 meters, water boils at roughly 93°C instead of 100°C, meaning your egg needs much more time to reach the same internal temperature.",
+    },
+    {
+      question: "Should I use eggs straight from the fridge?",
+      answer:
+        "Fridge eggs (around 4°C) require roughly 1.5 to 2 minutes more than room-temperature eggs. Our calculator adjusts for this 'thermal starting line' automatically to ensure perfect results.",
+    },
+    {
+      question: "What causes the unappealing green ring on yolks?",
+      answer:
+        "The green ring is ferrous sulfide. It forms when the sulfur in the egg white reacts with the iron in the yolk due to overcooking or high heat. To prevent it, use our timer and immediately submerge the egg in an ice bath.",
+    },
+    {
+      question: "Why are some eggs so difficult to peel?",
+      answer:
+        "Very fresh eggs have a lower pH, making the membrane stick tightly to the shell. For easy peeling, use eggs that are 1-2 weeks old, drop them into already boiling water, and use an ice bath after cooking.",
+    },
+  ];
+const howTo = [
+    {
+      name: "Define starting conditions",
+      text: "Select your egg's initial temperature (Fridge vs. Room) and size (S to XL) to establish the thermodynamic base.",
+    },
+    {
+      name: "Adjust for your location",
+      text: "Enter your altitude or use our automatic geolocation to calibrate the exact boiling point of water at your current pressure.",
+    },
+    {
+      name: "Start the precision timer",
+      text: "Begin the countdown. Our tool calculates the precise seconds needed to denature specific egg proteins.",
+    },
+    {
+      name: "Apply the ice bath",
+      text: "When the timer ends, immediately move the egg to ice-cold water. This 'thermal shock' stops residual cooking and ensures easy peeling.",
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: "perfect-boiled-egg-timer-altitude-calculator",
   title: "Precision Scientific Egg Timer and Altitude Calculator",
@@ -226,5 +301,5 @@ export const content: ToolLocaleContent = {
       html: "Our calculator utilizes the Charles Williams equation to calibrate every second based on your location and fridge temperature.",
     },
   ],
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

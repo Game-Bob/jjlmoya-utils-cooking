@@ -1,5 +1,80 @@
 import type { ToolLocaleContent } from '../../../types';
 
+const title = "Temporizador de Cocina Múltiple";
+const description = "Gestiona múltiples tiempos de cocción simultáneamente. Alarmas independientes, ideal para chefs y organización en la cocina (Mise en Place).";
+const faq = [
+		{
+			question: '¿Cuántos temporizadores puedo crear?',
+			answer:
+				'Ilimitados. Añade tantos como necesites con el botón \'+\'. Ideal para cocinar varios platos simultáneamente: pasta hirviendo, salsa reduciéndose, carne reposando, y horno funcionando, todo a la vez.',
+		},
+		{
+			question: '¿Por qué es importante el tiempo de reposo en carnes?',
+			answer:
+				'Cuando cortas carne recién salida del fuego, los jugos escapan al plato. Si reposas 5-10 minutos, las fibras se relajan y los jugos se redistribuyen. Resultado: carne jugosa en lugar de seca. El reposo es cocción pasiva.',
+		},
+		{
+			question: '¿Funciona con la pantalla bloqueada?',
+			answer:
+				'Sí, pero necesitas dar permisos de notificaciones. Los temporizadores siguen corriendo en segundo plano y te avisarán con sonido y notificación del navegador incluso si cambias de pestaña o bloqueas el móvil.',
+		},
+		{
+			question: '¿Qué es la \'Zona de Peligro\' alimentaria?',
+			answer:
+				'Entre 5°C y 65°C las bacterias se multiplican rápidamente. Los alimentos cocinados no deben estar en esta zona más de 2 horas (1 hora si hace >30°C). Usa un temporizador para controlar el enfriamiento antes de refrigerar.',
+		},
+	];
+const howTo = [
+		{
+			name: 'Crea múltiples temporizadores',
+			text: 'Usa el botón \'+\' para añadir tantos temporizadores como necesites. Ideal para orquestar varios platos simultáneamente.',
+		},
+		{
+			name: 'Personaliza cada temporizador',
+			text: 'Cambia el nombre de cada temporizador para identificar qué está cocinando: \'Horno\', \'Arroz\', \'Salsa\', etc.',
+		},
+		{
+			name: 'Controla desde el dock móvil',
+			text: 'En móviles, los temporizadores activos aparecen en un dock deslizable en la parte inferior. Pausa o reinicia directamente desde ahí.',
+		},
+		{
+			name: 'Recibe notificaciones',
+			text: 'Autoriza notificaciones para que el navegador te avise cuando se acabe el tiempo, incluso si cambias de pestaña.',
+		},
+	];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
 	slug: 'temporizador-cocina',
 	title: 'Temporizador de Cocina Múltiple',
@@ -150,5 +225,5 @@ export const content: ToolLocaleContent = {
 		},
 	],
 
-	schemas: [],
+	schemas: [faqSchema, howToSchema, appSchema],
 };

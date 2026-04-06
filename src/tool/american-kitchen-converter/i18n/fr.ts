@@ -1,5 +1,80 @@
 import type { ToolLocaleContent } from "../../../types";
 
+const title = "Convertisseur de Cuisine Américaine : Cups en Grammes, Fahrenheit";
+const description = "Convertissez les cups, tablespoons et Fahrenheit en système métrique. Votre boussole pour décoder les recettes américaines avec une précision professionnelle.";
+const faq = [
+    {
+      question: "Quelle est la différence entre 1 cup et 250ml ?",
+      answer: "1 cup américaine vaut environ 236,6ml, et non 250ml. En cuisine pratique, on utilise 240ml. Cette différence de 4% peut impacter les recettes sensibles comme les macarons.",
+    },
+    {
+      question: "Pourquoi le poids de la farine varie-t-il ?",
+      answer: "La farine se tasse avec le temps. Une cup de farine fraîchement tamisée pèse moins qu'une cup de farine restée longtemps dans son sac. Les professionnels pèsent toujours leurs ingrédients.",
+    },
+    {
+      question: "Quelle est la différence entre Tbsp et tsp ?",
+      answer: "1 Tablespoon (Tbsp) = 15ml. 1 Teaspoon (tsp) = 5ml. Il y a exactement trois cuillères à café dans une cuillère à soupe.",
+    },
+    {
+      question: "La cup américaine est-elle identique à la cup impériale ?",
+      answer: "Non. Une cup US fait 236ml, tandis qu'une cup Impériale (UK) fait 284ml, soit 20% de différence ! La plupart des blogs utilisent le standard US.",
+    },
+    {
+      question: "À quelle température correspond le Thermostat 6 ?",
+      answer: "Le Thermostat 6 correspond à 180°C, soit environ 350°F. C'est la température de cuisson la plus courante.",
+    },
+  ];
+const howTo = [
+    {
+      name: "Sélectionnez le type de conversion",
+      text: "Choisissez entre Cups en Grammes, Cuillères en Grammes ou Fahrenheit en Celsius.",
+    },
+    {
+      name: "Choisissez l'ingrédient",
+      text: "Chaque aliment a une densité différente. La farine, le sucre ou le beurre pèsent différemment.",
+    },
+    {
+      name: "Entrez la quantité",
+      text: "Saisissez le nombre de cups ou de degrés. La conversion métrique s'affiche instantanément.",
+    },
+    {
+      name: "Ajustez votre recette",
+      text: "Avec des mesures précises, vous pouvez reproduire n'importe quelle recette internationale avec succès.",
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: "convertisseur-mesures-cuisine-americaine-cups-grammes",
   title: "Convertisseur de Cuisine Américaine : Cups en Grammes, Fahrenheit",
@@ -288,5 +363,5 @@ export const content: ToolLocaleContent = {
       html: "Utiliser un convertisseur professionnel transforme la frustration des recettes étrangères en succès culinaire.",
     },
   ],
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

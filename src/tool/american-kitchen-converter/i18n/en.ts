@@ -1,5 +1,80 @@
 import type { ToolLocaleContent } from "../../../types";
 
+const title = "US Cooking Conversion Calculator: Cups to Grams";
+const description = "Convert cups, tablespoons, and Fahrenheit to the metric system. Your professional compass for decoding American recipes with absolute precision.";
+const faq = [
+    {
+      question: "What's the difference between 1 cup and 250ml?",
+      answer: "1 US cup is approximately 236.6ml, not 250ml. For practical kitchen results, we use 240ml. Even this small 4% difference can affect sensitive recipes like macarons or professional pastries.",
+    },
+    {
+      question: "Why doesn't flour always weigh the same?",
+      answer: "Flour compacts over time and during transport. A freshly sifted cup of flour weighs less than a 'packed' cup from the bottom of the bag. Professional bakers always weigh ingredients for consistency.",
+    },
+    {
+      question: "What's the difference between Tbsp and tsp?",
+      answer: "1 Tablespoon (Tbsp) is 15ml, while 1 Teaspoon (tsp) is 5ml. Exactly three teaspoons fit into one tablespoon. Errors in spice measurements (usually tsp) are common in home baking.",
+    },
+    {
+      question: "Is a US cup the same as an imperial cup?",
+      answer: "No. A US cup is 236ml, whereas an Imperial (UK) cup is 284ml—a 20% difference! Most online recipes use US cups. If not specified, the US standard is the safest assumption.",
+    },
+    {
+      question: "What temperature is 'Gas Mark 4'?",
+      answer: "Gas Mark 4 is equivalent to 350°F or 175°C. This is the most common temperature for standard cake baking.",
+    },
+  ];
+const howTo = [
+    {
+      name: "Select conversion type",
+      text: "Choose between Cups to Grams, Tablespoons/Teaspoons to Grams, or Fahrenheit to Celsius.",
+    },
+    {
+      name: "Pick your ingredient",
+      text: "Every food has a different density. Flour, sugar, and butter all weigh differently per cup.",
+    },
+    {
+      name: "Enter the quantity",
+      text: "Input the number of cups, spoons, or degrees. The converter calculates the metric equivalent instantly.",
+    },
+    {
+      name: "Adjust your recipe",
+      text: "With exact metric measurements, you can now replicate any international recipe with professional success.",
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: "us-cooking-conversion-calculator-cups-to-grams-fahrenheit",
   title: "US Cooking Conversion Calculator: Cups to Grams",
@@ -278,5 +353,5 @@ export const content: ToolLocaleContent = {
       html: "Using a professional converter turns the frustration of foreign recipes into the success of a perfect bake.",
     },
   ],
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

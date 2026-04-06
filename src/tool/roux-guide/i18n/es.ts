@@ -1,5 +1,76 @@
 import type { ToolLocaleContent } from '../../../types';
 
+const title = "Guía Maestra de Roux y Salsas Madre";
+const description = "Calculadora interactiva de Roux. Aprende a crear Bechamel, Velouté y Espagnole con proporciones exactas. La base de la alta cocina francesa.";
+const faq = [
+    {
+      question: '¿Qué es un Roux y para qué sirve?',
+      answer: 'Es una mezcla de grasa (normalmente mantequilla) y harina cocinada a fuego lento. Se utiliza como agente espesante base para las salsas madre francesas como la Bechamel o la Velouté.',
+    },
+    {
+      question: '¿Cuál es la proporción ideal para un Roux?',
+      answer: 'La proporción estándar es 1:1 en peso. Por ejemplo, 50g de mantequilla y 50g de harina. Esta mezcla puede espesar aproximadamente 1 litro de líquido dependiendo de la densidad deseada.',
+    },
+    {
+      question: '¿Qué diferencia hay entre los tipos de Roux?',
+      answer: 'El Roux blanco se cocina 2-3 min (Bechamel). El rubio 5-8 min (Velouté). El oscuro o "Brown" hasta 15-20 min (Española). A más color, más sabor a nuez pero menos capacidad espesante.',
+    },
+    {
+      question: '¿Cómo evitar los grumos?',
+      answer: 'La regla de oro es la temperatura opuesta: líquido frío sobre roux caliente, o líquido caliente sobre roux frío. Añade el líquido poco a poco y bate constantemente con varillas.',
+    },
+    {
+      question: '¿Por qué necesito más roux oscuro?',
+      answer: 'Al tostar el roux, el calor rompe las cadenas de almidón en cadenas cortas (dextrinas). Estas son sabrosas pero menos efectivas espesando. Por eso un roux oscuro necesita 15% más peso que uno blanco para espesar igual.',
+    },
+  ];
+const howTo = [
+    {
+      name: 'Selecciona el tipo de líquido',
+      text: 'Elige entre leche (Bechamel), fondo claro (Velouté), fondo oscuro (Espagnole) o tomate. Cada uno requiere un tipo diferente de roux.',
+    },
+    {
+      name: 'Define el espesor deseado',
+      text: 'Desde sopa/crema hasta masa para croquetas. La calculadora ajustará automáticamente el ratio de roux necesario.',
+    },
+    {
+      name: 'Ingresa el volumen de líquido',
+      text: 'Especifica cuántos ml de líquido necesitas espesar. La calculadora te dirá exactamente cuánta mantequilla y harina usar.',
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: 'guia-maestro-roux',
   title: 'Guía Maestra de Roux y Salsas Madre',
@@ -221,5 +292,5 @@ export const content: ToolLocaleContent = {
     brown: 'Oscuro',
     beurreManied: 'Beurre Manié (Si necesitas ajustar al final)',
   },
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };

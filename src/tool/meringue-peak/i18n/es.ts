@@ -1,5 +1,76 @@
 import type { ToolLocaleContent } from '../../../types';
 
+const title = "Calculadora de Merengue y Punto de Nieve";
+const description = "Calcula la cantidad exacta de azúcar para merengue francés, italiano o suizo según el peso de tus claras. Tiempos de batido y trucos de repostería.";
+const faq = [
+    {
+      question: '¿Qué relación de azúcar y clara es la ideal?',
+      answer: 'La regla de oro en repostería es el ratio 1:2. Por cada gramo de clara de huevo, se deben utilizar dos gramos de azúcar para asegurar una estructura estable y firme.',
+    },
+    {
+      question: '¿Cómo saber si el merengue está a punto de nieve?',
+      answer: 'El punto de nieve o pico firme se alcanza cuando, al levantar las varillas, el merengue forma una punta que se mantiene vertical sin doblarse. Además, el merengue debe verse muy brillante.',
+    },
+    {
+      question: '¿Cuál es el merengue más estable para decorar?',
+      answer: 'El merengue italiano es el más estable de los tres tipos principales, gracias a que el almíbar caliente cocina ligeramente las proteínas de la clara, creando una estructura más resistente al calor y al paso del tiempo.',
+    },
+    {
+      question: '¿Se pueden usar claras pasteurizadas de bote?',
+      answer: 'Sí, se pueden utilizar, pero suelen tardar un poco más en montar que las claras frescas. Un truco es añadir una pizca de cremor tártaro o unas gotas de limón para ayudar a la estabilidad.',
+    },
+  ];
+const howTo = [
+    {
+      name: 'Pesar las claras',
+      text: 'Utiliza una báscula digital para obtener el peso exacto de las claras de huevo sin rastro de yema.',
+    },
+    {
+      name: 'Introducir peso',
+      text: 'Escribe ese peso en nuestra calculadora para obtener las cantidades de azúcar necesarias.',
+    },
+    {
+      name: 'Elegir técnica',
+      text: 'Selecciona si vas a preparar un merengue francés (básico), italiano (estable) o suizo (sedoso).',
+    },
+    {
+      name: 'Batir y verificar',
+      text: 'Sigue los tiempos estimados y comprueba la consistencia hasta alcanzar el punto de nieve firme.',
+    },
+  ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
 export const content: ToolLocaleContent = {
   slug: 'calculadora-punto-de-nieve-merengue',
   title: 'Calculadora de Merengue y Punto de Nieve',
@@ -230,5 +301,5 @@ export const content: ToolLocaleContent = {
 		},
 	],
 
-  schemas: [],
+  schemas: [faqSchema, howToSchema, appSchema],
 };
