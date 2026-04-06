@@ -1,10 +1,12 @@
 import type { ToolLocaleContent } from "../../../types";
 
 export const content: ToolLocaleContent = {
-  slug: "pizza-napolitana",
+  slug: "pizza",
   title: "Calculadora de Masa Pizza Napolitana",
   description:
     "Calcula las proporciones exactas de harina, agua, sal y levadura para preparar la auténtica pizza napolitana en casa.",
+  faqTitle: "Preguntas Frecuentes",
+  bibliographyTitle: "Referencias",
   ui: {
     parameters: "Parámetros",
     quantity: "Cantidad",

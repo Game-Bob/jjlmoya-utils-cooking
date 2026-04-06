@@ -1,6 +1,12 @@
 ---
 import { Icon } from "astro-icon/components";
 import "./KitchenTimer.css";
+
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
 ---
 
 <div class="kitchen-timer-wrapper">
@@ -15,13 +21,13 @@ import "./KitchenTimer.css";
 					<div class="timer-name-wrapper">
 						<input
 							type="text"
-							value="Temporizador 1"
+							value={ui.timerDefault1}
 							class="timer-name"
-							placeholder="Etiqueta"
+							placeholder={ui.label}
 						/>
 					</div>
 					<div class="status-badge">
-						<span class="status-text">Listo</span>
+						<span class="status-text">{ui.ready}</span>
 					</div>
 				</div>
 
@@ -37,7 +43,7 @@ import "./KitchenTimer.css";
 								placeholder="00"
 							/>
 						</div>
-						<label class="time-label">Horas</label>
+						<label class="time-label">{ui.hours}</label>
 					</div>
 
 					<span class="time-separator">:</span>
@@ -53,7 +59,7 @@ import "./KitchenTimer.css";
 								placeholder="00"
 							/>
 						</div>
-						<label class="time-label">Min</label>
+						<label class="time-label">{ui.minutes}</label>
 					</div>
 
 					<span class="time-separator">:</span>
@@ -69,7 +75,7 @@ import "./KitchenTimer.css";
 								placeholder="00"
 							/>
 						</div>
-						<label class="time-label">Seg</label>
+						<label class="time-label">{ui.seconds}</label>
 					</div>
 				</div>
 
@@ -82,18 +88,18 @@ import "./KitchenTimer.css";
 							<span class="icon-pause" style="display: none;">
 								<Icon name="mdi:pause" />
 							</span>
-							<span class="btn-text">Iniciar</span>
+							<span class="btn-text">{ui.start}</span>
 						</button>
 
 						<button class="btn-reset">
 							<Icon name="mdi:refresh" />
-							Reset
+							{ui.reset}
 						</button>
 					</div>
 
 					<div class="timer-quick-buttons">
-						<button class="btn-add-1m">+1 min</button>
-						<button class="btn-add-5m">+5 min</button>
+						<button class="btn-add-1m">{ui.addOneMin}</button>
+						<button class="btn-add-5m">{ui.addFiveMin}</button>
 					</div>
 				</div>
 			</div>
@@ -109,13 +115,13 @@ import "./KitchenTimer.css";
 					<div class="timer-name-wrapper">
 						<input
 							type="text"
-							value="Temporizador 2"
+							value={ui.timerDefault2}
 							class="timer-name"
-							placeholder="Etiqueta"
+							placeholder={ui.label}
 						/>
 					</div>
 					<div class="status-badge">
-						<span class="status-text">Listo</span>
+						<span class="status-text">{ui.ready}</span>
 					</div>
 				</div>
 
@@ -131,7 +137,7 @@ import "./KitchenTimer.css";
 								placeholder="00"
 							/>
 						</div>
-						<label class="time-label">Horas</label>
+						<label class="time-label">{ui.hours}</label>
 					</div>
 
 					<span class="time-separator">:</span>
@@ -147,7 +153,7 @@ import "./KitchenTimer.css";
 								placeholder="00"
 							/>
 						</div>
-						<label class="time-label">Min</label>
+						<label class="time-label">{ui.minutes}</label>
 					</div>
 
 					<span class="time-separator">:</span>
@@ -163,7 +169,7 @@ import "./KitchenTimer.css";
 								placeholder="00"
 							/>
 						</div>
-						<label class="time-label">Seg</label>
+						<label class="time-label">{ui.seconds}</label>
 					</div>
 				</div>
 
@@ -176,18 +182,18 @@ import "./KitchenTimer.css";
 							<span class="icon-pause" style="display: none;">
 								<Icon name="mdi:pause" />
 							</span>
-							<span class="btn-text">Iniciar</span>
+							<span class="btn-text">{ui.start}</span>
 						</button>
 
 						<button class="btn-reset">
 							<Icon name="mdi:refresh" />
-							Reset
+							{ui.reset}
 						</button>
 					</div>
 
 					<div class="timer-quick-buttons">
-						<button class="btn-add-1m">+1 min</button>
-						<button class="btn-add-5m">+5 min</button>
+						<button class="btn-add-1m">{ui.addOneMin}</button>
+						<button class="btn-add-5m">{ui.addFiveMin}</button>
 					</div>
 				</div>
 			</div>
@@ -203,13 +209,13 @@ import "./KitchenTimer.css";
 					<div class="timer-name-wrapper">
 						<input
 							type="text"
-							value="Temporizador 3"
+							value={ui.timerDefault3}
 							class="timer-name"
-							placeholder="Etiqueta"
+							placeholder={ui.label}
 						/>
 					</div>
 					<div class="status-badge">
-						<span class="status-text">Listo</span>
+						<span class="status-text">{ui.ready}</span>
 					</div>
 				</div>
 
@@ -225,7 +231,7 @@ import "./KitchenTimer.css";
 								placeholder="00"
 							/>
 						</div>
-						<label class="time-label">Horas</label>
+						<label class="time-label">{ui.hours}</label>
 					</div>
 
 					<span class="time-separator">:</span>
@@ -241,7 +247,7 @@ import "./KitchenTimer.css";
 								placeholder="00"
 							/>
 						</div>
-						<label class="time-label">Min</label>
+						<label class="time-label">{ui.minutes}</label>
 					</div>
 
 					<span class="time-separator">:</span>
@@ -257,7 +263,7 @@ import "./KitchenTimer.css";
 								placeholder="00"
 							/>
 						</div>
-						<label class="time-label">Seg</label>
+						<label class="time-label">{ui.seconds}</label>
 					</div>
 				</div>
 
@@ -270,18 +276,18 @@ import "./KitchenTimer.css";
 							<span class="icon-pause" style="display: none;">
 								<Icon name="mdi:pause" />
 							</span>
-							<span class="btn-text">Iniciar</span>
+							<span class="btn-text">{ui.start}</span>
 						</button>
 
 						<button class="btn-reset">
 							<Icon name="mdi:refresh" />
-							Reset
+							{ui.reset}
 						</button>
 					</div>
 
 					<div class="timer-quick-buttons">
-						<button class="btn-add-1m">+1 min</button>
-						<button class="btn-add-5m">+5 min</button>
+						<button class="btn-add-1m">{ui.addOneMin}</button>
+						<button class="btn-add-5m">{ui.addFiveMin}</button>
 					</div>
 				</div>
 			</div>
@@ -293,14 +299,14 @@ import "./KitchenTimer.css";
 			<div class="add-timer-icon">
 				<Icon name="mdi:plus" />
 			</div>
-			<span>Añadir Temporizador</span>
+			<span>{ui.addTimer}</span>
 		</button>
 	</div>
 
 	<div class="stop-all-container">
 		<button id="stop-all" class="stop-all-btn">
 			<Icon name="mdi:stop-circle-outline" />
-			Detener Todas
+			{ui.stopAll}
 		</button>
 	</div>
 
@@ -315,13 +321,13 @@ import "./KitchenTimer.css";
 					<div class="timer-name-wrapper">
 						<input
 							type="text"
-							value="Nuevo Temporizador"
+							value={ui.newTimerName}
 							class="timer-name"
-							placeholder="Etiqueta"
+							placeholder={ui.label}
 						/>
 					</div>
 					<div class="status-badge">
-						<span class="status-text">Listo</span>
+						<span class="status-text">{ui.ready}</span>
 					</div>
 				</div>
 
@@ -337,7 +343,7 @@ import "./KitchenTimer.css";
 								placeholder="00"
 							/>
 						</div>
-						<label class="time-label">Horas</label>
+						<label class="time-label">{ui.hours}</label>
 					</div>
 
 					<span class="time-separator">:</span>
@@ -353,7 +359,7 @@ import "./KitchenTimer.css";
 								placeholder="00"
 							/>
 						</div>
-						<label class="time-label">Min</label>
+						<label class="time-label">{ui.minutes}</label>
 					</div>
 
 					<span class="time-separator">:</span>
@@ -369,7 +375,7 @@ import "./KitchenTimer.css";
 								placeholder="00"
 							/>
 						</div>
-						<label class="time-label">Seg</label>
+						<label class="time-label">{ui.seconds}</label>
 					</div>
 				</div>
 
@@ -382,18 +388,18 @@ import "./KitchenTimer.css";
 							<span class="icon-pause" style="display: none;">
 								<Icon name="mdi:pause" />
 							</span>
-							<span class="btn-text">Iniciar</span>
+							<span class="btn-text">{ui.start}</span>
 						</button>
 
 						<button class="btn-reset">
 							<Icon name="mdi:refresh" />
-							Reset
+							{ui.reset}
 						</button>
 					</div>
 
 					<div class="timer-quick-buttons">
-						<button class="btn-add-1m">+1 min</button>
-						<button class="btn-add-5m">+5 min</button>
+						<button class="btn-add-1m">{ui.addOneMin}</button>
+						<button class="btn-add-5m">{ui.addFiveMin}</button>
 					</div>
 				</div>
 			</div>

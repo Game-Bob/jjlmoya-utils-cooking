@@ -1,31 +1,37 @@
 ---
 import "./MeringueCalculator.css";
+
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
 ---
 
 <div class="meringue-calculator-container">
     <div class="meringue-card meringue-fade-in">
         <div class="meringue-input-section">
             <div class="meringue-input-group">
-                <label for="whites-input">Peso de las Claras</label>
+                <label for="whites-input">{ui.whitesLabel}</label>
                 <div class="meringue-input-wrapper">
                     <input
                         type="number"
                         id="whites-input"
-                        placeholder="Ej. 120"
+                        placeholder={ui.whitesPlaceholder}
                         min="1"
                         max="2000"
                         value="120"
                     />
-                    <span class="meringue-input-unit">g</span>
+                    <span class="meringue-input-unit">{ui.whitesUnit}</span>
                 </div>
             </div>
 
             <div class="meringue-input-group">
-                <label>Tipo de Merengue</label>
+                <label>{ui.typeLabel}</label>
                 <div class="meringue-type-selector" id="type-selector">
-                    <button class="meringue-type-btn active" data-type="french">Francés</button>
-                    <button class="meringue-type-btn" data-type="italian">Italiano</button>
-                    <button class="meringue-type-btn" data-type="swiss">Suizo</button>
+                    <button class="meringue-type-btn active" data-type="french">{ui.typeFrench}</button>
+                    <button class="meringue-type-btn" data-type="italian">{ui.typeItalian}</button>
+                    <button class="meringue-type-btn" data-type="swiss">{ui.typeSwiss}</button>
                 </div>
             </div>
         </div>
@@ -36,7 +42,7 @@ import "./MeringueCalculator.css";
             <h3
                 style="font-size: 1.125rem; font-weight: 800; color: var(--text-dark); margin-bottom: 1.5rem;"
             >
-                Tiempos Estimados (Batido a media/alta velocidad)
+                {ui.timesHeading}
             </h3>
             <div class="meringue-time-grid" id="time-grid"></div>
         </div>
@@ -48,13 +54,13 @@ import "./MeringueCalculator.css";
                 <line x1="12" y1="16" x2="12.01" y2="16"></line>
             </svg>
             <p id="tip-text">
-                El merengue francés es el más común y fácil, ideal para hornear suspiros.
+                {ui.frenchTip}
             </p>
         </div>
     </div>
 </div>
 
-<script>
+<script is:inline define:vars={{ ui }}>
     const whitesInput = document.getElementById("whites-input");
     const typeSelector = document.getElementById("type-selector");
     const resultsGrid = document.getElementById("main-results");
@@ -64,39 +70,39 @@ import "./MeringueCalculator.css";
     let currentType = "french";
 
     const TIPS = {
-        french: "El merengue francés es el más común y fácil, ideal para hornear suspiros o añadir a masas aireadas. No es apto para comer en crudo.",
-        italian: "El merengue italiano es el más estable. Se hace con almíbar caliente a 118°C. Es perfecto para decorar tartas y comer directamente.",
-        swiss: "El merengue suizo se calienta al baño maría hasta que el azúcar se disuelve. Es muy versátil y ideal para cremas de mantequilla.",
+        french: ui.frenchTip,
+        italian: ui.italianTip,
+        swiss: ui.swissTip,
     };
 
     const STAGES = [
-        { name: "Espumado", desc: "Burbujas grandes, como jabón.", timeIdx: 0 },
-        { name: "Pico Blando", desc: "La punta se dobla al levantar.", timeIdx: 1 },
-        { name: "Punto de Nieve", desc: "Pico firme y brillante.", timeIdx: 2 },
+        { name: ui.stageSpumado, desc: ui.stageSpumadoDesc, timeIdx: 0 },
+        { name: ui.stageSoftPeaks, desc: ui.stageSoftPeaksDesc, timeIdx: 1 },
+        { name: ui.stageStiffPeaks, desc: ui.stageStiffPeaksDesc, timeIdx: 2 },
     ];
 
     function getRecipeData(type, weight) {
         const recipes = {
             french: {
                 results: [
-                    { label: "Azúcar Blanquilla", val: weight, unit: "g" },
-                    { label: "Azúcar Glas", val: weight, unit: "g" },
+                    { label: ui.frenchSugarWhite, val: weight, unit: "g" },
+                    { label: ui.frenchSugarPowder, val: weight, unit: "g" },
                 ],
-                times: ["1-2 min", "3-5 min", "7-9 min"],
+                times: [ui.frenchTime1, ui.frenchTime2, ui.frenchTime3],
             },
             italian: {
                 results: [
-                    { label: "Azúcar para Almíbar", val: weight * 2, unit: "g" },
-                    { label: "Agua", val: Math.round(weight * 0.6), unit: "ml" },
+                    { label: ui.italianSugarSyrup, val: weight * 2, unit: "g" },
+                    { label: ui.italianWater, val: Math.round(weight * 0.6), unit: "ml" },
                 ],
-                times: ["2 min", "5 min", "10-12 min"],
+                times: [ui.italianTime1, ui.italianTime2, ui.italianTime3],
             },
             swiss: {
                 results: [
-                    { label: "Azúcar Blanquilla", val: weight * 2, unit: "g" },
-                    { label: "Temperatura Máx", val: 60, unit: "°C" },
+                    { label: ui.swissSugarWhite, val: weight * 2, unit: "g" },
+                    { label: ui.swissMaxTemp, val: 60, unit: "°C" },
                 ],
-                times: ["1-2 min", "4-6 min", "8-10 min"],
+                times: [ui.swissTime1, ui.swissTime2, ui.swissTime3],
             },
         };
         return recipes[type];
@@ -136,7 +142,7 @@ import "./MeringueCalculator.css";
         const weight = parseFloat(whitesInput.value) || 0;
 
         if (weight <= 0) {
-            resultsGrid.innerHTML = '<p style="color: #ef4444; font-weight: 600;">Introduce un peso válido</p>';
+            resultsGrid.innerHTML = `<p style="color: #ef4444; font-weight: 600;">${ui.invalidWeightError}</p>`;
             return;
         }
 

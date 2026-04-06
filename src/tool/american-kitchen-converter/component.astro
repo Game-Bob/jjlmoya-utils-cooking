@@ -1,119 +1,125 @@
 ---
 import { Icon } from "astro-icon/components";
+
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
 ---
 
 <div class="akc-wrapper">
     <div class="akc-main-card">
         <div class="akc-tabs">
-            <button class="akc-tab-btn active" data-tab="cups" aria-label="Tazas a Gramos">
+            <button class="akc-tab-btn active" data-tab="cups" aria-label={ui.tabCupsAriaLabel}>
                 <Icon name="mdi:cup-outline" class="w-6 h-6" />
-                <span>Tazas a Gramos</span>
+                <span>{ui.tabCups}</span>
             </button>
-            <button class="akc-tab-btn" data-tab="spoons" aria-label="Cucharas a Gramos">
+            <button class="akc-tab-btn" data-tab="spoons" aria-label={ui.tabSpoonsAriaLabel}>
                 <Icon name="mdi:silverware-spoon" class="w-6 h-6" />
-                <span>Cucharas a Gramos</span>
+                <span>{ui.tabSpoons}</span>
             </button>
-            <button class="akc-tab-btn" data-tab="temps" aria-label="Temperaturas de Horno">
+            <button class="akc-tab-btn" data-tab="temps" aria-label={ui.tabTempsAriaLabel}>
                 <Icon name="mdi:thermometer" class="w-6 h-6" />
-                <span>Temperaturas</span>
+                <span>{ui.tabTemperatures}</span>
             </button>
         </div>
 
         <div class="akc-tab-content active" id="content-cups">
             <div class="akc-step-title">
                 <span class="akc-step-number">1</span>
-                <span>Selecciona el Ingrediente</span>
+                <span>{ui.stepSelectIngredient}</span>
             </div>
             <div class="akc-grid">
                 <button
                     class="akc-item-card cup-item active"
                     data-density="120"
-                    aria-label="Harina"
+                    aria-label={ui.cupFlourAriaLabel}
                 >
                     <div class="akc-item-icon">
                         <Icon name="mdi:sack-outline" class="w-8 h-8" />
                     </div>
                     <div>
-                        <div class="akc-item-name">Harina</div>
-                        <div class="akc-item-sub">120g / cup</div>
+                        <div class="akc-item-name">{ui.cupFlour}</div>
+                        <div class="akc-item-sub">{ui.cupFlourSub}</div>
                     </div>
                 </button>
                 <button
                     class="akc-item-card cup-item"
                     data-density="200"
-                    aria-label="Azúcar Blanco"
+                    aria-label={ui.cupWhiteSugarAriaLabel}
                 >
                     <div class="akc-item-icon"><Icon name="mdi:spoon-sugar" class="w-8 h-8" /></div>
                     <div>
-                        <div class="akc-item-name">Azúcar Blanco</div>
-                        <div class="akc-item-sub">200g / cup</div>
+                        <div class="akc-item-name">{ui.cupWhiteSugar}</div>
+                        <div class="akc-item-sub">{ui.cupWhiteSugarSub}</div>
                     </div>
                 </button>
                 <button
                     class="akc-item-card cup-item"
                     data-density="220"
-                    aria-label="Azúcar Moreno"
+                    aria-label={ui.cupBrownSugarAriaLabel}
                 >
                     <div class="akc-item-icon">
                         <Icon name="mdi:shaker-outline" class="w-8 h-8" />
                     </div>
                     <div>
-                        <div class="akc-item-name">Azúcar Moreno</div>
-                        <div class="akc-item-sub">220g / cup</div>
+                        <div class="akc-item-name">{ui.cupBrownSugar}</div>
+                        <div class="akc-item-sub">{ui.cupBrownSugarSub}</div>
                     </div>
                 </button>
-                <button class="akc-item-card cup-item" data-density="115" aria-label="Azúcar Glas">
+                <button class="akc-item-card cup-item" data-density="115" aria-label={ui.cupPowderSugarAriaLabel}>
                     <div class="akc-item-icon"><Icon name="mdi:snowflake" class="w-8 h-8" /></div>
                     <div>
-                        <div class="akc-item-name">Azúcar Glas</div>
-                        <div class="akc-item-sub">115g / cup</div>
+                        <div class="akc-item-name">{ui.cupPowderSugar}</div>
+                        <div class="akc-item-sub">{ui.cupPowderSugarSub}</div>
                     </div>
                 </button>
-                <button class="akc-item-card cup-item" data-density="227" aria-label="Mantequilla">
+                <button class="akc-item-card cup-item" data-density="227" aria-label={ui.cupButterAriaLabel}>
                     <div class="akc-item-icon">
                         <Icon name="mdi:cube-outline" class="w-8 h-8" />
                     </div>
                     <div>
-                        <div class="akc-item-name">Mantequilla</div>
-                        <div class="akc-item-sub">227g / cup</div>
+                        <div class="akc-item-name">{ui.cupButter}</div>
+                        <div class="akc-item-sub">{ui.cupButterSub}</div>
                     </div>
                 </button>
-                <button class="akc-item-card cup-item" data-density="85" aria-label="Cacao">
+                <button class="akc-item-card cup-item" data-density="85" aria-label={ui.cupCocoaAriaLabel}>
                     <div class="akc-item-icon">
                         <Icon name="mdi:coffee-outline" class="w-8 h-8" />
                     </div>
                     <div>
-                        <div class="akc-item-name">Cacao en Polvo</div>
-                        <div class="akc-item-sub">85g / cup</div>
+                        <div class="akc-item-name">{ui.cupCocoa}</div>
+                        <div class="akc-item-sub">{ui.cupCocoaSub}</div>
                     </div>
                 </button>
-                <button class="akc-item-card cup-item" data-density="240" aria-label="Líquido">
+                <button class="akc-item-card cup-item" data-density="240" aria-label={ui.cupLiquidsAriaLabel}>
                     <div class="akc-item-icon">
                         <Icon name="mdi:water-outline" class="w-8 h-8" />
                     </div>
                     <div>
-                        <div class="akc-item-name">Líquidos</div>
-                        <div class="akc-item-sub">240g / cup</div>
+                        <div class="akc-item-name">{ui.cupLiquids}</div>
+                        <div class="akc-item-sub">{ui.cupLiquidsSub}</div>
                     </div>
                 </button>
-                <button class="akc-item-card cup-item" data-density="90" aria-label="Avena">
+                <button class="akc-item-card cup-item" data-density="90" aria-label={ui.cupOatsAriaLabel}>
                     <div class="akc-item-icon">
                         <Icon name="mdi:bowl-outline" class="w-8 h-8" />
                     </div>
                     <div>
-                        <div class="akc-item-name">Avena</div>
-                        <div class="akc-item-sub">90g / cup</div>
+                        <div class="akc-item-name">{ui.cupOats}</div>
+                        <div class="akc-item-sub">{ui.cupOatsSub}</div>
                     </div>
                 </button>
             </div>
 
             <div class="akc-step-title">
                 <span class="akc-step-number">2</span>
-                <span>¿Cuántas Tazas (Cups)?</span>
+                <span>{ui.stepHowManyCups}</span>
             </div>
             <div class="akc-amount-control">
                 <div class="akc-stepper">
-                    <button class="akc-step-btn" id="cup-minus" aria-label="Restar">-</button>
+                    <button class="akc-step-btn" id="cup-minus" aria-label={ui.stepperMinus}>-</button>
                     <input
                         type="number"
                         class="akc-step-input"
@@ -121,100 +127,100 @@ import { Icon } from "astro-icon/components";
                         value="1"
                         min="0"
                         step="0.25"
-                        aria-label="Cantidad de Tazas"
+                        aria-label={ui.cupsAmountLabel}
                     />
-                    <button class="akc-step-btn" id="cup-plus" aria-label="Sumar">+</button>
+                    <button class="akc-step-btn" id="cup-plus" aria-label={ui.stepperPlus}>+</button>
                 </div>
                 <div class="akc-quick-amounts">
-                    <button class="akc-quick-btn cup-quick" data-val="0.25">1/4 Cup</button>
-                    <button class="akc-quick-btn cup-quick" data-val="0.3333">1/3 Cup</button>
-                    <button class="akc-quick-btn cup-quick" data-val="0.5">1/2 Cup</button>
-                    <button class="akc-quick-btn cup-quick" data-val="1">1 Cup</button>
+                    <button class="akc-quick-btn cup-quick" data-val="0.25">{ui.cupQuick1_4}</button>
+                    <button class="akc-quick-btn cup-quick" data-val="0.3333">{ui.cupQuick1_3}</button>
+                    <button class="akc-quick-btn cup-quick" data-val="0.5">{ui.cupQuick1_2}</button>
+                    <button class="akc-quick-btn cup-quick" data-val="1">{ui.cupQuick1}</button>
                 </div>
             </div>
 
             <div class="akc-result-display">
                 <div class="akc-result-value" id="cup-result">120</div>
-                <div class="akc-result-unit">Gramos</div>
+                <div class="akc-result-unit">{ui.unitGrams}</div>
             </div>
         </div>
 
         <div class="akc-tab-content" id="content-spoons">
             <div class="akc-step-title">
                 <span class="akc-step-number">1</span>
-                <span>Selecciona la Medida</span>
+                <span>{ui.stepSelectMeasure}</span>
             </div>
             <div class="akc-toggle">
                 <button
                     class="akc-toggle-btn spoon-toggle active"
                     data-multiplier="1"
-                    aria-label="Cucharada grande"
+                    aria-label={ui.spoonTablespoonAriaLabel}
                 >
-                    Cucharada Grande (Tbsp)
+                    {ui.spoonTablespoon}
                 </button>
                 <button
                     class="akc-toggle-btn spoon-toggle"
                     data-multiplier="0.3333"
-                    aria-label="Cucharadita pequeña"
+                    aria-label={ui.spoonTeaspoonAriaLabel}
                 >
-                    Cucharadita Pequeña (tsp)
+                    {ui.spoonTeaspoon}
                 </button>
             </div>
 
             <div class="akc-step-title">
                 <span class="akc-step-number">2</span>
-                <span>Selecciona el Ingrediente</span>
+                <span>{ui.stepSelectIngredient}</span>
             </div>
             <div class="akc-grid">
                 <button
                     class="akc-item-card spoon-item active"
                     data-density="15"
-                    aria-label="Levadura Química"
+                    aria-label={ui.spoonLeavingAriaLabel}
                 >
                     <div class="akc-item-icon">
                         <Icon name="mdi:flask-outline" class="w-8 h-8" />
                     </div>
                     <div>
-                        <div class="akc-item-name">Levadura</div>
-                        <div class="akc-item-sub">Polvo Hornear</div>
+                        <div class="akc-item-name">{ui.spoonLeavening}</div>
+                        <div class="akc-item-sub">{ui.spoonLeaveningSub}</div>
                     </div>
                 </button>
-                <button class="akc-item-card spoon-item" data-density="18" aria-label="Sal">
+                <button class="akc-item-card spoon-item" data-density="18" aria-label={ui.spoonSaltAriaLabel}>
                     <div class="akc-item-icon"><Icon name="mdi:shaker" class="w-8 h-8" /></div>
                     <div>
-                        <div class="akc-item-name">Sal Fina</div>
-                        <div class="akc-item-sub">Mineral</div>
+                        <div class="akc-item-name">{ui.spoonSalt}</div>
+                        <div class="akc-item-sub">{ui.spoonSaltSub}</div>
                     </div>
                 </button>
                 <button
                     class="akc-item-card spoon-item"
                     data-density="15"
-                    aria-label="Azúcar Blanco"
+                    aria-label={ui.spoonSugarAriaLabel}
                 >
                     <div class="akc-item-icon"><Icon name="mdi:spoon-sugar" class="w-8 h-8" /></div>
                     <div>
-                        <div class="akc-item-name">Azúcar Blanco</div>
-                        <div class="akc-item-sub">Granulado</div>
+                        <div class="akc-item-name">{ui.spoonSugar}</div>
+                        <div class="akc-item-sub">{ui.spoonSugarSub}</div>
                     </div>
                 </button>
-                <button class="akc-item-card spoon-item" data-density="15" aria-label="Líquido">
+                <button class="akc-item-card spoon-item" data-density="15" aria-label={ui.spoonLiquidsAriaLabel}>
                     <div class="akc-item-icon">
                         <Icon name="mdi:water-outline" class="w-8 h-8" />
                     </div>
                     <div>
-                        <div class="akc-item-name">Líquidos</div>
-                        <div class="akc-item-sub">Agua, Aceite</div>
+                        <div class="akc-item-name">{ui.spoonLiquids}</div>
+                        <div class="akc-item-sub">{ui.spoonLiquidsSub}</div>
                     </div>
                 </button>
             </div>
 
             <div class="akc-step-title">
                 <span class="akc-step-number">3</span>
-                <span>Cantidad</span>
+                <span>{ui.stepQuantity}</span>
             </div>
             <div class="akc-amount-control">
                 <div class="akc-stepper">
-                    <button class="akc-step-btn" id="spoon-minus" aria-label="Restar">-</button>
+                    <button class="akc-step-btn" id="spoon-minus" aria-label={ui.stepperMinus}>-</button>
                     <input
                         type="number"
                         class="akc-step-input"
@@ -222,51 +228,51 @@ import { Icon } from "astro-icon/components";
                         value="1"
                         min="0"
                         step="0.25"
-                        aria-label="Cantidad"
+                        aria-label={ui.spoonQuantityLabel}
                     />
-                    <button class="akc-step-btn" id="spoon-plus" aria-label="Sumar">+</button>
+                    <button class="akc-step-btn" id="spoon-plus" aria-label={ui.stepperPlus}>+</button>
                 </div>
                 <div class="akc-quick-amounts">
-                    <button class="akc-quick-btn spoon-quick" data-val="0.25">1/4</button>
-                    <button class="akc-quick-btn spoon-quick" data-val="0.5">1/2</button>
-                    <button class="akc-quick-btn spoon-quick" data-val="1">1</button>
-                    <button class="akc-quick-btn spoon-quick" data-val="2">2</button>
+                    <button class="akc-quick-btn spoon-quick" data-val="0.25">{ui.spoonQuick1_4}</button>
+                    <button class="akc-quick-btn spoon-quick" data-val="0.5">{ui.spoonQuick1_2}</button>
+                    <button class="akc-quick-btn spoon-quick" data-val="1">{ui.spoonQuick1}</button>
+                    <button class="akc-quick-btn spoon-quick" data-val="2">{ui.spoonQuick2}</button>
                 </div>
             </div>
 
             <div class="akc-result-display">
                 <div class="akc-result-value" id="spoon-result">15</div>
-                <div class="akc-result-unit">Gramos / Mililitros</div>
+                <div class="akc-result-unit">{ui.unitGramsML}</div>
             </div>
         </div>
 
         <div class="akc-tab-content" id="content-temps">
             <div class="akc-step-title">
                 <span class="akc-step-number"><Icon name="mdi:fire" class="w-5 h-5" /></span>
-                <span>Conversión de Horno</span>
+                <span>{ui.stepOvenConversion}</span>
             </div>
             <div class="akc-temps-container">
                 <div class="akc-temp-box">
-                    <div class="akc-temp-label">Fahrenheit (°F)</div>
+                    <div class="akc-temp-label">{ui.tempFahrenheit}</div>
                     <input
                         type="number"
                         class="akc-temp-input"
                         id="temp-f-input"
                         value="350"
-                        aria-label="Fahrenheit"
+                        aria-label={ui.tempFahrenheitAriaLabel}
                     />
                 </div>
                 <div class="akc-temp-middle">
                     <Icon name="mdi:swap-horizontal" class="w-8 h-8" />
                 </div>
                 <div class="akc-temp-box">
-                    <div class="akc-temp-label">Celsius (°C)</div>
+                    <div class="akc-temp-label">{ui.tempCelsius}</div>
                     <input
                         type="number"
                         class="akc-temp-input"
                         id="temp-c-input"
                         value="177"
-                        aria-label="Celsius"
+                        aria-label={ui.tempCelsiusAriaLabel}
                     />
                 </div>
             </div>
@@ -275,48 +281,48 @@ import { Icon } from "astro-icon/components";
                 <span class="akc-step-number"
                     ><Icon name="mdi:book-open-outline" class="w-5 h-5" /></span
                 >
-                <span>Temperaturas de Receta Frecuentes</span>
+                <span>{ui.stepFrequentTemps}</span>
             </div>
             <div class="akc-presets">
                 <button
                     class="akc-preset-card temp-preset"
                     data-f="275"
-                    aria-label="Set 275 Fahrenheit"
+                    aria-label={ui.tempPreset275AriaLabel}
                 >
-                    <div class="akc-preset-temp">275°F</div>
-                    <div class="akc-preset-desc">135°C - Secado</div>
+                    <div class="akc-preset-temp">{ui.tempPreset275}</div>
+                    <div class="akc-preset-desc">{ui.tempPreset275Desc}</div>
                 </button>
                 <button
                     class="akc-preset-card temp-preset"
                     data-f="325"
-                    aria-label="Set 325 Fahrenheit"
+                    aria-label={ui.tempPreset325AriaLabel}
                 >
-                    <div class="akc-preset-temp">325°F</div>
-                    <div class="akc-preset-desc">165°C - Bizcocho denso</div>
+                    <div class="akc-preset-temp">{ui.tempPreset325}</div>
+                    <div class="akc-preset-desc">{ui.tempPreset325Desc}</div>
                 </button>
                 <button
                     class="akc-preset-card temp-preset"
                     data-f="350"
-                    aria-label="Set 350 Fahrenheit"
+                    aria-label={ui.tempPreset350AriaLabel}
                 >
-                    <div class="akc-preset-temp">350°F</div>
-                    <div class="akc-preset-desc">175°C - Estándar pasteles</div>
+                    <div class="akc-preset-temp">{ui.tempPreset350}</div>
+                    <div class="akc-preset-desc">{ui.tempPreset350Desc}</div>
                 </button>
                 <button
                     class="akc-preset-card temp-preset"
                     data-f="400"
-                    aria-label="Set 400 Fahrenheit"
+                    aria-label={ui.tempPreset400AriaLabel}
                 >
-                    <div class="akc-preset-temp">400°F</div>
-                    <div class="akc-preset-desc">200°C - Panes / Tartas</div>
+                    <div class="akc-preset-temp">{ui.tempPreset400}</div>
+                    <div class="akc-preset-desc">{ui.tempPreset400Desc}</div>
                 </button>
                 <button
                     class="akc-preset-card temp-preset"
                     data-f="425"
-                    aria-label="Set 425 Fahrenheit"
+                    aria-label={ui.tempPreset425AriaLabel}
                 >
-                    <div class="akc-preset-temp">425°F</div>
-                    <div class="akc-preset-desc">220°C - Pizzas / Hojaldre</div>
+                    <div class="akc-preset-temp">{ui.tempPreset425}</div>
+                    <div class="akc-preset-desc">{ui.tempPreset425Desc}</div>
                 </button>
             </div>
         </div>

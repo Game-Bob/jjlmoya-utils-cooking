@@ -27,7 +27,7 @@ const { ui } = Astro.props;
               min="0"
               class="brine-input"
             />
-            <span class="brine-unit">g</span>
+            <span class="brine-unit">{ui.unitGrams}</span>
           </div>
         </div>
 
@@ -41,7 +41,7 @@ const { ui } = Astro.props;
               min="0"
               class="brine-input"
             />
-            <span class="brine-unit">g</span>
+            <span class="brine-unit">{ui.unitGrams}</span>
           </div>
         </div>
 
@@ -97,7 +97,7 @@ const { ui } = Astro.props;
         </div>
         <div class="brine-vis-info">
           <span class="brine-vis-label">{ui.total}:</span>
-          <span id="vis-total-weight" class="brine-vis-value">1000</span>g
+          <span id="vis-total-weight" class="brine-vis-value">1000</span>{ui.unitGrams}
         </div>
       </div>
 
@@ -114,7 +114,7 @@ const { ui } = Astro.props;
             <span class="brine-result-label">{ui.saltNeeded}</span>
             <div class="brine-result-value">
               <span id="result-salt" class="brine-result-number">20</span>
-              <span class="brine-result-unit">gramos</span>
+              <span class="brine-result-unit">{ui.unitGrams}</span>
             </div>
           </div>
         </div>
@@ -129,7 +129,7 @@ const { ui } = Astro.props;
             <span class="brine-result-label brine-sugar-label">{ui.sugarOptional}</span>
             <div class="brine-result-value">
               <span id="result-sugar" class="brine-result-number brine-sugar-number">10</span>
-              <span class="brine-result-unit">gramos</span>
+              <span class="brine-result-unit">{ui.unitGrams}</span>
             </div>
           </div>
         </div>
@@ -144,7 +144,7 @@ const { ui } = Astro.props;
           <div class="brine-result-content">
             <span id="result-time-label" class="brine-result-label brine-time-label">{ui.estimatedTime}</span>
             <div class="brine-result-value">
-              <span id="result-time" class="brine-result-time">1 - 3 Semanas</span>
+              <span id="result-time" class="brine-result-time">{ui.timeVegetablesDuration}</span>
             </div>
           </div>
         </div>
@@ -694,7 +694,7 @@ const { ui } = Astro.props;
   }
 </style>
 
-<script>
+<script is:inline define:vars={{ ui }}>
   const state = {
     product: 500,
     water: 500,
@@ -798,12 +798,12 @@ const { ui } = Astro.props;
 
   const getTimeEstimate = () => {
     if (state.salinity < 2.0) {
-      return { label: "Tiempo (Carnes)", text: "4 - 48 Horas" };
+      return { label: ui.timeMeatsLabel, text: ui.timeMeatsDuration };
     }
     if (state.salinity <= 3.0) {
-      return { label: "Tiempo (Vegetales)", text: "1 - 3 Semanas" };
+      return { label: ui.timeVegetablesLabel, text: ui.timeVegetablesDuration };
     }
-    return { label: "Tiempo (Conservas)", text: "1+ Meses" };
+    return { label: ui.timePreservesLabel, text: ui.timePreservesDuration };
   };
 
   const updateResults = (results: { salt: number; sugar: number; totalWeight: number }) => {

@@ -1,5 +1,11 @@
 ---
 import "./BananaCare.css";
+
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
 ---
 
 <div class="banana-care-container">
@@ -57,7 +63,7 @@ import "./BananaCare.css";
                 <div class="controls-panel">
                     <div class="control-group">
                         <div class="ripeness-header">
-                            <span class="ripeness-label">Estado de Maduración</span>
+                            <span class="ripeness-label">{ui.ripesnessLabel}</span>
                             <span id="level-display" class="level-value">2.0</span>
                         </div>
                         <input
@@ -73,17 +79,17 @@ import "./BananaCare.css";
 
                     <div class="grid-2-cols">
                         <div class="prediction-box">
-                            <span class="prediction-label">Próxima Etapa en</span>
+                            <span class="prediction-label">{ui.nextStageLabel}</span>
                             <div class="prediction-value">
                                 <span id="days-prediction" class="days-number">2.5</span>
-                                <span class="days-unit">Días</span>
+                                <span class="days-unit">{ui.daysUnit}</span>
                             </div>
                         </div>
 
                         <div class="settings-column">
                             <div class="setting-item temp">
                                 <div class="setting-header">
-                                    <span class="setting-label">Temperatura</span>
+                                    <span class="setting-label">{ui.tempLabel}</span>
                                     <span id="temp-display" class="setting-value">20°C</span>
                                 </div>
                                 <input
@@ -97,7 +103,7 @@ import "./BananaCare.css";
                             </div>
                             <div class="setting-item humidity">
                                 <div class="setting-header">
-                                    <span class="setting-label">Humedad</span>
+                                    <span class="setting-label">{ui.humidityLabel}</span>
                                     <span id="humidity-display" class="setting-value">50%</span>
                                 </div>
                                 <input
@@ -116,8 +122,8 @@ import "./BananaCare.css";
                         <div class="partner-content">
                             <div class="partner-icon"></div>
                             <div class="partner-text">
-                                <h4 class="partner-title">Acompañamiento Climatérico</h4>
-                                <p class="partner-subtitle">Efecto etileno externo</p>
+                                <h4 class="partner-title">{ui.partnerToggleTitle}</h4>
+                                <p class="partner-subtitle">{ui.partnerToggleSubtitle}</p>
                             </div>
                         </div>
                         <div class="toggle-switch">
@@ -127,11 +133,11 @@ import "./BananaCare.css";
 
                     <div class="grid-2-cols info-grid">
                         <div class="info-box conservation">
-                            <h5 class="info-title">Conservación</h5>
+                            <h5 class="info-title">{ui.conservationTitle}</h5>
                             <p id="status-conservation" class="info-text"></p>
                         </div>
                         <div class="info-box acceleration">
-                            <h5 class="info-title">Aceleración</h5>
+                            <h5 class="info-title">{ui.accelerationTitle}</h5>
                             <p id="status-acceleration" class="info-text"></p>
                         </div>
                     </div>
@@ -141,9 +147,7 @@ import "./BananaCare.css";
     </div>
 </div>
 
-<script>
-    import { BananaEngine } from "./BananaEngine";
-
+<script is:inline define:vars={{ ui }}>
     const slider = document.getElementById("ripeness-slider");
     const tempSlider = document.getElementById("temp-slider");
     const humiditySlider = document.getElementById("humidity-slider");
@@ -167,6 +171,59 @@ import "./BananaCare.css";
 
     let hasPartners = false;
 
+    const RIPENESS_STAGES = {
+        1: {
+            name: ui.stage1Name,
+            description: ui.stage1Desc,
+            conservation: ui.stage1Conservation,
+            acceleration: ui.stage1Acceleration,
+            color: "#059669",
+        },
+        2: {
+            name: ui.stage2Name,
+            description: ui.stage2Desc,
+            conservation: ui.stage2Conservation,
+            acceleration: ui.stage2Acceleration,
+            color: "#fbbf24",
+        },
+        3: {
+            name: ui.stage3Name,
+            description: ui.stage3Desc,
+            conservation: ui.stage3Conservation,
+            acceleration: ui.stage3Acceleration,
+            color: "#f59e0b",
+        },
+        4: {
+            name: ui.stage4Name,
+            description: ui.stage4Desc,
+            conservation: ui.stage4Conservation,
+            acceleration: ui.stage4Acceleration,
+            color: "#b45309",
+        },
+        5: {
+            name: ui.stage5Name,
+            description: ui.stage5Desc,
+            conservation: ui.stage5Conservation,
+            acceleration: ui.stage5Acceleration,
+            color: "#451a03",
+        },
+    };
+
+    function getStatus(level) {
+        const stage = Math.max(1, Math.min(5, Math.round(level)));
+        return RIPENESS_STAGES[stage];
+    }
+
+    function calculateDays(level, temperature, humidity, hasPartnersFlag) {
+        const baseDaysPerStage = 3;
+        const tempFactor = 20 / temperature;
+        const humidityFactor = 1 + (humidity - 50) / 200;
+        const partnerFactor = hasPartnersFlag ? 0.6 : 1.0;
+
+        const remainingInStage = (1 - (level % 1 || 0.1)) * baseDaysPerStage;
+        return Number((remainingInStage * tempFactor * humidityFactor * partnerFactor).toFixed(1));
+    }
+
     partnerToggle.addEventListener("click", () => {
         hasPartners = !hasPartners;
         partnerToggle.classList.toggle("active", hasPartners);
@@ -174,7 +231,7 @@ import "./BananaCare.css";
         update();
     });
 
-    function getGlowColor(statusColor: string): string {
+    function getGlowColor(statusColor) {
         const isDark = document.documentElement.classList.contains("theme-dark");
         if (isDark && statusColor === "#fbbf24") {
             return "#f1f5f9";
@@ -186,7 +243,7 @@ import "./BananaCare.css";
         const level = parseFloat(slider.value);
         const temp = parseInt(tempSlider.value);
         const humidity = parseInt(humiditySlider.value);
-        const status = BananaEngine.getStatus(level);
+        const status = getStatus(level);
 
         if (levelDisplay) levelDisplay.innerText = level.toFixed(1);
         if (tempDisplay) tempDisplay.innerText = `${temp}°C`;
@@ -216,7 +273,7 @@ import "./BananaCare.css";
             }
         });
 
-        const days = BananaEngine.calculateDays(level, temp, humidity, hasPartners);
+        const days = calculateDays(level, temp, humidity, hasPartners);
         daysPrediction.innerText = days.toString();
     }
 
