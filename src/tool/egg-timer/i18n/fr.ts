@@ -117,4 +117,5 @@ export const content: ToolLocaleContent = {
       ],
     },
   ],
+  schemas: [],
 };
