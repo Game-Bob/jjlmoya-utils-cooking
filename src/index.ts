@@ -12,6 +12,7 @@ export { MOLD_SCALER_TOOL } from './tool/mold-scaler';
 export { INGREDIENT_RESCALER_TOOL } from './tool/ingredient-rescaler';
 export { SOURDOUGH_CALCULATOR_TOOL } from './tool/sourdough-calculator';
 export { ROUX_GUIDE_TOOL } from './tool/roux-guide';
+export { COOKWARE_GUIDE_TOOL } from './tool/cookware-guide';
 
 export type {
   KnownLocale,

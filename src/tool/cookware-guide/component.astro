@@ -1,0 +1,164 @@
+---
+import { Icon } from 'astro-icon/components';
+import './CookwareGuide.css';
+
+interface Props {
+	ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="cw-container" id="cookware-selector">
+	<div class="cw-card">
+		<div class="cw-progress-bar" id="progress-bar" style="width: 0%"></div>
+
+		<div class="cw-content">
+			<div class="cw-grid">
+				<div class="cw-left">
+					<div class="cw-section">
+						<label class="cw-step-label">
+							<span class="cw-step-number">1</span>
+							{ui.step1}
+						</label>
+
+						<div class="cw-style-grid">
+							<button class="cw-style-btn style-btn" data-value="sear">
+								<Icon name="mdi:fire" class="cw-icon cw-icon-orange" />
+								<span class="cw-style-name">{ui.highHeat}</span>
+								<span class="cw-style-desc">{ui.sear}</span>
+							</button>
+
+							<button class="cw-style-btn style-btn" data-value="delicate">
+								<Icon name="mdi:egg-fried" class="cw-icon cw-icon-yellow" />
+								<span class="cw-style-name">{ui.delicate}</span>
+								<span class="cw-style-desc">{ui.fry}</span>
+							</button>
+
+							<button class="cw-style-btn style-btn" data-value="stew">
+								<Icon name="mdi:pot-mix" class="cw-icon cw-icon-red" />
+								<span class="cw-style-name">{ui.stew}</span>
+								<span class="cw-style-desc">{ui.slowCook}</span>
+							</button>
+
+							<button class="cw-style-btn style-btn" data-value="fast">
+								<Icon name="mdi:flash" class="cw-icon cw-icon-blue" />
+								<span class="cw-style-name">{ui.fast}</span>
+								<span class="cw-style-desc">{ui.quick}</span>
+							</button>
+						</div>
+					</div>
+
+					<div class="cw-section">
+						<label class="cw-step-label">
+							<span class="cw-step-number">2</span>
+							{ui.step2}
+						</label>
+
+						<div class="cw-maint-grid">
+							<button class="cw-maint-btn maint-btn" data-value="lazy">
+								<div class="cw-maint-icon">
+									<Icon name="mdi:dishwasher" class="cw-icon" />
+								</div>
+								<span class="cw-maint-name">{ui.maintenanceLazy}</span>
+								<span class="cw-maint-desc">{ui.maintenanceLazyDesc}</span>
+							</button>
+
+							<button class="cw-maint-btn maint-btn" data-value="care">
+								<div class="cw-maint-icon">
+									<Icon name="mdi:hand-water" class="cw-icon" />
+								</div>
+								<span class="cw-maint-name">{ui.maintenanceCare}</span>
+								<span class="cw-maint-desc">{ui.maintenanceCareDesc}</span>
+							</button>
+
+							<button class="cw-maint-btn maint-btn" data-value="ritual">
+								<div class="cw-maint-icon">
+									<Icon name="mdi:diamond-stone" class="cw-icon" />
+								</div>
+								<span class="cw-maint-name">{ui.maintenanceRitual}</span>
+								<span class="cw-maint-desc">{ui.maintenanceRitualDesc}</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="cw-right">
+					<div class="cw-result-card" id="final-card">
+						<div class="cw-card-bg" id="card-grad"></div>
+						<div class="cw-card-glow"></div>
+
+						<div class="cw-card-content">
+							<div class="cw-icon-container" id="res-icon-container">
+								<div id="icon-placeholder" class="cw-result-icon">
+									<Icon name="mdi:chef-hat" class="cw-icon cw-icon-large" />
+								</div>
+								<div id="icon-stainless" class="cw-result-icon cw-hidden">
+									<Icon name="mdi:shield-star-outline" class="cw-icon cw-icon-large" />
+								</div>
+								<div id="icon-nonstick" class="cw-result-icon cw-hidden">
+									<Icon name="mdi:feather" class="cw-icon cw-icon-large" />
+								</div>
+								<div id="icon-castiron" class="cw-result-icon cw-hidden">
+									<Icon name="mdi:weight-kilogram" class="cw-icon cw-icon-large" />
+								</div>
+								<div id="icon-carbon" class="cw-result-icon cw-hidden">
+									<Icon name="mdi:chef-hat" class="cw-icon cw-icon-large" />
+								</div>
+								<div id="icon-enameled" class="cw-result-icon cw-hidden">
+									<Icon name="mdi:pot" class="cw-icon cw-icon-large" />
+								</div>
+							</div>
+
+							<span class="cw-result-label">{ui.idealPan}</span>
+							<h3 class="cw-result-name" id="res-name">{ui.selectOptions}</h3>
+							<p class="cw-result-tag" id="res-tag">{ui.seeRecommendation}</p>
+
+							<div class="cw-result-details cw-hidden" id="res-details">
+								<div class="cw-detail-box cw-detail-pro">
+									<span class="cw-detail-label">{ui.pro}</span>
+									<p class="cw-detail-text" id="res-pros">-</p>
+								</div>
+								<div class="cw-detail-box cw-detail-con">
+									<span class="cw-detail-label">{ui.con}</span>
+									<p class="cw-detail-text" id="res-cons">-</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="cw-tip-card">
+						<div class="cw-tip-header">
+							<div class="cw-tip-icon">
+								<Icon name="mdi:lightbulb-on-outline" class="cw-icon" />
+							</div>
+							<span class="cw-tip-title">{ui.masterTip}</span>
+						</div>
+						<p class="cw-tip-text" id="res-tip">
+							"{ui.defaultTip}"
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	import { initCookwareGuide } from './init';
+	window.__initCookwareGuide = initCookwareGuide;
+</script>
+
+<script define:vars={{ ui }} is:inline>
+	const init = () => {
+		if (window.__initCookwareGuide) {
+			window.__initCookwareGuide(ui);
+		}
+	};
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', init);
+	} else {
+		init();
+	}
+</script>

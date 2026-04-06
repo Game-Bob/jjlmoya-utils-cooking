@@ -44,8 +44,8 @@ describe("i18n titles for FAQ and Bibliography", () => {
     }
   });
 
-  it("should have 11 tools with complete i18n setup", async () => {
-    expect(ALL_TOOLS.length).toBe(11);
+  it("should have 12 tools with complete i18n setup", async () => {
+    expect(ALL_TOOLS.length).toBe(12);
   });
 
   it("tool IDs should be correctly registered", () => {
@@ -61,5 +61,6 @@ describe("i18n titles for FAQ and Bibliography", () => {
     expect(toolIds).toContain("ingredient-rescaler");
     expect(toolIds).toContain("sourdough-calculator");
     expect(toolIds).toContain("roux-guide");
+    expect(toolIds).toContain("cookware-guide");
   });
 });
