@@ -3,7 +3,7 @@ import MeringueComponent from './component.astro';
 import MeringueComponentSEO from './seo.astro';
 import MeringueComponentBibliography from './bibliography.astro';
 
-export const meringueCalculator: CookingToolEntry = {
+export const meringuePeak: CookingToolEntry = {
   id: 'meringue-peak',
   icons: {
     bg: 'mdi:egg',
@@ -17,7 +17,7 @@ export const meringueCalculator: CookingToolEntry = {
 };
 
 export const MERENGUE_CALCULATOR_TOOL: ToolDefinition = {
-  entry: meringueCalculator,
+  entry: meringuePeak,
   Component: MeringueComponent,
   SEOComponent: MeringueComponentSEO,
   BibliographyComponent: MeringueComponentBibliography,

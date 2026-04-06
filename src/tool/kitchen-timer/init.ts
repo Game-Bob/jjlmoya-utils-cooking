@@ -1,11 +1,9 @@
 import { KitchenTimer } from "./lib/KitchenTimer";
-import { DockManager } from "./lib/DockManager";
 
 function setupAddTimerButton(
 	timerTemplate: HTMLTemplateElement,
 	timersGrid: HTMLElement,
-	activeTimers: KitchenTimer[],
-	dockManager: DockManager
+	activeTimers: KitchenTimer[]
 ) {
 	document.getElementById("add-timer-btn")?.addEventListener("click", () => {
 		if (!timerTemplate || !timersGrid) return;
@@ -22,7 +20,6 @@ function setupAddTimerButton(
 
 		const timer = new KitchenTimer(newCard);
 		activeTimers.push(timer);
-		dockManager.registerTimer(timer);
 
 		newCard.scrollIntoView({ behavior: "smooth", block: "center" });
 	});
@@ -46,15 +43,13 @@ export function initKitchenTimers() {
 	const timersGrid = document.getElementById("timers-grid") as HTMLElement;
 	const timerTemplate = document.getElementById("timer-template") as HTMLTemplateElement;
 	const activeTimers: KitchenTimer[] = [];
-	const dockManager = new DockManager("mobile-dock", "mobile-dock-container");
 
 	document.querySelectorAll(".timer-card").forEach((card) => {
 		const timer = new KitchenTimer(card as HTMLElement);
 		activeTimers.push(timer);
-		dockManager.registerTimer(timer);
 	});
 
-	setupAddTimerButton(timerTemplate, timersGrid, activeTimers, dockManager);
+	setupAddTimerButton(timerTemplate, timersGrid, activeTimers);
 	setupStopAllButton(activeTimers);
 	requestNotificationPermission();
 }
