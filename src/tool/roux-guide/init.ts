@@ -125,8 +125,8 @@ function updateDisplay(els: RouxElements, state: State, LIQUID_CONFIG: Record<Li
 	els.progressBar.style.width = `${(state.level / 4) * 100}%`;
 }
 
-export function initRouxGuide(ui: Record<string, string>): void {
-	const LIQUID_CONFIG: Record<LiquidType, LiquidConfig> = {
+function getLiquidConfig(ui: Record<string, string>): Record<LiquidType, LiquidConfig> {
+	return {
 		milk: {
 			name: ui.recipeBechamel as string,
 			rouxType: 'white',
@@ -148,8 +148,10 @@ export function initRouxGuide(ui: Record<string, string>): void {
 			tip: ui.tipTomato as string,
 		},
 	};
+}
 
-	const ROUX_INFO: Record<'white' | 'blond' | 'brown', RouxInfo> = {
+function getRouxInfo(ui: Record<string, string>): Record<'white' | 'blond' | 'brown', RouxInfo> {
+	return {
 		white: {
 			label: ui.rouxWhiteLabel as string,
 			time: ui.timeWhite as string,
@@ -166,10 +168,14 @@ export function initRouxGuide(ui: Record<string, string>): void {
 			description: ui.descBrown as string,
 		},
 	};
+}
 
+export function initRouxGuide(ui: Record<string, string>): void {
 	const els = setupElements();
 	if (!els) return;
 
+	const LIQUID_CONFIG = getLiquidConfig(ui);
+	const ROUX_INFO = getRouxInfo(ui);
 	const state: State = { volume: 1000, liquid: 'milk', level: 2 };
 	const updateCalculations = () => updateDisplay(els, state, LIQUID_CONFIG, ROUX_INFO);
 
