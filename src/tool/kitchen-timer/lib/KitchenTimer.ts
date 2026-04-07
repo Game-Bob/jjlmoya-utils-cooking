@@ -1,5 +1,15 @@
 import { getAudioContext, playBeep } from "./AudioHelper";
 
+export interface TimerTranslations {
+	ready: string;
+	running: string;
+	paused: string;
+	finished: string;
+	start: string;
+	pause: string;
+	finishNotification: string;
+}
+
 export class KitchenTimer extends EventTarget {
 	element: HTMLElement;
 	private inputs: { h: HTMLInputElement; m: HTMLInputElement; s: HTMLInputElement };
@@ -9,6 +19,7 @@ export class KitchenTimer extends EventTarget {
 	private btnAdd5m: HTMLButtonElement;
 	private statusText: HTMLElement;
 	private timerNameInput: HTMLInputElement;
+	private t: TimerTranslations;
 
 	totalSeconds: number = 0;
 	remainingSeconds: number = 0;
@@ -17,9 +28,10 @@ export class KitchenTimer extends EventTarget {
 
 	private audioContext: AudioContext | null = null;
 
-	constructor(element: HTMLElement) {
+	constructor(element: HTMLElement, translations: TimerTranslations) {
 		super();
 		this.element = element;
+		this.t = translations;
 
 		const hoursInput = element.querySelector(".hours") as HTMLInputElement | null;
 		const minutesInput = element.querySelector(".minutes") as HTMLInputElement | null;
@@ -153,7 +165,7 @@ export class KitchenTimer extends EventTarget {
 		this.setDisplay(0);
 		this.remainingSeconds = 0;
 		this.totalSeconds = 0;
-		this.statusText.textContent = "Listo";
+		this.statusText.textContent = this.t.ready;
 		this.statusText.classList.remove("running", "finished");
 		this.element.classList.remove("finished");
 		this.dispatchUpdate();
@@ -173,12 +185,12 @@ export class KitchenTimer extends EventTarget {
 	private timeUp() {
 		this.pause();
 		this.playAlarm();
-		this.statusText.textContent = "¡TIEMPO!";
+		this.statusText.textContent = this.t.finished;
 		this.statusText.classList.add("finished");
 		this.element.classList.add("finished");
 
 		if ("Notification" in window && Notification.permission === "granted") {
-			new Notification(`Temporizador Terminado de ${this.getName()}`);
+			new Notification(`${this.t.finishNotification} ${this.getName()}`);
 		}
 		this.dispatchUpdate();
 	}
@@ -217,12 +229,12 @@ export class KitchenTimer extends EventTarget {
 		const btnText = this.element.querySelector(".btn-toggle .btn-text");
 		const iconPlay = this.element.querySelector(".icon-play");
 		const iconPause = this.element.querySelector(".icon-pause");
-		if (btnText) btnText.textContent = "Pausar";
+		if (btnText) btnText.textContent = this.t.pause;
 		iconPlay?.setAttribute("style", "display: none;");
 		iconPause?.removeAttribute("style");
 		this.element.classList.add("running");
 		this.statusText.classList.add("running");
-		this.statusText.textContent = "Corriendo";
+		this.statusText.textContent = this.t.running;
 		Object.values(this.inputs).forEach((i) => (i.disabled = true));
 	}
 
@@ -230,12 +242,12 @@ export class KitchenTimer extends EventTarget {
 		const btnText = this.element.querySelector(".btn-toggle .btn-text");
 		const iconPlay = this.element.querySelector(".icon-play");
 		const iconPause = this.element.querySelector(".icon-pause");
-		if (btnText) btnText.textContent = "Iniciar";
+		if (btnText) btnText.textContent = this.t.start;
 		iconPlay?.removeAttribute("style");
 		iconPause?.setAttribute("style", "display: none;");
 		this.element.classList.remove("running");
 		this.statusText.classList.remove("running");
-		this.statusText.textContent = this.remainingSeconds > 0 && this.remainingSeconds < this.totalSeconds ? "Pausado" : "Listo";
+		this.statusText.textContent = this.remainingSeconds > 0 && this.remainingSeconds < this.totalSeconds ? this.t.paused : this.t.ready;
 		Object.values(this.inputs).forEach((i) => (i.disabled = false));
 	}
 

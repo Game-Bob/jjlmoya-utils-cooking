@@ -334,7 +334,7 @@ const { ui } = Astro.props;
 	    gap: 1.5rem;
 	}
 
-	.meringue-result-item {
+	:global(.meringue-result-item) {
 	    background: var(--time-bg);
 	    border: 1px solid var(--card-border);
 	    border-radius: 20px;
@@ -345,7 +345,7 @@ const { ui } = Astro.props;
 	    transition: all 0.2s ease;
 	}
 
-	.meringue-result-item:hover {
+	:global(.meringue-result-item):hover {
 	    background: var(--card-bg);
 	    transform: scale(1.02);
 	}
@@ -384,7 +384,7 @@ const { ui } = Astro.props;
 	    gap: 1rem;
 	}
 
-	.meringue-time-row {
+	:global(.meringue-time-row) {
 	    display: flex;
 	    align-items: center;
 	    justify-content: space-between;
@@ -450,7 +450,7 @@ const { ui } = Astro.props;
 	    color: var(--pink-light);
 	}
 
-	.meringue-fade-in {
+	:global(.meringue-fade-in) {
 	    animation: meringue-fade-in 0.5s ease forwards;
 	}
 

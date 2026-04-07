@@ -438,7 +438,7 @@ const { ui } = Astro.props;
     }
   }
 
-  .brine-visualization {
+  :global(.brine-visualization) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -448,7 +448,7 @@ const { ui } = Astro.props;
     position: relative;
   }
 
-  .brine-jar {
+  :global(.brine-jar) {
     position: relative;
     width: 12rem;
     height: 16rem;
@@ -460,7 +460,7 @@ const { ui } = Astro.props;
     overflow: hidden;
   }
 
-  .brine-jar-cap {
+  :global(.brine-jar-cap) {
     position: absolute;
     top: -0.25rem;
     left: 50%;
@@ -471,7 +471,7 @@ const { ui } = Astro.props;
     border-radius: 0.5rem 0.5rem 0 0;
   }
 
-  .brine-water {
+  :global(.brine-water) {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -481,7 +481,7 @@ const { ui } = Astro.props;
     height: 50%;
   }
 
-  .brine-water::before {
+  :global(.brine-water)::before {
     content: '';
     position: absolute;
     top: 0;
@@ -511,7 +511,7 @@ const { ui } = Astro.props;
     }
   }
 
-  .brine-product {
+  :global(.brine-product) {
     position: absolute;
     bottom: 1rem;
     left: 50%;
@@ -528,7 +528,7 @@ const { ui } = Astro.props;
     height: 40%;
   }
 
-  .brine-product-label {
+  :global(.brine-product-label) {
     font-size: 0.75rem;
     font-weight: 700;
     color: rgba(0, 0, 0, 0.3);
@@ -536,7 +536,7 @@ const { ui } = Astro.props;
     letter-spacing: 0.05em;
   }
 
-  .brine-particles {
+  :global(.brine-particles) {
     position: absolute;
     inset: 0;
     pointer-events: none;
@@ -700,10 +700,10 @@ const { ui } = Astro.props;
 
   const els = {
     inputs: {
-      product: document.getElementById("weight-product") as HTMLInputElement,
-      water: document.getElementById("weight-water") as HTMLInputElement,
-      slider: document.getElementById("salinity-slider") as HTMLInputElement,
-      sugar: document.getElementById("sugar-toggle") as HTMLInputElement,
+      product: document.getElementById("weight-product"),
+      water: document.getElementById("weight-water"),
+      slider: document.getElementById("salinity-slider"),
+      sugar: document.getElementById("sugar-toggle"),
       presets: document.querySelectorAll(".preset-btn"),
     },
     displays: {
@@ -729,7 +729,7 @@ const { ui } = Astro.props;
     return { salt, sugar, totalWeight };
   };
 
-  const updateVisuals = (results: { salt: number; sugar: number; totalWeight: number }) => {
+  const updateVisuals = (results) => {
     const maxCap = 2000;
     const waterHeight = Math.min((state.water / maxCap) * 100, 90);
     if (els.vis.water) els.vis.water.style.height = `${Math.max(waterHeight, 10)}%`;
@@ -755,7 +755,7 @@ const { ui } = Astro.props;
     }
   };
 
-  const createParticle = (className: string) => {
+  const createParticle = (className) => {
     if (!els.vis.particles) return;
     const p = document.createElement("div");
     const size = Math.random() * 4 + 2;
@@ -802,7 +802,7 @@ const { ui } = Astro.props;
     return { label: ui.timePreservesLabel, text: ui.timePreservesDuration };
   };
 
-  const updateResults = (results: { salt: number; sugar: number; totalWeight: number }) => {
+  const updateResults = (results) => {
     if (els.displays.saltResult)
       els.displays.saltResult.textContent = Math.round(results.salt).toString();
     if (els.displays.sugarResult)
@@ -836,25 +836,25 @@ const { ui } = Astro.props;
 
   if (els.inputs.product)
     els.inputs.product.addEventListener("input", (e) => {
-      state.product = parseFloat((e.target as HTMLInputElement).value) || 0;
+      state.product = parseFloat(e.target.value) || 0;
       update();
     });
 
   if (els.inputs.water)
     els.inputs.water.addEventListener("input", (e) => {
-      state.water = parseFloat((e.target as HTMLInputElement).value) || 0;
+      state.water = parseFloat(e.target.value) || 0;
       update();
     });
 
   if (els.inputs.slider)
     els.inputs.slider.addEventListener("input", (e) => {
-      state.salinity = parseFloat((e.target as HTMLInputElement).value);
+      state.salinity = parseFloat(e.target.value);
       update();
     });
 
   if (els.inputs.sugar)
     els.inputs.sugar.addEventListener("change", (e) => {
-      state.sugar = (e.target as HTMLInputElement).checked;
+      state.sugar = e.target.checked;
       update();
     });
 

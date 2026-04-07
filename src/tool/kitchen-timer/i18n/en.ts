@@ -101,12 +101,11 @@ export const content: ToolLocaleContent = {
 		reset: 'Reset',
 		addOneMin: '+1 min',
 		addFiveMin: '+5 min',
-		status: {
-			ready: 'Ready',
-			running: 'Running',
-			paused: 'Paused',
-			finished: 'TIME!',
-		},
+		statusReady: 'Ready',
+		statusRunning: 'Running',
+		statusPaused: 'Paused',
+		statusFinished: 'TIME!',
+		finishNotification: 'Timer Finished for',
 	},
 
 	faq: [
@@ -225,5 +224,5 @@ export const content: ToolLocaleContent = {
 		},
 	],
 
-	schemas: [faqSchema, howToSchema, appSchema],
+	schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

@@ -101,12 +101,11 @@ export const content: ToolLocaleContent = {
 		reset: 'Reset',
 		addOneMin: '+1 min',
 		addFiveMin: '+5 min',
-		status: {
-			ready: 'Listo',
-			running: 'Corriendo',
-			paused: 'Pausado',
-			finished: '¡TIEMPO!',
-		},
+		statusReady: 'Listo',
+		statusRunning: 'Corriendo',
+		statusPaused: 'Pausado',
+		statusFinished: '¡TIEMPO!',
+		finishNotification: 'Temporizador Terminado para',
 	},
 
 	faq: [
@@ -216,7 +215,7 @@ export const content: ToolLocaleContent = {
 			items: [
 				'<strong>Escalona los tiempos de finalización:</strong> Si todo termina a la vez, te agobiarás emplatando. Intenta que los acompañamientos estén listos 5 minutos antes que el plato principal.',
 				'<strong>Usa el calor residual:</strong> Apaga el fuego de las verduras o pastas 1-2 minutos antes de que el temporizador suene. El calor residual terminará la cocción suavemente.',
-				'<strong>Nombra tus temporizadores:</strong> En una cocina ajetreada es fácil olvidar qué alarma es cual. Usa la función de renombrado de esta herramienta para etiquetar \'Horno\', \'Arroz\' o \'Salsa\'.',
+				'<strong>Nombra tus temporizadores:</strong> En una cocina ajetreada es fácil olvidar qué alarma es cual. Usa la función de renombrado de esta herramienta para etiquetar \'Horno\', \'Arroz\', o \'Salsa\'.',
 			],
 		},
 		{
@@ -225,5 +224,5 @@ export const content: ToolLocaleContent = {
 		},
 	],
 
-	schemas: [faqSchema, howToSchema, appSchema],
+	schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

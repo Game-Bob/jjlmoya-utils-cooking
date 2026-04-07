@@ -171,6 +171,7 @@ const { ui } = Astro.props;
 		--cw-border: hsl(210deg, 14%, 89%);
 		--cw-text-main: hsl(210deg, 40%, 14%);
 		--cw-text-muted: hsl(210deg, 8%, 40%);
+		--cw-text-light: hsl(210deg, 40%, 98%);
 		--cw-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
 		--cw-radius: 1.5rem;
 	}
@@ -180,8 +181,9 @@ const { ui } = Astro.props;
 		--cw-bg-app: hsl(217deg, 39%, 8%);
 		--cw-border: hsl(217deg, 33%, 25%);
 		--cw-text-main: hsl(210deg, 40%, 98%);
-		--cw-text-muted: hsl(210deg, 14%, 55%);
-		--cw-primary-light: hsl(240deg, 100%, 12%);
+		--cw-text-muted: hsl(210deg, 14%, 75%);
+		--cw-text-light: hsl(210deg, 40%, 98%);
+		--cw-primary-light: hsl(240deg, 100%, 20%);
 	}
 </style>
 
@@ -318,7 +320,16 @@ const { ui } = Astro.props;
 	}
 
 	:global(.theme-dark) .cw-style-btn.active {
-		background: hsl(240deg, 100%, 20%);
+		background: hsl(240deg, 100%, 35%);
+		color: hsl(0deg, 0%, 100%);
+	}
+
+	:global(.theme-dark) .cw-style-btn.active .cw-style-name {
+		color: hsl(0deg, 0%, 100%);
+	}
+
+	:global(.theme-dark) .cw-style-btn.active .cw-style-desc {
+		color: hsl(0deg, 0%, 100%);
 	}
 
 	.cw-icon {
@@ -610,13 +621,18 @@ const { ui } = Astro.props;
 		font-size: 0.6875rem;
 		line-height: 1.6;
 		color: var(--cw-text-muted);
-		font-weight: 300;
+		font-weight: 400;
 		font-style: italic;
-		background: var(--cw-bg-card);
-		padding: 1rem;
+		background: rgba(var(--cw-primary-rgb, 99, 102, 241), 0.03);
+		padding: 1.25rem;
 		border-radius: 0.75rem;
 		border: 1px solid var(--cw-border);
 		margin: 0;
+	}
+
+	:global(.theme-dark) .cw-tip-text {
+		color: var(--cw-text-main);
+		background: rgba(255, 255, 255, 0.03);
 	}
 
 	.cw-hidden {

@@ -1,45 +1,45 @@
 import type { ToolLocaleContent } from '../../../types';
 
-const title = "Multiple Kitchen Timer";
-const description = "Manage multiple cooking times simultaneously. Independent alarms, ideal for chefs and kitchen organization (Mise en Place).";
+const title = "Minuteur de Cuisine Multiple";
+const description = "Gérez plusieurs temps de cuisson simultanément. Alarmes indépendantes, idéal pour les chefs et l'organisation de la cuisine (Mise en Place).";
 const faq = [
 		{
-			question: 'How many timers can I create?',
+			question: 'Combien de minuteurs puis-je créer ?',
 			answer:
-				'Unlimited. Add as many as you need with the \'+\' button. Perfect for cooking multiple dishes simultaneously: pasta boiling, sauce reducing, meat resting, and oven baking, all at once.',
+				'Illimité. Ajoutez-en autant que nécessaire avec le bouton "+". Parfait pour cuisiner plusieurs plats simultanément : bouillir des pâtes, réduire une sauce, reposer la viande et cuire au four, tout en même temps.',
 		},
 		{
-			question: 'Why is resting time important for meat?',
+			question: 'Pourquoi le temps de repos est-il important pour la viande ?',
 			answer:
-				'When you cut meat fresh from heat, juices escape onto the plate. If you rest 5-10 minutes, fibers relax and juices redistribute. Result: juicy meat instead of dry. Resting is passive cooking.',
+				'Lorsque vous coupez la viande juste après la cuisson, les jus s\'échappent sur l\'assiette. Si vous la laissez reposer 5 à 10 minutes, les fibres se détendent et les jus se redistribuent. Résultat : une viande juteuse au lieu d\'être sèche. Le repos est une cuisson passive.',
 		},
 		{
-			question: 'Does it work with screen locked?',
+			question: 'Fonctionne-t-il avec l\'écran verrouillé ?',
 			answer:
-				'Yes, but you need to grant notification permissions. Timers keep running in background and will alert you with sound and browser notification even if you switch tabs or lock your phone.',
+				'Oui, mais vous devez accorder les permissions de notification. Les minuteurs continuent de fonctionner en arrière-plan et vous alerteront avec un son et une notification de navigateur même si vous changez d\'onglet ou verrouillez votre téléphone.',
 		},
 		{
-			question: 'What is the food \'Danger Zone\'?',
+			question: 'Qu\'est-ce que la "Zone de Danger" alimentaire ?',
 			answer:
-				'Between 5°C and 65°C bacteria multiply rapidly. Cooked foods shouldn\'t stay in this range more than 2 hours (1 hour if temperature exceeds 30°C). Use a timer to monitor cooling before refrigerating.',
+				'Entre 5°C et 65°C, les bactéries se multiplient rapidement. Les aliments cuits ne doivent pas rester dans cette plage plus de 2 heures (1 heure si la température dépasse 30°C). Utilisez un minuteur pour surveiller le refroidissement avant de réfrigérer.',
 		},
 	];
 const howTo = [
 		{
-			name: 'Create multiple timers',
-			text: 'Use the \'+\' button to add as many timers as you need. Perfect for orchestrating multiple dishes simultaneously.',
+			name: 'Créer plusieurs minuteurs',
+			text: 'Utilisez le bouton "+" pour ajouter autant de minuteurs que nécessaire. Parfait pour orchestrer plusieurs plats simultanément.',
 		},
 		{
-			name: 'Customize each timer',
-			text: 'Change the name of each timer to identify what\'s cooking: \'Oven\', \'Rice\', \'Sauce\', etc.',
+			name: 'Personnaliser chaque minuteur',
+			text: 'Changez le nom de chaque minuteur pour identifier ce qui cuit : "Four", "Riz", "Sauce", etc.',
 		},
 		{
-			name: 'Control from mobile dock',
-			text: 'On mobile, active timers appear in a sliding dock at the bottom. Pause or restart directly from there.',
+			name: 'Contrôler depuis le dock mobile',
+			text: 'Sur mobile, les minuteurs actifs apparaissent dans un dock coulissant en bas. Mettez en pause ou redémarrez directement depuis là.',
 		},
 		{
-			name: 'Receive notifications',
-			text: 'Authorize notifications so the browser alerts you when time\'s up, even if you switch tabs.',
+			name: 'Recevoir des notifications',
+			text: 'Autorisez les notifications pour que le navigateur vous alerte quand le temps est écoulé, même si vous changez d\'onglet.',
 		},
 	];
 
@@ -76,154 +76,153 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-	slug: 'kitchen-timer',
-	title: 'Multiple Kitchen Timer',
+	slug: 'minuteur-cuisine',
+	title: 'Minuteur de Cuisine Multiple',
 	description:
-		'Manage multiple cooking times simultaneously. Independent alarms, ideal for chefs and kitchen organization (Mise en Place).',
+		'Gérez plusieurs temps de cuisson simultanément. Alarmes indépendantes, idéal pour les chefs et l\'organisation de la cuisine (Mise en Place).',
 	faqTitle: 'Questions Fréquemment Posées',
 	bibliographyTitle: 'Références',
 
 	ui: {
-		addTimer: 'Add Timer',
-		stopAll: 'Stop All',
-		defaultName: 'Timer',
-		newTimerName: 'New Timer',
-		timerDefault1: 'Timer 1',
-		timerDefault2: 'Timer 2',
-		timerDefault3: 'Timer 3',
-		label: 'Label',
-		hours: 'Hours',
+		addTimer: 'Ajouter',
+		stopAll: 'Tout Arrêter',
+		defaultName: 'Minuteur',
+		newTimerName: 'Nouveau Minuteur',
+		timerDefault1: 'Minuteur 1',
+		timerDefault2: 'Minuteur 2',
+		timerDefault3: 'Minuteur 3',
+		label: 'Étiquette',
+		hours: 'Heures',
 		minutes: 'Min',
 		seconds: 'Sec',
-		ready: 'Ready',
-		start: 'Start',
+		ready: 'Prêt',
+		start: 'Démarrer',
 		pause: 'Pause',
-		reset: 'Reset',
+		reset: 'Réinitialiser',
 		addOneMin: '+1 min',
 		addFiveMin: '+5 min',
-		status: {
-			ready: 'Ready',
-			running: 'Running',
-			paused: 'Paused',
-			finished: 'TIME!',
-		},
+		statusReady: 'Prêt',
+		statusRunning: 'En cours',
+		statusPaused: 'Pause',
+		statusFinished: 'FINI !',
+		finishNotification: 'Minuteur Terminé pour',
 	},
 
 	faq: [
 		{
-			question: 'How many timers can I create?',
+			question: 'Combien de minuteurs puis-je créer ?',
 			answer:
-				'Unlimited. Add as many as you need with the \'+\' button. Perfect for cooking multiple dishes simultaneously: pasta boiling, sauce reducing, meat resting, and oven baking, all at once.',
+				'Illimité. Ajoutez-en autant que nécessaire avec le bouton "+". Parfait pour cuisiner plusieurs plats simultanément : bouillir des pâtes, réduire une sauce, reposer la viande et cuire au four, tout en même temps.',
 		},
 		{
-			question: 'Why is resting time important for meat?',
+			question: 'Pourquoi le temps de repos est-il important pour la viande ?',
 			answer:
-				'When you cut meat fresh from heat, juices escape onto the plate. If you rest 5-10 minutes, fibers relax and juices redistribute. Result: juicy meat instead of dry. Resting is passive cooking.',
+				'Lorsque vous coupez la viande juste après la cuisson, les jus s\'échappent sur l\'assiette. Si vous la laissez reposer 5 à 10 minutes, les fibres se détendent et les jus se redistribuent. Résultat : une viande juteuse au lieu d\'être sèche. Le repos est une cuisson passive.',
 		},
 		{
-			question: 'Does it work with screen locked?',
+			question: 'Fonctionne-t-il avec l\'écran verrouillé ?',
 			answer:
-				'Yes, but you need to grant notification permissions. Timers keep running in background and will alert you with sound and browser notification even if you switch tabs or lock your phone.',
+				'Oui, mais vous devez accorder les permissions de notification. Les minuteurs continuent de fonctionner en arrière-plan et vous alerteront avec un son et une notification de navigateur même si vous changez d\'onglet ou verrouillez votre téléphone.',
 		},
 		{
-			question: 'What is the food \'Danger Zone\'?',
+			question: 'Qu\'est-ce que la "Zone de Danger" alimentaire ?',
 			answer:
-				'Between 5°C and 65°C bacteria multiply rapidly. Cooked foods shouldn\'t stay in this range more than 2 hours (1 hour if temperature exceeds 30°C). Use a timer to monitor cooling before refrigerating.',
+				'Entre 5°C et 65°C, les bactéries se multiplient rapidement. Les aliments cuits ne doivent pas rester dans cette plage plus de 2 heures (1 heure si la température dépasse 30°C). Utilisez un minuteur pour surveiller le refroidissement avant de réfrigérer.',
 		},
 	],
 
 	bibliography: [
 		{
-			name: 'Food Safety: USDA Guidelines',
+			name: 'Sécurité Alimentaire : Directives de l\'USDA',
 			url: 'https://www.fsis.usda.gov/',
 		},
 		{
-			name: 'Mise en Place - Professional Cooking',
+			name: 'Mise en Place - Cuisine Professionnelle (Escoffier)',
 			url: 'https://www.escoffier.edu/',
 		},
 	],
 
 	howTo: [
 		{
-			name: 'Create multiple timers',
-			text: 'Use the \'+\' button to add as many timers as you need. Perfect for orchestrating multiple dishes simultaneously.',
+			name: 'Créer plusieurs minuteurs',
+			text: 'Utilisez le bouton "+" pour ajouter autant de minuteurs que nécessaire. Parfait pour orchestrer plusieurs plats simultanément.',
 		},
 		{
-			name: 'Customize each timer',
-			text: 'Change the name of each timer to identify what\'s cooking: \'Oven\', \'Rice\', \'Sauce\', etc.',
+			name: 'Personnaliser chaque minuteur',
+			text: 'Changez le nom de chaque minuteur pour identifier ce qui cuit : "Four", "Riz", "Sauce", etc.',
 		},
 		{
-			name: 'Control from mobile dock',
-			text: 'On mobile, active timers appear in a sliding dock at the bottom. Pause or restart directly from there.',
+			name: 'Contrôler depuis le dock mobile',
+			text: 'Sur mobile, les minuteurs actifs apparaissent dans un dock coulissant en bas. Mettez en pause ou redémarrez directement depuis là.',
 		},
 		{
-			name: 'Receive notifications',
-			text: 'Authorize notifications so the browser alerts you when time\'s up, even if you switch tabs.',
+			name: 'Recevoir des notifications',
+			text: 'Autorisez les notifications pour que le navigateur vous alerte quand le temps est écoulé, même si vous changez d\'onglet.',
 		},
 	],
 
 	seo: [
 		{
 			type: 'title',
-			text: 'Temporal Mastery in the Kitchen',
+			text: 'Maîtrise Temporelle en Cuisine',
 			level: 2,
 		},
 		{
 			type: 'paragraph',
-			html: 'Professional cooking isn\'t based solely on recipes, but on <strong>precise time management</strong>. The French concept <em>"Mise en Place"</em> (everything in its place) includes time as an ingredient. A steak that rests 5 minutes redistributes its juices and becomes tender; one that doesn\'t rest loses them at the first cut.',
+			html: 'La cuisine professionnelle ne repose pas uniquement sur les recettes, mais sur une <strong>gestion précise du temps</strong>. Le concept français de <em>"Mise en Place"</em> (chaque chose à sa place) inclut le temps comme ingrédient. Un steak qui repose 5 minutes redistribue ses jus et devient tendre ; un steak qui ne repose pas les perd à la première découpe.',
 		},
 		{
 			type: 'paragraph',
-			html: 'This <strong>Multiple Timer</strong> tool has been designed for home chefs and professionals who need to orchestrate a symphony of dishes: pasta boiling, roast in the oven, and sauce reducing, all happening simultaneously.',
+			html: 'Cet outil de <strong>Minuteur Multiple</strong> a été conçu pour les chefs à domicile et les professionnels qui ont besoin d\'orchestrer une symphonie de plats : bouillir des pâtes, rôti au four et réduction de sauce, tout cela se passant simultanément.',
 		},
 		{
 			type: 'title',
-			text: 'The Role of Temperature and Time',
+			text: 'Le Rôle de la Température et du Temps',
 			level: 3,
 		},
 		{
 			type: 'paragraph',
-			html: 'Cooking is essentially applying heat for a specific duration to transform the chemical structure of food. Protein denaturation and the Maillard reaction (which gives golden color and flavor) critically depend on the timer.',
+			html: 'Cuisiner consiste essentiellement à appliquer de la chaleur pendant une durée spécifique pour transformer la structure chimique des aliments. La dénaturation des protéines et la réaction de Maillard (qui donne la couleur dorée et la saveur) dépendent de manière critique du minuteur.',
 		},
 		{
 			type: 'table',
-			headers: ['Food', 'Cooking Point', 'Time', 'Benefit'],
+			headers: ['Aliment', 'Point de Cuisson', 'Temps', 'Bénéfice'],
 			rows: [
-				['Soft-boiled Eggs', 'Liquid yolk', '3-4 min', 'Soft protein, easy digestion'],
-				['Mollet Eggs', 'Dense yolk', '5-6 min', 'Perfect texture balance'],
-				['Hard-boiled Eggs', 'Fully set', '9-11 min', 'Maximum firmness'],
-				['Meat - Searing', 'High heat', '1-2 min/side', 'Maillard reaction, juiciness'],
-				['Meat - Fine Rest', 'Resting', '5 min', 'Juice redistribution'],
-				['Meat - Large Rest', 'Resting', '15-20 min', 'Relaxed fibers'],
+				['Œufs à la coque', 'Jaune liquide', '3-4 min', 'Protéine douce, digestion facile'],
+				['Œufs mollets', 'Jaune dense', '5-6 min', 'Équilibre parfait de texture'],
+				['Œufs durs', 'Entièrement pris', '9-11 min', 'Fermeté maximale'],
+				['Viande - Saisie', 'Feu vif', '1-2 min/face', 'Réaction de Maillard, jutosité'],
+				['Viande - Repos fin', 'Repos', '5 min', 'Redistribution des jus'],
+				['Viande - Grand Repos', 'Repos', '15-20 min', 'Fibres détendues'],
 			],
 		},
 		{
 			type: 'title',
-			text: 'Food Safety: The Danger Zone',
+			text: 'Sécurité Alimentaire : La Zone de Danger',
 			level: 3,
 		},
 		{
 			type: 'paragraph',
-			html: 'Time doesn\'t just affect quality, it affects safety. The bacterial "Danger Zone" sits between 5°C and 65°C. Cooked foods must not remain in this range for more than <strong>2 hours</strong> (or 1 hour if ambient temperature exceeds 30°C). Use a timer to monitor cooling before storing food in the fridge.',
+			html: 'Le temps n\'affecte pas seulement la qualité, il affecte la sécurité. La "Zone de Danger" bactérienne se situe entre 5°C et 65°C. Les aliments cuits ne doivent pas rester dans cette plage pendant plus de <strong>2 heures</strong> (ou 1 heure si la température ambiante dépasse 30°C). Utilisez un minuteur pour surveiller le refroidissement avant de ranger les aliments au réfrigérateur.',
 		},
 		{
 			type: 'title',
-			text: 'Professional Organization Tips',
+			text: 'Conseils d\'Organisation Professionnelle',
 			level: 3,
 		},
 		{
 			type: 'list',
 			items: [
-				'<strong>Stagger finishing times:</strong> If everything finishes at once, you\'ll feel overwhelmed plating. Try to have side dishes ready 5 minutes before the main course.',
-				'<strong>Use residual heat:</strong> Turn off vegetables or pasta 1-2 minutes before the timer sounds. Residual heat will finish cooking gently.',
-				'<strong>Name your timers:</strong> In a busy kitchen it\'s easy to forget which alarm is which. Use this tool\'s renaming feature to label \'Oven\', \'Rice\', or \'Sauce\'.',
+				'<strong>Échelonnez les temps de fin :</strong> Si tout se termine en même temps, vous vous sentirez débordé pour le dressage. Essayez d\'avoir les accompagnements prêts 5 minutes avant le plat principal.',
+				'<strong>Utilisez la chaleur résiduelle :</strong> Éteignez les légumes ou les pâtes 1 à 2 minutes avant que le minuteur ne sonne. La chaleur résiduelle finira la cuisson en douceur.',
+				'<strong>Nommez vos minuteurs :</strong> Dans une cuisine occupée, il est facile d\'oublier quelle alarme correspond à quoi. Utilisez la fonction de renommage de cet outil pour étiqueter "Four", "Riz" ou "Sauce".',
 			],
 		},
 		{
 			type: 'tip',
-			html: '<strong>Professional tip:</strong> Time precision is what separates a chef from a home cook. Invest in a good timer and use it always. Experience tells you when something "looks ready", but time guarantees consistency.',
+			html: '<strong>Conseil de pro :</strong> La précision temporelle est ce qui sépare un chef d\'un cuisinier amateur. Investissez dans un bon minuteur et utilisez-le toujours. L\'expérience vous dit quand quelque chose "semble prêt", mais le temps garantit la régularité.',
 		},
 	],
 
-	schemas: [faqSchema, howToSchema, appSchema],
+	schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

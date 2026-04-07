@@ -346,6 +346,7 @@ const { ui } = Astro.props;
 		--kt-bg: #fff;
 		--kt-bg-secondary: #f8fafc;
 		--kt-border: #e2e8f0;
+		--kt-separator: #cbd5e1;
 		--kt-text: #0f172a;
 		--kt-text-muted: #64748b;
 		--card-br: 1.5rem;
@@ -357,6 +358,7 @@ const { ui } = Astro.props;
 		--kt-bg: #0f172a;
 		--kt-bg-secondary: #1e293b;
 		--kt-border: #334155;
+		--kt-separator: #64748b;
 		--kt-text: #f8fafc;
 		--kt-text-muted: #94a3b8;
 	}
@@ -473,22 +475,35 @@ const { ui } = Astro.props;
 	}
 
 	.time-input {
-		width: 80px;
+		width: 85px;
+		aspect-ratio: 1;
 		background: var(--kt-bg-secondary);
 		border: 2px solid var(--kt-border);
-		border-radius: 1rem;
-		font-size: 2.5rem;
+		border-radius: 1.25rem;
+		font-size: 2.75rem;
 		font-weight: 900;
 		text-align: center;
 		color: var(--kt-text);
-		padding: 0.5rem;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		outline: none;
 		transition: all 0.2s;
+		appearance: textfield;
+		-moz-appearance: textfield;
+	}
+
+	.time-input::-webkit-outer-spin-button,
+	.time-input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
 	}
 
 	.time-input:focus {
 		border-color: var(--kt-primary);
 		background: var(--kt-bg);
+		box-shadow: 0 0 0 4px rgba(234, 88, 12, 0.1);
 	}
 
 	.time-label {
@@ -502,8 +517,8 @@ const { ui } = Astro.props;
 	.time-separator {
 		font-size: 2rem;
 		font-weight: 900;
-		color: var(--kt-border);
-		margin-top: -1.5rem;
+		color: var(--kt-separator);
+		margin-top: -1.4rem;
 	}
 
 	.timer-controls {

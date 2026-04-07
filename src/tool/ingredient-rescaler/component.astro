@@ -302,6 +302,10 @@ ${ui.exampleLine4}`;
 		gap: 0.5rem;
 	}
 
+	:global(.theme-dark) .ir-results-title {
+		color: var(--ir-text-main);
+	}
+
 	.ir-copy-btn {
 		font-size: 0.75rem;
 		background: hsl(210deg, 30%, 35%);
@@ -319,6 +323,7 @@ ${ui.exampleLine4}`;
 
 	:global(.theme-dark) .ir-copy-btn {
 		background: hsl(220deg, 25%, 30%);
+		color: var(--ir-text-main);
 	}
 
 	.ir-copy-btn:hover {
@@ -360,7 +365,7 @@ ${ui.exampleLine4}`;
 		height: 3rem;
 	}
 
-	.ir-result-row {
+	:global(.ir-result-row) {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -371,7 +376,7 @@ ${ui.exampleLine4}`;
 		transition: all 0.3s ease;
 	}
 
-	.ir-result-row:hover {
+	:global(.ir-result-row):hover {
 		background: var(--ir-primary-light);
 		border-left-color: var(--ir-primary);
 	}
@@ -389,7 +394,7 @@ ${ui.exampleLine4}`;
 		font-size: 1.125rem;
 	}
 
-	.ir-no-amount-row {
+	:global(.ir-no-amount-row) {
 		color: var(--ir-text-muted);
 		font-style: italic;
 		font-size: 0.875rem;
