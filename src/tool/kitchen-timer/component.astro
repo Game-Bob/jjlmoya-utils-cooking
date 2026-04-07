@@ -8,7 +8,7 @@ interface Props {
 const { ui } = Astro.props;
 ---
 
-<div class="kitchen-timer-wrapper">
+<div class="kitchen-timer-wrapper" id="kitchen-timer-wrapper" data-ui={JSON.stringify(ui)}>
 	<div class="kitchen-timer-master-card">
 		<div id="timers-grid" class="timers-grid">
 			<div class="timer-card" data-index="0">
@@ -332,10 +332,13 @@ const { ui } = Astro.props;
 <script>
 	import { initKitchenTimers } from "./init";
 
+	const wrapper = document.getElementById("kitchen-timer-wrapper");
+	const ui = wrapper ? JSON.parse(wrapper.dataset.ui || "{}") : {};
+
 	if (document.readyState === "loading") {
-		document.addEventListener("DOMContentLoaded", initKitchenTimers);
+		document.addEventListener("DOMContentLoaded", () => initKitchenTimers(ui));
 	} else {
-		initKitchenTimers();
+		initKitchenTimers(ui);
 	}
 </script>
 

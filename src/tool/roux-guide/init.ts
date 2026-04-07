@@ -26,47 +26,6 @@ const VISCOSITY_RATIOS: Record<TextureLevel, number> = {
 	4: 185,
 };
 
-const LIQUID_CONFIG: Record<LiquidType, LiquidConfig> = {
-	milk: {
-		name: 'Béchamel',
-		rouxType: 'white',
-		tip: 'Usa leche fría. Añádela gradualmente al principio o de golpe si bates fuerte.',
-	},
-	lightStock: {
-		name: 'Velouté',
-		rouxType: 'blond',
-		tip: 'Usa fondo de ave o pescado. Deja que el roux huela a galleta antes de ligar.',
-	},
-	darkStock: {
-		name: 'Espagnole',
-		rouxType: 'brown',
-		tip: 'Para salsas oscuras potentes. El roux debe estar color chocolate, pero sin quemarse.',
-	},
-	tomato: {
-		name: 'Salsa de Tomate',
-		rouxType: 'blond',
-		tip: 'El roux ayudará a dar cuerpo y suavidad a la textura final del tomate.',
-	},
-};
-
-const ROUX_INFO: Record<'white' | 'blond' | 'brown', RouxInfo> = {
-	white: {
-		label: 'Blanco',
-		time: '2-3 min',
-		description: 'Cocina solo hasta perder el olor a harina cruda. Sin color.',
-	},
-	blond: {
-		label: 'Rubio',
-		time: '5-8 min',
-		description: 'Busca un color de mantequilla tostada y un aroma a nueces.',
-	},
-	brown: {
-		label: 'Oscuro',
-		time: '15-20 min',
-		description: 'Fuego muy suave. Color chocolate. Nota: requiere un 10% más de peso.',
-	},
-};
-
 interface RouxElements {
 	volumeInput: HTMLInputElement;
 	liquidBtns: NodeListOf<Element>;
@@ -124,9 +83,9 @@ function setupLiquidButtons(els: RouxElements, state: State, updateCalculations:
 	els.liquidBtns.forEach((btn) => {
 		btn.addEventListener('click', () => {
 			els.liquidBtns.forEach((b) => {
-				b.classList.remove('active', 'bg-white', 'dark:bg-slate-700', 'shadow-md', 'ring-2', 'ring-indigo-500/20');
+				b.classList.remove('active');
 			});
-			btn.classList.add('active', 'bg-white', 'dark:bg-slate-700', 'shadow-md', 'ring-2', 'ring-indigo-500/20');
+			btn.classList.add('active');
 			state.liquid = (btn as HTMLElement).dataset.type as LiquidType || 'milk';
 			updateCalculations();
 		});
@@ -137,19 +96,16 @@ function setupTextureButtons(els: RouxElements, state: State, updateCalculations
 	els.textureBtns.forEach((btn) => {
 		btn.addEventListener('click', () => {
 			els.textureBtns.forEach((b) => {
-				b.classList.remove('active', 'border-amber-500/50', 'bg-amber-50', 'dark:bg-amber-900/10');
-				b.classList.add('border-slate-100', 'dark:border-slate-800', 'bg-white', 'dark:bg-slate-900');
+				b.classList.remove('active');
 			});
-
-			btn.classList.remove('border-slate-100', 'dark:border-slate-800', 'bg-white', 'dark:bg-slate-900');
-			btn.classList.add('active', 'border-amber-500/50', 'bg-amber-50', 'dark:bg-amber-900/10');
+			btn.classList.add('active');
 			state.level = parseInt((btn as HTMLElement).dataset.level || '2') as TextureLevel;
 			updateCalculations();
 		});
 	});
 }
 
-function updateDisplay(els: RouxElements, state: State): void {
+function updateDisplay(els: RouxElements, state: State, LIQUID_CONFIG: Record<LiquidType, LiquidConfig>, ROUX_INFO: Record<'white' | 'blond' | 'brown', RouxInfo>): void {
 	const config = LIQUID_CONFIG[state.liquid];
 	const baseRatio = VISCOSITY_RATIOS[state.level];
 	const liters = state.volume / 1000;
@@ -169,14 +125,55 @@ function updateDisplay(els: RouxElements, state: State): void {
 	els.progressBar.style.width = `${(state.level / 4) * 100}%`;
 }
 
-export function initRouxGuide(): void {
+export function initRouxGuide(ui: Record<string, string>): void {
+	const LIQUID_CONFIG: Record<LiquidType, LiquidConfig> = {
+		milk: {
+			name: ui.recipeBechamel as string,
+			rouxType: 'white',
+			tip: ui.tipBechamel as string,
+		},
+		lightStock: {
+			name: ui.recipeVeloute as string,
+			rouxType: 'blond',
+			tip: ui.tipVeloute as string,
+		},
+		darkStock: {
+			name: ui.recipeEspagnole as string,
+			rouxType: 'brown',
+			tip: ui.tipEspagnole as string,
+		},
+		tomato: {
+			name: ui.recipeTomato as string,
+			rouxType: 'blond',
+			tip: ui.tipTomato as string,
+		},
+	};
+
+	const ROUX_INFO: Record<'white' | 'blond' | 'brown', RouxInfo> = {
+		white: {
+			label: ui.rouxWhiteLabel as string,
+			time: ui.timeWhite as string,
+			description: ui.descWhite as string,
+		},
+		blond: {
+			label: ui.rouxBlondLabel as string,
+			time: ui.timeBlond as string,
+			description: ui.descBlond as string,
+		},
+		brown: {
+			label: ui.rouxBrownLabel as string,
+			time: ui.timeBrown as string,
+			description: ui.descBrown as string,
+		},
+	};
+
 	const els = setupElements();
 	if (!els) return;
 
 	const state: State = { volume: 1000, liquid: 'milk', level: 2 };
-	const updateCalculations = () => updateDisplay(els, state);
+	const updateCalculations = () => updateDisplay(els, state, LIQUID_CONFIG, ROUX_INFO);
 
-	els.volumeInput.addEventListener('input', (e) => {
+	els.volumeInput.addEventListener('input', (e: Event) => {
 		state.volume = parseInt((e.target as HTMLInputElement).value) || 0;
 		updateCalculations();
 	});

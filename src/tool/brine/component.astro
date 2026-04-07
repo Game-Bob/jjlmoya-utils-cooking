@@ -1,8 +1,6 @@
 ---
-import type { ToolLocaleContent } from "../../types";
-
 interface Props {
-  ui: ToolLocaleContent["ui"];
+  ui: Record<string, string>;
 }
 
 const { ui } = Astro.props;
