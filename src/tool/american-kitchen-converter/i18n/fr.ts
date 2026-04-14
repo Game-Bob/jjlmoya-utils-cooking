@@ -324,7 +324,7 @@ export const content: ToolLocaleContent = {
     {
       type: "diagnostic",
       variant: "warning",
-      title: "Votre Gâteau est-il trop sec ?",
+      title: "Votre Gâteau est il trop sec ?",
       html: "L'erreur classique avec les cups est de plonger la tasse dans le sac de farine. Cela tasse la poudre et vous risquez d'ajouter 40g de farine excédentaire. La solution est de <strong>toujours convertir en grammes</strong>.",
     },
     {

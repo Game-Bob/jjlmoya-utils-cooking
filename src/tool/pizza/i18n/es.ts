@@ -255,7 +255,7 @@ export const content: ToolLocaleContent = {
 			columns: 3,
 			items: [
 				{
-					title: 'Hidratación 55-60%',
+					title: 'Hidratación 55 a 60%',
 					icon: 'mdi:water-minus',
 					description: 'Masa muy manejable, ideal para principiantes y hornos domésticos de baja temperatura.',
 					points: [
@@ -265,7 +265,7 @@ export const content: ToolLocaleContent = {
 					],
 				},
 				{
-					title: 'Hidratación 63-67%',
+					title: 'Hidratación 63 a 67%',
 					icon: 'mdi:water',
 					description: 'El estándar de la AVPN. Equilibrio perfecto para una masa ligera con alveolatura visible.',
 					highlight: true,

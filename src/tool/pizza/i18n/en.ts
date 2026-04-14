@@ -255,7 +255,7 @@ export const content: ToolLocaleContent = {
       columns: 3,
       items: [
         {
-          title: "Hydration 55-60%",
+          title: "Hydration 55 to 60%",
           icon: "mdi:water-percent",
           description: "Very manageable dough, ideal for beginners and lower-temperature home ovens.",
           points: [
@@ -265,7 +265,7 @@ export const content: ToolLocaleContent = {
           ],
         },
         {
-          title: "Hydration 63-67%",
+          title: "Hydration 63 to 67%",
           icon: "mdi:water",
           description: "The AVPN standard. Perfect balance for a light dough with visible crumb development.",
           highlight: true,

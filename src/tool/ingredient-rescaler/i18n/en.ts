@@ -1,10 +1,78 @@
 import type { ToolLocaleContent } from '../../../types';
 
+const title = 'Professional Recipe Ingredient Scaler';
+const description =
+  'Automatically scale your recipes based on serving count. Calculate exact ingredient amounts to multiply or reduce any recipe with professional precision.';
+
+const faq = [
+  {
+    question: 'Why does my conversion factor include decimals?',
+    answer: 'Because culinary proportions aren\'t always whole numbers. If you scale a 4-person recipe for 7 people, the factor is exactly 1.75. Multiplying by this specific ratio is more accurate than arbitrary rounding.',
+  },
+  {
+    question: 'How do I handle fractions like \'1/2 tsp\'?',
+    answer: 'The parser automatically identifies numbers. It will read \'1/2\' as \'0.5\' and scale it accordingly. For maximum clarity, you can also enter decimals directly.',
+  },
+  {
+    question: 'Should I round the final results?',
+    answer: 'It depends on the ingredient. For flours and liquids, yes. For potent spices or yeast, we recommend scaling to about 75% of the calculated total to avoid overpowering the dish.',
+  },
+  {
+    question: 'Does it work with cups and ounces?',
+    answer: 'Yes, the tool scales any numerical value. However, we strongly recommend converting to grams first for professional-grade consistency across larger batches.',
+  },
+];
+
+const howTo = [
+  {
+    name: 'Enter your servings count',
+    text: 'Define how many people the recipe was originally for, and how many you want to cook for now.',
+  },
+  {
+    name: 'Paste your ingredient list',
+    text: 'Copy and paste your entire list. Our tool recognizes numbers at the start of each line (e.g., 500g, 1/2, 2.5) and scales them instantly.',
+  },
+  {
+    name: 'Apply professional adjustments',
+    text: 'Math is exact, but cooking is situational. Scale spices to 75%. Don\'t scale cooking times. Use your chef\'s intuition for the final touch.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description,
+  step: howTo.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: title,
+  description,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'All',
+};
+
 export const content: ToolLocaleContent = {
   slug: "recipe-ingredient-scaler-converter-servings",
-  title: "Professional Recipe Ingredient Scaler",
-  description:
-    "Automatically scale your recipes based on serving count. Calculate exact ingredient amounts to multiply or reduce any recipe with professional precision.",
+  title,
+  description,
   ui: {
     servings: "Servings",
     original: "Original",
@@ -25,24 +93,7 @@ export const content: ToolLocaleContent = {
     defaultIngredient3: "2 Eggs",
   },
   faqTitle: "Frequently Asked Questions",
-  faq: [
-    {
-      question: "Why does my conversion factor include decimals?",
-      answer: "Because culinary proportions aren't always whole numbers. If you scale a 4-person recipe for 7 people, the factor is exactly 1.75. Multiplying by this specific ratio is more accurate than arbitrary rounding.",
-    },
-    {
-      question: "How do I handle fractions like '1/2 tsp'?",
-      answer: "The parser automatically identifies numbers. It will read '1/2' as '0.5' and scale it accordingly. For maximum clarity, you can also enter decimals directly.",
-    },
-    {
-      question: "Should I round the final results?",
-      answer: "It depends on the ingredient. For flours and liquids, yes. For potent spices or yeast, we recommend scaling to about 75% of the calculated total to avoid overpowering the dish.",
-    },
-    {
-      question: "Does it work with cups and ounces?",
-      answer: "Yes, the tool scales any numerical value. However, we strongly recommend converting to grams first for professional-grade consistency across larger batches.",
-    },
-  ],
+  faq,
   bibliographyTitle: "Bibliography & Resources",
   bibliography: [
     {
@@ -58,20 +109,7 @@ export const content: ToolLocaleContent = {
       url: "https://www.modernistcuisine.com/",
     },
   ],
-  howTo: [
-    {
-      name: "Enter your servings count",
-      text: "Define how many people the recipe was originally for, and how many you want to cook for now.",
-    },
-    {
-      name: "Paste your ingredient list",
-      text: "Copy and paste your entire list. Our tool recognizes numbers at the start of each line (e.g., 500g, 1/2, 2.5) and scales them instantly.",
-    },
-    {
-      name: "Apply professional adjustments",
-      text: "Math is exact, but cooking is situational. Scale spices to 75%. Don't scale cooking times. Use your chef's intuition for the final touch.",
-    },
-  ],
+  howTo,
   seo: [
     {
       type: "title",
@@ -200,66 +238,5 @@ export const content: ToolLocaleContent = {
     },
   ],
 
-  schemas: [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'WebApplication',
-      name: 'Ingredient Rescaler',
-      description: 'Scale recipes automatically based on the number of servings. Calculate exact ingredient quantities by multiplying or reducing your recipe without complications.',
-      url: 'https://jjlmoya.es/en/ingredient-rescaler',
-      applicationCategory: 'Utilities',
-      inLanguage: 'en-US',
-      offers: {
-        '@type': 'Offer',
-        price: '0',
-        priceCurrency: 'EUR',
-      },
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'Article',
-      headline: 'Ingredient Rescaler - Scale Your Recipes Easily',
-      description: 'Scale recipes automatically based on the number of servings. Calculate exact ingredient quantities by multiplying or reducing your recipe without complications.',
-      author: {
-        '@type': 'Person',
-        name: 'jjlmoya',
-      },
-      inLanguage: 'en-US',
-      isPartOf: {
-        '@type': 'WebSite',
-        name: 'jjlmoya Utilities',
-        url: 'https://jjlmoya.es',
-      },
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: 'https://jjlmoya.es/en',
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: 'Utilities',
-          item: 'https://jjlmoya.es/en/utilities',
-        },
-        {
-          '@type': 'ListItem',
-          position: 3,
-          name: 'Cooking',
-          item: 'https://jjlmoya.es/en/cooking',
-        },
-        {
-          '@type': 'ListItem',
-          position: 4,
-          name: 'Ingredient Rescaler',
-          item: 'https://jjlmoya.es/en/ingredient-rescaler',
-        },
-      ],
-    },
-  ],
+  schemas: [appSchema, faqSchema, howToSchema],
 };

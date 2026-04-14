@@ -262,7 +262,7 @@ export const content: ToolLocaleContent = {
     {
       type: "diagnostic",
       variant: "warning",
-      title: "Votre Meringue rejette-t-elle du Liquide ?",
+      title: "Votre Meringue rejette t elle du Liquide ?",
       html: "Si vous voyez du sirop s'échapper (synérèse), c'est soit que le sucre n'était pas dissous, soit que l'humidité ambiante est trop forte. Pour l'italienne, versez le sirop en filet constant, jamais directement sur le fouet.",
     },
     {

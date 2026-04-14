@@ -1,10 +1,91 @@
 import type { ToolLocaleContent } from '../../../types';
 
+const title = 'Calculadora para Escalar Moldes de Repostería';
+const description =
+	'Adapta cualquier receta de repostería a tus moldes. Calcula automáticamente el factor de conversión para moldes redondos, cuadrados y rectangulares con precisión profesional.';
+
+const faq = [
+	{
+		question: '¿Cómo funciona exactamente el factor multiplicador?',
+		answer:
+			'El factor se obtiene dividiendo el área de tu molde objetivo entre el área del molde de la receta original. Si el resultado es 1.5, significa que debes multiplicar cada ingrediente por esa cifra para obtener el volumen correcto.',
+	},
+	{
+		question: '¿Puedo convertir un molde redondo a uno cuadrado?',
+		answer:
+			'Sí, la herramienta utiliza fórmulas geométricas precisas para comparar superficies sin importar la forma. Solo introduce las medidas y el sistema hará la equivalencia de áreas automáticamente.',
+	},
+	{
+		question: '¿Qué ocurre con la altura de los moldes?',
+		answer:
+			'Esta herramienta se centra en el área de la base, que es el factor más crítico. Si tu molde es significativamente más alto o bajo que el original, podrías necesitar un pequeño ajuste adicional en el tiempo de horneado.',
+	},
+	{
+		question: '¿Cómo añado ingredientes a la lista?',
+		answer:
+			'Haz clic en el botón inferior para añadir una nueva fila. Escribe el nombre y el peso original; la columna final se actualizará instantáneamente con la cantidad escalada.',
+	},
+	{
+		question: '¿Es fiable el escalado para moldes muy grandes?',
+		answer:
+			'Matemáticamente es exacto, pero ten en cuenta que los pasteles muy grandes tardan más en cocinarse en el centro y pueden necesitar una temperatura ligeramente inferior para evitar que se quemen los bordes.',
+	},
+];
+
+const howTo = [
+	{
+		name: 'Define el molde de la receta',
+		text: 'Selecciona la forma y dimensiones del molde para el que está diseñada originalmente la receta que quieres preparar.',
+	},
+	{
+		name: 'Configura tu propio molde',
+		text: 'Introduce las medidas del molde que tienes en casa. El sistema calculará el factor de conversión inmediatamente.',
+	},
+	{
+		name: 'Utiliza la calculadora de ingredientes',
+		text: 'Añade los ingredientes de tu receta para ver las cantidades exactas que necesitas para que el pastel tenga el mismo grosor.',
+	},
+	{
+		name: 'Ajusta el horneado',
+		text: 'Recuerda que un cambio de tamaño suele implicar una variación en el tiempo de horno aunque la temperatura sea la misma.',
+	},
+];
+
+const faqSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: faq.map((item) => ({
+		'@type': 'Question',
+		name: item.question,
+		acceptedAnswer: { '@type': 'Answer', text: item.answer },
+	})),
+};
+
+const howToSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'HowTo',
+	name: title,
+	description,
+	step: howTo.map((step) => ({
+		'@type': 'HowToStep',
+		name: step.name,
+		text: step.text,
+	})),
+};
+
+const appSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'SoftwareApplication',
+	name: title,
+	description,
+	applicationCategory: 'UtilitiesApplication',
+	operatingSystem: 'All',
+};
+
 export const content: ToolLocaleContent = {
 	slug: 'moldes',
-	title: 'Calculadora para Escalar Moldes de Repostería',
-	description:
-		'Adapta cualquier receta de repostería a tus moldes. Calcula automáticamente el factor de conversión para moldes redondos, cuadrados y rectangulares con precisión profesional.',
+	title,
+	description,
 	faqTitle: 'Preguntas Frecuentes sobre el Escalado',
 	bibliographyTitle: 'Fuentes y Referencias Científicas',
 
@@ -37,33 +118,7 @@ export const content: ToolLocaleContent = {
 		increase: 'Aumenta',
 	},
 
-	faq: [
-		{
-			question: '¿Cómo funciona exactamente el factor multiplicador?',
-			answer:
-				'El factor se obtiene dividiendo el área de tu molde objetivo entre el área del molde de la receta original. Si el resultado es 1.5, significa que debes multiplicar cada ingrediente por esa cifra para obtener el volumen correcto.',
-		},
-		{
-			question: '¿Puedo convertir un molde redondo a uno cuadrado?',
-			answer:
-				'Sí, la herramienta utiliza fórmulas geométricas precisas para comparar superficies sin importar la forma. Solo introduce las medidas y el sistema hará la equivalencia de áreas automáticamente.',
-		},
-		{
-			question: '¿Qué ocurre con la altura de los moldes?',
-			answer:
-				'Esta herramienta se centra en el área de la base, que es el factor más crítico. Si tu molde es significativamente más alto o bajo que el original, podrías necesitar un pequeño ajuste adicional en el tiempo de horneado.',
-		},
-		{
-			question: '¿Cómo añado ingredientes a la lista?',
-			answer:
-				'Haz clic en el botón inferior para añadir una nueva fila. Escribe el nombre y el peso original; la columna final se actualizará instantáneamente con la cantidad escalada.',
-		},
-		{
-			question: '¿Es fiable el escalado para moldes muy grandes?',
-			answer:
-				'Matemáticamente es exacto, pero ten en cuenta que los pasteles muy grandes tardan más en cocinarse en el centro y pueden necesitar una temperatura ligeramente inferior para evitar que se quemen los bordes.',
-		},
-	],
+	faq,
 
 	bibliography: [
 		{
@@ -76,24 +131,7 @@ export const content: ToolLocaleContent = {
 		},
 	],
 
-	howTo: [
-		{
-			name: 'Define el molde de la receta',
-			text: 'Selecciona la forma y dimensiones del molde para el que está diseñada originalmente la receta que quieres preparar.',
-		},
-		{
-			name: 'Configura tu propio molde',
-			text: 'Introduce las medidas del molde que tienes en casa. El sistema calculará el factor de conversión inmediatamente.',
-		},
-		{
-			name: 'Utiliza la calculadora de ingredientes',
-			text: 'Añade los ingredientes de tu receta para ver las cantidades exactas que necesitas para que el pastel tenga el mismo grosor.',
-		},
-		{
-			name: 'Ajusta el horneado',
-			text: 'Recuerda que un cambio de tamaño suele implicar una variación en el tiempo de horno aunque la temperatura sea la misma.',
-		},
-	],
+	howTo,
 
 	seo: [
 		{
@@ -253,17 +291,5 @@ export const content: ToolLocaleContent = {
 		},
 	],
 
-
-	schemas: [
-		{
-			'@context': 'https://schema.org',
-			'@type': 'WebApplication',
-			'name': 'Escalador de Moldes JJLMoya',
-			'url': 'https://utils.jjlmoya.com/es/escalador-moldes',
-			'description': 'Herramienta profesional para convertir cantidades de ingredientes entre diferentes tamaños de moldes de repostería.',
-			'applicationCategory': 'UtilitiesApplication',
-			'operatingSystem': 'All',
-		},
-	],
+	schemas: [appSchema, faqSchema, howToSchema],
 };
-

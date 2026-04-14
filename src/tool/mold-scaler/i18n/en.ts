@@ -1,10 +1,91 @@
 import type { ToolLocaleContent } from '../../../types';
 
+const title = 'Cake Pan Size Converter and Baking Scaler';
+const description =
+	'Scale any baking recipe to your pans instantly. Calculate the conversion factor for round, square, and rectangular molds with professional precision.';
+
+const faq = [
+	{
+		question: 'How exactly is the multiplying factor calculated?',
+		answer:
+			'The factor is derived by dividing the surface area of your target pan by the surface area of the original pan mentioned in the recipe. If the result is 1.5, you multiply every ingredient weight by 1.5.',
+	},
+	{
+		question: 'Can I convert a round cake pan to a square one?',
+		answer:
+			'Yes, our tool uses geometric formulas to compare surface areas regardless of shape. Simply enter the dimensions and the system handles the area equivalence automatically.',
+	},
+	{
+		question: 'Does pan height affect the calculation?',
+		answer:
+			'This tool focuses on the base area, which is the most critical factor for most cakes. If your pan is significantly taller or shorter than the original, you might need additional timing adjustments during baking.',
+	},
+	{
+		question: 'How do I add multiple ingredients to my list?',
+		answer:
+			'Click the "Add Ingredient" button to create a new row. Type the name and original weight; the final column updates instantly with the scaled amount based on the current factor.',
+	},
+	{
+		question: 'Is scaling reliable for very large sheet pans?',
+		answer:
+			'Mathematically yes, but keep in mind that very large cakes take much longer to cook in the center. You may need to lower the oven temperature slightly to prevent the edges from over-baking.',
+	},
+];
+
+const howTo = [
+	{
+		name: 'Define the original recipe pan',
+		text: 'Select the shape and dimensions of the cake pan the recipe was originally designed for.',
+	},
+	{
+		name: 'Input your target pan measurements',
+		text: 'Select your pan shape and enter its dimensions. The system will calculate the scaling factor immediately.',
+	},
+	{
+		name: 'Use the ingredient weight converter',
+		text: 'Add your recipe ingredients to see exactly how much of each you need for the new pan size.',
+	},
+	{
+		name: 'Monitor bake times',
+		text: 'Remember that changing pan size usually requires timing adjustments even if the temperature remains the same.',
+	},
+];
+
+const faqSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: faq.map((item) => ({
+		'@type': 'Question',
+		name: item.question,
+		acceptedAnswer: { '@type': 'Answer', text: item.answer },
+	})),
+};
+
+const howToSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'HowTo',
+	name: title,
+	description,
+	step: howTo.map((step) => ({
+		'@type': 'HowToStep',
+		name: step.name,
+		text: step.text,
+	})),
+};
+
+const appSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'SoftwareApplication',
+	name: title,
+	description,
+	applicationCategory: 'UtilitiesApplication',
+	operatingSystem: 'All',
+};
+
 export const content: ToolLocaleContent = {
 	slug: 'cake-pan-size-converter-calculator',
-	title: 'Cake Pan Size Converter and Baking Scaler',
-	description:
-		'Scale any baking recipe to your pans instantly. Calculate the conversion factor for round, square, and rectangular molds with professional precision.',
+	title,
+	description,
 	faqTitle: 'Baking Scaling Frequently Asked Questions',
 	bibliographyTitle: 'Scientific Baking Resources and References',
 
@@ -37,33 +118,7 @@ export const content: ToolLocaleContent = {
 		increase: 'Increase',
 	},
 
-	faq: [
-		{
-			question: 'How exactly is the multiplying factor calculated?',
-			answer:
-				'The factor is derived by dividing the surface area of your target pan by the surface area of the original pan mentioned in the recipe. If the result is 1.5, you multiply every ingredient weight by 1.5.',
-		},
-		{
-			question: 'Can I convert a round cake pan to a square one?',
-			answer:
-				'Yes, our tool uses geometric formulas to compare surface areas regardless of shape. Simply enter the dimensions and the system handles the area equivalence automatically.',
-		},
-		{
-			question: 'Does pan height affect the calculation?',
-			answer:
-				'This tool focuses on the base area, which is the most critical factor for most cakes. If your pan is significantly taller or shorter than the original, you might need additional timing adjustments during baking.',
-		},
-		{
-			question: 'How do I add multiple ingredients to my list?',
-			answer:
-				'Click the "Add Ingredient" button to create a new row. Type the name and original weight; the final column updates instantly with the scaled amount based on the current factor.',
-		},
-		{
-			question: 'Is scaling reliable for very large sheet pans?',
-			answer:
-				'Mathematically yes, but keep in mind that very large cakes take much longer to cook in the center. You may need to lower the oven temperature slightly to prevent the edges from over-baking.',
-		},
-	],
+	faq,
 
 	bibliography: [
 		{
@@ -76,24 +131,7 @@ export const content: ToolLocaleContent = {
 		},
 	],
 
-	howTo: [
-		{
-			name: 'Define the original recipe pan',
-			text: 'Select the shape and dimensions of the cake pan the recipe was originally designed for.',
-		},
-		{
-			name: 'Input your target pan measurements',
-			text: 'Select your pan shape and enter its dimensions. The system will calculate the scaling factor immediately.',
-		},
-		{
-			name: 'Use the ingredient weight converter',
-			text: 'Add your recipe ingredients to see exactly how much of each you need for the new pan size.',
-		},
-		{
-			name: 'Monitor bake times',
-			text: 'Remember that changing pan size usually requires timing adjustments even if the temperature remains the same.',
-		},
-	],
+	howTo,
 
 	seo: [
 		{
@@ -253,16 +291,5 @@ export const content: ToolLocaleContent = {
 		},
 	],
 
-
-	schemas: [
-		{
-			'@context': 'https://schema.org',
-			'@type': 'WebApplication',
-			'name': 'JJLMoya Cake Pan Scaler',
-			'url': 'https://utils.jjlmoya.com/en/cake-pan-size-converter-calculator',
-			'description': 'Professional tool to convert ingredient weights between different baking pan sizes and shapes.',
-			'applicationCategory': 'UtilitiesApplication',
-			'operatingSystem': 'All',
-		},
-	],
+	schemas: [appSchema, faqSchema, howToSchema],
 };

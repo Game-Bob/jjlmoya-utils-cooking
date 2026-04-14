@@ -255,7 +255,7 @@ export const content: ToolLocaleContent = {
       columns: 3,
       items: [
         {
-          title: "Hydratation 55-60%",
+          title: "Hydratation 55 à 60%",
           icon: "mdi:water-percent",
           description: "Pâte très maniable, idéale pour les débutants et les fours domestiques à basse température.",
           points: [
@@ -265,7 +265,7 @@ export const content: ToolLocaleContent = {
           ],
         },
         {
-          title: "Hydratation 63-67%",
+          title: "Hydratation 63 à 67%",
           icon: "mdi:water",
           description: "Le standard AVPN. Équilibre parfait pour une pâte légère avec un développement visible de la mie.",
           highlight: true,

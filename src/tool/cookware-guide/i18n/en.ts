@@ -1,6 +1,6 @@
 import type { ToolLocaleContent } from '../../../types';
 
-const title = "Smart Cookware Selector | Kitchen Utensils Guide";
+const title = "Smart Cookware Selector: Kitchen Utensils Guide";
 const description = "Interactive guide to choose the best pan or pot based on your cooking style. Iron vs Stainless Steel vs Teflon. Find your perfect tool.";
 const faq = [
     {
@@ -73,7 +73,7 @@ const appSchema = {
 
 export const content: ToolLocaleContent = {
   slug: 'cookware-selector',
-  title: 'Smart Cookware Selector | Kitchen Utensils Guide',
+  title: 'Smart Cookware Selector: Kitchen Utensils Guide',
   description: 'Interactive guide to choose the best pan or pot based on your cooking style. Iron vs Stainless Steel vs Teflon. Find your perfect tool.',
   faqTitle: 'Frequently Asked Questions',
   faq: [

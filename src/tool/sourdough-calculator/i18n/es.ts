@@ -3,130 +3,130 @@ import type { ToolLocaleContent } from '../../../types';
 const title = "Calculadora de Masa Madre Ratios de Fermentación";
 const description = "Calcula automáticamente las proporciones de masa madre, harina y agua para mantener tu cultivo. Ratios predefinidos o personalizados.";
 const faq = [
-    {
-      question: '¿Qué es el ratio 1:1:1?',
-      answer: 'Es el ratio más común para mantener la masa madre a temperatura ambiente. Significa 1 parte de masa madre, 1 parte de harina y 1 parte de agua. Útil cuando refrescas diariamente.',
-    },
-    {
-      question: '¿Cuándo uso 1:2:2?',
-      answer: 'El ratio 1:2:2 es para activar la masa madre. Genera una fermentación más lenta pero predecible. Ideal si guardarás el cultivo en frío y quieres revigorarlo.',
-    },
-    {
-      question: '¿Cuál es el "sweet spot" 1:5:5?',
-      answer: 'El ratio 1:5:5 es el "sweet spot" para muchos panaderos. Permite 8-12 horas de fermentación a temperatura ambiente antes de que la masa madre esté lista. Equilibra comodidad con control de tiempo.',
-    },
-    {
-      question: '¿Puedo usar ratios personalizados?',
-      answer: 'Absolutamente. Si tienes un protocolo específico, puedes ingresar tus propios ratios. Algunos panaderos usan 1:10:10 para fermentación lentísima, otros 1:1:0.8 para menos agua.',
-    },
-    {
-      question: '¿La calculadora redondea los gramos?',
-      answer: 'Sí. Redondea al número entero más cercano para practicidad. Si necesitas máxima precisión, usa una báscula digital. Los pequeños redondeos no afectan significativamente la fermentación.',
-    },
-  ];
+	{
+		question: '¿Qué es el ratio 1:1:1?',
+		answer: 'Es el ratio más común para mantener la masa madre a temperatura ambiente. Significa 1 parte de masa madre, 1 parte de harina y 1 parte de agua. Útil cuando refrescas diariamente.',
+	},
+	{
+		question: '¿Cuándo uso 1:2:2?',
+		answer: 'El ratio 1:2:2 es para activar la masa madre. Genera una fermentación más lenta pero predecible. Ideal si guardarás el cultivo en frío y quieres revigorarlo.',
+	},
+	{
+		question: '¿Cuál es el "sweet spot" 1:5:5?',
+		answer: 'El ratio 1:5:5 es el "sweet spot" para muchos panaderos. Permite 8-12 horas de fermentación a temperatura ambiente antes de que la masa madre esté lista. Equilibra comodidad con control de tiempo.',
+	},
+	{
+		question: '¿Puedo usar ratios personalizados?',
+		answer: 'Absolutamente. Si tienes un protocolo específico, puedes ingresar tus propios ratios. Algunos panaderos usan 1:10:10 para fermentación lentísima, otros 1:1:0.8 para menos agua.',
+	},
+	{
+		question: '¿La calculadora redondea los gramos?',
+		answer: 'Sí. Redondea al número entero más cercano para practicidad. Si necesitas máxima precisión, usa una báscula digital. Los pequeños redondeos no afectan significativamente la fermentación.',
+	},
+];
 const howTo = [
-    {
-      name: 'Ingresa la cantidad total que necesitas',
-      text: 'Define el peso total de masa madre que requieres para tu receta (ej: 300g para un pan típico).',
-    },
-    {
-      name: 'Selecciona el ratio de refresco',
-      text: 'Elige entre los ratios predefinidos (Mantener, Activar, Retardar, Fuerte, Sweet Spot) o crea uno personalizado.',
-    },
-    {
-      name: 'Obtén las cantidades exactas',
-      text: 'La calculadora te muestra cuánto de masa madre, harina y agua necesitas. Mezcla estos ingredientes y deja fermentar según tu protocolo.',
-    },
-  ];
+	{
+		name: 'Ingresa la cantidad total que necesitas',
+		text: 'Define el peso total de masa madre que requieres para tu receta (ej: 300g para un pan típico).',
+	},
+	{
+		name: 'Selecciona el ratio de refresco',
+		text: 'Elige entre los ratios predefinidos (Mantener, Activar, Retardar, Fuerte, Sweet Spot) o crea uno personalizado.',
+	},
+	{
+		name: 'Obtén las cantidades exactas',
+		text: 'La calculadora te muestra cuánto de masa madre, harina y agua necesitas. Mezcla estos ingredientes y deja fermentar según tu protocolo.',
+	},
+];
 
 const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faq.map((item) => ({
-    '@type': 'Question',
-    name: item.question,
-    acceptedAnswer: { '@type': 'Answer', text: item.answer },
-  })),
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: faq.map((item) => ({
+		'@type': 'Question',
+		name: item.question,
+		acceptedAnswer: { '@type': 'Answer', text: item.answer },
+	})),
 };
 
 const howToSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'HowTo',
-  name: title,
-  description,
-  step: howTo.map((step) => ({
-    '@type': 'HowToStep',
-    name: step.name,
-    text: step.text,
-  })),
+	'@context': 'https://schema.org',
+	'@type': 'HowTo',
+	name: title,
+	description,
+	step: howTo.map((step) => ({
+		'@type': 'HowToStep',
+		name: step.name,
+		text: step.text,
+	})),
 };
 
 const appSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: title,
-  description,
-  applicationCategory: 'UtilitiesApplication',
-  operatingSystem: 'Web',
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+	'@context': 'https://schema.org',
+	'@type': 'SoftwareApplication',
+	name: title,
+	description,
+	applicationCategory: 'UtilitiesApplication',
+	operatingSystem: 'Web',
+	offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'calculadora-masa-madre',
-  title: 'Calculadora de Masa Madre Ratios de Fermentación',
-  description: 'Calcula automáticamente las proporciones de masa madre, harina y agua para mantener tu cultivo. Ratios predefinidos o personalizados.',
-  faqTitle: 'Preguntas Frecuentes',
-  faq: [
-    {
-      question: '¿Qué es el ratio 1:1:1?',
-      answer: 'Es el ratio más común para mantener la masa madre a temperatura ambiente. Significa 1 parte de masa madre, 1 parte de harina y 1 parte de agua. Útil cuando refrescas diariamente.',
-    },
-    {
-      question: '¿Cuándo uso 1:2:2?',
-      answer: 'El ratio 1:2:2 es para activar la masa madre. Genera una fermentación más lenta pero predecible. Ideal si guardarás el cultivo en frío y quieres revigorarlo.',
-    },
-    {
-      question: '¿Cuál es el "sweet spot" 1:5:5?',
-      answer: 'El ratio 1:5:5 es el "sweet spot" para muchos panaderos. Permite 8-12 horas de fermentación a temperatura ambiente antes de que la masa madre esté lista. Equilibra comodidad con control de tiempo.',
-    },
-    {
-      question: '¿Puedo usar ratios personalizados?',
-      answer: 'Absolutamente. Si tienes un protocolo específico, puedes ingresar tus propios ratios. Algunos panaderos usan 1:10:10 para fermentación lentísima, otros 1:1:0.8 para menos agua.',
-    },
-    {
-      question: '¿La calculadora redondea los gramos?',
-      answer: 'Sí. Redondea al número entero más cercano para practicidad. Si necesitas máxima precisión, usa una báscula digital. Los pequeños redondeos no afectan significativamente la fermentación.',
-    },
-  ],
-  bibliographyTitle: 'Bibliografía',
-  bibliography: [
-    {
-      name: 'Tartine Bread - Chad Robertson',
-      url: 'https://www.penguinrandomhouse.com/books/310016/tartine-bread-by-chad-robertson/',
-    },
-    {
-      name: 'The Flavor Bible - Scaling and Ratios',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'Full Proof Baking - Guides on Sourdough',
-      url: 'https://www.fullproofbaking.com/',
-    },
-  ],
-  howTo: [
-    {
-      name: 'Ingresa la cantidad total que necesitas',
-      text: 'Define el peso total de masa madre que requieres para tu receta (ej: 300g para un pan típico).',
-    },
-    {
-      name: 'Selecciona el ratio de refresco',
-      text: 'Elige entre los ratios predefinidos (Mantener, Activar, Retardar, Fuerte, Sweet Spot) o crea uno personalizado.',
-    },
-    {
-      name: 'Obtén las cantidades exactas',
-      text: 'La calculadora te muestra cuánto de masa madre, harina y agua necesitas. Mezcla estos ingredientes y deja fermentar según tu protocolo.',
-    },
-  ],
+	slug: 'masa-madre',
+	title: 'Calculadora de Masa Madre Ratios de Fermentación',
+	description: 'Calcula automáticamente las proporciones de masa madre, harina y agua para mantener tu cultivo. Ratios predefinidos o personalizados.',
+	faqTitle: 'Preguntas Frecuentes',
+	faq: [
+		{
+			question: '¿Qué es el ratio 1:1:1?',
+			answer: 'Es el ratio más común para mantener la masa madre a temperatura ambiente. Significa 1 parte de masa madre, 1 parte de harina y 1 parte de agua. Útil cuando refrescas diariamente.',
+		},
+		{
+			question: '¿Cuándo uso 1:2:2?',
+			answer: 'El ratio 1:2:2 es para activar la masa madre. Genera una fermentación más lenta pero predecible. Ideal si guardarás el cultivo en frío y quieres revigorarlo.',
+		},
+		{
+			question: '¿Cuál es el "sweet spot" 1:5:5?',
+			answer: 'El ratio 1:5:5 es el "sweet spot" para muchos panaderos. Permite 8-12 horas de fermentación a temperatura ambiente antes de que la masa madre esté lista. Equilibra comodidad con control de tiempo.',
+		},
+		{
+			question: '¿Puedo usar ratios personalizados?',
+			answer: 'Absolutamente. Si tienes un protocolo específico, puedes ingresar tus propios ratios. Algunos panaderos usan 1:10:10 para fermentación lentísima, otros 1:1:0.8 para menos agua.',
+		},
+		{
+			question: '¿La calculadora redondea los gramos?',
+			answer: 'Sí. Redondea al número entero más cercano para practicidad. Si necesitas máxima precisión, usa una báscula digital. Los pequeños redondeos no afectan significativamente la fermentación.',
+		},
+	],
+	bibliographyTitle: 'Bibliografía',
+	bibliography: [
+		{
+			name: 'Tartine Bread - Chad Robertson',
+			url: 'https://www.penguinrandomhouse.com/books/310016/tartine-bread-by-chad-robertson/',
+		},
+		{
+			name: 'The Flavor Bible - Scaling and Ratios',
+			url: 'https://www.flavorprints.com/',
+		},
+		{
+			name: 'Full Proof Baking - Guides on Sourdough',
+			url: 'https://www.fullproofbaking.com/',
+		},
+	],
+	howTo: [
+		{
+			name: 'Ingresa la cantidad total que necesitas',
+			text: 'Define el peso total de masa madre que requieres para tu receta (ej: 300g para un pan típico).',
+		},
+		{
+			name: 'Selecciona el ratio de refresco',
+			text: 'Elige entre los ratios predefinidos (Mantener, Activar, Retardar, Fuerte, Sweet Spot) o crea uno personalizado.',
+		},
+		{
+			name: 'Obtén las cantidades exactas',
+			text: 'La calculadora te muestra cuánto de masa madre, harina y agua necesitas. Mezcla estos ingredientes y deja fermentar según tu protocolo.',
+		},
+	],
 	seo: [
 		{
 			type: 'title',
@@ -290,25 +290,25 @@ export const content: ToolLocaleContent = {
 		},
 	],
 
-  ui: {
-    totalAmount: 'Cantidad Final',
-    refreshRatio: 'Ratio de Refresco',
-    maintain: 'Mantener',
-    activate: 'Activar',
-    retard: 'Retardar',
-    strong: 'Fuerte',
-    sweetSpot: 'Sweet Spot',
-    custom: 'Custom',
-    sourdough: 'Masa Madre',
-    activeCulture: 'Cultivo activo',
-    flour: 'Harina',
-    flourType: 'Fuerza o Integral',
-    water: 'Agua',
-    chlorineFree: 'Sin cloro',
-    todayFormula: 'Formula de Hoy',
-    hydration: 'Hidratación 100 %',
-    totalDough: 'Total Masa',
-    mm: 'MM',
-  },
-  schemas: [faqSchema, howToSchema, appSchema],
+	ui: {
+		totalAmount: 'Cantidad Final',
+		refreshRatio: 'Ratio de Refresco',
+		maintain: 'Mantener',
+		activate: 'Activar',
+		retard: 'Retardar',
+		strong: 'Fuerte',
+		sweetSpot: 'Sweet Spot',
+		custom: 'Custom',
+		sourdough: 'Masa Madre',
+		activeCulture: 'Cultivo activo',
+		flour: 'Harina',
+		flourType: 'Fuerza o Integral',
+		water: 'Agua',
+		chlorineFree: 'Sin cloro',
+		todayFormula: 'Formula de Hoy',
+		hydration: 'Hidratación 100 %',
+		totalDough: 'Total Masa',
+		mm: 'MM',
+	},
+	schemas: [faqSchema, howToSchema, appSchema],
 };

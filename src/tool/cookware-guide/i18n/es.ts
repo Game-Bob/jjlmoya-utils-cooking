@@ -1,6 +1,6 @@
 import type { ToolLocaleContent } from '../../../types';
 
-const title = "Selector de Sartenes Inteligente | Guía de Utensilios de Cocina";
+const title = "Selector de Sartenes Inteligente: Guía de Utensilios de Cocina";
 const description = "Guía interactiva para elegir la mejor sartén u olla según tu estilo de cocina. Hierro vs Acero vs Teflón. Encuentra tu herramienta perfecta.";
 const faq = [
     {
@@ -72,8 +72,8 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'selector-sartenes',
-  title: 'Selector de Sartenes Inteligente | Guía de Utensilios de Cocina',
+  slug: 'guia-sartenes',
+  title: 'Selector de Sartenes Inteligente: Guía de Utensilios de Cocina',
   description: 'Guía interactiva para elegir la mejor sartén u olla según tu estilo de cocina. Hierro vs Acero vs Teflón. Encuentra tu herramienta perfecta.',
   faqTitle: 'Preguntas Frecuentes',
   faq: [
