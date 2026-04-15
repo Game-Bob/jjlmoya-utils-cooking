@@ -68,7 +68,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: "pizza",
+  slug: 'napoli-pizza-hamuru-hesaplayici',
   title,
   description,
   faqTitle: "Sıkça Sorulan Sorular",

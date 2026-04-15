@@ -72,7 +72,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'cookware-selector',
+  slug: 'selecteur-ustensiles',
   title: 'Sélecteur d\'Ustensiles Connecté Guide de Cuisine',
   description: 'Guide interactif pour choisir la meilleure poêle ou casserole selon votre style de cuisine. Fonte vs Acier Inoxydable vs Téflon. Trouvez votre outil parfait.',
   faqTitle: 'Questions Fréquemment Posées',

@@ -76,7 +76,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: "brine",
+  slug: 'equilibrium-brining-calculator-meat-fermentation-ratios',
   title: "平衡塩水計算機",
   description: "ジューシーな肉と完璧な発酵食品のための、バランスの科学。食材と水の総重量に基づいた正確な塩分濃度を計算します。",
   ui: {

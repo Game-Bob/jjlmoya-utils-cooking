@@ -72,7 +72,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'banana-ripeness',
+  slug: 'maturite-banane',
   title: 'Diagnostic et Conservation des Bananes : Guide Scientifique',
   description: 'Analysez le stade de maturité de vos bananes avec une précision scientifique. Apprenez les techniques de conservation, la biochimie de l\'éthylène et l\'optimisation nutritionnelle.',
   faqTitle: 'Questions Fréquemment Posées',

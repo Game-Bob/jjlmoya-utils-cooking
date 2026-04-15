@@ -72,7 +72,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'banana-diagnosis',
+  slug: 'banana-ripeness',
   title: "バナナの診断と保存：科学的ガイド",
   description: "バナナの熟成状態を科学的な精度で分析します。保存方法、エチレンの生化学、そして栄養の最適化について学びましょう。",
   faqTitle: "よくある質問",

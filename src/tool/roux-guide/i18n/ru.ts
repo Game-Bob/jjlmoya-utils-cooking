@@ -68,7 +68,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'roux-guide',
+  slug: 'roux-materialnye-sousy',
   title,
   description,
   faqTitle: 'Часто задаваемые вопросы',

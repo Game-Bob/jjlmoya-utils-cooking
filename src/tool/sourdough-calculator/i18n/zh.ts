@@ -68,7 +68,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-	slug: 'sourdough',
+	slug: 'sourdough-starter-feeding-calculator-ratio-proportions',
 	title,
 	description,
 	faqTitle: '常见问题',

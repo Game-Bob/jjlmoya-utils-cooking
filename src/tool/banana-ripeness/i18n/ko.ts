@@ -72,7 +72,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'banana-diagnosis',
+  slug: 'banana-ripeness',
   title: "바나나 숙도 진단 및 보관: 과학적 가이드",
   description: "바나나의 숙성 상태를 과학적인 정밀함으로 분석합니다. 보관 기술, 에틸렌의 생화학, 그리고 영양 최적화 방법을 배워보세요.",
   faqTitle: "자주 묻는 질문",

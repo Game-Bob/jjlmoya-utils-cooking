@@ -68,7 +68,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: "pizza",
+  slug: 'kalkulator-ciasta-pizza-napoletanskiej',
   title,
   description,
   faqTitle: "Często Zadawane Pytania",

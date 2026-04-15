@@ -72,7 +72,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: "boiled-eggs",
+  slug: 'perfect-boiled-egg-timer-altitude-calculator',
   title: "科学鸡蛋计时器",
   description: "根据海拔、温度和大小，通过热力学公式计算出最完美的鸡蛋煮制时间。",
   faqTitle: "常见问题",

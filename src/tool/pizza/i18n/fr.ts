@@ -94,7 +94,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: "calculateur-pate-pizza-napolitaine-proportions-authentiques",
+  slug: 'calcul-pate-pizza-napoletaine',
   title: "Calculateur de Pâte à Pizza Napolitaine",
   description:
     "Calculez les proportions exactes de farine, eau, sel et levure pour préparer une authentique pizza napolitaine maison avec des résultats professionnels.",

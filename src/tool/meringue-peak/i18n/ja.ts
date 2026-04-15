@@ -72,7 +72,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'meringue-peak-calculator',
+  slug: 'meringue-sugar-ratio-calculator-stiff-peaks',
   title,
   description,
   faqTitle: 'よくある質問',

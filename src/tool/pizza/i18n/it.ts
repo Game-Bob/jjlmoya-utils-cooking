@@ -80,7 +80,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: "pizza",
+  slug: "calcolatore-impasto-pizza-napoletana",
   title,
   description,
   faqTitle: "Domande Frequenti",

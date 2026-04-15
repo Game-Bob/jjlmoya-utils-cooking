@@ -76,7 +76,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'american-kitchen-units-converter',
+  slug: 'us-cooking-conversion-calculator-cups-to-grams-fahrenheit',
   title: "アメリカン・キッチン・コンバーター：カップからグラム、温度への換算",
   description: "アメリカのカップ、大さじ、ファーレンハイト（華氏）をメートル法に換算します。アメリカのレシピをプロの精度で読み解くためのツールです。",
   faqTitle: "よくある質問",

@@ -72,7 +72,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'banana-diagnosis',
+  slug: 'banana-ripeness',
   title: "香蕉熟度诊断与保存：科学指南",
   description: "以科学精度分析香蕉的成熟状态。学习保存技术、乙烯生物化学以及营养优化方法。",
   faqTitle: "常问问题",

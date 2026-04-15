@@ -72,7 +72,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: "boiled-eggs",
+  slug: 'perfect-boiled-egg-timer-altitude-calculator',
   title: "과학적인 계란 타이머",
   description: "고도, 온도, 크기에 따른 완벽한 계란 삶기를 위한 열력학 계산기입니다.",
   faqTitle: "자주 묻는 질문",

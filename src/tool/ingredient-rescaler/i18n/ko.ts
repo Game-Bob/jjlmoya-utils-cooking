@@ -73,7 +73,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'ingredient-rescaler',
+  slug: 'recipe-ingredient-scaler-converter-servings',
   title,
   description,
   ui: {

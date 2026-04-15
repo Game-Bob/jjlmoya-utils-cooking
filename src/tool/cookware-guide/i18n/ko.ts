@@ -72,7 +72,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'cookware-guide',
+  slug: 'cookware-selector',
   title: '스마트 프라이팬 선택기: 조리 도구 가이드',
   description: '요리 스타일에 맞춰 가장 적합한 팬이나 냄비를 선택하기 위한 인터랙티브 가이드. 주물 vs 스테인리스 vs 테플론. 나에게 완벽한 도구를 찾아보세요.',
   faqTitle: '자주 묻는 질문',

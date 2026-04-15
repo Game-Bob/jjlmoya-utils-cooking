@@ -76,7 +76,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'american-kitchen-units-converter',
+  slug: 'us-cooking-conversion-calculator-cups-to-grams-fahrenheit',
   title: "미국식 주방 단위 변환기: 컵을 그람 및 온도로 변환",
   description: "컵(cups), 큰술(tablespoons), 화씨(Fahrenheit)를 미터법으로 변환합니다. 미국 레시피를 전문가의 정밀함으로 해석하기 위한 나침반입니다.",
   faqTitle: "자주 묻는 질문",

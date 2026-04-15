@@ -68,7 +68,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'roux-guide',
+  slug: 'roux-ratio-calculator-thickening-sauce-guide',
   title,
   description,
   faqTitle: '常见问题',

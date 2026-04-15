@@ -76,7 +76,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: "pizza",
+  slug: "pizza-neapolitana-teigrechner",
   title,
   description,
   faqTitle: "Häufig gestellte Fragen",

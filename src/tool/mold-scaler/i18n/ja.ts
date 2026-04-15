@@ -78,7 +78,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-	slug: 'cake-molds',
+	slug: 'cake-pan-size-converter-calculator',
 	title,
 	description,
 	faqTitle: 'サイズ換算に関するよくある質問',

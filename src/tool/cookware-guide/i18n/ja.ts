@@ -72,7 +72,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'cookware-guide',
+  slug: 'cookware-selector',
   title: 'スマート・フライパン・セレクター：調理器具ガイド',
   description: 'あなたの料理スタイルに合わせて最適なフライパンや鍋を選ぶためのインタラクティブガイド。鋳鉄 vs ステンレス vs テフロン。理想の道具を見つけましょう。',
   faqTitle: 'よくある質問',

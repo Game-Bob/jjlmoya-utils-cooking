@@ -68,7 +68,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: "pizza",
+  slug: 'kalkulator-dough-pizza-napolitana',
   title,
   description,
   faqTitle: "Pertanyaan Umum",

@@ -72,7 +72,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'guia-roux',
+  slug: 'guia-roux-salsas-madre',
   title: 'Guía Maestra de Roux y Salsas Madre',
   description: 'Calculadora interactiva de Roux. Aprende a crear Bechamel, Velouté y Espagnole con proporciones exactas. La base de la alta cocina francesa.',
   faqTitle: 'Preguntas Frecuentes',

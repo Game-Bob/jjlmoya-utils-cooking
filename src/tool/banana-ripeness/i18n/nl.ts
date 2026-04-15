@@ -72,7 +72,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'bananen-diagnose',
+  slug: 'bananenrijpheid-conservering',
   title: 'Bananen Diagnose en Conservering: Wetenschappelijke Gids',
   description: 'Analyseer de rijpheidsstatus van je bananen met wetenschappelijke precisie. Leer conserveringstechnieken, de biochemie van ethyleen en voedingsoptimalisatie.',
   faqTitle: 'Veelgestelde Vragen',

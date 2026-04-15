@@ -80,7 +80,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: "pizza",
+  slug: "calculadora-massa-pizza-napolitana",
   title,
   description,
   faqTitle: "Perguntas Frequentes",

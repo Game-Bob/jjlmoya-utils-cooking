@@ -76,7 +76,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: "pizza",
+  slug: "napolitaans-pizzadeeg-calculator",
   title,
   description,
   faqTitle: "Veelgestelde Vragen",

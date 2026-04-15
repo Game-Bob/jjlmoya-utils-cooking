@@ -76,7 +76,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'american-kitchen-units-converter',
+  slug: 'us-cooking-conversion-calculator-cups-to-grams-fahrenheit',
   title: "美式厨房单位转换器：杯转克与温度换算",
   description: "将美式量杯（cups）、大勺（tablespoons）及华氏度（Fahrenheit）转换为公制单位。为您精准解读美式食谱的专业指南。",
   faqTitle: "常问问题",

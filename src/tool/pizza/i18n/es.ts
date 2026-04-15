@@ -94,7 +94,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: "pizza",
+  slug: "calculadora-masa-pizza-napolitana",
   title: "Calculadora de Masa Pizza Napolitana",
   description:
     "Calcula las proporciones exactas de harina, agua, sal y levadura para preparar la auténtica pizza napolitana en casa.",

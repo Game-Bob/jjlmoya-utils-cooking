@@ -76,7 +76,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: "brine",
+  slug: 'equilibrium-brining-calculator-meat-fermentation-ratios',
   title: "平衡盐水计算器",
   description: "实现多汁肉类与完美发酵的平衡科学。根据食材和水的总重量计算精确的盐度。",
   ui: {

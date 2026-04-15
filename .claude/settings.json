@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bash /tmp/fix_all_slugs.sh)",
+      "Bash(bash /tmp/fix_pizza_slugs.sh)"
+    ]
+  }
+}

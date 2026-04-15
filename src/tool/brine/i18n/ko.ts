@@ -76,7 +76,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: "brine",
+  slug: 'equilibrium-brining-calculator-meat-fermentation-ratios',
   title: "평형 염수 계산기",
   description: "촉촉한 고기와 완벽한 발효를 위한 평형의 과학. 식재료와 물의 총 중량에 기초한 정확한 염도를 계산하세요.",
   ui: {

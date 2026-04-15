@@ -68,7 +68,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'roux-guide',
+  slug: 'masterguide-roux-grundsaser',
   title,
   description,
   faqTitle: 'Vanliga Frågor',

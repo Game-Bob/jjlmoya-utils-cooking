@@ -68,7 +68,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'guia-roux',
+  slug: 'guia-roux-molhos-mae',
   title,
   description,
   faqTitle: 'Perguntas Frequentes',

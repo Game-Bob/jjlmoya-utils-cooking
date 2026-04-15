@@ -76,7 +76,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: "pizza",
+  slug: "kalkylator-neapolitansk-pizzadeg",
   title,
   description,
   faqTitle: "Vanliga Frågor",

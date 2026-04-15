@@ -72,7 +72,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: "yude-tamago",
+  slug: 'perfect-boiled-egg-timer-altitude-calculator',
   title: "科学的なエッグタイマー",
   description: "標高、温度、サイズに基づいた、完璧なゆで卵を作るための熱力学計算機。",
   faqTitle: "よくある質問",
