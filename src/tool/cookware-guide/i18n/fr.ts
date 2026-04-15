@@ -1,6 +1,6 @@
 import type { ToolLocaleContent } from '../../../types';
 
-const title = "Sélecteur d'Ustensiles Connecté | Guide de Cuisine";
+const title = "Sélecteur d'Ustensiles Connecté Guide de Cuisine";
 const description = "Guide interactif pour choisir la meilleure poêle ou casserole selon votre style de cuisine. Fonte vs Acier Inoxydable vs Téflon. Trouvez votre outil parfait.";
 const faq = [
     {
@@ -73,7 +73,7 @@ const appSchema = {
 
 export const content: ToolLocaleContent = {
   slug: 'cookware-selector',
-  title: 'Sélecteur d\'Ustensiles Connecté | Guide de Cuisine',
+  title: 'Sélecteur d\'Ustensiles Connecté Guide de Cuisine',
   description: 'Guide interactif pour choisir la meilleure poêle ou casserole selon votre style de cuisine. Fonte vs Acier Inoxydable vs Téflon. Trouvez votre outil parfait.',
   faqTitle: 'Questions Fréquemment Posées',
   bibliographyTitle: 'Sources et Bibliographie',
