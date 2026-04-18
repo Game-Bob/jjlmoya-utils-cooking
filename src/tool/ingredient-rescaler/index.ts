@@ -1,3 +1,4 @@
+import { ingredientRescaler } from './entry';
 export * from './entry';
 export const INGREDIENT_RESCALER_TOOL: ToolDefinition = {
 	entry: ingredientRescaler,

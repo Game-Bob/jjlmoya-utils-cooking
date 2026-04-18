@@ -1,3 +1,4 @@
+import { cookwareGuide } from './entry';
 export * from './entry';
 export const COOKWARE_GUIDE_TOOL: ToolDefinition = {
 	entry: cookwareGuide,

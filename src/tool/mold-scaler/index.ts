@@ -1,3 +1,4 @@
+import { moldScaler } from './entry';
 export * from './entry';
 export const MOLD_SCALER_TOOL: ToolDefinition = {
 	entry: moldScaler,

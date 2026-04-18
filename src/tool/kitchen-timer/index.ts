@@ -1,3 +1,4 @@
+import { kitchenTimer } from './entry';
 export * from './entry';
 export const KITCHEN_TIMER_TOOL: ToolDefinition = {
 	entry: kitchenTimer,
