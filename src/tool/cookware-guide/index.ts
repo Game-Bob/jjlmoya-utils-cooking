@@ -1,7 +1,4 @@
 import type { CookingToolEntry, ToolDefinition } from '../../types';
-import CookwareGuideComponent from './component.astro';
-import CookwareGuideSEO from './seo.astro';
-import CookwareGuideBibliography from './bibliography.astro';
 
 export const cookwareGuide: CookingToolEntry = {
 	id: 'cookware-guide',
@@ -30,7 +27,7 @@ export const cookwareGuide: CookingToolEntry = {
 
 export const COOKWARE_GUIDE_TOOL: ToolDefinition = {
 	entry: cookwareGuide,
-	Component: CookwareGuideComponent,
-	SEOComponent: CookwareGuideSEO,
-	BibliographyComponent: CookwareGuideBibliography,
+	Component: () => import('./component.astro'),
+	SEOComponent: () => import('./seo.astro'),
+	BibliographyComponent: () => import('./bibliography.astro'),
 };

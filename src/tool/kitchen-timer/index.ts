@@ -1,7 +1,4 @@
 import type { CookingToolEntry, ToolDefinition } from '../../types';
-import KitchenTimerComponent from './component.astro';
-import KitchenTimerSEO from './seo.astro';
-import KitchenTimerBibliography from './bibliography.astro';
 
 export const kitchenTimer: CookingToolEntry = {
 	id: 'kitchen-timer',
@@ -28,11 +25,10 @@ export const kitchenTimer: CookingToolEntry = {
 	},
 };
 
-export { KitchenTimerComponent, KitchenTimerSEO, KitchenTimerBibliography };
 
 export const KITCHEN_TIMER_TOOL: ToolDefinition = {
 	entry: kitchenTimer,
-	Component: KitchenTimerComponent,
-	SEOComponent: KitchenTimerSEO,
-	BibliographyComponent: KitchenTimerBibliography,
+	Component: () => import('./component.astro'),
+	SEOComponent: () => import('./seo.astro'),
+	BibliographyComponent: () => import('./bibliography.astro'),
 };

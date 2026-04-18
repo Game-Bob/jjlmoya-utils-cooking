@@ -1,7 +1,4 @@
 import type { CookingToolEntry, ToolDefinition } from '../../types';
-import AmericanKitchenConverterComponent from './component.astro';
-import AmericanKitchenConverterSEO from './seo.astro';
-import AmericanKitchenConverterBibliography from './bibliography.astro';
 
 export const americanKitchenConverter: CookingToolEntry = {
   id: 'american-kitchen-converter',
@@ -30,7 +27,7 @@ export const americanKitchenConverter: CookingToolEntry = {
 
 export const AMERICAN_KITCHEN_CONVERTER_TOOL: ToolDefinition = {
   entry: americanKitchenConverter,
-  Component: AmericanKitchenConverterComponent,
-  SEOComponent: AmericanKitchenConverterSEO,
-  BibliographyComponent: AmericanKitchenConverterBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

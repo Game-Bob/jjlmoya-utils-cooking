@@ -1,7 +1,4 @@
 import type { CookingToolEntry, ToolDefinition } from '../../types';
-import BananaComponent from './component.astro';
-import BananaComponentSEO from './seo.astro';
-import BananaComponentBibliography from './bibliography.astro';
 
 export const bananaCare: CookingToolEntry = {
   id: 'banana-ripeness',
@@ -30,7 +27,7 @@ export const bananaCare: CookingToolEntry = {
 
 export const BANANA_CARE_TOOL: ToolDefinition = {
   entry: bananaCare,
-  Component: BananaComponent,
-  SEOComponent: BananaComponentSEO,
-  BibliographyComponent: BananaComponentBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

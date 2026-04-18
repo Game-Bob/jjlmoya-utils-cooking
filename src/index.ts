@@ -1,5 +1,5 @@
 export { cookingCategory, cookingCategory as templateCategory } from './category';
-export { default as CookingCategorySEO } from './category/seo.astro';
+export const CookingCategorySEO = () => import('./category/seo.astro').then((m) => m.default);
 
 export { AMERICAN_KITCHEN_CONVERTER_TOOL } from './tool/american-kitchen-converter';
 export { MERENGUE_CALCULATOR_TOOL } from './tool/meringue-peak';

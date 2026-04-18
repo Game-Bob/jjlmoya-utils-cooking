@@ -1,7 +1,4 @@
 import type { CookingToolEntry, ToolDefinition } from '../../types';
-import SourdoughCalculatorComponent from './component.astro';
-import SourdoughCalculatorSEO from './seo.astro';
-import SourdoughCalculatorBibliography from './bibliography.astro';
 
 export const sourdoughCalculator: CookingToolEntry = {
 	id: 'sourdough-calculator',
@@ -30,7 +27,7 @@ export const sourdoughCalculator: CookingToolEntry = {
 
 export const SOURDOUGH_CALCULATOR_TOOL: ToolDefinition = {
 	entry: sourdoughCalculator,
-	Component: SourdoughCalculatorComponent,
-	SEOComponent: SourdoughCalculatorSEO,
-	BibliographyComponent: SourdoughCalculatorBibliography,
+	Component: () => import('./component.astro'),
+	SEOComponent: () => import('./seo.astro'),
+	BibliographyComponent: () => import('./bibliography.astro'),
 };

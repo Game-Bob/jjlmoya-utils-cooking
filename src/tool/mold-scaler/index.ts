@@ -1,7 +1,4 @@
 import type { CookingToolEntry, ToolDefinition } from '../../types';
-import MoldScalerComponent from './component.astro';
-import MoldScalerSEO from './seo.astro';
-import MoldScalerBibliography from './bibliography.astro';
 
 export const moldScaler: CookingToolEntry = {
 	id: 'mold-scaler',
@@ -28,11 +25,10 @@ export const moldScaler: CookingToolEntry = {
 	},
 };
 
-export { MoldScalerComponent, MoldScalerSEO, MoldScalerBibliography };
 
 export const MOLD_SCALER_TOOL: ToolDefinition = {
 	entry: moldScaler,
-	Component: MoldScalerComponent,
-	SEOComponent: MoldScalerSEO,
-	BibliographyComponent: MoldScalerBibliography,
+	Component: () => import('./component.astro'),
+	SEOComponent: () => import('./seo.astro'),
+	BibliographyComponent: () => import('./bibliography.astro'),
 };

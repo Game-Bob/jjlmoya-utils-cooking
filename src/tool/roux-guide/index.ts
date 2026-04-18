@@ -1,7 +1,4 @@
 import type { CookingToolEntry, ToolDefinition } from '../../types';
-import RouxGuideComponent from './component.astro';
-import RouxGuideSEO from './seo.astro';
-import RouxGuideBibliography from './bibliography.astro';
 
 export const rouxGuide: CookingToolEntry = {
 	id: 'roux-guide',
@@ -30,7 +27,7 @@ export const rouxGuide: CookingToolEntry = {
 
 export const ROUX_GUIDE_TOOL: ToolDefinition = {
 	entry: rouxGuide,
-	Component: RouxGuideComponent,
-	SEOComponent: RouxGuideSEO,
-	BibliographyComponent: RouxGuideBibliography,
+	Component: () => import('./component.astro'),
+	SEOComponent: () => import('./seo.astro'),
+	BibliographyComponent: () => import('./bibliography.astro'),
 };

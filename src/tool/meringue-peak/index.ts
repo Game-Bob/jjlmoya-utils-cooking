@@ -1,7 +1,4 @@
 import type { CookingToolEntry, ToolDefinition } from '../../types';
-import MeringueComponent from './component.astro';
-import MeringueComponentSEO from './seo.astro';
-import MeringueComponentBibliography from './bibliography.astro';
 
 export const meringuePeak: CookingToolEntry = {
   id: 'meringue-peak',
@@ -30,7 +27,7 @@ export const meringuePeak: CookingToolEntry = {
 
 export const MERENGUE_CALCULATOR_TOOL: ToolDefinition = {
   entry: meringuePeak,
-  Component: MeringueComponent,
-  SEOComponent: MeringueComponentSEO,
-  BibliographyComponent: MeringueComponentBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

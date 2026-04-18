@@ -1,7 +1,4 @@
 import type { CookingToolEntry, ToolDefinition } from '../../types';
-import IngredientRescalerComponent from './component.astro';
-import IngredientRescalerSEO from './seo.astro';
-import IngredientRescalerBibliography from './bibliography.astro';
 
 export const ingredientRescaler: CookingToolEntry = {
 	id: 'ingredient-rescaler',
@@ -30,7 +27,7 @@ export const ingredientRescaler: CookingToolEntry = {
 
 export const INGREDIENT_RESCALER_TOOL: ToolDefinition = {
 	entry: ingredientRescaler,
-	Component: IngredientRescalerComponent,
-	SEOComponent: IngredientRescalerSEO,
-	BibliographyComponent: IngredientRescalerBibliography,
+	Component: () => import('./component.astro'),
+	SEOComponent: () => import('./seo.astro'),
+	BibliographyComponent: () => import('./bibliography.astro'),
 };
