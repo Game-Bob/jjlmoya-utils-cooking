@@ -1,7 +1,7 @@
 import type { CookingToolEntry, ToolDefinition } from "../../types";
-import EggTimerComponent from "./component.astro";
-import EggTimerSEO from "./seo.astro";
-import EggTimerBibliography from "./bibliography.astro";
+
+
+
 
 export const eggTimer: CookingToolEntry = {
   id: "egg-timer",
@@ -29,11 +29,10 @@ export const eggTimer: CookingToolEntry = {
   },
 };
 
-export { EggTimerComponent, EggTimerSEO, EggTimerBibliography };
 
 export const EGG_TIMER_TOOL: ToolDefinition = {
   entry: eggTimer,
-  Component: EggTimerComponent,
-  SEOComponent: EggTimerSEO,
-  BibliographyComponent: EggTimerBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

@@ -1,7 +1,7 @@
 import type { CookingToolEntry, ToolDefinition } from "../../types";
-import PizzaComponent from "./component.astro";
-import PizzaSEO from "./seo.astro";
-import PizzaBibliography from "./bibliography.astro";
+
+
+
 
 export const pizza: CookingToolEntry = {
   id: "pizza",
@@ -29,11 +29,10 @@ export const pizza: CookingToolEntry = {
   },
 };
 
-export { PizzaComponent, PizzaSEO, PizzaBibliography };
 
 export const PIZZA_TOOL: ToolDefinition = {
   entry: pizza,
-  Component: PizzaComponent,
-  SEOComponent: PizzaSEO,
-  BibliographyComponent: PizzaBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };
