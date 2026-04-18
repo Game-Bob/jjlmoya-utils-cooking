@@ -1,3 +1,4 @@
+export { ALL_ENTRIES } from './entries';
 import type { ToolDefinition } from './types';
 import { AMERICAN_KITCHEN_CONVERTER_TOOL } from './tool/american-kitchen-converter';
 import { MERENGUE_CALCULATOR_TOOL } from './tool/meringue-peak';
@@ -28,4 +29,3 @@ export const ALL_TOOLS: ToolDefinition[] = [
 ];
 
 
-export const ALL_ENTRIES = ALL_TOOLS.map(t => t.entry);
