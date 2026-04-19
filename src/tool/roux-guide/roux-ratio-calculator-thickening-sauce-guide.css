@@ -1,0 +1,21 @@
+:root {
+		--rg-primary: hsl(38deg, 92%, 50%);
+		--rg-primary-light: hsl(38deg, 92%, 90%);
+		--rg-secondary: hsl(25deg, 95%, 53%);
+		--rg-bg-card: hsl(0deg, 0%, 100%);
+		--rg-bg-app: hsl(210deg, 20%, 98%);
+		--rg-border: hsl(210deg, 20%, 90%);
+		--rg-text-main: hsl(210deg, 30%, 20%);
+		--rg-text-muted: hsl(210deg, 15%, 50%);
+		--rg-shadow-lg: 0 10px 15px -3px rgb(0, 0, 0, 0.1);
+		--rg-radius: 1rem;
+	}
+
+	.theme-dark {
+		--rg-bg-card: hsl(220deg, 25%, 12%);
+		--rg-bg-app: hsl(220deg, 30%, 7%);
+		--rg-border: hsl(220deg, 20%, 20%);
+		--rg-text-main: hsl(210deg, 20%, 95%);
+		--rg-text-muted: hsl(210deg, 15%, 70%);
+		--rg-primary-light: hsl(38deg, 92%, 12%);
+	}
