@@ -28,7 +28,7 @@
 	    gap: 2rem;
 	}
 
-	:global(.theme-dark) .meringue-calculator-container {
+	.theme-dark .meringue-calculator-container {
 	    --text-dark: #f1f5f9;
 	    --text-muted: #94a3b8;
 	    --text-light: #cbd5e1;
@@ -116,7 +116,7 @@
 	    box-shadow: 0 0 0 4px rgba(244, 114, 182, 0.1);
 	}
 
-	:global(.theme-dark) .meringue-input-wrapper input:focus {
+	.theme-dark .meringue-input-wrapper input:focus {
 	    box-shadow: 0 0 0 4px rgba(244, 114, 182, 0.2);
 	}
 
@@ -155,7 +155,7 @@
 	    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 	}
 
-	:global(.theme-dark) .meringue-type-btn.active {
+	.theme-dark .meringue-type-btn.active {
 	    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 	}
 
@@ -165,7 +165,7 @@
 	    gap: 1.5rem;
 	}
 
-	:global(.meringue-result-item) {
+	.meringue-result-item {
 	    background: var(--time-bg);
 	    border: 1px solid var(--card-border);
 	    border-radius: 20px;
@@ -176,7 +176,7 @@
 	    transition: all 0.2s ease;
 	}
 
-	:global(.meringue-result-item):hover {
+	.meringue-result-item:hover {
 	    background: var(--card-bg);
 	    transform: scale(1.02);
 	}
@@ -215,7 +215,7 @@
 	    gap: 1rem;
 	}
 
-	:global(.meringue-time-row) {
+	.meringue-time-row {
 	    display: flex;
 	    align-items: center;
 	    justify-content: space-between;
@@ -246,7 +246,7 @@
 	    font-size: 1.125rem;
 	}
 
-	:global(.theme-dark) .meringue-time-val {
+	.theme-dark .meringue-time-val {
 	    color: var(--primary);
 	}
 
@@ -266,7 +266,7 @@
 	    flex-shrink: 0;
 	}
 
-	:global(.theme-dark) .meringue-pro-tip svg {
+	.theme-dark .meringue-pro-tip svg {
 	    color: var(--primary);
 	}
 
@@ -277,11 +277,11 @@
 	    margin: 0;
 	}
 
-	:global(.theme-dark) .meringue-pro-tip p {
+	.theme-dark .meringue-pro-tip p {
 	    color: var(--pink-light);
 	}
 
-	:global(.meringue-fade-in) {
+	.meringue-fade-in {
 	    animation: meringue-fade-in 0.5s ease forwards;
 	}
 

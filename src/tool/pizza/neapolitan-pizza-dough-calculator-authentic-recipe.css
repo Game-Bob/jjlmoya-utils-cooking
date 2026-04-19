@@ -32,7 +32,7 @@
 	    width: 100%;
 	}
 
-	:global(.theme-dark) .pizza-container {
+	.theme-dark .pizza-container {
 	    --color-bg: #0f172a;
 	    --color-border: #1e293b;
 	    --color-text-primary: #f1f5f9;
@@ -185,11 +185,11 @@
 	    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
 	}
 
-	:global(.theme-dark) .pizza-slider::-webkit-slider-thumb {
+	.theme-dark .pizza-slider::-webkit-slider-thumb {
 	    box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.5);
 	}
 
-	:global(.theme-dark) .pizza-slider::-moz-range-thumb {
+	.theme-dark .pizza-slider::-moz-range-thumb {
 	    box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.5);
 	}
 
@@ -230,7 +230,7 @@
 	    margin-bottom: 0.25rem;
 	}
 
-	:global(.theme-dark) .pizza-tip-title {
+	.theme-dark .pizza-tip-title {
 	    color: var(--color-orange-100);
 	}
 
@@ -240,7 +240,7 @@
 	    line-height: 1.5;
 	}
 
-	:global(.theme-dark) .pizza-tip-text {
+	.theme-dark .pizza-tip-text {
 	    color: var(--color-amber-100);
 	}
 

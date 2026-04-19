@@ -282,7 +282,7 @@
     }
   }
 
-  :global(.brine-visualization) {
+  .brine-visualization {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -292,7 +292,7 @@
     position: relative;
   }
 
-  :global(.brine-jar) {
+  .brine-jar {
     position: relative;
     width: 12rem;
     height: 16rem;
@@ -304,7 +304,7 @@
     overflow: hidden;
   }
 
-  :global(.brine-jar-cap) {
+  .brine-jar-cap {
     position: absolute;
     top: -0.25rem;
     left: 50%;
@@ -315,7 +315,7 @@
     border-radius: 0.5rem 0.5rem 0 0;
   }
 
-  :global(.brine-water) {
+  .brine-water {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -325,7 +325,7 @@
     height: 50%;
   }
 
-  :global(.brine-water)::before {
+  .brine-water::before {
     content: '';
     position: absolute;
     top: 0;
@@ -355,7 +355,7 @@
     }
   }
 
-  :global(.brine-product) {
+  .brine-product {
     position: absolute;
     bottom: 1rem;
     left: 50%;
@@ -372,7 +372,7 @@
     height: 40%;
   }
 
-  :global(.brine-product-label) {
+  .brine-product-label {
     font-size: 0.75rem;
     font-weight: 700;
     color: rgba(0, 0, 0, 0.3);
@@ -380,7 +380,7 @@
     letter-spacing: 0.05em;
   }
 
-  :global(.brine-particles) {
+  .brine-particles {
     position: absolute;
     inset: 0;
     pointer-events: none;

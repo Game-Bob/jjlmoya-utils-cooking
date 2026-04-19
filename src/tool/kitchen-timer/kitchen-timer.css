@@ -10,7 +10,7 @@
 		--card-br: 1.5rem;
 	}
 
-	:global(.theme-dark) .kitchen-timer-wrapper {
+	.theme-dark .kitchen-timer-wrapper {
 		--kt-primary: #fb923c;
 		--kt-secondary: #fdba74;
 		--kt-bg: #0f172a;

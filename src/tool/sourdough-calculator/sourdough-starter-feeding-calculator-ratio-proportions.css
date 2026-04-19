@@ -14,7 +14,7 @@
 		--sc-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
-	:global(.theme-dark) {
+	.theme-dark {
 		--sc-bg-card: hsl(220deg, 25%, 12%);
 		--sc-bg-app: hsl(220deg, 30%, 7%);
 		--sc-border: hsl(220deg, 20%, 20%);
@@ -292,7 +292,7 @@
 		color: var(--sc-primary);
 	}
 
-	:global(.theme-dark) .sc-result-icon.starter {
+	.theme-dark .sc-result-icon.starter {
 		background: hsl(38deg, 92%, 15%);
 	}
 
@@ -301,7 +301,7 @@
 		color: hsl(45deg, 93%, 50%);
 	}
 
-	:global(.theme-dark) .sc-result-icon.flour {
+	.theme-dark .sc-result-icon.flour {
 		background: hsl(45deg, 93%, 15%);
 	}
 
@@ -310,7 +310,7 @@
 		color: hsl(196deg, 95%, 50%);
 	}
 
-	:global(.theme-dark) .sc-result-icon.water {
+	.theme-dark .sc-result-icon.water {
 		background: hsl(196deg, 95%, 15%);
 	}
 

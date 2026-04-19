@@ -21,7 +21,7 @@
 	    --color-ring: rgba(234, 179, 8, 0.5);
 	}
 
-	:global(.theme-dark) .egg-timer-wrapper {
+	.theme-dark .egg-timer-wrapper {
 	    --color-bg: #1f2937;
 	    --color-bg-secondary: #111827;
 	    --color-border: #374151;
@@ -149,7 +149,7 @@
 	    box-shadow: 0 0 0 1px var(--color-primary);
 	}
 
-	:global(.theme-dark) .egg-timer-btn.active {
+	.theme-dark .egg-timer-btn.active {
 	    background-color: rgba(234, 179, 8, 0.1);
 	    color: var(--color-primary);
 	}
@@ -189,7 +189,7 @@
 	    box-shadow: 0 0 0 1px var(--color-primary);
 	}
 
-	:global(.theme-dark) .egg-timer-size-btn.active {
+	.theme-dark .egg-timer-size-btn.active {
 	    background-color: rgba(234, 179, 8, 0.1);
 	    color: var(--color-primary);
 	}
@@ -279,7 +279,7 @@
 	    box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.1);
 	}
 
-	:global(.theme-dark) .egg-timer-result-card.mollet {
+	.theme-dark .egg-timer-result-card.mollet {
 	    box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.15);
 	}
 
@@ -396,7 +396,7 @@
 	    background-color: var(--color-soft);
 	}
 
-	:global(.theme-dark) .egg-timer-seo-card:hover {
+	.theme-dark .egg-timer-seo-card:hover {
 	    background-color: rgba(234, 179, 8, 0.1);
 	}
 

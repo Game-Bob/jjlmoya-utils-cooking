@@ -12,7 +12,7 @@
 		--ms-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
-	:global(.theme-dark) {
+	.theme-dark {
 		--ms-bg-card: hsl(220deg, 25%, 12%);
 		--ms-bg-app: hsl(220deg, 30%, 7%);
 		--ms-border: hsl(220deg, 20%, 20%);
@@ -148,13 +148,13 @@
 		width: 2.5rem;
 	}
 
-	:global(.ms-input-group) {
+	.ms-input-group {
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
 	}
 
-	:global(.ms-label) {
+	.ms-label {
 		font-size: 0.75rem;
 		font-weight: 700;
 		color: var(--ms-text-muted);
@@ -162,7 +162,7 @@
 		letter-spacing: 0.05em;
 	}
 
-	:global(.ms-input) {
+	.ms-input {
 		width: 100%;
 		padding: 0.75rem 1rem;
 		border-radius: 0.5rem;
@@ -173,7 +173,7 @@
 		transition: var(--ms-transition);
 	}
 
-	:global(.ms-input):focus {
+	.ms-input:focus {
 		outline: none;
 		border-color: var(--ms-primary);
 		box-shadow: 0 0 0 3px hsla(262deg, 83%, 58%, 0.1);
@@ -276,7 +276,7 @@
 		margin-bottom: 1.5rem;
 	}
 
-	:global(.ms-ingredient-row) {
+	.ms-ingredient-row {
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 0.75rem;
@@ -300,13 +300,13 @@
 	}
 
 	@media (min-width: 640px) {
-		:global(.ms-ingredient-row) {
+		.ms-ingredient-row {
 			grid-template-columns: 2fr 1fr 1fr auto;
 			align-items: center;
 		}
 	}
 
-	:global(.ms-ingredient-final) {
+	.ms-ingredient-final {
 		font-weight: 800;
 		color: hsl(150deg, 80%, 40%);
 		font-size: 1.125rem;
@@ -314,7 +314,7 @@
 		text-align: center;
 	}
 
-	:global(.ms-del-btn) {
+	.ms-del-btn {
 		background: transparent;
 		border: none;
 		color: var(--ms-text-muted);
@@ -324,7 +324,7 @@
 		transition: var(--ms-transition);
 	}
 
-	:global(.ms-del-btn):hover {
+	.ms-del-btn:hover {
 		background: hsl(0deg, 85%, 60%);
 		color: var(--ms-bg-card);
 	}
@@ -350,14 +350,14 @@
 		border-style: solid;
 	}
 
-	:global(.ms-empty-state) {
+	.ms-empty-state {
 		text-align: center;
 		padding: 2rem;
 		color: var(--ms-text-muted);
 		font-style: italic;
 	}
 
-	:global(.ms-inputs-grid) {
+	.ms-inputs-grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 1rem;
