@@ -101,7 +101,7 @@ const customCommentsPlugin = {
 
 export default [
     {
-        ignores: ["**/dist/", "**/node_modules/", ".astro/", "**/.astro/**", "**/public/**", "**/pages/[locale]/[slug].astro"],
+        ignores: ["**/dist/", "**/node_modules/", ".astro/", "**/.astro/**", "**/public/**", "src/pages/[locale]/[slug].astro"],
     },
     ...tseslint.configs.recommended,
     ...eslintPluginAstro.configs["flat/recommended"],
@@ -195,6 +195,13 @@ export default [
             "max-lines": "off",
             "max-lines-per-function": "off",
             "complexity": "off",
+        },
+    },
+    {
+        files: ["src/pages/[locale]/[slug].astro"],
+        rules: {
+            "max-lines-per-function": "off",
+            "custom/no-css-comments": "off",
         },
     },
 ];
