@@ -12,6 +12,7 @@ import { INGREDIENT_RESCALER_TOOL } from './tool/ingredient-rescaler';
 import { SOURDOUGH_CALCULATOR_TOOL } from './tool/sourdough-calculator';
 import { ROUX_GUIDE_TOOL } from './tool/roux-guide';
 import { COOKWARE_GUIDE_TOOL } from './tool/cookware-guide';
+import { YEAST_CONVERTER_TOOL } from './tool/yeast-converter';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   AMERICAN_KITCHEN_CONVERTER_TOOL,
@@ -26,6 +27,7 @@ export const ALL_TOOLS: ToolDefinition[] = [
   SOURDOUGH_CALCULATOR_TOOL,
   ROUX_GUIDE_TOOL,
   COOKWARE_GUIDE_TOOL,
+  YEAST_CONVERTER_TOOL,
 ];
 
 

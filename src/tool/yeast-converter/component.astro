@@ -1,0 +1,96 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+	ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="yeast-converter-container">
+	<div class="yc-grid" id="calculator-interface">
+		<section class="yc-section yc-section-primary">
+			<h3 class="yc-section-title">
+				<span>1.</span> {ui.selectYeastType}
+			</h3>
+
+			<div class="yc-type-selector">
+				<select id="yeast-source" class="yc-select">
+					<option value="fresh">{ui.freshYeast}</option>
+					<option value="dry">{ui.dryYeast}</option>
+					<option value="sourdough">{ui.sourdough}</option>
+				</select>
+				<Icon name="mdi:chevron-down" class="yc-select-icon" />
+			</div>
+		</section>
+
+		<section class="yc-section yc-section-primary">
+			<h3 class="yc-section-title">
+				<span>2.</span> {ui.enterAmount}
+			</h3>
+
+			<div class="yc-field">
+				<label for="yeast-amount" class="yc-label">{ui.quantity}</label>
+				<div class="yc-input-wrapper">
+					<input
+						type="number"
+						id="yeast-amount"
+						placeholder="0"
+						inputmode="decimal"
+						class="yc-input"
+						min="0"
+						step="0.1"
+					/>
+					<select id="yeast-unit" class="yc-unit-select">
+						<option value="g">{ui.grams}</option>
+						<option value="oz">{ui.ounces}</option>
+						<option value="lb">{ui.pounds}</option>
+						<option value="mg">{ui.milligrams}</option>
+					</select>
+				</div>
+			</div>
+
+			<button id="reset-btn" class="yc-reset-btn">
+				<Icon name="mdi:restart" /> {ui.reset}
+			</button>
+		</section>
+	</div>
+
+	<div class="yc-results-card">
+		<div class="yc-results-header">
+			<h3 class="yc-results-title">
+				<Icon name="mdi:flask-outline" /> {ui.conversions}
+			</h3>
+			<button id="copy-btn" class="yc-copy-btn">
+				<Icon name="mdi:content-copy" /> {ui.copy}
+			</button>
+		</div>
+
+		<div id="results-container" class="yc-results-container">
+			<div class="yc-empty-state">
+				<Icon name="mdi:pot-steam" class="yc-empty-icon" />
+				<p>{ui.enterAmount}</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	import { initYeastConverter } from './init';
+	(window as Record<string, unknown>).__initYeastConverter = initYeastConverter;
+</script>
+
+<script define:vars={{ ui }} is:inline>
+	const init = () => {
+		if (window.__initYeastConverter) {
+			window.__initYeastConverter(ui);
+		}
+	};
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', init);
+	} else {
+		init();
+	}
+</script>
