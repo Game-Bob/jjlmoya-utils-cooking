@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Cake Pan Size Converter and Baking Scaler';
 const description =
@@ -86,10 +87,7 @@ export const content: ToolLocaleContent = {
 	slug: 'cake-pan-size-converter-calculator',
 	title,
 	description,
-	faqTitle: 'Baking Scaling Frequently Asked Questions',
-	bibliographyTitle: 'Scientific Baking Resources and References',
-
-	ui: {
+	faqTitle: 'Baking Scaling Frequently Asked Questions',	ui: {
 		originalRecipe: 'Original Recipe',
 		yourMold: 'Your Pan',
 		round: 'Round',
@@ -118,20 +116,7 @@ export const content: ToolLocaleContent = {
 		increase: 'Increase',
 	},
 
-	faq,
-
-	bibliography: [
-		{
-			name: 'Baking Science and Technology - E.J. Pyler',
-			url: 'https://www.bakingbusiness.com/',
-		},
-		{
-			name: 'The Professional Pastry Chef - Bo Friberg',
-			url: 'https://www.wiley.com/',
-		},
-	],
-
-	howTo,
+	faq,	howTo,
 
 	seo: [
 		{
@@ -290,6 +275,6 @@ export const content: ToolLocaleContent = {
 			html: 'Mastering pan scaling gives you total creative freedom in the kitchen. Use this calculator to eliminate guesswork and achieve consistent professional results in every bake.',
 		},
 	],
-
-	schemas: [appSchema, faqSchema, howToSchema],
+  bibliography,
+  schemas: [appSchema, faqSchema, howToSchema],
 };

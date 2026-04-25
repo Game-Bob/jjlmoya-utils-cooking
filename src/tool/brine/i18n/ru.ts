@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Калькулятор равновесного рассола";
 const description = "Наука баланса для сочного мяса и идеальной ферментации. Рассчитайте точную соленость на основе общего веса ингредиента и воды.";
@@ -104,25 +105,8 @@ export const content: ToolLocaleContent = {
     timePreservesLabel: "Время (Консервы)",
     timePreservesDuration: "1+ месяцев",
   },
-  faqTitle: "Часто задаваемые вопросы",
-  bibliographyTitle: "Источники и ссылки",
-  faq,
-  howTo,
-  bibliography: [
-    {
-      name: "The Noma Guide to Fermentation - René Redzepi & David Zilber",
-      url: "https://www.nomacph.com/",
-    },
-    {
-      name: "Salt, Fat, Acid, Heat - Samin Nosrat",
-      url: "https://www.saltfatacidheat.com/",
-    },
-    {
-      name: "Pollan, Michael - Cooked",
-      url: "https://michaelpollan.com/",
-    },
-  ],
-  seo: [
+  faqTitle: "Часто задаваемые вопросы",  faq,
+  howTo,  seo: [
     {
       type: 'title',
       text: 'Главное руководство по равновесному рассолу и ферментации',
@@ -249,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: 'Наш равновесный калькулятор избавляет от догадок в ваших рецептах, позволяя готовить с уверенностью профессионала.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

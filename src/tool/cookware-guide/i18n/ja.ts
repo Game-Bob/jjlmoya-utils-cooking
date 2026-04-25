@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "スマート・フライパン・セレクター：調理器具ガイド";
 const description = "あなたの料理スタイルに合わせて最適なフライパンや鍋を選ぶためのインタラクティブガイド。鋳鉄 vs ステンレス vs テフロン。理想の道具を見つけましょう。";
@@ -76,23 +77,7 @@ export const content: ToolLocaleContent = {
   title: 'スマート・フライパン・セレクター：調理器具ガイド',
   description: 'あなたの料理スタイルに合わせて最適なフライパンや鍋を選ぶためのインタラクティブガイド。鋳鉄 vs ステンレス vs テフロン。理想の道具を見つけましょう。',
   faqTitle: 'よくある質問',
-  faq,
-  bibliographyTitle: '参考文献',
-  bibliography: [
-    {
-      name: 'The Flavor Bible - Pairing, and Progress in Food',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'On Food and Cooking - Harold McGee (料理の科学)',
-      url: 'https://www.foodscience.org/',
-    },
-    {
-      name: 'Salt Fat Acid Heat - Samin Nosrat',
-      url: 'https://www.saltfatacidheat.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -196,5 +181,6 @@ export const content: ToolLocaleContent = {
     enamelCon: '高価。ホーロー層は衝撃に弱い。',
     enamelTip: '長時間の煮込み料理に完璧。ホーロー加工により酸性食材（トマト）も問題なく調理できます。',
   },
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

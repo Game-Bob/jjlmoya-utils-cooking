@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Kalkulator Larutan Garam Keseimbangan";
 const description = "Ilmu keseimbangan untuk daging yang juicy dan fermentasi yang sempurna. Hitung salinitas tepat berdasarkan berat total bahan dan air.";
@@ -104,25 +105,8 @@ export const content: ToolLocaleContent = {
     timePreservesLabel: "Waktu (Pengawetan)",
     timePreservesDuration: "1+ Bulan",
   },
-  faqTitle: "Pertanyaan yang Sering Diajukan",
-  bibliographyTitle: "Sumber dan Referensi",
-  faq,
-  howTo,
-  bibliography: [
-    {
-      name: "The Noma Guide to Fermentation - René Redzepi & David Zilber",
-      url: "https://www.nomacph.com/",
-    },
-    {
-      name: "Salt, Fat, Acid, Heat - Samin Nosrat",
-      url: "https://www.saltfatacidheat.com/",
-    },
-    {
-      name: "Pollan, Michael - Cooked",
-      url: "https://michaelpollan.com/",
-    },
-  ],
-  seo: [
+  faqTitle: "Pertanyaan yang Sering Diajukan",  faq,
+  howTo,  seo: [
     {
       type: 'title',
       text: 'Panduan Utama Larutan Garam Keseimbangan dan Fermentasi',
@@ -249,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: 'Kalkulator keseimbangan kami menghilangkan keraguan dari resep Anda, memungkinkan Anda memasak dengan kepercayaan diri seorang profesional.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

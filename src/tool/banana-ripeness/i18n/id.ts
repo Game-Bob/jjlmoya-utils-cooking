@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Diagnosis dan Konservasi Pisang: Panduan Ilmiah";
 const description = "Analisis status kematangan pisang Anda dengan presisi ilmiah. Pelajari teknik konservasi, biokimia etilen, dan optimalisasi nutrisi.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Diagnosis dan Konservasi Pisang: Panduan Ilmiah',
   description: 'Analisis status kematangan pisang Anda dengan presisi ilmiah. Pelajari teknik konservasi, biokimia etilen, dan optimalisasi nutrisi.',
   faqTitle: 'Pertanyaan yang Sering Diajukan',
-  bibliographyTitle: 'Sumber dan Referensi',
   ui: {
     ripesnessLabel: 'Status Kematangan',
     nextStageLabel: 'Tahap Berikutnya dalam',
@@ -142,20 +142,6 @@ export const content: ToolLocaleContent = {
     {
       name: 'Terapkan konservasi',
       text: 'Ikuti rekomendasi spesifik untuk konservasi dan akselerasi berdasarkan status saat ini.',
-    },
-  ],
-  bibliography: [
-    {
-      name: 'Ethylene and Fruit Ripening: A Biological Review',
-      url: '',
-    },
-    {
-      name: 'Biochemical Changes in Musa acuminata during Ripening (Journal of Food Science)',
-      url: 'https://www.foodsciencejournal.com/assets/archives/2017/vol2issue5/2-5-31-566.pdf',
-    },
-    {
-      name: 'The Role of Respiration in Climacteric Fruits (Scientific American)',
-      url: 'https://www.nature.com/articles/226976b0',
     },
   ],
   seo: [
@@ -244,5 +230,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Peringatan degradasi:</strong> Faktor eksternal seperti kelembapan relatif di atas 85% atau suhu di atas 25°C dapat mempercepat degradasi secara drastis, mengubah pisang dari kondisi optimal menjadi tidak layak makan dalam hitungan jam. Simulator ini membantu Anda mengantisipasi perubahan ini dan merencanakan secara strategis.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

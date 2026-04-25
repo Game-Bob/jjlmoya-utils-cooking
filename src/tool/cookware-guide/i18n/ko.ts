@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "스마트 프라이팬 선택기: 조리 도구 가이드";
 const description = "요리 스타일에 맞춰 가장 적합한 팬이나 냄비를 선택하기 위한 인터랙티브 가이드. 주물 vs 스테인리스 vs 테플론. 나에게 완벽한 도구를 찾아보세요.";
@@ -76,23 +77,7 @@ export const content: ToolLocaleContent = {
   title: '스마트 프라이팬 선택기: 조리 도구 가이드',
   description: '요리 스타일에 맞춰 가장 적합한 팬이나 냄비를 선택하기 위한 인터랙티브 가이드. 주물 vs 스테인리스 vs 테플론. 나에게 완벽한 도구를 찾아보세요.',
   faqTitle: '자주 묻는 질문',
-  faq,
-  bibliographyTitle: '참고 문헌',
-  bibliography: [
-    {
-      name: 'The Flavor Bible - Pairing, and Progress in Food',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'On Food and Cooking - Harold McGee',
-      url: 'https://www.foodscience.org/',
-    },
-    {
-      name: 'Salt Fat Acid Heat - Samin Nosrat',
-      url: 'https://www.saltfatacidheat.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -196,5 +181,6 @@ export const content: ToolLocaleContent = {
     enamelCon: '가격이 매우 높음. 에나멜 코팅은 충격에 취약함.',
     enamelTip: '장시간 끓이는 요리에 완벽합니다. 에나멜 코팅 덕분에 산성 재료(토마토) 요리도 문제없습니다.',
   },
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

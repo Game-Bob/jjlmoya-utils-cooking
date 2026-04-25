@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Smart Pannväljare: Guide för Köksredskap";
 const description = "Interaktiv guide för att välja den bästa pannan eller grytan baserat på din matlagningsstil. Gjutjärn vs Stål vs Teflon. Hitta ditt perfekta verktyg.";
@@ -76,23 +77,7 @@ export const content: ToolLocaleContent = {
   title: 'Smart Pannväljare: Guide för Köksredskap',
   description: 'Interaktiv guide för att välja den bästa pannan eller grytan baserat på din matlagningsstil. Gjutjärn vs Stål vs Teflon. Hitta ditt perfekta verktyg.',
   faqTitle: 'Vanliga Frågor',
-  faq,
-  bibliographyTitle: 'Bibliografi',
-  bibliography: [
-    {
-      name: 'The Flavor Bible - Pairing, and Progress in Food',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'On Food and Cooking - Harold McGee',
-      url: 'https://www.foodscience.org/',
-    },
-    {
-      name: 'Salt Fat Acid Heat - Samin Nosrat',
-      url: 'https://www.saltfatacidheat.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -196,5 +181,6 @@ export const content: ToolLocaleContent = {
     enamelCon: 'Väldigt dyr. Emaljen är känslig för slag.',
     enamelTip: 'Perfekt för oändliga grytor. Emaljen tillåter tillagning med syror (tomat) utan problem.',
   },
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

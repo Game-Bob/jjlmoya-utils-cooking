@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Calcolatore di Salamoia all'Equilibrio";
 const description = "La scienza dell'equilibrio per carni succose e fermentati perfetti. Calcola la salinità esatta in base al peso totale dell'ingrediente e dell'acqua.";
@@ -104,25 +105,8 @@ export const content: ToolLocaleContent = {
     timePreservesLabel: "Tempo (Conserve)",
     timePreservesDuration: "1+ Mesi",
   },
-  faqTitle: "Domande Frequenti",
-  bibliographyTitle: "Fonti e Riferimenti",
-  faq,
-  howTo,
-  bibliography: [
-    {
-      name: "The Noma Guide to Fermentation - René Redzepi & David Zilber",
-      url: "https://www.nomacph.com/",
-    },
-    {
-      name: "Salt, Fat, Acid, Heat - Samin Nosrat",
-      url: "https://www.saltfatacidheat.com/",
-    },
-    {
-      name: "Pollan, Michael - Cooked",
-      url: "https://michaelpollan.com/",
-    },
-  ],
-  seo: [
+  faqTitle: "Domande Frequenti",  faq,
+  howTo,  seo: [
     {
       type: 'title',
       text: 'Guida Esperta alla Salamoia all\'Equilibrio e Fermentazione',
@@ -249,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: 'Il nostro calcolatore di equilibrio elimina le incertezze dalle tue ricette, permettendoti di cucinare con la sicurezza di un professionista del settore.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

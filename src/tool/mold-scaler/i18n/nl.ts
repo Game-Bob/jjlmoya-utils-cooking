@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Bakvorm Umrechner Schalen voor Patisserie';
 const description =
@@ -81,10 +82,7 @@ export const content: ToolLocaleContent = {
 	slug: 'bakvormen',
 	title,
 	description,
-	faqTitle: 'Veelgestelde vragen over Schalen',
-	bibliographyTitle: 'Bronnen en Referenties',
-
-	ui: {
+	faqTitle: 'Veelgestelde vragen over Schalen',	ui: {
 		originalRecipe: 'Origineel Recept',
 		yourMold: 'Jouw Bakvorm',
 		round: 'Rond',
@@ -113,18 +111,7 @@ export const content: ToolLocaleContent = {
 		increase: 'Vermeerderen',
 	},
 
-	faq,
-	bibliography: [
-		{
-			name: 'Baking Science and Technology - E.J. Pyler',
-			url: 'https://www.bakingbusiness.com/',
-		},
-		{
-			name: 'The Professional Pastry Chef - Bo Friberg',
-			url: 'https://www.wiley.com/',
-		},
-	],
-	howTo,
+	faq,	howTo,
 	seo: [
 		{
 			type: 'title',
@@ -166,5 +153,6 @@ export const content: ToolLocaleContent = {
 			html: 'Vul een bakvorm nooit voor meer dan 2/3, ongeacht de berekende factor.',
 		},
 	],
-	schemas: [appSchema, faqSchema, howToSchema],
+  bibliography,
+  schemas: [appSchema, faqSchema, howToSchema],
 };

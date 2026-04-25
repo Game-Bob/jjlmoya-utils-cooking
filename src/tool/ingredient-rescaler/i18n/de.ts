@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Zutaten Rechner & Rezept Anpassung';
 const description = 'Skalieren Sie Rezepte automatisch basierend auf der Portionenanzahl. Berechnen Sie exakte Mengen durch Multiplizieren oder Reduzieren Ihres Rezepts.';
@@ -96,23 +97,7 @@ export const content: ToolLocaleContent = {
     defaultIngredient3: '2 Eier',
   },
   faqTitle: 'Häufig gestellte Fragen',
-  faq,
-  bibliographyTitle: 'Bibliografie',
-  bibliography: [
-    {
-      name: 'Harold McGee - On Food and Cooking: The Science and Lore of the Kitchen',
-      url: 'https://en.wikipedia.org/wiki/Harold_McGee',
-    },
-    {
-      name: 'The Flavor Bible by Karen Page and Andrew Dornenburg',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'Modernist Cuisine - Wissenschaftliche Skalierungstechniken',
-      url: 'https://www.modernistcuisine.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -240,5 +225,6 @@ export const content: ToolLocaleContent = {
       html: 'Unser Tool vereinfacht die Mathematik, damit Sie Ihre Energie dem widmen können, was wirklich zählt: Kreativität und Geschmack.',
     },
   ],
+  bibliography,
   schemas: [appSchema, faqSchema, howToSchema],
 };

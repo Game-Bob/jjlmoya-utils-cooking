@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Calculadora de Massa de Pizza Napolitana";
 const description = "Calcula as proporções exatas de farinha, água, sal e fermento para preparar a autêntica pizza napolitana em casa.";
@@ -84,7 +85,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: "Perguntas Frequentes",
-  bibliographyTitle: "Referências",
   ui: {
     parameters: "Parâmetros",
     quantity: "Quantidade",
@@ -115,14 +115,7 @@ export const content: ToolLocaleContent = {
       "O tamanho visual representa o diâmetro aproximado da pizza estirada segundo o peso da bola.",
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: "Associazione Verace Pizza Napoletana",
-      url: "https://www.pizzanapoletana.org/",
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: 'Guia Mestre para a Massa de Pizza Napolitana',
@@ -164,5 +157,6 @@ export const content: ToolLocaleContent = {
       html: 'A fermentação de 24 horas a 4°C cria sabores complexos impossíveis de obter à temperatura ambiente.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

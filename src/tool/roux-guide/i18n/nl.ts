@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Meestergids voor Roux en Moedersauzen";
 const description = "Interactieve Roux-calculator. Leer Béchamel, Velouté en Espagnole maken met exacte verhoudingen. De basis van de klassieke Franse keuken.";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: 'Veelgestelde Vragen',
-  faq,
-  bibliographyTitle: 'Bibliografie',
-  bibliography: [
-    {
-      name: 'Larousse Gastronomique',
-      url: 'https://www.laroussecocina.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -161,5 +154,6 @@ export const content: ToolLocaleContent = {
     timeBlond: "5-8 min",
     timeBrown: "15-20 min",
   },
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

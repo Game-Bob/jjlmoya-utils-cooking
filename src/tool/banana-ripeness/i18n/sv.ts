@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Banandiagnos och Konservering: Vetenskaplig Guide";
 const description = "Analysera mognadsstatusen för dina bananer med vetenskaplig precision. Lär dig konserveringstekniker, biokemin bakom eten och näringsoptimering.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Banandiagnos och Konservering: Vetenskaplig Guide',
   description: 'Analysera mognadsstatusen för dina bananer med vetenskaplig precision. Lär dig konserveringstekniker, biokemin bakom eten och näringsoptimering.',
   faqTitle: 'Vanliga frågor',
-  bibliographyTitle: 'Källor och referenser',
   ui: {
     ripesnessLabel: 'Mognadsstatus',
     nextStageLabel: 'Nästa steg om',
@@ -142,20 +142,6 @@ export const content: ToolLocaleContent = {
     {
       name: 'Tillämpa konservering',
       text: 'Följ specifika rekommendationer för konservering och påskyndning baserat på aktuell status.',
-    },
-  ],
-  bibliography: [
-    {
-      name: 'Ethylene and Fruit Ripening: A Biological Review',
-      url: '',
-    },
-    {
-      name: 'Biochemical Changes in Musa acuminata during Ripening (Journal of Food Science)',
-      url: 'https://www.foodsciencejournal.com/assets/archives/2017/vol2issue5/2-5-31-566.pdf',
-    },
-    {
-      name: 'The Role of Respiration in Climacteric Fruits (Scientific American)',
-      url: 'https://www.nature.com/articles/226976b0',
     },
   ],
   seo: [
@@ -244,5 +230,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Nedbrytningsvarning:</strong> Externa faktorer som en relativ luftfuktighet över 85 % eller temperaturer över 25°C kan påskynda nedbrytningen drastiskt, vilket gör att bananen går från optimal till oätlig på bara några timmar. Denna simulator hjälper dig att förutse dessa förändringar och planera strategiskt.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "바나나 숙도 진단 및 보관: 과학적 가이드";
 const description = "바나나의 숙성 상태를 과학적인 정밀함으로 분석합니다. 보관 기술, 에틸렌의 생화학, 그리고 영양 최적화 방법을 배워보세요.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: "바나나 숙도 진단 및 보관: 과학적 가이드",
   description: "바나나의 숙성 상태를 과학적인 정밀함으로 분석합니다. 보관 기술, 에틸렌의 생화학, 그리고 영양 최적화 방법을 배워보세요.",
   faqTitle: "자주 묻는 질문",
-  bibliographyTitle: "출처 및 참고 문헌",
   ui: {
     ripesnessLabel: "숙성 상태",
     nextStageLabel: "다음 단계까지",
@@ -142,20 +142,6 @@ export const content: ToolLocaleContent = {
     {
       name: '보관법 적용',
       text: '현재 상태에 따른 구체적인 보관 및 숙성 촉진 권장 사항을 따르세요.',
-    },
-  ],
-  bibliography: [
-    {
-      name: 'Ethylene and Fruit Ripening: A Biological Review',
-      url: '',
-    },
-    {
-      name: 'Biochemical Changes in Musa acuminata during Ripening (Journal of Food Science)',
-      url: 'https://www.foodsciencejournal.com/assets/archives/2017/vol2issue5/2-5-31-566.pdf',
-    },
-    {
-      name: 'The Role of Respiration in Climacteric Fruits (Scientific American)',
-      url: 'https://www.nature.com/articles/226976b0',
     },
   ],
   seo: [
@@ -244,5 +230,6 @@ export const content: ToolLocaleContent = {
       html: "<strong>부패 경고:</strong> 상대 습도 85% 이상 또는 온도 25°C 이상의 외부 요인은 부패를 급격히 가속화하여 단 몇 시간 만에 바나나를 먹을 수 없는 상태로 만들 수 있습니다. 본 시뮬레이터는 이러한 변화를 예측하고 전략적으로 대비하는 데 도움을 줍니다.",
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

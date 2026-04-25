@@ -82,7 +82,6 @@ function saveToStorage(key: string, value: string): void {
 	try {
 		localStorage.setItem(key, value);
 	} catch {
-		// Silently fail if localStorage is unavailable
 	}
 }
 

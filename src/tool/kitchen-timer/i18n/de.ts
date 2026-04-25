@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Multi Küchen Timer";
 const description = "Verwalten Sie mehrere Garzeiten gleichzeitig. Unabhängige Alarme, ideal für Köche und die Organisation in der Küche (Mise en Place).";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Multi Küchen Timer',
   description: 'Verwalten Sie mehrere Garzeiten gleichzeitig. Unabhängige Alarme, ideal für Köche und die Organisation in der Küche (Mise en Place).',
   faqTitle: 'Häufig gestellte Fragen',
-  bibliographyTitle: 'Referenzen',
   ui: {
     addTimer: 'Timer hinzufügen',
     stopAll: 'Alle stoppen',
@@ -101,18 +101,7 @@ export const content: ToolLocaleContent = {
     statusFinished: 'ZEIT UM!',
     finishNotification: 'Timer beendet für',
   },
-  faq,
-  bibliography: [
-    {
-      name: 'Lebensmittelsicherheit: USDA Guidelines',
-      url: 'https://www.fsis.usda.gov/',
-    },
-    {
-      name: 'Mise en Place - Die Profiküche',
-      url: 'https://www.escoffier.edu/',
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -170,5 +159,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Profi-Tipp:</strong> Zeitpräzision unterscheidet den Küchenchef vom Hobbykoch. Verlassen Sie sich nicht nur auf Ihr Gefühl, sondern nutzen Sie die Technik für konstante Ergebnisse.',
     },
   ],
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

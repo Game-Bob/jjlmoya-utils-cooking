@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Intelligenter Pfannen Finder: Kochgeschirr Leitfaden";
 const description = "Interaktiver Leitfaden zur Auswahl der besten Pfanne oder des besten Topfes passend zu Ihrem Kochstil. Eisen vs. Stahl vs. Teflon. Finden Sie Ihr perfektes Werkzeug.";
@@ -76,23 +77,7 @@ export const content: ToolLocaleContent = {
   title: 'Intelligenter Pfannen Finder: Kochgeschirr Leitfaden',
   description: 'Interaktiver Leitfaden zur Auswahl der besten Pfanne oder des besten Topfes passend zu Ihrem Kochstil. Eisen vs. Stahl vs. Teflon. Finden Sie Ihr perfektes Werkzeug.',
   faqTitle: 'Häufig gestellte Fragen',
-  faq,
-  bibliographyTitle: 'Bibliographie',
-  bibliography: [
-    {
-      name: 'The Flavor Bible - Pairing, and Progress in Food',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'On Food and Cooking - Harold McGee',
-      url: 'https://www.foodscience.org/',
-    },
-    {
-      name: 'Salt Fat Acid Heat - Samin Nosrat',
-      url: 'https://www.saltfatacidheat.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -196,5 +181,6 @@ export const content: ToolLocaleContent = {
     enamelCon: 'Sehr teuer. Emaille ist stoßempfindlich.',
     enamelTip: 'Perfekt für endlose Schmorgerichte. Die Emaille erlaubt problemloses Kochen mit Säuren (Tomate).',
   },
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

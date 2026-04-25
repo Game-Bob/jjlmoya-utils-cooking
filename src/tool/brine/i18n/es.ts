@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Calculadora de Salmuera por Equilibrio";
 const description = "La ciencia del equilibrio para carnes jugosas y fermentados perfectos. Calcula la salinidad exacta basada en el peso total de ingrediente y agua.";
@@ -109,9 +110,7 @@ export const content: ToolLocaleContent = {
     timePreservesLabel: "Tiempo (Conservas)",
     timePreservesDuration: "1+ Meses",
   },
-  faqTitle: "Preguntas Frecuentes",
-  bibliographyTitle: "Fuentes y Referencias",
-  faq: [
+  faqTitle: "Preguntas Frecuentes",  faq: [
     {
       question: "¿Qué es el método de salmuera por equilibrio?",
       answer:
@@ -155,21 +154,7 @@ export const content: ToolLocaleContent = {
       text: "Refrigera según el tipo: 4-48 horas para carnes, 1-3 semanas para fermentados. El tiempo exacto depende de la temperatura y tu gusto personal.",
     },
   ],
-  bibliography: [
-    {
-      name: "The Noma Guide to Fermentation - René Redzepi & David Zilber",
-      url: "https://www.nomacph.com/",
-    },
-    {
-      name: "Salt, Fat, Acid, Heat - Samin Nosrat",
-      url: "https://www.saltfatacidheat.com/",
-    },
-    {
-      name: "Pollan, Michael - Cooked",
-      url: "https://michaelpollan.com/",
-    },
-  ],
-	seo: [
+  seo: [
 		{
 			type: 'title',
 			text: 'Guía Maestro de Salmuera por Equilibrio y Fermentación',
@@ -296,6 +281,6 @@ export const content: ToolLocaleContent = {
 			html: 'Nuestra calculadora de equilibrio elimina las conjeturas de tus recetas, permitiéndote cocinar con la confianza de un profesional del sector.',
 		},
 	],
-
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

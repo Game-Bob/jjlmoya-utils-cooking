@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Calcolatore Impasto Pizza Napoletana";
 const description = "Calcola le proporzioni esatte di farina, acqua, sale e lievito per preparare l'autentica pizza napoletana a casa.";
@@ -84,7 +85,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: "Domande Frequenti",
-  bibliographyTitle: "Riferimenti",
   ui: {
     parameters: "Parametri",
     quantity: "Quantità",
@@ -115,18 +115,7 @@ export const content: ToolLocaleContent = {
       "La dimensione visiva rappresenta il diametro approssimativo della pizza stesa in base al peso del panetto.",
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: "Associazione Verace Pizza Napoletana",
-      url: "https://www.pizzanapoletana.org/",
-    },
-    {
-      name: "Harina Caputo",
-      url: "https://www.caputoprepara.com/",
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: 'Guida Maestro alla Vera Pizza Napoletana',
@@ -168,5 +157,6 @@ export const content: ToolLocaleContent = {
       html: 'La maturazione di 24 ore a 4°C crea sapori complessi impossibili da ottenere a temperatura ambiente.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

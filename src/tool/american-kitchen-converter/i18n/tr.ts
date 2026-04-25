@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Amerikan Mutfak Ölçü Dönüştürücü: Cup'tan Gram'a ve Sıcaklıklar";
 const description = "Cup, yemek kaşığı ve Fahrenheit ölçülerini metrik sisteme dönüştürün. Amerikan tariflerini profesyonel hassasiyetle çözmek için pusulanız.";
@@ -80,7 +81,6 @@ export const content: ToolLocaleContent = {
   title: "Amerikan Mutfak Ölçü Dönüştürücü: Cup'tan Gram'a ve Sıcaklıklar",
   description: "Cup, yemek kaşığı ve Fahrenheit ölçülerini metrik sisteme dönüştürün. Amerikan tariflerini profesyonel hassasiyetle çözmek için pusulanız.",
   faqTitle: "Sıkça Sorulan Sorular",
-  bibliographyTitle: "Kaynakça",
   ui: {
     copied: 'Kopyalandı',
     noHistory: 'Geçmiş yok',
@@ -324,16 +324,6 @@ export const content: ToolLocaleContent = {
       answer: "Gas 4 = 180°C = 350°F. Bu İngiliz ölçeğidir. Mutfakta fırınınızdaki eşdeğer sayıyı ararız: bazıları gaz ayarı, bazıları elektronik derece kullanır.",
     },
   ],
-  bibliography: [
-    {
-      name: 'King Arthur Baking: Ingredient Weight Chart',
-      url: 'https://www.kingarthurbaking.com/learn/ingredient-weight-chart',
-    },
-    {
-      name: 'Culinary Institute of America: Conversions and Equivalents',
-      url: 'https://www.ciachef.edu/',
-    },
-  ],
   howTo: [
     {
       name: "Dönüştürme türünü seçin",
@@ -352,5 +342,6 @@ export const content: ToolLocaleContent = {
       text: "Kesin dönüştürme ile artık Amerikan tarifini profesyonel hassasiyetle takip edebilirsiniz.",
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

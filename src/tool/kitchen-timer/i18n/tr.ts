@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Çoklu Mutfak Zamanlayıcı";
 const description = "Aynı anda birden fazla pişirme süresini yönetin. Bağımsız alarmlar, şefler ve mutfak organizasyonu (Mise en Place) için ideal.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Çoklu Mutfak Zamanlayıcı',
   description: 'Aynı anda birden fazla pişirme süresini yönetin. Bağımsız alarmlar, şefler ve mutfak organizasyonu (Mise en Place) için ideal.',
   faqTitle: 'Sıkça Sorulan Sorular',
-  bibliographyTitle: 'Referanslar',
   ui: {
     addTimer: 'Zamanlayıcı Ekle',
     stopAll: 'Hepsini Durdur',
@@ -101,18 +101,7 @@ export const content: ToolLocaleContent = {
     statusFinished: 'SÜRE DOLDU!',
     finishNotification: 'Zamanlayıcı bitti:',
   },
-  faq,
-  bibliography: [
-    {
-      name: 'Gıda Güvenliği: USDA Guidelines',
-      url: 'https://www.fsis.usda.gov/',
-    },
-    {
-      name: 'Mise en Place - Profesyonel Mutfak',
-      url: 'https://www.escoffier.edu/',
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -166,5 +155,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Profesyonel İpucu:</strong> Zaman hassasiyeti, bir şefi ev aşçısından ayıran şeydir. İstikrarlı sonuçlar için teknolojiyi kullanın.',
     },
   ],
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

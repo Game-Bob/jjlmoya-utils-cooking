@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = '베이킹 틀 사이즈 변환 계산기';
 const description =
@@ -81,10 +82,7 @@ export const content: ToolLocaleContent = {
 	slug: 'cake-pan-size-converter-calculator',
 	title,
 	description,
-	faqTitle: '사이즈 조절 관련 자주 묻는 질문',
-	bibliographyTitle: '참고 문헌 및 자료',
-
-	ui: {
+	faqTitle: '사이즈 조절 관련 자주 묻는 질문',	ui: {
 		originalRecipe: '원래 레시피',
 		yourMold: '내 틀',
 		round: '원형',
@@ -113,18 +111,7 @@ export const content: ToolLocaleContent = {
 		increase: '확대',
 	},
 
-	faq,
-	bibliography: [
-		{
-			name: 'Baking Science and Technology - E.J. Pyler',
-			url: 'https://www.bakingbusiness.com/',
-		},
-		{
-			name: 'The Professional Pastry Chef - Bo Friberg',
-			url: 'https://www.wiley.com/',
-		},
-	],
-	howTo,
+	faq,	howTo,
 	seo: [
 		{
 			type: 'title',
@@ -166,5 +153,6 @@ export const content: ToolLocaleContent = {
 			html: '계산된 계수와 관계없이, 틀의 2/3 이상 내용물을 채우지 않도록 주의하세요.',
 		},
 	],
-	schemas: [appSchema, faqSchema, howToSchema],
+  bibliography,
+  schemas: [appSchema, faqSchema, howToSchema],
 };

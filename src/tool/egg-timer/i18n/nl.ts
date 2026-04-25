@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Wetenschappelijke Eierwekker";
 const description = "Thermodynamische rekenhulp voor het perfect koken van eieren op basis van hoogte, temperatuur en grootte.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: "Wetenschappelijke Eierwekker",
   description: "Thermodynamische rekenhulp voor het perfect koken van eieren op basis van hoogte, temperatuur en grootte.",
   faqTitle: "Veelgestelde Vragen",
-  bibliographyTitle: "Wetenschappelijke Referenties",
   ui: {
     parameters: "Parameters",
     initial_temperature: "Begintemperatuur",
@@ -94,22 +94,7 @@ export const content: ToolLocaleContent = {
     hard_cooked: "Hardgekookt",
     hard_description: "Volledig gaar, stevige dooier.",
   },
-  faq,
-  bibliography: [
-    {
-      name: "The Science of Boiling an Egg - Charles D. H. Williams",
-      url: "https://newton.ex.ac.uk/teaching/CDHW/Egg/",
-    },
-    {
-      name: "The Food Lab: The Science of the Best Hard Boiled Eggs - J. Kenji López-Alt",
-      url: "https://www.seriouseats.com/the-food-lab-hard-boiled-eggs-recipe",
-    },
-    {
-      name: "The Food Lab: Perfect Soft Boiled Eggs",
-      url: "https://www.seriouseats.com/soft-boiled-eggs-recipe",
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -248,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: 'Onze eierwekker gebruikt de Charles Williams-vergelijking om elke seconde aan te passen op basis van je exacte locatie en koelkastruimte.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

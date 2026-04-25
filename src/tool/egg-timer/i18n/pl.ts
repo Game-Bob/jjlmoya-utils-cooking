@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Naukowy Minutnik do Jajek";
 const description = "Kalkulator termodynamiczny do idealnego gotowania jajek na podstawie wysokości, temperatury i rozmiaru.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: "Naukowy Minutnik do Jajek",
   description: "Kalkulator termodynamiczny do idealnego gotowania jajek na podstawie wysokości, temperatury i rozmiaru.",
   faqTitle: "Często Zadawane Pytania",
-  bibliographyTitle: "Referencje Naukowe",
   ui: {
     parameters: "Parametry",
     initial_temperature: "Temperatura Początkowa",
@@ -94,22 +94,7 @@ export const content: ToolLocaleContent = {
     hard_cooked: "Na twardo",
     hard_description: "Całkowicie ugotowane, stałe żółtko.",
   },
-  faq,
-  bibliography: [
-    {
-      name: "The Science of Boiling an Egg - Charles D. H. Williams",
-      url: "https://newton.ex.ac.uk/teaching/CDHW/Egg/",
-    },
-    {
-      name: "The Food Lab: The Science of the Best Hard Boiled Eggs - J. Kenji López-Alt",
-      url: "https://www.seriouseats.com/the-food-lab-hard-boiled-eggs-recipe",
-    },
-    {
-      name: "The Food Lab: Perfect Soft Boiled Eggs",
-      url: "https://www.seriouseats.com/soft-boiled-eggs-recipe",
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -248,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: 'Nasz minutnik wykorzystuje równanie Charlesa Williamsa, aby dopasować każdą sekundę do Twojej lokalizacji i temperatury w lodówce.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

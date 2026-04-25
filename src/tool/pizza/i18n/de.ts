@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Neapolitanischer Pizza Teigrechner";
 const description = "Berechnen Sie die exakten Mengen für Mehl, Wasser, Salz und Hefe, um echte neapolitanische Pizza zu Hause zuzubereiten.";
@@ -80,7 +81,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: "Häufig gestellte Fragen",
-  bibliographyTitle: "Referenzen",
   ui: {
     parameters: "Parameter",
     quantity: "Menge",
@@ -111,18 +111,7 @@ export const content: ToolLocaleContent = {
       "Die visuelle Größe entspricht dem ungefähren Durchmesser der Pizza basierend auf dem Kugelgewicht.",
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: "Associazione Verace Pizza Napoletana",
-      url: "https://www.pizzanapoletana.org/",
-    },
-    {
-      name: "The Pizza Bible - Tony Gemignani",
-      url: "https://www.amazon.de/",
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: 'Leitfaden für authentischen neapolitanischen Pizzateig',
@@ -164,5 +153,6 @@ export const content: ToolLocaleContent = {
       html: 'Eine 24-stündige Stockgare bei 4°C erzeugt komplexe Aromen, die bei Raumtemperatur nicht möglich sind.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

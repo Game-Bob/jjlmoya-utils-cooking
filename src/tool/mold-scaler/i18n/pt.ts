@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Calculadora para Escalar Formas de Pastelaria';
 const description =
@@ -81,10 +82,7 @@ export const content: ToolLocaleContent = {
 	slug: 'formas',
 	title,
 	description,
-	faqTitle: 'Perguntas Frequentes sobre a Escala',
-	bibliographyTitle: 'Fontes e Referências',
-
-	ui: {
+	faqTitle: 'Perguntas Frequentes sobre a Escala',	ui: {
 		originalRecipe: 'Receita Original',
 		yourMold: 'A Sua Forma',
 		round: 'Redonda',
@@ -113,18 +111,7 @@ export const content: ToolLocaleContent = {
 		increase: 'Aumentar',
 	},
 
-	faq,
-	bibliography: [
-		{
-			name: 'Baking Science and Technology - E.J. Pyler',
-			url: 'https://www.bakingbusiness.com/',
-		},
-		{
-			name: 'The Professional Pastry Chef - Bo Friberg',
-			url: 'https://www.wiley.com/',
-		},
-	],
-	howTo,
+	faq,	howTo,
 	seo: [
 		{
 			type: 'title',
@@ -166,5 +153,6 @@ export const content: ToolLocaleContent = {
 			html: 'Nunca encha uma forma mais de 2/3 da sua capacidade, independentemente do fator calculado.',
 		},
 	],
-	schemas: [appSchema, faqSchema, howToSchema],
+  bibliography,
+  schemas: [appSchema, faqSchema, howToSchema],
 };

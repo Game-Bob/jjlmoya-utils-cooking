@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Professional Meringue Sugar Ratio Calculator";
 const description = "The simplest but least stable. Whites and sugar whipped cold.";
@@ -159,21 +160,6 @@ export const content: ToolLocaleContent = {
       text: "Follow the estimated timing guide until you reach that high-gloss, vertical stiff peak.",
     },
   ],
-  bibliographyTitle: "Technical Sources & References",
-  bibliography: [
-    {
-      name: "King Arthur Baking - Meringue Guide",
-      url: "https://www.kingarthurbaking.com/blog/2015/07/05/meringue-types",
-    },
-    {
-      name: "Exploratorium - The Science of Egg Foam",
-      url: "https://www.exploratorium.edu/explore/cooking/egg-science",
-    },
-    {
-      name: "Fine Cooking - Mastering the Stiff Peak",
-      url: "https://www.finecooking.com/",
-    },
-  ],
   seo: [
     {
       type: "title",
@@ -328,5 +314,6 @@ export const content: ToolLocaleContent = {
       html: "Our calculator automates the math so you can focus on whipping until you reach that perfect, high-gloss finish.",
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

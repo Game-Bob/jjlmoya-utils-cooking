@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Konverter Dapur Amerika: Cups ke Gram dan Suhu";
 const description = "Konversikan cups, sendok makan, dan Fahrenheit ke sistem metrik. Kompas untuk memahami resep Amerika dengan presisi profesional.";
@@ -80,7 +81,6 @@ export const content: ToolLocaleContent = {
   title: 'Konverter Dapur Amerika: Cups ke Gram dan Suhu',
   description: 'Konversikan cups, sendok makan, dan Fahrenheit ke sistem metrik. Kompas untuk memahami resep Amerika dengan presisi profesional.',
   faqTitle: 'Pertanyaan yang Sering Diajukan',
-  bibliographyTitle: 'Bibliografi',
   ui: {
     copied: 'Disalin',
     noHistory: 'Tidak ada riwayat',
@@ -324,16 +324,6 @@ export const content: ToolLocaleContent = {
       answer: 'Gas 4 = 180°C = 350°F. Ini adalah skala Inggris. Di dapur, kita mencari angka yang setara pada oven Anda: beberapa menggunakan pengaturan gas, yang lain menggunakan derajat elektronik.',
     },
   ],
-  bibliography: [
-    {
-      name: 'King Arthur Baking: Ingredient Weight Chart',
-      url: 'https://www.kingarthurbaking.com/learn/ingredient-weight-chart',
-    },
-    {
-      name: 'Culinary Institute of America: Conversions and Equivalents',
-      url: 'https://www.ciachef.edu/',
-    },
-  ],
   howTo: [
     {
       name: 'Pilih jenis konversi',
@@ -352,5 +342,6 @@ export const content: ToolLocaleContent = {
       text: 'Dengan konversi yang akurat, kini Anda dapat mengikuti resep Amerika dengan presisi profesional.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Экспертное руководство по Ру и материнским соусам";
 const description = "Интерактивный калькулятор Ру. Научитесь готовить Бешамель, Велюте и Эспаньоль с точными пропорциями. Основа французской кухни.";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: 'Часто задаваемые вопросы',
-  faq,
-  bibliographyTitle: 'Библиография',
-  bibliography: [
-    {
-      name: 'Larousse Gastronomique',
-      url: 'https://www.laroussecocina.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -135,5 +128,6 @@ export const content: ToolLocaleContent = {
     timeBlond: "5-8 мин",
     timeBrown: "15-20 мин",
   },
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

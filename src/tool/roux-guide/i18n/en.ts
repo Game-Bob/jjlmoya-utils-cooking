@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from "../bibliography";
 
 const title = "Professional Roux Ratio Calculator and Sauce Guide";
 const description = "Master the foundation of French mother sauces. Calculate exact roux proportions for Béchamel, Velouté, and Espagnole with professional accuracy.";
@@ -164,21 +165,6 @@ export const content: ToolLocaleContent = {
       text: "Cook your butter-flour mix to the specified level (White, Blond, or Brown) to match your sauce's flavor profile.",
     },
   ],
-  bibliographyTitle: "Technical References & Bibliography",
-  bibliography: [
-    {
-      name: "Larousse Gastronomique - The Culinary Bible",
-      url: "https://www.laroussecocina.com/",
-    },
-    {
-      name: "Mastering the Art of French Cooking - Julia Child",
-      url: "https://www.juliachild.com/",
-    },
-    {
-      name: "On Food and Cooking - Harold McGee (Starch Science)",
-      url: "https://www.foodscience.org/",
-    },
-  ],
   seo: [
     {
       type: "title",
@@ -321,5 +307,6 @@ export const content: ToolLocaleContent = {
       html: "Our roux ratio calculator ensures your sauces always have the perfect technical consistency for every dish.",
     },
   ],
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

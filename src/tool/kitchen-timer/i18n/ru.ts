@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Многофункциональный кухонный таймер";
 const description = "Управляйте несколькими процессами приготовления одновременно. Независимые будильники, идеально для поваров и организации (Mise en Place).";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Многофункциональный кухонный таймер',
   description: 'Управляйте несколькими процессами одновременно. Независимые будильники, идеально для поваров и организации (Mise en Place).',
   faqTitle: 'Часто задаваемые вопросы',
-  bibliographyTitle: 'Ссылки',
   ui: {
     addTimer: 'Добавить таймер',
     stopAll: 'Стоп все',
@@ -101,18 +101,7 @@ export const content: ToolLocaleContent = {
     statusFinished: 'ВРЕМЯ!',
     finishNotification: 'Таймер завершен для',
   },
-  faq,
-  bibliography: [
-    {
-      name: 'Пищевая безопасность: USDA Guidelines',
-      url: 'https://www.fsis.usda.gov/',
-    },
-    {
-      name: 'Mise en Place - Профессиональная кухня',
-      url: 'https://www.escoffier.edu/',
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -166,5 +155,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Совет профи:</strong> точность времени отличает шеф-повара от любителя. Используйте технологии для стабильного результата.',
     },
   ],
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Kalkulator Solanki Metodą Równowagi";
 const description = "Nauka o równowadze dla soczystych mięs i idealnych kiszonek. Oblicz dokładne zasolenie na podstawie całkowitej wagi produktu i wody.";
@@ -104,25 +105,8 @@ export const content: ToolLocaleContent = {
     timePreservesLabel: "Czas (Konserwy)",
     timePreservesDuration: "1+ Miesięcy",
   },
-  faqTitle: "Często Zadawane Pytania",
-  bibliographyTitle: "Źródła i Odniesienia",
-  faq,
-  howTo,
-  bibliography: [
-    {
-      name: "The Noma Guide to Fermentation - René Redzepi & David Zilber",
-      url: "https://www.nomacph.com/",
-    },
-    {
-      name: "Salt, Fat, Acid, Heat - Samin Nosrat",
-      url: "https://www.saltfatacidheat.com/",
-    },
-    {
-      name: "Pollan, Michael - Cooked",
-      url: "https://michaelpollan.com/",
-    },
-  ],
-  seo: [
+  faqTitle: "Często Zadawane Pytania",  faq,
+  howTo,  seo: [
     {
       type: 'title',
       text: 'Mistrzowski Przewodnik po Solance przez Równowagę i Kiszeniu',
@@ -249,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: 'Nasz kalkulator równowagi eliminuje domysły z Twoich przepisów, pozwalając Ci gotować z pewnością profesjonalisty.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

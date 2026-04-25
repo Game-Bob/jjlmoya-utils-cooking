@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Kalkulator Ciasta na Pizzę Neapolitańską";
 const description = "Oblicz dokładne proporcje mąki, wody, soli i drożdży, aby przygotować autentyczną pizzę neapolitańską w domu.";
@@ -72,7 +73,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: "Często Zadawane Pytania",
-  bibliographyTitle: "Referencje",
   ui: {
     parameters: "Parametry",
     quantity: "Ilość",
@@ -103,14 +103,7 @@ export const content: ToolLocaleContent = {
       "Rozmiar wizualny reprezentuje przybliżoną średnicę pizzy po rozciągnięciu w zależności od wagi kulki.",
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: "Associazione Verace Pizza Napoletana",
-      url: "https://www.pizzanapoletana.org/",
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: 'Mistrzowski przewodnik po cieście na pizzę neapolitańską',
@@ -121,5 +114,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Pizza neapolitańska</strong> to dziedzictwo kulturowe. Sukces zależy od precyzji w czasie, temperaturze i nawodnieniu.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

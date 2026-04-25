@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Calculadora de Masa Madre Ratios de Fermentación";
 const description = "Calcula automáticamente las proporciones de masa madre, harina y agua para mantener tu cultivo. Ratios predefinidos o personalizados.";
@@ -97,23 +98,7 @@ export const content: ToolLocaleContent = {
 			question: '¿La calculadora redondea los gramos?',
 			answer: 'Sí. Redondea al número entero más cercano para practicidad. Si necesitas máxima precisión, usa una báscula digital. Los pequeños redondeos no afectan significativamente la fermentación.',
 		},
-	],
-	bibliographyTitle: 'Bibliografía',
-	bibliography: [
-		{
-			name: 'Tartine Bread - Chad Robertson',
-			url: 'https://www.penguinrandomhouse.com/books/310016/tartine-bread-by-chad-robertson/',
-		},
-		{
-			name: 'The Flavor Bible - Scaling and Ratios',
-			url: 'https://www.flavorprints.com/',
-		},
-		{
-			name: 'Full Proof Baking - Guides on Sourdough',
-			url: 'https://www.fullproofbaking.com/',
-		},
-	],
-	howTo: [
+	],  howTo: [
 		{
 			name: 'Ingresa la cantidad total que necesitas',
 			text: 'Define el peso total de masa madre que requieres para tu receta (ej: 300g para un pan típico).',
@@ -127,7 +112,7 @@ export const content: ToolLocaleContent = {
 			text: 'La calculadora te muestra cuánto de masa madre, harina y agua necesitas. Mezcla estos ingredientes y deja fermentar según tu protocolo.',
 		},
 	],
-	seo: [
+  seo: [
 		{
 			type: 'title',
 			text: 'Guía Maestra para el Mantenimiento y Refresco de Masa Madre',
@@ -310,5 +295,6 @@ export const content: ToolLocaleContent = {
 		totalDough: 'Total Masa',
 		mm: 'MM',
 	},
+  bibliography,
 	schemas: [faqSchema, howToSchema, appSchema],
 };

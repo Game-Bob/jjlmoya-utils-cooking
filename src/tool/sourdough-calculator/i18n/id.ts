@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Kalkulator Sourdough Rasio Fermentasi";
 const description = "Hitung otomatis proporsi sourdough, tepung, dan air untuk menjaga kultur Anda. Rasio standar atau khusus.";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
 	title,
 	description,
 	faqTitle: 'Pertanyaan Umum',
-	faq,
-	bibliographyTitle: 'Bibliografi',
-	bibliography: [
-		{
-			name: 'Tartine Bread - Chad Robertson',
-			url: 'https://www.penguinrandomhouse.com/books/310016/tartine-bread-by-chad-robertson/',
-		},
-	],
-	howTo,
+	faq,  howTo,
 	seo: [
 		{
 			type: 'title',
@@ -112,5 +105,6 @@ export const content: ToolLocaleContent = {
 		totalDough: 'Total Adonan',
 		mm: 'SD',
 	},
+  bibliography,
 	schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Beräkna och Skala Bakformar';
 const description =
@@ -81,10 +82,7 @@ export const content: ToolLocaleContent = {
 	slug: 'bakformar',
 	title,
 	description,
-	faqTitle: 'Vanliga frågor om Skalning',
-	bibliographyTitle: 'Källor och Referenser',
-
-	ui: {
+	faqTitle: 'Vanliga frågor om Skalning',	ui: {
 		originalRecipe: 'Originalrecept',
 		yourMold: 'Din Form',
 		round: 'Rund',
@@ -113,18 +111,7 @@ export const content: ToolLocaleContent = {
 		increase: 'Öka',
 	},
 
-	faq,
-	bibliography: [
-		{
-			name: 'Baking Science and Technology - E.J. Pyler',
-			url: 'https://www.bakingbusiness.com/',
-		},
-		{
-			name: 'The Professional Pastry Chef - Bo Friberg',
-			url: 'https://www.wiley.com/',
-		},
-	],
-	howTo,
+	faq,	howTo,
 	seo: [
 		{
 			type: 'title',
@@ -166,5 +153,6 @@ export const content: ToolLocaleContent = {
 			html: 'Fyll aldrig en form till mer än 2/3, oavsett den beräknade faktorn.',
 		},
 	],
-	schemas: [appSchema, faqSchema, howToSchema],
+  bibliography,
+  schemas: [appSchema, faqSchema, howToSchema],
 };

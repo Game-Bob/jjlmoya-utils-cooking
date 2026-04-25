@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "과학적인 계란 타이머";
 const description = "고도, 온도, 크기에 따른 완벽한 계란 삶기를 위한 열력학 계산기입니다.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: "과학적인 계란 타이머",
   description: "고도, 온도, 크기에 따른 완벽한 계란 삶기를 위한 열력학 계산기입니다.",
   faqTitle: "자주 묻는 질문",
-  bibliographyTitle: "과학적 참고 문헌",
   ui: {
     parameters: "조리 파라미터",
     initial_temperature: "초기 온도",
@@ -94,22 +94,7 @@ export const content: ToolLocaleContent = {
     hard_cooked: "완숙",
     hard_description: "완전히 익음, 노른자가 단단함.",
   },
-  faq,
-  bibliography: [
-    {
-      name: "The Science of Boiling an Egg - Charles D. H. Williams",
-      url: "https://newton.ex.ac.uk/teaching/CDHW/Egg/",
-    },
-    {
-      name: "The Food Lab: The Science of the Best Hard Boiled Eggs - J. Kenji López-Alt",
-      url: "https://www.seriouseats.com/the-food-lab-hard-boiled-eggs-recipe",
-    },
-    {
-      name: "The Food Lab: Perfect Soft Boiled Eggs",
-      url: "https://www.seriouseats.com/soft-boiled-eggs-recipe",
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -248,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: '우리의 타이머는 찰스 윌리엄스 방정식을 사용하여 위치와 냉장고 상태에 맞춰 1초 단위까지 정밀하게 조정합니다.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "天然酵母（サワードウ）計算機：発酵比率";
 const description = "サワードウ（種継ぎ）、小麦粉、水の分量を自動計算します。プリセットされた比率またはカスタム比率で、種を最適な状態に保ちます。";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
 	title,
 	description,
 	faqTitle: 'よくある質問',
-	faq,
-	bibliographyTitle: '参考文献',
-	bibliography: [
-		{
-			name: 'Tartine Bread - Chad Robertson',
-			url: 'https://www.penguinrandomhouse.com/books/310016/tartine-bread-by-chad-robertson/',
-		},
-	],
-	howTo,
+	faq,  howTo,
 	seo: [
 		{
 			type: 'title',
@@ -112,5 +105,6 @@ export const content: ToolLocaleContent = {
 		totalDough: '種の総量',
 		mm: 'MM',
 	},
+  bibliography,
 	schemas: [faqSchema, howToSchema, appSchema],
 };

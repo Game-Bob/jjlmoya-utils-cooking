@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Selector de Sartenes Inteligente: Guía de Utensilios de Cocina";
 const description = "Guía interactiva para elegir la mejor sartén u olla según tu estilo de cocina. Hierro vs Acero vs Teflón. Encuentra tu herramienta perfecta.";
@@ -97,23 +98,7 @@ export const content: ToolLocaleContent = {
       question: '¿Cuánto debo gastar en una buena sartén?',
       answer: 'Un set de 2-3 sartenes de calidad media-alta (acero inoxidable o hierro) puede durar 20+ años. Es mejor invertir bien una sola sartén que comprar 5 baratas que duran 2 años. Calidad sobre cantidad.',
     },
-  ],
-  bibliographyTitle: 'Bibliografía',
-  bibliography: [
-    {
-      name: 'The Flavor Bible - Pairing, and Progress in Food',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'On Food and Cooking - Harold McGee (La Ciencia de la Cocina)',
-      url: 'https://www.foodscience.org/',
-    },
-    {
-      name: 'Salt Fat Acid Heat - Samin Nosrat',
-      url: 'https://www.saltfatacidheat.com/',
-    },
-  ],
-  howTo: [
+  ],  howTo: [
     {
       name: 'Selecciona tu estilo de cocina',
       text: 'Elige entre fuego alto (dorar), delicado (huevos), guisos (cocción lenta) o cocina rápida. Cada estilo tiene requirements distintos.',
@@ -230,5 +215,6 @@ export const content: ToolLocaleContent = {
     enamelCon: 'Muy cara. Esmalte frágil a golpes secos.',
     enamelTip: 'Perfecta para guisos interminables. El esmalte permite cocinar ácidos (tomate) sin problemas.',
   },
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

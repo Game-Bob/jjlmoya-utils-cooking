@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "蛋白霜与硬性打发计算器";
 const description = "根据蛋白重量，精准计算法式、意式或瑞士蛋白霜所需的糖量。包含打发时间建议与甜品制作技巧。";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: '常见问题',
-  bibliographyTitle: '参考资料',
   ui: {
     whitesLabel: '蛋白重量',
     whitesPlaceholder: '例: 120',
@@ -113,18 +113,7 @@ export const content: ToolLocaleContent = {
     invalidWeightError: '请输入有效重量',
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: '拉鲁斯美食百科：蛋白霜类型与制作',
-      url: 'https://laroussecocina.mx/palabra/merengue/',
-    },
-    {
-      name: 'Exploratorium: Egg Science 鸡蛋的科学',
-      url: 'https://www.exploratorium.edu/explore/cooking/egg-science',
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: '蛋白霜与硬性打发大师指南',
@@ -206,5 +195,6 @@ export const content: ToolLocaleContent = {
       html: '在开始前，用纸巾蘸取少量白醋或柠檬汁擦拭搅拌盆。任何微笑的油脂残留都会导致蛋白无法打发。',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

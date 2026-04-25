@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Calculateur de Meringue et Blancs en Neige Professionnel";
 const description = "La plus simple mais la moins stable. Blancs et sucre fouettés à froid.";
@@ -148,21 +149,6 @@ export const content: ToolLocaleContent = {
       text: "Suivez le guide des temps jusqu'à obtenir une pointe ferme et verticale (le fameux bec d'oiseau).",
     },
   ],
-  bibliographyTitle: "Sources Techniques et Références",
-  bibliography: [
-    {
-      name: "Le Journal du Pâtissier - Science du Merengue",
-      url: "https://www.lejournaldupatissier.com/",
-    },
-    {
-      name: "Exploratorium - La science des œufs",
-      url: "https://www.exploratorium.edu/explore/cooking/egg-science",
-    },
-    {
-      name: "Mercotte - Tout savoir sur les meringues",
-      url: "https://www.mercotte.fr/",
-    },
-  ],
   seo: [
     {
       type: "title",
@@ -301,5 +287,6 @@ export const content: ToolLocaleContent = {
       html: "Notre calculateur automatise les calculs pour que vous puissiez vous concentrer sur le fouettage jusqu'au brillant parfait.",
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

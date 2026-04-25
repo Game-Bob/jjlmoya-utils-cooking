@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Malzeme Ölçekleyici Tarif Ayarlama';
 const description = 'Tarifleri porsiyon sayısına göre otomatik olarak ölçeklendirin. Tarifinizi çarparak veya azaltarak malzeme miktarlarını karmaşa olmadan hesaplayın.';
@@ -96,23 +97,7 @@ export const content: ToolLocaleContent = {
     defaultIngredient3: '2 Yumurta',
   },
   faqTitle: 'Sıkça Sorulan Sorular',
-  faq,
-  bibliographyTitle: 'Kaynakça',
-  bibliography: [
-    {
-      name: 'Harold McGee - On Food and Cooking: The Science and Lore of the Kitchen',
-      url: 'https://en.wikipedia.org/wiki/Harold_McGee',
-    },
-    {
-      name: 'The Flavor Bible by Karen Page and Andrew Dornenburg',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'Modernist Cuisine - Bilimsel ölçeklendirme teknikleri',
-      url: 'https://www.modernistcuisine.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -240,5 +225,6 @@ export const content: ToolLocaleContent = {
       html: 'Aracımız matematiği basitleştirir, böylece enerjinizi asıl önemli olan şeye ayırabilirsiniz: yaratıcılık ve lezzet.',
     },
   ],
+  bibliography,
   schemas: [appSchema, faqSchema, howToSchema],
 };

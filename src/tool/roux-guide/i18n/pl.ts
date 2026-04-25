@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Mistrzowski przewodnik po zasmażce Roux i sosach bazowych";
 const description = "Interaktywny kalkulator zasmażki Roux. Naucz się przygotowywać sos Béchamel, Velouté i Espagnole z dokładnymi proporcjami. Podstawa kuchni francuskiej.";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: 'Często zadawane pytania',
-  faq,
-  bibliographyTitle: 'Bibliografia',
-  bibliography: [
-    {
-      name: 'Larousse Gastronomique',
-      url: 'https://www.laroussecocina.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -135,5 +128,6 @@ export const content: ToolLocaleContent = {
     timeBlond: "5-8 min",
     timeBrown: "15-20 min",
   },
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

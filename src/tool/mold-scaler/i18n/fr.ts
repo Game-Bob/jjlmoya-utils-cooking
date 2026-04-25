@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Adaptateur de Taille de Moule et Calculateur de Cuisson';
 const description =
@@ -86,10 +87,7 @@ export const content: ToolLocaleContent = {
 	slug: 'adaptateur-taille-moule-patisserie',
 	title,
 	description,
-	faqTitle: 'Questions Fréquentes sur la Conversion',
-	bibliographyTitle: 'Ressources Scientifiques et Références',
-
-	ui: {
+	faqTitle: 'Questions Fréquentes sur la Conversion',	ui: {
 		originalRecipe: 'Recette Originale',
 		yourMold: 'Votre Moule',
 		round: 'Rond',
@@ -118,20 +116,7 @@ export const content: ToolLocaleContent = {
 		increase: 'Augmenter',
 	},
 
-	faq,
-
-	bibliography: [
-		{
-			name: 'Science et Technologie de la Boulangerie - E.J. Pyler',
-			url: 'https://www.bakingbusiness.com/',
-		},
-		{
-			name: 'Le Chef Pâtissier Professionnel - Bo Friberg',
-			url: 'https://www.wiley.com/',
-		},
-	],
-
-	howTo,
+	faq,	howTo,
 
 	seo: [
 		{
@@ -299,6 +284,6 @@ export const content: ToolLocaleContent = {
 			html: "Maîtriser l'adaptation des moules vous donne une liberté créative totale. Utilisez cette calculatrice pour éliminer les approximations et obtenir des résultats professionnels constants.",
 		},
 	],
-
-	schemas: [appSchema, faqSchema, howToSchema],
+  bibliography,
+  schemas: [appSchema, faqSchema, howToSchema],
 };

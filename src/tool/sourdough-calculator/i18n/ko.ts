@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "사워도우 계산기: 발효 비율";
 const description = "사워도우 스타터, 밀가루, 물의 비율을 자동으로 계산하여 배양액을 관리하세요. 사전 설정된 비율 또는 맞춤형 비율을 제공합니다.";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
 	title,
 	description,
 	faqTitle: '자주 묻는 질문',
-	faq,
-	bibliographyTitle: '참고 문헌',
-	bibliography: [
-		{
-			name: 'Tartine Bread - Chad Robertson',
-			url: 'https://www.penguinrandomhouse.com/books/310016/tartine-bread-by-chad-robertson/',
-		},
-	],
-	howTo,
+	faq,  howTo,
 	seo: [
 		{
 			type: 'title',
@@ -112,5 +105,6 @@ export const content: ToolLocaleContent = {
 		totalDough: '총 반죽량',
 		mm: 'MM',
 	},
+  bibliography,
 	schemas: [faqSchema, howToSchema, appSchema],
 };

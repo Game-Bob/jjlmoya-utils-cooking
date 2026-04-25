@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Selettore di Padelle Intelligente: Guida agli Utensili da Cucina";
 const description = "Guida interattiva per scegliere la migliore padella o pentola in base al tuo stile di cucina. Ferro vs Acciaio vs Teflon. Trova il tuo strumento perfetto.";
@@ -76,23 +77,7 @@ export const content: ToolLocaleContent = {
   title: 'Selettore di Padelle Intelligente: Guida agli Utensili da Cucina',
   description: 'Guida interattiva per scegliere la migliore padella o pentola in base al tuo stile di cucina. Ferro vs Acciaio vs Teflon. Trova il tuo strumento perfetto.',
   faqTitle: 'Domande Frequenti',
-  faq,
-  bibliographyTitle: 'Bibliografia',
-  bibliography: [
-    {
-      name: 'The Flavor Bible - Pairing, and Progress in Food',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'On Food and Cooking - Harold McGee',
-      url: 'https://www.foodscience.org/',
-    },
-    {
-      name: 'Salt Fat Acid Heat - Samin Nosrat',
-      url: 'https://www.saltfatacidheat.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -196,5 +181,6 @@ export const content: ToolLocaleContent = {
     enamelCon: 'Molto cara. Smalto fragile agli urti secchi.',
     enamelTip: 'Perfetta per stufati interminabili. Lo smalto permette di cucinare acidi (pomodoro) senza problemi.',
   },
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

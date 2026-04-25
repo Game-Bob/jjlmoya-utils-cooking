@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "ルー（Roux）と基本ソースのマスターガイド";
 const description = "インタラクティブなルー計算機。ベシャメル、ベルーテ、エスパニョールを正確な分量で作る方法を学びましょう。フランス料理の基本です。";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: 'よくある質問',
-  faq,
-  bibliographyTitle: '参考文献',
-  bibliography: [
-    {
-      name: 'Larousse Gastronomique',
-      url: 'https://www.laroussecocina.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -135,5 +128,6 @@ export const content: ToolLocaleContent = {
     timeBlond: "5〜8 分",
     timeBrown: "15〜20 分",
   },
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

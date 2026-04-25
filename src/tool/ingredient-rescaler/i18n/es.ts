@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Escalador de Ingredientes Ajuste de Recetas';
 const description = 'Escala recetas automáticamente según el número de raciones. Calcula las cantidades exactas de ingredientes multiplicando o reduciendo tu receta sin complicaciones.';
@@ -96,23 +97,7 @@ export const content: ToolLocaleContent = {
 		defaultIngredient3: '2 Huevos',
 	},
 	faqTitle: 'Preguntas Frecuentes',
-	faq,
-	bibliographyTitle: 'Bibliografía',
-	bibliography: [
-		{
-			name: 'Harold McGee - On Food and Cooking: The Science and Lore of the Kitchen',
-			url: 'https://en.wikipedia.org/wiki/Harold_McGee',
-		},
-		{
-			name: 'The Flavor Bible by Karen Page and Andrew Dornenburg',
-			url: 'https://www.flavorprints.com/',
-		},
-		{
-			name: 'Modernist Cuisine - Técnicas de escalado científico',
-			url: 'https://www.modernistcuisine.com/',
-		},
-	],
-	howTo,
+	faq,  howTo,
 	seo: [
 		{
 			type: 'title',
@@ -240,6 +225,6 @@ export const content: ToolLocaleContent = {
 			html: 'Nuestra herramienta simplifica la matemática para que puedas dedicar tu energía a lo que realmente importa: la creatividad y el sabor.',
 		},
 	],
-
-	schemas: [appSchema, faqSchema, howToSchema],
+  bibliography,
+  schemas: [appSchema, faqSchema, howToSchema],
 };

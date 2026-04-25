@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Sélecteur d'Ustensiles Connecté Guide de Cuisine";
 const description = "Guide interactif pour choisir la meilleure poêle ou casserole selon votre style de cuisine. Fonte vs Acier Inoxydable vs Téflon. Trouvez votre outil parfait.";
@@ -75,9 +76,7 @@ export const content: ToolLocaleContent = {
   slug: 'selecteur-ustensiles',
   title: 'Sélecteur d\'Ustensiles Connecté Guide de Cuisine',
   description: 'Guide interactif pour choisir la meilleure poêle ou casserole selon votre style de cuisine. Fonte vs Acier Inoxydable vs Téflon. Trouvez votre outil parfait.',
-  faqTitle: 'Questions Fréquemment Posées',
-  bibliographyTitle: 'Sources et Bibliographie',
-  faq: [
+  faqTitle: 'Questions Fréquemment Posées',  faq: [
     {
       question: 'Quelle est la meilleure poêle pour un usage quotidien ?',
       answer: "Pour la plupart des gens, une poêle en acier inoxydable de haute qualité ou eine fonte bien culottée sont les meilleures options. L'inox est polyvalent et éternel, tandis que la fonte offre un anti-adhésif naturel sans produits chimiques.",
@@ -97,20 +96,6 @@ export const content: ToolLocaleContent = {
     {
       question: 'Combien devrais-je dépenser pour une bonne poêle ?',
       answer: 'Un ensemble de 2-3 poêles de qualité moyenne-haute (inox ou fonte) peut durer plus de 20 ans. Il vaut mieux investir dans une bonne poêle que d\'en acheter 5 bon marché qui durent 2 ans. La qualité avant la quantité.',
-    },
-  ],
-  bibliography: [
-    {
-      name: 'The Flavor Bible - Association et Progrès en Cuisine',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'On Food and Cooking - Harold McGee (La Science de la Cuisine)',
-      url: 'https://www.foodscience.org/',
-    },
-    {
-      name: 'Salt Fat Acid Heat - Samin Nosrat',
-      url: 'https://www.saltfatacidheat.com/',
     },
   ],
   howTo: [
@@ -230,5 +215,6 @@ export const content: ToolLocaleContent = {
     enamelCon: 'Très chère. Émail fragile aux chocs violents.',
     enamelTip: 'Parfait pour les braisés sans fin. L\'émail supporte les acides (tomate) sans problème.',
   },
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

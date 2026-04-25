@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Equilibrium Brining and Fermentation Calculator";
 const description = "Master the science of equilibrium brining for juicy meats and perfect fermentations. Calculate exact salinity based on total product and water weight.";
@@ -109,9 +110,7 @@ export const content: ToolLocaleContent = {
     timePreservesLabel: "Time (Preserves)",
     timePreservesDuration: "1+ Months",
   },
-  faqTitle: "Frequently Asked Questions",
-  bibliographyTitle: "Sources and References",
-  faq: [
+  faqTitle: "Frequently Asked Questions",  faq: [
     {
       question: "What is the equilibrium brining method?",
       answer:
@@ -153,20 +152,6 @@ export const content: ToolLocaleContent = {
     {
       name: "Ferment or cure",
       text: "Refrigerate based on type: 4-48 hours for meats, 1-3 weeks for fermenteds. Exact time depends on temperature and personal taste.",
-    },
-  ],
-  bibliography: [
-    {
-      name: "The Noma Guide to Fermentation - René Redzepi & David Zilber",
-      url: "https://www.nomacph.com/",
-    },
-    {
-      name: "Salt, Fat, Acid, Heat - Samin Nosrat",
-      url: "https://www.saltfatacidheat.com/",
-    },
-    {
-      name: "Pollan, Michael - Cooked",
-      url: "https://michaelpollan.com/",
     },
   ],
   seo: [
@@ -296,5 +281,6 @@ export const content: ToolLocaleContent = {
       html: "Our equilibrium calculator eliminates guesswork from your recipes, allowing you to cook with the confidence of a professional.",
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

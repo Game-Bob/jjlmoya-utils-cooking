@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Inteligentny Dobór Patelni: Przewodnik po Naczyniach Kuchennych";
 const description = "Interaktywny przewodnik pomagający wybrać najlepszą patelnię lub garnek zależnie od stylu gotowania. Żeliwo vs Stal vs Teflon. Znajdź swoje idealne narzędzie.";
@@ -76,23 +77,7 @@ export const content: ToolLocaleContent = {
   title: 'Inteligentny Dobór Patelni: Przewodnik po Naczyniach Kuchennych',
   description: 'Interaktywny przewodnik pomagający wybrać najlepszą patelnię lub garnek zależnie od stylu gotowania. Żeliwo vs Stal vs Teflon. Znajdź swoje idealne narzędzie.',
   faqTitle: 'Często Zadawane Pytania',
-  faq,
-  bibliographyTitle: 'Bibliografia',
-  bibliography: [
-    {
-      name: 'The Flavor Bible - Pairing, and Progress in Food',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'On Food and Cooking - Harold McGee',
-      url: 'https://www.foodscience.org/',
-    },
-    {
-      name: 'Salt Fat Acid Heat - Samin Nosrat',
-      url: 'https://www.saltfatacidheat.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -196,5 +181,6 @@ export const content: ToolLocaleContent = {
     enamelCon: 'Bardzo droga. Emalia wrażliwa na uderzenia punktowe.',
     enamelTip: 'Idealna do długich gulaszy. Emalia pozwala na gotowanie kwasów (pomidorów) bez problemów.',
   },
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

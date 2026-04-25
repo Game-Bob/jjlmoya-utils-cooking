@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Denge Salamura Hesaplayıcı";
 const description = "Sulu etler ve mükemmel fermente ürünler için denge bilimi. Ürün ve suyun toplam ağırlığına göre tam tuzluluk oranını hesaplayın.";
@@ -104,25 +105,8 @@ export const content: ToolLocaleContent = {
     timePreservesLabel: "Süre (Konserveler)",
     timePreservesDuration: "1+ Ay",
   },
-  faqTitle: "Sıkça Sorulan Sorular",
-  bibliographyTitle: "Kaynaklar ve Referanslar",
-  faq,
-  howTo,
-  bibliography: [
-    {
-      name: "The Noma Guide to Fermentation - René Redzepi & David Zilber",
-      url: "https://www.nomacph.com/",
-    },
-    {
-      name: "Salt, Fat, Acid, Heat - Samin Nosrat",
-      url: "https://www.saltfatacidheat.com/",
-    },
-    {
-      name: "Pollan, Michael - Cooked",
-      url: "https://michaelpollan.com/",
-    },
-  ],
-  seo: [
+  faqTitle: "Sıkça Sorulan Sorular",  faq,
+  howTo,  seo: [
     {
       type: 'title',
       text: 'Denge Salamura ve Fermantasyon Uzman Kılavuzu',
@@ -249,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: 'Denge hesaplayıcımız, tariflerinizdeki tahmin yürütme işini ortadan kaldırarak bir sektör profesyoneli güveniyle yemek yapmanızı sağlar.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

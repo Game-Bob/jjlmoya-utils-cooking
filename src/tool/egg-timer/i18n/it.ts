@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Cronometro Scientifico per le Uova";
 const description = "Calcolatrice termodinamica per la cottura perfetta delle uova in base ad altitudine, temperatura e dimensioni.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: "Cronometro Scientifico per le Uova",
   description: "Calcolatrice termodinamica per la cottura perfetta delle uova in base ad altitudine, temperatura e dimensioni.",
   faqTitle: "Domande Frequenti",
-  bibliographyTitle: "Riferimenti Scientifici",
   ui: {
     parameters: "Parametri",
     initial_temperature: "Temperatura Iniziale",
@@ -94,22 +94,7 @@ export const content: ToolLocaleContent = {
     hard_cooked: "Sodo",
     hard_description: "Completamente cotto, tuorlo sodo.",
   },
-  faq,
-  bibliography: [
-    {
-      name: "The Science of Boiling an Egg - Charles D. H. Williams",
-      url: "https://newton.ex.ac.uk/teaching/CDHW/Egg/",
-    },
-    {
-      name: "The Food Lab: The Science of the Best Hard Boiled Eggs - J. Kenji López-Alt",
-      url: "https://www.seriouseats.com/the-food-lab-hard-boiled-eggs-recipe",
-    },
-    {
-      name: "The Food Lab: Perfect Soft Boiled Eggs",
-      url: "https://www.seriouseats.com/soft-boiled-eggs-recipe",
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -248,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: 'Il nostro cronometro utilizza l\'equazione di Charles Williams per regolare ogni secondo in base alla tua posizione esatta.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Kalkulator Skalowania Ingrediencji Dostosowanie Przepisu';
 const description = 'Automatycznie skaluj przepisy według liczby porcji. Oblicz dokładne ilości składników, mnożąc lub zmniejszając swój przepis bez żadnych komplikacji.';
@@ -96,23 +97,7 @@ export const content: ToolLocaleContent = {
     defaultIngredient3: '2 Jajka',
   },
   faqTitle: 'Często Zadawane Pytania',
-  faq,
-  bibliographyTitle: 'Bibliografia',
-  bibliography: [
-    {
-      name: 'Harold McGee - On Food and Cooking: The Science and Lore of the Kitchen',
-      url: 'https://en.wikipedia.org/wiki/Harold_McGee',
-    },
-    {
-      name: 'The Flavor Bible by Karen Page and Andrew Dornenburg',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'Modernist Cuisine - Techniki skalowania naukowego',
-      url: 'https://www.modernistcuisine.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -240,5 +225,6 @@ export const content: ToolLocaleContent = {
       html: 'Nasze narzędzie upraszcza matematykę, abyś mógł poświęcić energię na to, co naprawdę ważne: kreatywność i smak.',
     },
   ],
+  bibliography,
   schemas: [appSchema, faqSchema, howToSchema],
 };

@@ -1,43 +1,44 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Diagnostic et Conservation des Bananes : Guide Scientifique";
 const description = "Analysez le stade de maturité de vos bananes avec une précision scientifique. Apprenez les techniques de conservation, la biochimie de l'éthylène et l'optimisation nutritionnelle.";
 const faq = [
-    {
-      question: 'Pourquoi les bananes deviennent-elles noires au réfrigérateur ?',
-      answer: "Le froid rompt les parois cellulaires de la peau, libérant des enzymes qui oxydent les phénols et créent des polyphénols noirs. Cependant, l'intérieur reste généralement ferme et sucré plus longtemps qu'à l'extérieur.",
-    },
-    {
-      question: 'Comment faire mûrir une banane rapidement ?',
-      answer: 'Placez-les dans un sac en papier fermé avec une pomme ou une tomate. Celles-ci émettent de l\'éthylène, un gaz qui accélère la maturité. Si vous êtes pressé, vous pouvez les mettre quelques minutes au four à basse température.',
-    },
-    {
-      question: 'Est-il prudent de manger des bananes tachetées ?',
-      answer: 'Oui, tout à fait. Les taches indiquent que l\'amidon s\'est transformé en sucre, les rendant plus sucrées et digestes. Ne les jetez que si elles présentent de la moisissure, une mauvaise odeur ou sont excessivement molles.',
-    },
-    {
-      question: 'Qu\'est-ce que l\'éthylène ?',
-      answer: 'C\'est une hormone végétale sous forme de gaz qui régule la croissance et la maturation. La banane est un fruit climatérique, ce qui signifie qu\'elle continue à produire de l\'éthylène et à mûrir après sa récolte.',
-    },
-  ];
+  {
+    question: 'Pourquoi les bananes deviennent-elles noires au réfrigérateur ?',
+    answer: "Le froid rompt les parois cellulaires de la peau, libérant des enzymes qui oxydent les phénols et créent des polyphénols noirs. Cependant, l'intérieur reste généralement ferme et sucré plus longtemps qu'à l'extérieur.",
+  },
+  {
+    question: 'Comment faire mûrir une banane rapidement ?',
+    answer: 'Placez-les dans un sac en papier fermé avec une pomme ou une tomate. Celles-ci émettent de l\'éthylène, un gaz qui accélère la maturité. Si vous êtes pressé, vous pouvez les mettre quelques minutes au four à basse température.',
+  },
+  {
+    question: 'Est-il prudent de manger des bananes tachetées ?',
+    answer: 'Oui, tout à fait. Les taches indiquent que l\'amidon s\'est transformé en sucre, les rendant plus sucrées et digestes. Ne les jetez que si elles présentent de la moisissure, une mauvaise odeur ou sont excessivement molles.',
+  },
+  {
+    question: 'Qu\'est-ce que l\'éthylène ?',
+    answer: 'C\'est une hormone végétale sous forme de gaz qui régule la croissance et la maturation. La banane est un fruit climatérique, ce qui signifie qu\'elle continue à produire de l\'éthylène et à mûrir après sa récolte.',
+  },
+];
 const howTo = [
-    {
-      name: 'Observer la couleur',
-      text: 'Examinez attentivement la couleur de la peau, du vert au brun foncé, pour déterminer le stade actuel de maturité.',
-    },
-    {
-      name: 'Utiliser le simulateur',
-      text: 'Faites glisser l\'indicateur de maturité pour voir des prédictions précises sur le moment où elle atteindra la prochaine étape.',
-    },
-    {
-      name: 'Ajuster les conditions',
-      text: 'Modifiez la température et l\'humidité pour voir comment elles affectent la vitesse de maturation.',
-    },
-    {
-      name: 'Appliquer la conservation',
-      text: 'Suivez les recommandations spécifiques de conservation et d\'accélération selon le stade actuel.',
-    },
-  ];
+  {
+    name: 'Observer la couleur',
+    text: 'Examinez attentivement la couleur de la peau, du vert au brun foncé, pour déterminer le stade actuel de maturité.',
+  },
+  {
+    name: 'Utiliser le simulateur',
+    text: 'Faites glisser l\'indicateur de maturité pour voir des prédictions précises sur le moment où elle atteindra la prochaine étape.',
+  },
+  {
+    name: 'Ajuster les conditions',
+    text: 'Modifiez la température et l\'humidité pour voir comment elles affectent la vitesse de maturation.',
+  },
+  {
+    name: 'Appliquer la conservation',
+    text: 'Suivez les recommandations spécifiques de conservation et d\'accélération selon le stade actuel.',
+  },
+];
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Diagnostic et Conservation des Bananes : Guide Scientifique',
   description: 'Analysez le stade de maturité de vos bananes avec une précision scientifique. Apprenez les techniques de conservation, la biochimie de l\'éthylène et l\'optimisation nutritionnelle.',
   faqTitle: 'Questions Fréquemment Posées',
-  bibliographyTitle: 'Sources et Références',
   ui: {
     ripesnessLabel: 'État de Maturité',
     nextStageLabel: 'Prochaine Étape dans',
@@ -142,20 +142,6 @@ export const content: ToolLocaleContent = {
     {
       name: 'Appliquer la conservation',
       text: 'Suivez les recommandations spécifiques de conservation et d\'accélération selon le stade actuel.',
-    },
-  ],
-  bibliography: [
-    {
-      name: 'Ethylene and Fruit Ripening: A Biological Review (Nature Research)',
-      url: 'https://www.researchgate.net/profile/Jean-Claude-Pech/publication/284632414_Ethylene_and_Fruit_Ripening/links/5aef0bcbaca2727bc006482c/Ethylene-and-Fruit-Ripening.pdf',
-    },
-    {
-      name: 'Biochemical Changes in Musa acuminata during Ripening (Journal of Food Science)',
-      url: 'https://www.foodsciencejournal.com/assets/archives/2017/vol2issue5/2-5-31-566.pdf',
-    },
-    {
-      name: 'The Role of Respiration in Climacteric Fruits (Scientific American)',
-      url: 'https://www.nature.com/articles/226976b0',
     },
   ],
   seo: [
@@ -244,5 +230,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Alerte de Dégradation :</strong> Des facteurs externes comme une humidité relative supérieure à 85 % ou des températures supérieures à 25 °C peuvent accélérer considérablement la dégradation, faisant passer la banane d\'optimale à immangeable en quelques heures. Ce simulateur vous aide à anticiper ces changements et à planifier de manière stratégique.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

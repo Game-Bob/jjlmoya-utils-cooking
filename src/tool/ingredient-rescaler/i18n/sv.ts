@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Ingrediensomvandlare Receptjustering';
 const description = 'Skala recept automatiskt efter antal portioner. Beräkna exakta mängder ingredienser genom att multiplicera eller minska ditt recept utan krångel.';
@@ -96,23 +97,7 @@ export const content: ToolLocaleContent = {
     defaultIngredient3: '2 Ägg',
   },
   faqTitle: 'Vanliga Frågor',
-  faq,
-  bibliographyTitle: 'Bibliografi',
-  bibliography: [
-    {
-      name: 'Harold McGee - On Food and Cooking: The Science and Lore of the Kitchen',
-      url: 'https://en.wikipedia.org/wiki/Harold_McGee',
-    },
-    {
-      name: 'The Flavor Bible by Karen Page and Andrew Dornenburg',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'Modernist Cuisine - Vetenskapliga skalningstekniker',
-      url: 'https://www.modernistcuisine.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -240,5 +225,6 @@ export const content: ToolLocaleContent = {
       html: 'Vårt verktyg förenklar matematiken så att du kan ägna din energi åt det som verkligen betyder något: kreativitet och smak.',
     },
   ],
+  bibliography,
   schemas: [appSchema, faqSchema, howToSchema],
 };

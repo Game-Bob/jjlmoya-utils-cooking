@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Калькулятор масштабирования ингредиентов и рецептов';
 const description = 'Автоматически изменяйте масштаб рецептов в зависимости от количества порций. Рассчитывайте точное количество ингредиентов без лишних сложностей.';
@@ -96,23 +97,7 @@ export const content: ToolLocaleContent = {
     defaultIngredient3: '2 Яйца',
   },
   faqTitle: 'Часто задаваемые вопросы',
-  faq,
-  bibliographyTitle: 'Библиография',
-  bibliography: [
-    {
-      name: 'Harold McGee - On Food and Cooking: The Science and Lore of the Kitchen',
-      url: 'https://en.wikipedia.org/wiki/Harold_McGee',
-    },
-    {
-      name: 'The Flavor Bible by Karen Page and Andrew Dornenburg',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'Modernist Cuisine - Техники научного масштабирования',
-      url: 'https://www.modernistcuisine.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -240,5 +225,6 @@ export const content: ToolLocaleContent = {
       html: 'Наш инструмент упрощает математику, чтобы вы могли направить энергию на то, что действительно важно: творчество и вкус.',
     },
   ],
+  bibliography,
   schemas: [appSchema, faqSchema, howToSchema],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Backform Umrechner Skalierung für Konditorei';
 const description =
@@ -81,10 +82,7 @@ export const content: ToolLocaleContent = {
 	slug: 'backform-rechner',
 	title,
 	description,
-	faqTitle: 'Häufig gestellte Fragen zur Skalierung',
-	bibliographyTitle: 'Quellen und Referenzen',
-
-	ui: {
+	faqTitle: 'Häufig gestellte Fragen zur Skalierung',	ui: {
 		originalRecipe: 'Originalrezept',
 		yourMold: 'Ihre Form',
 		round: 'Rund',
@@ -113,18 +111,7 @@ export const content: ToolLocaleContent = {
 		increase: 'Erhöhen',
 	},
 
-	faq,
-	bibliography: [
-		{
-			name: 'Baking Science and Technology - E.J. Pyler',
-			url: 'https://www.bakingbusiness.com/',
-		},
-		{
-			name: 'The Professional Pastry Chef - Bo Friberg',
-			url: 'https://www.wiley.com/',
-		},
-	],
-	howTo,
+	faq,	howTo,
 	seo: [
 		{
 			type: 'title',
@@ -179,5 +166,6 @@ export const content: ToolLocaleContent = {
 			html: 'Füllen Sie eine Backform nie mehr als zu 2/3, um ein Überlaufen beim Backen zu verhindern.',
 		},
 	],
-	schemas: [appSchema, faqSchema, howToSchema],
+  bibliography,
+  schemas: [appSchema, faqSchema, howToSchema],
 };

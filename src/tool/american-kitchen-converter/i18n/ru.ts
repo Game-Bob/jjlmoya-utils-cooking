@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Американский кухонный конвертер: из чашек в граммы и температуры";
 const description = "Конвертируйте чашки (cups), столовые ложки и градусы Фаренгейта в метрическую систему. Ваш компас для расшифровки американских рецептов с профессиональной точностью.";
@@ -80,7 +81,6 @@ export const content: ToolLocaleContent = {
   title: 'Американский кухонный конвертер: из чашек в граммы и температуры',
   description: 'Конвертируйте чашки (cups), столовые ложки и градусы Фаренгейта в метрическую систему. Ваш компас для расшифровки американских рецептов с профессиональной точностью.',
   faqTitle: 'Часто задаваемые вопросы',
-  bibliographyTitle: 'Библиография',
   ui: {
     copied: 'Скопировано',
     noHistory: 'История пуста',
@@ -324,16 +324,6 @@ export const content: ToolLocaleContent = {
       answer: 'Газ 4 = 180°C = 350°F. Это британская шкала. В рецептах мы ищем эквивалентное значение для вашей духовки: некоторые используют газовые деления, другие — электронную установку градусов.',
     },
   ],
-  bibliography: [
-    {
-      name: 'King Arthur Baking: Ingredient Weight Chart',
-      url: 'https://www.kingarthurbaking.com/learn/ingredient-weight-chart',
-    },
-    {
-      name: 'Culinary Institute of America: Conversions and Equivalents',
-      url: 'https://www.ciachef.edu/',
-    },
-  ],
   howTo: [
     {
       name: 'Выберите тип конвертации',
@@ -352,5 +342,6 @@ export const content: ToolLocaleContent = {
       text: 'Благодаря точной конвертации, теперь вы можете следовать американскому рецепту с профессиональной точностью.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

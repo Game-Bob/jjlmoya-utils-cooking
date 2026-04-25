@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Calculateur de Roux Professionnel et Sauces Mères";
 const description = "Maîtrisez la base des sauces mères françaises. Calculez les proportions exactes de roux pour la Béchamel, le Velouté et la Sauce Espagnole.";
@@ -156,21 +157,6 @@ export const content: ToolLocaleContent = {
       text: "Cuisez votre mélange beurre-farine jusqu'au stade souhaité (Blanc, Blond ou Brun) pour correspondre à votre recette.",
     },
   ],
-  bibliographyTitle: "Références Techniques et Bibliographie",
-  bibliography: [
-    {
-      name: "Larousse Gastronomique - La Bible de la Cuisine",
-      url: "https://www.laroussecocina.com/",
-    },
-    {
-      name: "L'Art de la Cuisine Française - Marie-Antoine Carême",
-      url: "https://www.bnf.fr/",
-    },
-    {
-      name: "Le Guide Culinaire - Auguste Escoffier",
-      url: "https://www.fondation-escoffier.org/",
-    },
-  ],
   seo: [
     {
       type: "title",
@@ -309,5 +295,6 @@ export const content: ToolLocaleContent = {
       html: "Notre calculateur de roux garantit une consistance technique parfaite pour toutes vos créations culinaires.",
     },
   ],
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

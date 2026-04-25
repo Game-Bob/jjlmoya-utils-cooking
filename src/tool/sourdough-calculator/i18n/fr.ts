@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Calculateur de Rafraîchissement du Levain";
 const description = "Le choix le plus courant en boulangerie artisanale moderne. Très facile à mélanger et à incorporer.";
@@ -107,21 +108,6 @@ export const content: ToolLocaleContent = {
       question: "Le calculateur arrondit-il les grammes ?",
       answer:
         "Oui. Il arrondit à l'entier le plus proche par praticité. Pour une précision maximale, utilisez une balance digitale ; toutefois, de petits écarts d'arrondi n'impactent pas significativement la fermentation.",
-    },
-  ],
-  bibliographyTitle: "Bibliographie et Ressources",
-  bibliography: [
-    {
-      name: "Tartine Bread - Chad Robertson",
-      url: "https://www.penguinrandomhouse.com/books/310016/tartine-bread-by-chad-robertson/",
-    },
-    {
-      name: "The Flavor Bible - Scaling and Ratios",
-      url: "https://www.flavorprints.com/",
-    },
-    {
-      name: "Full Proof Baking - Guides on Sourdough",
-      url: "https://www.fullproofbaking.com/",
     },
   ],
   howTo: [
@@ -320,5 +306,6 @@ export const content: ToolLocaleContent = {
     totalDough: "Total Levain",
     mm: "Levain",
   },
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

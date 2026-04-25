@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Умный выбор сковород: Гид по кухонной утвари";
 const description = "Интерактивное руководство по выбору лучшей сковороды или кастрюли в зависимости от вашего стиля кулинарии. Чугун против Стали против Тефлона. Найдите свой идеальный инструмент.";
@@ -76,23 +77,7 @@ export const content: ToolLocaleContent = {
   title: 'Умный выбор сковород: Гид по кухонной утвари',
   description: 'Интерактивное руководство по выбору лучшей сковороды или кастрюли в зависимости от вашего стиля кулинарии. Чугун против Стали против Тефлона. Найдите свой идеальный инструмент.',
   faqTitle: 'Часто задаваемые вопросы',
-  faq,
-  bibliographyTitle: 'Библиография',
-  bibliography: [
-    {
-      name: 'The Flavor Bible - Pairing, and Progress in Food',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'On Food and Cooking - Harold McGee',
-      url: 'https://www.foodscience.org/',
-    },
-    {
-      name: 'Salt Fat Acid Heat - Samin Nosrat',
-      url: 'https://www.saltfatacidheat.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -196,5 +181,6 @@ export const content: ToolLocaleContent = {
     enamelCon: 'Очень дорогая. Эмаль боится сильных ударов.',
     enamelTip: 'Идеальна для долгих рагу. Эмаль позволяет готовить кислые блюда (томаты) без проблем.',
   },
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Meringue & Eiwit stijfheid Calculator";
 const description = "Bereken de exacte hoeveelheid suiker voor Franse, Italiaanse of Zwitserse meringue op basis van het gewicht van je eiwitten. Kloptijden en baktips.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: 'Veelgestelde Vragen',
-  bibliographyTitle: 'Bronnen en Referenties',
   ui: {
     whitesLabel: 'Gewicht van de Eiwitten',
     whitesPlaceholder: 'Bijv. 120',
@@ -113,18 +113,7 @@ export const content: ToolLocaleContent = {
     invalidWeightError: 'Voer een geldig gewicht in',
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: 'Larousse Gastronomique: Types meringue',
-      url: 'https://laroussecocina.mx/palabra/merengue/',
-    },
-    {
-      name: 'Exploratorium: Egg Science',
-      url: 'https://www.exploratorium.edu/explore/cooking/egg-science',
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: 'Meestergids voor Meringue en Eiwit',
@@ -206,5 +195,6 @@ export const content: ToolLocaleContent = {
       html: 'Maak de kom schoon met azijn of citroen. Elk spoortje vet voorkomt dat de eiwitten stijf worden.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

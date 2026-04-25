@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Диагностика и хранение бананов: научное руководство";
 const description = "Анализируйте состояние зрелости ваших бананов с научной точностью. Изучите методы хранения, биохимию этилена и оптимизацию питательных веществ.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Диагностика и хранение бананов: научное руководство',
   description: 'Анализируйте состояние зрелости ваших бананов с научной точностью. Изучите методы хранения, биохимию этилена и оптимизацию питательных веществ.',
   faqTitle: 'Часто задаваемые вопросы',
-  bibliographyTitle: 'Источники и ссылки',
   ui: {
     ripesnessLabel: 'Стадия зрелости',
     nextStageLabel: 'Следующая стадия через',
@@ -142,20 +142,6 @@ export const content: ToolLocaleContent = {
     {
       name: 'Примените способ хранения',
       text: 'Следуйте конкретным рекомендациям по хранению и ускорению созревания в зависимости от текущего состояния.',
-    },
-  ],
-  bibliography: [
-    {
-      name: 'Ethylene and Fruit Ripening: A Biological Review',
-      url: '',
-    },
-    {
-      name: 'Biochemical Changes in Musa acuminata during Ripening (Journal of Food Science)',
-      url: 'https://www.foodsciencejournal.com/assets/archives/2017/vol2issue5/2-5-31-566.pdf',
-    },
-    {
-      name: 'The Role of Respiration in Climacteric Fruits (Scientific American)',
-      url: 'https://www.nature.com/articles/226976b0',
     },
   ],
   seo: [
@@ -244,5 +230,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Предупреждение о порче:</strong> Внешние факторы, такие как относительная влажность выше 85% или температура выше 25°C, могут резко ускорить деградацию, превратив банан из идеального в несъедобный за считанные часы. Этот симулятор поможет вам предвидеть эти изменения и планировать стратегически.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

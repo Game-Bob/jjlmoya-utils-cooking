@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Surdegskalkylator: Fermenteringsförhållanden";
 const description = "Beräkna automatiskt proportionerna av surdeg, mjöl och vatten för att underhålla din surdegsgrund. Förinställda eller anpassade förhållanden.";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
 	title,
 	description,
 	faqTitle: 'Vanliga Frågor',
-	faq,
-	bibliographyTitle: 'Bibliografi',
-	bibliography: [
-		{
-			name: 'Tartine Bread - Chad Robertson',
-			url: 'https://www.penguinrandomhouse.com/books/310016/tartine-bread-by-chad-robertson/',
-		},
-	],
-	howTo,
+	faq,  howTo,
 	seo: [
 		{
 			type: 'title',
@@ -112,5 +105,6 @@ export const content: ToolLocaleContent = {
 		totalDough: 'Total Deg',
 		mm: 'SG',
 	},
+  bibliography,
 	schemas: [faqSchema, howToSchema, appSchema],
 };

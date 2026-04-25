@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Vetenskapligt Äggur";
 const description = "Termodynamisk kalkylator för perfekt kokta ägg baserat på höjd, temperatur och storlek.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: "Vetenskapligt Äggur",
   description: "Termodynamisk kalkylator för perfekt kokta ägg baserat på höjd, temperatur och storlek.",
   faqTitle: "Vanliga Frågor",
-  bibliographyTitle: "Vetenskapliga Referenser",
   ui: {
     parameters: "Parametrar",
     initial_temperature: "Starttemperatur",
@@ -94,22 +94,7 @@ export const content: ToolLocaleContent = {
     hard_cooked: "Hårdkokt",
     hard_description: "Helt tillagat, fast gula.",
   },
-  faq,
-  bibliography: [
-    {
-      name: "The Science of Boiling an Egg - Charles D. H. Williams",
-      url: "https://newton.ex.ac.uk/teaching/CDHW/Egg/",
-    },
-    {
-      name: "The Food Lab: The Science of the Best Hard Boiled Eggs - J. Kenji López-Alt",
-      url: "https://www.seriouseats.com/the-food-lab-hard-boiled-eggs-recipe",
-    },
-    {
-      name: "The Food Lab: Perfect Soft Boiled Eggs",
-      url: "https://www.seriouseats.com/soft-boiled-eggs-recipe",
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -248,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: 'Vårt äggur använder Charles Williams ekvation för att justera varje sekund baserat på din exakta plats och kylskåpstemperatur.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

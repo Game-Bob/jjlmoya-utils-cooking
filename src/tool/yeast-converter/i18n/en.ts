@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Yeast Converter: Fresh, Dry & Sourdough Starter';
 const description =
@@ -98,25 +99,6 @@ export const content: ToolLocaleContent = {
 	},
 	faqTitle: 'Frequently Asked Questions',
 	faq,
-	bibliographyTitle: 'Bibliography & Resources',
-	bibliography: [
-		{
-			name: 'Harold McGee - On Food and Cooking: The Science and Lore of the Kitchen',
-			url: 'https://en.wikipedia.org/wiki/Harold_McGee',
-		},
-		{
-			name: 'Peter Reinhart - The Bread Baker\'s Apprentice',
-			url: 'https://www.thebreadbakersblog.com/',
-		},
-		{
-			name: 'The Perfect Loaf - Sourdough Science & Conversion',
-			url: 'https://www.theperfectloaf.com/',
-		},
-		{
-			name: 'IACP - Professional Chef & Baking Conversions',
-			url: 'https://www.iacp.com/',
-		},
-	],
 	howTo,
 	seo: [
 		{
@@ -247,5 +229,6 @@ export const content: ToolLocaleContent = {
 		},
 	],
 
+  bibliography,
 	schemas: [appSchema, faqSchema, howToSchema],
 };

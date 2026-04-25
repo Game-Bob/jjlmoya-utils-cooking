@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = '材料スケーラー レシピ分量調整';
 const description = '人数（人前）に合わせてレシピの分量を自動的にスケール調整します。レシピを倍増または縮小する際の正確な材料の分量を簡単に計算できます。';
@@ -96,23 +97,7 @@ export const content: ToolLocaleContent = {
     defaultIngredient3: '2個 卵',
   },
   faqTitle: 'よくある質問',
-  faq,
-  bibliographyTitle: '参考文献',
-  bibliography: [
-    {
-      name: 'Harold McGee - On Food and Cooking (料理の科学)',
-      url: 'https://en.wikipedia.org/wiki/Harold_McGee',
-    },
-    {
-      name: 'The Flavor Bible by Karen Page and Andrew Dornenburg',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'Modernist Cuisine - 科学的スケーリング技術',
-      url: 'https://www.modernistcuisine.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -240,5 +225,6 @@ export const content: ToolLocaleContent = {
       html: '当ツールは数学的な計算を簡素化し、あなたが最も重要な「創造性と味」にエネルギーを注げるようサポートします。',
     },
   ],
+  bibliography,
   schemas: [appSchema, faqSchema, howToSchema],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "나폴리 피자 도우 계산기";
 const description = "집에서 정통 나폴리 피자를 만들기 위해 밀가루, 물, 소금, 이스트의 정확한 비율을 계산합니다.";
@@ -72,7 +73,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: "자주 묻는 질문",
-  bibliographyTitle: "참고 문헌",
   ui: {
     parameters: "매개변수",
     quantity: "수량",
@@ -103,14 +103,7 @@ export const content: ToolLocaleContent = {
       "시각적 크기는 도우 공 무게에 따라 늘어난 피자의 대략적인 지름을 나타냅니다.",
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: "Associazione Verace Pizza Napoletana",
-      url: "https://www.pizzanapoletana.org/",
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: '정통 나폴리 피자 도우 마스터 가이드',
@@ -121,5 +114,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>나폴리 피자</strong>는 문화유산입니다. 성공은 시간, 온도, 그리고 가수율 사이의 정밀함에 달려 있습니다.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

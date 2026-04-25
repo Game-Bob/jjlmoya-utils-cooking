@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = '烘焙模具换算计算器';
 const description =
@@ -81,10 +82,7 @@ export const content: ToolLocaleContent = {
 	slug: 'cake-pan-size-converter-calculator',
 	title,
 	description,
-	faqTitle: '关于换算的常见问题',
-	bibliographyTitle: '参考资料',
-
-	ui: {
+	faqTitle: '关于换算的常见问题',	ui: {
 		originalRecipe: '原食谱',
 		yourMold: '你的模具',
 		round: '圆形',
@@ -113,18 +111,7 @@ export const content: ToolLocaleContent = {
 		increase: '增加',
 	},
 
-	faq,
-	bibliography: [
-		{
-			name: 'Baking Science and Technology - E.J. Pyler',
-			url: 'https://www.bakingbusiness.com/',
-		},
-		{
-			name: 'The Professional Pastry Chef - Bo Friberg',
-			url: 'https://www.wiley.com/',
-		},
-	],
-	howTo,
+	faq,	howTo,
 	seo: [
 		{
 			type: 'title',
@@ -166,5 +153,6 @@ export const content: ToolLocaleContent = {
 			html: '无论计算出的系数如何，请务必确保面糊注入量不超过模具容量的 2/3。',
 		},
 	],
-	schemas: [appSchema, faqSchema, howToSchema],
+  bibliography,
+  schemas: [appSchema, faqSchema, howToSchema],
 };

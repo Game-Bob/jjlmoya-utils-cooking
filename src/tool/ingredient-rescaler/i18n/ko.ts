@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = '식재료 계량 계산기 레시피 분량 조절';
 const description = '인분 수에 따라 레시피 분량을 자동으로 조절합니다. 복잡한 계산 없이 레시피를 곱하거나 나누어 정확한 재료 양을 확인하세요.';
@@ -96,23 +97,7 @@ export const content: ToolLocaleContent = {
     defaultIngredient3: '계란 2개',
   },
   faqTitle: '자주 묻는 질문',
-  faq,
-  bibliographyTitle: '참고 문헌',
-  bibliography: [
-    {
-      name: 'Harold McGee - On Food and Cooking (음식과 요리)',
-      url: 'https://en.wikipedia.org/wiki/Harold_McGee',
-    },
-    {
-      name: 'The Flavor Bible by Karen Page and Andrew Dornenburg',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'Modernist Cuisine - 과학적 계량 기술',
-      url: 'https://www.modernistcuisine.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -240,5 +225,6 @@ export const content: ToolLocaleContent = {
       html: '이 도구는 수학적 계산을 단순화하여 당신이 가장 중요한 "창의성과 맛"에 에너지를 집중할 수 있도록 돕습니다.',
     },
   ],
+  bibliography,
   schemas: [appSchema, faqSchema, howToSchema],
 };

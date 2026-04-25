@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Evenwichtspekel Calculator";
 const description = "De wetenschap van balans voor sappig vlees en perfecte fermenten. Bereken het exacte zoutgehalte op basis van het totaalgewicht van ingrediënt en water.";
@@ -104,25 +105,8 @@ export const content: ToolLocaleContent = {
     timePreservesLabel: "Tijd (Conserven)",
     timePreservesDuration: "1+ Maanden",
   },
-  faqTitle: "Veelgestelde Vragen",
-  bibliographyTitle: "Bronnen en Referenties",
-  faq,
-  howTo,
-  bibliography: [
-    {
-      name: "The Noma Guide to Fermentation - René Redzepi & David Zilber",
-      url: "https://www.nomacph.com/",
-    },
-    {
-      name: "Salt, Fat, Acid, Heat - Samin Nosrat",
-      url: "https://www.saltfatacidheat.com/",
-    },
-    {
-      name: "Pollan, Michael - Cooked",
-      url: "https://michaelpollan.com/",
-    },
-  ],
-  seo: [
+  faqTitle: "Veelgestelde Vragen",  faq,
+  howTo,  seo: [
     {
       type: 'title',
       text: 'Meestergids voor Evenwichtspekel en Fermentatie',
@@ -249,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: 'Onze evenwichtscalculator haalt het giswerk uit uw recepten, zodat u kunt koken met het vertrouwen van een sectorprofessional.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

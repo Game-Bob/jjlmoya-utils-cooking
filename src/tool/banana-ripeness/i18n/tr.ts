@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Muz Olgunluk Teşhisi ve Saklama: Bilimsel Kılavuz";
 const description = "Muzlarınızın olgunluk durumunu bilimsel hassasiyetle analiz edin. Saklama tekniklerini, etilen biyokimyasını ve besin optimizasyonunu öğrenin.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: "Muz Olgunluk Teşhisi ve Saklama: Bilimsel Kılavuz",
   description: "Muzlarınızın olgunluk durumunu bilimsel hassasiyetle analiz edin. Saklama tekniklerini, etilen biyokimyasını ve besin optimizasyonunu öğrenin.",
   faqTitle: "Sıkça Sorulan Sorular",
-  bibliographyTitle: "Kaynaklar ve Referanslar",
   ui: {
     ripesnessLabel: "Olgunluk Durumu",
     nextStageLabel: "Sonraki Aşama",
@@ -142,20 +142,6 @@ export const content: ToolLocaleContent = {
     {
       name: "Saklama yöntemlerini uygulayın",
       text: "Mevcut duruma göre özel saklama ve hızlandırma önerilerini takip edin.",
-    },
-  ],
-  bibliography: [
-    {
-      name: 'Ethylene and Fruit Ripening: A Biological Review',
-      url: '',
-    },
-    {
-      name: 'Biochemical Changes in Musa acuminata during Ripening (Journal of Food Science)',
-      url: 'https://www.foodsciencejournal.com/assets/archives/2017/vol2issue5/2-5-31-566.pdf',
-    },
-    {
-      name: 'The Role of Respiration in Climacteric Fruits (Scientific American)',
-      url: 'https://www.nature.com/articles/226976b0',
     },
   ],
   seo: [
@@ -244,5 +230,6 @@ export const content: ToolLocaleContent = {
       html: "<strong>Bozulma Uyarısı:</strong> %85'in üzerindeki bağıl nem veya 25°C'nin üzerindeki sıcaklıklar gibi dış faktörler bozulmayı dramatik bir şekilde hızlandırarak muzun birkaç saat içinde optimum durumdan yenilemez duruma gelmesine neden olabilir. Bu simülatör, bu değişiklikleri öngörmenize ve stratejik planlama yapmanıza yardımcı olur.",
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

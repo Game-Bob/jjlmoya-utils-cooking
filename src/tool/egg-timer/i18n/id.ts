@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Timer Telur Ilmiah";
 const description = "Kalkulator termodinamika untuk memasak telur yang sempurna berdasarkan ketinggian, suhu, dan ukuran.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: "Timer Telur Ilmiah",
   description: "Kalkulator termodinamika untuk memasak telur yang sempurna berdasarkan ketinggian, suhu, dan ukuran.",
   faqTitle: "Pertanyaan yang Sering Diajukan",
-  bibliographyTitle: "Referensi Ilmiah",
   ui: {
     parameters: "Parameter",
     initial_temperature: "Suhu Awal",
@@ -94,22 +94,7 @@ export const content: ToolLocaleContent = {
     hard_cooked: "Matang/Hard",
     hard_description: "Matang sepenuhnya, kuning padat.",
   },
-  faq,
-  bibliography: [
-    {
-      name: "The Science of Boiling an Egg - Charles D. H. Williams",
-      url: "https://newton.ex.ac.uk/teaching/CDHW/Egg/",
-    },
-    {
-      name: "The Food Lab: The Science of the Best Hard Boiled Eggs - J. Kenji López-Alt",
-      url: "https://www.seriouseats.com/the-food-lab-hard-boiled-eggs-recipe",
-    },
-    {
-      name: "The Food Lab: Perfect Soft Boiled Eggs",
-      url: "https://www.seriouseats.com/soft-boiled-eggs-recipe",
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -133,7 +118,7 @@ export const content: ToolLocaleContent = {
           value: '68°C',
           label: 'Koagulasi Kuning',
           icon: 'mdi:egg-fried',
-                },
+        },
         {
           value: '-1°C',
           label: 'Didih / 300m',
@@ -248,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: 'Timer kami menggunakan persamaan Charles Williams untuk menyesuaikan setiap detik berdasarkan lokasi tepat Anda dan kondisi suhu telur.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

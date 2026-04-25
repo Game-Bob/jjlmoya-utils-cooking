@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "平衡塩水計算機";
 const description = "ジューシーな肉と完璧な発酵食品のための、バランスの科学。食材と水の総重量に基づいた正確な塩分濃度を計算します。";
@@ -104,25 +105,8 @@ export const content: ToolLocaleContent = {
     timePreservesLabel: "期間（保存食）",
     timePreservesDuration: "1ヶ月以上",
   },
-  faqTitle: "よくある質問",
-  bibliographyTitle: "出典と参考文献",
-  faq,
-  howTo,
-  bibliography: [
-    {
-      name: "The Noma Guide to Fermentation - René Redzepi & David Zilber",
-      url: "https://www.nomacph.com/",
-    },
-    {
-      name: "Salt, Fat, Acid, Heat - Samin Nosrat",
-      url: "https://www.saltfatacidheat.com/",
-    },
-    {
-      name: "Pollan, Michael - Cooked",
-      url: "https://michaelpollan.com/",
-    },
-  ],
-  seo: [
+  faqTitle: "よくある質問",  faq,
+  howTo,  seo: [
     {
       type: 'title',
       text: '平衡塩水と発酵のマスターガイド',
@@ -249,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: 'この平衡計算機を使えば、経験に頼ることなく、プロのような確信を持って料理を仕上げることができます。',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

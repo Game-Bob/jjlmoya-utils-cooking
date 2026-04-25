@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Minuteur de Cuisine Multiple";
 const description = "Gérez plusieurs temps de cuisson simultanément. Alarmes indépendantes, idéal pour les chefs et l'organisation de la cuisine (Mise en Place).";
@@ -80,10 +81,7 @@ export const content: ToolLocaleContent = {
 	title: 'Minuteur de Cuisine Multiple',
 	description:
 		'Gérez plusieurs temps de cuisson simultanément. Alarmes indépendantes, idéal pour les chefs et l\'organisation de la cuisine (Mise en Place).',
-	faqTitle: 'Questions Fréquemment Posées',
-	bibliographyTitle: 'Références',
-
-	ui: {
+	faqTitle: 'Questions Fréquemment Posées',	ui: {
 		addTimer: 'Ajouter',
 		stopAll: 'Tout Arrêter',
 		defaultName: 'Minuteur',
@@ -129,20 +127,7 @@ export const content: ToolLocaleContent = {
 			answer:
 				'Entre 5°C et 65°C, les bactéries se multiplient rapidement. Les aliments cuits ne doivent pas rester dans cette plage plus de 2 heures (1 heure si la température dépasse 30°C). Utilisez un minuteur pour surveiller le refroidissement avant de réfrigérer.',
 		},
-	],
-
-	bibliography: [
-		{
-			name: 'Sécurité Alimentaire : Directives de l\'USDA',
-			url: 'https://www.fsis.usda.gov/',
-		},
-		{
-			name: 'Mise en Place - Cuisine Professionnelle (Escoffier)',
-			url: 'https://www.escoffier.edu/',
-		},
-	],
-
-	howTo: [
+	],	howTo: [
 		{
 			name: 'Créer plusieurs minuteurs',
 			text: 'Utilisez le bouton "+" pour ajouter autant de minuteurs que nécessaire. Parfait pour orchestrer plusieurs plats simultanément.',
@@ -160,8 +145,7 @@ export const content: ToolLocaleContent = {
 			text: 'Autorisez les notifications pour que le navigateur vous alerte quand le temps est écoulé, même si vous changez d\'onglet.',
 		},
 	],
-
-	seo: [
+  seo: [
 		{
 			type: 'title',
 			text: 'Maîtrise Temporelle en Cuisine',
@@ -223,6 +207,6 @@ export const content: ToolLocaleContent = {
 			html: '<strong>Conseil de pro :</strong> La précision temporelle est ce qui sépare un chef d\'un cuisinier amateur. Investissez dans un bon minuteur et utilisez-le toujours. L\'expérience vous dit quand quelque chose "semble prêt", mais le temps garantit la régularité.',
 		},
 	],
-
-	schemas: [faqSchema as any, howToSchema as any, appSchema as any],
+  bibliography,
+  schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

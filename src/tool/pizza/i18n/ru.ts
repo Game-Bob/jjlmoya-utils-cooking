@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Калькулятор теста для неаполитанской пиццы";
 const description = "Рассчитайте точные пропорции муки, воды, соли и дрожжей для приготовления настоящей неаполитанской пиццы дома.";
@@ -72,7 +73,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: "Часто задаваемые вопросы",
-  bibliographyTitle: "Ссылки",
   ui: {
     parameters: "Параметры",
     quantity: "Количество",
@@ -103,14 +103,7 @@ export const content: ToolLocaleContent = {
       "Визуальный размер представляет примерный диаметр пиццы в зависимости от веса шарика теста.",
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: "Associazione Verace Pizza Napoletana",
-      url: "https://www.pizzanapoletana.org/",
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: 'Руководство мастера: Настоящее неаполитанское тесто',
@@ -121,31 +114,32 @@ export const content: ToolLocaleContent = {
       html: '<strong>Неаполитанская пицца</strong> — это культурное наследие. Успех зависит от точности времени, температуры и гидратации.',
     },
     {
-       type: 'stats',
-       columns: 4,
-       items: [
-         {
-           value: '480°C',
-           label: 'Темп. выпечки',
-           icon: 'mdi:fire',
-         },
-         {
-           value: '60-90с',
-           label: 'Время в печи',
-           icon: 'mdi:clock-fast',
-         },
-         {
-           value: '65%',
-           label: 'Станд. гидратация',
-           icon: 'mdi:water-percent',
-         },
-         {
-           value: 'W280',
-           label: 'Сила муки',
-           icon: 'mdi:grain',
-         },
-       ],
-     },
+      type: 'stats',
+      columns: 4,
+      items: [
+        {
+          value: '480°C',
+          label: 'Темп. выпечки',
+          icon: 'mdi:fire',
+        },
+        {
+          value: '60-90с',
+          label: 'Время в печи',
+          icon: 'mdi:clock-fast',
+        },
+        {
+          value: '65%',
+          label: 'Станд. гидратация',
+          icon: 'mdi:water-percent',
+        },
+        {
+          value: 'W280',
+          label: 'Сила муки',
+          icon: 'mdi:grain',
+        },
+      ],
+    },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

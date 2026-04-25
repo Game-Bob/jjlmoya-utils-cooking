@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Calcolatore Meringa e Punti di Neve";
 const description = "Calcola la quantità esatta di zucchero per meringa francese, italiana o svizzera in base al peso degli albumi. Tempi di montatura e trucchi di pasticceria.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: 'Domande Frequenti',
-  bibliographyTitle: 'Fonti e Riferimenti',
   ui: {
     whitesLabel: 'Peso degli Albumi',
     whitesPlaceholder: 'Es. 120',
@@ -113,18 +113,7 @@ export const content: ToolLocaleContent = {
     invalidWeightError: 'Inserire un peso valido',
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: 'Larousse Cucina: Tipi di Meringa',
-      url: 'https://laroussecocina.mx/palabra/merengue/',
-    },
-    {
-      name: 'Exploratorium: Science of Eggs',
-      url: 'https://www.exploratorium.edu/explore/cooking/egg-science',
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: 'Guida per il Calcolo della Meringa',
@@ -206,5 +195,6 @@ export const content: ToolLocaleContent = {
       html: 'Pulisci la ciotola con aceto o limone. Ogni traccia di grasso impedirà agli albumi di montare.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

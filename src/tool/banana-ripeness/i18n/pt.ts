@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Diagnóstico e Conservação de Bananas: Guia Científico";
 const description = "Analise o estado de maturação das suas bananas com precisão científica. Aprenda técnicas de conservação, bioquímica do etileno e otimização nutricional.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Diagnóstico e Conservação de Bananas: Guia Científico',
   description: 'Analise o estado de maturação das suas bananas com precisão científica. Aprenda técnicas de conservação, bioquímica do etileno e otimização nutricional.',
   faqTitle: 'Perguntas Frequentes',
-  bibliographyTitle: 'Fontes e Referências',
   ui: {
     ripesnessLabel: 'Estado de Maturação',
     nextStageLabel: 'Próxima Etapa em',
@@ -142,20 +142,6 @@ export const content: ToolLocaleContent = {
     {
       name: 'Aplicar conservação',
       text: 'Siga as recomendações específicas de conservação e aceleração segundo o estado atual.',
-    },
-  ],
-  bibliography: [
-    {
-      name: 'Ethylene and Fruit Ripening: A Biological Review',
-      url: '',
-    },
-    {
-      name: 'Biochemical Changes in Musa acuminata during Ripening (Journal of Food Science)',
-      url: 'https://www.foodsciencejournal.com/assets/archives/2017/vol2issue5/2-5-31-566.pdf',
-    },
-    {
-      name: 'The Role of Respiration in Climacteric Fruits (Scientific American)',
-      url: 'https://www.nature.com/articles/226976b0',
     },
   ],
   seo: [
@@ -244,5 +230,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Alerta de degradação:</strong> Fatores externos como humidade relativa superior a 85% ou temperaturas acima dos 25°C podem acelerar drasticamente a degradação, levando a banana de ótima a comestível em questão de horas. Este simulador ajuda-o a antecipar estas alterações e a planear estrategicamente.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

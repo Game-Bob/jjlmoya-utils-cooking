@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "美式厨房单位转换器：杯转克与温度换算";
 const description = "将美式量杯（cups）、大勺（tablespoons）及华氏度（Fahrenheit）转换为公制单位。为您精准解读美式食谱的专业指南。";
@@ -80,7 +81,6 @@ export const content: ToolLocaleContent = {
   title: "美式厨房单位转换器：杯转克与温度换算",
   description: "将美式量杯（cups）、大勺（tablespoons）及华氏度（Fahrenheit）转换为公制单位。为您精准解读美式食谱的专业指南。",
   faqTitle: "常问问题",
-  bibliographyTitle: "参考资料",
   ui: {
     copied: "已复制",
     noHistory: "暂无记录",
@@ -324,16 +324,6 @@ export const content: ToolLocaleContent = {
       answer: "Gas 4 = 180°C = 350°F。这是英国常用的燃气刻度。在厨房中，请对应您烤箱的具体刻度或电子显示进行调整。",
     },
   ],
-  bibliography: [
-    {
-      name: 'King Arthur Baking: Ingredient Weight Chart',
-      url: 'https://www.kingarthurbaking.com/learn/ingredient-weight-chart',
-    },
-    {
-      name: 'Culinary Institute of America: Conversions and Equivalents',
-      url: 'https://www.ciachef.edu/',
-    },
-  ],
   howTo: [
     {
       name: "选择转换类型",
@@ -352,5 +342,6 @@ export const content: ToolLocaleContent = {
       text: "有了精准的转换数值，您现在可以以专业水准制作美式食谱了。",
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

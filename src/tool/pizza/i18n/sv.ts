@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Kalkylator för Neapolitansk Pizzadeg";
 const description = "Beräkna de exakta proportionerna av mjöl, vatten, salt och jäst för att göra äkta neapolitansk pizza hemma.";
@@ -80,7 +81,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: "Vanliga Frågor",
-  bibliographyTitle: "Referenser",
   ui: {
     parameters: "Parametrar",
     quantity: "Antal",
@@ -111,14 +111,7 @@ export const content: ToolLocaleContent = {
       "Den visuella storleken representerar pizzans ungefärliga diameter baserat på degbollens vikt.",
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: "Associazione Verace Pizza Napoletana",
-      url: "https://www.pizzanapoletana.org/",
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: 'Mästarguide till Äkta Neapolitansk Pizzadeg',
@@ -160,5 +153,6 @@ export const content: ToolLocaleContent = {
       html: 'En 24-timmars jäsning vid 4°C skapar komplexa smaker som är omöjliga att uppnå i rumstemperatur.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Konwerter Kuchni Amerykańskiej: Szklanki na Gramy i Temperatury";
 const description = "Konwertuj szklanki (cups), łyżki i stopnie Fahrenheita na system metryczny. Twój kompas do rozszyfrowania amerykańskich przepisów z profesjonalną precyzją.";
@@ -80,7 +81,6 @@ export const content: ToolLocaleContent = {
   title: 'Konwerter Kuchni Amerykańskiej: Szklanki na Gramy i Temperatury',
   description: 'Konwertuj szklanki (cups), łyżki i stopnie Fahrenheita na system metryczny. Twój kompas do rozszyfrowania amerykańskich przepisów z profesjonalną precyzją.',
   faqTitle: 'Często zadawane pytania',
-  bibliographyTitle: 'Bibliografia',
   ui: {
     copied: 'Skopiowano',
     noHistory: 'Brak historii',
@@ -324,16 +324,6 @@ export const content: ToolLocaleContent = {
       answer: 'Gas 4 = 180°C = 350°F. Jest to brytyjska skala gazowa. W kuchni szukamy odpowiednika dla Twojego piekarnika: niektóre mają pokrętła z numerami, inne elektroniczne sterowanie stopniami.',
     },
   ],
-  bibliography: [
-    {
-      name: 'King Arthur Baking: Ingredient Weight Chart',
-      url: 'https://www.kingarthurbaking.com/learn/ingredient-weight-chart',
-    },
-    {
-      name: 'Culinary Institute of America: Conversions and Equivalents',
-      url: 'https://www.ciachef.edu/',
-    },
-  ],
   howTo: [
     {
       name: 'Wybierz rodzaj konwersji',
@@ -352,5 +342,6 @@ export const content: ToolLocaleContent = {
       text: 'Dzięki dokładnemu przeliczeniu możesz teraz wykonać amerykański przepis z profesjonalną precyzją.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

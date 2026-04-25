@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = '食材缩放器 食谱份量调整';
 const description = '根据份量自动缩放食谱。通过乘算或减算快速计算精确的食材用量，无需复杂换算。';
@@ -96,23 +97,7 @@ export const content: ToolLocaleContent = {
     defaultIngredient3: '2 个鸡蛋',
   },
   faqTitle: '常见问题',
-  faq,
-  bibliographyTitle: '参考资料',
-  bibliography: [
-    {
-      name: 'Harold McGee - On Food and Cooking (食物与烹饪科学)',
-      url: 'https://en.wikipedia.org/wiki/Harold_McGee',
-    },
-    {
-      name: 'The Flavor Bible by Karen Page and Andrew Dornenburg',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'Modernist Cuisine - 科学缩放技术',
-      url: 'https://www.modernistcuisine.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -240,5 +225,6 @@ export const content: ToolLocaleContent = {
       html: '本工具简化了数学运算，让你能百分之百投入到最重要的事：创意与风味。',
     },
   ],
+  bibliography,
   schemas: [appSchema, faqSchema, howToSchema],
 };

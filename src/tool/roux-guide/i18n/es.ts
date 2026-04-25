@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Guía Maestra de Roux y Salsas Madre";
 const description = "Calculadora interactiva de Roux. Aprende a crear Bechamel, Velouté y Espagnole con proporciones exactas. La base de la alta cocina francesa.";
@@ -97,23 +98,7 @@ export const content: ToolLocaleContent = {
       question: '¿Por qué necesito más roux oscuro?',
       answer: 'Al tostar el roux, el calor rompe las cadenas de almidón en cadenas cortas (dextrinas). Estas son sabrosas pero menos efectivas espesando. Por eso un roux oscuro necesita 15% más peso que uno blanco para espesar igual.',
     },
-  ],
-  bibliographyTitle: 'Bibliografía',
-  bibliography: [
-    {
-      name: 'Larousse Gastronomique - La Biblia de la Cocina',
-      url: 'https://www.laroussecocina.com/',
-    },
-    {
-      name: 'Mastering the Art of French Cooking - Julia Child',
-      url: 'https://www.juliachild.com/',
-    },
-    {
-      name: 'On Food and Cooking - Harold McGee (La Ciencia del Roux)',
-      url: 'https://www.foodscience.org/',
-    },
-  ],
-  howTo: [
+  ],  howTo: [
     {
       name: 'Selecciona el tipo de líquido',
       text: 'Elige entre leche (Bechamel), fondo claro (Velouté), fondo oscuro (Espagnole) o tomate. Cada uno requiere un tipo diferente de roux.',
@@ -309,5 +294,6 @@ export const content: ToolLocaleContent = {
     timeBlond: "5-8 min",
     timeBrown: "15-20 min",
   },
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

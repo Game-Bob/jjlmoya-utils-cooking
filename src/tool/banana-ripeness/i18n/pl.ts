@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Diagnostyka i Konserwacja Bananów: Przewodnik Naukowy";
 const description = "Analizuj stan dojrzałości swoich bananów z naukową precyzją. Poznaj techniki konserwacji, biochemię etylenu i optymalizację składników odżywczych.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Diagnostyka i Konserwacja Bananów: Przewodnik Naukowy',
   description: 'Analizuj stan dojrzałości swoich bananów z naukową precyzją. Poznaj techniki konserwacji, biochemię etylenu i optymalizację składników odżywczych.',
   faqTitle: 'Często Zadawane Pytania',
-  bibliographyTitle: 'Źródła i Odniesienia',
   ui: {
     ripesnessLabel: 'Stan Dojrzałości',
     nextStageLabel: 'Kolejny Etap za',
@@ -142,20 +142,6 @@ export const content: ToolLocaleContent = {
     {
       name: 'Zastosuj konserwację',
       text: 'Postępuj zgodnie ze szczegółowymi zaleceniami dotyczącymi konserwacji i przyspieszania w zależności od aktualnego stanu.',
-    },
-  ],
-  bibliography: [
-    {
-      name: 'Ethylene and Fruit Ripening: A Biological Review',
-      url: '',
-    },
-    {
-      name: 'Biochemical Changes in Musa acuminata during Ripening (Journal of Food Science)',
-      url: 'https://www.foodsciencejournal.com/assets/archives/2017/vol2issue5/2-5-31-566.pdf',
-    },
-    {
-      name: 'The Role of Respiration in Climacteric Fruits (Scientific American)',
-      url: 'https://www.nature.com/articles/226976b0',
     },
   ],
   seo: [
@@ -244,5 +230,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Alert degradacji:</strong> Czynniki zewnętrzne, takie jak wilgotność względna powyżej 85% lub temperatury powyżej 25°C, mogą drastycznie przyspieszyć degradację, sprawiając, że banan w ciągu kilku godzin przejdzie ze stanu optymalnego do niejadalnego. Ten symulator pomoże Ci przewidzieć te zmiany i planować strategicznie.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

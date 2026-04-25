@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Sourdough Starter Feeding Calculator";
 const description = "Automatically calculate exact proportions of starter, flour, and water for your sourdough maintenance and feeding. Preset or custom ratios available.";
@@ -97,23 +98,7 @@ export const content: ToolLocaleContent = {
       question: 'Does the calculator round the grams?',
       answer: 'Yes. It rounds to the nearest whole number for practicality. For maximum precision, use a digital scale; however, small rounding differences won\'t significantly impact fermentation.',
     },
-  ],
-  bibliographyTitle: 'Bibliography & Resources',
-  bibliography: [
-    {
-      name: 'Tartine Bread - Chad Robertson',
-      url: 'https://www.penguinrandomhouse.com/books/310016/tartine-bread-by-chad-robertson/',
-    },
-    {
-      name: 'The Flavor Bible - Scaling and Ratios',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'Full Proof Baking - Guides on Sourdough',
-      url: 'https://www.fullproofbaking.com/',
-    },
-  ],
-  howTo: [
+  ],  howTo: [
     {
       name: 'Enter total amount needed',
       text: 'Define the total weight of sourdough starter you need for your recipe (e.g., 300g for a typical loaf).',
@@ -309,5 +294,6 @@ export const content: ToolLocaleContent = {
     totalDough: 'Total Dough',
     mm: 'ST',
   },
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

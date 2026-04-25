@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "黄油炒面（Roux）与母酱大师指南";
 const description = "交互式 Roux 计算器。学习以精确比例制作白酱（Bechamel）、天鹅绒酱（Velouté）和褐酱（Espagnole）。法国高等料理的基础。";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: '常见问题',
-  faq,
-  bibliographyTitle: '参考资料',
-  bibliography: [
-    {
-      name: 'Larousse Gastronomique',
-      url: 'https://www.laroussecocina.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -135,5 +128,6 @@ export const content: ToolLocaleContent = {
     timeBlond: "5-8 分钟",
     timeBrown: "15-20 分钟",
   },
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

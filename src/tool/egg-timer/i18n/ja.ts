@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "科学的なエッグタイマー";
 const description = "標高、温度、サイズに基づいた、完璧なゆで卵を作るための熱力学計算機。";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: "科学的なエッグタイマー",
   description: "標高、温度、サイズに基づいた、完璧なゆで卵を作るための熱力学計算機。",
   faqTitle: "よくある質問",
-  bibliographyTitle: "科学的リファレンス",
   ui: {
     parameters: "パラメータ",
     initial_temperature: "初期温度",
@@ -94,22 +94,7 @@ export const content: ToolLocaleContent = {
     hard_cooked: "固ゆで",
     hard_description: "完全に火が通り、黄身も固い。",
   },
-  faq,
-  bibliography: [
-    {
-      name: "The Science of Boiling an Egg - Charles D. H. Williams",
-      url: "https://newton.ex.ac.uk/teaching/CDHW/Egg/",
-    },
-    {
-      name: "The Food Lab: The Science of the Best Hard Boiled Eggs - J. Kenji López-Alt",
-      url: "https://www.seriouseats.com/the-food-lab-hard-boiled-eggs-recipe",
-    },
-    {
-      name: "The Food Lab: Perfect Soft Boiled Eggs",
-      url: "https://www.seriouseats.com/soft-boiled-eggs-recipe",
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -248,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: '私たちのタイマーはチャールズ・ウィリアムズの計算式を使用し、あなたの所在地と冷蔵庫の状態に合わせて秒単位で調整します。',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

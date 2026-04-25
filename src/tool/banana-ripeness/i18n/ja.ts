@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "バナナの診断と保存：科学的ガイド";
 const description = "バナナの熟成状態を科学的な精度で分析します。保存方法、エチレンの生化学、そして栄養の最適化について学びましょう。";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: "バナナの診断と保存：科学的ガイド",
   description: "バナナの熟成状態を科学的な精度で分析します。保存方法、エチレンの生化学、そして栄養の最適化について学びましょう。",
   faqTitle: "よくある質問",
-  bibliographyTitle: "出典と参考文献",
   ui: {
     ripesnessLabel: "熟成状態",
     nextStageLabel: "次の段階まで",
@@ -142,20 +142,6 @@ export const content: ToolLocaleContent = {
     {
       name: "保存方法を適用する",
       text: "現在の状態に基づいた、具体的な保存や熟成促進の推奨事項に従います。",
-    },
-  ],
-  bibliography: [
-    {
-      name: 'Ethylene and Fruit Ripening: A Biological Review',
-      url: '',
-    },
-    {
-      name: 'Biochemical Changes in Musa acuminata during Ripening (Journal of Food Science)',
-      url: 'https://www.foodsciencejournal.com/assets/archives/2017/vol2issue5/2-5-31-566.pdf',
-    },
-    {
-      name: 'The Role of Respiration in Climacteric Fruits (Scientific American)',
-      url: 'https://www.nature.com/articles/226976b0',
     },
   ],
   seo: [
@@ -244,5 +230,6 @@ export const content: ToolLocaleContent = {
       html: "<strong>劣化アラート:</strong> 相対湿度が85%を超えたり、温度が25°Cを超えたりするなどの外部要因は、劣化を劇的に加速させ、バナナを数時間で最適な状態から食用不可能な状態に変えてしまう可能性があります。このシミュレーターは、これらの変化を予測し、戦略的に計画を立てるのに役立ちます。",
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "평형 염수 계산기";
 const description = "촉촉한 고기와 완벽한 발효를 위한 평형의 과학. 식재료와 물의 총 중량에 기초한 정확한 염도를 계산하세요.";
@@ -104,25 +105,8 @@ export const content: ToolLocaleContent = {
     timePreservesLabel: "기간 (보존식)",
     timePreservesDuration: "1개월 이상",
   },
-  faqTitle: "자주 묻는 질문",
-  bibliographyTitle: "출처 및 참고 문헌",
-  faq,
-  howTo,
-  bibliography: [
-    {
-      name: "The Noma Guide to Fermentation - René Redzepi & David Zilber",
-      url: "https://www.nomacph.com/",
-    },
-    {
-      name: "Salt, Fat, Acid, Heat - Samin Nosrat",
-      url: "https://www.saltfatacidheat.com/",
-    },
-    {
-      name: "Pollan, Michael - Cooked",
-      url: "https://michaelpollan.com/",
-    },
-  ],
-  seo: [
+  faqTitle: "자주 묻는 질문",  faq,
+  howTo,  seo: [
     {
       type: 'title',
       text: '평형 염수와 발효 마스터 가이드',
@@ -249,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: '이 평형 계산기는 레시피의 불확실성을 제거하여, 전문가와 같은 확신을 가지고 요리할 수 있게 도와줍니다.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

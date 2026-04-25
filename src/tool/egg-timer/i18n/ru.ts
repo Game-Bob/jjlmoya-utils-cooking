@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Научный таймер для варки яиц";
 const description = "Термодинамический калькулятор для идеальной варки яиц с учетом высоты над уровнем моря, температуры яиц и их размера.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: "Научный таймер для варки яиц",
   description: "Термодинамический калькулятор для идеальной варки яиц с учетом высоты над уровнем моря, температуры яиц и их размера.",
   faqTitle: "Часто задаваемые вопросы",
-  bibliographyTitle: "Научные источники",
   ui: {
     parameters: "Параметры",
     initial_temperature: "Начальная температура",
@@ -94,22 +94,7 @@ export const content: ToolLocaleContent = {
     hard_cooked: "Вкрутую",
     hard_description: "Полностью сварено, плотный желток.",
   },
-  faq,
-  bibliography: [
-    {
-      name: "The Science of Boiling an Egg - Charles D. H. Williams",
-      url: "https://newton.ex.ac.uk/teaching/CDHW/Egg/",
-    },
-    {
-      name: "The Food Lab: The Science of the Best Hard Boiled Eggs - J. Kenji López-Alt",
-      url: "https://www.seriouseats.com/the-food-lab-hard-boiled-eggs-recipe",
-    },
-    {
-      name: "The Food Lab: Perfect Soft Boiled Eggs",
-      url: "https://www.seriouseats.com/soft-boiled-eggs-recipe",
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -248,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: 'Наш таймер использует уравнение Чарльза Уильямса для корректировки каждой секунды в соответствии с вашим местоположением и температурой в холодильнике.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

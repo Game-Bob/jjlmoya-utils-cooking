@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Intelligente Pannenselector: Gids voor Kookgerei";
 const description = "Interactieve gids voor het kiezen van de beste pan of pot op basis van uw kookstijl. Gietijzer vs Staal vs Teflon. Vind uw perfecte gereedschap.";
@@ -76,23 +77,7 @@ export const content: ToolLocaleContent = {
   title: 'Intelligente Pannenselector: Gids voor Kookgerei',
   description: 'Interactieve gids voor het kiezen van de beste pan of pot op basis van uw kookstijl. Gietijzer vs Staal vs Teflon. Vind uw perfecte gereedschap.',
   faqTitle: 'Veelgestelde Vragen',
-  faq,
-  bibliographyTitle: 'Bibliografie',
-  bibliography: [
-    {
-      name: 'The Flavor Bible - Pairing, and Progress in Food',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'On Food and Cooking - Harold McGee',
-      url: 'https://www.foodscience.org/',
-    },
-    {
-      name: 'Salt Fat Acid Heat - Samin Nosrat',
-      url: 'https://www.saltfatacidheat.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -196,5 +181,6 @@ export const content: ToolLocaleContent = {
     enamelCon: 'Heel duur. Emaille is kwetsbaar voor stoten.',
     enamelTip: 'Perfect voor eindeloze stoofschotels. De emaille laag maakt koken met zuren (tomaat) probleemloos.',
   },
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

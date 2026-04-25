@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Mästarguide för Roux och Grundsåser";
 const description = "Interaktiv Roux-kalkylator. Lär dig göra Béchamel, Velouté och Espagnole med exakta proportioner. Grunden i det klassiska franska köket.";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: 'Vanliga Frågor',
-  faq,
-  bibliographyTitle: 'Bibliografi',
-  bibliography: [
-    {
-      name: 'Larousse Gastronomique',
-      url: 'https://www.laroussecocina.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -135,5 +128,6 @@ export const content: ToolLocaleContent = {
     timeBlond: "5-8 min",
     timeBrown: "15-20 min",
   },
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

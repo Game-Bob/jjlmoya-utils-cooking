@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "US Cooking Conversion Calculator: Cups to Grams";
 const description = "Convert cups, tablespoons, and Fahrenheit to the metric system. Your professional compass for decoding American recipes with absolute precision.";
@@ -196,17 +197,6 @@ export const content: ToolLocaleContent = {
       answer: "Gas Mark 4 is equivalent to 350°F or 175°C. This is the most common temperature for standard cake baking.",
     },
   ],
-  bibliographyTitle: "Bibliography & Resources",
-  bibliography: [
-    {
-      name: "King Arthur Baking: Ingredient Weight Chart",
-      url: "https://www.kingarthurbaking.com/learn/ingredient-weight-chart",
-    },
-    {
-      name: "Culinary Institute of America: Conversions and Equivalents",
-      url: "https://www.ciachef.edu/",
-    },
-  ],
   howTo: [
     {
       name: "Select conversion type",
@@ -353,5 +343,6 @@ export const content: ToolLocaleContent = {
       html: "Using a professional converter turns the frustration of foreign recipes into the success of a perfect bake.",
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

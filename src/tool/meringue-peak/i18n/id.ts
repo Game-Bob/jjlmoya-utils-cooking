@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Kalkulator Meringue & Pengocokan Putih Telur";
 const description = "Hitung jumlah gula yang tepat untuk meringue Prancis, Italia, atau Swiss berdasarkan berat putih telur Anda. Waktu pengocokan dan tips kue.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: 'Pertanyaan Umum',
-  bibliographyTitle: 'Sumber dan Referensi',
   ui: {
     whitesLabel: 'Berat Putih Telur',
     whitesPlaceholder: 'Mis. 120',
@@ -112,18 +112,7 @@ export const content: ToolLocaleContent = {
     invalidWeightError: 'Masukkan berat yang valid',
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: 'Larousse Kitchen: Jenis Meringue',
-      url: 'https://laroussecocina.mx/palabra/merengue/',
-    },
-    {
-      name: 'Exploratorium: Egg Science',
-      url: 'https://www.exploratorium.edu/explore/cooking/egg-science',
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: 'Panduan Ahli Kalkulasi Meringue',
@@ -205,5 +194,6 @@ export const content: ToolLocaleContent = {
       html: 'Bersihkan wadah dengan cuka atau lemon. Sisa lemak sekecil apa pun akan menghalangi putih telur mengembang.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

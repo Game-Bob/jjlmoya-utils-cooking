@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Calculadora de Masa Pizza Napolitana";
 const description = "Calcula las proporciones exactas de harina, agua, sal y levadura para preparar la auténtica pizza napolitana en casa.";
@@ -99,7 +100,6 @@ export const content: ToolLocaleContent = {
   description:
     "Calcula las proporciones exactas de harina, agua, sal y levadura para preparar la auténtica pizza napolitana en casa.",
   faqTitle: "Preguntas Frecuentes",
-  bibliographyTitle: "Referencias",
   ui: {
     parameters: "Parámetros",
     quantity: "Cantidad",
@@ -185,24 +185,6 @@ export const content: ToolLocaleContent = {
     {
       name: "Estira y hornea",
       text: "Saca del frío 30 minutos antes. Estira desde el centro hacia afuera. Hornea a máxima temperatura 60-90 segundos (leña) o 5-7 minutos (doméstico).",
-    },
-  ],
-  bibliography: [
-    {
-      name: "Associazione Verace Pizza Napoletana",
-      url: "https://www.pizzanapoletana.org/",
-    },
-    {
-      name: "The Pizza Bible - Tony Gemignani",
-      url: "https://www.amazon.es/Pizza-Bible-Everything-Need-Perfect/dp/0393634039/",
-    },
-    {
-      name: "Franco Pepe - Pepe in Grani",
-      url: "https://www.pepeingranitalia.com/",
-    },
-    {
-      name: "Harina Caputo",
-      url: "https://www.caputoprepara.com/",
     },
   ],
   seo: [
@@ -377,6 +359,6 @@ export const content: ToolLocaleContent = {
       html: 'Nuestra calculadora automatiza las proporciones para que puedas centrarte en lo más importante: la técnica y el amor por el producto final.',
     },
   ],
-
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

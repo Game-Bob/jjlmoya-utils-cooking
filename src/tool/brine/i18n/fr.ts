@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Calculateur de Saumure par Équilibre et Fermentation";
 const description = "Maîtrisez la science de la saumure par équilibre pour des viandes juteuses et des fermentations parfaites. Calculez la salinité exacte basée sur le poids total.";
@@ -109,9 +110,7 @@ export const content: ToolLocaleContent = {
     timePreservesLabel: "Temps (Conserves)",
     timePreservesDuration: "1+ Mois",
   },
-  faqTitle: "Questions Fréquentes sur la Saumure",
-  bibliographyTitle: "Sources et Références Scientifiques",
-  faq: [
+  faqTitle: "Questions Fréquentes sur la Saumure",  faq: [
     {
       question: "Qu'est-ce que la méthode de saumure par équilibre ?",
       answer:
@@ -153,20 +152,6 @@ export const content: ToolLocaleContent = {
     {
       name: "Fermentez ou marinez",
       text: "Réfrigérez selon le type : 4-48 h pour les viandes, 1-3 semaines pour les fermentations. Le temps dépend de la température ambiante.",
-    },
-  ],
-  bibliography: [
-    {
-      name: "The Noma Guide to Fermentation - René Redzepi & David Zilber",
-      url: "https://www.nomacph.com/",
-    },
-    {
-      name: "Salt, Fat, Acid, Heat - Samin Nosrat",
-      url: "https://www.saltfatacidheat.com/",
-    },
-    {
-      name: "Pollan, Michael - Cooked",
-      url: "https://michaelpollan.com/",
     },
   ],
   seo: [
@@ -296,5 +281,6 @@ export const content: ToolLocaleContent = {
       html: "Notre calculateur d'équilibre supprime les approximations, vous permettant de cuisiner avec la confiance d'un professionnel.",
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

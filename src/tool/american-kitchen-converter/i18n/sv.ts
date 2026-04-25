@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Amerikansk Köksomvandlare: Cups till Gram och Temperaturer";
 const description = "Omvandla cups, matskedar och Fahrenheit till det metriska systemet. Kompassen för att tyda amerikanska recept med professionell precision.";
@@ -80,7 +81,6 @@ export const content: ToolLocaleContent = {
   title: 'Amerikansk Köksomvandlare: Cups till Gram och Temperaturer',
   description: 'Omvandla cups, matskedar och Fahrenheit till det metriska systemet. Kompassen för att tyda amerikanska recept med professionell precision.',
   faqTitle: 'Vanliga frågor',
-  bibliographyTitle: 'Bibliografi',
   ui: {
     copied: 'Kopierat',
     noHistory: 'Ingen historik',
@@ -324,16 +324,6 @@ export const content: ToolLocaleContent = {
       answer: 'Gas 4 = 180°C = 350°F. Detta är den brittiska skalan. I köket letar vi efter motsvarande värde för din ugn: vissa använder gaslägen, andra elektroniska grader.',
     },
   ],
-  bibliography: [
-    {
-      name: 'King Arthur Baking: Ingredient Weight Chart',
-      url: 'https://www.kingarthurbaking.com/learn/ingredient-weight-chart',
-    },
-    {
-      name: 'Culinary Institute of America: Conversions and Equivalents',
-      url: 'https://www.ciachef.edu/',
-    },
-  ],
   howTo: [
     {
       name: 'Välj typ av omvandling',
@@ -352,5 +342,6 @@ export const content: ToolLocaleContent = {
       text: 'Med den exakta omvandlingen kan du nu följa det amerikanska receptet med professionell precision.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

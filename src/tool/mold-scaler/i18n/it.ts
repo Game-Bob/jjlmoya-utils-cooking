@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Calcolatore per Adattare Stampi da Pasticceria';
 const description =
@@ -81,10 +82,7 @@ export const content: ToolLocaleContent = {
 	slug: 'stampi',
 	title,
 	description,
-	faqTitle: 'Domande Frequenti sull\'Adattamento',
-	bibliographyTitle: 'Fonti e Riferimenti',
-
-	ui: {
+	faqTitle: 'Domande Frequenti sull\'Adattamento',	ui: {
 		originalRecipe: 'Ricetta Originale',
 		yourMold: 'Tuo Stampo',
 		round: 'Rotondo',
@@ -113,18 +111,7 @@ export const content: ToolLocaleContent = {
 		increase: 'Aumenta',
 	},
 
-	faq,
-	bibliography: [
-		{
-			name: 'Baking Science and Technology - E.J. Pyler',
-			url: 'https://www.bakingbusiness.com/',
-		},
-		{
-			name: 'The Professional Pastry Chef - Bo Friberg',
-			url: 'https://www.wiley.com/',
-		},
-	],
-	howTo,
+	faq,	howTo,
 	seo: [
 		{
 			type: 'title',
@@ -166,5 +153,6 @@ export const content: ToolLocaleContent = {
 			html: 'Non riempire mai uno stampo oltre i 2/3 della sua capacità, indipendentemente dal fattore calcolato.',
 		},
 	],
-	schemas: [appSchema, faqSchema, howToSchema],
+  bibliography,
+  schemas: [appSchema, faqSchema, howToSchema],
 };

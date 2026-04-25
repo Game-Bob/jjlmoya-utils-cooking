@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'ケーキ型サイズ換算計算機';
 const description =
@@ -81,10 +82,7 @@ export const content: ToolLocaleContent = {
 	slug: 'cake-pan-size-converter-calculator',
 	title,
 	description,
-	faqTitle: 'サイズ換算に関するよくある質問',
-	bibliographyTitle: '参考文献・資料',
-
-	ui: {
+	faqTitle: 'サイズ換算に関するよくある質問',	ui: {
 		originalRecipe: '元のレシピ',
 		yourMold: '自分の型',
 		round: '丸型',
@@ -113,18 +111,7 @@ export const content: ToolLocaleContent = {
 		increase: '増やす',
 	},
 
-	faq,
-	bibliography: [
-		{
-			name: 'Baking Science and Technology - E.J. Pyler',
-			url: 'https://www.bakingbusiness.com/',
-		},
-		{
-			name: 'The Professional Pastry Chef - Bo Friberg',
-			url: 'https://www.wiley.com/',
-		},
-	],
-	howTo,
+	faq,	howTo,
 	seo: [
 		{
 			type: 'title',
@@ -166,5 +153,6 @@ export const content: ToolLocaleContent = {
 			html: '算出された係数に関わらず、型には容量の2/3以上は入れないようにしてください。',
 		},
 	],
-	schemas: [appSchema, faqSchema, howToSchema],
+  bibliography,
+  schemas: [appSchema, faqSchema, howToSchema],
 };

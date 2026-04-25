@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Calcolatore Dosi Ingredienti e Ricette';
 const description = 'Scala le ricette automaticamente in base al numero di porzioni. Calcola le quantità esatte degli ingredienti moltiplicando o riducendo la tua ricetta senza complicazioni.';
@@ -96,23 +97,7 @@ export const content: ToolLocaleContent = {
     defaultIngredient3: '2 Uova',
   },
   faqTitle: 'Domande Frequenti',
-  faq,
-  bibliographyTitle: 'Bibliografia',
-  bibliography: [
-    {
-      name: 'Harold McGee - On Food and Cooking: The Science and Lore of the Kitchen',
-      url: 'https://en.wikipedia.org/wiki/Harold_McGee',
-    },
-    {
-      name: 'The Flavor Bible by Karen Page and Andrew Dornenburg',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'Modernist Cuisine - Tecniche di scaling scientifico',
-      url: 'https://www.modernistcuisine.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -240,5 +225,6 @@ export const content: ToolLocaleContent = {
       html: 'Il nostro strumento semplifica la matematica per lasciarti dedicare a ciò che conta davvero: creatività e sapore.',
     },
   ],
+  bibliography,
   schemas: [appSchema, faqSchema, howToSchema],
 };

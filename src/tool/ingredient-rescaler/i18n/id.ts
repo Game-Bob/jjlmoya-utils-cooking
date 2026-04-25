@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Pengatur Takaran Bahan & Resep';
 const description = 'Ubah skala resep secara otomatis berdasarkan jumlah porsi. Hitung jumlah bahan yang tepat dengan mengalikan atau mengurangi resep Anda tanpa repot.';
@@ -96,23 +97,7 @@ export const content: ToolLocaleContent = {
     defaultIngredient3: '2 Telur',
   },
   faqTitle: 'Pertanyaan yang Sering Diajukan',
-  faq,
-  bibliographyTitle: 'Bibliografi',
-  bibliography: [
-    {
-      name: 'Harold McGee - On Food and Cooking: The Science and Lore of the Kitchen',
-      url: 'https://en.wikipedia.org/wiki/Harold_McGee',
-    },
-    {
-      name: 'The Flavor Bible by Karen Page and Andrew Dornenburg',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'Modernist Cuisine - Teknik penskalaan ilmiah',
-      url: 'https://www.modernistcuisine.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -240,5 +225,6 @@ export const content: ToolLocaleContent = {
       html: 'Alat kami menyederhanakan matematika agar Anda dapat mencurahkan energi untuk hal yang benar-benar penting: kreativitas dan rasa.',
     },
   ],
+  bibliography,
   schemas: [appSchema, faqSchema, howToSchema],
 };

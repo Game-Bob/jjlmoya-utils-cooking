@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "天然酵母（酸面种）发酵比例计算器";
 const description = "自动计算酸面种、面粉和水的比例以维护你的菌种。提供预设比例或自定义比例。";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
 	title,
 	description,
 	faqTitle: '常见问题',
-	faq,
-	bibliographyTitle: '参考资料',
-	bibliography: [
-		{
-			name: 'Tartine Bread - Chad Robertson',
-			url: 'https://www.penguinrandomhouse.com/books/310016/tartine-bread-by-chad-robertson/',
-		},
-	],
-	howTo,
+	faq,  howTo,
 	seo: [
 		{
 			type: 'title',
@@ -112,5 +105,6 @@ export const content: ToolLocaleContent = {
 		totalDough: '面种总量',
 		mm: 'MM',
 	},
+  bibliography,
 	schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "ナポリピザ生地計算機";
 const description = "本場ナポリピザを自宅で作るために、小麦粉、水、塩、イーストの正確な配合を計算します。";
@@ -72,7 +73,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: "よくある質問",
-  bibliographyTitle: "参考文献",
   ui: {
     parameters: "パラメータ",
     quantity: "数量",
@@ -103,14 +103,7 @@ export const content: ToolLocaleContent = {
       "視覚的なサイズは、生地玉の重量に基づいた伸ばした後のピザの推定直径を表しています。",
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: "Associazione Verace Pizza Napoletana",
-      url: "https://www.pizzanapoletana.org/",
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: '本場ナポリピザ生地のマスターガイド',
@@ -121,5 +114,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>ナポリピザ</strong>は文化遺産です。成功の鍵は、時間、温度、加水率の正確な管理にあります。',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

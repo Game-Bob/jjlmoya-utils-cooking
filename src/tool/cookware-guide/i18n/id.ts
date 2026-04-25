@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Pemilih Wajan Pintar: Panduan Peralatan Masak";
 const description = "Panduan interaktif untuk memilih wajan atau panci terbaik sesuai gaya memasak Anda. Besi vs Baja vs Teflon. Temukan alat masak yang sempurna.";
@@ -76,23 +77,7 @@ export const content: ToolLocaleContent = {
   title: 'Pemilih Wajan Pintar: Panduan Peralatan Masak',
   description: 'Panduan interaktif untuk memilih wajan atau panci terbaik sesuai gaya memasak Anda. Besi vs Baja vs Teflon. Temukan alat masak yang sempurna.',
   faqTitle: 'Pertanyaan yang Sering Diajukan',
-  faq,
-  bibliographyTitle: 'Bibliografi',
-  bibliography: [
-    {
-      name: 'The Flavor Bible - Pairing, and Progress in Food',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'On Food and Cooking - Harold McGee',
-      url: 'https://www.foodscience.org/',
-    },
-    {
-      name: 'Salt Fat Acid Heat - Samin Nosrat',
-      url: 'https://www.saltfatacidheat.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -196,5 +181,6 @@ export const content: ToolLocaleContent = {
     enamelCon: 'Sangat mahal. Lapisan enamel rapuh terhadap benturan keras.',
     enamelTip: 'Sangat cocok untuk semur yang lama. Lapisan enamel memungkinkan memasak bahan asam (tomat) tanpa masalah.',
   },
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

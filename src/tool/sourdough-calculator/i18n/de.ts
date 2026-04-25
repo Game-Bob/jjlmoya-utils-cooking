@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Sauerteig Rechner: Fermentationsverhältnisse";
 const description = "Berechnen Sie automatisch die Proportionen von Sauerteig, Mehl und Wasser zur Pflege Ihres Ansatzes. Vordefinierte oder benutzerdefinierte Verhältnisse.";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
 	title,
 	description,
 	faqTitle: 'Häufig gestellte Fragen',
-	faq,
-	bibliographyTitle: 'Bibliografie',
-	bibliography: [
-		{
-			name: 'Tartine Bread - Chad Robertson',
-			url: 'https://www.penguinrandomhouse.com/books/310016/tartine-bread-by-chad-robertson/',
-		},
-	],
-	howTo,
+	faq,  howTo,
 	seo: [
 		{
 			type: 'title',
@@ -138,5 +131,6 @@ export const content: ToolLocaleContent = {
 		totalDough: 'Gesamtgewicht',
 		mm: 'ASG',
 	},
+  bibliography,
 	schemas: [faqSchema, howToSchema, appSchema],
 };

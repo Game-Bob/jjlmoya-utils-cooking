@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Калькулятор меренги и взбитых белков";
 const description = "Рассчитайте точное количество сахара для французской, итальянской или швейцарской меренги в зависимости от веса белков. Время взбивания и кулинарные хитрости.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: 'Часто задаваемые вопросы',
-  bibliographyTitle: 'Источники и ссылки',
   ui: {
     whitesLabel: 'Вес белков',
     whitesPlaceholder: 'Напр. 120',
@@ -113,18 +113,7 @@ export const content: ToolLocaleContent = {
     invalidWeightError: 'Введите корректный вес',
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: 'Ларусс Гастрономик: Типы меренги',
-      url: 'https://laroussecocina.mx/palabra/merengue/',
-    },
-    {
-      name: 'Exploratorium: Science of Eggs',
-      url: 'https://www.exploratorium.edu/explore/cooking/egg-science',
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: 'Руководство мастера: расчет меренги и взбитых белков',
@@ -206,5 +195,6 @@ export const content: ToolLocaleContent = {
       html: 'Протрите чашу уксусом или лимоном. Малейшие следы жира не дадут белкам подняться.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

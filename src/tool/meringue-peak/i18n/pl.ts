@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Kalkulator Bezy i Ubijania Białek";
 const description = "Oblicz dokładną ilość cukru do bezy francuskiej, włoskiej lub szwajcarskiej na podstawie wagi białek. Czas ubijania i triki cukiernicze.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: 'Często Zadawane Pytania',
-  bibliographyTitle: 'Źródła i Referencje',
   ui: {
     whitesLabel: 'Waga Białek',
     whitesPlaceholder: 'Np. 120',
@@ -113,18 +113,7 @@ export const content: ToolLocaleContent = {
     invalidWeightError: 'Wprowadź prawidłową wagę',
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: 'Larousse Cocina: Typy Bez',
-      url: 'https://laroussecocina.mx/palabra/merengue/',
-    },
-    {
-      name: 'Exploratorium: Science of Eggs',
-      url: 'https://www.exploratorium.edu/explore/cooking/egg-science',
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: 'Mistrzowski przewodnik po ubijaniu bezy',
@@ -206,5 +195,6 @@ export const content: ToolLocaleContent = {
       html: 'Przetrzyj miskę octem lub cytryną. Każdy ślad tłuszczu uniemożliwi ubicie białek.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Kalkulator Zakwasu Proporcje Fermentacji";
 const description = "Automatycznie oblicz proporcje zakwasu, mąki i wody, aby utrzymać swoją kulturę. Proporcje predefiniowane lub własne.";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
 	title,
 	description,
 	faqTitle: 'Często zadawane pytania',
-	faq,
-	bibliographyTitle: 'Bibliografia',
-	bibliography: [
-		{
-			name: 'Tartine Bread - Chad Robertson',
-			url: 'https://www.penguinrandomhouse.com/books/310016/tartine-bread-by-chad-robertson/',
-		},
-	],
-	howTo,
+	faq,  howTo,
 	seo: [
 		{
 			type: 'title',
@@ -112,5 +105,6 @@ export const content: ToolLocaleContent = {
 		totalDough: 'Cały zakwas',
 		mm: 'ZK',
 	},
+  bibliography,
 	schemas: [faqSchema, howToSchema, appSchema],
 };

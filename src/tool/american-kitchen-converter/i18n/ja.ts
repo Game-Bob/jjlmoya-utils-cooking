@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "アメリカン・キッチン・コンバーター：カップからグラム、温度への換算";
 const description = "アメリカのカップ、大さじ、ファーレンハイト（華氏）をメートル法に換算します。アメリカのレシピをプロの精度で読み解くためのツールです。";
@@ -80,7 +81,6 @@ export const content: ToolLocaleContent = {
   title: "アメリカン・キッチン・コンバーター：カップからグラム、温度への換算",
   description: "アメリカのカップ、大さじ、ファーレンハイト（華氏）をメートル法に換算します。アメリカのレシピをプロの精度で読み解くためのツールです。",
   faqTitle: "よくある質問",
-  bibliographyTitle: "参考資料",
   ui: {
     copied: "コピーしました",
     noHistory: "履歴なし",
@@ -324,16 +324,6 @@ export const content: ToolLocaleContent = {
       answer: "ガス4 = 180°C = 350°Fです。これはイギリスの目盛りです。お使いのオーブンの仕様を確認して、最適な設定に調整してください。",
     },
   ],
-  bibliography: [
-    {
-      name: 'King Arthur Baking: Ingredient Weight Chart',
-      url: 'https://www.kingarthurbaking.com/learn/ingredient-weight-chart',
-    },
-    {
-      name: 'Culinary Institute of America: Conversions and Equivalents',
-      url: 'https://www.ciachef.edu/',
-    },
-  ],
   howTo: [
     {
       name: "換算の種類を選択する",
@@ -352,5 +342,6 @@ export const content: ToolLocaleContent = {
       text: "正確な換算値を使用して、アメリカのレシピをプロの精度で再現しましょう。",
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Calcolatore Pasta Madre Rapporti di Fermentazione";
 const description = "Calcola automaticamente le proporzioni di pasta madre, farina e acqua per mantenere il tuo rinfresco. Rapporti predefiniti o personalizzati.";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
 	title,
 	description,
 	faqTitle: 'Domande Frequenti',
-	faq,
-	bibliographyTitle: 'Bibliografia',
-	bibliography: [
-		{
-			name: 'Tartine Bread - Chad Robertson',
-			url: 'https://www.penguinrandomhouse.com/books/310016/tartine-bread-by-chad-robertson/',
-		},
-	],
-	howTo,
+	faq,  howTo,
 	seo: [
 		{
 			type: 'title',
@@ -138,5 +131,6 @@ export const content: ToolLocaleContent = {
 		totalDough: 'Totale Impasto',
 		mm: 'PM',
 	},
+  bibliography,
 	schemas: [faqSchema, howToSchema, appSchema],
 };

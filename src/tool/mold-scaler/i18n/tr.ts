@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Pasta Kalıbı Ölçeklendirme Hesaplayıcı';
 const description =
@@ -81,10 +82,7 @@ export const content: ToolLocaleContent = {
 	slug: 'kalip-olceklendirme',
 	title,
 	description,
-	faqTitle: 'Ölçeklendirme Hakkında Sıkça Sorulan Sorular',
-	bibliographyTitle: 'Bilimsel Kaynaklar ve Referanslar',
-
-	ui: {
+	faqTitle: 'Ölçeklendirme Hakkında Sıkça Sorulan Sorular',	ui: {
 		originalRecipe: 'Orijinal Tarif',
 		yourMold: 'Sizin Kalıbınız',
 		round: 'Yuvarlak',
@@ -113,18 +111,7 @@ export const content: ToolLocaleContent = {
 		increase: 'Artır',
 	},
 
-	faq,
-	bibliography: [
-		{
-			name: 'Baking Science and Technology - E.J. Pyler',
-			url: 'https://www.bakingbusiness.com/',
-		},
-		{
-			name: 'The Professional Pastry Chef - Bo Friberg',
-			url: 'https://www.wiley.com/',
-		},
-	],
-	howTo,
+	faq,	howTo,
 	seo: [
 		{
 			type: 'title',
@@ -166,5 +153,6 @@ export const content: ToolLocaleContent = {
 			html: 'Hesaplanan faktör ne olursa olsun, bir kalıbı asla kapasitesinin 2/3\'ünden fazla doldurmayın.',
 		},
 	],
-	schemas: [appSchema, faqSchema, howToSchema],
+  bibliography,
+  schemas: [appSchema, faqSchema, howToSchema],
 };

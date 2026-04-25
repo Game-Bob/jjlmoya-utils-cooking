@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "科学鸡蛋计时器";
 const description = "根据海拔、温度和大小，通过热力学公式计算出最完美的鸡蛋煮制时间。";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: "科学鸡蛋计时器",
   description: "根据海拔、温度和大小，通过热力学公式计算出最完美的鸡蛋煮制时间。",
   faqTitle: "常见问题",
-  bibliographyTitle: "科学参考文献",
   ui: {
     parameters: "煮蛋参数",
     initial_temperature: "初始温度",
@@ -94,22 +94,7 @@ export const content: ToolLocaleContent = {
     hard_cooked: "全熟蛋",
     hard_description: "完全煮熟，蛋黄结实。",
   },
-  faq,
-  bibliography: [
-    {
-      name: "The Science of Boiling an Egg - Charles D. H. Williams",
-      url: "https://newton.ex.ac.uk/teaching/CDHW/Egg/",
-    },
-    {
-      name: "The Food Lab: The Science of the Best Hard Boiled Eggs - J. Kenji López-Alt",
-      url: "https://www.seriouseats.com/the-food-lab-hard-boiled-eggs-recipe",
-    },
-    {
-      name: "The Food Lab: Perfect Soft Boiled Eggs",
-      url: "https://www.seriouseats.com/soft-boiled-eggs-recipe",
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -248,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: '我们的计时器采用查尔斯·威廉姆斯（Charles Williams）方程，根据您的精确位置和鸡蛋初始状态进行秒级精准调整。',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

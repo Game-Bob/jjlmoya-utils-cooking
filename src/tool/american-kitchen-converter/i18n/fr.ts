@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Convertisseur de Cuisine Américaine : Cups en Grammes, Fahrenheit";
 const description = "Convertissez les cups, tablespoons et Fahrenheit en système métrique. Votre boussole pour décoder les recettes américaines avec une précision professionnelle.";
@@ -196,17 +197,6 @@ export const content: ToolLocaleContent = {
       answer: "Le Thermostat 6 correspond à 180°C, soit environ 350°F. C'est la température de cuisson la plus courante.",
     },
   ],
-  bibliographyTitle: "Bibliographie et Ressources",
-  bibliography: [
-    {
-      name: "King Arthur Baking: Ingredient Weight Chart",
-      url: "https://www.kingarthurbaking.com/learn/ingredient-weight-chart",
-    },
-    {
-      name: "Culinary Institute of America: Conversions and Equivalents",
-      url: "https://www.ciachef.edu/",
-    },
-  ],
   howTo: [
     {
       name: "Sélectionnez le type de conversion",
@@ -223,16 +213,6 @@ export const content: ToolLocaleContent = {
     {
       name: "Ajustez votre recette",
       text: "Avec des mesures précises, vous pouvez reproduire n'importe quelle recette internationale avec succès.",
-    },
-  ],
-  bibliography: [
-    {
-      name: "King Arthur Baking: Ingredient Weight Chart",
-      url: "https://www.kingarthurbaking.com/learn/ingredient-weight-chart",
-    },
-    {
-      name: "Culinary Institute of America: Conversions and Equivalents",
-      url: "https://www.ciachef.edu/",
     },
   ],
   seo: [
@@ -363,5 +343,6 @@ export const content: ToolLocaleContent = {
       html: "Utiliser un convertisseur professionnel transforme la frustration des recettes étrangères en succès culinaire.",
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

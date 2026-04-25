@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Napolitaans Pizzadeeg Calculator";
 const description = "Bereken de exacte verhoudingen van bloem, water, zout en gist voor authentieke Napolitaanse pizza thuis.";
@@ -80,7 +81,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: "Veelgestelde Vragen",
-  bibliographyTitle: "Referenties",
   ui: {
     parameters: "Parameters",
     quantity: "Aantal",
@@ -111,14 +111,7 @@ export const content: ToolLocaleContent = {
       "De visuele grootte staat voor de geschatte diameter van de pizza op basis van het gewicht van de deegbol.",
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: "Associazione Verace Pizza Napoletana",
-      url: "https://www.pizzanapoletana.org/",
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: 'Gids voor Authentiek Napolitaans Pizzadeeg',
@@ -160,5 +153,6 @@ export const content: ToolLocaleContent = {
       html: 'Een rijping van 24 uur bij 4°C zorgt voor complexe smaken die op kamertemperatuur onmogelijk zijn.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

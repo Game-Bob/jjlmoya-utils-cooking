@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Kalkylator för Balanslag";
 const description = "Vetenskapen om balans för saftigt kött och perfekta fermentat. Beräkna den exakta salthalten baserat på den totala vikten av ingrediens och vatten.";
@@ -104,25 +105,8 @@ export const content: ToolLocaleContent = {
     timePreservesLabel: "Tid (konserver)",
     timePreservesDuration: "1+ månader",
   },
-  faqTitle: "Vanliga frågor",
-  bibliographyTitle: "Källor och referenser",
-  faq,
-  howTo,
-  bibliography: [
-    {
-      name: "The Noma Guide to Fermentation - René Redzepi & David Zilber",
-      url: "https://www.nomacph.com/",
-    },
-    {
-      name: "Salt, Fat, Acid, Heat - Samin Nosrat",
-      url: "https://www.saltfatacidheat.com/",
-    },
-    {
-      name: "Pollan, Michael - Cooked",
-      url: "https://michaelpollan.com/",
-    },
-  ],
-  seo: [
+  faqTitle: "Vanliga frågor",  faq,
+  howTo,  seo: [
     {
       type: 'title',
       text: 'Mästarguide för Balanslag och Fermentering',
@@ -249,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: 'Vår balanskalkylator eliminerar gissningarna från dina recept och låter dig laga mat med en yrkesmans självförtroende.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

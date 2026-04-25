@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Küchen Umrechner: Cups in Gramm und Temperaturen";
 const description = "Rechnen Sie Cups, Esslöffel und Fahrenheit in das metrische System um. Der Kompass, um US-Rezepte mit professioneller Präzision zu entschlüsseln.";
@@ -80,7 +81,6 @@ export const content: ToolLocaleContent = {
   title: 'Küchen Umrechner: Cups in Gramm und Temperaturen',
   description: 'Rechnen Sie Cups, Esslöffel und Fahrenheit in das metrische System um. Der Kompass, um US-Rezepte mit professioneller Präzision zu entschlüsseln.',
   faqTitle: 'Häufig gestellte Fragen',
-  bibliographyTitle: 'Literaturverzeichnis',
   ui: {
     copied: 'Kopiert',
     noHistory: 'Kein Verlauf',
@@ -324,16 +324,6 @@ export const content: ToolLocaleContent = {
       answer: 'Gas 4 = 180°C = 350°F. Dies ist die britische Skala. In der hiesigen Küche suchen wir den entsprechenden Wert an Ihrem Ofen: Einige verwenden Gasstufen, andere elektronische Gradanzeigen.',
     },
   ],
-  bibliography: [
-    {
-      name: 'King Arthur Baking: Ingredient Weight Chart',
-      url: 'https://www.kingarthurbaking.com/learn/ingredient-weight-chart',
-    },
-    {
-      name: 'Culinary Institute of America: Conversions and Equivalents',
-      url: 'https://www.ciachef.edu/',
-    },
-  ],
   howTo: [
     {
       name: 'Wählen Sie die Umrechnungsart',
@@ -352,5 +342,6 @@ export const content: ToolLocaleContent = {
       text: 'Mit der exakten Umrechnung können Sie nun das US-Rezept mit professioneller Präzision nachkochen.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

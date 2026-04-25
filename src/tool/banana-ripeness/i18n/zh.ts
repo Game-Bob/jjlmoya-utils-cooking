@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "香蕉熟度诊断与保存：科学指南";
 const description = "以科学精度分析香蕉的成熟状态。学习保存技术、乙烯生物化学以及营养优化方法。";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: "香蕉熟度诊断与保存：科学指南",
   description: "以科学精度分析香蕉的成熟状态。学习保存技术、乙烯生物化学以及营养优化方法。",
   faqTitle: "常问问题",
-  bibliographyTitle: "来源与参考文献",
   ui: {
     ripesnessLabel: "成熟状态",
     nextStageLabel: "预计进入下一阶段",
@@ -142,20 +142,6 @@ export const content: ToolLocaleContent = {
     {
       name: "应用保存建议",
       text: "根据当前状态，遵循特定的保存或加速成熟建议。",
-    },
-  ],
-  bibliography: [
-    {
-      name: 'Ethylene and Fruit Ripening: A Biological Review',
-      url: '',
-    },
-    {
-      name: 'Biochemical Changes in Musa acuminata during Ripening (Journal of Food Science)',
-      url: 'https://www.foodsciencejournal.com/assets/archives/2017/vol2issue5/2-5-31-566.pdf',
-    },
-    {
-      name: 'The Role of Respiration in Climacteric Fruits (Scientific American)',
-      url: 'https://www.nature.com/articles/226976b0',
     },
   ],
   seo: [
@@ -244,5 +230,6 @@ export const content: ToolLocaleContent = {
       html: "<strong>降解预警：</strong> 相对湿度高于85%或温度高于25°C等外部因素会剧烈加速降解，使香蕉在几小时内从最佳状态变为不可食用。本模拟器可帮助您预判这些变化并做出科学规划。",
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

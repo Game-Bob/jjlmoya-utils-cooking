@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Multiple Kitchen Timer";
 const description = "Manage multiple cooking times simultaneously. Independent alarms, ideal for chefs and kitchen organization (Mise en Place).";
@@ -80,10 +81,7 @@ export const content: ToolLocaleContent = {
 	title: 'Multiple Kitchen Timer',
 	description:
 		'Manage multiple cooking times simultaneously. Independent alarms, ideal for chefs and kitchen organization (Mise en Place).',
-	faqTitle: 'Frequently Asked Questions',
-	bibliographyTitle: 'References',
-
-	ui: {
+	faqTitle: 'Frequently Asked Questions',	ui: {
 		addTimer: 'Add Timer',
 		stopAll: 'Stop All',
 		defaultName: 'Timer',
@@ -129,20 +127,7 @@ export const content: ToolLocaleContent = {
 			answer:
 				'Between 5°C and 65°C bacteria multiply rapidly. Cooked foods shouldn\'t stay in this range more than 2 hours (1 hour if temperature exceeds 30°C). Use a timer to monitor cooling before refrigerating.',
 		},
-	],
-
-	bibliography: [
-		{
-			name: 'Food Safety: USDA Guidelines',
-			url: 'https://www.fsis.usda.gov/',
-		},
-		{
-			name: 'Mise en Place - Professional Cooking',
-			url: 'https://www.escoffier.edu/',
-		},
-	],
-
-	howTo: [
+	],	howTo: [
 		{
 			name: 'Create multiple timers',
 			text: 'Use the \'+\' button to add as many timers as you need. Perfect for orchestrating multiple dishes simultaneously.',
@@ -160,8 +145,7 @@ export const content: ToolLocaleContent = {
 			text: 'Authorize notifications so the browser alerts you when time\'s up, even if you switch tabs.',
 		},
 	],
-
-	seo: [
+  seo: [
 		{
 			type: 'title',
 			text: 'Temporal Mastery in the Kitchen',
@@ -223,6 +207,6 @@ export const content: ToolLocaleContent = {
 			html: '<strong>Professional tip:</strong> Time precision is what separates a chef from a home cook. Invest in a good timer and use it always. Experience tells you when something "looks ready", but time guarantees consistency.',
 		},
 	],
-
-	schemas: [faqSchema as any, howToSchema as any, appSchema as any],
+  bibliography,
+  schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

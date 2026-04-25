@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Precision Scientific Egg Timer and Altitude Calculator";
 const description = "Master the thermodynamics of the perfect egg. Calculate exact boiling times based on your altitude, egg size, and initial temperature.";
@@ -137,21 +138,6 @@ export const content: ToolLocaleContent = {
     {
       name: "Apply the ice bath",
       text: "When the timer ends, immediately move the egg to ice-cold water. This 'thermal shock' stops residual cooking and ensures easy peeling.",
-    },
-  ],
-  bibliographyTitle: "Scientific Sources & Thermodynamics",
-  bibliography: [
-    {
-      name: "Charles D. H. Williams - The Physics of Boiling an Egg",
-      url: "https://newton.ex.ac.uk/teaching/CDHW/Egg/",
-    },
-    {
-      name: "The Food Lab: The Science of Hard Boiled Eggs",
-      url: "https://www.seriouseats.com/the-food-lab-hard-boiled-eggs-recipe",
-    },
-    {
-      name: "Exploratorium - Egg Science and Protein Denaturation",
-      url: "https://www.exploratorium.edu/explore/cooking/egg-science",
     },
   ],
   seo: [
@@ -301,5 +287,6 @@ export const content: ToolLocaleContent = {
       html: "Our calculator utilizes the Charles Williams equation to calibrate every second based on your location and fridge temperature.",
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

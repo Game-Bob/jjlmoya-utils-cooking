@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "平衡盐水计算器";
 const description = "实现多汁肉类与完美发酵的平衡科学。根据食材和水的总重量计算精确的盐度。";
@@ -104,25 +105,8 @@ export const content: ToolLocaleContent = {
     timePreservesLabel: "时长（保存食品）",
     timePreservesDuration: "1 个月以上",
   },
-  faqTitle: "常见问题",
-  bibliographyTitle: "来源与参考文献",
-  faq,
-  howTo,
-  bibliography: [
-    {
-      name: "The Noma Guide to Fermentation - René Redzepi & David Zilber",
-      url: "https://www.nomacph.com/",
-    },
-    {
-      name: "Salt, Fat, Acid, Heat - Samin Nosrat",
-      url: "https://www.saltfatacidheat.com/",
-    },
-    {
-      name: "Pollan, Michael - Cooked",
-      url: "https://michaelpollan.com/",
-    },
-  ],
-  seo: [
+  faqTitle: "常见问题",  faq,
+  howTo,  seo: [
     {
       type: 'title',
       text: '平衡盐水与发酵大师指南',
@@ -249,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: '我们的平衡计算器为您排除配方中的不确定因素，让您像专业大厨一样充满信心地烹饪。',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

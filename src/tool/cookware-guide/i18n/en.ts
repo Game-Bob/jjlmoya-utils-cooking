@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Smart Cookware Selector: Kitchen Utensils Guide";
 const description = "Interactive guide to choose the best pan or pot based on your cooking style. Iron vs Stainless Steel vs Teflon. Find your perfect tool.";
@@ -97,23 +98,7 @@ export const content: ToolLocaleContent = {
       question: 'How much should I spend on a good pan?',
       answer: 'A set of 2-3 medium-high quality pans (stainless or iron) can last 20+ years. It\'s better to invest well in one pan than to buy 5 cheap ones lasting 2 years. Quality over quantity.',
     },
-  ],
-  bibliographyTitle: 'Bibliography',
-  bibliography: [
-    {
-      name: 'The Flavor Bible - Pairing and Progress in Food',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'On Food and Cooking - Harold McGee (The Science of Cooking)',
-      url: 'https://www.foodscience.org/',
-    },
-    {
-      name: 'Salt Fat Acid Heat - Samin Nosrat',
-      url: 'https://www.saltfatacidheat.com/',
-    },
-  ],
-  howTo: [
+  ],  howTo: [
     {
       name: 'Select your cooking style',
       text: 'Choose between high heat (searing), delicate (eggs), stews (slow cooking) or quick cooking. Each style has distinct requirements.',
@@ -230,5 +215,6 @@ export const content: ToolLocaleContent = {
     enamelCon: 'Very expensive. Enamel fragile to hard impacts.',
     enamelTip: 'Perfect for endless braises. Enamel handles acids (tomato) without issues.',
   },
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

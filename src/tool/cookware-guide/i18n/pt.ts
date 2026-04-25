@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Seletor de Frigideiras Inteligente: Guia de Utensílios de Cozinha";
 const description = "Guia interativo para escolher a melhor frigideira ou panela de acordo com o seu estilo de cozinha. Ferro vs Aço vs Teflon. Encontre a ferramenta perfeita.";
@@ -76,23 +77,7 @@ export const content: ToolLocaleContent = {
   title: 'Seletor de Frigideiras Inteligente: Guia de Utensílios de Cozinha',
   description: 'Guia interativo para escolher a melhor frigideira ou panela de acordo com o seu estilo de cozinha. Ferro vs Aço vs Teflon. Encontre a ferramenta perfeita.',
   faqTitle: 'Perguntas Frequentes',
-  faq,
-  bibliographyTitle: 'Bibliografia',
-  bibliography: [
-    {
-      name: 'The Flavor Bible - Pairing, and Progress in Food',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'On Food and Cooking - Harold McGee',
-      url: 'https://www.foodscience.org/',
-    },
-    {
-      name: 'Salt Fat Acid Heat - Samin Nosrat',
-      url: 'https://www.saltfatacidheat.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -196,5 +181,6 @@ export const content: ToolLocaleContent = {
     enamelCon: 'Muito cara. Esmalte frágil a impactos secos.',
     enamelTip: 'Perfeita para guisados intermináveis. O esmalte permite cozinhar ácidos (tomate) sem problemas.',
   },
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Kalkulator Skalowania Form do Pieczenia';
 const description =
@@ -81,10 +82,7 @@ export const content: ToolLocaleContent = {
 	slug: 'formy-do-pieczenia',
 	title,
 	description,
-	faqTitle: 'Często Zadawane Pytania o Skalowanie',
-	bibliographyTitle: 'Źródła i Referencje',
-
-	ui: {
+	faqTitle: 'Często Zadawane Pytania o Skalowanie',	ui: {
 		originalRecipe: 'Oryginalny Przepis',
 		yourMold: 'Twoja Forma',
 		round: 'Okrągła',
@@ -113,18 +111,7 @@ export const content: ToolLocaleContent = {
 		increase: 'Zwiększ',
 	},
 
-	faq,
-	bibliography: [
-		{
-			name: 'Baking Science and Technology - E.J. Pyler',
-			url: 'https://www.bakingbusiness.com/',
-		},
-		{
-			name: 'The Professional Pastry Chef - Bo Friberg',
-			url: 'https://www.wiley.com/',
-		},
-	],
-	howTo,
+	faq,	howTo,
 	seo: [
 		{
 			type: 'title',
@@ -166,5 +153,6 @@ export const content: ToolLocaleContent = {
 			html: 'Nigdy nie napełniaj formy więcej niż do 2/3 jej pojemności, niezależnie od obliczonego współczynnika.',
 		},
 	],
-	schemas: [appSchema, faqSchema, howToSchema],
+  bibliography,
+  schemas: [appSchema, faqSchema, howToSchema],
 };

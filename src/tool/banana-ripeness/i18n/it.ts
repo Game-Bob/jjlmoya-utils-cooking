@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Diagnosi e Conservazione delle Banane: Guida Scientifica";
 const description = "Analizza lo stato di maturazione delle tue banane con precisione scientifica. Apprendi tecniche di conservazione, la biochimica dell'etilene e l'ottimizzazione nutrizionale.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Diagnosi e Conservazione delle Banane: Guida Scientifica',
   description: 'Analizza lo stato di maturazione delle tue banane con precisione scientifica. Apprendi tecniche di conservazione, la biochimica dell\'etilene e l\'ottimizzazione nutrizionale.',
   faqTitle: 'Domande Frequenti',
-  bibliographyTitle: 'Fonti e Riferimenti',
   ui: {
     ripesnessLabel: 'Stato di Maturazione',
     nextStageLabel: 'Prossima Tappa tra',
@@ -142,20 +142,6 @@ export const content: ToolLocaleContent = {
     {
       name: 'Applica la conservazione',
       text: 'Segui le raccomandazioni specifiche di conservazione e accelerazione in base allo stato attuale.',
-    },
-  ],
-  bibliography: [
-    {
-      name: 'Ethylene and Fruit Ripening: A Biological Review',
-      url: '',
-    },
-    {
-      name: 'Biochemical Changes in Musa acuminata during Ripening (Journal of Food Science)',
-      url: 'https://www.foodsciencejournal.com/assets/archives/2017/vol2issue5/2-5-31-566.pdf',
-    },
-    {
-      name: 'The Role of Respiration in Climacteric Fruits (Scientific American)',
-      url: 'https://www.nature.com/articles/226976b0',
     },
   ],
   seo: [
@@ -244,5 +230,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Allerta degradazione:</strong> Fattori esterni come umidità relativa superiore all\'85% o temperature sopra i 25°C possono accelerare drasticamente la degradazione, rendendo la banana da ottimale a immangiabile in poche ore. Questo simulatore ti aiuta ad anticipare questi cambiamenti e a pianificare strategicamente.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

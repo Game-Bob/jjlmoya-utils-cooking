@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Zuurdesem Calculator Fermentatie Ratios";
 const description = "Bereken automatisch de verhoudingen van zuurdesem, bloem en water om je cultuur te onderhouden. Vooraf ingestelde of aangepaste verhoudingen.";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
 	title,
 	description,
 	faqTitle: 'Veelgestelde Vragen',
-	faq,
-	bibliographyTitle: 'Bibliografie',
-	bibliography: [
-		{
-			name: 'Tartine Bread - Chad Robertson',
-			url: 'https://www.penguinrandomhouse.com/books/310016/tartine-bread-by-chad-robertson/',
-		},
-	],
-	howTo,
+	faq,  howTo,
 	seo: [
 		{
 			type: 'title',
@@ -112,5 +105,6 @@ export const content: ToolLocaleContent = {
 		totalDough: 'Totaal Desem',
 		mm: 'ZD',
 	},
+  bibliography,
 	schemas: [faqSchema, howToSchema, appSchema],
 };

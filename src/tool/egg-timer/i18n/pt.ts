@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Cronômetro de Ovos Científico";
 const description = "Calculadora termodinâmica para a cozedura perfeita de ovos baseada em altitude, temperatura e tamanho.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: "Cronômetro de Ovos Científico",
   description: "Calculadora termodinâmica para a cozedura perfeita de ovos baseada em altitude, temperatura e tamanho.",
   faqTitle: "Perguntas Frequentes",
-  bibliographyTitle: "Referências Científicas",
   ui: {
     parameters: "Parâmetros",
     initial_temperature: "Temperatura Inicial",
@@ -94,22 +94,7 @@ export const content: ToolLocaleContent = {
     hard_cooked: "Cozido/Duro",
     hard_description: "Totalmente cozido, gema firme.",
   },
-  faq,
-  bibliography: [
-    {
-      name: "The Science of Boiling an Egg - Charles D. H. Williams",
-      url: "https://newton.ex.ac.uk/teaching/CDHW/Egg/",
-    },
-    {
-      name: "The Food Lab: The Science of the Best Hard Boiled Eggs - J. Kenji López-Alt",
-      url: "https://www.seriouseats.com/the-food-lab-hard-boiled-eggs-recipe",
-    },
-    {
-      name: "The Food Lab: Perfect Soft Boiled Eggs",
-      url: "https://www.seriouseats.com/soft-boiled-eggs-recipe",
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -248,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: 'O nosso cronômetro utiliza a equação de Charles Williams para ajustar cada segundo segundo a tua localização exacta.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

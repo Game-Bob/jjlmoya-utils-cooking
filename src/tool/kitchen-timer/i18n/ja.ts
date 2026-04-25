@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "マルチキッチンタイマー";
 const description = "複数の調理時間を同時に管理。独立したアラーム機能を備え、シェフや調理の段取り（ミザンプラス）に最適です。";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'マルチキッチンタイマー',
   description: '複数の調理時間を同時に管理。独立したアラーム機能を備え、シェフや調理の段取り（ミザンプラス）に最適です。',
   faqTitle: 'よくある質問',
-  bibliographyTitle: '参考文献',
   ui: {
     addTimer: 'タイマーを追加',
     stopAll: 'すべて停止',
@@ -101,18 +101,7 @@ export const content: ToolLocaleContent = {
     statusFinished: '時間です！',
     finishNotification: 'タイマーが終了しました：',
   },
-  faq,
-  bibliography: [
-    {
-      name: '食品安全基準: USDA ガイドライン',
-      url: 'https://www.fsis.usda.gov/',
-    },
-    {
-      name: 'ミザンプラス - プロの厨房管理',
-      url: 'https://www.escoffier.edu/',
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -166,5 +155,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>プロのコツ：</strong> 時間の正確さは、シェフと素人を分ける大きな境界線です。感覚に頼りすぎず、正確なツールを使って一貫した美味しさを保証しましょう。',
     },
   ],
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Akıllı Tencere Seçici: Mutfak Gereçleri Rehberi";
 const description = "Pişirme tarzınıza göre en iyi tava veya tencereyi seçmeniz için etkileşimli rehber. Döküm vs Çelik vs Teflon. Mükemmel aracınızı bulun.";
@@ -76,23 +77,7 @@ export const content: ToolLocaleContent = {
   title: 'Akıllı Tencere Seçici: Mutfak Gereçleri Rehberi',
   description: 'Pişirme tarzınıza göre en iyi tava veya tencereyi seçmeniz için etkileşimli rehber. Döküm vs Çelik vs Teflon. Mükemmel aracınızı bulun.',
   faqTitle: 'Sıkça Sorulan Sorular',
-  faq,
-  bibliographyTitle: 'Kaynakça',
-  bibliography: [
-    {
-      name: 'The Flavor Bible - Pairing, and Progress in Food',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'On Food and Cooking - Harold McGee',
-      url: 'https://www.foodscience.org/',
-    },
-    {
-      name: 'Salt Fat Acid Heat - Samin Nosrat',
-      url: 'https://www.saltfatacidheat.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -196,5 +181,6 @@ export const content: ToolLocaleContent = {
     enamelCon: 'Çok pahalıdır. Emaye sert darbelere karşı kırılgandır.',
     enamelTip: 'Bitmek bilmeyen tencere yemekleri için mükemmeldir. Emaye sayesinde asidik (domates) gıdalar sorunsuz pişirilir.',
   },
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Calculadora de Salmoura por Equilíbrio";
 const description = "A ciência do equilíbrio para carnes suculentas e fermentados perfeitos. Calcule a salinidade exata baseada no peso total do ingrediente e da água.";
@@ -104,25 +105,8 @@ export const content: ToolLocaleContent = {
     timePreservesLabel: "Tempo (Conservas)",
     timePreservesDuration: "1+ Meses",
   },
-  faqTitle: "Perguntas Frequentes",
-  bibliographyTitle: "Fontes e Referências",
-  faq,
-  howTo,
-  bibliography: [
-    {
-      name: "The Noma Guide to Fermentation - René Redzepi & David Zilber",
-      url: "https://www.nomacph.com/",
-    },
-    {
-      name: "Salt, Fat, Acid, Heat - Samin Nosrat",
-      url: "https://www.saltfatacidheat.com/",
-    },
-    {
-      name: "Pollan, Michael - Cooked",
-      url: "https://michaelpollan.com/",
-    },
-  ],
-  seo: [
+  faqTitle: "Perguntas Frequentes",  faq,
+  howTo,  seo: [
     {
       type: 'title',
       text: 'Guia Mestre de Salmoura por Equilíbrio e Fermentação',
@@ -249,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: 'A nossa calculadora de equilíbrio elimina as suposições das suas receitas, permitindo-lhe cozinhar com a confiança de um profissional do setor.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,43 +1,44 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Diagnóstico y Conservación de Plátanos: Guía Científica";
 const description = "Analiza el estado de maduración de tus plátanos con precisión científica. Aprende técnicas de conservación, bioquímica del etileno y optimización nutricional.";
 const faq = [
-    {
-      question: '¿Por qué se ponen negros los plátanos en la nevera?',
-      answer: 'El frío rompe las paredes celulares de la cáscara, liberando enzimas que oxidan los fenoles y crean polifenoles negros. Sin embargo, el interior suele conservarse firme y dulce por más tiempo que fuera.',
-    },
-    {
-      question: '¿Cómo puedo madurar un plátano rápido?',
-      answer: 'Ponlos en una bolsa de papel cerrada con una manzana o un tomate. Estos emiten gas etileno, que acelera la maduración. Si tienes mucha prisa, puedes ponerlos unos minutos en el horno a baja temperatura.',
-    },
-    {
-      question: '¿Es seguro comer plátanos con manchas?',
-      answer: 'Sí, totalmente. De hecho, las manchas indican que el almidón se ha convertido en azúcar, haciéndolos más dulces y digeribles. Solo deséchalos si tienen moho, huelen mal o están excesivamente blandos.',
-    },
-    {
-      question: '¿Qué es el etileno?',
-      answer: 'Es una hormona vegetal en forma de gas que regula el crecimiento y la maduración. El plátano es una fruta climatérica, lo que significa que sigue produciendo etileno y madurando después de ser recolectado.',
-    },
-  ];
+  {
+    question: '¿Por qué se ponen negros los plátanos en la nevera?',
+    answer: 'El frío rompe las paredes celulares de la cáscara, liberando enzimas que oxidan los fenoles y crean polifenoles negros. Sin embargo, el interior suele conservarse firme y dulce por más tiempo que fuera.',
+  },
+  {
+    question: '¿Cómo puedo madurar un plátano rápido?',
+    answer: 'Ponlos en una bolsa de papel cerrada con una manzana o un tomate. Estos emiten gas etileno, que acelera la maduración. Si tienes mucha prisa, puedes ponerlos unos minutos en el horno a baja temperatura.',
+  },
+  {
+    question: '¿Es seguro comer plátanos con manchas?',
+    answer: 'Sí, totalmente. De hecho, las manchas indican que el almidón se ha convertido en azúcar, haciéndolos más dulces y digeribles. Solo deséchalos si tienen moho, huelen mal o están excesivamente blandos.',
+  },
+  {
+    question: '¿Qué es el etileno?',
+    answer: 'Es una hormona vegetal en forma de gas que regula el crecimiento y la maduración. El plátano es una fruta climatérica, lo que significa que sigue produciendo etileno y madurando después de ser recolectado.',
+  },
+];
 const howTo = [
-    {
-      name: 'Observar el color',
-      text: 'Examina cuidadosamente el color de la cáscara, desde verde hasta marrón oscuro, para determinar el estado de maduración actual.',
-    },
-    {
-      name: 'Usar el simulador',
-      text: 'Desliza el indicador de maduración para ver predicciones precisas sobre cuándo alcanzará el siguiente estado.',
-    },
-    {
-      name: 'Ajustar condiciones',
-      text: 'Modifica temperatura y humedad para ver cómo afectan la velocidad de maduración.',
-    },
-    {
-      name: 'Aplicar conservación',
-      text: 'Sigue las recomendaciones específicas de conservación y aceleración según el estado actual.',
-    },
-  ];
+  {
+    name: 'Observar el color',
+    text: 'Examina cuidadosamente el color de la cáscara, desde verde hasta marrón oscuro, para determinar el estado de maduración actual.',
+  },
+  {
+    name: 'Usar el simulador',
+    text: 'Desliza el indicador de maduración para ver predicciones precisas sobre cuándo alcanzará el siguiente estado.',
+  },
+  {
+    name: 'Ajustar condiciones',
+    text: 'Modifica temperatura y humedad para ver cómo afectan la velocidad de maduración.',
+  },
+  {
+    name: 'Aplicar conservación',
+    text: 'Sigue las recomendaciones específicas de conservación y aceleración según el estado actual.',
+  },
+];
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Diagnóstico y Conservación de Plátanos: Guía Científica',
   description: 'Analiza el estado de maduración de tus plátanos con precisión científica. Aprende técnicas de conservación, bioquímica del etileno y optimización nutricional.',
   faqTitle: 'Preguntas Frecuentes',
-  bibliographyTitle: 'Fuentes y Referencias',
   ui: {
     ripesnessLabel: 'Estado de Maduración',
     nextStageLabel: 'Próxima Etapa en',
@@ -142,20 +142,6 @@ export const content: ToolLocaleContent = {
     {
       name: 'Aplicar conservación',
       text: 'Sigue las recomendaciones específicas de conservación y aceleración según el estado actual.',
-    },
-  ],
-  bibliography: [
-    {
-      name: 'Ethylene and Fruit Ripening: A Biological Review',
-      url: '',
-    },
-    {
-      name: 'Biochemical Changes in Musa acuminata during Ripening (Journal of Food Science)',
-      url: 'https://www.foodsciencejournal.com/assets/archives/2017/vol2issue5/2-5-31-566.pdf',
-    },
-    {
-      name: 'The Role of Respiration in Climacteric Fruits (Scientific American)',
-      url: 'https://www.nature.com/articles/226976b0',
     },
   ],
   seo: [
@@ -244,5 +230,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Alerta de degradación:</strong> Factores externos como humedad relativa superior al 85% o temperaturas por encima de los 25°C pueden acelerar drásticamente la degradación, llevando el plátano de óptimo a incomestible en cuestión de horas. Este simulador te ayuda a anticipar estos cambios y planificar estratégicamente.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

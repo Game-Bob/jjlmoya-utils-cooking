@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Калькулятор масштабирования форм для выпечки';
 const description =
@@ -81,10 +82,7 @@ export const content: ToolLocaleContent = {
 	slug: 'formi-dlya-vipechki',
 	title,
 	description,
-	faqTitle: 'Часто задаваемые вопросы о масштабировании',
-	bibliographyTitle: 'Источники и рекомендации',
-
-	ui: {
+	faqTitle: 'Часто задаваемые вопросы о масштабировании',	ui: {
 		originalRecipe: 'Оригинальный рецепт',
 		yourMold: 'Ваша форма',
 		round: 'Круглая',
@@ -113,18 +111,7 @@ export const content: ToolLocaleContent = {
 		increase: 'Увеличить',
 	},
 
-	faq,
-	bibliography: [
-		{
-			name: 'Baking Science and Technology - E.J. Pyler',
-			url: 'https://www.bakingbusiness.com/',
-		},
-		{
-			name: 'The Professional Pastry Chef - Bo Friberg',
-			url: 'https://www.wiley.com/',
-		},
-	],
-	howTo,
+	faq,	howTo,
 	seo: [
 		{
 			type: 'title',
@@ -166,5 +153,6 @@ export const content: ToolLocaleContent = {
 			html: 'Никогда не заполняйте форму более чем на 2/3 объема, независимо от расчетов.',
 		},
 	],
-	schemas: [appSchema, faqSchema, howToSchema],
+  bibliography,
+  schemas: [appSchema, faqSchema, howToSchema],
 };

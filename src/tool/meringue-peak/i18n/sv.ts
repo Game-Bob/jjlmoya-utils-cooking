@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Maräng & Äggvitekalkylator";
 const description = "Beräkna den exakta mängden socker för fransk, italiensk eller schweizisk maräng baserat på vikten på dina äggvitor. Visptider och konditoritips.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: 'Vanliga Frågor',
-  bibliographyTitle: 'Källor och Referenser',
   ui: {
     whitesLabel: 'Vikt på Äggvitorna',
     whitesPlaceholder: 'Ex. 120',
@@ -113,18 +113,7 @@ export const content: ToolLocaleContent = {
     invalidWeightError: 'Ange en giltig vikt',
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: 'Larousse Kitchen: Typer av maräng',
-      url: 'https://laroussecocina.mx/palabra/merengue/',
-    },
-    {
-      name: 'Exploratorium: Egg Science',
-      url: 'https://www.exploratorium.edu/explore/cooking/egg-science',
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: 'Mästarguide för Maräng och Äggvita',
@@ -206,5 +195,6 @@ export const content: ToolLocaleContent = {
       html: 'Rengör skålen med vinäger eller citron. Minsta spår av fett hindrar äggvitorna från att lyfta.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

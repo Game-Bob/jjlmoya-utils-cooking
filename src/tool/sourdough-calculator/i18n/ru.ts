@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Калькулятор закваски: пропорции ферментации";
 const description = "Автоматический расчет пропорций закваски, муки и воды для поддержания вашей культуры. Предустановленные или пользовательские соотношения.";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
 	title,
 	description,
 	faqTitle: 'Часто задаваемые вопросы',
-	faq,
-	bibliographyTitle: 'Библиография',
-	bibliography: [
-		{
-			name: 'Tartine Bread - Chad Robertson',
-			url: 'https://www.penguinrandomhouse.com/books/310016/tartine-bread-by-chad-robertson/',
-		},
-	],
-	howTo,
+	faq,  howTo,
 	seo: [
 		{
 			type: 'title',
@@ -112,5 +105,6 @@ export const content: ToolLocaleContent = {
 		totalDough: 'Всего закваски',
 		mm: 'ЗК',
 	},
+  bibliography,
 	schemas: [faqSchema, howToSchema, appSchema],
 };

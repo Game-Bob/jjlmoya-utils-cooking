@@ -1,43 +1,44 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Banana Diagnostics and Conservation: Scientific Guide";
 const description = "Analyze your banana ripening stage with scientific precision. Learn conservation techniques, ethylene biochemistry, and nutritional optimization.";
 const faq = [
-    {
-      question: 'Why do bananas turn black in the fridge?',
-      answer: 'Cold breaks down cell walls in the peel, releasing enzymes that oxidize phenols and create black polyphenols. However, the inside usually stays firm and sweet longer than outside.',
-    },
-    {
-      question: 'How can I ripen a banana quickly?',
-      answer: 'Put them in a closed paper bag with an apple or tomato. These emit ethylene gas, which accelerates ripening. If in a hurry, you can put them in the oven at low temperature for a few minutes.',
-    },
-    {
-      question: 'Is it safe to eat spotted bananas?',
-      answer: 'Yes, totally. Spots indicate starch has converted to sugar, making them sweeter and more digestible. Only discard if they have mold, smell bad, or are excessively soft.',
-    },
-    {
-      question: 'What is ethylene?',
-      answer: 'It\'s a plant hormone in gas form that regulates growth and ripening. Banana is a climacteric fruit, meaning it continues producing ethylene and ripening after harvest.',
-    },
-  ];
+  {
+    question: 'Why do bananas turn black in the fridge?',
+    answer: 'Cold breaks down cell walls in the peel, releasing enzymes that oxidize phenols and create black polyphenols. However, the inside usually stays firm and sweet longer than outside.',
+  },
+  {
+    question: 'How can I ripen a banana quickly?',
+    answer: 'Put them in a closed paper bag with an apple or tomato. These emit ethylene gas, which accelerates ripening. If in a hurry, you can put them in the oven at low temperature for a few minutes.',
+  },
+  {
+    question: 'Is it safe to eat spotted bananas?',
+    answer: 'Yes, totally. Spots indicate starch has converted to sugar, making them sweeter and more digestible. Only discard if they have mold, smell bad, or are excessively soft.',
+  },
+  {
+    question: 'What is ethylene?',
+    answer: 'It\'s a plant hormone in gas form that regulates growth and ripening. Banana is a climacteric fruit, meaning it continues producing ethylene and ripening after harvest.',
+  },
+];
 const howTo = [
-    {
-      name: 'Observe the color',
-      text: 'Carefully examine peel color, from green to dark brown, to determine current ripening stage.',
-    },
-    {
-      name: 'Use the simulator',
-      text: 'Slide the ripeness indicator to see accurate predictions about when it reaches the next stage.',
-    },
-    {
-      name: 'Adjust conditions',
-      text: 'Modify temperature and humidity to see how they affect ripening speed.',
-    },
-    {
-      name: 'Apply conservation',
-      text: 'Follow specific conservation and acceleration recommendations based on current stage.',
-    },
-  ];
+  {
+    name: 'Observe the color',
+    text: 'Carefully examine peel color, from green to dark brown, to determine current ripening stage.',
+  },
+  {
+    name: 'Use the simulator',
+    text: 'Slide the ripeness indicator to see accurate predictions about when it reaches the next stage.',
+  },
+  {
+    name: 'Adjust conditions',
+    text: 'Modify temperature and humidity to see how they affect ripening speed.',
+  },
+  {
+    name: 'Apply conservation',
+    text: 'Follow specific conservation and acceleration recommendations based on current stage.',
+  },
+];
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Banana Diagnostics and Conservation: Scientific Guide',
   description: 'Analyze your banana ripening stage with scientific precision. Learn conservation techniques, ethylene biochemistry, and nutritional optimization.',
   faqTitle: 'Frequently Asked Questions',
-  bibliographyTitle: 'Sources and References',
   ui: {
     ripesnessLabel: 'Ripeness State',
     nextStageLabel: 'Next Stage in',
@@ -142,20 +142,6 @@ export const content: ToolLocaleContent = {
     {
       name: 'Apply conservation',
       text: 'Follow specific conservation and acceleration recommendations based on current stage.',
-    },
-  ],
-  bibliography: [
-    {
-      name: 'Ethylene and Fruit Ripening: A Biological Review (Nature Research)',
-      url: 'https://www.researchgate.net/profile/Jean-Claude-Pech/publication/284632414_Ethylene_and_Fruit_Ripening/links/5aef0bcbaca2727bc006482c/Ethylene-and-Fruit-Ripening.pdf',
-    },
-    {
-      name: 'Biochemical Changes in Musa acuminata during Ripening (Journal of Food Science)',
-      url: 'https://www.foodsciencejournal.com/assets/archives/2017/vol2issue5/2-5-31-566.pdf',
-    },
-    {
-      name: 'The Role of Respiration in Climacteric Fruits (Scientific American)',
-      url: 'https://www.nature.com/articles/226976b0',
     },
   ],
   seo: [
@@ -244,5 +230,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Degradation Alert:</strong> External factors like relative humidity over 85% or temperatures above 25°C can drastically accelerate degradation, taking banana from optimal to inedible in hours. This simulator helps you anticipate these changes and plan strategically.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

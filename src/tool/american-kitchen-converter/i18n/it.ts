@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Convertitore Cucina Americana: Cup in Grammi e Temperature";
 const description = "Converti cup, cucchiai e Fahrenheit in sistema metrico. La bussola per decifrare le ricette americane con precisione professionale.";
@@ -80,7 +81,6 @@ export const content: ToolLocaleContent = {
   title: 'Convertitore Cucina Americana: Cup in Grammi e Temperature',
   description: 'Converti cup, cucchiai e Fahrenheit in sistema metrico. La bussola per decifrare le ricette americane con precisione professionale.',
   faqTitle: 'Domande Frequenti',
-  bibliographyTitle: 'Bibliografia',
   ui: {
     copied: 'Copiato',
     noHistory: 'Nessuna cronologia',
@@ -324,16 +324,6 @@ export const content: ToolLocaleContent = {
       answer: 'Gas 4 = 180°C = 350°F. È la scala britannica. In cucina, cerchiamo il numero equivalente nel tuo forno: alcuni usano il gas, altri gradi elettronici.',
     },
   ],
-  bibliography: [
-    {
-      name: 'King Arthur Baking: Ingredient Weight Chart',
-      url: 'https://www.kingarthurbaking.com/learn/ingredient-weight-chart',
-    },
-    {
-      name: 'Culinary Institute of America: Conversions and Equivalents',
-      url: 'https://www.ciachef.edu/',
-    },
-  ],
   howTo: [
     {
       name: 'Seleziona il tipo de conversione',
@@ -352,5 +342,6 @@ export const content: ToolLocaleContent = {
       text: 'Con la conversione esatta, ora puoi seguire la ricetta americana con precisione professionale.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Kalkulator Adonan Pizza Neapolitan";
 const description = "Hitung proporsi tepung, air, garam, dan ragi yang tepat untuk membuat pizza Neapolitan asli di rumah.";
@@ -72,7 +73,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: "Pertanyaan Umum",
-  bibliographyTitle: "Referensi",
   ui: {
     parameters: "Parameter",
     quantity: "Jumlah",
@@ -103,14 +103,7 @@ export const content: ToolLocaleContent = {
       "Ukuran visual mewakili perkiraan diameter pizza yang diregangkan berdasarkan berat bola adonan.",
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: "Associazione Verace Pizza Napoletana",
-      url: "https://www.pizzanapoletana.org/",
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: 'Panduan Ahli Adonan Pizza Neapolitan Asli',
@@ -121,5 +114,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Pizza Neapolitan</strong> adalah warisan budaya. Kesuksesan terletak pada presisi antara waktu, suhu, dan hidrasi.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

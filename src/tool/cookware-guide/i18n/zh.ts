@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "智能锅具选择器：炊具指南";
 const description = "根据您的烹饪风格选择最佳锅具的互动指南。铸铁 vs 不锈钢 vs 特氟龙。找到您完美的烹饪工具。";
@@ -76,23 +77,7 @@ export const content: ToolLocaleContent = {
   title: '智能锅具选择器：炊具指南',
   description: '根据您的烹饪风格选择最佳锅具的互动指南。铸铁 vs 不锈钢 vs 特氟龙。找到您完美的烹饪工具。',
   faqTitle: '常见问题',
-  faq,
-  bibliographyTitle: '参考文献',
-  bibliography: [
-    {
-      name: 'The Flavor Bible - Pairing, and Progress in Food',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'On Food and Cooking - Harold McGee (食物与烹饪)',
-      url: 'https://www.foodscience.org/',
-    },
-    {
-      name: 'Salt Fat Acid Heat - Samin Nosrat',
-      url: 'https://www.saltfatacidheat.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -196,5 +181,6 @@ export const content: ToolLocaleContent = {
     enamelCon: '价格昂贵。珐琅层较脆，怕猛烈磕碰。',
     enamelTip: '完美适于长时间炖煮。珐琅层可让您无忧烹饪酸性食物（如番茄）。',
   },
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

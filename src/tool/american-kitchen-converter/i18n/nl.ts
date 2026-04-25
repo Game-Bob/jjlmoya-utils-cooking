@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Amerikaanse Keukénomzetter: Cups naar Gram en Temperaturen";
 const description = "Converteer cups, eetlepels en Fahrenheit naar het metrische systeem. Het kompas om Amerikaanse recepten met professionele precisie te ontcijferen.";
@@ -80,7 +81,6 @@ export const content: ToolLocaleContent = {
   title: 'Amerikaanse Keukénomzetter: Cups naar Gram en Temperaturen',
   description: 'Converteer cups, eetlepels en Fahrenheit naar het metrische systeem. Het kompas om Amerikaanse recepten met professionele precisie te ontcijferen.',
   faqTitle: 'Veelgestelde Vragen',
-  bibliographyTitle: 'Bibliografie',
   ui: {
     copied: 'Gekopieerd',
     noHistory: 'Geen geschiedenis',
@@ -324,16 +324,6 @@ export const content: ToolLocaleContent = {
       answer: 'Gas 4 = 180°C = 350°F. Dit is de Britse schaal. In onze keuken zoeken we de equivalente waarde op jouw oven: sommige gebruiken gasstanden, andere elektronische graden.',
     },
   ],
-  bibliography: [
-    {
-      name: 'King Arthur Baking: Ingredient Weight Chart',
-      url: 'https://www.kingarthurbaking.com/learn/ingredient-weight-chart',
-    },
-    {
-      name: 'Culinary Institute of America: Conversions and Equivalents',
-      url: 'https://www.ciachef.edu/',
-    },
-  ],
   howTo: [
     {
       name: 'Selecteer het type conversie',
@@ -352,5 +342,6 @@ export const content: ToolLocaleContent = {
       text: 'Met de exacte conversie kun je nu het Amerikaanse recept met professionele precisie volgen.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Baiser & Eischnee Rechner";
 const description = "Berechnen Sie die exakte Zuckermenge für französisches, italienisches oder Schweizer Baiser basierend auf dem Gewicht Ihres Eiweißes. Schlagzeiten und Konditor-Tipps.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: 'Häufig gestellte Fragen',
-  bibliographyTitle: 'Quellen und Referenzen',
   ui: {
     whitesLabel: 'Gewicht des Eiweißes',
     whitesPlaceholder: 'z.B. 120',
@@ -113,18 +113,7 @@ export const content: ToolLocaleContent = {
     invalidWeightError: 'Gültiges Gewicht eingeben',
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: 'Larousse Gastronomique: Baiser-Arten',
-      url: 'https://laroussecocina.mx/palabra/merengue/',
-    },
-    {
-      name: 'Exploratorium: The Science of Cooking - Egg Science',
-      url: 'https://www.exploratorium.edu/explore/cooking/egg-science',
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: 'Meister Leitfaden für Baiser und Eischnee',
@@ -217,5 +206,6 @@ export const content: ToolLocaleContent = {
       html: 'Reinigen Sie die Schüssel vor Beginn mit Essig oder Zitrone. Fettspuren verhindern das Steifwerden des Eiweißes.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

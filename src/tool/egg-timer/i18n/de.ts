@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Wissenschaftliche Eieruhr";
 const description = "Thermodynamischer Rechner für das perfekte Kochen von Eiern unter Berücksichtigung von Höhenlage, Temperatur und Größe.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: "Wissenschaftliche Eieruhr",
   description: "Thermodynamischer Rechner für das perfekte Kochen von Eiern unter Berücksichtigung von Höhenlage, Temperatur und Größe.",
   faqTitle: "Häufig gestellte Fragen",
-  bibliographyTitle: "Wissenschaftliche Referenzen",
   ui: {
     parameters: "Parameter",
     initial_temperature: "Ausgangstemperatur",
@@ -94,22 +94,7 @@ export const content: ToolLocaleContent = {
     hard_cooked: "Hartgekocht",
     hard_description: "Vollständig gegart, Eigelb fest.",
   },
-  faq,
-  bibliography: [
-    {
-      name: "The Science of Boiling an Egg - Charles D. H. Williams",
-      url: "https://newton.ex.ac.uk/teaching/CDHW/Egg/",
-    },
-    {
-      name: "The Food Lab: The Science of the Best Hard Boiled Eggs - J. Kenji López-Alt",
-      url: "https://www.seriouseats.com/the-food-lab-hard-boiled-eggs-recipe",
-    },
-    {
-      name: "The Food Lab: Perfect Soft Boiled Eggs",
-      url: "https://www.seriouseats.com/soft-boiled-eggs-recipe",
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -248,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: 'Unsere Eieruhr nutzt die Charles-Williams-Gleichung, um jede Sekunde an Ihren exakten Standort und den Zustand Ihres Kühlschranks anzupassen.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

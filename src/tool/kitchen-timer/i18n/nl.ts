@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Meervoudige Keukentimer";
 const description = "Beheer meerdere kooktijden gelijktijdig. Onafhankelijke alarmen, ideaal voor chefs en organisatie in de keuken (Mise en Place).";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Meervoudige Keukentimer',
   description: 'Beheer meerdere kooktijden gelijktijdig. Onafhankelijke alarmen, ideaal voor chefs en organisatie in de keuken (Mise en Place).',
   faqTitle: 'Veelgestelde Vragen',
-  bibliographyTitle: 'Referenties',
   ui: {
     addTimer: 'Timer Toevoegen',
     stopAll: 'Alles Stoppen',
@@ -101,18 +101,7 @@ export const content: ToolLocaleContent = {
     statusFinished: 'TIJD!',
     finishNotification: 'Timer voltooid voor',
   },
-  faq,
-  bibliography: [
-    {
-      name: 'Voedselveiligheid: USDA Guidelines',
-      url: 'https://www.fsis.usda.gov/',
-    },
-    {
-      name: 'Mise en Place - De Professionele Keuken',
-      url: 'https://www.escoffier.edu/',
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -170,5 +159,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Profi-tip:</strong> precisie in tijd onderscheidt een chef-kok van een hobbykok. Gebruik technologie voor constante resultaten.',
     },
   ],
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Calculadora para Escalar Moldes de Repostería';
 const description =
@@ -86,10 +87,7 @@ export const content: ToolLocaleContent = {
 	slug: 'moldes',
 	title,
 	description,
-	faqTitle: 'Preguntas Frecuentes sobre el Escalado',
-	bibliographyTitle: 'Fuentes y Referencias Científicas',
-
-	ui: {
+	faqTitle: 'Preguntas Frecuentes sobre el Escalado',	ui: {
 		originalRecipe: 'Receta Original',
 		yourMold: 'Tu Molde',
 		round: 'Redondo',
@@ -118,20 +116,7 @@ export const content: ToolLocaleContent = {
 		increase: 'Aumenta',
 	},
 
-	faq,
-
-	bibliography: [
-		{
-			name: 'Baking Science and Technology - E.J. Pyler',
-			url: 'https://www.bakingbusiness.com/',
-		},
-		{
-			name: 'The Professional Pastry Chef - Bo Friberg',
-			url: 'https://www.wiley.com/',
-		},
-	],
-
-	howTo,
+	faq,	howTo,
 
 	seo: [
 		{
@@ -290,6 +275,6 @@ export const content: ToolLocaleContent = {
 			html: 'Dominar el escalado de moldes te permite libertad creativa total en la cocina. Usa esta calculadora para eliminar las suposiciones y obtener resultados profesionales consistentes en cada horneado.',
 		},
 	],
-
-	schemas: [appSchema, faqSchema, howToSchema],
+  bibliography,
+  schemas: [appSchema, faqSchema, howToSchema],
 };

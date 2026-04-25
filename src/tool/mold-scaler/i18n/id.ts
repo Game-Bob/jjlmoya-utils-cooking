@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Kalkulator Skala Loyang Kue';
 const description =
@@ -81,10 +82,7 @@ export const content: ToolLocaleContent = {
 	slug: 'skala-loyang',
 	title,
 	description,
-	faqTitle: 'Pertanyaan Umum tentang Skala',
-	bibliographyTitle: 'Sumber dan Referensi',
-
-	ui: {
+	faqTitle: 'Pertanyaan Umum tentang Skala',	ui: {
 		originalRecipe: 'Resep Asli',
 		yourMold: 'Loyang Anda',
 		round: 'Bulat',
@@ -113,18 +111,7 @@ export const content: ToolLocaleContent = {
 		increase: 'Tambah',
 	},
 
-	faq,
-	bibliography: [
-		{
-			name: 'Baking Science and Technology - E.J. Pyler',
-			url: 'https://www.bakingbusiness.com/',
-		},
-		{
-			name: 'The Professional Pastry Chef - Bo Friberg',
-			url: 'https://www.wiley.com/',
-		},
-	],
-	howTo,
+	faq,	howTo,
 	seo: [
 		{
 			type: 'title',
@@ -165,5 +152,6 @@ export const content: ToolLocaleContent = {
 			html: 'Jangan pernah mengisi loyang lebih dari 2/3 kapasitasnya, apa pun faktor yang dihitung.',
 		},
 	],
-	schemas: [appSchema, faqSchema, howToSchema],
+  bibliography,
+  schemas: [appSchema, faqSchema, howToSchema],
 };

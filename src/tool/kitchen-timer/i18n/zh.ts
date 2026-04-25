@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "多功能厨房计时器";
 const description = "同时管理多个烹饪时间。独立闹钟设计，专业厨师必备的厨房进度组织工具（Mise en Place）。";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: '多功能厨房计时器',
   description: '同时管理多个烹饪时间。独立闹钟设计，专业厨师必备的厨房进度组织工具（Mise en Place）。',
   faqTitle: '常见问题',
-  bibliographyTitle: '参考文献',
   ui: {
     addTimer: '添加计时器',
     stopAll: '全部停止',
@@ -101,18 +101,7 @@ export const content: ToolLocaleContent = {
     statusFinished: '倒计时结束！',
     finishNotification: '计时任务已完成：',
   },
-  faq,
-  bibliography: [
-    {
-      name: '食品安全：USDA（美国农业部）指南',
-      url: 'https://www.fsis.usda.gov/',
-    },
-    {
-      name: 'Mise en Place - 专业厨房组织理论',
-      url: 'https://www.escoffier.edu/',
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -166,5 +155,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>主厨建议：</strong> 对时间的精确把控是专业大厨与家庭主夫/主妇的分水岭。依靠科学工具而非感觉，能极大地稳定烹饪水准。',
     },
   ],
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

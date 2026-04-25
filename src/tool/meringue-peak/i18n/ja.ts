@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "メレンゲ・卵白泡立て計算機";
 const description = "卵白の重さに合わせて、フランス、イタリア、スイス式の各メレンゲに必要な砂糖の量を正確に計算します。泡立て時間の目安やプロのコツも紹介。";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: 'よくある質問',
-  bibliographyTitle: '参考文献',
   ui: {
     whitesLabel: '卵白の重量',
     whitesPlaceholder: '例: 120',
@@ -113,18 +113,7 @@ export const content: ToolLocaleContent = {
     invalidWeightError: '有効な重量を入力してください',
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: 'Larousse Cocina: メレンゲの種類と作り方',
-      url: 'https://laroussecocina.mx/palabra/merengue/',
-    },
-    {
-      name: 'Exploratorium: Egg Science',
-      url: 'https://www.exploratorium.edu/explore/cooking/egg-science',
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: 'メレンゲと卵白泡立てのマスターガイド',
@@ -206,5 +195,6 @@ export const content: ToolLocaleContent = {
       html: '泡立てを始める前に、ボウルを少量の酢やレモン汁を染み込ませたペーパーで拭いてください。わずかな油分でも泡立ちを妨げます。',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

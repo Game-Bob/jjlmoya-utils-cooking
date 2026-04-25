@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Ingrediënten Reclalculator Recept Aanpassen';
 const description = 'Schaal recepten automatisch op basis van het aantal porties. Bereken de exacte hoeveelheden ingrediënten door je recept te vermenigvuldigen of te verkleinen.';
@@ -96,23 +97,7 @@ export const content: ToolLocaleContent = {
     defaultIngredient3: '2 Eieren',
   },
   faqTitle: 'Veelgestelde Vragen',
-  faq,
-  bibliographyTitle: 'Bibliografie',
-  bibliography: [
-    {
-      name: 'Harold McGee - On Food and Cooking: The Science and Lore of the Kitchen',
-      url: 'https://en.wikipedia.org/wiki/Harold_McGee',
-    },
-    {
-      name: 'The Flavor Bible by Karen Page and Andrew Dornenburg',
-      url: 'https://www.flavorprints.com/',
-    },
-    {
-      name: 'Modernist Cuisine - Wetenschappelijke schaaltechnieken',
-      url: 'https://www.modernistcuisine.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -240,5 +225,6 @@ export const content: ToolLocaleContent = {
       html: 'Ons tool vereenvoudigt de wiskunde, zodat je je energie kunt richten op wat echt telt: creativiteit en smaak.',
     },
   ],
+  bibliography,
   schemas: [appSchema, faqSchema, howToSchema],
 };

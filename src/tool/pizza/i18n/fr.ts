@@ -1,65 +1,66 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Calculateur de Pâte à Pizza Napolitaine";
 const description = "Calculez les proportions exactes de farine, eau, sel et levure pour préparer une authentique pizza napolitaine maison avec des résultats professionnels.";
 const faq = [
-    {
-      question: "Quelle est l'hydratation idéale pour une pizza napolitaine ?",
-      answer:
-        "Selon le protocole AVPN, l'hydratation standard est de 63-67%. Pour les débutants, 60-62% est plus gérable. Pour les pizzaiolos avancés avec une farine forte (W300+), 70-75% produit des pâtes extraordinaires mais nécessite de la technique.",
-    },
-    {
-      question: "Combien de temps la pâte doit-elle fermenter ?",
-      answer:
-        "Minimum 24 heures au frigo (4°C) pour activer les enzymes. L'optimal est de 48-72 heures. Au-delà de 72 heures, il faut une farine très forte (W300+) sinon la pâte devient trop acide.",
-    },
-    {
-      question: "Puis-je utiliser de la levure sèche ?",
-      answer:
-        "Oui. La levure sèche équivaut à 0,4x la fraîche (1g sèche = 2,5g fraîche). La qualité est similaire, mais la levure fraîche apporte un profil aromatique plus complexe.",
-    },
-    {
-      question: "Peut-on faire une pizza napolitaine dans un four domestique ?",
-      answer:
-        "Oui, mais avec des adaptations. Préchauffez au maximum (250-280°C) avec une pierre réfractaire pendant 45-60 minutes. La cuisson prendra 5-7 minutes au lieu de 60-90 secondes, mais le résultat est acceptable.",
-    },
-    {
-      question: "Quelle farine dois-je utiliser ?",
-      answer:
-        "Idéal : Caputo Pizzeria (W260-280) ou Manitoba (W350-400). Alternative : toute farine avec 11-13g de protéines pour 100g. Évitez les farines faibles (W130-160) pour les longues fermentations.",
-    },
-    {
-      question: "Pourquoi la pâte se déchire-t-elle lors de l'étalage ?",
-      answer:
-        "Le gluten n'est pas détendu. Laissez la boule reposer 2 à 3 heures à température ambiante. Si cela se répète, le pétrissage était insuffisant ou la farine est trop faible.",
-    },
-  ];
+  {
+    question: "Quelle est l'hydratation idéale pour une pizza napolitaine ?",
+    answer:
+      "Selon le protocole AVPN, l'hydratation standard est de 63-67%. Pour les débutants, 60-62% est plus gérable. Pour les pizzaiolos avancés avec une farine forte (W300+), 70-75% produit des pâtes extraordinaires mais nécessite de la technique.",
+  },
+  {
+    question: "Combien de temps la pâte doit-elle fermenter ?",
+    answer:
+      "Minimum 24 heures au frigo (4°C) pour activer les enzymes. L'optimal est de 48-72 heures. Au-delà de 72 heures, il faut une farine très forte (W300+) sinon la pâte devient trop acide.",
+  },
+  {
+    question: "Puis-je utiliser de la levure sèche ?",
+    answer:
+      "Oui. La levure sèche équivaut à 0,4x la fraîche (1g sèche = 2,5g fraîche). La qualité est similaire, mais la levure fraîche apporte un profil aromatique plus complexe.",
+  },
+  {
+    question: "Peut-on faire une pizza napolitaine dans un four domestique ?",
+    answer:
+      "Oui, mais avec des adaptations. Préchauffez au maximum (250-280°C) avec une pierre réfractaire pendant 45-60 minutes. La cuisson prendra 5-7 minutes au lieu de 60-90 secondes, mais le résultat est acceptable.",
+  },
+  {
+    question: "Quelle farine dois-je utiliser ?",
+    answer:
+      "Idéal : Caputo Pizzeria (W260-280) ou Manitoba (W350-400). Alternative : toute farine avec 11-13g de protéines pour 100g. Évitez les farines faibles (W130-160) pour les longues fermentations.",
+  },
+  {
+    question: "Pourquoi la pâte se déchire-t-elle lors de l'étalage ?",
+    answer:
+      "Le gluten n'est pas détendu. Laissez la boule reposer 2 à 3 heures à température ambiante. Si cela se répète, le pétrissage était insuffisant ou la farine est trop faible.",
+  },
+];
 const howTo = [
-    {
-      name: "Calculez les proportions",
-      text: "Utilisez ce calculateur pour obtenir les grammes exacts de chaque ingrédient selon le nombre de pizzas et le poids de chaque boule.",
-    },
-    {
-      name: "Mélangez la pâte",
-      text: "Mélangez la farine avec de l'eau tiède (22-25°C), le sel (dissous en premier) et la levure. Pétrissez 8-10 minutes au batteur ou 15-20 minutes à la main.",
-    },
-    {
-      name: "Fermentation en bloc",
-      text: "Laissez la pâte entière fermenter 1 à 2 heures à température ambiante (20-25°C) jusqu'à ce qu'elle double de volume.",
-    },
-    {
-      name: "Divisez en boules",
-      text: "Divisez la pâte en portions du poids indiqué. Laissez reposer 15-20 minutes avant de former les boules.",
-    },
-    {
-      name: "Longue fermentation",
-      text: "Placez les boules dans un récipient hermétique au frigo (4°C) pendant 24-72 heures. C'est l'étape critique pour le goût et la digestibilité.",
-    },
-    {
-      name: "Étalez et enfournez",
-      text: "Sortez du froid 30 minutes avant. Étalez du centre vers l'extérieur. Enfournez à température maximale 60-90 secondes (bois) ou 5-7 minutes (maison).",
-    },
-  ];
+  {
+    name: "Calculez les proportions",
+    text: "Utilisez ce calculateur pour obtenir les grammes exacts de chaque ingrédient selon le nombre de pizzas et le poids de chaque boule.",
+  },
+  {
+    name: "Mélangez la pâte",
+    text: "Mélangez la farine avec de l'eau tiède (22-25°C), le sel (dissous en premier) et la levure. Pétrissez 8-10 minutes au batteur ou 15-20 minutes à la main.",
+  },
+  {
+    name: "Fermentation en bloc",
+    text: "Laissez la pâte entière fermenter 1 à 2 heures à température ambiante (20-25°C) jusqu'à ce qu'elle double de volume.",
+  },
+  {
+    name: "Divisez en boules",
+    text: "Divisez la pâte en portions du poids indiqué. Laissez reposer 15-20 minutes avant de former les boules.",
+  },
+  {
+    name: "Longue fermentation",
+    text: "Placez les boules dans un récipient hermétique au frigo (4°C) pendant 24-72 heures. C'est l'étape critique pour le goût et la digestibilité.",
+  },
+  {
+    name: "Étalez et enfournez",
+    text: "Sortez du froid 30 minutes avant. Étalez du centre vers l'extérieur. Enfournez à température maximale 60-90 secondes (bois) ou 5-7 minutes (maison).",
+  },
+];
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -99,7 +100,6 @@ export const content: ToolLocaleContent = {
   description:
     "Calculez les proportions exactes de farine, eau, sel et levure pour préparer une authentique pizza napolitaine maison avec des résultats professionnels.",
   faqTitle: "Questions Fréquentes sur la Pâte à Pizza",
-  bibliographyTitle: "Références Scientifiques et Techniques",
   ui: {
     parameters: "Paramètres",
     quantity: "Quantité",
@@ -185,24 +185,6 @@ export const content: ToolLocaleContent = {
     {
       name: "Étalez et enfournez",
       text: "Sortez du froid 30 minutes avant. Étalez du centre vers l'extérieur. Enfournez à température maximale 60-90 secondes (bois) ou 5-7 minutes (maison).",
-    },
-  ],
-  bibliography: [
-    {
-      name: "Associazione Verace Pizza Napoletana",
-      url: "https://www.pizzanapoletana.org/",
-    },
-    {
-      name: "The Pizza Bible - Tony Gemignani",
-      url: "https://www.amazon.com/Pizza-Bible-Everything-Need-Perfect/dp/0393634039/",
-    },
-    {
-      name: "Franco Pepe - Pepe in Grani",
-      url: "https://www.pepeingranitalia.com/",
-    },
-    {
-      name: "Harina Caputo",
-      url: "https://www.caputoprepara.com/",
     },
   ],
   seo: [
@@ -377,5 +359,6 @@ export const content: ToolLocaleContent = {
       html: "Notre calculateur automatise les proportions spécifiques pour que vous puissiez vous concentrer sur l'essentiel : la technique et la passion pour le produit final.",
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Multitimer för Kök";
 const description = "Hantera flera tillagningstider samtidigt. Oberoende larm, idealiskt för kockar och köksorganisation (Mise en Place).";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Multitimer för Kök',
   description: 'Hantera flera tillagningstider samtidigt. Oberoende larm, idealiskt för kockar och köksorganisation (Mise en Place).',
   faqTitle: 'Vanliga Frågor',
-  bibliographyTitle: 'Referenser',
   ui: {
     addTimer: 'Lägg till Timer',
     stopAll: 'Stoppa Alla',
@@ -101,18 +101,7 @@ export const content: ToolLocaleContent = {
     statusFinished: 'TIDEN UTE!',
     finishNotification: 'Timer klar för',
   },
-  faq,
-  bibliography: [
-    {
-      name: 'Livsmedelssäkerhet: USDA Guidelines',
-      url: 'https://www.fsis.usda.gov/',
-    },
-    {
-      name: 'Mise en Place - Det Professionella Köket',
-      url: 'https://www.escoffier.edu/',
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -166,5 +155,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Proffstips:</strong> Precision i tid skiljer en chefskock från en hemmakock. Använd tekniken för att garantera jämna resultat.',
     },
   ],
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

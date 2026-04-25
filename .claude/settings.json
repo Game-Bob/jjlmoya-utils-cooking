@@ -2,7 +2,25 @@
   "permissions": {
     "allow": [
       "Bash(bash /tmp/fix_all_slugs.sh)",
-      "Bash(bash /tmp/fix_pizza_slugs.sh)"
+      "Bash(bash /tmp/fix_pizza_slugs.sh)",
+      "Read(//d/code/jjlmoya-utils-bike/src/tool/**)",
+      "Bash(chmod +x /tmp/extract_bibliographies.sh)",
+      "Bash(/tmp/extract_bibliographies.sh)",
+      "Bash(chmod +x /tmp/summary_report.sh)",
+      "Bash(/tmp/summary_report.sh)",
+      "Bash(chmod +x /tmp/final_report.sh)",
+      "Bash(/tmp/final_report.sh)",
+      "Bash(chmod +x /tmp/remove_bibliography.sh)",
+      "Bash(bash /tmp/remove_bibliography.sh)",
+      "Read(//d/code/jjlmoya-utils-pets/src/tool/**)",
+      "Bash(chmod +x /tmp/fix_duplicates.sh)",
+      "Bash(/tmp/fix_duplicates.sh)",
+      "Bash(chmod +x /tmp/remove_old_bibliography.sh)",
+      "Bash(/tmp/remove_old_bibliography.sh)"
+    ],
+    "additionalDirectories": [
+      "D:\\code\\jjlmoya-utils-cooking\\src\\utils",
+      "D:\\code\\jjlmoya-utils-cooking"
     ]
   }
 }

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "正宗那不勒斯披萨面团计算器";
 const description = "计算打制正宗那不勒斯披萨所需的面粉、水、盐和酵母的精确比例。";
@@ -72,7 +73,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: "常见问题",
-  bibliographyTitle: "参考资料",
   ui: {
     parameters: "参数",
     quantity: "数量",
@@ -103,14 +103,7 @@ export const content: ToolLocaleContent = {
       "视觉尺寸代表根据面团球重量拉伸后的披萨大概直径。",
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: "Associazione Verace Pizza Napoletana",
-      url: "https://www.pizzanapoletana.org/",
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: '正宗那不勒斯披萨面团大师指南',
@@ -121,5 +114,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>那不勒斯披萨</strong>是文化遗产。成功在于对时间、温度和含水量的精确掌控。',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

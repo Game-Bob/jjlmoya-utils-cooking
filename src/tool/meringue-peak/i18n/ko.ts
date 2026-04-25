@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "머랭 및 계란 동결(머랭) 계산기";
 const description = "계란 흰자 무게에 맞춰 프랑스식, 이탈리아식, 스위스식 머랭에 필요한 설탕량을 정확하게 계산합니다. 휘핑 시간과 베이킹 팁까지 확인하세요.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: '자주 묻는 질문',
-  bibliographyTitle: '참고 문헌',
   ui: {
     whitesLabel: '흰자 무게',
     whitesPlaceholder: '예: 120',
@@ -113,18 +113,7 @@ export const content: ToolLocaleContent = {
     invalidWeightError: '올바른 무게를 입력하세요',
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: 'Larousse Cocina: 머랭의 종류와 제조법',
-      url: 'https://laroussecocina.mx/palabra/merengue/',
-    },
-    {
-      name: 'Exploratorium: Egg Science',
-      url: 'https://www.exploratorium.edu/explore/cooking/egg-science',
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: '완벽한 머랭을 위한 마스터 가이드',
@@ -206,5 +195,6 @@ export const content: ToolLocaleContent = {
       html: '휘핑을 시작하기 전, 볼을 레몬즙이나 식초로 닦아주세요. 아주 적은 유분이라도 흰자가 올라오는 것을 방해합니다.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

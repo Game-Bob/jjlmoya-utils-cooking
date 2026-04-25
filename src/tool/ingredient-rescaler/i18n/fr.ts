@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Convertisseur de Portions et Ingrédients Professionnel";
 const description = "Multiplication directe de toutes les valeurs par le facteur de conversion calculé.";
@@ -132,21 +133,6 @@ export const content: ToolLocaleContent = {
       text: "Le calcul est exact, mais la cuisine est intuitive. Réduisez les épices à 75%. Ne multipliez jamais les temps de cuisson par le même facteur.",
     },
   ],
-  bibliographyTitle: "Bibliographie et Ressources Professionnelles",
-  bibliography: [
-    {
-      name: "Harold McGee - On Food and Cooking",
-      url: "https://en.wikipedia.org/wiki/Harold_McGee",
-    },
-    {
-      name: "The Flavor Bible - Page & Dornenburg",
-      url: "https://www.flavorprints.com/",
-    },
-    {
-      name: "Modernist Cuisine - Techniques de mise à l'échelle",
-      url: "https://www.modernistcuisine.com/",
-    },
-  ],
   seo: [
     {
       type: "title",
@@ -274,5 +260,6 @@ export const content: ToolLocaleContent = {
       html: "Notre outil simplifie les calculs pour vous permettre de vous concentrer sur l'essentiel : la créativité et le goût.",
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

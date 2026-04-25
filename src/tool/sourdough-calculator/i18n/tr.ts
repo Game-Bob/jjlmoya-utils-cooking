@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Ekşi Maya Hesaplayıcı Fermantasyon Oranları";
 const description = "Kültürünüzü korumak için ekşi maya, un ve su oranlarını otomatik olarak hesaplayın. Ön tanımlı veya özel oranlar.";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
 	title,
 	description,
 	faqTitle: 'Sıkça Sorulan Sorular',
-	faq,
-	bibliographyTitle: 'Kaynakça',
-	bibliography: [
-		{
-			name: 'Tartine Bread - Chad Robertson',
-			url: 'https://www.penguinrandomhouse.com/books/310016/tartine-bread-by-chad-robertson/',
-		},
-	],
-	howTo,
+	faq,  howTo,
 	seo: [
 		{
 			type: 'title',
@@ -112,5 +105,6 @@ export const content: ToolLocaleContent = {
 		totalDough: 'Toplam Maya',
 		mm: 'EM',
 	},
+  bibliography,
 	schemas: [faqSchema, howToSchema, appSchema],
 };

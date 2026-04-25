@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Minuteur Scientifique Précis pour Œufs et Calculatrice d";
 const description = "Jaune coulant, blancs juste figés.";
@@ -131,21 +132,6 @@ export const content: ToolLocaleContent = {
         "Les œufs plus anciens (au moins une semaine) sont plus faciles à éplucher car l'albumine se sépare plus facilement de la coquille. Les œufs très frais peuvent être plus difficiles à éplucher.",
     },
   ],
-  bibliographyTitle: "Bibliographie",
-  bibliography: [
-    {
-      name: "The Science of Boiling an Egg - Charles D. H. Williams",
-      url: "https://newton.ex.ac.uk/teaching/CDHW/Egg/",
-    },
-    {
-      name: "The Food Lab: The Science of the Best Hard Boiled Eggs - J. Kenji López-Alt",
-      url: "https://www.seriouseats.com/",
-    },
-    {
-      name: "The Food Lab: Perfect Soft Boiled Eggs",
-      url: "https://www.seriouseats.com/",
-    },
-  ],
   howTo: [
     {
       name: "Sélectionnez Vos Paramètres",
@@ -197,5 +183,6 @@ export const content: ToolLocaleContent = {
       ],
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

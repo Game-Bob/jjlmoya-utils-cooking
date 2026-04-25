@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Pengatur Waktu Dapur Ganda";
 const description = "Kelola beberapa waktu memasak secara bersamaan. Alarm independen, ideal untuk koki dan organisasi dapur (Mise en Place).";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Pengatur Waktu Dapur Ganda',
   description: 'Kelola beberapa waktu memasak secara bersamaan. Alarm independen, ideal untuk koki dan organisasi dapur (Mise en Place).',
   faqTitle: 'Pertanyaan Umum',
-  bibliographyTitle: 'Referensi',
   ui: {
     addTimer: 'Tambah Timer',
     stopAll: 'Hentikan Semua',
@@ -101,18 +101,7 @@ export const content: ToolLocaleContent = {
     statusFinished: 'WAKTU HABIS!',
     finishNotification: 'Timer Selesai untuk',
   },
-  faq,
-  bibliography: [
-    {
-      name: 'Keamanan Pangan: USDA Guidelines',
-      url: 'https://www.fsis.usda.gov/',
-    },
-    {
-      name: 'Mise en Place - Dapur Profesional',
-      url: 'https://www.escoffier.edu/',
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -166,5 +155,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Tips profesional:</strong> Presisi waktu membedakan koki dari pemasak rumahan. Gunakan teknologi untuk menjamin konsistensi.',
     },
   ],
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

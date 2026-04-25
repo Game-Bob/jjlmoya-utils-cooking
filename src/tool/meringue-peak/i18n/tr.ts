@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Beze ve Kar Beyazı Noktası Hesaplayıcı";
 const description = "Yumurta aklarınızın ağırlığına göre Fransız, İtalyan veya İsviçre bezesi için gereken tam şeker miktarını hesaplayın. Çırpma süreleri ve pastacılık ipuçları.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: 'Sıkça Sorulan Sorular',
-  bibliographyTitle: 'Kaynaklar ve Referanslar',
   ui: {
     whitesLabel: 'Yumurta Akı Ağırlığı',
     whitesPlaceholder: 'Örn. 120',
@@ -113,18 +113,7 @@ export const content: ToolLocaleContent = {
     invalidWeightError: 'Geçerli bir ağırlık girin',
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: 'Larousse Mutfak: Beze Türleri',
-      url: 'https://laroussecocina.mx/palabra/merengue/',
-    },
-    {
-      name: 'Exploratorium: Egg Science',
-      url: 'https://www.exploratorium.edu/explore/cooking/egg-science',
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: 'Beze ve Kar Beyazı Noktası İçin Usta Rehberi',
@@ -206,5 +195,6 @@ export const content: ToolLocaleContent = {
       html: 'Başlamadan önce kabınızı sirke veya limonla temizleyin. En ufak yağ izi yumurta aklarının kabarmasını engeller.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

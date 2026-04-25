@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Bananen Diagnose und Konservierung: Wissenschaftlicher Leitfaden";
 const description = "Analysieren Sie den Reifegrad Ihrer Bananen mit wissenschaftlicher Präzision. Lernen Sie Konservierungstechniken, die Biochemie von Ethylen und die Ernährungsoptimierung kennen.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Bananen Diagnose und Konservierung: Wissenschaftlicher Leitfaden',
   description: 'Analysieren Sie den Reifegrad Ihrer Bananen mit wissenschaftlicher Präzision. Lernen Sie Konservierungstechniken, die Biochemie von Ethylen und die Ernährungsoptimierung kennen.',
   faqTitle: 'Häufig gestellte Fragen',
-  bibliographyTitle: 'Quellen und Referenzen',
   ui: {
     ripesnessLabel: 'Reifegrad',
     nextStageLabel: 'Nächste Stufe in',
@@ -142,20 +142,6 @@ export const content: ToolLocaleContent = {
     {
       name: 'Konservierung anwenden',
       text: 'Befolgen Sie die spezifischen Empfehlungen zur Konservierung und Beschleunigung je nach aktuellem Zustand.',
-    },
-  ],
-  bibliography: [
-    {
-      name: 'Ethylene and Fruit Ripening: A Biological Review',
-      url: '',
-    },
-    {
-      name: 'Biochemical Changes in Musa acuminata during Ripening (Journal of Food Science)',
-      url: 'https://www.foodsciencejournal.com/assets/archives/2017/vol2issue5/2-5-31-566.pdf',
-    },
-    {
-      name: 'The Role of Respiration in Climacteric Fruits (Scientific American)',
-      url: 'https://www.nature.com/articles/226976b0',
     },
   ],
   seo: [
@@ -244,5 +230,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Abbau-Warnung:</strong> Externe Faktoren wie eine relative Luftfeuchtigkeit von über 85% oder Temperaturen über 25°C können den Abbau drastisch beschleunigen, sodass die Banane innerhalb weniger Stunden von optimal zu ungenießbar wird. Dieser Simulator hilft Ihnen, diese Veränderungen vorherzusehen und strategisch zu planen.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

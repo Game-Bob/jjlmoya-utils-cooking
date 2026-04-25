@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Napoli Pizza Hamuru Hesaplayıcı";
 const description = "Evde gerçek Napoli pizzası hazırlamak için un, su, tuz ve maya oranlarını tam olarak hesaplayın.";
@@ -72,7 +73,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: "Sıkça Sorulan Sorular",
-  bibliographyTitle: "Referanslar",
   ui: {
     parameters: "Parametreler",
     quantity: "Miktarı",
@@ -103,14 +103,7 @@ export const content: ToolLocaleContent = {
       "Görsel boyut, hamur bezesinin ağırlığına göre açılan pizzanın yaklaşık çapını temsil eder.",
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: "Associazione Verace Pizza Napoletana",
-      url: "https://www.pizzanapoletana.org/",
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: 'Gerçek Napoli Pizzası Hamuru İçin Usta Rehberi',
@@ -121,5 +114,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Napoli pizzası</strong> bir kültürel mirastır. Başarı; zaman, sıcaklık ve hidrasyon arasındaki milimetrik hassasiyete dayanır.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

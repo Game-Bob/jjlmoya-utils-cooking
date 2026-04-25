@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Calculadora de Merengue e Ponto de Neve";
 const description = "Calcula a quantidade exata de açúcar para merengue francês, italiano ou suíço segundo o peso das claras. Tempos de batimento e truques de pastelaria.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: 'Perguntas Frequentes',
-  bibliographyTitle: 'Fontes e Referências',
   ui: {
     whitesLabel: 'Peso das Claras',
     whitesPlaceholder: 'Ex. 120',
@@ -113,18 +113,7 @@ export const content: ToolLocaleContent = {
     invalidWeightError: 'Introduz um peso válido',
   },
   faq,
-  howTo,
-  bibliography: [
-    {
-      name: 'Larousse Cozinha: Tipos de Merengues',
-      url: 'https://laroussecocina.mx/palabra/merengue/',
-    },
-    {
-      name: 'Exploratorium: Egg Science',
-      url: 'https://www.exploratorium.edu/explore/cooking/egg-science',
-    },
-  ],
-  seo: [
+  howTo, seo: [
     {
       type: 'title',
       text: 'Guia Mestre para o Cálculo de Merengue',
@@ -206,5 +195,6 @@ export const content: ToolLocaleContent = {
       html: 'Limpa a taça com vinagre ou limão. Qualquer rasto de gordura impedirá que as claras subam.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

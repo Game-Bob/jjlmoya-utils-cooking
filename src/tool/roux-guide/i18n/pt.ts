@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Guia Mestre de Roux e Molhos Mãe";
 const description = "Calculadora interativa de Roux. Aprenda a criar Bechamel, Velouté e Espagnole com proporções exatas. A base da alta cozinha francesa.";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: 'Perguntas Frequentes',
-  faq,
-  bibliographyTitle: 'Bibliografia',
-  bibliography: [
-    {
-      name: 'Larousse Gastronomique',
-      url: 'https://www.laroussecocina.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -161,5 +154,6 @@ export const content: ToolLocaleContent = {
     timeBlond: "5-8 min",
     timeBrown: "15-20 min",
   },
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

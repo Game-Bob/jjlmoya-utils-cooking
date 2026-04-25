@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Calculadora de Massa Mãe Rátios de Fermentação";
 const description = "Calcula automaticamente as proporções de massa mãe, farinha e água para manter o teu cultivo. Rátios predefinidos ou personalizados.";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
 	title,
 	description,
 	faqTitle: 'Perguntas Frequentes',
-	faq,
-	bibliographyTitle: 'Bibliografia',
-	bibliography: [
-		{
-			name: 'Tartine Bread - Chad Robertson',
-			url: 'https://www.penguinrandomhouse.com/books/310016/tartine-bread-by-chad-robertson/',
-		},
-	],
-	howTo,
+	faq,  howTo,
 	seo: [
 		{
 			type: 'title',
@@ -138,5 +131,6 @@ export const content: ToolLocaleContent = {
 		totalDough: 'Total Massa',
 		mm: 'MM',
 	},
+  bibliography,
 	schemas: [faqSchema, howToSchema, appSchema],
 };

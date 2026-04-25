@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "멀티 주방 타이머";
 const description = "여러 요리 시간을 동시에 관리하세요. 독립적인 알람 기능으로 셰프와 전문적인 주방 관리(Mise en Place)에 적합합니다.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: '멀티 주방 타이머',
   description: '여러 요리 시간을 동시에 관리하세요. 독립적인 알람 기능으로 셰프와 전문적인 주방 관리(Mise en Place)에 적합합니다.',
   faqTitle: '자주 묻는 질문',
-  bibliographyTitle: '참고 문헌',
   ui: {
     addTimer: '타이머 추가',
     stopAll: '모두 중지',
@@ -101,18 +101,7 @@ export const content: ToolLocaleContent = {
     statusFinished: '시간 종료!',
     finishNotification: '타이머가 완료되었습니다: ',
   },
-  faq,
-  bibliography: [
-    {
-      name: '식품 안전: USDA 가이드라인',
-      url: 'https://www.fsis.usda.gov/',
-    },
-    {
-      name: '미장플라스(Mise en Place) - 전문 주방 이론',
-      url: 'https://www.escoffier.edu/',
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -166,5 +155,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>전문가 제언:</strong> 시간의 정밀함은 전문 셰프와 일반 요리사를 가르는 차이점입니다. 감각에만 의존하지 말고 정확한 도구를 사용하여 일관성 있는 맛을 유지하세요.',
     },
   ],
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

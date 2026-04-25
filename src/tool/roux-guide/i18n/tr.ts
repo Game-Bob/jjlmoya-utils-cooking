@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Meyane (Roux) ve Temel Soslar Rehberi";
 const description = "Etkileşimli Meyane hesaplayıcı. Beşamel, Velouté ve Espanyol soslarını tam oranlarla yapmayı öğrenin. Klasik Fransız mutfağının temeli.";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: 'Sıkça Sorulan Sorular',
-  faq,
-  bibliographyTitle: 'Kaynakça',
-  bibliography: [
-    {
-      name: 'Larousse Gastronomique',
-      url: 'https://www.laroussecocina.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -135,5 +128,6 @@ export const content: ToolLocaleContent = {
     timeBlond: "5-8 dk",
     timeBrown: "15-20 dk",
   },
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "루(Roux)와 마더 소스 마스터 가이드";
 const description = "대화형 루 계산기. 베샤멜, 벨루테, 에스파뇰을 정확한 비율로 만드는 방법을 배워보세요. 클래식 프랑스 요리의 기초입니다.";
@@ -72,15 +73,7 @@ export const content: ToolLocaleContent = {
   title,
   description,
   faqTitle: '자주 묻는 질문',
-  faq,
-  bibliographyTitle: '참고 문헌',
-  bibliography: [
-    {
-      name: 'Larousse Gastronomique',
-      url: 'https://www.laroussecocina.com/',
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: 'title',
@@ -135,5 +128,6 @@ export const content: ToolLocaleContent = {
     timeBlond: "5-8분",
     timeBrown: "15-20분",
   },
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

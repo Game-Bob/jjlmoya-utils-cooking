@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = 'Professional Recipe Ingredient Scaler';
 const description =
@@ -93,23 +94,7 @@ export const content: ToolLocaleContent = {
     defaultIngredient3: "2 Eggs",
   },
   faqTitle: "Frequently Asked Questions",
-  faq,
-  bibliographyTitle: "Bibliography & Resources",
-  bibliography: [
-    {
-      name: "Harold McGee - On Food and Cooking",
-      url: "https://en.wikipedia.org/wiki/Harold_McGee",
-    },
-    {
-      name: "The Flavor Bible - Page & Dornenburg",
-      url: "https://www.flavorprints.com/",
-    },
-    {
-      name: "Modernist Cuisine - Scaling Techniques",
-      url: "https://www.modernistcuisine.com/",
-    },
-  ],
-  howTo,
+  faq,  howTo,
   seo: [
     {
       type: "title",
@@ -237,6 +222,6 @@ export const content: ToolLocaleContent = {
       html: "Our tool simplifies the math so you can focus on what truly matters: creativity and flavor.",
     },
   ],
-
+  bibliography,
   schemas: [appSchema, faqSchema, howToSchema],
 };

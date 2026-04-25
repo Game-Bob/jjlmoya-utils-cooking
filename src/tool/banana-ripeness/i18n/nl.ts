@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Bananen Diagnose en Conservering: Wetenschappelijke Gids";
 const description = "Analyseer de rijpheidsstatus van je bananen met wetenschappelijke precisie. Leer conserveringstechnieken, de biochemie van ethyleen en voedingsoptimalisatie.";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Bananen Diagnose en Conservering: Wetenschappelijke Gids',
   description: 'Analyseer de rijpheidsstatus van je bananen met wetenschappelijke precisie. Leer conserveringstechnieken, de biochemie van ethyleen en voedingsoptimalisatie.',
   faqTitle: 'Veelgestelde Vragen',
-  bibliographyTitle: 'Bronnen en Referenties',
   ui: {
     ripesnessLabel: 'Rijpheidsstatus',
     nextStageLabel: 'Volgende fase over',
@@ -142,20 +142,6 @@ export const content: ToolLocaleContent = {
     {
       name: 'Conservering toepassen',
       text: 'Volg de specifieke aanbevelingen voor conservering en versnelling op basis van de huidige status.',
-    },
-  ],
-  bibliography: [
-    {
-      name: 'Ethylene and Fruit Ripening: A Biological Review',
-      url: '',
-    },
-    {
-      name: 'Biochemical Changes in Musa acuminata during Ripening (Journal of Food Science)',
-      url: 'https://www.foodsciencejournal.com/assets/archives/2017/vol2issue5/2-5-31-566.pdf',
-    },
-    {
-      name: 'The Role of Respiration in Climacteric Fruits (Scientific American)',
-      url: 'https://www.nature.com/articles/226976b0',
     },
   ],
   seo: [
@@ -244,5 +230,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Waarschuwing voor degradatie:</strong> Externe factoren zoals een relatieve vochtigheid boven de 85% of temperaturen boven de 25°C kunnen de degradatie drastisch versnellen, waardoor de banaan in een kwestie van uren van optimaal naar oneetbaar gaat. Deze simulator helpt je deze veranderingen te anticiperen en strategisch te plannen.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

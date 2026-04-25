@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from "../../../types";
+import { bibliography } from '../bibliography';
 
 const title = "Gleichgewichts Lake Rechner";
 const description = "Die Wissenschaft des Gleichgewichts für saftiges Fleisch und perfekte Fermente. Berechnen Sie den exakten Salzgehalt basierend auf dem Gesamtgewicht von Zutat und Wasser.";
@@ -104,25 +105,8 @@ export const content: ToolLocaleContent = {
     timePreservesLabel: "Zeit (Konserven)",
     timePreservesDuration: "1+ Monate",
   },
-  faqTitle: "Häufig gestellte Fragen",
-  bibliographyTitle: "Quellen und Referenzen",
-  faq,
-  howTo,
-  bibliography: [
-    {
-      name: "The Noma Guide to Fermentation - René Redzepi & David Zilber",
-      url: "https://www.nomacph.com/",
-    },
-    {
-      name: "Salt, Fat, Acid, Heat - Samin Nosrat",
-      url: "https://www.saltfatacidheat.com/",
-    },
-    {
-      name: "Pollan, Michael - Cooked",
-      url: "https://michaelpollan.com/",
-    },
-  ],
-  seo: [
+  faqTitle: "Häufig gestellte Fragen",  faq,
+  howTo,  seo: [
     {
       type: 'title',
       text: 'Meisterleitfaden für Gleichgewichts Pökeln und Fermentation',
@@ -249,5 +233,6 @@ export const content: ToolLocaleContent = {
       html: 'Unser Gleichgewichtsrechner eliminiert das Rätselraten aus Ihren Rezepten und ermöglicht es Ihnen, mit der Sicherheit eines Profis zu kochen.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };

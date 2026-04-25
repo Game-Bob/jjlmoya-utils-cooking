@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Timer da Cucina Multiplo";
 const description = "Gestisci più tempi di cottura contemporaneamente. Allarmi indipendenti, ideale per chef e per l'organizzazione in cucina (Mise en Place).";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Timer da Cucina Multiplo',
   description: 'Gestisci più tempi di cottura contemporaneamente. Allarmi indipendenti, ideale per chef e per l\'organizzazione in cucina (Mise en Place).',
   faqTitle: 'Domande Frequenti',
-  bibliographyTitle: 'Riferimenti',
   ui: {
     addTimer: 'Aggiungi Timer',
     stopAll: 'Ferma Tutti',
@@ -101,18 +101,7 @@ export const content: ToolLocaleContent = {
     statusFinished: 'TEMPO!',
     finishNotification: 'Timer terminato per',
   },
-  faq,
-  bibliography: [
-    {
-      name: 'Sicurezza Alimentare: USDA Guidelines',
-      url: 'https://www.fsis.usda.gov/',
-    },
-    {
-      name: 'Mise en Place - La Cucina Professionale',
-      url: 'https://www.escoffier.edu/',
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -170,5 +159,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Consiglio professionale:</strong> la precisione del tempo distingue uno chef da un cuoco amatoriale. Affidati allo strumento per garantire costanza nei tuoi piatti.',
     },
   ],
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

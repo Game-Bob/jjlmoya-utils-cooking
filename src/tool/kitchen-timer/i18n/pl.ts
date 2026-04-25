@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Multiminutnik Kuchenny";
 const description = "Zarządzaj wieloma czasami gotowania jednocześnie. Niezależne alarmy, idealne dla szefów kuchni i organizacji pracy (Mise en Place).";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Multiminutnik Kuchenny',
   description: 'Zarządzaj wieloma czasami gotowania jednocześnie. Niezależne alarmy, idealne dla szefów kuchni i organizacji pracy (Mise en Place).',
   faqTitle: 'Często Zadawane Pytania',
-  bibliographyTitle: 'Referencje',
   ui: {
     addTimer: 'Dodaj Minutnik',
     stopAll: 'Zatrzymaj Wszystkie',
@@ -101,18 +101,7 @@ export const content: ToolLocaleContent = {
     statusFinished: 'CZAS!',
     finishNotification: 'Minutnik zakończony dla',
   },
-  faq,
-  bibliography: [
-    {
-      name: 'Bezpieczeństwo Żywności: USDA Guidelines',
-      url: 'https://www.fsis.usda.gov/',
-    },
-    {
-      name: 'Mise en Place - Profesjonalna Kuchnia',
-      url: 'https://www.escoffier.edu/',
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -166,5 +155,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Porada eksperta:</strong> precyzja czasu odróżnia szefa kuchni od amatora. Używaj technologii, by zagwarantować powtarzalność.',
     },
   ],
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

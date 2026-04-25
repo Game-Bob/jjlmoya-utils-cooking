@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Temporizador de Cozinha Múltiplo";
 const description = "Gere múltiplos tempos de cozedura simultaneamente. Alarmes independentes, ideal para chefs e organização na cozinha (Mise en Place).";
@@ -76,7 +77,6 @@ export const content: ToolLocaleContent = {
   title: 'Temporizador de Cozinha Múltiplo',
   description: 'Gere múltiplos tempos de cozedura simultaneamente. Alarmes independentes, ideal para chefs e organização na cozinha (Mise en Place).',
   faqTitle: 'Perguntas Frequentes',
-  bibliographyTitle: 'Referências',
   ui: {
     addTimer: 'Adicionar Temporizador',
     stopAll: 'Parar Todos',
@@ -101,18 +101,7 @@ export const content: ToolLocaleContent = {
     statusFinished: 'TEMPO!',
     finishNotification: 'Temporizador Terminado para',
   },
-  faq,
-  bibliography: [
-    {
-      name: 'Segurança Alimentar: USDA Guidelines',
-      url: 'https://www.fsis.usda.gov/',
-    },
-    {
-      name: 'Mise en Place - A Cozinha Profissional',
-      url: 'https://www.escoffier.edu/',
-    },
-  ],
-  howTo,
+  faq, howTo,
   seo: [
     {
       type: 'title',
@@ -170,5 +159,6 @@ export const content: ToolLocaleContent = {
       html: '<strong>Conselho profissional:</strong> a precisão do tempo é o que diferencia um chef de um cozinheiro amador. Use a tecnologia para garantir consistência.',
     },
   ],
+  bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

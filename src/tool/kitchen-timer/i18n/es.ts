@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "Temporizador de Cocina Múltiple";
 const description = "Gestiona múltiples tiempos de cocción simultáneamente. Alarmas independientes, ideal para chefs y organización en la cocina (Mise en Place).";
@@ -80,10 +81,7 @@ export const content: ToolLocaleContent = {
 	title: 'Temporizador de Cocina Múltiple',
 	description:
 		'Gestiona múltiples tiempos de cocción simultáneamente. Alarmas independientes, ideal para chefs y organización en la cocina (Mise en Place).',
-	faqTitle: 'Preguntas Frecuentes',
-	bibliographyTitle: 'Referencias',
-
-	ui: {
+	faqTitle: 'Preguntas Frecuentes',	ui: {
 		addTimer: 'Añadir Temporizador',
 		stopAll: 'Detener Todas',
 		defaultName: 'Temporizador',
@@ -129,20 +127,7 @@ export const content: ToolLocaleContent = {
 			answer:
 				'Entre 5°C y 65°C las bacterias se multiplican rápidamente. Los alimentos cocinados no deben estar en esta zona más de 2 horas (1 hora si hace >30°C). Usa un temporizador para controlar el enfriamiento antes de refrigerar.',
 		},
-	],
-
-	bibliography: [
-		{
-			name: 'Seguridad Alimentaria: USDA Guidelines',
-			url: 'https://www.fsis.usda.gov/',
-		},
-		{
-			name: 'Mise en Place - La Cocina Profesional',
-			url: 'https://www.escoffier.edu/',
-		},
-	],
-
-	howTo: [
+	],	howTo: [
 		{
 			name: 'Crea múltiples temporizadores',
 			text: 'Usa el botón \'+\' para añadir tantos temporizadores como necesites. Ideal para orquestar varios platos simultáneamente.',
@@ -160,8 +145,7 @@ export const content: ToolLocaleContent = {
 			text: 'Autoriza notificaciones para que el navegador te avise cuando se acabe el tiempo, incluso si cambias de pestaña.',
 		},
 	],
-
-	seo: [
+  seo: [
 		{
 			type: 'title',
 			text: 'Maestría Temporal en la Cocina',
@@ -223,6 +207,6 @@ export const content: ToolLocaleContent = {
 			html: '<strong>Consejo profesional:</strong> La precisión del tiempo es lo que diferencia a un chef de un cocinero casero. Invierte en un buen temporizador y úsalo siempre. La experiencia te dice cuándo algo "se ve listo", pero el tiempo te garantiza consistencia.',
 		},
 	],
-
-	schemas: [faqSchema as any, howToSchema as any, appSchema as any],
+  bibliography,
+  schemas: [faqSchema as any, howToSchema as any, appSchema as any],
 };

@@ -1,4 +1,5 @@
 import type { ToolLocaleContent } from '../../../types';
+import { bibliography } from '../bibliography';
 
 const title = "미국식 주방 단위 변환기: 컵을 그람 및 온도로 변환";
 const description = "컵(cups), 큰술(tablespoons), 화씨(Fahrenheit)를 미터법으로 변환합니다. 미국 레시피를 전문가의 정밀함으로 해석하기 위한 나침반입니다.";
@@ -80,7 +81,6 @@ export const content: ToolLocaleContent = {
   title: "미국식 주방 단위 변환기: 컵을 그람 및 온도로 변환",
   description: "컵(cups), 큰술(tablespoons), 화씨(Fahrenheit)를 미터법으로 변환합니다. 미국 레시피를 전문가의 정밀함으로 해석하기 위한 나침반입니다.",
   faqTitle: "자주 묻는 질문",
-  bibliographyTitle: "참고 자료",
   ui: {
     copied: "복사됨",
     noHistory: "기록 없음",
@@ -324,16 +324,6 @@ export const content: ToolLocaleContent = {
       answer: 'Gas 4 = 180°C = 350°F입니다. 이는 영국식 가스 화력 등급입니다. 각 오븐의 사양에 맞춰 온도를 조절해야 최고의 결과를 얻을 수 있습니다.',
     },
   ],
-  bibliography: [
-    {
-      name: 'King Arthur Baking: Ingredient Weight Chart',
-      url: 'https://www.kingarthurbaking.com/learn/ingredient-weight-chart',
-    },
-    {
-      name: 'Culinary Institute of America: Conversions and Equivalents',
-      url: 'https://www.ciachef.edu/',
-    },
-  ],
   howTo: [
     {
       name: '변환 유형 선택',
@@ -352,5 +342,6 @@ export const content: ToolLocaleContent = {
       text: '정확한 변환 값을 사용하여 미국 레시피를 전문가 수준으로 재현해 보세요.',
     },
   ],
+  bibliography,
   schemas: [faqSchema, howToSchema, appSchema],
 };
