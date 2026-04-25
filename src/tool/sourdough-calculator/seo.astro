@@ -1,6 +1,6 @@
 ---
 import { SEORenderer } from '@jjlmoya/utils-shared';
-import { SOURDOUGH_CALCULATOR_TOOL } from './index';
+import { sourdoughCalculator } from './entry';
 import type { KnownLocale } from '../../types';
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { locale = 'es' } = Astro.props;
-const content = await SOURDOUGH_CALCULATOR_TOOL.i18n[locale]?.();
+const content = await sourdoughCalculator.i18n[locale]?.();
 if (!content) return null;
 ---
 

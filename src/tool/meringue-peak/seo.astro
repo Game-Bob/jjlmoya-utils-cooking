@@ -1,6 +1,6 @@
 ---
 import { SEORenderer } from '@jjlmoya/utils-shared';
-import { MERENGUE_CALCULATOR_TOOL } from './index';
+import { meringuePeak } from './entry';
 import type { KnownLocale } from '../../types';
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { locale = 'es' } = Astro.props;
-const content = await MERENGUE_CALCULATOR_TOOL.i18n[locale]?.();
+const content = await meringuePeak.i18n[locale]?.();
 if (!content) return null;
 ---
 
