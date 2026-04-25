@@ -1,8 +1,15 @@
 ---
-import { SEORenderer } from "@jjlmoya/utils-shared";
-import { content } from "./i18n/es";
+import { SEORenderer } from '@jjlmoya/utils-shared';
+import { COOKWARE_GUIDE_TOOL } from './index';
+import type { KnownLocale } from '../../types';
 
-const locale = "es";
+interface Props {
+  locale?: KnownLocale;
+}
+
+const { locale = 'es' } = Astro.props;
+const content = await COOKWARE_GUIDE_TOOL.i18n[locale]?.();
+if (!content) return null;
 ---
 
-<SEORenderer content={{ sections: content.seo, locale }} />
+{content.seo?.length > 0 && <SEORenderer content={{ locale, sections: content.seo }} />}
