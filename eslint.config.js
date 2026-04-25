@@ -198,7 +198,7 @@ export default [
         },
     },
     {
-        files: ["src/pages/[locale]/[slug].astro"],
+        files: ["src/pages/\\[locale\\]/\\[slug\\].astro"],
         rules: {
             "max-lines-per-function": "off",
             "custom/no-css-comments": "off",
