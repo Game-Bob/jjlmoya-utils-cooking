@@ -124,6 +124,41 @@ const { ui } = Astro.props;
     };
   }
 
+  const STORAGE_KEY = 'cooking-spherification-state';
+
+  function saveState() {
+    const state = {
+      activeUnit,
+      activeMethod,
+      useXanthan,
+      useCitrate,
+      baseWeight: baseInput.value,
+      bathWeight: bathInput.value
+    };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  }
+
+  function loadState() {
+    try {
+      const data = localStorage.getItem(STORAGE_KEY);
+      if (!data) return;
+      const state = JSON.parse(data);
+      if (state.activeUnit) activeUnit = state.activeUnit;
+      if (state.activeMethod) activeMethod = state.activeMethod;
+      [['xanthanBtn', 'xanthan-switch-circle', 'useXanthan'],
+        ['citrateBtn', 'citrate-switch-circle', 'useCitrate']].forEach(([btnId, circleId, key]) => {
+        if (state[key]) {
+          if (key === 'useXanthan') useXanthan = true; else useCitrate = true;
+          document.getElementById(btnId).classList.add('active');
+          document.getElementById(circleId).classList.add('active');
+        }
+      });
+      [['baseWeight', baseInput], ['bathWeight', bathInput]].forEach(([key, el]) => {
+        if (state[key]) el.value = state[key];
+      });
+    } catch {}
+  }
+
   function updateView() {
     let baseWeight = Math.max(0, parseFloat(baseInput.value) || 0);
     let bathWeight = Math.max(0, parseFloat(bathInput.value) || 0);
@@ -137,6 +172,7 @@ const { ui } = Astro.props;
     const displayFactor = activeUnit === 'imperial' ? 0.035274 : 1.0;
     updateRecipeList(result, displayFactor);
     updateReactorUI();
+    saveState();
   }
 
   function convertInputsTo(targetUnit) {
@@ -209,5 +245,6 @@ const { ui } = Astro.props;
   baseInput.addEventListener('input', updateView);
   bathInput.addEventListener('input', updateView);
 
+  loadState();
   updateView();
 </script>

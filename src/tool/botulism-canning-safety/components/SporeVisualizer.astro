@@ -1,0 +1,48 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="spore-deactivation-visualizer">
+  <div class="visualizer-header-title">{ui.visualizerSectionTitle}</div>
+
+  <div class="spore-reduction-grid">
+    <div id="spore-cell-1" class="spore-cell active"></div>
+    <div id="spore-cell-2" class="spore-cell active"></div>
+    <div id="spore-cell-3" class="spore-cell active"></div>
+    <div id="spore-cell-4" class="spore-cell active"></div>
+    <div id="spore-cell-5" class="spore-cell active"></div>
+    <div id="spore-cell-6" class="spore-cell active"></div>
+    <div id="spore-cell-7" class="spore-cell active"></div>
+    <div id="spore-cell-8" class="spore-cell active"></div>
+    <div id="spore-cell-9" class="spore-cell active"></div>
+    <div id="spore-cell-10" class="spore-cell active"></div>
+    <div id="spore-cell-11" class="spore-cell active"></div>
+    <div id="spore-cell-12" class="spore-cell active"></div>
+  </div>
+
+  <div class="spore-reduction-log-readout">
+    <span class="log-reduction-num" id="log-reduction-value-display">0.0</span>
+    <div class="log-reduction-label-row">
+      <span class="log-reduction-label">{ui.logReductionLabel} (D)</span>
+      <div class="info-tooltip-container">
+        <svg viewBox="0 0 24 24" class="info-icon-svg" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+        <span class="info-tooltip-text">{ui.logReductionTooltip}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="safety-indicator-card">
+    <div id="canning-status-badge" class="canning-status-badge safety-unsafe">
+      <span id="canning-status-badge-text">{ui.statusUnsafe}</span>
+    </div>
+    <p id="canning-status-description" class="canning-status-desc">{ui.statusUnsafeDesc}</p>
+  </div>
+</div>

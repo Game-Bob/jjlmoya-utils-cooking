@@ -1,0 +1,60 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="canning-controller-panel">
+  <div class="controller-section">
+    <div class="controller-title">{ui.methodLabel}</div>
+    <div class="method-toggle-group">
+      <button type="button" id="toggle-water-bath-btn" class="method-select-btn active">{ui.waterBath}</button>
+      <button type="button" id="toggle-pressure-canner-btn" class="method-select-btn">{ui.pressureCanner}</button>
+    </div>
+  </div>
+
+  <div class="controller-section">
+    <div class="controller-title">Temperature Unit</div>
+    <div class="method-toggle-group">
+      <button type="button" id="toggle-celsius-btn" class="method-select-btn active">°C</button>
+      <button type="button" id="toggle-fahrenheit-btn" class="method-select-btn">°F</button>
+    </div>
+  </div>
+
+  <div class="controller-section parameters-box">
+    <div class="parameter-row">
+      <div class="param-header-label">
+        <label for="temp-input">{ui.tempLabel}</label>
+        <div class="param-input-wrapper">
+          <input type="number" id="temp-input" value="100" min="90" max="130" step="1" class="param-number" />
+          <span class="param-unit" id="temp-unit-display">{ui.cLabel}</span>
+        </div>
+      </div>
+      <input type="range" id="temp-slider" min="90" max="130" step="1" value="100" class="autoclave-slider" />
+    </div>
+
+    <div class="parameter-row">
+      <div class="param-header-label">
+        <label for="time-input">{ui.timeLabel}</label>
+        <div class="param-input-wrapper">
+          <input type="number" id="time-input" value="30" min="1" max="180" step="1" class="param-number" />
+          <span class="param-unit">{ui.minLabel}</span>
+        </div>
+      </div>
+      <input type="range" id="time-slider" min="1" max="180" step="1" value="30" class="autoclave-slider" />
+    </div>
+
+    <div class="parameter-row">
+      <div class="param-header-label">
+        <label for="ph-input">{ui.phLabel}</label>
+        <div class="param-input-wrapper">
+          <input type="text" id="ph-input" value="5.0" class="param-number" inputmode="decimal" />
+          <span class="param-unit">pH</span>
+        </div>
+      </div>
+      <input type="range" id="ph-slider" min="2.0" max="7.0" step="0.1" value="5.0" class="autoclave-slider" />
+    </div>
+  </div>
+</div>

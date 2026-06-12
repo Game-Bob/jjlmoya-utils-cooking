@@ -1,0 +1,296 @@
+---
+import ThermalControls from './components/ThermalControls.astro';
+import AutoclaveDisplay from './components/AutoclaveDisplay.astro';
+import SporeVisualizer from './components/SporeVisualizer.astro';
+
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="botulism-container">
+  <div class="botulism-console">
+    <ThermalControls ui={ui} />
+    <AutoclaveDisplay ui={ui} />
+    <SporeVisualizer ui={ui} />
+  </div>
+</div>
+
+<script is:inline define:vars={{ ui }}>
+  const waterBathBtn = document.getElementById('toggle-water-bath-btn');
+  const pressureCannerBtn = document.getElementById('toggle-pressure-canner-btn');
+
+  const celsiusBtn = document.getElementById('toggle-celsius-btn');
+  const fahrenheitBtn = document.getElementById('toggle-fahrenheit-btn');
+  const tempUnitDisplay = document.getElementById('temp-unit-display');
+
+  const tempInput = document.getElementById('temp-input');
+  const tempSlider = document.getElementById('temp-slider');
+
+  const timeInput = document.getElementById('time-input');
+  const timeSlider = document.getElementById('time-slider');
+
+  const phInput = document.getElementById('ph-input');
+  const phSlider = document.getElementById('ph-slider');
+
+  const f0ValueDisplay = document.getElementById('f0-value-display');
+  const f0GaugeBar = document.getElementById('f0-gauge-bar');
+
+  const dValueDisplay = document.getElementById('d-value-display');
+  const dGaugeBar = document.getElementById('d-gauge-bar');
+
+  const chamberSteamLevel = document.getElementById('chamber-steam-level');
+  const pressureReadout = document.getElementById('pressure-readout');
+  const autoclaveChamberBox = document.getElementById('autoclave-chamber-box');
+
+  const logReductionValueDisplay = document.getElementById('log-reduction-value-display');
+  const canningStatusBadge = document.getElementById('canning-status-badge');
+  const canningStatusBadgeText = document.getElementById('canning-status-badge-text');
+  const canningStatusDescription = document.getElementById('canning-status-description');
+
+  let activeMethod = 'water-bath';
+  let activeTempUnit = 'celsius';
+
+  function computeThermal(temp, time) {
+    const exponent = (temp - 121.11) / 10;
+    const lethalityRate = Math.pow(10, exponent);
+    const f0Value = parseFloat((lethalityRate * time).toFixed(3));
+
+    const dValue = parseFloat((0.21 * Math.pow(10, (121.11 - temp) / 10)).toFixed(3));
+    const logReduction = dValue > 0 ? parseFloat((time / dValue).toFixed(2)) : 0;
+    return { dValue, f0Value, logReduction };
+  }
+
+  function computeSafety(input) {
+    const { ph, method, f0Value, temp, time } = input;
+    if (ph < 4.6) {
+      const minTemp = method === 'water-bath' ? 95 : 100;
+      return temp >= minTemp && time >= 10 ? 'safe' : 'marginal';
+    }
+    if (method === 'water-bath') return 'unsafe';
+    if (f0Value >= 3.0) return 'safe';
+    if (f0Value >= 1.5) return 'marginal';
+    return 'unsafe';
+  }
+
+  function calculateResults(temp, time, ph, method) {
+    const thermal = computeThermal(temp, time);
+    return {
+      dValue: thermal.dValue,
+      f0Value: thermal.f0Value,
+      logReduction: thermal.logReduction,
+      safetyStatus: computeSafety({ ph, method, f0Value: thermal.f0Value, temp, time }),
+    };
+  }
+
+  function updateChamber(temp) {
+    const steamOpacity = Math.max(0, Math.min(0.8, (temp - 90) / 40));
+    chamberSteamLevel.style.opacity = steamOpacity.toString();
+
+    if (activeMethod === 'water-bath') {
+      autoclaveChamberBox.style.display = 'none';
+      pressureReadout.textContent = '0.0 PSI';
+    } else {
+      autoclaveChamberBox.style.display = 'flex';
+      const psi = Math.max(0, (temp - 100) * 0.73);
+      pressureReadout.textContent = `${psi.toFixed(1)} PSI`;
+    }
+  }
+
+  function updateStatus(status) {
+    canningStatusBadge.className = 'canning-status-badge';
+
+    if (status === 'safe') {
+      canningStatusBadge.classList.add('safety-safe');
+      canningStatusBadgeText.textContent = ui.statusSafe;
+      canningStatusDescription.textContent = ui.statusSafeDesc;
+    } else if (status === 'marginal') {
+      canningStatusBadge.classList.add('safety-marginal');
+      canningStatusBadgeText.textContent = ui.statusMarginal;
+      canningStatusDescription.textContent = ui.statusMarginalDesc;
+    } else {
+      canningStatusBadge.classList.add('safety-unsafe');
+      canningStatusBadgeText.textContent = ui.statusUnsafe;
+      canningStatusDescription.textContent = ui.statusUnsafeDesc;
+    }
+  }
+
+  function updateSporeCells(logReduction) {
+    const floorReduction = Math.floor(logReduction);
+    for (let i = 1; i <= 12; i++) {
+      const cell = document.getElementById(`spore-cell-${i}`);
+      if (cell) {
+        if (i > floorReduction) {
+          cell.classList.add('active');
+        } else {
+          cell.classList.remove('active');
+        }
+      }
+    }
+  }
+
+  function saveState() {
+    const state = { activeMethod, activeTempUnit, temp: tempInput.value, time: timeInput.value, ph: phInput.value };
+    localStorage.setItem('cooking-botulism-state', JSON.stringify(state));
+  }
+
+  function loadState() {
+    try {
+      const state = JSON.parse(localStorage.getItem('cooking-botulism-state') || '{}');
+      if (state.activeMethod) {
+        activeMethod = state.activeMethod;
+        waterBathBtn.classList.toggle('active', state.activeMethod === 'water-bath');
+        pressureCannerBtn.classList.toggle('active', state.activeMethod === 'pressure-canner');
+      }
+      if (state.activeTempUnit) {
+        activeTempUnit = state.activeTempUnit;
+        celsiusBtn.classList.toggle('active', state.activeTempUnit === 'celsius');
+        fahrenheitBtn.classList.toggle('active', state.activeTempUnit === 'fahrenheit');
+      }
+      updateTempLimits(true);
+      if (state.temp) syncInputs(state.temp, tempSlider, tempInput);
+      if (state.time) syncInputs(state.time, timeSlider, timeInput);
+      if (state.ph) { phInput.value = state.ph; phSlider.value = state.ph; }
+    } catch {}
+  }
+
+  function render() {
+    const tempUI = parseFloat(tempInput.value) || 0;
+    const time = parseFloat(timeInput.value) || 0;
+    const ph = parseFloat(phInput.value) || 0;
+    const tempCelsius = activeTempUnit === 'fahrenheit' ? (tempUI - 32) * 5 / 9 : tempUI;
+    const results = calculateResults(tempCelsius, time, ph, activeMethod);
+
+    f0ValueDisplay.textContent = results.f0Value.toFixed(3);
+    f0GaugeBar.style.width = `${Math.min(100, (results.f0Value / 6) * 100)}%`;
+    dValueDisplay.textContent = results.dValue.toFixed(3);
+    dGaugeBar.style.width = `${Math.min(100, (results.dValue / 5.0) * 100)}%`;
+    logReductionValueDisplay.textContent = results.logReduction.toFixed(2);
+    updateChamber(tempCelsius);
+    updateStatus(results.safetyStatus);
+    updateSporeCells(results.logReduction);
+    saveState();
+  }
+
+  function syncInputs(val, slider, numInput) {
+    slider.value = val;
+    numInput.value = val;
+  }
+
+  function setTempRange() {
+    const isCelsius = activeTempUnit === 'celsius';
+    const isBath = activeMethod === 'water-bath';
+
+    if (isCelsius) {
+      tempSlider.min = '90'; tempInput.min = '90';
+      tempSlider.max = isBath ? '100' : '130';
+      tempInput.max = isBath ? '100' : '130';
+      tempUnitDisplay.textContent = '°C';
+    } else {
+      tempSlider.min = '194'; tempInput.min = '194';
+      tempSlider.max = isBath ? '212' : '266';
+      tempInput.max = isBath ? '212' : '266';
+      tempUnitDisplay.textContent = '°F';
+    }
+  }
+
+  function updateTempLimits(keepVal) {
+    const currentVal = parseFloat(tempInput.value) || 0;
+    let newVal = currentVal;
+
+    if (!keepVal) {
+      newVal = activeTempUnit === 'celsius'
+        ? Math.round((currentVal - 32) * 5 / 9)
+        : Math.round(currentVal * 9 / 5 + 32);
+    }
+
+    setTempRange();
+    newVal = Math.max(parseFloat(tempInput.min), Math.min(parseFloat(tempInput.max), newVal));
+    syncInputs(newVal, tempSlider, tempInput);
+  }
+
+  tempInput.addEventListener('input', (e) => {
+    syncInputs(e.target.value, tempSlider, tempInput);
+    render();
+  });
+
+  tempSlider.addEventListener('input', (e) => {
+    syncInputs(e.target.value, tempSlider, tempInput);
+    render();
+  });
+
+  timeInput.addEventListener('input', (e) => {
+    syncInputs(e.target.value, timeSlider, timeInput);
+    render();
+  });
+
+  timeSlider.addEventListener('input', (e) => {
+    syncInputs(e.target.value, timeSlider, timeInput);
+    render();
+  });
+
+  phInput.addEventListener('input', (e) => {
+    const cleanVal = e.target.value.replace(',', '.');
+    let val = parseFloat(cleanVal) || 0;
+    if (val < 2.0) val = 2.0;
+    if (val > 7.0) val = 7.0;
+    phSlider.value = val.toString();
+    render();
+  });
+
+  phInput.addEventListener('blur', (e) => {
+    const cleanVal = e.target.value.replace(',', '.');
+    let val = parseFloat(cleanVal) || 0;
+    if (val < 2.0) val = 2.0;
+    if (val > 7.0) val = 7.0;
+    phInput.value = val.toFixed(1);
+    phSlider.value = val.toString();
+    render();
+  });
+
+  phSlider.addEventListener('input', (e) => {
+    phInput.value = parseFloat(e.target.value).toFixed(1);
+    render();
+  });
+
+  celsiusBtn.addEventListener('click', () => {
+    if (activeTempUnit === 'celsius') return;
+    activeTempUnit = 'celsius';
+    celsiusBtn.classList.add('active');
+    fahrenheitBtn.classList.remove('active');
+    updateTempLimits(false);
+    render();
+  });
+
+  fahrenheitBtn.addEventListener('click', () => {
+    if (activeTempUnit === 'fahrenheit') return;
+    activeTempUnit = 'fahrenheit';
+    fahrenheitBtn.classList.add('active');
+    celsiusBtn.classList.remove('active');
+    updateTempLimits(false);
+    render();
+  });
+
+  waterBathBtn.addEventListener('click', () => {
+    if (activeMethod === 'water-bath') return;
+    activeMethod = 'water-bath';
+    waterBathBtn.classList.add('active');
+    pressureCannerBtn.classList.remove('active');
+    updateTempLimits(true);
+    render();
+  });
+
+  pressureCannerBtn.addEventListener('click', () => {
+    if (activeMethod === 'pressure-canner') return;
+    activeMethod = 'pressure-canner';
+    pressureCannerBtn.classList.add('active');
+    waterBathBtn.classList.remove('active');
+    updateTempLimits(true);
+    render();
+  });
+
+  loadState();
+  render();
+</script>

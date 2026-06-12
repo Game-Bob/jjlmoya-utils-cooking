@@ -14,6 +14,7 @@ import { cookwareGuide } from '../tool/cookware-guide/entry';
 import { lactoFermentationSalt } from '../tool/lacto-fermentation-salt-calculator/entry';
 import { spherificationBath } from '../tool/spherification-bath-calculator/entry';
 import { iceCreamPacPod } from '../tool/ice-cream-pac-pod/entry';
+import { botulismCanningSafety } from '../tool/botulism-canning-safety/entry';
 
 export const cookingCategory: CookingCategoryEntry = {
   icon: 'mdi:chef-hat',
@@ -33,6 +34,7 @@ export const cookingCategory: CookingCategoryEntry = {
     lactoFermentationSalt,
     spherificationBath,
     iceCreamPacPod,
+    botulismCanningSafety,
   ],
 
   i18n: {

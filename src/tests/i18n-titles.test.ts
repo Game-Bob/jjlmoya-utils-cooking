@@ -34,9 +34,9 @@ describe("i18n titles for FAQ", () => {
     }
   });
 
-  it("should have 16 tools with complete i18n setup", async () => {
+  it("should have 17 tools with complete i18n setup", async () => {
     const completeTools = ALL_TOOLS.filter((t) => Object.keys(t.entry.i18n).length > 1);
-    expect(completeTools.length).toBe(16);
+    expect(completeTools.length).toBe(17);
   });
 
   it("tool IDs should be correctly registered", () => {
@@ -56,6 +56,7 @@ describe("i18n titles for FAQ", () => {
     expect(toolIds).toContain("lacto-fermentation-salt-calculator");
     expect(toolIds).toContain("spherification-bath-calculator");
     expect(toolIds).toContain("ice-cream-pac-pod");
+    expect(toolIds).toContain("botulism-canning-safety");
   });
 });
 

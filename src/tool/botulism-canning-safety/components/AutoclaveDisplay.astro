@@ -1,0 +1,62 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="autoclave-diagnostics">
+  <div class="diagnostic-title">{ui.indicatorSectionTitle}</div>
+
+  <div class="gauges-flex-row">
+    <div class="gauge-display-panel f0-panel">
+      <div class="gauge-label-row">
+        <span class="gauge-label-text">{ui.f0Label}</span>
+        <div class="info-tooltip-container">
+          <svg viewBox="0 0 24 24" class="info-icon-svg" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span class="info-tooltip-text">{ui.f0Tooltip}</span>
+        </div>
+      </div>
+      <div class="f0-digital-value" id="f0-value-display">0.00</div>
+      <div class="gauge-bar-track">
+        <div id="f0-gauge-bar" class="gauge-bar-fill f0-fill"></div>
+      </div>
+    </div>
+
+    <div class="gauge-display-panel d-panel">
+      <div class="gauge-label-row">
+        <span class="gauge-label-text">{ui.dLabel}</span>
+        <div class="info-tooltip-container">
+          <svg viewBox="0 0 24 24" class="info-icon-svg" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span class="info-tooltip-text">{ui.dTooltip}</span>
+        </div>
+      </div>
+      <div class="d-digital-value">
+        <span id="d-value-display">0.21</span>
+        <span class="d-unit">{ui.dValueUnit}</span>
+      </div>
+      <div class="gauge-bar-track">
+        <div id="d-gauge-bar" class="gauge-bar-fill d-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="autoclave-chamber-box" id="autoclave-chamber-box">
+    <svg viewBox="0 0 200 120" class="chamber-svg">
+      <rect x="20" y="10" width="160" height="100" rx="10" ry="10" class="chamber-metal-bg"></rect>
+      <rect x="25" y="15" width="150" height="90" rx="8" ry="8" class="chamber-window"></rect>
+      <rect id="chamber-steam-level" x="25" y="15" width="150" height="90" rx="8" ry="8" class="chamber-steam"></rect>
+      <line x1="25" y1="60" x2="175" y2="60" class="chamber-grid-line"></line>
+      <text x="100" y="65" text-anchor="middle" class="chamber-pressure-readout" id="pressure-readout">0.0 PSI</text>
+    </svg>
+  </div>
+</div>

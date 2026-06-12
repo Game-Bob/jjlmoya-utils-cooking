@@ -180,11 +180,49 @@ const { ui } = Astro.props;
     return { totalPAC, totalPOD, solidsPercentage: solidsPct, targetPAC };
   }
 
+  const STORAGE_KEY = 'cooking-ice-cream-state';
+
+  function saveState() {
+    const state = {
+      activeUnit,
+      base: baseInput.value,
+      temp: tempInput.value,
+      sucrose: sucroseInput.value,
+      dextrose: dextroseInput.value,
+      glucose: glucoseInput.value,
+      inverted: invertedInput.value,
+      trehalose: trehaloseInput.value
+    };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  }
+
+  function loadState() {
+    try {
+      const state = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+      if (state.activeUnit) {
+        activeUnit = state.activeUnit;
+        imperialBtn.classList.toggle('active', state.activeUnit === 'imperial');
+        metricBtn.classList.toggle('active', state.activeUnit === 'metric');
+        if (state.activeUnit === 'imperial') {
+          document.querySelectorAll('.weight-unit-label').forEach(l => l.textContent = ui.ozLabel);
+          document.querySelectorAll('.temp-unit-label').forEach(t => t.textContent = ui.fLabel);
+          tempSlider.min = '-13'; tempSlider.max = '23';
+        }
+      }
+      const sliderPairs = [['base', baseInput, baseSlider], ['temp', tempInput, tempSlider],
+        ['sucrose', sucroseInput, sucroseSlider], ['dextrose', dextroseInput, dextroseSlider],
+        ['glucose', glucoseInput, glucoseSlider], ['inverted', invertedInput, invertedSlider],
+        ['trehalose', trehaloseInput, trehaloseSlider]];
+      sliderPairs.forEach(([key, input, slider]) => { if (state[key]) { input.value = state[key]; slider.value = state[key]; } });
+    } catch {}
+  }
+
   function updateView() {
     const v = readValues();
     const metrics = computeMetrics(v);
     const state = computeState(metrics.totalPAC, metrics.targetPAC);
     updateUI(state, metrics);
+    saveState();
   }
 
   function convertInputs(targetUnit, inputs, sliders) {
@@ -247,6 +285,7 @@ const { ui } = Astro.props;
     updateView();
   });
 
+  loadState();
   updateView();
 </script>
 
