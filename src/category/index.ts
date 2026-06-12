@@ -11,6 +11,7 @@ import { ingredientRescaler } from '../tool/ingredient-rescaler/entry';
 import { sourdoughCalculator } from '../tool/sourdough-calculator/entry';
 import { rouxGuide } from '../tool/roux-guide/entry';
 import { cookwareGuide } from '../tool/cookware-guide/entry';
+import { lactoFermentationSalt } from '../tool/lacto-fermentation-salt-calculator/entry';
 
 export const cookingCategory: CookingCategoryEntry = {
   icon: 'mdi:chef-hat',
@@ -27,6 +28,7 @@ export const cookingCategory: CookingCategoryEntry = {
     sourdoughCalculator,
     rouxGuide,
     cookwareGuide,
+    lactoFermentationSalt,
   ],
   i18n: {
     es: () => import('./i18n/es').then((m) => m.content),

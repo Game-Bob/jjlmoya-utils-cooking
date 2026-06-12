@@ -14,6 +14,7 @@ export { SOURDOUGH_CALCULATOR_TOOL } from './tool/sourdough-calculator';
 export { ROUX_GUIDE_TOOL } from './tool/roux-guide';
 export { COOKWARE_GUIDE_TOOL } from './tool/cookware-guide';
 export { YEAST_CONVERTER_TOOL } from './tool/yeast-converter';
+export { LACTO_FERMENTATION_SALT_TOOL } from './tool/lacto-fermentation-salt-calculator';
 
 export type {
   KnownLocale,

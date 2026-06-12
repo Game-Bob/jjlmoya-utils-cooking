@@ -1,0 +1,163 @@
+---
+import WizardMode from './components/WizardMode.astro';
+import DigitalScale from './components/DigitalScale.astro';
+import PetriDish from './components/PetriDish.astro';
+
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="fermentation-container">
+  <div class="fermentation-card">
+    <div class="fermentation-glow-1"></div>
+    <div class="fermentation-glow-2"></div>
+
+    <div class="fermentation-grid">
+      <div class="fermentation-controls-section">
+        <WizardMode ui={ui} />
+        <DigitalScale ui={ui} />
+      </div>
+
+      <div class="fermentation-visuals-section">
+        <PetriDish ui={ui} />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ ui }}>
+  const metricBtn = document.getElementById('toggle-metric-btn');
+  const imperialBtn = document.getElementById('toggle-imperial-btn');
+  const dryBtn = document.getElementById('toggle-dry-btn');
+  const wetBtn = document.getElementById('toggle-wet-btn');
+  const vegInput = document.getElementById('veg-weight-input');
+  const waterInput = document.getElementById('water-weight-input');
+  const waterGroup = document.getElementById('water-weight-group');
+  const salinitySlider = document.getElementById('salinity-slider');
+  
+  const salinityDisplay = document.getElementById('salinity-val-display');
+  const scaleDisplay = document.getElementById('scale-main-value');
+  const scaleUnitDisplay = document.getElementById('scale-unit-label');
+  const fineDisplay = document.getElementById('fine-teaspoons-val');
+  const kosherDisplay = document.getElementById('kosher-teaspoons-val');
+
+  const petriBac = document.getElementById('petri-bacteria');
+  const petriMold = document.getElementById('petri-mold');
+  const petriCrys = document.getElementById('petri-crystals');
+
+  const statusBadge = document.getElementById('status-badge');
+  const statusBadgeText = document.getElementById('status-badge-text');
+  const statusDescText = document.getElementById('status-description-text');
+
+  let activeMode = 'dry';
+  let activeUnit = 'metric';
+
+  function updatePetriAndStatus(salinity) {
+    if (salinity < 2.0) {
+      petriMold.style.opacity = '1';
+      petriBac.style.opacity = '0';
+      petriCrys.style.opacity = '0';
+      
+      statusBadge.className = 'status-badge danger';
+      statusBadgeText.textContent = ui.statusDanger;
+      statusDescText.textContent = ui.statusDangerDesc;
+    } else if (salinity > 3.5) {
+      petriMold.style.opacity = '0';
+      petriBac.style.opacity = '0';
+      petriCrys.style.opacity = '1';
+
+      statusBadge.className = 'status-badge inhibited';
+      statusBadgeText.textContent = ui.statusInhibited;
+      statusDescText.textContent = ui.statusInhibitedDesc;
+    } else {
+      petriMold.style.opacity = '0';
+      petriBac.style.opacity = '1';
+      petriCrys.style.opacity = '0';
+
+      statusBadge.className = 'status-badge optimal';
+      statusBadgeText.textContent = ui.statusOptimal;
+      statusDescText.textContent = ui.statusOptimalDesc;
+    }
+  }
+
+  function updateView() {
+    const vegWeight = Math.max(0, parseFloat(vegInput.value) || 0);
+    const waterWeight = Math.max(0, parseFloat(waterInput.value) || 0);
+    const salinity = Math.max(0, parseFloat(salinitySlider.value) || 0);
+
+    salinityDisplay.textContent = `${salinity.toFixed(1)}%`;
+
+    const totalWeight = activeMode === 'dry' ? vegWeight : (vegWeight + waterWeight);
+    const saltResult = Math.max(0, (totalWeight * salinity) / 100);
+    
+    scaleDisplay.textContent = saltResult.toFixed(2);
+    scaleUnitDisplay.textContent = activeUnit === 'metric' ? 'g' : 'oz';
+
+    const saltGrams = activeUnit === 'imperial' ? saltResult * 28.3495 : saltResult;
+
+    fineDisplay.textContent = Math.max(0, saltGrams / 5.7).toFixed(1);
+    kosherDisplay.textContent = Math.max(0, saltGrams / 4.3).toFixed(1);
+
+    updatePetriAndStatus(salinity);
+  }
+
+  function convertInputsTo(targetUnit) {
+    const currentVeg = parseFloat(vegInput.value) || 0;
+    const currentWater = parseFloat(waterInput.value) || 0;
+
+    const labels = document.querySelectorAll('.weight-unit-label');
+
+    if (targetUnit === 'imperial') {
+      vegInput.value = (currentVeg * 0.035274).toFixed(1);
+      waterInput.value = (currentWater * 0.035274).toFixed(1);
+      labels.forEach(label => label.textContent = 'oz');
+    } else {
+      vegInput.value = Math.round(currentVeg / 0.035274).toString();
+      waterInput.value = Math.round(currentWater / 0.035274).toString();
+      labels.forEach(label => label.textContent = 'g');
+    }
+  }
+
+  metricBtn.addEventListener('click', () => {
+    if (activeUnit === 'metric') return;
+    activeUnit = 'metric';
+    metricBtn.classList.add('active');
+    imperialBtn.classList.remove('active');
+    convertInputsTo('metric');
+    updateView();
+  });
+
+  imperialBtn.addEventListener('click', () => {
+    if (activeUnit === 'imperial') return;
+    activeUnit = 'imperial';
+    imperialBtn.classList.add('active');
+    metricBtn.classList.remove('active');
+    convertInputsTo('imperial');
+    updateView();
+  });
+
+  dryBtn.addEventListener('click', () => {
+    activeMode = 'dry';
+    dryBtn.classList.add('active');
+    wetBtn.classList.remove('active');
+    waterGroup.classList.add('hidden');
+    updateView();
+  });
+
+  wetBtn.addEventListener('click', () => {
+    activeMode = 'wet';
+    wetBtn.classList.add('active');
+    dryBtn.classList.remove('active');
+    waterGroup.classList.remove('hidden');
+    updateView();
+  });
+
+  vegInput.addEventListener('input', updateView);
+  waterInput.addEventListener('input', updateView);
+  salinitySlider.addEventListener('input', updateView);
+
+  updateView();
+</script>

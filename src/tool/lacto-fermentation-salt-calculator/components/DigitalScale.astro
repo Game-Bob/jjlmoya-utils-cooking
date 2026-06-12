@@ -1,0 +1,43 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="digital-scale-container">
+  <div class="scale-header">
+    <span class="scale-title">{ui.scaleTitle}</span>
+  </div>
+
+  <div class="scale-plate">
+    <div class="scale-display">
+      <div class="scale-digits">
+        <span id="scale-main-value">25.00</span>
+        <span id="scale-unit-label" class="scale-unit">g</span>
+      </div>
+      <div class="scale-label">{ui.saltGramsLabel}</div>
+    </div>
+  </div>
+
+  <div class="scale-conversions">
+    <div class="conversion-item">
+      <span class="conversion-label">{ui.fineLabel}</span>
+      <div class="conversion-val">
+        <span id="fine-teaspoons-val">4.4</span>
+        <span class="conversion-unit">tsp</span>
+      </div>
+    </div>
+
+    <div class="conversion-item">
+      <span class="conversion-label">{ui.kosherLabel}</span>
+      <div class="conversion-val">
+        <span id="kosher-teaspoons-val">5.8</span>
+        <span class="conversion-unit">tsp</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="scale-disclaimer">{ui.disclaimer}</p>
+</div>

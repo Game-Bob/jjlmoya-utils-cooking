@@ -13,6 +13,7 @@ import { SOURDOUGH_CALCULATOR_TOOL } from './tool/sourdough-calculator';
 import { ROUX_GUIDE_TOOL } from './tool/roux-guide';
 import { COOKWARE_GUIDE_TOOL } from './tool/cookware-guide';
 import { YEAST_CONVERTER_TOOL } from './tool/yeast-converter';
+import { LACTO_FERMENTATION_SALT_TOOL } from './tool/lacto-fermentation-salt-calculator';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   AMERICAN_KITCHEN_CONVERTER_TOOL,
@@ -28,6 +29,5 @@ export const ALL_TOOLS: ToolDefinition[] = [
   ROUX_GUIDE_TOOL,
   COOKWARE_GUIDE_TOOL,
   YEAST_CONVERTER_TOOL,
+  LACTO_FERMENTATION_SALT_TOOL,
 ];
-
-
