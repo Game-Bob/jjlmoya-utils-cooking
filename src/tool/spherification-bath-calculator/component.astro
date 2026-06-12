@@ -83,8 +83,8 @@ const { ui } = Astro.props;
   }
 
   function updateRecipeList(result, displayFactor) {
-    baseAgentName.textContent = activeMethod === 'direct' ? 'Sodium Alginate' : 'Calcium Lactate';
-    bathAgentName.textContent = activeMethod === 'direct' ? 'Calcium Chloride' : 'Sodium Alginate';
+    baseAgentName.textContent = activeMethod === 'direct' ? ui.sodiumAlginate : ui.calciumLactate;
+    bathAgentName.textContent = activeMethod === 'direct' ? ui.calciumChloride : ui.sodiumAlginate;
 
     baseAgentVal.textContent = (result.baseAgentGrams * displayFactor).toFixed(2);
     bathAgentVal.textContent = (result.bathAgentGrams * displayFactor).toFixed(2);
