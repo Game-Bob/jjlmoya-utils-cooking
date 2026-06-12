@@ -1,0 +1,60 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="recipe-summary-container">
+  <div class="summary-header">
+    <span class="summary-title">{ui.recipeTitle}</span>
+  </div>
+
+  <div class="recipe-list">
+    <div class="recipe-item">
+      <div class="recipe-item-name">
+        <span id="base-agent-name-display">{ui.baseGellingAgent}</span>
+      </div>
+      <div class="recipe-item-val">
+        <span id="base-agent-grams-display">2.50</span>
+        <span class="recipe-unit-label">g</span>
+      </div>
+    </div>
+
+    <div class="recipe-item">
+      <div class="recipe-item-name">
+        <span id="bath-agent-name-display">{ui.bathGellingAgent}</span>
+      </div>
+      <div class="recipe-item-val">
+        <span id="bath-agent-grams-display">10.00</span>
+        <span class="recipe-unit-label">g</span>
+      </div>
+    </div>
+
+    <div id="xanthan-summary-item" class="recipe-item hidden">
+      <div class="recipe-item-name">
+        <span>{ui.xanthanGum}</span>
+      </div>
+      <div class="recipe-item-val">
+        <span id="xanthan-grams-display">0.00</span>
+        <span class="recipe-unit-label">g</span>
+      </div>
+    </div>
+
+    <div id="citrate-summary-item" class="recipe-item hidden">
+      <div class="recipe-item-name">
+        <span>{ui.sodiumCitrate}</span>
+      </div>
+      <div class="recipe-item-val">
+        <span id="citrate-grams-display">0.00</span>
+        <span class="recipe-unit-label">g</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="solubility-warning" class="solubility-warning hidden">
+    <div class="warning-badge">{ui.warningLabel}</div>
+    <p class="warning-text">{ui.warningDesc}</p>
+  </div>
+</div>

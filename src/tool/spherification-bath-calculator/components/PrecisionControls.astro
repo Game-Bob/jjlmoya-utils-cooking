@@ -1,0 +1,85 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="spherification-controls">
+  <div class="controls-group">
+    <label class="controls-label">{ui.unitLabel}</label>
+    <div class="unit-toggle-container">
+      <button type="button" id="toggle-metric-btn" class="mode-btn active" data-unit="metric">
+        {ui.metricUnit}
+      </button>
+      <button type="button" id="toggle-imperial-btn" class="mode-btn" data-unit="imperial">
+        {ui.imperialUnit}
+      </button>
+    </div>
+  </div>
+
+  <div class="controls-group">
+    <label class="controls-label">{ui.methodLabel}</label>
+    <div class="method-toggle-container">
+      <button type="button" id="toggle-direct-btn" class="mode-btn active" data-method="direct">
+        {ui.directMethod}
+      </button>
+      <button type="button" id="toggle-reverse-btn" class="mode-btn" data-method="reverse">
+        {ui.reverseMethod}
+      </button>
+    </div>
+  </div>
+
+  <div class="controls-group">
+    <label for="base-weight-input" class="controls-label">
+      {ui.baseWeightLabel} (<span class="weight-unit-label">g</span>)
+    </label>
+    <input
+      type="number"
+      id="base-weight-input"
+      min="0"
+      max="100000"
+      step="any"
+      value="500"
+      class="controls-number-input"
+      inputmode="decimal"
+    />
+  </div>
+
+  <div class="controls-group">
+    <label for="bath-weight-input" class="controls-label">
+      {ui.bathWeightLabel} (<span class="weight-unit-label">g</span>)
+    </label>
+    <input
+      type="number"
+      id="bath-weight-input"
+      min="0"
+      max="100000"
+      step="any"
+      value="1000"
+      class="controls-number-input"
+      inputmode="decimal"
+    />
+  </div>
+
+  <div class="switches-grid">
+    <button type="button" id="toggle-xanthan-btn" class="switch-row-btn">
+      <div class="switch-row-info">
+        <span class="switch-row-title">{ui.xanthanLabel}</span>
+      </div>
+      <div class="toggle-switch">
+        <div id="xanthan-switch-circle" class="switch-circle"></div>
+      </div>
+    </button>
+
+    <button type="button" id="toggle-citrate-btn" class="switch-row-btn">
+      <div class="switch-row-info">
+        <span class="switch-row-title">{ui.citrateLabel}</span>
+      </div>
+      <div class="toggle-switch">
+        <div id="citrate-switch-circle" class="switch-circle"></div>
+      </div>
+    </button>
+  </div>
+</div>

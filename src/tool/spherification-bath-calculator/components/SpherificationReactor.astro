@@ -1,0 +1,73 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="reactor-section">
+  <div class="reactor-header">
+    <span class="reactor-title">{ui.methodLabel}</span>
+  </div>
+
+  <div class="reactor-container">
+    <div class="beaker-vessel">
+      <svg viewBox="0 0 200 240" class="reactor-svg" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="beaker-glass-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="rgba(255,255,255,0.4)"></stop>
+            <stop offset="10%" stop-color="rgba(255,255,255,0.1)"></stop>
+            <stop offset="90%" stop-color="rgba(255,255,255,0.1)"></stop>
+            <stop offset="100%" stop-color="rgba(255,255,255,0.4)"></stop>
+          </linearGradient>
+
+          <linearGradient id="liquid-direct-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fb923c"></stop>
+            <stop offset="100%" stop-color="#ea580c"></stop>
+          </linearGradient>
+
+          <linearGradient id="liquid-reverse-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f472b6"></stop>
+            <stop offset="100%" stop-color="#db2777"></stop>
+          </linearGradient>
+
+          <linearGradient id="bath-direct-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="rgba(56,189,248,0.15)"></stop>
+            <stop offset="100%" stop-color="rgba(14,165,233,0.3)"></stop>
+          </linearGradient>
+
+          <linearGradient id="bath-reverse-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="rgba(168,85,247,0.15)"></stop>
+            <stop offset="100%" stop-color="rgba(126,34,206,0.3)"></stop>
+          </linearGradient>
+        </defs>
+
+        <rect x="30" y="70" width="140" height="150" rx="15" id="beaker-bath" class="beaker-liquid" fill="url(#bath-direct-grad)"></rect>
+
+        <rect x="26" y="66" width="148" height="158" rx="18" fill="none" stroke="url(#beaker-glass-grad)" stroke-width="4"></rect>
+        <line x1="20" y1="66" x2="180" y2="66" stroke="url(#beaker-glass-grad)" stroke-width="4"></line>
+
+        <g class="nozzle-assembly">
+          <rect x="94" y="10" width="12" height="30" fill="#94a3b8" rx="2"></rect>
+          <path d="M96,40 L104,40 L102,52 L98,52 Z" fill="#64748b"></path>
+          <circle cx="100" cy="56" r="3" class="droplet"></circle>
+        </g>
+
+        <g id="sphere-chamber" class="sphere-chamber">
+          <circle cx="100" cy="140" r="35" id="reactor-sphere-core" class="sphere-fluid-core" fill="url(#liquid-direct-grad)"></circle>
+          <circle cx="100" cy="140" r="35" id="reactor-sphere-membrane" class="sphere-gel-membrane"></circle>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="method-info-card">
+    <div id="method-badge" class="method-badge direct">
+      <span id="method-badge-text">{ui.directMethod}</span>
+    </div>
+    <p id="method-description-text" class="method-desc-text">
+      {ui.directDesc}
+    </p>
+  </div>
+</div>

@@ -1,0 +1,213 @@
+---
+import PrecisionControls from './components/PrecisionControls.astro';
+import RecipeSummary from './components/RecipeSummary.astro';
+import SpherificationReactor from './components/SpherificationReactor.astro';
+
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="spherification-container">
+  <div class="spherification-console">
+    <div class="spherification-glow-1"></div>
+    <div class="spherification-glow-2"></div>
+
+    <div class="console-column controls-col">
+      <PrecisionControls ui={ui} />
+    </div>
+
+    <div class="console-column reactor-col">
+      <SpherificationReactor ui={ui} />
+    </div>
+
+    <div class="console-column summary-col">
+      <RecipeSummary ui={ui} />
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ ui }}>
+  const metricBtn = document.getElementById('toggle-metric-btn');
+  const imperialBtn = document.getElementById('toggle-imperial-btn');
+  const directBtn = document.getElementById('toggle-direct-btn');
+  const reverseBtn = document.getElementById('toggle-reverse-btn');
+  const xanthanBtn = document.getElementById('toggle-xanthan-btn');
+  const citrateBtn = document.getElementById('toggle-citrate-btn');
+
+  const baseInput = document.getElementById('base-weight-input');
+  const bathInput = document.getElementById('bath-weight-input');
+
+  const baseAgentName = document.getElementById('base-agent-name-display');
+  const bathAgentName = document.getElementById('bath-agent-name-display');
+  const baseAgentVal = document.getElementById('base-agent-grams-display');
+  const bathAgentVal = document.getElementById('bath-agent-grams-display');
+  const xanthanVal = document.getElementById('xanthan-grams-display');
+  const citrateVal = document.getElementById('citrate-grams-display');
+
+  const xanthanRow = document.getElementById('xanthan-summary-item');
+  const citrateRow = document.getElementById('citrate-summary-item');
+  const solubilityWarning = document.getElementById('solubility-warning');
+
+  const beakerBath = document.getElementById('beaker-bath');
+  const sphereCore = document.getElementById('reactor-sphere-core');
+  const sphereMembrane = document.getElementById('reactor-sphere-membrane');
+  
+  const methodBadge = document.getElementById('method-badge');
+  const methodBadgeText = document.getElementById('method-badge-text');
+  const methodDescText = document.getElementById('method-description-text');
+
+  let activeUnit = 'metric';
+  let activeMethod = 'direct';
+  let useXanthan = false;
+  let useCitrate = false;
+
+  function updateReactorUI() {
+    if (activeMethod === 'direct') {
+      beakerBath.setAttribute('fill', 'url(#bath-direct-grad)');
+      sphereCore.setAttribute('fill', 'url(#liquid-direct-grad)');
+      sphereMembrane.className.baseVal = 'sphere-gel-membrane direct';
+      methodBadge.className = 'method-badge direct';
+      methodBadgeText.textContent = ui.directMethod;
+      methodDescText.textContent = ui.directDesc;
+    } else {
+      beakerBath.setAttribute('fill', 'url(#bath-reverse-grad)');
+      sphereCore.setAttribute('fill', 'url(#liquid-reverse-grad)');
+      sphereMembrane.className.baseVal = 'sphere-gel-membrane reverse';
+      methodBadge.className = 'method-badge reverse';
+      methodBadgeText.textContent = ui.reverseMethod;
+      methodDescText.textContent = ui.reverseDesc;
+    }
+  }
+
+  function updateRecipeList(result, displayFactor) {
+    baseAgentName.textContent = activeMethod === 'direct' ? 'Sodium Alginate' : 'Calcium Lactate';
+    bathAgentName.textContent = activeMethod === 'direct' ? 'Calcium Chloride' : 'Sodium Alginate';
+
+    baseAgentVal.textContent = (result.baseAgentGrams * displayFactor).toFixed(2);
+    bathAgentVal.textContent = (result.bathAgentGrams * displayFactor).toFixed(2);
+
+    if (useXanthan) {
+      xanthanRow.classList.remove('hidden');
+      xanthanVal.textContent = (result.xanthanGrams * displayFactor).toFixed(2);
+    } else {
+      xanthanRow.classList.add('hidden');
+    }
+
+    if (useCitrate) {
+      citrateRow.classList.remove('hidden');
+      citrateVal.textContent = (result.citrateGrams * displayFactor).toFixed(2);
+    } else {
+      citrateRow.classList.add('hidden');
+    }
+
+    if (result.solubilityWarning) {
+      solubilityWarning.classList.remove('hidden');
+    } else {
+      solubilityWarning.classList.add('hidden');
+    }
+  }
+
+  function computeResult(baseWeight, bathWeight) {
+    const agentRatioBase = activeMethod === 'direct' ? 0.005 : 0.02;
+    const agentRatioBath = activeMethod === 'direct' ? 0.01 : 0.005;
+    const directWarning = activeMethod === 'direct' && baseWeight * 0.005 > 5;
+    const reverseWarning = activeMethod === 'reverse' && bathWeight * 0.005 > 10;
+    return {
+      baseAgentGrams: baseWeight * agentRatioBase,
+      bathAgentGrams: bathWeight * agentRatioBath,
+      xanthanGrams: useXanthan ? baseWeight * 0.002 : 0,
+      citrateGrams: useCitrate ? baseWeight * 0.005 : 0,
+      solubilityWarning: directWarning || reverseWarning,
+    };
+  }
+
+  function updateView() {
+    let baseWeight = Math.max(0, parseFloat(baseInput.value) || 0);
+    let bathWeight = Math.max(0, parseFloat(bathInput.value) || 0);
+
+    if (activeUnit === 'imperial') {
+      baseWeight = baseWeight / 0.035274;
+      bathWeight = bathWeight / 0.035274;
+    }
+
+    const result = computeResult(baseWeight, bathWeight);
+    const displayFactor = activeUnit === 'imperial' ? 0.035274 : 1.0;
+    updateRecipeList(result, displayFactor);
+    updateReactorUI();
+  }
+
+  function convertInputsTo(targetUnit) {
+    const currentBase = parseFloat(baseInput.value) || 0;
+    const currentBath = parseFloat(bathInput.value) || 0;
+    const labels = document.querySelectorAll('.weight-unit-label');
+    const recipeLabels = document.querySelectorAll('.recipe-unit-label');
+
+    if (targetUnit === 'imperial') {
+      baseInput.value = (currentBase * 0.035274).toFixed(1);
+      bathInput.value = (currentBath * 0.035274).toFixed(1);
+      labels.forEach(label => label.textContent = 'oz');
+      recipeLabels.forEach(label => label.textContent = 'oz');
+    } else {
+      baseInput.value = Math.round(currentBase / 0.035274).toString();
+      bathInput.value = Math.round(currentBath / 0.035274).toString();
+      labels.forEach(label => label.textContent = 'g');
+      recipeLabels.forEach(label => label.textContent = 'g');
+    }
+  }
+
+  metricBtn.addEventListener('click', () => {
+    if (activeUnit === 'metric') return;
+    activeUnit = 'metric';
+    metricBtn.classList.add('active');
+    imperialBtn.classList.remove('active');
+    convertInputsTo('metric');
+    updateView();
+  });
+
+  imperialBtn.addEventListener('click', () => {
+    if (activeUnit === 'imperial') return;
+    activeUnit = 'imperial';
+    imperialBtn.classList.add('active');
+    metricBtn.classList.remove('active');
+    convertInputsTo('imperial');
+    updateView();
+  });
+
+  directBtn.addEventListener('click', () => {
+    if (activeMethod === 'direct') return;
+    activeMethod = 'direct';
+    directBtn.classList.add('active');
+    reverseBtn.classList.remove('active');
+    updateView();
+  });
+
+  reverseBtn.addEventListener('click', () => {
+    if (activeMethod === 'reverse') return;
+    activeMethod = 'reverse';
+    reverseBtn.classList.add('active');
+    directBtn.classList.remove('active');
+    updateView();
+  });
+
+  xanthanBtn.addEventListener('click', () => {
+    useXanthan = !useXanthan;
+    xanthanBtn.classList.toggle('active', useXanthan);
+    document.getElementById('xanthan-switch-circle').classList.toggle('active', useXanthan);
+    updateView();
+  });
+
+  citrateBtn.addEventListener('click', () => {
+    useCitrate = !useCitrate;
+    citrateBtn.classList.toggle('active', useCitrate);
+    document.getElementById('citrate-switch-circle').classList.toggle('active', useCitrate);
+    updateView();
+  });
+
+  baseInput.addEventListener('input', updateView);
+  bathInput.addEventListener('input', updateView);
+
+  updateView();
+</script>
