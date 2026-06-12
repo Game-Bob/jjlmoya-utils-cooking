@@ -1,0 +1,54 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="popsicle-indicators-grid">
+  <div class="popsicle-bar pac-bar">
+    <div class="popsicle-label-top">{ui.pacLabel}</div>
+    <div class="popsicle-body-wrapper">
+      <div class="popsicle-outline">
+        <div id="pac-popsicle-fill" class="popsicle-fill pac-fill-color"></div>
+        <div class="popsicle-number-overlay">
+          <span id="pac-value-display">0</span>
+        </div>
+      </div>
+      <div class="popsicle-stick"></div>
+    </div>
+    <div class="popsicle-target-display">
+      <span>Target:</span>
+      <span id="target-pac-display">0</span>
+    </div>
+  </div>
+
+  <div class="popsicle-bar pod-bar">
+    <div class="popsicle-label-top">{ui.podLabel}</div>
+    <div class="popsicle-body-wrapper">
+      <div class="popsicle-outline">
+        <div id="pod-popsicle-fill" class="popsicle-fill pod-fill-color"></div>
+        <div class="popsicle-number-overlay">
+          <span id="pod-value-display">0</span>
+        </div>
+      </div>
+      <div class="popsicle-stick"></div>
+    </div>
+    <div class="popsicle-target-display">&nbsp;</div>
+  </div>
+
+  <div class="popsicle-bar solids-bar">
+    <div class="popsicle-label-top">{ui.solidsLabel}</div>
+    <div class="popsicle-body-wrapper">
+      <div class="popsicle-outline">
+        <div id="solids-popsicle-fill" class="popsicle-fill solids-fill-color"></div>
+        <div class="popsicle-number-overlay">
+          <span id="solids-value-display">0%</span>
+        </div>
+      </div>
+      <div class="popsicle-stick"></div>
+    </div>
+    <div class="popsicle-target-display">&nbsp;</div>
+  </div>
+</div>

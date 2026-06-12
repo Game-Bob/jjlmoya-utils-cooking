@@ -13,6 +13,7 @@ export { sourdoughCalculator } from './tool/sourdough-calculator/entry';
 export { yeastConverter } from './tool/yeast-converter/entry';
 export { lactoFermentationSalt } from './tool/lacto-fermentation-salt-calculator/entry';
 export { spherificationBath } from './tool/spherification-bath-calculator/entry';
+export { iceCreamPacPod } from './tool/ice-cream-pac-pod/entry';
 export { cookingCategory } from './category';
 import { americanKitchenConverter } from './tool/american-kitchen-converter/entry';
 import { bananaCare } from './tool/banana-ripeness/entry';
@@ -29,4 +30,6 @@ import { sourdoughCalculator } from './tool/sourdough-calculator/entry';
 import { yeastConverter } from './tool/yeast-converter/entry';
 import { lactoFermentationSalt } from './tool/lacto-fermentation-salt-calculator/entry';
 import { spherificationBath } from './tool/spherification-bath-calculator/entry';
-export const ALL_ENTRIES = [americanKitchenConverter, bananaCare, brine, cookwareGuide, eggTimer, ingredientRescaler, kitchenTimer, meringuePeak, moldScaler, pizza, rouxGuide, sourdoughCalculator, yeastConverter, lactoFermentationSalt, spherificationBath];
+import { iceCreamPacPod } from './tool/ice-cream-pac-pod/entry';
+export const ALL_ENTRIES = [americanKitchenConverter, bananaCare, brine, cookwareGuide, eggTimer, ingredientRescaler, kitchenTimer, meringuePeak, moldScaler, pizza, rouxGuide, sourdoughCalculator, yeastConverter, lactoFermentationSalt, spherificationBath, iceCreamPacPod];
+

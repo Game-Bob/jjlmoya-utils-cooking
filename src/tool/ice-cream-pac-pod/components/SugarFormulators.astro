@@ -1,0 +1,107 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="ice-cream-recipe-stack">
+  <div class="base-parameters-board">
+    <div class="board-title">Ice Cream Base Parameters</div>
+    
+    <div class="unit-toggle-container">
+      <button type="button" id="toggle-metric-btn" class="unit-btn active">{ui.metricUnit}</button>
+      <button type="button" id="toggle-imperial-btn" class="unit-btn">{ui.imperialUnit}</button>
+    </div>
+
+    <div class="base-field">
+      <div class="field-header">
+        <label for="base-weight-input" class="field-label">{ui.baseWeightLabel}</label>
+        <div class="field-value-wrap">
+          <input type="number" id="base-weight-input" value="1000" min="100" max="5000" step="50" class="field-number" />
+          <span class="weight-unit-label">{ui.gLabel}</span>
+        </div>
+      </div>
+      <input type="range" id="base-weight-slider" min="100" max="5000" step="50" value="1000" class="cone-slider" />
+    </div>
+
+    <div class="base-field">
+      <div class="field-header">
+        <label for="target-temp-input" class="field-label">{ui.targetTempLabel}</label>
+        <div class="field-value-wrap">
+          <input type="number" id="target-temp-input" value="-12" min="-25" max="-5" step="1" class="field-number" />
+          <span class="temp-unit-label">{ui.cLabel}</span>
+        </div>
+      </div>
+      <input type="range" id="target-temp-slider" min="-25" max="-5" step="1" value="-12" class="cone-slider" />
+    </div>
+  </div>
+
+  <div class="scoop-recipe-cone">
+    <div class="scoop-scoop sucrose-scoop">
+      <div class="scoop-inner-content">
+        <div class="scoop-label-row">
+          <label for="sucrose-input" class="scoop-text-label">{ui.sucroseLabel}</label>
+          <div class="scoop-readout">
+            <input type="number" id="sucrose-input" value="150" min="0" max="500" step="5" class="scoop-number-input" />
+            <span class="weight-unit-label">{ui.gLabel}</span>
+          </div>
+        </div>
+        <input type="range" id="sucrose-slider" min="0" max="500" step="5" value="150" class="scoop-slider-bar" />
+      </div>
+    </div>
+
+    <div class="scoop-scoop dextrose-scoop">
+      <div class="scoop-inner-content">
+        <div class="scoop-label-row">
+          <label for="dextrose-input" class="scoop-text-label">{ui.dextroseLabel}</label>
+          <div class="scoop-readout">
+            <input type="number" id="dextrose-input" value="30" min="0" max="300" step="5" class="scoop-number-input" />
+            <span class="weight-unit-label">{ui.gLabel}</span>
+          </div>
+        </div>
+        <input type="range" id="dextrose-slider" min="0" max="300" step="5" value="30" class="scoop-slider-bar" />
+      </div>
+    </div>
+
+    <div class="scoop-scoop glucose-scoop">
+      <div class="scoop-inner-content">
+        <div class="scoop-label-row">
+          <label for="glucose-input" class="scoop-text-label">{ui.glucoseLabel}</label>
+          <div class="scoop-readout">
+            <input type="number" id="glucose-input" value="20" min="0" max="300" step="5" class="scoop-number-input" />
+            <span class="weight-unit-label">{ui.gLabel}</span>
+          </div>
+        </div>
+        <input type="range" id="glucose-slider" min="0" max="300" step="5" value="20" class="scoop-slider-bar" />
+      </div>
+    </div>
+
+    <div class="scoop-scoop inverted-scoop">
+      <div class="scoop-inner-content">
+        <div class="scoop-label-row">
+          <label for="inverted-input" class="scoop-text-label">{ui.invertedLabel}</label>
+          <div class="scoop-readout">
+            <input type="number" id="inverted-input" value="0" min="0" max="300" step="5" class="scoop-number-input" />
+            <span class="weight-unit-label">{ui.gLabel}</span>
+          </div>
+        </div>
+        <input type="range" id="inverted-slider" min="0" max="300" step="5" value="0" class="scoop-slider-bar" />
+      </div>
+    </div>
+
+    <div class="scoop-scoop trehalose-scoop">
+      <div class="scoop-inner-content">
+        <div class="scoop-label-row">
+          <label for="trehalose-input" class="scoop-text-label">{ui.trehaloseLabel}</label>
+          <div class="scoop-readout">
+            <input type="number" id="trehalose-input" value="0" min="0" max="300" step="5" class="scoop-number-input" />
+            <span class="weight-unit-label">{ui.gLabel}</span>
+          </div>
+        </div>
+        <input type="range" id="trehalose-slider" min="0" max="300" step="5" value="0" class="scoop-slider-bar" />
+      </div>
+    </div>
+  </div>
+</div>

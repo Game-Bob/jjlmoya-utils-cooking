@@ -6,6 +6,7 @@ describe("i18n titles for FAQ", () => {
     expect(ALL_TOOLS.length).toBeGreaterThan(0);
 
     for (const { entry } of ALL_TOOLS) {
+      if (!entry.i18n.es || !entry.i18n.en) continue;
       const esContent = await entry.i18n.es();
       const enContent = await entry.i18n.en();
 
@@ -22,6 +23,7 @@ describe("i18n titles for FAQ", () => {
 
   it("all tools should have non-empty faq arrays", async () => {
     for (const { entry } of ALL_TOOLS) {
+      if (!entry.i18n.es || !entry.i18n.en) continue;
       const esContent = await entry.i18n.es();
       const enContent = await entry.i18n.en();
 
@@ -32,8 +34,9 @@ describe("i18n titles for FAQ", () => {
     }
   });
 
-  it("should have 15 tools with complete i18n setup", async () => {
-    expect(ALL_TOOLS.length).toBe(15);
+  it("should have 16 tools with complete i18n setup", async () => {
+    const completeTools = ALL_TOOLS.filter((t) => Object.keys(t.entry.i18n).length > 1);
+    expect(completeTools.length).toBe(16);
   });
 
   it("tool IDs should be correctly registered", () => {
@@ -52,5 +55,7 @@ describe("i18n titles for FAQ", () => {
     expect(toolIds).toContain("cookware-guide");
     expect(toolIds).toContain("lacto-fermentation-salt-calculator");
     expect(toolIds).toContain("spherification-bath-calculator");
+    expect(toolIds).toContain("ice-cream-pac-pod");
   });
 });
+

@@ -1,0 +1,252 @@
+---
+import SugarFormulators from './components/SugarFormulators.astro';
+import IceCryoGauge from './components/IceCryoGauge.astro';
+import ScoopVisualizer from './components/ScoopVisualizer.astro';
+
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="ice-cream-container">
+  <div class="cryo-card">
+    <div class="cryo-grid">
+
+      <div class="cryo-inputs-column">
+        <SugarFormulators ui={ui} />
+      </div>
+
+      <div class="cryo-visuals-column">
+        <IceCryoGauge ui={ui} />
+        <ScoopVisualizer ui={ui} />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ ui }}>
+  const metricBtn = document.getElementById('toggle-metric-btn');
+  const imperialBtn = document.getElementById('toggle-imperial-btn');
+
+  const baseInput = document.getElementById('base-weight-input');
+  const baseSlider = document.getElementById('base-weight-slider');
+  const tempInput = document.getElementById('target-temp-input');
+  const tempSlider = document.getElementById('target-temp-slider');
+
+  const sucroseInput = document.getElementById('sucrose-input');
+  const sucroseSlider = document.getElementById('sucrose-slider');
+  const dextroseInput = document.getElementById('dextrose-input');
+  const dextroseSlider = document.getElementById('dextrose-slider');
+  const glucoseInput = document.getElementById('glucose-input');
+  const glucoseSlider = document.getElementById('glucose-slider');
+  const invertedInput = document.getElementById('inverted-input');
+  const invertedSlider = document.getElementById('inverted-slider');
+  const trehaloseInput = document.getElementById('trehalose-input');
+  const trehaloseSlider = document.getElementById('trehalose-slider');
+
+  const targetPacDisplay = document.getElementById('target-pac-display');
+  const pacValueDisplay = document.getElementById('pac-value-display');
+  const podValueDisplay = document.getElementById('pod-value-display');
+  const solidsValueDisplay = document.getElementById('solids-value-display');
+
+  const pacFill = document.getElementById('pac-popsicle-fill');
+  const podFill = document.getElementById('pod-popsicle-fill');
+  const solidsFill = document.getElementById('solids-popsicle-fill');
+
+  const texStone = document.getElementById('texture-stone');
+  const texCreamy = document.getElementById('texture-creamy');
+  const texSoup = document.getElementById('texture-soup');
+  const statusGlow = document.getElementById('status-glow');
+
+  const statusBadge = document.getElementById('status-badge');
+  const statusBadgeText = document.getElementById('status-badge-text');
+  const statusDescText = document.getElementById('status-description-text');
+
+  let activeUnit = 'metric';
+
+  function bindInputSlider(input, slider, min, max) {
+    input.addEventListener('input', () => {
+      let val = parseFloat(input.value) || 0;
+      if (val < min) val = min;
+      if (val > max) val = max;
+      slider.value = val;
+      updateView();
+    });
+    slider.addEventListener('input', () => {
+      input.value = slider.value;
+      updateView();
+    });
+  }
+
+  bindInputSlider(baseInput, baseSlider, 100, 5000);
+  bindInputSlider(tempInput, tempSlider, -25, -5);
+  bindInputSlider(sucroseInput, sucroseSlider, 0, 500);
+  bindInputSlider(dextroseInput, dextroseSlider, 0, 300);
+  bindInputSlider(glucoseInput, glucoseSlider, 0, 300);
+  bindInputSlider(invertedInput, invertedSlider, 0, 300);
+  bindInputSlider(trehaloseInput, trehaloseSlider, 0, 300);
+
+  function toGrams(val) {
+    return activeUnit === 'imperial' ? val / 0.035274 : val;
+  }
+
+  function toCelsius(val) {
+    return activeUnit === 'imperial' ? (val - 32) * 5 / 9 : val;
+  }
+
+  function setStateUI(state) {
+    const isStone = state === 'stone';
+    const isSoup = state === 'soup';
+    const isCreamy = state === 'creamy';
+
+    texStone.classList.toggle('hidden', !isStone);
+    texCreamy.classList.toggle('hidden', !isCreamy);
+    texSoup.classList.toggle('hidden', !isSoup);
+
+    if (isStone) {
+      statusGlow.className = 'bowl-status-glow glow-stone';
+      statusBadge.className = 'status-badge danger';
+      statusBadgeText.textContent = ui.stoneState;
+      statusDescText.textContent = ui.stoneDesc;
+    } else if (isSoup) {
+      statusGlow.className = 'bowl-status-glow glow-soup';
+      statusBadge.className = 'status-badge inhibited';
+      statusBadgeText.textContent = ui.soupState;
+      statusDescText.textContent = ui.soupDesc;
+    } else {
+      statusGlow.className = 'bowl-status-glow glow-creamy';
+      statusBadge.className = 'status-badge optimal';
+      statusBadgeText.textContent = ui.creamyState;
+      statusDescText.textContent = ui.creamyDesc;
+    }
+  }
+
+  function setGauges(totalPAC, totalPOD, solidsPercentage) {
+    pacFill.style.height = Math.min(100, (totalPAC / 400) * 100) + '%';
+    podFill.style.height = Math.min(100, (totalPOD / 40) * 100) + '%';
+    solidsFill.style.height = Math.min(100, solidsPercentage) + '%';
+  }
+
+  function updateUI(state, values) {
+    targetPacDisplay.textContent = values.targetPAC.toString();
+    pacValueDisplay.textContent = values.totalPAC.toFixed(0);
+    podValueDisplay.textContent = values.totalPOD.toFixed(0);
+    solidsValueDisplay.textContent = values.solidsPercentage.toFixed(0) + '%';
+    setGauges(values.totalPAC, values.totalPOD, values.solidsPercentage);
+    setStateUI(state);
+  }
+
+  function computeState(totalPAC, targetPAC) {
+    const tolerance = 40;
+    if (totalPAC < targetPAC - tolerance) return 'stone';
+    if (totalPAC > targetPAC + tolerance) return 'soup';
+    return 'creamy';
+  }
+
+  function readValues() {
+    return {
+      base: parseFloat(baseInput.value) || 0,
+      temp: parseFloat(tempInput.value) || 0,
+      sucrose: parseFloat(sucroseInput.value) || 0,
+      dextrose: parseFloat(dextroseInput.value) || 0,
+      glucose: parseFloat(glucoseInput.value) || 0,
+      inverted: parseFloat(invertedInput.value) || 0,
+      trehalose: parseFloat(trehaloseInput.value) || 0,
+    };
+  }
+
+  function computeMetrics(v) {
+    const bg = toGrams(v.base);
+    const sg = toGrams(v.sucrose);
+    const dg = toGrams(v.dextrose);
+    const gg = toGrams(v.glucose);
+    const ig = toGrams(v.inverted);
+    const tg = toGrams(v.trehalose);
+
+    const waterWeight = bg * 0.7 + ig * 0.3;
+    const otherSolids = bg * 0.3;
+    const totalSolids = otherSolids + sg + dg + gg * 0.95 + ig * 0.7 + tg * 0.9;
+    const totalMixWeight = bg + sg + dg + gg + ig + tg;
+    const pacContribution = sg * 1.0 + dg * 1.9 + gg * 0.9 + ig * 1.9 + tg * 1.0;
+    const podContribution = sg * 1.0 + dg * 0.7 + gg * 0.4 + ig * 1.3 + tg * 0.45;
+
+    const totalPAC = waterWeight > 0 ? parseFloat(((pacContribution / waterWeight) * 1000).toFixed(1)) : 0;
+    const totalPOD = totalMixWeight > 0 ? parseFloat(((podContribution / totalMixWeight) * 100).toFixed(1)) : 0;
+    const solidsPct = totalMixWeight > 0 ? parseFloat(((totalSolids / totalMixWeight) * 100).toFixed(1)) : 0;
+    const targetPAC = Math.round(18 * Math.abs(toCelsius(v.temp)));
+
+    return { totalPAC, totalPOD, solidsPercentage: solidsPct, targetPAC };
+  }
+
+  function updateView() {
+    const v = readValues();
+    const metrics = computeMetrics(v);
+    const state = computeState(metrics.totalPAC, metrics.targetPAC);
+    updateUI(state, metrics);
+  }
+
+  function convertInputs(targetUnit, inputs, sliders) {
+    inputs.forEach((input, index) => {
+      const val = parseFloat(input.value) || 0;
+      if (targetUnit === 'imperial') {
+        input.value = (val * 0.035274).toFixed(2);
+        sliders[index].max = (parseFloat(sliders[index].max) * 0.035274).toFixed(2);
+      } else {
+        input.value = Math.round(val / 0.035274).toString();
+        sliders[index].max = Math.round(parseFloat(sliders[index].max) / 0.035274).toString();
+      }
+      sliders[index].value = input.value;
+    });
+  }
+
+  function convertTemp(targetUnit) {
+    const tempVal = parseFloat(tempInput.value) || 0;
+    if (targetUnit === 'imperial') {
+      tempInput.value = Math.round((tempVal * 9 / 5) + 32).toString();
+      tempSlider.min = '-13';
+      tempSlider.max = '23';
+    } else {
+      tempInput.value = Math.round((tempVal - 32) * 5 / 9).toString();
+      tempSlider.min = '-25';
+      tempSlider.max = '-5';
+    }
+    tempSlider.value = tempInput.value;
+  }
+
+  function convertUnitsTo(targetUnit) {
+    const labels = document.querySelectorAll('.weight-unit-label');
+    const tempLabels = document.querySelectorAll('.temp-unit-label');
+
+    const inputs = [baseInput, sucroseInput, dextroseInput, glucoseInput, invertedInput, trehaloseInput];
+    const sliders = [baseSlider, sucroseSlider, dextroseSlider, glucoseSlider, invertedSlider, trehaloseSlider];
+
+    convertInputs(targetUnit, inputs, sliders);
+    convertTemp(targetUnit);
+
+    labels.forEach(l => l.textContent = targetUnit === 'imperial' ? ui.ozLabel : ui.gLabel);
+    tempLabels.forEach(t => t.textContent = targetUnit === 'imperial' ? ui.fLabel : ui.cLabel);
+  }
+
+  metricBtn.addEventListener('click', () => {
+    if (activeUnit === 'metric') return;
+    activeUnit = 'metric';
+    metricBtn.classList.add('active');
+    imperialBtn.classList.remove('active');
+    convertUnitsTo('metric');
+    updateView();
+  });
+
+  imperialBtn.addEventListener('click', () => {
+    if (activeUnit === 'imperial') return;
+    activeUnit = 'imperial';
+    imperialBtn.classList.add('active');
+    metricBtn.classList.remove('active');
+    convertUnitsTo('imperial');
+    updateView();
+  });
+
+  updateView();
+</script>
+

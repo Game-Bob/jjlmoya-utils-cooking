@@ -16,6 +16,8 @@ export { COOKWARE_GUIDE_TOOL } from './tool/cookware-guide';
 export { YEAST_CONVERTER_TOOL } from './tool/yeast-converter';
 export { LACTO_FERMENTATION_SALT_TOOL } from './tool/lacto-fermentation-salt-calculator';
 export { SPHERIFICATION_BATH_TOOL } from './tool/spherification-bath-calculator';
+export { ICE_CREAM_PAC_POD_TOOL } from './tool/ice-cream-pac-pod';
+
 
 export type {
   KnownLocale,

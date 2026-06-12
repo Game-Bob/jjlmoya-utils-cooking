@@ -1,0 +1,54 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="scoop-visualizer-container">
+  <h3 class="visualizer-header">{ui.scoopabilityLabel}</h3>
+
+  <div class="sundae-bowl-display">
+    <div class="bowl-inner">
+      <div id="texture-stone" class="texture-state hidden">
+        <svg viewBox="0 0 100 100" class="scoop-svg">
+          <path d="M25,80 L75,80 L80,95 L20,95 Z" class="bowl-base"></path>
+          <path d="M15,80 L85,80 L75,50 L25,50 Z" class="bowl-glass"></path>
+          <polygon points="35,65 65,65 70,30 30,30" class="sundae-ice-block"></polygon>
+          <line x1="45" y1="40" x2="45" y2="55" class="sundae-crack"></line>
+          <line x1="55" y1="35" x2="55" y2="50" class="sundae-crack"></line>
+        </svg>
+      </div>
+
+      <div id="texture-creamy" class="texture-state">
+        <svg viewBox="0 0 100 100" class="scoop-svg">
+          <path d="M25,80 L75,80 L80,95 L20,95 Z" class="bowl-base"></path>
+          <path d="M15,80 L85,80 L75,50 L25,50 Z" class="bowl-glass"></path>
+          <path d="M30,60 Q20,30 50,20 Q80,30 70,60 Z" class="sundae-swirl-body"></path>
+          <path d="M38,48 Q50,32 62,48 C55,42 45,42 38,48 Z" class="sundae-swirl-shade"></path>
+          <circle cx="50" cy="15" r="5" class="sundae-cherry"></circle>
+          <path d="M50,10 Q55,2 62,5" class="sundae-cherry-stem"></path>
+        </svg>
+      </div>
+
+      <div id="texture-soup" class="texture-state hidden">
+        <svg viewBox="0 0 100 100" class="scoop-svg">
+          <path d="M25,80 L75,80 L80,95 L20,95 Z" class="bowl-base"></path>
+          <path d="M15,80 L85,80 L75,50 L25,50 Z" class="bowl-glass"></path>
+          <path d="M18,75 Q50,65 82,75 L73,53 Q50,45 27,53 Z" class="sundae-melted-puddle"></path>
+          <path d="M26,80 Q23,90 20,85" class="sundae-drip-stream"></path>
+          <path d="M74,80 Q77,92 78,88" class="sundae-drip-stream"></path>
+        </svg>
+      </div>
+    </div>
+    <div class="bowl-status-glow" id="status-glow"></div>
+  </div>
+
+  <div class="scoop-status-card">
+    <div id="status-badge" class="status-badge optimal">
+      <span id="status-badge-text">{ui.creamyState}</span>
+    </div>
+    <p id="status-description-text" class="status-desc">{ui.creamyDesc}</p>
+  </div>
+</div>
