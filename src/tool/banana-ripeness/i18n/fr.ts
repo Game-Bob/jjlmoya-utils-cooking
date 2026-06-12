@@ -1,7 +1,7 @@
 import type { ToolLocaleContent } from '../../../types';
 import { bibliography } from '../bibliography';
 
-const title = "Diagnostic et Conservation des Bananes : Guide Scientifique";
+const title = "Diagnostic et Conservation des Bananes: Guide Scientifique";
 const description = "Analysez le stade de maturité de vos bananes avec une précision scientifique. Apprenez les techniques de conservation, la biochimie de l'éthylène et l'optimisation nutritionnelle.";
 const faq = [
   {
@@ -74,7 +74,7 @@ const appSchema = {
 
 export const content: ToolLocaleContent = {
   slug: 'maturite-banane',
-  title: 'Diagnostic et Conservation des Bananes : Guide Scientifique',
+  title: 'Diagnostic et Conservation des Bananes: Guide Scientifique',
   description: 'Analysez le stade de maturité de vos bananes avec une précision scientifique. Apprenez les techniques de conservation, la biochimie de l\'éthylène et l\'optimisation nutritionnelle.',
   faqTitle: 'Questions Fréquemment Posées',
   ui: {
@@ -152,7 +152,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'La banane est l\'un des fruits les plus consommés au monde, mais aussi l\'un des plus mal compris biologiquement. Contrairement aux fruits non climatériques comme les agrumes ou les raisins, la banane est un <strong>fruit climatérique</strong>. Cela signifie qu\'elle continue à mûrir après la récolte, augmentant considérablement la respiration cellulaire et la production d\'une phytohormone gazeuse cruciale : <strong>l\'éthylène</strong>.',
+      html: 'La banane est l\'un des fruits les plus consommés au monde, mais aussi l\'un des plus mal compris biologiquement. Contrairement aux fruits non climatériques comme les agrumes ou les raisins, la banane est un <strong>fruit climatérique</strong>. Cela signifie qu\'elle continue à mûrir après la récolte, augmentant considérablement la respiration cellulaire et la production d\'une phytohormone gazeuse cruciale: <strong>l\'éthylène</strong>.',
     },
     {
       type: 'paragraph',
@@ -174,7 +174,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Il existe une croyance populaire selon laquelle les bananes ne devraient pas aller au réfrigérateur. La réalité est plus complexe : le froid (en dessous de 12°C) cause des dommages dus au refroidissement dans les cellules de la peau, libérant des enzymes qui oxydent les phénols et font noircir la peau. Cependant, cela n\'affecte que l\'apparence. Si l\'intérieur a déjà atteint la maturité souhaitée, le froid arrêtera presque complètement le ramollissement de la pulpe, préservant la saveur et la texture pendant plusieurs jours supplémentaires.',
+      html: 'Il existe une croyance populaire selon laquelle les bananes ne devraient pas aller au réfrigérateur. La réalité est plus complexe: le froid (en dessous de 12°C) cause des dommages dus au refroidissement dans les cellules de la peau, libérant des enzymes qui oxydent les phénols et font noircir la peau. Cependant, cela n\'affecte que l\'apparence. Si l\'intérieur a déjà atteint la maturité souhaitée, le froid arrêtera presque complètement le ramollissement de la pulpe, préservant la saveur et la texture pendant plusieurs jours supplémentaires.',
     },
     {
       type: 'title',
@@ -222,7 +222,7 @@ export const content: ToolLocaleContent = {
       items: [
         '<strong>Réduire le gaspillage alimentaire :</strong> Un diagnostic précis du stade de la banane permet d\'identifier le moment de consommation optimal, évitant ainsi la perte de fruits précieux.',
         '<strong>Optimiser les bénéfices nutritionnels :</strong> De l\'amidon résistant des bananes vertes pour la santé intestinale aux antioxydants des bananes tachetées pour un potentiel antioxydant maximal.',
-        '<strong>Planifier une consommation stratégique :</strong> Adaptez l\'utilisation des bananes selon vos objectifs de santé : contrôle glycémique, énergie rapide, digestion ou antioxydants.',
+        '<strong>Planifier une consommation stratégique :</strong> Adaptez l\'utilisation des bananes selon vos objectifs de santé: contrôle glycémique, énergie rapide, digestion ou antioxydants.',
       ],
     },
     {

@@ -35,7 +35,7 @@ const howTo = [
 	},
 	{
 		name: 'Wprowadź ilość',
-		text: 'Podaj ilość w gramach. Bądź precyzyjny — jeśli to możliwe, użyj wagi kuchennej.',
+		text: 'Podaj ilość w gramach. Bądź precyzyjny - jeśli to możliwe, użyj wagi kuchennej.',
 	},
 	{
 		name: 'Zastosuj przeliczenie',

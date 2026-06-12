@@ -6,7 +6,7 @@ const description = "Verwalten Sie mehrere Garzeiten gleichzeitig. Unabhängige 
 const faq = [
   {
     question: 'Wie viele Timer kann ich erstellen?',
-    answer: 'Unbegrenzt viele. Fügen Sie mit der Schaltfläche "+" so viele hinzu, wie Sie benötigen. Ideal für das gleichzeitige Kochen mehrerer Gerichte: Nudeln kochen, Sauce reduzieren, Fleisch ruhen lassen und der Ofen läuft – alles auf einmal.',
+    answer: 'Unbegrenzt viele. Fügen Sie mit der Schaltfläche "+" so viele hinzu, wie Sie benötigen. Ideal für das gleichzeitige Kochen mehrerer Gerichte: Nudeln kochen, Sauce reduzieren, Fleisch ruhen lassen und der Ofen läuft - alles auf einmal.',
   },
   {
     question: 'Warum ist die Ruhezeit bei Fleisch wichtig?',

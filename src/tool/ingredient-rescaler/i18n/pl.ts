@@ -15,7 +15,7 @@ const faq = [
   },
   {
     question: 'Czy powinienem zaokrąglać wyniki końcowe?',
-    answer: 'To zależy od składnika. W przypadku mąki — tak. Przy drożdżach lub przyprawach precyzja ma mniejsze znaczenie (skaluj do 75% wskazanej wartości). Dla jajek: jeśli otrzymasz 2,3, użyj 2 całych + części trzeciego (odważonej) lub zaokrąglij do 2, jeśli potrawa na to pozwala.',
+    answer: 'To zależy od składnika. W przypadku mąki - tak. Przy drożdżach lub przyprawach precyzja ma mniejsze znaczenie (skaluj do 75% wskazanej wartości). Dla jajek: jeśli otrzymasz 2,3, użyj 2 całych + części trzeciego (odważonej) lub zaokrąglij do 2, jeśli potrawa na to pozwala.',
   },
   {
     question: 'Dlaczego wynik nie zmienia się po zmianie porcji?',

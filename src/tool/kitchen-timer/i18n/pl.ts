@@ -6,7 +6,7 @@ const description = "Zarządzaj wieloma czasami gotowania jednocześnie. Niezale
 const faq = [
   {
     question: 'Ile minutników mogę stworzyć?',
-    answer: 'Nieograniczoną liczbę. Dodaj tyle, ile potrzebujesz przyciskiem "+". Idealne do gotowania kilku potraw naraz: gotujący się makaron, redukujący się sos, odpoczywające mięso i pracujący piekarnik – wszystko jednocześnie.',
+    answer: 'Nieograniczoną liczbę. Dodaj tyle, ile potrzebujesz przyciskiem "+". Idealne do gotowania kilku potraw naraz: gotujący się makaron, redukujący się sos, odpoczywające mięso i pracujący piekarnik - wszystko jednocześnie.',
   },
   {
     question: 'Dlaczego odpoczynek mięsa jest ważny?',

@@ -35,7 +35,7 @@ const howTo = [
 	},
 	{
 		name: 'Insira a quantidade',
-		text: 'Insira a quantidade em gramas. Seja preciso para melhores resultados — use uma balança de cozinha sempre que possível.',
+		text: 'Insira a quantidade em gramas. Seja preciso para melhores resultados - use uma balança de cozinha sempre que possível.',
 	},
 	{
 		name: 'Aplique as conversões',

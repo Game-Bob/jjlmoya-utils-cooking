@@ -222,7 +222,7 @@ export const content: ToolLocaleContent = {
       type: "diagnostic",
       variant: "warning",
       title: "Erreurs Classiques en Doublant une Recette",
-      html: "Si vous remarquez que le goût est trop intense après conversion—surtout pour le piment ou le sel—réduisez l'échelle de ces ingrédients spécifiques à 75%. Ne doublez jamais le temps de cuisson ; la température interne dépend de l'épaisseur de la pièce.",
+      html: "Si vous remarquez que le goût est trop intense après conversion-surtout pour le piment ou le sel-réduisez l'échelle de ces ingrédients spécifiques à 75%. Ne doublez jamais le temps de cuisson ; la température interne dépend de l'épaisseur de la pièce.",
     },
     {
       type: "title",
@@ -234,7 +234,7 @@ export const content: ToolLocaleContent = {
       items: [
         {
           term: "Facteur de Conversion",
-          definition: "Chiffre multiplicateur : Quantité Souhaitée / Quantité Originale.",
+          definition: "Chiffre multiplicateur: Quantité Souhaitée / Quantité Originale.",
         },
         {
           term: "Ratio de Perte",
@@ -257,7 +257,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: "paragraph",
-      html: "Notre outil simplifie les calculs pour vous permettre de vous concentrer sur l'essentiel : la créativité et le goût.",
+      html: "Notre outil simplifie les calculs pour vous permettre de vous concentrer sur l'essentiel: la créativité et le goût.",
     },
   ],
   bibliography,

@@ -35,7 +35,7 @@ const howTo = [
 	},
 	{
 		name: 'Enter the amount',
-		text: 'Input the quantity in grams. Be precise for best results—use a kitchen scale whenever possible.',
+		text: 'Input the quantity in grams. Be precise for best results-use a kitchen scale whenever possible.',
 	},
 	{
 		name: 'Apply the conversions',

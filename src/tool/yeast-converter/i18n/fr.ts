@@ -1,7 +1,7 @@
 import type { ToolLocaleContent } from '../../../types';
 import { bibliography } from '../bibliography';
 
-const title = 'Convertisseur de Levure : Fraîche, Sèche et Levain';
+const title = 'Convertisseur de Levure: Fraîche, Sèche et Levain';
 const description =
 	'Convertissez avec précision entre la levure fraîche, la levure sèche et le levain. Obtenez les ajustements de recette nécessaires lors de l\'utilisation du levain pour maintenir une hydratation parfaite.';
 
@@ -9,7 +9,7 @@ const faq = [
 	{
 		question: 'Quelle est la différence entre la levure fraîche et la levure sèche ?',
 		answer:
-			'La levure fraîche contient environ 70 % d\'eau, tandis que la levure sèche en contient environ 8 %. Le facteur de conversion est le suivant : 1 part de levure sèche équivaut à 3 parts de levure fraîche. La levure sèche est plus puissante et stable, ce qui la rend idéale pour une conservation à long terme.',
+			'La levure fraîche contient environ 70 % d\'eau, tandis que la levure sèche en contient environ 8 %. Le facteur de conversion est le suivant: 1 part de levure sèche équivaut à 3 parts de levure fraîche. La levure sèche est plus puissante et stable, ce qui la rend idéale pour une conservation à long terme.',
 	},
 	{
 		question: 'De quelle quantité de levain ai-je besoin ?',
@@ -24,18 +24,18 @@ const faq = [
 	{
 		question: 'Puis-je utiliser de la levure instantanée au lieu de la levure sèche active ?',
 		answer:
-			'La levure instantanée est un type de levure sèche très finement moulue. Le ratio de conversion reste le même : 1:3 entre la levure sèche et la levure fraîche. La levure instantanée peut nécessiter légèrement moins de liquide en raison de sa finesse.',
+			'La levure instantanée est un type de levure sèche très finement moulue. Le ratio de conversion reste le même: 1:3 entre la levure sèche et la levure fraîche. La levure instantanée peut nécessiter légèrement moins de liquide en raison de sa finesse.',
 	},
 ];
 
 const howTo = [
 	{
 		name: 'Sélectionnez votre type de levure',
-		text: 'Choisissez le type de levure dont vous disposez : Fraîche (en cube), Sèche (instantanée ou active) ou Levain (hydratation 100 %).',
+		text: 'Choisissez le type de levure dont vous disposez: Fraîche (en cube), Sèche (instantanée ou active) ou Levain (hydratation 100 %).',
 	},
 	{
 		name: 'Entrez la quantité',
-		text: 'Saisissez la quantité en grammes. Soyez précis pour obtenir les meilleurs résultats : utilisez une balance de cuisine si possible.',
+		text: 'Saisissez la quantité en grammes. Soyez précis pour obtenir les meilleurs résultats: utilisez une balance de cuisine si possible.',
 	},
 	{
 		name: 'Appliquez les conversions',
@@ -151,10 +151,10 @@ export const content: ToolLocaleContent = {
 					icon: 'mdi:cube',
 					description: 'Cellules de levure vivantes en suspension dans l\'amidon et l\'humidité.',
 					points: [
-						'Puissance : 100 % (référence)',
-						'Conservation : 2-3 semaines au frais',
-						'Teneur en eau : ~70 %',
-						'Idéal pour : Boulangers pros, usage immédiat',
+						'Puissance: 100 % (référence)',
+						'Conservation: 2-3 semaines au frais',
+						'Teneur en eau: ~70 %',
+						'Idéal pour: Boulangers pros, usage immédiat',
 					],
 				},
 				{
@@ -162,10 +162,10 @@ export const content: ToolLocaleContent = {
 					icon: 'mdi:spray-bottle',
 					description: 'Cellules de levure déshydratées, plus concentrées que la fraîche.',
 					points: [
-						'Puissance : 3x levure fraîche',
-						'Conservation : 1-2 ans non ouvert',
-						'Teneur en eau : ~8 %',
-						'Idéal pour : Boulangers amateurs, stockage long',
+						'Puissance: 3x levure fraîche',
+						'Conservation: 1-2 ans non ouvert',
+						'Teneur en eau: ~8 %',
+						'Idéal pour: Boulangers amateurs, stockage long',
 					],
 				},
 				{
@@ -174,10 +174,10 @@ export const content: ToolLocaleContent = {
 					description: 'Culture de levures sauvages et de bactéries à 100 % d\'hydratation.',
 					highlight: true,
 					points: [
-						'Puissance : 1 part = 5 parts de levure fraîche',
-						'Conservation : Indéfinie avec soin',
-						'Teneur en eau : 50 % (autant de farine)',
-						'Idéal pour : Arôme complexe, fermentation lente',
+						'Puissance: 1 part = 5 parts de levure fraîche',
+						'Conservation: Indéfinie avec soin',
+						'Teneur en eau: 50 % (autant de farine)',
+						'Idéal pour: Arôme complexe, fermentation lente',
 					],
 				},
 			],
@@ -202,7 +202,7 @@ export const content: ToolLocaleContent = {
 		{
 			type: 'diagnostic',
 			variant: 'warning',
-			title: 'Crucial : Ajustement de recette pour le levain',
+			title: 'Crucial: Ajustement de recette pour le levain',
 			html: 'Lorsque vous remplacez la levure par du levain, vous DEVEZ ajuster votre recette. Le levain contient 50 % de farine et 50 % d\'eau. Si votre conversion demande 100 g de levain, retirez 50 g de farine et 50 ml d\'eau de votre recette pour maintenir l\'hydratation.',
 		},
 		{
@@ -221,7 +221,7 @@ export const content: ToolLocaleContent = {
 		},
 		{
 			type: 'tip',
-			title: 'Conseil Pro : Ajustements de Température',
+			title: 'Conseil Pro: Ajustements de Température',
 			html: 'Une fermentation à froid avec du levain (2-4°C pendant 8-16 heures) développe des saveurs et une structure supérieures. C\'est pourquoi les boulangeries professionnelles préfèrent le levain pour les pains à longue fermentation.',
 		},
 		{

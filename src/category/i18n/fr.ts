@@ -16,15 +16,15 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Nos outils sont conçus pour éliminer les conjectures. Ils sont basés sur des <strong>protocoles scientifiques réels</strong> : normes de la Specialty Coffee Association, ratios de boulanger, chimie moléculaire, microbiologie de la fermentation. Ce ne sont pas des « astuces de cuisine » ; c\'est une science éprouvée que vous pouvez utiliser dans votre cuisine domestique ou professionnelle.',
+      html: 'Nos outils sont conçus pour éliminer les conjectures. Ils sont basés sur des <strong>protocoles scientifiques réels</strong>: normes de la Specialty Coffee Association, ratios de boulanger, chimie moléculaire, microbiologie de la fermentation. Ce ne sont pas des " astuces de cuisine " ; c\'est une science éprouvée que vous pouvez utiliser dans votre cuisine domestique ou professionnelle.',
     },
     {
       type: 'paragraph',
-      html: 'Des cuisines domestiques aux étoiles Michelin, tous les grands chefs partagent une caractéristique : la <strong>reproductibilité</strong>. Ils ne créent pas un plat exceptionnel par hasard ; ils le créent grâce à des protocoles précis, des mesures exactes et une compréhension profonde de la raison pour laquelle les transformations se produisent.',
+      html: 'Des cuisines domestiques aux étoiles Michelin, tous les grands chefs partagent une caractéristique: la <strong>reproductibilité</strong>. Ils ne créent pas un plat exceptionnel par hasard ; ils le créent grâce à des protocoles précis, des mesures exactes et une compréhension profonde de la raison pour laquelle les transformations se produisent.',
     },
     {
       type: 'title',
-      text: 'Calculateurs de Pâtisserie et de Pâtes : Hydratation, Fermentation et Ratios Exactos',
+      text: 'Calculateurs de Pâtisserie et de Pâtes: Hydratation, Fermentation et Ratios Exactos',
       level: 2,
     },
     {
@@ -33,11 +33,11 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Maintenir une culture vivante nécessite une compréhension biologique. Les rafraîchis, la température, le moment : tout compte. Utilisez cet outil pour comprendre le ratio 1:1:1, les temps de fermentation et comment l\'ajuster en fonction de votre environnement :',
+      html: 'Maintenir une culture vivante nécessite une compréhension biologique. Les rafraîchis, la température, le moment: tout compte. Utilisez cet outil pour comprendre le ratio 1:1:1, les temps de fermentation et comment l\'ajuster en fonction de votre environnement :',
     },
     {
       type: 'paragraph',
-      html: 'Changer la taille d\'un moule ne consiste pas seulement à multiplier les ingrédients. C\'est un problème de géométrie : un moule de 20x30 cm a une surface double de celle d\'un moule circulaire de 20 cm. Cela affecte l\'évaporation, les temps de cuisson et la hauteur finale. Calculez le facteur exact :',
+      html: 'Changer la taille d\'un moule ne consiste pas seulement à multiplier les ingrédients. C\'est un problème de géométrie: un moule de 20x30 cm a une surface double de celle d\'un moule circulaire de 20 cm. Cela affecte l\'évaporation, les temps de cuisson et la hauteur finale. Calculez le facteur exact :',
     },
     {
       type: 'paragraph',
@@ -45,7 +45,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Convertisseurs et Adaptateurs de Recettes : Des États-Unis à Votre Cuisine',
+      text: 'Convertisseurs et Adaptateurs de Recettes: Des États-Unis à Votre Cuisine',
       level: 2,
     },
     {
@@ -58,7 +58,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Fermentation, Conservation et Saumure : Microbiologie à Domicile',
+      text: 'Fermentation, Conservation et Saumure: Microbiologie à Domicile',
       level: 2,
     },
     {
@@ -76,15 +76,15 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Le point d\'ébullition de l\'eau change avec l\'altitude. À des altitudes plus élevées, l\'eau bout à une température plus basse, ce qui affecte le temps de cuisson. Cet outil s\'ajuste automatiquement en fonction de votre emplacement : 4 minutes au niveau de la mer = 5,5 minutes à 2000 m :',
+      html: 'Le point d\'ébullition de l\'eau change avec l\'altitude. À des altitudes plus élevées, l\'eau bout à une température plus basse, ce qui affecte le temps de cuisson. Cet outil s\'ajuste automatiquement en fonction de votre emplacement: 4 minutes au niveau de la mer = 5,5 minutes à 2000 m :',
     },
     {
       type: 'paragraph',
-      html: 'Lors de la préparation d\'un plat complexe, vous devez coordonner plusieurs tâches : four, plaque, repos. Chacune nécessite son propre temps et sa propre alerte :',
+      html: 'Lors de la préparation d\'un plat complexe, vous devez coordonner plusieurs tâches: four, plaque, repos. Chacune nécessite son propre temps et sa propre alerte :',
     },
     {
       type: 'title',
-      text: 'Sauuces, Émulsions et Techniques Classiques : Fondamentaux Français',
+      text: 'Sauuces, Émulsions et Techniques Classiques: Fondamentaux Français',
       level: 2,
     },
     {
@@ -139,7 +139,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'La gastronomie mondiale s\'oriente vers la <strong>précision instrumentée</strong>. Les chefs Michelin utilisent des thermomètres infrarouges, des balances de précision au gramme, des pH-mètres. Les cuisines professionnelles disposent de laboratoires d\'analyse des saveurs. Cette tendance atteint désormais les cuisines domestiques : applications de contrôle de la température, balances connectées, bases de données de recettes exactes. Ce n\'est plus réservé aux élites ; c\'est accessible à toute personne désireuse d\'apprendre.',
+      html: 'La gastronomie mondiale s\'oriente vers la <strong>précision instrumentée</strong>. Les chefs Michelin utilisent des thermomètres infrarouges, des balances de précision au gramme, des pH-mètres. Les cuisines professionnelles disposent de laboratoires d\'analyse des saveurs. Cette tendance atteint désormais les cuisines domestiques: applications de contrôle de la température, balances connectées, bases de données de recettes exactes. Ce n\'est plus réservé aux élites ; c\'est accessible à toute personne désireuse d\'apprendre.',
     },
     {
       type: 'list',
@@ -152,7 +152,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'title',
-      text: 'De débutant à expert : Le chemin de la maîtrise culinaire',
+      text: 'De débutant à expert: Le chemin de la maîtrise culinaire',
       level: 2,
     },
     {
@@ -175,16 +175,16 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Pour la cuisine maison, la précision renforce la confiance. Vous savez que votre pizza fermentera correctement, que votre meringue ne s\'effondrera pas, que votre conserve ne sera pas contaminée. Pour les restaurants, c\'est une question de survie : ils doivent reproduire un plat 50 fois par soir avec une régularité parfaite. Pour l\'industrie alimentaire, il s\'agit d\'une réglementation obligatoire. Dans tous les cas, les connaissances techniques sont le facteur de différenciation.',
+      html: 'Pour la cuisine maison, la précision renforce la confiance. Vous savez que votre pizza fermentera correctement, que votre meringue ne s\'effondrera pas, que votre conserve ne sera pas contaminée. Pour les restaurants, c\'est une question de survie: ils doivent reproduire un plat 50 fois par soir avec une régularité parfaite. Pour l\'industrie alimentaire, il s\'agit d\'une réglementation obligatoire. Dans tous les cas, les connaissances techniques sont le facteur de différenciation.',
     },
     {
       type: 'title',
-      text: 'L\'histoire derrière ces outils : Pourquoi la précision compte',
+      text: 'L\'histoire derrière ces outils: Pourquoi la précision compte',
       level: 2,
     },
     {
       type: 'paragraph',
-      html: 'J\'ai conçu ces outils parce que j\'ai fait l\'erreur que vous ferez probablement : faire confiance à « une pincée de sel », « un peu plus d\'eau » et « jusqu\'à ce que ce soit prêt ». Dans une cuisine professionnelle, cela ne fonctionne pas. La science ne négocie pas avec l\'« approximativement ».',
+      html: 'J\'ai conçu ces outils parce que j\'ai fait l\'erreur que vous ferez probablement: faire confiance à " une pincée de sel ", " un peu plus d\'eau " et " jusqu\'à ce que ce soit prêt ". Dans une cuisine professionnelle, cela ne fonctionne pas. La science ne négocie pas avec l\'" approximativement ".',
     },
     {
       type: 'paragraph',
@@ -196,7 +196,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Investissement dans les connaissances culinaires : ROI à long terme',
+      text: 'Investissement dans les connaissances culinaires: ROI à long terme',
       level: 2,
     },
     {

@@ -6,7 +6,7 @@ const description = "Kelola beberapa waktu memasak secara bersamaan. Alarm indep
 const faq = [
   {
     question: 'Berapa banyak timer yang bisa saya buat?',
-    answer: 'Tak terbatas. Tambahkan sebanyak yang Anda butuhkan dengan tombol "+". Ideal untuk memasak beberapa hidangan sekaligus: merebus pasta, mereduksi saus, mendiamkan daging, dan oven yang menyala – semuanya sekaligus.',
+    answer: 'Tak terbatas. Tambahkan sebanyak yang Anda butuhkan dengan tombol "+". Ideal untuk memasak beberapa hidangan sekaligus: merebus pasta, mereduksi saus, mendiamkan daging, dan oven yang menyala - semuanya sekaligus.',
   },
   {
     question: 'Mengapa waktu istirahat penting untuk daging?',

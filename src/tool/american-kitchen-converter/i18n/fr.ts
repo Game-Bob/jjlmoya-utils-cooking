@@ -1,7 +1,7 @@
 import type { ToolLocaleContent } from "../../../types";
 import { bibliography } from '../bibliography';
 
-const title = "Convertisseur de Cuisine Américaine : Cups en Grammes, Fahrenheit";
+const title = "Convertisseur de Cuisine Américaine: Cups en Grammes, Fahrenheit";
 const description = "Convertissez les cups, tablespoons et Fahrenheit en système métrique. Votre boussole pour décoder les recettes américaines avec une précision professionnelle.";
 const faq = [
     {
@@ -78,7 +78,7 @@ const appSchema = {
 
 export const content: ToolLocaleContent = {
   slug: "convertisseur-mesures-cuisine-americaine-cups-grammes",
-  title: "Convertisseur de Cuisine Américaine : Cups en Grammes, Fahrenheit",
+  title: "Convertisseur de Cuisine Américaine: Cups en Grammes, Fahrenheit",
   description:
     "Convertissez les cups, tablespoons et Fahrenheit en système métrique. Votre boussole pour décoder les recettes américaines avec une précision professionnelle.",
   ui: {

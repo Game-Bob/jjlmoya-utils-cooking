@@ -10,7 +10,7 @@ const faq = [
     },
     {
       question: 'Pourquoi les aliments attachent-ils à l\'acier inoxydable ?',
-      answer: 'Généralement en raison d\'une chaleur insuffisante ou de l\'ajout d\'aliments trop tôt. Essayez l\'"effet Leidenfrost" : chauffez la poêle jusqu\'à ce qu\'une goutte d\'eau roule comme une perle. Elle est alors prête.',
+      answer: 'Généralement en raison d\'une chaleur insuffisante ou de l\'ajout d\'aliments trop tôt. Essayez l\'"effet Leidenfrost": chauffez la poêle jusqu\'à ce qu\'une goutte d\'eau roule comme une perle. Elle est alors prête.',
     },
     {
       question: 'Comment savoir si ma poêle est sûre ?',
@@ -32,7 +32,7 @@ const howTo = [
     },
     {
       name: 'Choisissez le matériau idéal',
-      text: 'En fonction de votre style, l\'outil recommandera le meilleur matériau : fonte, acier inoxydable, cuivre ou téflon.',
+      text: 'En fonction de votre style, l\'outil recommandera le meilleur matériau: fonte, acier inoxydable, cuivre ou téflon.',
     },
     {
       name: 'Lisez les caractéristiques',
@@ -83,7 +83,7 @@ export const content: ToolLocaleContent = {
     },
     {
       question: 'Pourquoi les aliments attachent-ils à l\'acier inoxydable ?',
-      answer: 'Généralement en raison d\'une chaleur insuffisante ou de l\'ajout d\'aliments trop tôt. Essayez l\'"effet Leidenfrost" : chauffez la poêle jusqu\'à ce qu\'une goutte d\'eau roule comme une perle. Elle est alors prête.',
+      answer: 'Généralement en raison d\'une chaleur insuffisante ou de l\'ajout d\'aliments trop tôt. Essayez l\'"effet Leidenfrost": chauffez la poêle jusqu\'à ce qu\'une goutte d\'eau roule comme une perle. Elle est alors prête.',
     },
     {
       question: 'Comment savoir si ma poêle est sûre ?',
@@ -105,7 +105,7 @@ export const content: ToolLocaleContent = {
     },
     {
       name: 'Choisissez le matériau idéal',
-      text: 'En fonction de votre style, l\'outil recommandera le meilleur matériau : fonte, acier inoxydable, cuivre ou téflon.',
+      text: 'En fonction de votre style, l\'outil recommandera le meilleur matériau: fonte, acier inoxydable, cuivre ou téflon.',
     },
     {
       name: 'Lisez les caractéristiques',
@@ -115,7 +115,7 @@ export const content: ToolLocaleContent = {
   seo: [
     {
       type: 'title',
-      text: 'Matériaux de Poêle : Science et Pratique',
+      text: 'Matériaux de Poêle: Science et Pratique',
       level: 2,
     },
     {
@@ -124,7 +124,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Fonte : Le Classique',
+      text: 'Fonte: Le Classique',
       level: 3,
     },
     {
@@ -133,7 +133,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Acier Inoxydable : Le Polyvalent',
+      text: 'Acier Inoxydable: Le Polyvalent',
       level: 3,
     },
     {
@@ -142,7 +142,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Téflon/PTFE : Le Pratique',
+      text: 'Téflon/PTFE: Le Pratique',
       level: 3,
     },
     {
@@ -193,7 +193,7 @@ export const content: ToolLocaleContent = {
     stainlessTag: 'Le Pro Polyvalent',
     stainlessPro: 'Éternel et non réactif. Saisis parfaits.',
     stainlessCon: 'Nécessite de la technique (chaleur) pour éviter d\'attacher.',
-    stainlessTip: 'Utilisez l\'effet Leidenfrost : chauffez jusqu\'à ce qu\'une goutte d\'eau roule comme une perle.',
+    stainlessTip: 'Utilisez l\'effet Leidenfrost: chauffez jusqu\'à ce qu\'une goutte d\'eau roule comme une perle.',
     nonstickName: 'Anti-adhésif',
     nonstickTag: 'Confort Maximum',
     nonstickPro: 'Rien n\'attache. Nettoyage facile.',

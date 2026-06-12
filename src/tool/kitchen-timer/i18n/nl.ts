@@ -6,7 +6,7 @@ const description = "Beheer meerdere kooktijden gelijktijdig. Onafhankelijke ala
 const faq = [
   {
     question: 'Hoeveel timers kan ik maken?',
-    answer: 'Onbeperkt. Voeg er zoveel toe als je nodig hebt met de "+"-knop. Ideaal voor het gelijktijdig koken van meerdere gerechten: pasta koken, saus inkoken, vlees laten rusten en de oven aan – alles tegelijk.',
+    answer: 'Onbeperkt. Voeg er zoveel toe als je nodig hebt met de "+"-knop. Ideaal voor het gelijktijdig koken van meerdere gerechten: pasta koken, saus inkoken, vlees laten rusten en de oven aan - alles tegelijk.',
   },
   {
     question: 'Waarom is rusttijd belangrijk voor vlees?',

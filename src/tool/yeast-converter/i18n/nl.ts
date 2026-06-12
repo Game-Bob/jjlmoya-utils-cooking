@@ -35,7 +35,7 @@ const howTo = [
 	},
 	{
 		name: 'Voer de hoeveelheid in',
-		text: 'Voer de hoeveelheid in grammen in. Wees nauwkeurig voor het beste resultaat—gebruik indien mogelijk een keukenweegschaal.',
+		text: 'Voer de hoeveelheid in grammen in. Wees nauwkeurig voor het beste resultaat-gebruik indien mogelijk een keukenweegschaal.',
 	},
 	{
 		name: 'Pas de omrekening toe',

@@ -35,7 +35,7 @@ const howTo = [
 	},
 	{
 		name: 'Ange mängd',
-		text: 'Skriv in mängden i gram. Var noggrann för bästa resultat — använd köksvåg om möjligt.',
+		text: 'Skriv in mängden i gram. Var noggrann för bästa resultat - använd köksvåg om möjligt.',
 	},
 	{
 		name: 'Se omvandlingen',

@@ -24,7 +24,7 @@ const faq = [
 const howTo = [
   {
     name: "Bestäm ditt mål",
-    text: "Bestäm om du ska rimma kött (1,5–2 %), fermentera (2–3 %), göra såser (3,5 %) eller göra långtidskonserver (5 % +). Varje typ har olika tid och syfte.",
+    text: "Bestäm om du ska rimma kött (1,5-2 %), fermentera (2-3 %), göra såser (3,5 %) eller göra långtidskonserver (5 % +). Varje typ har olika tid och syfte.",
   },
   {
     name: "Väg ingrediens och vatten",
@@ -40,7 +40,7 @@ const howTo = [
   },
   {
     name: "Fermentera eller rimma",
-    text: "Kyl beroende på typ: 4–48 timmar för kött, 1–3 veckor för fermentat. Den exakta tiden beror på temperaturen och din personliga smak.",
+    text: "Kyl beroende på typ: 4-48 timmar för kött, 1-3 veckor för fermentat. Den exakta tiden beror på temperaturen och din personliga smak.",
   },
 ];
 
@@ -99,9 +99,9 @@ export const content: ToolLocaleContent = {
     total: "Totalt",
     unitGrams: "gram",
     timeMeatsLabel: "Tid (kött)",
-    timeMeatsDuration: "4–48 timmar",
+    timeMeatsDuration: "4-48 timmar",
     timeVegetablesLabel: "Tid (grönsaker)",
-    timeVegetablesDuration: "1–3 veckor",
+    timeVegetablesDuration: "1-3 veckor",
     timePreservesLabel: "Tid (konserver)",
     timePreservesDuration: "1+ månader",
   },
@@ -131,7 +131,7 @@ export const content: ToolLocaleContent = {
           icon: 'mdi:flask-outline',
         },
         {
-          value: '18–22 °C',
+          value: '18-22 °C',
           label: 'Fermenteringstemp.',
           icon: 'mdi:thermometer',
         },
@@ -185,10 +185,10 @@ export const content: ToolLocaleContent = {
       type: 'table',
       headers: ['Kategori', 'Salthalt (%)', 'Minsta tid', 'Huvudmål'],
       rows: [
-        ['Fågel och fläsk', '1,5 % – 2,0 %', '12 – 24 timmar', 'Saftighet och mörhet'],
-        ['Vit fisk', '1,0 % – 1,5 %', '20 – 45 minuter', 'Fasthet i köttet'],
-        ['Lakto-fermentat', '2,5 % – 3,0 %', '7 – 21 dagar', 'Mikrobiologisk säkerhet'],
-        ['Såser och konserver', '3,5 % – 5,0 %', '1+ månad', 'Långsiktigt bevarande'],
+        ['Fågel och fläsk', '1,5 % - 2,0 %', '12 - 24 timmar', 'Saftighet och mörhet'],
+        ['Vit fisk', '1,0 % - 1,5 %', '20 - 45 minuter', 'Fasthet i köttet'],
+        ['Lakto-fermentat', '2,5 % - 3,0 %', '7 - 21 dagar', 'Mikrobiologisk säkerhet'],
+        ['Såser och konserver', '3,5 % - 5,0 %', '1+ månad', 'Långsiktigt bevarande'],
       ],
     },
     {

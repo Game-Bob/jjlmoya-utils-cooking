@@ -27,7 +27,7 @@ const faq = [
   {
     question: "Quelle farine dois-je utiliser ?",
     answer:
-      "Idéal : Caputo Pizzeria (W260-280) ou Manitoba (W350-400). Alternative : toute farine avec 11-13g de protéines pour 100g. Évitez les farines faibles (W130-160) pour les longues fermentations.",
+      "Idéal: Caputo Pizzeria (W260-280) ou Manitoba (W350-400). Alternative: toute farine avec 11-13g de protéines pour 100g. Évitez les farines faibles (W130-160) pour les longues fermentations.",
   },
   {
     question: "Pourquoi la pâte se déchire-t-elle lors de l'étalage ?",
@@ -153,7 +153,7 @@ export const content: ToolLocaleContent = {
     {
       question: "Quelle farine dois-je utiliser ?",
       answer:
-        "Idéal : Caputo Pizzeria (W260-280) ou Manitoba (W350-400). Alternative : toute farine avec 11-13g de protéines pour 100g. Évitez les farines faibles (W130-160) pour les longues fermentations.",
+        "Idéal: Caputo Pizzeria (W260-280) ou Manitoba (W350-400). Alternative: toute farine avec 11-13g de protéines pour 100g. Évitez les farines faibles (W130-160) pour les longues fermentations.",
     },
     {
       question: "Pourquoi la pâte se déchire-t-elle lors de l'étalage ?",
@@ -195,7 +195,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: "paragraph",
-      html: "La <strong>pizza napolitaine</strong> est bien plus qu'une recette : c'est un héritage culturel protégé qui exige une précision scientifique. Le succès dépend de la compréhension de l'interaction entre le temps, la température et l'hydratation.",
+      html: "La <strong>pizza napolitaine</strong> est bien plus qu'une recette: c'est un héritage culturel protégé qui exige une précision scientifique. Le succès dépend de la compréhension de l'interaction entre le temps, la température et l'hydratation.",
     },
     {
       type: "stats",
@@ -356,7 +356,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: "paragraph",
-      html: "Notre calculateur automatise les proportions spécifiques pour que vous puissiez vous concentrer sur l'essentiel : la technique et la passion pour le produit final.",
+      html: "Notre calculateur automatise les proportions spécifiques pour que vous puissiez vous concentrer sur l'essentiel: la technique et la passion pour le produit final.",
     },
   ],
   bibliography,

@@ -7,12 +7,12 @@ const faq = [
 		{
 			question: 'Combien de minuteurs puis-je créer ?',
 			answer:
-				'Illimité. Ajoutez-en autant que nécessaire avec le bouton "+". Parfait pour cuisiner plusieurs plats simultanément : bouillir des pâtes, réduire une sauce, reposer la viande et cuire au four, tout en même temps.',
+				'Illimité. Ajoutez-en autant que nécessaire avec le bouton "+". Parfait pour cuisiner plusieurs plats simultanément: bouillir des pâtes, réduire une sauce, reposer la viande et cuire au four, tout en même temps.',
 		},
 		{
 			question: 'Pourquoi le temps de repos est-il important pour la viande ?',
 			answer:
-				'Lorsque vous coupez la viande juste après la cuisson, les jus s\'échappent sur l\'assiette. Si vous la laissez reposer 5 à 10 minutes, les fibres se détendent et les jus se redistribuent. Résultat : une viande juteuse au lieu d\'être sèche. Le repos est une cuisson passive.',
+				'Lorsque vous coupez la viande juste après la cuisson, les jus s\'échappent sur l\'assiette. Si vous la laissez reposer 5 à 10 minutes, les fibres se détendent et les jus se redistribuent. Résultat: une viande juteuse au lieu d\'être sèche. Le repos est une cuisson passive.',
 		},
 		{
 			question: 'Fonctionne-t-il avec l\'écran verrouillé ?',
@@ -32,7 +32,7 @@ const howTo = [
 		},
 		{
 			name: 'Personnaliser chaque minuteur',
-			text: 'Changez le nom de chaque minuteur pour identifier ce qui cuit : "Four", "Riz", "Sauce", etc.',
+			text: 'Changez le nom de chaque minuteur pour identifier ce qui cuit: "Four", "Riz", "Sauce", etc.',
 		},
 		{
 			name: 'Contrôler depuis le dock mobile',
@@ -110,12 +110,12 @@ export const content: ToolLocaleContent = {
 		{
 			question: 'Combien de minuteurs puis-je créer ?',
 			answer:
-				'Illimité. Ajoutez-en autant que nécessaire avec le bouton "+". Parfait pour cuisiner plusieurs plats simultanément : bouillir des pâtes, réduire une sauce, reposer la viande et cuire au four, tout en même temps.',
+				'Illimité. Ajoutez-en autant que nécessaire avec le bouton "+". Parfait pour cuisiner plusieurs plats simultanément: bouillir des pâtes, réduire une sauce, reposer la viande et cuire au four, tout en même temps.',
 		},
 		{
 			question: 'Pourquoi le temps de repos est-il important pour la viande ?',
 			answer:
-				'Lorsque vous coupez la viande juste après la cuisson, les jus s\'échappent sur l\'assiette. Si vous la laissez reposer 5 à 10 minutes, les fibres se détendent et les jus se redistribuent. Résultat : une viande juteuse au lieu d\'être sèche. Le repos est une cuisson passive.',
+				'Lorsque vous coupez la viande juste après la cuisson, les jus s\'échappent sur l\'assiette. Si vous la laissez reposer 5 à 10 minutes, les fibres se détendent et les jus se redistribuent. Résultat: une viande juteuse au lieu d\'être sèche. Le repos est une cuisson passive.',
 		},
 		{
 			question: 'Fonctionne-t-il avec l\'écran verrouillé ?',
@@ -134,7 +134,7 @@ export const content: ToolLocaleContent = {
 		},
 		{
 			name: 'Personnaliser chaque minuteur',
-			text: 'Changez le nom de chaque minuteur pour identifier ce qui cuit : "Four", "Riz", "Sauce", etc.',
+			text: 'Changez le nom de chaque minuteur pour identifier ce qui cuit: "Four", "Riz", "Sauce", etc.',
 		},
 		{
 			name: 'Contrôler depuis le dock mobile',
@@ -157,7 +157,7 @@ export const content: ToolLocaleContent = {
 		},
 		{
 			type: 'paragraph',
-			html: 'Cet outil de <strong>Minuteur Multiple</strong> a été conçu pour les chefs à domicile et les professionnels qui ont besoin d\'orchestrer une symphonie de plats : bouillir des pâtes, rôti au four et réduction de sauce, tout cela se passant simultanément.',
+			html: 'Cet outil de <strong>Minuteur Multiple</strong> a été conçu pour les chefs à domicile et les professionnels qui ont besoin d\'orchestrer une symphonie de plats: bouillir des pâtes, rôti au four et réduction de sauce, tout cela se passant simultanément.',
 		},
 		{
 			type: 'title',
@@ -182,7 +182,7 @@ export const content: ToolLocaleContent = {
 		},
 		{
 			type: 'title',
-			text: 'Sécurité Alimentaire : La Zone de Danger',
+			text: 'Sécurité Alimentaire: La Zone de Danger',
 			level: 3,
 		},
 		{

@@ -22,7 +22,7 @@ const faq = [
     {
       question: "Pourquoi ajouter du sucre à la saumure ?",
       answer:
-        "Le sucre a deux fonctions : il facilite la réaction de Maillard (brunissement) pour les viandes et équilibre la saveur saline sans rendre le produit sucré.",
+        "Le sucre a deux fonctions: il facilite la réaction de Maillard (brunissement) pour les viandes et équilibre la saveur saline sans rendre le produit sucré.",
     },
   ];
 const howTo = [
@@ -44,7 +44,7 @@ const howTo = [
     },
     {
       name: "Fermentez ou marinez",
-      text: "Réfrigérez selon le type : 4-48 h pour les viandes, 1-3 semaines pour les fermentations. Le temps dépend de la température ambiante.",
+      text: "Réfrigérez selon le type: 4-48 h pour les viandes, 1-3 semaines pour les fermentations. Le temps dépend de la température ambiante.",
     },
   ];
 
@@ -129,7 +129,7 @@ export const content: ToolLocaleContent = {
     {
       question: "Pourquoi ajouter du sucre à la saumure ?",
       answer:
-        "Le sucre a deux fonctions : il facilite la réaction de Maillard (brunissement) pour les viandes et équilibre la saveur saline sans rendre le produit sucré.",
+        "Le sucre a deux fonctions: il facilite la réaction de Maillard (brunissement) pour les viandes et équilibre la saveur saline sans rendre le produit sucré.",
     },
   ],
   howTo: [
@@ -151,7 +151,7 @@ export const content: ToolLocaleContent = {
     },
     {
       name: "Fermentez ou marinez",
-      text: "Réfrigérez selon le type : 4-48 h pour les viandes, 1-3 semaines pour les fermentations. Le temps dépend de la température ambiante.",
+      text: "Réfrigérez selon le type: 4-48 h pour les viandes, 1-3 semaines pour les fermentations. Le temps dépend de la température ambiante.",
     },
   ],
   seo: [

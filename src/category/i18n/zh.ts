@@ -16,7 +16,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: '我们的工具旨在消除猜测。它们基于<strong>真实的科学流程</strong>：SCA 标准、烘焙百分比、分子化学、发酵微生物学。这些不是“厨房小窍门”，而是经过验证的科学。',
+      html: '我们的工具旨在消除猜测。它们基于<strong>真实的科学流程</strong>：SCA 标准、烘焙百分比、分子化学、发酵微生物学。这些不是"厨房小窍门"，而是经过验证的科学。',
     },
     {
       type: 'title',

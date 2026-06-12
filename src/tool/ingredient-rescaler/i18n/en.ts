@@ -184,7 +184,7 @@ export const content: ToolLocaleContent = {
       type: "diagnostic",
       variant: "warning",
       title: "Common Pitfalls When Doubling a Recipe",
-      html: "If you notice flavors becoming too intense after scaling—especially with chili or salt—reduce the specific scale for those ingredients to 75%. Never double the cooking time; internal temperature is reached based on thickness, not total batch weight.",
+      html: "If you notice flavors becoming too intense after scaling-especially with chili or salt-reduce the specific scale for those ingredients to 75%. Never double the cooking time; internal temperature is reached based on thickness, not total batch weight.",
     },
     {
       type: "title",

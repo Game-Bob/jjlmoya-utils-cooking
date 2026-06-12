@@ -6,7 +6,7 @@ const description = "Hantera flera tillagningstider samtidigt. Oberoende larm, i
 const faq = [
   {
     question: 'Hur många timers kan jag skapa?',
-    answer: 'Obegränsat antal. Lägg till så många du behöver med "+"-knappen. Perfekt för att laga flera rätter samtidigt: pasta som kokar, sås som reduceras, kött som vilar och ugnen igång – allt på en gång.',
+    answer: 'Obegränsat antal. Lägg till så många du behöver med "+"-knappen. Perfekt för att laga flera rätter samtidigt: pasta som kokar, sås som reduceras, kött som vilar och ugnen igång - allt på en gång.',
   },
   {
     question: 'Varför är vilotiden viktig för kött?',

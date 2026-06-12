@@ -22,7 +22,7 @@ const faq = [
     {
       question: "Why do my egg whites refuse to whip up?",
       answer:
-        "Even a microscopic trace of fat—from leftover grease on the bowl or a tiny drop of yolk—will prevent the whites from forming a stable foam. Always use a clean metal or glass bowl.",
+        "Even a microscopic trace of fat-from leftover grease on the bowl or a tiny drop of yolk-will prevent the whites from forming a stable foam. Always use a clean metal or glass bowl.",
     },
   ];
 const howTo = [
@@ -139,7 +139,7 @@ export const content: ToolLocaleContent = {
     {
       question: "Why do my egg whites refuse to whip up?",
       answer:
-        "Even a microscopic trace of fat—from leftover grease on the bowl or a tiny drop of yolk—will prevent the whites from forming a stable foam. Always use a clean metal or glass bowl.",
+        "Even a microscopic trace of fat-from leftover grease on the bowl or a tiny drop of yolk-will prevent the whites from forming a stable foam. Always use a clean metal or glass bowl.",
     },
   ],
   howTo: [
@@ -272,7 +272,7 @@ export const content: ToolLocaleContent = {
       type: "diagnostic",
       variant: "warning",
       title: "Is Your Meringue 'Weeping' or Releasing Liquid?",
-      html: "If you see syrup leaking (syneresis), it's either because the sugar didn't fully dissolve or from high ambient humidity. In Italian meringue, ensure the syrup is poured in a slow, steady stream—never directly onto the whisk.",
+      html: "If you see syrup leaking (syneresis), it's either because the sugar didn't fully dissolve or from high ambient humidity. In Italian meringue, ensure the syrup is poured in a slow, steady stream-never directly onto the whisk.",
     },
     {
       type: "title",

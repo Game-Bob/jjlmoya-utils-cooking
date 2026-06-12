@@ -35,7 +35,7 @@ const howTo = [
 	},
 	{
 		name: 'Menge eingeben',
-		text: 'Geben Sie die Menge in Gramm ein. Seien Sie präzise für beste Ergebnisse – verwenden Sie nach Möglichkeit eine Küchenwaage.',
+		text: 'Geben Sie die Menge in Gramm ein. Seien Sie präzise für beste Ergebnisse - verwenden Sie nach Möglichkeit eine Küchenwaage.',
 	},
 	{
 		name: 'Umrechnung anwenden',

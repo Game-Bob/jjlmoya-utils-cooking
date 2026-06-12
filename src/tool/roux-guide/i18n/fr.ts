@@ -18,7 +18,7 @@ const faq = [
     },
     {
       question: "Comment éviter les grumeaux ?",
-      answer: "Appliquez la règle du choc thermique : versez un liquide froid sur un roux chaud, ou un liquide chaud sur un roux froid. Versez progressivement en fouettant énergiquement.",
+      answer: "Appliquez la règle du choc thermique: versez un liquide froid sur un roux chaud, ou un liquide chaud sur un roux froid. Versez progressivement en fouettant énergiquement.",
     },
   ];
 const howTo = [
@@ -115,7 +115,7 @@ export const content: ToolLocaleContent = {
     rouxBrownLabel: "Roux Brun",
     descWhite: "Cuire juste assez pour faire perdre l'odeur de farine crue. Sans coloration.",
     descBlond: "Recherchez une couleur beurre noisette et un léger arôme de noix.",
-    descBrown: "Feu très doux. Couleur chocolate. Note : nécessite +10% de poids.",
+    descBrown: "Feu très doux. Couleur chocolate. Note: nécessite +10% de poids.",
     timeWhite: "2-3 min",
     timeBlond: "5-8 min",
     timeBrown: "15-20 min",
@@ -136,7 +136,7 @@ export const content: ToolLocaleContent = {
     },
     {
       question: "Comment éviter les grumeaux ?",
-      answer: "Appliquez la règle du choc thermique : versez un liquide froid sur un roux chaud, ou un liquide chaud sur un roux froid. Versez progressivement en fouettant énergiquement.",
+      answer: "Appliquez la règle du choc thermique: versez un liquide froid sur un roux chaud, ou un liquide chaud sur un roux froid. Versez progressivement en fouettant énergiquement.",
     },
   ],
   howTo: [

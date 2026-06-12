@@ -32,7 +32,7 @@ const howTo = [
   },
   {
     name: 'Välj ingrediens',
-    text: 'Varje livsmedel har olika densitet. Mjöl, socker, smör – alla väger olika mycket.',
+    text: 'Varje livsmedel har olika densitet. Mjöl, socker, smör - alla väger olika mycket.',
   },
   {
     name: 'Ange mängd',
@@ -331,7 +331,7 @@ export const content: ToolLocaleContent = {
     },
     {
       name: 'Välj ingrediens',
-      text: 'Varje livsmedel har olika densitet. Mjöl, socker, smör – alla väger olika mycket.',
+      text: 'Varje livsmedel har olika densitet. Mjöl, socker, smör - alla väger olika mycket.',
     },
     {
       name: 'Ange mängd',

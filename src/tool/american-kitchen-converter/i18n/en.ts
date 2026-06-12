@@ -18,7 +18,7 @@ const faq = [
     },
     {
       question: "Is a US cup the same as an imperial cup?",
-      answer: "No. A US cup is 236ml, whereas an Imperial (UK) cup is 284ml—a 20% difference! Most online recipes use US cups. If not specified, the US standard is the safest assumption.",
+      answer: "No. A US cup is 236ml, whereas an Imperial (UK) cup is 284ml-a 20% difference! Most online recipes use US cups. If not specified, the US standard is the safest assumption.",
     },
     {
       question: "What temperature is 'Gas Mark 4'?",
@@ -190,7 +190,7 @@ export const content: ToolLocaleContent = {
     },
     {
       question: "Is a US cup the same as an imperial cup?",
-      answer: "No. A US cup is 236ml, whereas an Imperial (UK) cup is 284ml—a 20% difference! Most online recipes use US cups. If not specified, the US standard is the safest assumption.",
+      answer: "No. A US cup is 236ml, whereas an Imperial (UK) cup is 284ml-a 20% difference! Most online recipes use US cups. If not specified, the US standard is the safest assumption.",
     },
     {
       question: "What temperature is 'Gas Mark 4'?",

@@ -32,7 +32,7 @@ const howTo = [
   },
   {
     name: 'Wybierz produkt',
-    text: 'Każdy produkt ma inną gęstość. Mąka, cukier, masło – każdy z nich waży inaczej w tej samej objętości.',
+    text: 'Każdy produkt ma inną gęstość. Mąka, cukier, masło - każdy z nich waży inaczej w tej samej objętości.',
   },
   {
     name: 'Wpisz ilość',
@@ -331,7 +331,7 @@ export const content: ToolLocaleContent = {
     },
     {
       name: 'Wybierz produkt',
-      text: 'Każdy produkt ma inną gęstość. Mąka, cukier, masło – każdy z nich waży inaczej w tej samej objętości.',
+      text: 'Każdy produkt ma inną gęstość. Mąka, cukier, masło - każdy z nich waży inaczej w tej samej objętości.',
     },
     {
       name: 'Wpisz ilość',

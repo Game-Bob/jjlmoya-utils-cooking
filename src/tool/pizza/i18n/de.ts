@@ -119,7 +119,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: '<strong>Neapolitanische Pizza</strong> ist mehr als ein Rezept – es ist ein Kulturerbe. Erfolg basiert auf dem Verständnis von Zeit, Temperatur und Hydratation.',
+      html: '<strong>Neapolitanische Pizza</strong> ist mehr als ein Rezept - es ist ein Kulturerbe. Erfolg basiert auf dem Verständnis von Zeit, Temperatur und Hydratation.',
     },
     {
       type: 'stats',

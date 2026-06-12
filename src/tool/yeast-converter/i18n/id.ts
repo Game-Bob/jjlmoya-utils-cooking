@@ -35,7 +35,7 @@ const howTo = [
 	},
 	{
 		name: 'Masukkan jumlahnya',
-		text: 'Masukkan jumlah dalam gram. Berikan angka yang presisi untuk hasil terbaik—gunakan timbangan dapur jika memungkinkan.',
+		text: 'Masukkan jumlah dalam gram. Berikan angka yang presisi untuk hasil terbaik-gunakan timbangan dapur jika memungkinkan.',
 	},
 	{
 		name: 'Terapkan konversi',
