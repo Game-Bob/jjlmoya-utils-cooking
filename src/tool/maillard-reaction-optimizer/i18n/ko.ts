@@ -83,7 +83,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'maillard-baneung-choijeoghwa',
+  slug: 'maillard-reaction-optimizer',
   title: '마이야르 반응 최적화 도구',
   description: '마이야르 반응을 촉진하기 위해 식품 1kg당 첨가할 베이킹소다의 정확한 양을 계산합니다. 안전한 알칼리도 한계 내에서 유지하여 비누 맛을 방지하세요.',
   faqTitle: '자주 묻는 질문',

@@ -83,7 +83,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'meirudo-hannou-saitekika',
+  slug: 'maillard-reaction-optimizer',
   title: 'メイラード反応オプティマイザー',
   description: 'メイラード反応を促進するために、食品1kgあたりに加える重曹の量を正確に計算します。安全なアルカリ性の範囲内に収めることで、石鹸のような不快な風味を防ぎます。',
   faqTitle: 'よくある質問',

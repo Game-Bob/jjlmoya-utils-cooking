@@ -83,7 +83,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'meilade-fanying-youhuaqi',
+  slug: 'maillard-reaction-optimizer',
   title: '美拉德反应优化器',
   description: '精确计算每公斤食物应添加多少小苏打以加速美拉德反应。通过保持在安全碱度范围内来避免肥皂味。',
   faqTitle: '常见问题',
