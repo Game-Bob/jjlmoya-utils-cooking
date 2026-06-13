@@ -1,0 +1,67 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="tg-specimen">
+  <div class="tg-specimen-header">
+    <div class="tg-specimen-dot"></div>
+    <span class="tg-specimen-label">Specimen Data</span>
+  </div>
+  <div class="tg-specimen-body">
+    <div class="tg-field">
+      <span class="tg-field-label">{ui.unitLabel}</span>
+      <div class="tg-toggle-group">
+        <button type="button" id="tg-unit-metric" class="tg-toggle active" data-unit="metric">
+          {ui.metricUnit}
+        </button>
+        <button type="button" id="tg-unit-imperial" class="tg-toggle" data-unit="imperial">
+          {ui.imperialUnit}
+        </button>
+      </div>
+    </div>
+
+    <div class="tg-field">
+      <span class="tg-field-label">{ui.methodLabel}</span>
+      <div class="tg-toggle-group">
+        <button type="button" id="tg-method-dry" class="tg-toggle active" data-method="dry">
+          {ui.dryMethod}
+        </button>
+        <button type="button" id="tg-method-slurry" class="tg-toggle" data-method="slurry">
+          {ui.slurryMethod}
+        </button>
+      </div>
+    </div>
+
+    <div class="tg-field">
+      <label for="tg-weight-input" class="tg-field-label">
+        {ui.weightLabel} (<span id="tg-weight-unit">g</span>)
+      </label>
+      <input type="number" id="tg-weight-input" min="0" max="50000" step="any" value="1000" class="tg-input" inputmode="decimal" />
+    </div>
+
+    <div class="tg-field">
+      <label for="tg-protein-select" class="tg-field-label">{ui.proteinLabel}</label>
+      <select id="tg-protein-select" class="tg-select">
+        <option value="red-meat">{ui.redMeat}</option>
+        <option value="poultry">{ui.poultry}</option>
+        <option value="fish">{ui.fish}</option>
+        <option value="shellfish">{ui.shellfish}</option>
+      </select>
+    </div>
+
+    <div class="tg-field">
+      <label for="tg-temp-input" class="tg-field-label">
+        {ui.tempLabel} (<span id="tg-temp-unit">°C</span>)
+      </label>
+      <input type="number" id="tg-temp-input" min="0" max="80" step="0.5" value="4" class="tg-input" inputmode="decimal" />
+    </div>
+  </div>
+
+  <div class="tg-annotation">
+    <p id="tg-method-desc" class="tg-annotation-text">{ui.dryDustingDesc}</p>
+  </div>
+</div>

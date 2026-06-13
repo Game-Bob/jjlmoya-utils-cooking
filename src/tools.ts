@@ -17,6 +17,7 @@ import { LACTO_FERMENTATION_SALT_TOOL } from './tool/lacto-fermentation-salt-cal
 import { SPHERIFICATION_BATH_TOOL } from './tool/spherification-bath-calculator';
 import { ICE_CREAM_PAC_POD_TOOL } from './tool/ice-cream-pac-pod';
 import { BOTULISM_CANNING_SAFETY_TOOL } from './tool/botulism-canning-safety';
+import { MEAT_BINDER_TRANSGLUTAMINASE_TOOL } from './tool/meat-binder-transglutaminase-calculator';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   AMERICAN_KITCHEN_CONVERTER_TOOL,
@@ -36,5 +37,6 @@ export const ALL_TOOLS: ToolDefinition[] = [
   SPHERIFICATION_BATH_TOOL,
   ICE_CREAM_PAC_POD_TOOL,
   BOTULISM_CANNING_SAFETY_TOOL,
+  MEAT_BINDER_TRANSGLUTAMINASE_TOOL,
 ];
 

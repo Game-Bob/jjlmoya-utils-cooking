@@ -1,0 +1,249 @@
+---
+import TissueSpecimen from './components/TissueSpecimen.astro';
+import TissueViewer from './components/TissueViewer.astro';
+import LabReport from './components/LabReport.astro';
+
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="tg">
+  <div class="tg-bench">
+    <div class="tg-bench-inner">
+      <div class="tg-grid"></div>
+
+      <div class="tg-layout">
+        <TissueSpecimen ui={ui} />
+        <TissueViewer />
+        <LabReport ui={ui} />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ ui }}>
+  const TISSUE = {
+    'red-meat': { base: '#b91c1c', dark: '#991b1b', fiber: '#fca5a5' },
+    'poultry': { base: '#d97706', dark: '#b45309', fiber: '#fde68a' },
+    'fish': { base: '#d6d3d1', dark: '#a8a29e', fiber: '#f5f5f4' },
+    'shellfish': { base: '#f97316', dark: '#ea580c', fiber: '#fed7aa' },
+  };
+  const RATIO_MAP = { 'red-meat': [0.0075, 0.01], 'poultry': [0.01, 0.012], 'fish': [0.012, 0.015], 'shellfish': [0.01, 0.015] };
+  const TEMP_RANGES = [
+    { min: 0, max: 5, hMin: 6, hMax: 24 },
+    { min: 5, max: 15, hMin: 3, hMax: 8 },
+    { min: 15, max: 25, hMin: 1, hMax: 4 },
+    { min: 25, max: 40, hMin: 0.5, hMax: 2 },
+  ];
+  const BOND_IDS = ['tg-bond-1','tg-bond-2','tg-bond-3','tg-bond-4','tg-bond-5'];
+  const NODE_IDS = ['tg-node-1a','tg-node-1b','tg-node-2a','tg-node-2b','tg-node-3a','tg-node-3b','tg-node-4a','tg-node-4b','tg-node-5a','tg-node-5b'];
+
+  const $ = (id) => document.getElementById(id);
+  const unitMetric = $('tg-unit-metric'), unitImperial = $('tg-unit-imperial');
+  const methodDry = $('tg-method-dry'), methodSlurry = $('tg-method-slurry');
+  const weightInput = $('tg-weight-input'), proteinSelect = $('tg-protein-select'), tempInput = $('tg-temp-input');
+  const weightUnit = $('tg-weight-unit'), tempUnit = $('tg-temp-unit');
+  const rTg=$('tg-r-tg'), rWater=$('tg-r-water'), rTotal=$('tg-r-total'), rRatio=$('tg-r-ratio');
+  const rIncMin=$('tg-r-inc-min'), rIncMax=$('tg-r-inc-max'), rWaterRow=$('tg-r-water-row');
+  const rIncubation=$('tg-r-incubation'), rAlert=$('tg-r-alert'), methodDesc=$('tg-method-desc');
+  const statusLabel=$('tg-status-label'), tempDisplay=$('tg-temp-display'), tempFill=$('tg-temp-fill');
+  const bondsFormed=$('tg-bonds-formed'), denaturedOverlay=$('tg-denatured-overlay'), methodLabel=$('tg-method-label');
+  const bondEls = BOND_IDS.map($), nodeEls = NODE_IDS.map($);
+  const particles = ['tg-particle-1','tg-particle-2','tg-particle-3','tg-particle-4'].map($);
+
+  let unit = 'metric', method = 'dry';
+  const KEY = 'cooking-tg-v3';
+
+  function cToF(c) { return c * 9/5 + 32; }
+  function fToC(f) { return (f - 32) * 5/9; }
+  function gToOz(g) { return g * 0.035274; }
+  function ozToG(oz) { return oz / 0.035274; }
+
+  function saveState() {
+    try { localStorage.setItem(KEY, JSON.stringify({ unit, method, weight: weightInput.value, protein: proteinSelect.value, temp: tempInput.value })); } catch {}
+  }
+
+  function loadState() {
+    try {
+      const data = localStorage.getItem(KEY);
+      if (!data) return;
+      const s = JSON.parse(data);
+      if (s.unit) unit = s.unit;
+      if (s.method) method = s.method;
+      if (s.weight) weightInput.value = s.weight;
+      if (s.protein) proteinSelect.value = s.protein;
+      if (s.temp) tempInput.value = s.temp;
+    } catch {}
+  }
+
+  function applyStateUI() {
+    if (unit === 'imperial') { unitImperial.classList.add('active'); unitMetric.classList.remove('active'); }
+    if (method === 'slurry') { methodSlurry.classList.add('active'); methodDry.classList.remove('active'); }
+  }
+
+  function updateUnits() {
+    weightUnit.textContent = unit === 'imperial' ? 'oz' : 'g';
+    tempUnit.textContent = unit === 'imperial' ? '°F' : '°C';
+    weightInput.setAttribute('max', unit === 'imperial' ? '1760' : '50000');
+    tempInput.setAttribute('max', unit === 'imperial' ? '176' : '80');
+  }
+
+  function getWeightGrams() {
+    const v = parseFloat(weightInput.value) || 0;
+    return unit === 'imperial' ? ozToG(v) : v;
+  }
+
+  function getTempCelsius() {
+    const v = parseFloat(tempInput.value) || 0;
+    return unit === 'imperial' ? fToC(v) : v;
+  }
+
+  function setDisplayWeight(g) {
+    weightInput.value = unit === 'imperial' ? gToOz(g).toFixed(1) : Math.round(g).toString();
+  }
+
+  function updateTissueColors(p) {
+    const c = TISSUE[p] || TISSUE['red-meat'];
+    const root = document.querySelector('.tg');
+    root.style.setProperty('--tg-tissue-a-current', c.base);
+    root.style.setProperty('--tg-tissue-b-current', c.dark);
+    root.style.setProperty('--tg-fiber-current', c.fiber);
+  }
+
+  function updateBonds(n) {
+    bondEls.forEach((b, i) => b.classList.toggle('active', i < n));
+    nodeEls.forEach((nd, i) => nd.classList.toggle('active', i < n * 2));
+    bondsFormed.textContent = Math.min(n, bondEls.length);
+  }
+
+  let particleInterval = null;
+
+  function startParticles() {
+    stopParticles();
+    const baseX = 188, baseY = [75, 115, 155, 195], targets = [85, 125, 160, 200];
+    let frame = 0;
+    particleInterval = setInterval(() => {
+      frame = (frame + 1) % 120;
+      particles.forEach((p, i) => {
+        const idx = (frame + i * 30) % 120;
+        if (idx >= 60) { p.setAttribute('opacity', '0'); return; }
+        const t = idx / 60;
+        p.setAttribute('cx', (baseX + t * 124).toString());
+        p.setAttribute('cy', (baseY[i] + t * (targets[i] - baseY[i])).toString());
+        p.setAttribute('opacity', (Math.sin(t * Math.PI) * 0.9).toString());
+        p.classList.add('active');
+      });
+    }, 25);
+  }
+
+  function stopParticles() {
+    if (particleInterval) { clearInterval(particleInterval); particleInterval = null; }
+    particles.forEach(p => { p.setAttribute('opacity', '0'); p.classList.remove('active'); });
+  }
+
+  function updateTempGauge(tempC) {
+    const display = unit === 'imperial' ? cToF(tempC) : tempC;
+    tempDisplay.textContent = display.toFixed(1) + (unit === 'imperial' ? '°F' : '°C');
+    const pct = Math.max(0, Math.min(100, (tempC / 60) * 100));
+    tempFill.style.height = pct + '%';
+    tempFill.classList.remove('warm', 'hot');
+    if (tempC >= 55) tempFill.classList.add('hot');
+    else if (tempC >= 35) tempFill.classList.add('warm');
+  }
+
+  function computeResult(meatWeightG, tempC, proteinType) {
+    if (tempC >= 60) return { enzymeDestroyed: true, tgGrams: 0, waterMl: 0, totalG: meatWeightG, ratioPct: 0, hMin: 0, hMax: 0 };
+
+    const ratios = RATIO_MAP[proteinType] || RATIO_MAP['red-meat'];
+    const midRatio = (ratios[0] + ratios[1]) / 2;
+    const tgGrams = parseFloat((meatWeightG * midRatio).toFixed(2));
+    const waterMl = method === 'slurry' ? parseFloat((tgGrams * 4).toFixed(1)) : 0;
+    const totalG = method === 'slurry'
+      ? parseFloat((meatWeightG + tgGrams + waterMl).toFixed(2))
+      : parseFloat((meatWeightG + tgGrams).toFixed(2));
+
+    let hMin = 6, hMax = 24;
+    for (const r of TEMP_RANGES) {
+      if (tempC >= r.min && tempC < r.max) { hMin = r.hMin; hMax = r.hMax; break; }
+    }
+    return { enzymeDestroyed: false, tgGrams, waterMl, totalG, ratioPct: parseFloat((midRatio * 100).toFixed(2)), hMin, hMax };
+  }
+
+  function renderDenatured(meatWeightG) {
+    rTg.textContent = rWater.textContent = '0';
+    rTotal.textContent = (unit === 'imperial' ? gToOz(meatWeightG) : meatWeightG).toFixed(2);
+    rRatio.textContent = rIncMin.textContent = rIncMax.textContent = '0';
+    rAlert.style.display = 'block'; rIncubation.style.display = 'none';
+    rWaterRow.style.display = method === 'slurry' ? 'flex' : 'none';
+    statusLabel.textContent = 'denatured'; statusLabel.style.color = '#dc2626';
+    denaturedOverlay.classList.add('active');
+    updateBonds(0); stopParticles();
+  }
+
+  function renderResult(r, meatWeightG) {
+    if (r.enzymeDestroyed) { renderDenatured(meatWeightG); return; }
+    denaturedOverlay.classList.remove('active');
+    statusLabel.textContent = 'incubating'; statusLabel.style.color = '';
+    rAlert.style.display = 'none'; rIncubation.style.display = 'block';
+    const f = unit === 'imperial' ? 0.035274 : 1;
+    rTg.textContent = (r.tgGrams * f).toFixed(2);
+    rTotal.textContent = (r.totalG * f).toFixed(2);
+    rRatio.textContent = r.ratioPct.toFixed(2);
+    rIncMin.textContent = r.hMin; rIncMax.textContent = r.hMax;
+    if (method === 'slurry') {
+      rWater.textContent = (r.waterMl * f).toFixed(1); rWaterRow.style.display = 'flex';
+      methodDesc.textContent = ui.slurryDesc;
+    } else {
+      rWater.textContent = '0'; rWaterRow.style.display = 'none';
+      methodDesc.textContent = ui.dryDustingDesc;
+    }
+    const n = Math.round(Math.min(1, meatWeightG / 4000) * 5);
+    updateBonds(n);
+    if (n > 0) startParticles(); else stopParticles();
+  }
+
+  function updateView() {
+    updateUnits();
+    methodLabel.textContent = method === 'dry' ? 'DRY DUSTING' : 'SLURRY BONDING';
+    const meatWeightG = getWeightGrams(), tempC = getTempCelsius(), proteinType = proteinSelect.value;
+    updateTissueColors(proteinType);
+    updateTempGauge(tempC);
+    renderResult(computeResult(meatWeightG, tempC, proteinType), meatWeightG);
+    saveState();
+  }
+
+  function switchUnit(to) {
+    if (unit === to) return;
+    const prevG = getWeightGrams(), prevC = getTempCelsius();
+    unit = to;
+    unitMetric.classList.toggle('active', to === 'metric');
+    unitImperial.classList.toggle('active', to === 'imperial');
+    setDisplayWeight(prevG);
+    tempInput.value = to === 'imperial' ? cToF(prevC).toFixed(1) : prevC.toFixed(1);
+    updateView();
+  }
+
+  function switchMethod(to) {
+    if (method === to) return;
+    method = to;
+    methodDry.classList.toggle('active', to === 'dry');
+    methodSlurry.classList.toggle('active', to === 'slurry');
+    updateView();
+  }
+
+  unitMetric.addEventListener('click', () => switchUnit('metric'));
+  unitImperial.addEventListener('click', () => switchUnit('imperial'));
+  methodDry.addEventListener('click', () => switchMethod('dry'));
+  methodSlurry.addEventListener('click', () => switchMethod('slurry'));
+  weightInput.addEventListener('input', updateView);
+  proteinSelect.addEventListener('change', updateView);
+  tempInput.addEventListener('input', updateView);
+
+  loadState();
+  applyStateUI();
+  updateUnits();
+  updateView();
+</script>

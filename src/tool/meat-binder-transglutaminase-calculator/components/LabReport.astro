@@ -1,0 +1,59 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="tg-report">
+  <div class="tg-report-header">
+    <div class="tg-report-dot"></div>
+    <span class="tg-report-label">Lab Report</span>
+  </div>
+  <div class="tg-report-body">
+    <div class="tg-measurement">
+      <span class="tg-measurement-label">{ui.tgAmount}</span>
+      <span class="tg-measurement-value">
+        <span id="tg-r-tg">7.50</span>
+        <span class="tg-unit">{ui.grams}</span>
+      </span>
+    </div>
+
+    <div id="tg-r-water-row" class="tg-measurement">
+      <span class="tg-measurement-label">{ui.waterAmount}</span>
+      <span class="tg-measurement-value">
+        <span id="tg-r-water">30.0</span>
+        <span class="tg-unit">{ui.milliliters}</span>
+      </span>
+    </div>
+
+    <div class="tg-measurement">
+      <span class="tg-measurement-label">{ui.totalWeight}</span>
+      <span class="tg-measurement-value">
+        <span id="tg-r-total">1037.50</span>
+        <span class="tg-unit">{ui.grams}</span>
+      </span>
+    </div>
+
+    <div class="tg-measurement">
+      <span class="tg-measurement-label">{ui.ratioLabel}</span>
+      <span class="tg-measurement-value">
+        <span id="tg-r-ratio">0.75</span>
+        <span class="tg-unit">%</span>
+      </span>
+    </div>
+
+    <div id="tg-r-incubation" class="tg-incubation-badge">
+      <div class="tg-incubation-badge-label">{ui.incubationLabel}</div>
+      <div class="tg-incubation-badge-value">
+        <span id="tg-r-inc-min">6</span> - <span id="tg-r-inc-max">24</span>
+        <span style="font-size: 0.55rem; color: var(--tg-ink-muted); margin-left: 0.15rem;">{ui.hours}</span>
+      </div>
+    </div>
+
+    <div id="tg-r-alert" class="tg-alert" style="display: none;">
+      <p class="tg-alert-text">{ui.enzymeDestroyed}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,137 @@
+<div class="tg-visualizer">
+  <div class="tg-visualizer-header">
+    <span class="tg-visualizer-label">Tissue Cross-Linking</span>
+    <span id="tg-status-label" class="tg-visualizer-status">incubating / 4°C</span>
+  </div>
+  <div class="tg-visualizer-body">
+    <svg class="tg-visualizer-svg" viewBox="0 0 500 320" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="tg-shadow">
+          <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15" />
+        </filter>
+        <filter id="tg-glow">
+          <feGaussianBlur stdDeviation="2.5" result="blur" />
+          <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+        </filter>
+        <clipPath id="clip-a">
+          <path d="M 15 50 C 15 15, 75 20, 120 30 C 160 40, 185 60, 188 85 C 190 110, 182 135, 175 160 C 168 185, 155 205, 135 225 C 115 245, 85 260, 55 265 C 25 270, 15 255, 15 230 Z" />
+        </clipPath>
+        <clipPath id="clip-b">
+          <path d="M 485 55 C 485 20, 425 25, 380 35 C 340 45, 315 65, 312 90 C 310 115, 318 140, 325 165 C 332 190, 345 210, 365 230 C 385 250, 415 265, 445 270 C 475 275, 485 260, 485 235 Z" />
+        </clipPath>
+      </defs>
+
+      <g filter="url(#tg-shadow)">
+        <path id="tg-shape-a" d="M 15 50 C 15 15, 75 20, 120 30 C 160 40, 185 60, 188 85 C 190 110, 182 135, 175 160 C 168 185, 155 205, 135 225 C 115 245, 85 260, 55 265 C 25 270, 15 255, 15 230 Z" class="tg-tissue-a" />
+      </g>
+
+      <g clip-path="url(#clip-a)" id="tg-fibers-a">
+        <path d="M 25 65 Q 60 60, 100 70 T 180 75" stroke-width="1.2" />
+        <path d="M 20 95 Q 55 90, 95 100 T 185 105" stroke-width="1.2" />
+        <path d="M 25 125 Q 65 120, 105 130 T 180 135" stroke-width="1.2" />
+        <path d="M 20 155 Q 60 150, 100 160 T 185 165" stroke-width="1.2" />
+        <path d="M 25 185 Q 65 180, 105 190 T 175 195" stroke-width="1.2" />
+        <path d="M 20 215 Q 55 210, 95 220 T 165 225" stroke-width="1.2" />
+        <path d="M 25 245 Q 55 240, 85 250 T 130 255" stroke-width="1.2" />
+        <line x1="60" y1="63" x2="60" y2="78" stroke-width="0.6" opacity="0.4" />
+        <line x1="60" y1="93" x2="60" y2="108" stroke-width="0.6" opacity="0.4" />
+        <line x1="60" y1="123" x2="60" y2="138" stroke-width="0.6" opacity="0.4" />
+        <line x1="60" y1="153" x2="60" y2="168" stroke-width="0.6" opacity="0.4" />
+        <line x1="60" y1="183" x2="60" y2="198" stroke-width="0.6" opacity="0.4" />
+        <line x1="60" y1="213" x2="60" y2="228" stroke-width="0.6" opacity="0.4" />
+        <line x1="110" y1="63" x2="110" y2="78" stroke-width="0.6" opacity="0.4" />
+        <line x1="110" y1="93" x2="110" y2="108" stroke-width="0.6" opacity="0.4" />
+        <line x1="110" y1="123" x2="110" y2="138" stroke-width="0.6" opacity="0.4" />
+        <line x1="110" y1="153" x2="110" y2="168" stroke-width="0.6" opacity="0.4" />
+        <line x1="110" y1="183" x2="110" y2="198" stroke-width="0.6" opacity="0.4" />
+        <line x1="110" y1="213" x2="110" y2="228" stroke-width="0.6" opacity="0.4" />
+        <line x1="150" y1="63" x2="150" y2="78" stroke-width="0.6" opacity="0.4" />
+        <line x1="150" y1="93" x2="150" y2="108" stroke-width="0.6" opacity="0.4" />
+        <line x1="150" y1="123" x2="150" y2="138" stroke-width="0.6" opacity="0.4" />
+        <line x1="150" y1="183" x2="150" y2="198" stroke-width="0.6" opacity="0.4" />
+      </g>
+
+      <g filter="url(#tg-shadow)">
+        <path id="tg-shape-b" d="M 485 55 C 485 20, 425 25, 380 35 C 340 45, 315 65, 312 90 C 310 115, 318 140, 325 165 C 332 190, 345 210, 365 230 C 385 250, 415 265, 445 270 C 475 275, 485 260, 485 235 Z" class="tg-tissue-b" />
+      </g>
+
+      <g clip-path="url(#clip-b)" id="tg-fibers-b">
+        <path d="M 475 70 Q 440 65, 400 75 T 320 80" stroke-width="1.2" />
+        <path d="M 480 100 Q 445 95, 405 105 T 315 110" stroke-width="1.2" />
+        <path d="M 475 130 Q 435 125, 395 135 T 320 140" stroke-width="1.2" />
+        <path d="M 480 160 Q 440 155, 400 165 T 315 170" stroke-width="1.2" />
+        <path d="M 475 190 Q 435 185, 395 195 T 325 200" stroke-width="1.2" />
+        <path d="M 480 220 Q 445 215, 405 225 T 335 230" stroke-width="1.2" />
+        <path d="M 475 250 Q 445 245, 415 255 T 370 260" stroke-width="1.2" />
+        <line x1="440" y1="68" x2="440" y2="83" stroke-width="0.6" opacity="0.4" />
+        <line x1="440" y1="98" x2="440" y2="113" stroke-width="0.6" opacity="0.4" />
+        <line x1="440" y1="128" x2="440" y2="143" stroke-width="0.6" opacity="0.4" />
+        <line x1="440" y1="158" x2="440" y2="173" stroke-width="0.6" opacity="0.4" />
+        <line x1="440" y1="188" x2="440" y2="203" stroke-width="0.6" opacity="0.4" />
+        <line x1="440" y1="218" x2="440" y2="233" stroke-width="0.6" opacity="0.4" />
+        <line x1="390" y1="68" x2="390" y2="83" stroke-width="0.6" opacity="0.4" />
+        <line x1="390" y1="98" x2="390" y2="113" stroke-width="0.6" opacity="0.4" />
+        <line x1="390" y1="128" x2="390" y2="143" stroke-width="0.6" opacity="0.4" />
+        <line x1="390" y1="158" x2="390" y2="173" stroke-width="0.6" opacity="0.4" />
+        <line x1="390" y1="188" x2="390" y2="203" stroke-width="0.6" opacity="0.4" />
+        <line x1="390" y1="218" x2="390" y2="233" stroke-width="0.6" opacity="0.4" />
+        <line x1="350" y1="68" x2="350" y2="83" stroke-width="0.6" opacity="0.4" />
+        <line x1="350" y1="98" x2="350" y2="113" stroke-width="0.6" opacity="0.4" />
+        <line x1="350" y1="128" x2="350" y2="143" stroke-width="0.6" opacity="0.4" />
+        <line x1="350" y1="188" x2="350" y2="203" stroke-width="0.6" opacity="0.4" />
+      </g>
+
+      <rect id="tg-denatured-overlay" x="0" y="0" width="500" height="320" class="tg-denatured-overlay" />
+
+      <g id="tg-bonds">
+        <line x1="188" y1="75" x2="312" y2="85" id="tg-bond-1" class="tg-bond-line" stroke-width="2" />
+        <line x1="185" y1="115" x2="315" y2="125" id="tg-bond-2" class="tg-bond-line" stroke-width="2" />
+        <line x1="188" y1="155" x2="312" y2="160" id="tg-bond-3" class="tg-bond-line" stroke-width="2" />
+        <line x1="182" y1="195" x2="318" y2="200" id="tg-bond-4" class="tg-bond-line" stroke-width="2" />
+        <line x1="175" y1="235" x2="325" y2="230" id="tg-bond-5" class="tg-bond-line" stroke-width="2" />
+      </g>
+
+      <g id="tg-nodes">
+        <circle cx="188" cy="75" r="4" id="tg-node-1a" class="tg-bond-node" />
+        <circle cx="312" cy="85" r="4" id="tg-node-1b" class="tg-bond-node" />
+        <circle cx="185" cy="115" r="4" id="tg-node-2a" class="tg-bond-node" />
+        <circle cx="315" cy="125" r="4" id="tg-node-2b" class="tg-bond-node" />
+        <circle cx="188" cy="155" r="4" id="tg-node-3a" class="tg-bond-node" />
+        <circle cx="312" cy="160" r="4" id="tg-node-3b" class="tg-bond-node" />
+        <circle cx="182" cy="195" r="4" id="tg-node-4a" class="tg-bond-node" />
+        <circle cx="318" cy="200" r="4" id="tg-node-4b" class="tg-bond-node" />
+        <circle cx="175" cy="235" r="4" id="tg-node-5a" class="tg-bond-node" />
+        <circle cx="325" cy="230" r="4" id="tg-node-5b" class="tg-bond-node" />
+      </g>
+
+      <g id="tg-particles">
+        <circle id="tg-particle-1" cx="0" cy="0" r="4" class="tg-particle" filter="url(#tg-glow)" />
+        <circle id="tg-particle-2" cx="0" cy="0" r="4" class="tg-particle" filter="url(#tg-glow)" />
+        <circle id="tg-particle-3" cx="0" cy="0" r="4" class="tg-particle" filter="url(#tg-glow)" />
+        <circle id="tg-particle-4" cx="0" cy="0" r="4" class="tg-particle" filter="url(#tg-glow)" />
+      </g>
+
+      <text id="tg-method-label" x="250" y="20" text-anchor="middle" fill="var(--tg-ink-faint)" font-size="8" letter-spacing="0.15em" font-weight="600">DRY DUSTING</text>
+      <line x1="195" y1="28" x2="305" y2="28" stroke="var(--tg-ink-faint)" stroke-width="0.5" />
+      <line x1="195" y1="25" x2="195" y2="31" stroke="var(--tg-ink-faint)" stroke-width="0.5" />
+      <line x1="305" y1="25" x2="305" y2="31" stroke="var(--tg-ink-faint)" stroke-width="0.5" />
+
+      <text x="250" y="303" text-anchor="middle" fill="var(--tg-ink-faint)" font-size="8" letter-spacing="0.08em">
+        <tspan id="tg-bonds-formed">0</tspan>
+        <tspan> / 5 covalent bonds formed</tspan>
+      </text>
+    </svg>
+
+    <div class="tg-temp-bar">
+      <div class="tg-temp-bar-label">TEMP</div>
+      <div class="tg-temp-bar-track">
+        <div id="tg-temp-fill" class="tg-temp-bar-fill" style="height: 14%; bottom: 0;"></div>
+        <div class="tg-temp-bar-tick" style="bottom: 0%;"><span>0°C</span></div>
+        <div class="tg-temp-bar-tick" style="bottom: 33%;"><span>20°C</span></div>
+        <div class="tg-temp-bar-tick" style="bottom: 67%;"><span>40°C</span></div>
+        <div class="tg-temp-bar-tick" style="bottom: 100%;"><span>60°C</span></div>
+      </div>
+      <div id="tg-temp-display" class="tg-temp-bar-value">4°C</div>
+    </div>
+  </div>
+</div>

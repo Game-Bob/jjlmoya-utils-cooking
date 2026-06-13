@@ -15,6 +15,7 @@ import { lactoFermentationSalt } from '../tool/lacto-fermentation-salt-calculato
 import { spherificationBath } from '../tool/spherification-bath-calculator/entry';
 import { iceCreamPacPod } from '../tool/ice-cream-pac-pod/entry';
 import { botulismCanningSafety } from '../tool/botulism-canning-safety/entry';
+import { meatBinder } from '../tool/meat-binder-transglutaminase-calculator/entry';
 
 export const cookingCategory: CookingCategoryEntry = {
   icon: 'mdi:chef-hat',
@@ -35,6 +36,7 @@ export const cookingCategory: CookingCategoryEntry = {
     spherificationBath,
     iceCreamPacPod,
     botulismCanningSafety,
+    meatBinder,
   ],
 
   i18n: {
