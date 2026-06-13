@@ -18,6 +18,7 @@ import { botulismCanningSafety } from '../tool/botulism-canning-safety/entry';
 import { meatBinder } from '../tool/meat-binder-transglutaminase-calculator/entry';
 import { carryOverCooking } from '../tool/carry-over-cooking-predictor/entry';
 import { maillardReaction } from '../tool/maillard-reaction-optimizer/entry';
+import { macaronDrying } from '../tool/macaron-drying-predictor/entry';
 
 export const cookingCategory: CookingCategoryEntry = {
   icon: 'mdi:chef-hat',
@@ -41,6 +42,7 @@ export const cookingCategory: CookingCategoryEntry = {
     meatBinder,
     carryOverCooking,
     maillardReaction,
+    macaronDrying,
   ],
 
   i18n: {

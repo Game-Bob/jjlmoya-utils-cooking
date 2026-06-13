@@ -1,0 +1,319 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="md">
+  <div class="md-card">
+    <div class="md-unit-row">
+      <button type="button" id="md-unit-metric" class="md-unit-btn active">Metric</button>
+      <button type="button" id="md-unit-imperial" class="md-unit-btn">Imperial</button>
+    </div>
+    <div class="md-body">
+      <div class="md-controls">
+        <div class="md-input-row">
+          <div class="md-input-group">
+            <label class="md-label" for="md-humidity">{ui.humidityLabel}</label>
+            <div class="md-slider-wrap">
+              <input type="range" id="md-humidity" class="md-slider" min="20" max="90" value="50" />
+              <span class="md-value"><span id="md-humidity-val">50</span><span class="md-unit">{ui.humidityUnit}</span></span>
+            </div>
+            <span id="md-humidity-tag" class="md-tag md-tag-humid-normal">{ui.humidityTagNormal}</span>
+          </div>
+        </div>
+        <div class="md-input-row">
+          <div class="md-input-group">
+            <label class="md-label" for="md-temp">{ui.tempLabel}</label>
+            <div class="md-slider-wrap">
+              <input type="range" id="md-temp" class="md-slider" min="15" max="35" value="22" />
+              <span class="md-value"><span id="md-temp-val">22</span><span class="md-unit" id="md-temp-unit">{ui.tempUnit}</span></span>
+            </div>
+            <span id="md-temp-tag" class="md-tag md-tag-temp-ideal">{ui.tempTagIdeal}</span>
+          </div>
+        </div>
+        <div class="md-input-row">
+          <div class="md-input-group">
+            <label class="md-label" for="md-size">{ui.sizeLabel}</label>
+            <div class="md-slider-wrap">
+              <input type="range" id="md-size" class="md-slider" min="2" max="6" step="0.5" value="3" />
+              <span class="md-value"><span id="md-size-val">3</span><span class="md-unit" id="md-size-unit">{ui.sizeUnit}</span></span>
+            </div>
+            <span id="md-size-tag" class="md-tag md-tag-size-standard">{ui.sizeTagStandard}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="md-result" id="md-result">
+        <div class="md-macaron-visual">
+          <svg viewBox="0 0 200 160" class="md-macaron-svg">
+            <defs>
+              <radialGradient id="md-shell-top" cx="50%" cy="40%" r="50%">
+                <stop offset="0%" stop-color="#f9a8d4" />
+                <stop offset="100%" stop-color="#ec4899" />
+              </radialGradient>
+              <radialGradient id="md-shell-top-dry" cx="50%" cy="40%" r="50%">
+                <stop offset="0%" stop-color="#fce7f3" />
+                <stop offset="100%" stop-color="#f9a8d4" />
+              </radialGradient>
+              <radialGradient id="md-shell-top-overdry" cx="50%" cy="40%" r="50%">
+                <stop offset="0%" stop-color="#f1f5f9" />
+                <stop offset="100%" stop-color="#e2e8f0" />
+              </radialGradient>
+              <filter id="md-shell-glow">
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+              </filter>
+            </defs>
+            <ellipse id="md-shell-bottom" cx="100" cy="100" rx="70" ry="22" fill="#be185d" />
+            <ellipse id="md-shell-bottom-inner" cx="100" cy="96" rx="60" ry="16" fill="#fce7f3" />
+            <rect id="md-shell-feet" x="25" y="88" width="150" height="14" rx="7" fill="#9d174d" opacity="0.3" />
+            <ellipse id="md-shell-top" cx="100" cy="68" rx="65" ry="36" fill="url(#md-shell-top)" filter="url(#md-shell-glow)" />
+            <text id="md-minutes-display" x="100" y="74" text-anchor="middle" class="md-macaron-minutes">30</text>
+            <text x="100" y="92" text-anchor="middle" class="md-macaron-unit">{ui.minutesUnit}</text>
+          </svg>
+        </div>
+
+        <div class="md-stats-row">
+          <div class="md-stat">
+            <span class="md-stat-label">{ui.readinessLabel}</span>
+            <span id="md-readiness-val" class="md-stat-value">75%</span>
+          </div>
+          <div id="md-skin-badge" class="md-skin-badge ready">{ui.skinStatusReady}</div>
+        </div>
+
+        <div id="md-humidity-desc" class="md-info-card"></div>
+        <div id="md-humidity-note" class="md-info-note"></div>
+      </div>
+    </div>
+
+    <div class="md-footer" id="md-footer">
+      <div class="md-footer-row">
+        <div class="md-footer-chip md-footer-chip-time">
+          <svg width="16" height="16" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><polyline points="12,6 12,12 16,14" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          <span id="md-footer-time">30 min</span>
+        </div>
+        <div class="md-footer-chip md-footer-chip-humidity">
+          <svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2C12 2 4 12 4 16a8 8 0 0 0 16 0C20 12 12 2 12 2z" fill="currentColor"/></svg>
+          <span id="md-footer-humidity">50%</span>
+        </div>
+        <div class="md-footer-chip md-footer-chip-temp">
+          <svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2v6a4 4 0 1 0 0 8v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span id="md-footer-temp">22°C</span>
+        </div>
+        <div class="md-footer-chip md-footer-chip-size">
+          <svg width="16" height="16" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="currentColor"/><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span id="md-footer-size">3cm</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ ui }}>
+  const $ = (id) => document.getElementById(id);
+
+  const humidity = $('md-humidity');
+  const temp = $('md-temp');
+  const size = $('md-size');
+  const hVal = $('md-humidity-val');
+  const tVal = $('md-temp-val');
+  const sVal = $('md-size-val');
+  const hTag = $('md-humidity-tag');
+  const tTag = $('md-temp-tag');
+  const sTag = $('md-size-tag');
+  const result = $('md-result');
+  const minutesDisp = $('md-minutes-display');
+  const readinessVal = $('md-readiness-val');
+  const skinBadge = $('md-skin-badge');
+  const humidityDesc = $('md-humidity-desc');
+  const humidityNote = $('md-humidity-note');
+  const footerTime = $('md-footer-time');
+  const footerHumidity = $('md-footer-humidity');
+  const footerTemp = $('md-footer-temp');
+  const footerSize = $('md-footer-size');
+  const footer = $('md-footer');
+  const shellTop = $('md-shell-top');
+  const unitMetric = $('md-unit-metric');
+  const unitImperial = $('md-unit-imperial');
+  const tUnit = $('md-temp-unit');
+  const sUnit = $('md-size-unit');
+
+  let unit = 'metric';
+
+  function cToF(c) { return c * 9/5 + 32; }
+  function fToC(f) { return (f - 32) * 5/9; }
+  function cmToIn(cm) { return cm / 2.54; }
+  function inToCm(inch) { return inch * 2.54; }
+
+  function getTempUnit() { return unit === 'imperial' ? ui.tempUnitF : ui.tempUnit; }
+  function getSizeUnit() { return unit === 'imperial' ? ui.sizeUnitIn : ui.sizeUnit; }
+
+  function setTempBounds(isImp) {
+    temp.setAttribute('min', isImp ? '59' : '15');
+    temp.setAttribute('max', isImp ? '95' : '35');
+    temp.setAttribute('step', '1');
+  }
+
+  function setSizeBounds(isImp) {
+    size.setAttribute('min', isImp ? '0.8' : '2');
+    size.setAttribute('max', isImp ? '2.4' : '6');
+    size.setAttribute('step', isImp ? '0.2' : '0.5');
+  }
+
+  function switchUnit(to) {
+    if (unit === to) return;
+    const tv = parseInt(temp.value) || 22;
+    const sv = parseFloat(size.value) || 3;
+    unit = to;
+    unitMetric.classList.toggle('active', to === 'metric');
+    unitImperial.classList.toggle('active', to === 'imperial');
+
+    const isImp = to === 'imperial';
+    setTempBounds(isImp);
+    setSizeBounds(isImp);
+    temp.value = isImp ? Math.round(cToF(tv)).toString() : tv.toString();
+    size.value = isImp ? cmToIn(sv).toFixed(1) : sv.toString();
+
+    tUnit.textContent = getTempUnit();
+    sUnit.textContent = getSizeUnit();
+    refresh();
+  }
+
+  function getTempC() {
+    const tv = parseInt(temp.value) || 22;
+    return unit === 'imperial' ? fToC(tv) : tv;
+  }
+
+  function getSizeCm() {
+    const sv = parseFloat(size.value) || 3;
+    return unit === 'imperial' ? inToCm(sv) : sv;
+  }
+
+  function formatTemp(tc) { return unit === 'imperial' ? Math.round(cToF(tc)).toString() : tc.toString(); }
+  function formatSize(sc) { return unit === 'imperial' ? cmToIn(sc).toFixed(1) : sc.toString(); }
+
+  function updateHumidityTag(hv) {
+    if (hv >= 65) {
+      hTag.textContent = ui.humidityTagHigh; hTag.className = 'md-tag md-tag-humid-high';
+      humidityDesc.className = 'md-info-card md-info-high';
+      humidityDesc.innerHTML = '<svg class="md-info-svg" viewBox="0 0 24 24"><path d="M12 2C12 2 4 12 4 16a8 8 0 0 0 16 0C20 12 12 2 12 2z" fill="currentColor"/><path d="M12 6v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>' + ui.humidityDescHigh + '</span>';
+    } else if (hv <= 35) {
+      hTag.textContent = ui.humidityTagLow; hTag.className = 'md-tag md-tag-humid-low';
+      humidityDesc.className = 'md-info-card md-info-low';
+      humidityDesc.innerHTML = '<svg class="md-info-svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" fill="currentColor"/><g stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="23"/><line x1="1" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="23" y2="12"/><line x1="4.2" y1="4.2" x2="6.3" y2="6.3"/><line x1="17.7" y1="17.7" x2="19.8" y2="19.8"/><line x1="4.2" y1="19.8" x2="6.3" y2="17.7"/><line x1="17.7" y1="6.3" x2="19.8" y2="4.2"/></g></svg><span>' + ui.humidityDescLow + '</span>';
+    } else {
+      hTag.textContent = ui.humidityTagNormal; hTag.className = 'md-tag md-tag-humid-normal';
+      humidityDesc.className = 'md-info-card md-info-ok';
+      humidityDesc.innerHTML = '<svg class="md-info-svg" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>' + ui.humidityDescNormal + '</span>';
+    }
+  }
+
+  function updateTempTag(tv) {
+    if (tv >= 28) { tTag.textContent = ui.tempTagHot; tTag.className = 'md-tag md-tag-temp-hot'; }
+    else if (tv <= 18) { tTag.textContent = ui.tempTagCool; tTag.className = 'md-tag md-tag-temp-cool'; }
+    else { tTag.textContent = ui.tempTagIdeal; tTag.className = 'md-tag md-tag-temp-ideal'; }
+  }
+
+  function updateSizeTag(sv) {
+    if (sv <= 2.5) { sTag.textContent = ui.sizeTagMini; sTag.className = 'md-tag md-tag-size-mini'; }
+    else if (sv >= 4.5) { sTag.textContent = ui.sizeTagLarge; sTag.className = 'md-tag md-tag-size-large'; }
+    else { sTag.textContent = ui.sizeTagStandard; sTag.className = 'md-tag md-tag-size-standard'; }
+  }
+
+  function updateTags() {
+    const hv = parseInt(humidity.value);
+    const tv = parseInt(temp.value);
+    const sv = parseFloat(size.value);
+    hVal.textContent = hv.toString();
+    tVal.textContent = tv.toString();
+    sVal.textContent = sv.toString();
+    updateHumidityTag(hv);
+    updateTempTag(tv);
+    updateSizeTag(sv);
+  }
+
+  function updateSkinBadge(readiness) {
+    readinessVal.textContent = readiness + '%';
+    if (readiness >= 90) {
+      readinessVal.style.color = 'var(--md-green)';
+      skinBadge.textContent = ui.skinStatusReady;
+      skinBadge.className = 'md-skin-badge ready';
+      shellTop.setAttribute('fill', 'url(#md-shell-top)');
+    } else if (readiness >= 60) {
+      readinessVal.style.color = 'var(--md-amber)';
+      skinBadge.textContent = ui.skinStatusForming;
+      skinBadge.className = 'md-skin-badge forming';
+      shellTop.setAttribute('fill', 'url(#md-shell-top-dry)');
+    } else if (readiness >= 20) {
+      readinessVal.style.color = 'var(--md-pink)';
+      skinBadge.textContent = ui.skinStatusSticky;
+      skinBadge.className = 'md-skin-badge sticky';
+      shellTop.setAttribute('fill', 'url(#md-shell-top)');
+    } else {
+      readinessVal.style.color = 'var(--md-gray)';
+      skinBadge.textContent = ui.skinStatusOverDry;
+      skinBadge.className = 'md-skin-badge over-dry';
+      shellTop.setAttribute('fill', 'url(#md-shell-top-overdry)');
+    }
+  }
+
+  function compute() {
+    const hv = parseInt(humidity.value);
+    const tc = getTempC();
+    const sc = getSizeCm();
+    const hc = Math.max(20, Math.min(90, hv));
+    const tcc = Math.max(15, Math.min(35, tc));
+    const dcc = Math.max(2, Math.min(6, sc));
+
+    const hf = 1 + Math.pow((hc - 30) / 30, 2) * 2;
+    const tf = 1 + (25 - tcc) * 0.04;
+    const sf = Math.pow(dcc / 3, 1.5);
+    const minutes = Math.round(30 * hf * tf * sf);
+    const readiness = Math.max(0, Math.min(100, Math.round(100 - (hf - 1) * 50 - (tf - 1) * 30)));
+
+    minutesDisp.textContent = minutes.toString();
+    updateSkinBadge(readiness);
+    humidityNote.textContent = Math.round(hf * 100) / 100 !== 1 ? hf.toFixed(1) + 'x factor' : '';
+
+    footerTime.textContent = minutes + ' ' + ui.minutesUnit;
+    footerHumidity.textContent = hv + ui.humidityUnit;
+    footerTemp.textContent = formatTemp(tc) + getTempUnit();
+    footerSize.textContent = formatSize(sc) + ' ' + getSizeUnit();
+    footer.style.display = 'flex';
+    result.style.display = 'flex';
+  }
+
+  const STORAGE_KEY = 'md-v1';
+
+  function save() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ h: humidity.value, t: temp.value, s: size.value, u: unit }));
+    } catch {}
+  }
+
+  function load() {
+    try {
+      const d = localStorage.getItem(STORAGE_KEY);
+      if (!d) return;
+      const v = JSON.parse(d);
+      if (v.u === 'imperial') switchUnit('imperial');
+      if (v.h) humidity.value = v.h;
+      if (v.t) temp.value = v.t;
+      if (v.s) size.value = v.s;
+    } catch {}
+  }
+
+  function refresh() { updateTags(); compute(); save(); }
+
+  unitMetric.addEventListener('click', function() { switchUnit('metric'); });
+  unitImperial.addEventListener('click', function() { switchUnit('imperial'); });
+  humidity.addEventListener('input', refresh);
+  temp.addEventListener('input', refresh);
+  size.addEventListener('input', refresh);
+
+  load();
+  refresh();
+</script>

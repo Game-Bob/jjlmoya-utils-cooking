@@ -5,7 +5,7 @@ import { cookingCategory } from '../data';
 describe('Tool Validation Suite', () => {
   describe('Library Registration', () => {
     it('should have 20 tools in ALL_TOOLS', () => {
-      expect(ALL_TOOLS.length).toBe(20);
+      expect(ALL_TOOLS.length).toBe(21);
     });
 
 
