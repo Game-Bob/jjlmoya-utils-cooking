@@ -16,6 +16,7 @@ export { spherificationBath } from './tool/spherification-bath-calculator/entry'
 export { iceCreamPacPod } from './tool/ice-cream-pac-pod/entry';
 export { meatBinder } from './tool/meat-binder-transglutaminase-calculator/entry';
 export { carryOverCooking } from './tool/carry-over-cooking-predictor/entry';
+export { maillardReaction } from './tool/maillard-reaction-optimizer/entry';
 export { botulismCanningSafety } from './tool/botulism-canning-safety/entry';
 export { cookingCategory } from './category';
 import { americanKitchenConverter } from './tool/american-kitchen-converter/entry';
@@ -37,5 +38,6 @@ import { iceCreamPacPod } from './tool/ice-cream-pac-pod/entry';
 import { botulismCanningSafety } from './tool/botulism-canning-safety/entry';
 import { meatBinder } from './tool/meat-binder-transglutaminase-calculator/entry';
 import { carryOverCooking } from './tool/carry-over-cooking-predictor/entry';
-export const ALL_ENTRIES = [americanKitchenConverter, bananaCare, brine, cookwareGuide, eggTimer, ingredientRescaler, kitchenTimer, meringuePeak, moldScaler, pizza, rouxGuide, sourdoughCalculator, yeastConverter, lactoFermentationSalt, spherificationBath, iceCreamPacPod, botulismCanningSafety, meatBinder, carryOverCooking];
+import { maillardReaction } from './tool/maillard-reaction-optimizer/entry';
+export const ALL_ENTRIES = [americanKitchenConverter, bananaCare, brine, cookwareGuide, eggTimer, ingredientRescaler, kitchenTimer, meringuePeak, moldScaler, pizza, rouxGuide, sourdoughCalculator, yeastConverter, lactoFermentationSalt, spherificationBath, iceCreamPacPod, botulismCanningSafety, meatBinder, carryOverCooking, maillardReaction];
 

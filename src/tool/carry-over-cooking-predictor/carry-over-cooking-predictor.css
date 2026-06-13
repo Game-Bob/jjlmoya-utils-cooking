@@ -13,6 +13,7 @@
   --co-red-dark: #ef4444;
   --co-orange: #f97316;
   --co-orange-dark: #fb923c;
+  --co-black: #000;
 
   width: 100%;
   box-sizing: border-box;
@@ -279,12 +280,12 @@
 
 .co-unit-btn.active {
   background: var(--co-orange);
-  color: #fff;
+  color: var(--co-surface);
 }
 
 .theme-dark .co-unit-btn.active {
   background: var(--co-orange-dark);
-  color: #000;
+  color: var(--co-black);
 }
 
 .co-unit-btn:first-child {

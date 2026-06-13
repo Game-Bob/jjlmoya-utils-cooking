@@ -1,0 +1,391 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="mr">
+  <div class="mr-card">
+
+    <div class="mr-header">
+      <div class="mr-header-top">
+        <span class="mr-header-label">{ui.headerLabel}</span>
+        <span id="mr-flavor-badge" class="mr-flavor-badge safe">{ui.flavorSafe}</span>
+      </div>
+      <div class="mr-unit-row">
+        <span class="mr-unit-label">{ui.unitLabel}</span>
+        <div class="mr-unit-toggle">
+          <button type="button" id="mr-unit-metric" class="mr-unit-btn active" data-unit="metric">{ui.metricUnit}</button>
+          <button type="button" id="mr-unit-imperial" class="mr-unit-btn" data-unit="imperial">{ui.imperialUnit}</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mr-body">
+      <div class="mr-controls">
+        <div class="mr-control-group">
+          <label for="mr-weight" class="mr-control-label">{ui.weightLabel}</label>
+          <div class="mr-slider-group">
+            <input type="range" id="mr-weight" min="50" max="5000" step="10" value="1000" class="mr-range" />
+            <span class="mr-range-value"><span id="mr-weight-display">1000</span> <span class="mr-range-unit" id="mr-weight-unit">{ui.weightUnit}</span></span>
+          </div>
+        </div>
+        <div class="mr-control-group">
+          <label for="mr-temp" class="mr-control-label">{ui.tempLabel}</label>
+          <div class="mr-slider-group">
+            <input type="range" id="mr-temp" min="100" max="250" step="5" value="160" class="mr-range" />
+            <span class="mr-range-value"><span id="mr-temp-display">160</span><span class="mr-range-unit" id="mr-temp-unit">{ui.tempUnit}</span></span>
+          </div>
+          <div class="mr-temp-hints">
+            <span id="mr-hint-low" class="mr-temp-hint">{ui.tempLow}</span>
+            <span id="mr-hint-opt" class="mr-temp-hint active">{ui.tempOpt}</span>
+            <span id="mr-hint-high" class="mr-temp-hint">{ui.tempHigh}</span>
+          </div>
+        </div>
+        <div class="mr-control-group">
+          <label for="mr-soda" class="mr-control-label">{ui.sodaLabel}</label>
+          <div class="mr-slider-group">
+            <input type="range" id="mr-soda" min="0" max="10" step="0.1" value="0.5" class="mr-range" />
+            <span class="mr-range-value"><span id="mr-soda-display">0.5</span> <span class="mr-range-unit" id="mr-soda-unit">{ui.sodaUnit}</span></span>
+          </div>
+        </div>
+        <div class="mr-control-group" id="mr-soda-note-wrap" style="display:flex;">
+          <span id="mr-soda-note" class="mr-soda-rec-max">{ui.sodaNote}</span>
+        </div>
+      </div>
+
+      <div id="mr-preview" class="mr-preview">
+        <div class="mr-gauge-wrap">
+          <svg class="mr-gauge-svg" viewBox="0 0 200 130">
+            <path d="M 30 110 A 70 70 0 0 1 170 110" class="mr-gauge-track-bg" />
+            <path id="mr-gauge-arc" d="M 30 110 A 70 70 0 0 1 170 110" class="mr-gauge-track"
+              stroke-dasharray="220" stroke-dashoffset="220"
+              stroke="url(#mr-speed-grad)" />
+            <defs>
+              <linearGradient id="mr-speed-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="var(--mr-green)" />
+                <stop offset="50%" stop-color="var(--mr-amber)" />
+                <stop offset="100%" stop-color="var(--mr-danger)" />
+              </linearGradient>
+            </defs>
+            <text x="100" y="90" text-anchor="middle" class="mr-gauge-center-val"><tspan id="mr-gauge-val">x1.0</tspan></text>
+            <text x="100" y="106" text-anchor="middle" class="mr-gauge-center-label">{ui.speedLabel}</text>
+          </svg>
+        </div>
+
+        <div class="mr-browning-section">
+          <div class="mr-browning-label">{ui.browningLabel}</div>
+          <svg class="mr-browning-svg" viewBox="0 0 260 60" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="mr-browning-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#fef3c7" />
+                <stop offset="20%" stop-color="#fde68a" />
+                <stop offset="40%" stop-color="#d4a44a" />
+                <stop offset="60%" stop-color="#b8803a" />
+                <stop offset="80%" stop-color="#7c3a1e" />
+                <stop offset="100%" stop-color="#3d1a08" />
+              </linearGradient>
+              <clipPath id="mr-food-clip">
+                <ellipse cx="130" cy="28" rx="110" ry="20" />
+              </clipPath>
+            </defs>
+            <g clip-path="url(#mr-food-clip)">
+              <rect id="mr-food-rect" x="20" y="12" width="220" height="30" fill="url(#mr-browning-grad)" />
+            </g>
+            <ellipse cx="130" cy="28" rx="110" ry="20" fill="none" stroke="var(--mr-border)" stroke-width="1" />
+            <text x="20" y="55" class="mr-browning-bar-label">{ui.rawLabel}</text>
+            <text x="130" y="55" text-anchor="middle" class="mr-browning-bar-label">{ui.goldenLabel}</text>
+            <text x="240" y="55" text-anchor="end" class="mr-browning-bar-label">{ui.burntLabel}</text>
+            <circle id="mr-browning-indicator" cx="130" cy="28" r="5" fill="var(--mr-amber)" stroke="var(--mr-surface)" stroke-width="2.5" />
+          </svg>
+        </div>
+
+        <div class="mr-stats-row">
+          <div class="mr-stat-card">
+            <span class="mr-stat-label">{ui.phEstimated}</span>
+            <span class="mr-stat-number" id="mr-ph-val" style="color: var(--mr-amber);">6.0</span>
+          </div>
+          <div class="mr-stat-card">
+            <span class="mr-stat-label">{ui.timeSaved}</span>
+            <span class="mr-stat-number"><span class="mr-stat-badge fast"><span id="mr-time-saved">0</span>%</span></span>
+          </div>
+        </div>
+
+        <div class="mr-soda-rec">
+          <span class="mr-soda-rec-label">{ui.sodaRecommended}</span>
+          <span class="mr-soda-rec-value" id="mr-soda-rec-val">0.75 g</span>
+          <br/>
+          <span class="mr-soda-rec-max" id="mr-soda-max-val">{ui.sodaMax}: 1.50 g</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="mr-error" class="mr-error" style="display: none;">
+      <p id="mr-error-text" class="mr-error-text"></p>
+    </div>
+
+    <div class="mr-footer">
+      <div id="mr-desc" class="mr-footer-text">{ui.footerTemplate}</div>
+    </div>
+
+  </div>
+</div>
+
+<script is:inline define:vars={{ ui }}>
+  const $ = (id) => document.getElementById(id);
+  const weight = $('mr-weight'), temp = $('mr-temp'), soda = $('mr-soda');
+  const wDisp = $('mr-weight-display'), tDisp = $('mr-temp-display'), sDisp = $('mr-soda-display');
+  const wUnit = $('mr-weight-unit'), tUnit = $('mr-temp-unit'), sUnit = $('mr-soda-unit');
+  const gaugeArc = $('mr-gauge-arc'), gaugeVal = $('mr-gauge-val');
+  const timeSaved = $('mr-time-saved'), phVal = $('mr-ph-val');
+  const sodaRec = $('mr-soda-rec-val'), sodaMax = $('mr-soda-max-val');
+  const flavorBadge = $('mr-flavor-badge'), browningInd = $('mr-browning-indicator');
+  const hintLow = $('mr-hint-low'), hintOpt = $('mr-hint-opt'), hintHigh = $('mr-hint-high');
+  const preview = $('mr-preview'), errorBox = $('mr-error'), errorText = $('mr-error-text');
+  const desc = $('mr-desc');
+  const sodaNote = $('mr-soda-note');
+  const unitMetric = $('mr-unit-metric'), unitImperial = $('mr-unit-imperial');
+
+  const arcLen = 220;
+  const MAX_SODA_PER_KG = 1.5;
+  const DEG = '\u00B0';
+
+  function cToF(c) { return c * 9/5 + 32; }
+  function fToC(f) { return (f - 32) * 5/9; }
+  function gToOz(g) { return g * 0.035274; }
+  function ozToG(oz) { return oz / 0.035274; }
+
+  let unit = 'metric';
+
+  function getWunit() { return unit === 'imperial' ? ui.weightOz : ui.weightUnit; }
+  function getTunit() { return DEG + (unit === 'imperial' ? 'F' : 'C'); }
+  function getSunit() { return unit === 'imperial' ? ui.sodaOz : ui.sodaUnit; }
+
+  function save() {
+    try {
+      localStorage.setItem('mr-v2', JSON.stringify({
+        w: weight.value, t: temp.value, s: soda.value, u: unit
+      }));
+    } catch {}
+  }
+
+  function load() {
+    try {
+      const d = localStorage.getItem('mr-v2');
+      if (!d) return;
+      const v = JSON.parse(d);
+      if (v.u === 'imperial') switchUnit('imperial', false);
+      if (v.w) weight.value = v.w;
+      if (v.t) temp.value = v.t;
+      if (v.s) soda.value = v.s;
+    } catch {}
+  }
+
+  function updateUnits() {
+    const wu = getWunit();
+    const tu = getTunit();
+    const su = getSunit();
+    wUnit.textContent = wu;
+    tUnit.textContent = tu;
+    sUnit.textContent = su;
+  }
+
+  function updateTempHints(t) {
+    const isImp = unit === 'imperial';
+    const lo = isImp ? Math.round(cToF(110)) : 110;
+    const midLo = isImp ? Math.round(cToF(140)) : 140;
+    const midHi = isImp ? Math.round(cToF(180)) : 180;
+    const hi = isImp ? Math.round(cToF(180)) : 180;
+    const d = isImp ? DEG + 'F' : DEG + 'C';
+
+    hintLow.textContent = ui.tempLow.replace(/\{min\}/g, lo + d).replace(/\{max\}/g, midLo + d);
+    hintOpt.textContent = ui.tempOpt.replace(/\{min\}/g, midLo + d).replace(/\{max\}/g, midHi + d);
+    hintHigh.textContent = ui.tempHigh.replace(/\{min\}/g, hi + d);
+
+    hintLow.classList.toggle('active', t >= 110 && t < 140);
+    hintOpt.classList.toggle('active', t >= 140 && t <= 180);
+    hintHigh.classList.toggle('active', t > 180);
+  }
+
+  function setWeightBounds(isImp) {
+    weight.setAttribute('min', isImp ? '1' : '50');
+    weight.setAttribute('max', isImp ? '176' : '5000');
+    weight.setAttribute('step', isImp ? '0.1' : '10');
+  }
+
+  function setTempBounds(isImp) {
+    temp.setAttribute('min', isImp ? '212' : '100');
+    temp.setAttribute('max', isImp ? '482' : '250');
+    temp.setAttribute('step', isImp ? '10' : '5');
+  }
+
+  function setSodaBounds(isImp) {
+    soda.setAttribute('min', '0');
+    soda.setAttribute('max', isImp ? '0.35' : '10');
+    soda.setAttribute('step', isImp ? '0.01' : '0.1');
+  }
+
+  function setSliderBounds() {
+    const isImp = unit === 'imperial';
+    setWeightBounds(isImp);
+    setTempBounds(isImp);
+    setSodaBounds(isImp);
+  }
+
+  function formatWeight(wv) { return unit === 'imperial' ? gToOz(wv).toFixed(1) : Math.round(wv).toString(); }
+  function formatTemp(tv) { return unit === 'imperial' ? Math.round(cToF(tv)).toString() : tv.toString(); }
+  function formatSoda(sv) { return unit === 'imperial' ? gToOz(sv).toFixed(2) : sv.toFixed(1); }
+
+  function switchUnit(to, persist = true) {
+    if (unit === to) return;
+    const wv = parseFloat(weight.value) || 1000;
+    const tv = parseFloat(temp.value) || 160;
+    const sv = parseFloat(soda.value) || 0;
+
+    unit = to;
+    unitMetric.classList.toggle('active', to === 'metric');
+    unitImperial.classList.toggle('active', to === 'imperial');
+
+    setSliderBounds();
+    weight.value = formatWeight(wv);
+    temp.value = formatTemp(tv);
+    soda.value = formatSoda(sv);
+
+    updateUnits();
+    updateView();
+    if (persist) save();
+  }
+
+  function getWeightGrams() {
+    const v = parseFloat(weight.value) || 0;
+    return unit === 'imperial' ? ozToG(v) : v;
+  }
+
+  function getTempCelsius() {
+    const v = parseFloat(temp.value) || 0;
+    return unit === 'imperial' ? fToC(v) : v;
+  }
+
+  function getSodaGrams() {
+    const v = parseFloat(soda.value) || 0;
+    return unit === 'imperial' ? ozToG(v) : v;
+  }
+
+  function getFlavorRisk(pH) {
+    if (pH > 8.5) return 'danger';
+    if (pH > 7.5) return 'caution';
+    return 'safe';
+  }
+
+  function updateFlavorBadge(pH) {
+    const map = { safe: ui.flavorSafe, caution: ui.flavorCaution, danger: ui.flavorDanger };
+    const risk = getFlavorRisk(pH);
+    flavorBadge.className = 'mr-flavor-badge ' + risk;
+    flavorBadge.textContent = map[risk];
+  }
+
+  function updateBrowning(pct) {
+    const cx = 20 + pct * 220;
+    browningInd.setAttribute('cx', cx.toString());
+  }
+
+  function updateGauge(multiplier) {
+    const pct = Math.min(1, (multiplier - 1) / 2);
+    gaugeArc.setAttribute('stroke-dashoffset', (arcLen * (1 - pct)).toString());
+    gaugeVal.textContent = 'x' + multiplier.toFixed(1);
+  }
+
+  function computeResult(wv, sv) {
+    const gPerKg = sv / (wv / 1000);
+    const ph = Math.min(9, 6 + gPerKg * 2);
+    const mult = Math.max(1, parseFloat((Math.log2(Math.max(1.1, ph - 5)) * 2).toFixed(1)));
+    const pct = Math.max(0, parseFloat(((1 - 1 / mult) * 100).toFixed(0)));
+    return { ph, mult, pct };
+  }
+
+  function showError() {
+    errorBox.style.display = 'block';
+    preview.style.display = 'none';
+    errorText.textContent = ui.errorTempTooLow;
+    const su = getSunit();
+    desc.innerHTML = ui.footerTemplate
+      .replace(/\{weight\}/g, '\u2014')
+      .replace(/\{wunit\}/g, getWunit())
+      .replace(/\{temp\}/g, '\u2014')
+      .replace(/\{tunit\}/g, getTunit())
+      .replace(/\{soda\}/g, '\u2014')
+      .replace(/\{sunit\}/g, su)
+      .replace(/\{multiplier\}/g, '0')
+      .replace(/\{timeSaved\}/g, '0');
+  }
+
+  function updateSodaNote(ph) {
+    if (ph > 8.5) { sodaNote.textContent = ui.sodaDangerNote; return; }
+    if (ph > 7.5) { sodaNote.textContent = ui.sodaCautionNote; return; }
+    sodaNote.textContent = ui.sodaNote;
+  }
+
+  function renderResult(wv, tv, sv, safeMax) {
+    const { ph, mult, pct } = computeResult(wv, sv);
+    const half = safeMax / 2;
+    phVal.textContent = ph.toFixed(1);
+    timeSaved.textContent = pct.toString();
+    const su = getSunit();
+    sodaRec.textContent = (unit === 'imperial' ? gToOz(half).toFixed(2) : half.toFixed(2)) + ' ' + su;
+    updateFlavorBadge(ph);
+    updateGauge(mult);
+    updateBrowning(Math.min(1, Math.max(0, (ph - 6) / 3)));
+
+    const wu = getWunit();
+    const tu = getTunit();
+    desc.innerHTML = ui.footerTemplate
+      .replace(/\{weight\}/g, formatWeight(wv))
+      .replace(/\{wunit\}/g, wu)
+      .replace(/\{temp\}/g, formatTemp(tv))
+      .replace(/\{tunit\}/g, tu)
+      .replace(/\{soda\}/g, formatSoda(sv))
+      .replace(/\{sunit\}/g, su)
+      .replace(/\{multiplier\}/g, mult.toFixed(1))
+      .replace(/\{timeSaved\}/g, pct.toString());
+
+    sDisp.textContent = formatSoda(sv);
+    updateSodaNote(ph);
+  }
+
+  function updateView() {
+    const wv = getWeightGrams();
+    const tv = getTempCelsius();
+    const sv = getSodaGrams();
+
+    wDisp.textContent = formatWeight(wv);
+    tDisp.textContent = formatTemp(tv);
+    sDisp.textContent = formatSoda(sv);
+    updateTempHints(tv);
+
+    const safeMax = MAX_SODA_PER_KG * (wv / 1000);
+    const su = getSunit();
+    const isImp = unit === 'imperial';
+    soda.setAttribute('max', isImp ? gToOz(safeMax).toFixed(2) : (Math.ceil(safeMax * 10) / 10).toString());
+    sodaMax.textContent = ui.sodaMax + ': ' + (isImp ? gToOz(safeMax).toFixed(2) : safeMax.toFixed(2)) + ' ' + su;
+
+    if (tv < 110) { showError(); return; }
+    if (sv > safeMax) { soda.value = formatSoda(safeMax); return; }
+
+    errorBox.style.display = 'none';
+    preview.style.display = 'flex';
+
+    renderResult(wv, tv, sv, safeMax);
+    save();
+  }
+
+  unitMetric.addEventListener('click', function() { switchUnit('metric'); });
+  unitImperial.addEventListener('click', function() { switchUnit('imperial'); });
+  weight.addEventListener('input', updateView);
+  temp.addEventListener('input', updateView);
+  soda.addEventListener('input', updateView);
+
+  load();
+  updateView();
+</script>

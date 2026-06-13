@@ -20,6 +20,7 @@ export { ICE_CREAM_PAC_POD_TOOL } from './tool/ice-cream-pac-pod';
 export { BOTULISM_CANNING_SAFETY_TOOL } from './tool/botulism-canning-safety';
 export { MEAT_BINDER_TRANSGLUTAMINASE_TOOL } from './tool/meat-binder-transglutaminase-calculator';
 export { CARRY_OVER_COOKING_TOOL } from './tool/carry-over-cooking-predictor';
+export { MAILLARD_REACTION_TOOL } from './tool/maillard-reaction-optimizer';
 
 
 export type {
