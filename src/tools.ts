@@ -18,6 +18,7 @@ import { SPHERIFICATION_BATH_TOOL } from './tool/spherification-bath-calculator'
 import { ICE_CREAM_PAC_POD_TOOL } from './tool/ice-cream-pac-pod';
 import { BOTULISM_CANNING_SAFETY_TOOL } from './tool/botulism-canning-safety';
 import { MEAT_BINDER_TRANSGLUTAMINASE_TOOL } from './tool/meat-binder-transglutaminase-calculator';
+import { CARRY_OVER_COOKING_TOOL } from './tool/carry-over-cooking-predictor';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   AMERICAN_KITCHEN_CONVERTER_TOOL,
@@ -38,5 +39,6 @@ export const ALL_TOOLS: ToolDefinition[] = [
   ICE_CREAM_PAC_POD_TOOL,
   BOTULISM_CANNING_SAFETY_TOOL,
   MEAT_BINDER_TRANSGLUTAMINASE_TOOL,
+  CARRY_OVER_COOKING_TOOL,
 ];
 

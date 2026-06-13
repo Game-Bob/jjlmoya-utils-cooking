@@ -1,14 +1,18 @@
 export const bibliography = [
   {
-    name: 'Modernist Cuisine: The Art and Science of Cooking',
-    url: 'https://modernistcuisine.com/books/modernist-cuisine/',
+    name: 'Transglutaminase in Food Processing: Cross-Linking Proteins for Texture Modification (Comprehensive Reviews in Food Science and Food Safety)',
+    url: 'https://ift.onlinelibrary.wiley.com/journal/15414337',
   },
   {
-    name: 'Cooking for Geeks: Real Science, Great Hacks, and Good Food',
-    url: 'https://www.cookingforgeeks.com/',
+    name: 'Meat Glue: The Science of Transglutaminase in Molecular Gastronomy (Khymos / Martin Lersch)',
+    url: 'https://khymos.org/transglutaminase.php',
   },
   {
-    name: 'The Science of Transglutaminase in Food Processing',
-    url: 'https://www.sciencedirect.com/science/article/pii/S0924224498000387',
+    name: 'Modernist Cuisine at Home: Enzyme Applications in Charcuterie and Roulades (Nathan Myhrvold)',
+    url: 'https://modernistcuisine.com/books/modernist-cuisine-at-home/',
+  },
+  {
+    name: 'Effect of Transglutaminase on Meat Binding and Texture in Restructured Products (Journal of Food Science)',
+    url: 'https://ift.onlinelibrary.wiley.com/journal/17503841',
   },
 ];

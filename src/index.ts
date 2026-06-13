@@ -19,6 +19,7 @@ export { SPHERIFICATION_BATH_TOOL } from './tool/spherification-bath-calculator'
 export { ICE_CREAM_PAC_POD_TOOL } from './tool/ice-cream-pac-pod';
 export { BOTULISM_CANNING_SAFETY_TOOL } from './tool/botulism-canning-safety';
 export { MEAT_BINDER_TRANSGLUTAMINASE_TOOL } from './tool/meat-binder-transglutaminase-calculator';
+export { CARRY_OVER_COOKING_TOOL } from './tool/carry-over-cooking-predictor';
 
 
 export type {

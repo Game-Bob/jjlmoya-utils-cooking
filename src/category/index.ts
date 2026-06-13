@@ -16,6 +16,7 @@ import { spherificationBath } from '../tool/spherification-bath-calculator/entry
 import { iceCreamPacPod } from '../tool/ice-cream-pac-pod/entry';
 import { botulismCanningSafety } from '../tool/botulism-canning-safety/entry';
 import { meatBinder } from '../tool/meat-binder-transglutaminase-calculator/entry';
+import { carryOverCooking } from '../tool/carry-over-cooking-predictor/entry';
 
 export const cookingCategory: CookingCategoryEntry = {
   icon: 'mdi:chef-hat',
@@ -37,6 +38,7 @@ export const cookingCategory: CookingCategoryEntry = {
     iceCreamPacPod,
     botulismCanningSafety,
     meatBinder,
+    carryOverCooking,
   ],
 
   i18n: {

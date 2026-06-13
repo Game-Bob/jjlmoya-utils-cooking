@@ -1,0 +1,362 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="co">
+  <div class="co-card">
+
+    <div class="co-timeline-section">
+      <div class="co-timeline-header">
+        <span class="co-timeline-title">Roast Timeline</span>
+        <span id="co-phase" class="co-timeline-phase">roasting</span>
+      </div>
+      <svg class="co-timeline-svg" viewBox="0 0 800 150" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="co-heat-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#1e1e1e" />
+            <stop offset="15%" stop-color="#450a0a" />
+            <stop offset="40%" stop-color="#dc2626" />
+            <stop offset="65%" stop-color="#f97316" />
+            <stop offset="85%" stop-color="#facc15" />
+            <stop offset="100%" stop-color="#22c55e" />
+          </linearGradient>
+          <clipPath id="co-clip">
+            <rect x="40" y="30" width="720" height="42" rx="4" />
+          </clipPath>
+        </defs>
+
+        <rect x="40" y="30" width="720" height="42" rx="4" fill="url(#co-heat-grad)" opacity="0.75" />
+
+        <g clip-path="url(#co-clip)">
+          <rect x="40" y="30" width="720" height="42" rx="4" fill="url(#co-heat-grad)" />
+          <line id="co-pull-line" x1="40" y1="26" x2="40" y2="76" stroke="#fff" stroke-width="3" opacity="0" />
+          <line id="co-pull-target" x1="40" y1="32" x2="40" y2="70" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" stroke-dasharray="4 4" />
+        </g>
+
+        <rect x="36" y="26" width="728" height="50" rx="8" fill="none" stroke="var(--co-border)" stroke-width="1" />
+
+        <text x="40" y="118" fill="var(--co-muted)" font-size="13" font-family="inherit" font-weight="700" letter-spacing="0.08em">OVEN</text>
+        <text x="400" y="118" text-anchor="middle" fill="var(--co-muted)" font-size="13" font-family="inherit" font-weight="700" letter-spacing="0.08em">PULL</text>
+        <text x="760" y="118" text-anchor="end" fill="var(--co-muted)" font-size="13" font-family="inherit" font-weight="700" letter-spacing="0.08em">REST</text>
+
+        <line x1="40" y1="125" x2="760" y2="125" stroke="var(--co-border)" stroke-width="0.5" />
+        <circle id="co-cursor" cx="40" cy="125" r="5" fill="var(--co-orange)" stroke="var(--co-surface)" stroke-width="2" />
+
+        <text id="co-temp-label" x="400" y="146" text-anchor="middle" fill="var(--co-muted)" font-size="12" font-family="inherit" font-weight="700" letter-spacing="0.04em" stroke="var(--co-surface)" stroke-width="3" paint-order="stroke">center: --</text>
+      </svg>
+    </div>
+
+    <div class="co-body">
+
+      <div class="co-controls">
+        <div class="co-control-group">
+          <span class="co-control-label">{ui.geometryLabel}</span>
+          <select id="co-geometry" class="co-select">
+            <option value="whole-bird">{ui.wholeBird}</option>
+            <option value="cylindrical-roast">{ui.cylindricalRoast}</option>
+            <option value="flat-cut">{ui.flatCut}</option>
+          </select>
+        </div>
+        <div class="co-control-group">
+          <label for="co-weight" class="co-control-label">{ui.weightLabel}</label>
+          <div class="co-slider-group">
+            <input type="range" id="co-weight" min="150" max="8000" step="50" value="2000" class="co-range" />
+            <span class="co-range-value"><span id="co-weight-display">2000</span> <span class="co-range-unit" id="co-weight-unit">g</span></span>
+          </div>
+        </div>
+        <div class="co-control-group">
+          <label for="co-oven" class="co-control-label">{ui.ovenTempLabel}</label>
+          <div class="co-slider-group">
+            <input type="range" id="co-oven" min="0" max="350" step="5" value="200" class="co-range" />
+            <span class="co-range-value"><span id="co-oven-display">200</span><span class="co-range-unit" id="co-oven-unit">C</span></span>
+          </div>
+        </div>
+        <div class="co-control-group">
+          <label for="co-target" class="co-control-label">{ui.targetTempLabel}</label>
+          <div class="co-slider-group">
+            <input type="range" id="co-target" min="0" max="100" step="0.5" value="54" class="co-range" />
+            <span class="co-range-value"><span id="co-target-display">54.0</span><span class="co-range-unit" id="co-target-unit">C</span></span>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: flex-end;">
+          <div class="co-unit-toggle">
+            <button type="button" id="co-unit-metric" class="co-unit-btn active" data-unit="metric">{ui.metricUnit}</button>
+            <button type="button" id="co-unit-imperial" class="co-unit-btn" data-unit="imperial">{ui.imperialUnit}</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="co-verdict" class="co-result">
+        <div class="co-gauge-wrap">
+          <svg class="co-gauge-svg" viewBox="0 0 170 150">
+            <circle cx="85" cy="75" r="65" class="co-gauge-track" />
+            <circle id="co-gauge-arc" cx="85" cy="75" r="65" class="co-gauge-arc"
+              stroke-dasharray="408" stroke-dashoffset="204" transform="rotate(-90 85 75)" />
+            <line id="co-gauge-target" x1="85" y1="10" x2="85" y2="17" class="co-gauge-target-line" transform="rotate(0 85 75)" />
+            <text id="co-gauge-val" x="85" y="72" text-anchor="middle" class="co-gauge-center">48.5</text>
+            <text id="co-gauge-deg" x="85" y="97" text-anchor="middle" class="co-gauge-unit">C</text>
+          </svg>
+          <div class="co-gauge-label">{ui.pullTemp}</div>
+        </div>
+
+        <div class="co-stats-row">
+          <div class="co-stat-card">
+            <span class="co-stat-label">{ui.carryOver}</span>
+            <span class="co-stat-number"><span class="co-stat-badge">+<span id="co-r-carry">5.5</span> <span class="co-stat-unit" id="co-r-carry-unit">C</span></span></span>
+          </div>
+          <div class="co-stat-card">
+            <span class="co-stat-label">{ui.restTime}</span>
+            <span class="co-stat-number"><span id="co-r-rest">16</span> <span class="co-stat-unit">{ui.minutes}</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="co-error" class="co-error" style="display: none;">
+      <p id="co-error-text" class="co-error-text"></p>
+    </div>
+
+    <div class="co-footer">
+      <p id="co-desc" class="co-footer-text">{ui.footerTemplate}</p>
+    </div>
+
+  </div>
+</div>
+
+<script is:inline define:vars={{ ui }}>
+  const $ = (id) => document.getElementById(id);
+  const geo = $('co-geometry'), w = $('co-weight'), oven = $('co-oven'), target = $('co-target');
+  const wDisp = $('co-weight-display'), ovenDisp = $('co-oven-display'), targetDisp = $('co-target-display');
+  const wUnit = $('co-weight-unit'), ovenUnit = $('co-oven-unit'), targetUnit = $('co-target-unit');
+  const rCarry = $('co-r-carry'), rRest = $('co-r-rest');
+  const verdict = $('co-verdict'), errorBox = $('co-error'), errorText = $('co-error-text');
+  const phase = $('co-phase'), desc = $('co-desc'), cursor = $('co-cursor');
+  const pullLine = $('co-pull-line'), pullTarget = $('co-pull-target'), tempLabel = $('co-temp-label');
+  const unitMetric = $('co-unit-metric'), unitImperial = $('co-unit-imperial');
+  const rCarryUnit = $('co-r-carry-unit');
+  const gaugeArc = $('co-gauge-arc'), gaugeVal = $('co-gauge-val'), gaugeDeg = $('co-gauge-deg');
+  const gaugeTarget = $('co-gauge-target');
+
+  const GEOM = { 'whole-bird': 0.045, 'cylindrical-roast': 0.035, 'flat-cut': 0.025 };
+  const MIN = { 'whole-bird': 500, 'cylindrical-roast': 300, 'flat-cut': 150 };
+  const MAX = { 'whole-bird': 8000, 'cylindrical-roast': 6000, 'flat-cut': 2000 };
+  const WUNIT = { 'metric': ui.weightG, 'imperial': ui.weightOz };
+  const KEY = 'co-v6';
+  const CIRCUMFERENCE = 2 * Math.PI * 65;
+
+  function cToF(c) { return c * 9/5 + 32; }
+  function fToC(f) { return (f - 32) * 5/9; }
+  function gToOz(g) { return g * 0.035274; }
+  function ozToG(oz) { return oz / 0.035274; }
+
+  let unit = 'metric';
+  const DEG = '\u00B0';
+
+  function save() {
+    try {
+      const wv = getWeightGrams(), ov = getOvenCelsius(), tv = getTargetCelsius();
+      localStorage.setItem(KEY, JSON.stringify({ g: geo.value, w: wv, o: ov, t: tv, u: unit }));
+    } catch {}
+  }
+
+  function loadImperial() {
+    unit = 'imperial';
+    unitMetric.classList.remove('active');
+    unitImperial.classList.add('active');
+    w.setAttribute('step', '0.1');
+    updateTempBounds();
+  }
+
+  function setFieldVal(field, metricVal, convertFn, precision) {
+    field.value = unit === 'imperial' ? convertFn(metricVal).toFixed(precision) : Math.round(metricVal).toString();
+  }
+
+  function loadWeight(wv) {
+    if (!wv) return;
+    const v = parseFloat(wv) || 2000;
+    w.value = unit === 'imperial' ? (gToOz(v) * 10 / 10).toFixed(1) : Math.round(v).toString();
+  }
+
+  function loadTemp(s) {
+    if (s.o) setFieldVal(oven, parseFloat(s.o) || 200, cToF, 0);
+    if (s.t) setFieldVal(target, parseFloat(s.t) || 54, cToF, 1);
+  }
+
+  function load() {
+    try {
+      const d = localStorage.getItem(KEY);
+      if (!d) return;
+      const s = JSON.parse(d);
+      if (s.g) geo.value = s.g;
+      if (s.u === 'imperial') loadImperial();
+      updateWeightBounds();
+      loadWeight(s.w);
+      loadTemp(s);
+    } catch {}
+  }
+
+  function updateWeightBounds() {
+    const gv = geo.value;
+    const minW = unit === 'imperial' ? Math.round(gToOz(MIN[gv]) * 10) / 10 : MIN[gv];
+    const maxW = unit === 'imperial' ? Math.round(gToOz(MAX[gv]) * 10) / 10 : MAX[gv];
+    w.setAttribute('min', minW);
+    w.setAttribute('max', maxW);
+  }
+
+  function getWeightGrams() {
+    const v = parseFloat(w.value) || 0;
+    return unit === 'imperial' ? ozToG(v) : v;
+  }
+
+  function getOvenCelsius() {
+    const v = parseFloat(oven.value) || 0;
+    return unit === 'imperial' ? fToC(v) : v;
+  }
+
+  function getTargetCelsius() {
+    const v = parseFloat(target.value) || 0;
+    return unit === 'imperial' ? fToC(v) : v;
+  }
+
+  function setDisplayWeight(g) {
+    w.value = unit === 'imperial' ? (gToOz(g) * 10 / 10).toFixed(1) : Math.round(g).toString();
+  }
+
+  function getErr(gv, wv, ov, tv) {
+    if (tv >= ov) return ui.errorTargetExceedsOven;
+    if (ov > 350) return ui.errorOvenTooHot;
+    if (wv < MIN[gv]) return ui.errorWeightTooLow;
+    if (wv > MAX[gv]) return ui.errorWeightTooHigh;
+    return null;
+  }
+
+  function updateTempBounds() {
+    const isImp = unit === 'imperial';
+    oven.setAttribute('min', isImp ? '32' : '0');
+    oven.setAttribute('max', isImp ? '662' : '350');
+    oven.setAttribute('step', isImp ? '10' : '5');
+    target.setAttribute('min', isImp ? '32' : '0');
+    target.setAttribute('max', isImp ? '212' : '100');
+    target.setAttribute('step', isImp ? '1' : '0.5');
+  }
+
+  function switchUnit(to) {
+    if (unit === to) return;
+    const prevG = getWeightGrams(), prevOC = getOvenCelsius(), prevTC = getTargetCelsius();
+    unit = to;
+    unitMetric.classList.toggle('active', to === 'metric');
+    unitImperial.classList.toggle('active', to === 'imperial');
+    updateWeightBounds();
+    updateTempBounds();
+    setDisplayWeight(prevG);
+    w.setAttribute('step', unit === 'imperial' ? '0.1' : '50');
+    oven.value = to === 'imperial' ? Math.round(cToF(prevOC)).toString() : Math.round(prevOC).toString();
+    target.value = to === 'imperial' ? cToF(prevTC).toFixed(1) : prevTC.toFixed(1);
+    updateUnits();
+    updateView();
+  }
+
+  function updateUnits() {
+    const deg = DEG + (unit === 'imperial' ? 'F' : 'C');
+    const wu = unit === 'imperial' ? ui.weightOz : ui.weightG;
+    wUnit.textContent = wu;
+    ovenUnit.textContent = deg;
+    targetUnit.textContent = deg;
+    rCarryUnit.textContent = deg;
+    gaugeDeg.textContent = deg;
+  }
+
+  function updateGauge(pullCelsius, targetCelsius) {
+    const isImp = unit === 'imperial';
+    const maxTemp = isImp ? 212 : 100;
+    const pullValue = isImp ? cToF(pullCelsius) : pullCelsius;
+    const targetValue = isImp ? cToF(targetCelsius) : targetCelsius;
+    const pct = Math.max(0, Math.min(1, pullValue / maxTemp));
+    gaugeArc.setAttribute('stroke-dashoffset', (CIRCUMFERENCE * (1 - pct)).toString());
+    gaugeTarget.setAttribute('transform', 'rotate(' + (Math.min(1, targetValue / maxTemp) * 180) + ' 85 75)');
+  }
+
+  function renderFooter(opts) {
+    return ui.footerTemplate
+      .replace(/\{carry\}/g, '+' + opts.carry + opts.deg)
+      .replace(/\{rest\}/g, opts.rest + ' min')
+      .replace(/\{weight\}/g, opts.weight)
+      .replace(/\{wunit\}/g, WUNIT[unit])
+      .replace(/\{oven\}/g, opts.oven + opts.deg)
+      .replace(/\{target\}/g, opts.target + opts.deg);
+  }
+
+  function showError() {
+    errorBox.style.display = 'block';
+    verdict.style.display = 'none';
+    phase.textContent = 'error';
+    pullLine.setAttribute('opacity', '0');
+    cursor.setAttribute('opacity', '0');
+    tempLabel.textContent = 'center: --';
+  }
+
+  function updateTimeline(pct, pullDisp, targetDisp, deg) {
+    pullLine.setAttribute('x1', (40 + pct * 360).toString());
+    pullLine.setAttribute('x2', (40 + pct * 360).toString());
+    pullTarget.setAttribute('x1', (40 + pct * 360).toString());
+    pullTarget.setAttribute('x2', (40 + pct * 360).toString());
+    pullLine.setAttribute('opacity', '1');
+    cursor.setAttribute('opacity', '1');
+    cursor.setAttribute('cx', (40 + pct * 720).toString());
+    tempLabel.textContent = 'pull at ' + pullDisp + deg + ' / target ' + targetDisp + deg;
+  }
+
+  function disp(v, toF) {
+    return unit === 'imperial' ? toF(v).toFixed(1) : v.toFixed(1);
+  }
+
+  function updateView() {
+    const gv = geo.value, wv = getWeightGrams(), ov = getOvenCelsius(), tv = getTargetCelsius();
+    wDisp.textContent = parseFloat(w.value) % 1 === 0 ? parseFloat(w.value).toString() : parseFloat(w.value).toFixed(1);
+    ovenDisp.textContent = oven.value;
+    targetDisp.textContent = parseFloat(target.value).toFixed(1);
+
+    const err = getErr(gv, wv, ov, tv);
+    if (err) { errorText.textContent = err; showError(); save(); return; }
+
+    errorBox.style.display = 'none';
+    verdict.style.display = 'flex';
+
+    const wF = Math.min(1, wv / 3000);
+    const carry = parseFloat(((ov - tv) * GEOM[gv] * wF).toFixed(1));
+    const pull = parseFloat((tv - carry).toFixed(1));
+    const rest = Math.round(Math.min(45, Math.max(10, wv / 100 * 0.8)));
+
+    const deg = DEG + (unit === 'imperial' ? 'F' : 'C');
+    const pullDisp = disp(pull, cToF);
+    const targetDisp2 = disp(tv, cToF);
+    const carryDisp = unit === 'imperial' ? (carry * 9/5).toFixed(1) : carry.toFixed(1);
+
+    rCarry.textContent = carryDisp;
+    rRest.textContent = rest.toString();
+    desc.textContent = renderFooter({ carry: carryDisp, rest: rest.toString(), weight: wDisp.textContent, oven: oven.value, target: targetDisp.textContent, deg: deg });
+    gaugeVal.textContent = disp(pull, cToF);
+    updateGauge(pull, tv);
+
+    const pct = Math.min(1, carry / 12);
+    updateTimeline(pct, pullDisp, targetDisp2, deg);
+    save();
+  }
+
+  geo.addEventListener('change', () => { updateWeightBounds(); updateView(); });
+  w.addEventListener('input', updateView);
+  oven.addEventListener('input', updateView);
+  target.addEventListener('input', updateView);
+  unitMetric.addEventListener('click', () => switchUnit('metric'));
+  unitImperial.addEventListener('click', () => switchUnit('imperial'));
+
+  load();
+  updateWeightBounds();
+  updateTempBounds();
+  updateUnits();
+  updateView();
+</script>

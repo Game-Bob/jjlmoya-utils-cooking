@@ -16,7 +16,7 @@ const { ui } = Astro.props;
       <span class="tg-measurement-label">{ui.tgAmount}</span>
       <span class="tg-measurement-value">
         <span id="tg-r-tg">7.50</span>
-        <span class="tg-unit">{ui.grams}</span>
+        <span id="tg-unit-tg" class="tg-unit">{ui.grams}</span>
       </span>
     </div>
 
@@ -24,7 +24,7 @@ const { ui } = Astro.props;
       <span class="tg-measurement-label">{ui.waterAmount}</span>
       <span class="tg-measurement-value">
         <span id="tg-r-water">30.0</span>
-        <span class="tg-unit">{ui.milliliters}</span>
+        <span id="tg-unit-water" class="tg-unit">{ui.milliliters}</span>
       </span>
     </div>
 
@@ -32,7 +32,7 @@ const { ui } = Astro.props;
       <span class="tg-measurement-label">{ui.totalWeight}</span>
       <span class="tg-measurement-value">
         <span id="tg-r-total">1037.50</span>
-        <span class="tg-unit">{ui.grams}</span>
+        <span id="tg-unit-total" class="tg-unit">{ui.grams}</span>
       </span>
     </div>
 

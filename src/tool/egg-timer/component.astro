@@ -10,32 +10,34 @@ const { ui } = Astro.props;
 ---
 
 <div class="egg-timer-wrapper">
-  <div class="egg-timer-container">
-    <div class="egg-timer-grid">
-      <div class="egg-timer-card">
-        <h2 class="egg-timer-title">
-          <Icon name="mdi:tune" />
-          {ui.parameters}
-        </h2>
+  <div class="egg-timer-main-card">
+    <div class="egg-timer-header">
+      <Icon name="mdi:tune" />
+      <span>{ui.parameters}</span>
+    </div>
 
-        <div class="egg-timer-controls-space">
-          <div class="egg-timer-control-group">
+    <div class="egg-timer-body">
+      <div class="egg-timer-controls">
+        <div class="egg-timer-parameters-grid">
+          <div class="egg-timer-param">
             <div class="egg-timer-label-row">
               <label class="egg-timer-label">{ui.initial_temperature}</label>
             </div>
             <div class="egg-timer-buttons-group">
               <button class="egg-timer-btn active" data-temp="4">
                 <Icon name="mdi:fridge" />
-                <span>{ui.fridge}</span> (4°C)
+                <span>{ui.fridge}</span>
+                <span class="egg-timer-temp">4°C</span>
               </button>
               <button class="egg-timer-btn" data-temp="20">
                 <Icon name="mdi:thermometer" />
-                <span>{ui.ambient}</span> (20°C)
+                <span>{ui.ambient}</span>
+                <span class="egg-timer-temp">20°C</span>
               </button>
             </div>
           </div>
 
-          <div class="egg-timer-control-group">
+          <div class="egg-timer-param">
             <div class="egg-timer-label-row">
               <label class="egg-timer-label">{ui.egg_size}</label>
             </div>
@@ -47,7 +49,7 @@ const { ui } = Astro.props;
             </div>
           </div>
 
-          <div class="egg-timer-control-group">
+          <div class="egg-timer-param">
             <div class="egg-timer-label-row">
               <label class="egg-timer-label">{ui.altitude}</label>
             </div>
@@ -81,7 +83,7 @@ const { ui } = Astro.props;
       </div>
 
       <div class="egg-timer-results">
-        <div class="egg-timer-result-card soft">
+        <div class="egg-timer-result-item soft">
           <div class="egg-timer-result-header">
             <div>
               <h3 class="egg-timer-result-title">{ui.soft_cooked}</h3>
@@ -92,7 +94,7 @@ const { ui } = Astro.props;
           <div class="egg-timer-result-time" id="time-soft">00:00</div>
         </div>
 
-        <div class="egg-timer-result-card mollet">
+        <div class="egg-timer-result-item mollet">
           <div class="egg-timer-result-header">
             <div>
               <h3 class="egg-timer-result-title">{ui.mollet}</h3>
@@ -103,7 +105,7 @@ const { ui } = Astro.props;
           <div class="egg-timer-result-time" id="time-mollet">00:00</div>
         </div>
 
-        <div class="egg-timer-result-card hard">
+        <div class="egg-timer-result-item hard">
           <div class="egg-timer-result-header">
             <div>
               <h3 class="egg-timer-result-title">{ui.hard_cooked}</h3>

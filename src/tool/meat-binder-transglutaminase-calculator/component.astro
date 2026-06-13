@@ -89,6 +89,9 @@ const { ui } = Astro.props;
     tempUnit.textContent = unit === 'imperial' ? '°F' : '°C';
     weightInput.setAttribute('max', unit === 'imperial' ? '1760' : '50000');
     tempInput.setAttribute('max', unit === 'imperial' ? '176' : '80');
+    $('tg-unit-tg').textContent = unit === 'imperial' ? 'oz' : 'g';
+    $('tg-unit-water').textContent = unit === 'imperial' ? 'fl oz' : 'ml';
+    $('tg-unit-total').textContent = unit === 'imperial' ? 'oz' : 'g';
   }
 
   function getWeightGrams() {
@@ -189,12 +192,13 @@ const { ui } = Astro.props;
     statusLabel.textContent = 'incubating'; statusLabel.style.color = '';
     rAlert.style.display = 'none'; rIncubation.style.display = 'block';
     const f = unit === 'imperial' ? 0.035274 : 1;
+    const fWater = unit === 'imperial' ? 0.033814 : 1;
     rTg.textContent = (r.tgGrams * f).toFixed(2);
     rTotal.textContent = (r.totalG * f).toFixed(2);
     rRatio.textContent = r.ratioPct.toFixed(2);
     rIncMin.textContent = r.hMin; rIncMax.textContent = r.hMax;
     if (method === 'slurry') {
-      rWater.textContent = (r.waterMl * f).toFixed(1); rWaterRow.style.display = 'flex';
+      rWater.textContent = (r.waterMl * fWater).toFixed(1); rWaterRow.style.display = 'flex';
       methodDesc.textContent = ui.slurryDesc;
     } else {
       rWater.textContent = '0'; rWaterRow.style.display = 'none';
