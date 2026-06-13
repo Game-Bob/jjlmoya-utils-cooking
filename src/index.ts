@@ -23,6 +23,7 @@ export { CARRY_OVER_COOKING_TOOL } from './tool/carry-over-cooking-predictor';
 export { MAILLARD_REACTION_TOOL } from './tool/maillard-reaction-optimizer';
 export { MACARON_DRYING_TOOL } from './tool/macaron-drying-predictor';
 export { BRIX_SORBET_DENSITY_CALCULATOR_TOOL } from './tool/brix-sorbet-density-calculator';
+export { OIL_SMOKE_POINT_TRACKER_TOOL } from './tool/oil-smoke-point-tracker';
 
 
 export type {

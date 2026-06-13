@@ -1,0 +1,445 @@
+---
+import { OIL_PRESETS } from './logic';
+
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="ospt">
+  <div class="ospt-card status-good">
+    <div class="ospt-unit-row">
+      <button type="button" id="ospt-unit-metric" class="ospt-unit-btn active">Celsius</button>
+      <button type="button" id="ospt-unit-imperial" class="ospt-unit-btn">Fahrenheit</button>
+    </div>
+    <div class="ospt-body">
+      <div class="ospt-controls">
+        <div class="ospt-input-group">
+          <label class="ospt-label">{ui.oilPresetLabel}</label>
+          <div class="ospt-oil-list" id="ospt-presets">
+            {OIL_PRESETS.map((oil, idx) => (
+              <button type="button" class={`ospt-oil-item ${idx === 1 ? 'active' : ''}`} data-id={oil.id}>
+                <span class={`ospt-oil-color color-${oil.id}`}></span>
+                <span>{ui[oil.nameKey] || oil.id}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div class="ospt-card-group">
+          <div class="ospt-input-group">
+            <label class="ospt-label" for="ospt-uses">{ui.usesLabel}</label>
+            <div class="ospt-slider-wrap">
+              <button type="button" class="ospt-adjuster-btn" data-dir="down" data-target="ospt-uses">-</button>
+              <input type="range" id="ospt-uses" class="ospt-slider" min="0" max="15" step="1" value="0" />
+              <button type="button" class="ospt-adjuster-btn" data-dir="up" data-target="ospt-uses">+</button>
+              <span class="ospt-value-display"><span id="ospt-uses-val">0</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ospt-card-group">
+          <div class="ospt-input-group">
+            <label class="ospt-label" for="ospt-temp">{ui.tempLabel}</label>
+            <div class="ospt-slider-wrap">
+              <button type="button" class="ospt-adjuster-btn" data-dir="down" data-target="ospt-temp">-</button>
+              <input type="range" id="ospt-temp" class="ospt-slider" min="100" max="230" step="5" value="175" />
+              <button type="button" class="ospt-adjuster-btn" data-dir="up" data-target="ospt-temp">+</button>
+              <span class="ospt-value-display"><span id="ospt-temp-val">175</span><span class="ospt-unit ospt-temp-unit">°C</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ospt-card-group">
+          <div class="ospt-input-group">
+            <label class="ospt-label">{ui.foodTypeLabel}</label>
+            <div class="ospt-radio-group">
+              <button type="button" class="ospt-radio-btn active" data-type="starch">
+                <span class="ospt-radio-dot"></span>
+                <span class="ospt-food-icon">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M5 6v14a2 2 0 002 2h10a2 2 0 002-2V6M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+                </span>
+                <span>{ui.optionStarch}</span>
+              </button>
+              <button type="button" class="ospt-radio-btn" data-type="breaded">
+                <span class="ospt-radio-dot"></span>
+                <span class="ospt-food-icon">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM9 13.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm6 0a1.5 1.5 0 110-3 1.5 1.5 0 010 3z"/></svg>
+                </span>
+                <span>{ui.optionBreading}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ospt-result-panel">
+        <div class="ospt-visuals-container">
+          <div class="ospt-thermometer-box">
+            <div class="ospt-smoke-emitter" id="ospt-smoke-container">
+              <span class="ospt-smoke-particle"></span>
+              <span class="ospt-smoke-particle"></span>
+              <span class="ospt-smoke-particle"></span>
+              <span class="ospt-smoke-particle"></span>
+            </div>
+            <div class="ospt-thermo-wrapper">
+              <div class="ospt-thermo-scale">
+                <div class="ospt-scale-tick" style="bottom: 92.3%;"><span class="ospt-tick-val" data-c="220">220°C</span></div>
+                <div class="ospt-scale-tick" style="bottom: 69.2%;"><span class="ospt-tick-val" data-c="190">190°C</span></div>
+                <div class="ospt-scale-tick" style="bottom: 46.1%;"><span class="ospt-tick-val" data-c="160">160°C</span></div>
+                <div class="ospt-scale-tick" style="bottom: 23.0%;"><span class="ospt-tick-val" data-c="130">130°C</span></div>
+                <div class="ospt-scale-tick" style="bottom: 0%;"><span class="ospt-tick-val" data-c="100">100°C</span></div>
+              </div>
+              <div class="ospt-thermo-graphic">
+                <div class="ospt-thermo-fluid" id="ospt-thermo-fluid"></div>
+                <div class="ospt-thermo-bulb"></div>
+                <div class="ospt-thermo-smoke-point-marker" id="ospt-smoke-marker">
+                  <span class="ospt-thermo-smoke-point-label" id="ospt-smoke-label">232°C</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ospt-health-box">
+            <div class="ospt-gauge-title">{ui.polymerizationLabel}</div>
+            <div class="ospt-radial-gauge">
+              <svg viewBox="0 0 100 55" class="ospt-radial-svg">
+                <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke-width="8" stroke-linecap="round" class="ospt-radial-bg"/>
+                <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="var(--ospt-green)" stroke-width="8" stroke-dasharray="53.8 197.52" stroke-dashoffset="0" stroke-linecap="round"/>
+                <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="var(--ospt-gold)" stroke-width="8" stroke-dasharray="36.0 215.32" stroke-dashoffset="-53.8"/>
+                <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="var(--ospt-red)" stroke-width="8" stroke-dasharray="36.0 215.32" stroke-dashoffset="-89.8" stroke-linecap="round"/>
+                <g id="ospt-radial-needle-group" class="ospt-radial-needle-group" transform="translate(50, 50) rotate(-90)">
+                  <line x1="0" y1="0" x2="0" y2="-42" stroke="var(--ospt-ink)" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="0" cy="0" r="4" fill="var(--ospt-ink)"/>
+                  <circle cx="0" cy="0" r="1.5" fill="#ffffff"/>
+                </g>
+              </svg>
+              <div class="ospt-radial-value-container">
+                <span class="ospt-radial-val" id="ospt-health-val">100%</span>
+                <span class="ospt-radial-desc" id="ospt-health-desc">Safe</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ospt-grid-values">
+          <div class="ospt-stat-box">
+            <span class="ospt-stat-label">{ui.baseSmokePointLabel}</span>
+            <span class="ospt-stat-value" id="ospt-base-smoke-point">232°C</span>
+          </div>
+
+          <div class="ospt-stat-box">
+            <span class="ospt-stat-label">{ui.currentSmokePointLabel}</span>
+            <span class="ospt-stat-value" id="ospt-current-smoke-point">232°C</span>
+          </div>
+        </div>
+
+        <div class="ospt-tpc-curve-container">
+          <div class="ospt-tpc-title">{ui.polarCompoundsLabel}</div>
+          <div class="ospt-tpc-bar-wrap">
+            <div class="ospt-tpc-limit-line"></div>
+            <div class="ospt-tpc-current-marker" id="ospt-tpc-marker"></div>
+          </div>
+          <div class="ospt-tpc-labels">
+            <span style="left: 5.7%;">2%</span>
+            <span style="left: 42.8%;">15%</span>
+            <span class="limit" style="left: 71.4%;">25% (Limit)</span>
+            <span style="left: 100%;">35%</span>
+          </div>
+        </div>
+
+        <div class="ospt-status-card good" id="ospt-status-card">
+          <div class="ospt-status-header">
+            <span class="ospt-stat-label">{ui.statusLabel}</span>
+            <span class="ospt-badge good" id="ospt-status-badge">SAFE TO REUSE</span>
+          </div>
+          <div class="ospt-advice" id="ospt-advice-text">
+            {ui.adviceGood}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ ui }}>
+  const getEl = (id) => document.getElementById(id);
+
+  const presets = document.querySelectorAll('.ospt-oil-item');
+  const usesInput = getEl('ospt-uses');
+  const tempInput = getEl('ospt-temp');
+  const radioButtons = document.querySelectorAll('.ospt-radio-btn');
+
+  const usesVal = getEl('ospt-uses-val');
+  const tempVal = getEl('ospt-temp-val');
+
+  const unitMetricBtn = getEl('ospt-unit-metric');
+  const unitImperialBtn = getEl('ospt-unit-imperial');
+
+  const thermoFluid = getEl('ospt-thermo-fluid');
+  const smokeMarker = getEl('ospt-smoke-marker');
+  const smokeLabel = getEl('ospt-smoke-label');
+  const smokeContainer = getEl('ospt-smoke-container');
+
+  const thermoDanger = getEl('ospt-thermo-danger');
+  const needleGroup = getEl('ospt-radial-needle-group');
+  const tpcMarker = getEl('ospt-tpc-marker');
+  const healthVal = getEl('ospt-health-val');
+  const healthDesc = getEl('ospt-health-desc');
+
+  const statusCard = getEl('ospt-status-card');
+  const statusBadge = getEl('ospt-status-badge');
+  const baseSmokePointDisp = getEl('ospt-base-smoke-point');
+  const currentSmokePointDisp = getEl('ospt-current-smoke-point');
+  const adviceTextDisp = getEl('ospt-advice-text');
+
+  let activeOilId = 'sunflower-refined';
+  let activeFoodType = 'starch';
+  let activeUnit = 'metric';
+
+  const presetsData = {
+    'avocado-refined': { baseC: 270, refined: true },
+    'sunflower-refined': { baseC: 232, refined: true },
+    'peanut-refined': { baseC: 232, refined: true },
+    'canola-refined': { baseC: 204, refined: true },
+    'olive-extra-virgin': { baseC: 190, refined: false },
+    'olive-pomace': { baseC: 238, refined: true },
+    'coconut-unrefined': { baseC: 177, refined: false },
+    'sunflower-unrefined': { baseC: 107, refined: false }
+  };
+
+  function cToF(c) {
+    return Math.round(c * 1.8 + 32);
+  }
+
+  function formatTemp(c) {
+    const r = Math.round(c);
+    if (activeUnit === 'imperial') {
+      return cToF(r) + '°F';
+    }
+    return r + '°C';
+  }
+
+  function getTempC() {
+    const val = parseInt(tempInput.value) || 175;
+    return activeUnit === 'imperial' ? Math.round((val - 32) / 1.8) : val;
+  }
+
+  function updateDisplayValues() {
+    usesVal.textContent = usesInput.value;
+    tempVal.textContent = tempInput.value;
+
+    const unitLabels = document.querySelectorAll('.ospt-temp-unit');
+    unitLabels.forEach((el) => {
+      el.textContent = activeUnit === 'imperial' ? '°F' : '°C';
+    });
+
+    const ticks = document.querySelectorAll('.ospt-tick-val');
+    ticks.forEach((tick) => {
+      const c = parseInt(tick.getAttribute('data-c'));
+      tick.textContent = activeUnit === 'imperial' ? cToF(c) + '°F' : c + '°C';
+    });
+  }
+
+  function getStatus(polarCompounds, currentC) {
+    if (polarCompounds >= 25 || currentC <= 170) {
+      return 'discard';
+    }
+    if (polarCompounds >= 15 || currentC <= 190) {
+      return 'caution';
+    }
+    return 'good';
+  }
+
+  function updateUI(data) {
+    const { baseC, currentC, polarCompounds, healthPercent, status, uses, tempC } = data;
+    if (statusCard) {
+      statusCard.className = 'ospt-status-card ' + status;
+    }
+    statusBadge.textContent = ui['status' + status.charAt(0).toUpperCase() + status.slice(1)];
+    statusBadge.className = 'ospt-badge ' + status;
+
+    baseSmokePointDisp.textContent = formatTemp(baseC);
+    currentSmokePointDisp.textContent = formatTemp(currentC);
+    adviceTextDisp.textContent = ui['advice' + status.charAt(0).toUpperCase() + status.slice(1)];
+
+    healthVal.textContent = healthPercent + '%';
+    const descMap = { good: 'Safe', caution: 'Caution', discard: 'Discard' };
+    healthDesc.textContent = descMap[status];
+
+    if (needleGroup) {
+      const angle = 90 - (healthPercent / 100) * 180;
+      needleGroup.setAttribute('transform', `translate(50, 50) rotate(${angle})`);
+    }
+    updateGaugeAndSliders(currentC, polarCompounds, uses, tempC);
+  }
+
+  function updateGaugeAndSliders(currentC, polarCompounds, uses, tempC) {
+    const fluidPct = Math.max(0, Math.min(100, (tempC - 100) / 130 * 100));
+    thermoFluid.style.height = fluidPct + '%';
+
+    const markerPct = Math.max(0, Math.min(100, (currentC - 100) / 130 * 100));
+    smokeMarker.style.bottom = markerPct + '%';
+    smokeLabel.textContent = formatTemp(currentC);
+
+    if (thermoDanger) {
+      thermoDanger.style.bottom = markerPct + '%';
+    }
+
+    if (tpcMarker) {
+      const tpcPct = Math.max(0, Math.min(100, (polarCompounds / 35) * 100));
+      tpcMarker.style.left = tpcPct + '%';
+    }
+
+    usesInput.style.setProperty('--uses-pct', (uses / 15 * 100) + '%');
+
+    const minC = 100;
+    const maxC = 230;
+    const rangeC = maxC - minC;
+    const safeTemp = currentC - 30;
+    const safePct = Math.max(0, Math.min(100, (safeTemp - minC) / rangeC * 100));
+    const dangerPct = Math.max(0, Math.min(100, (currentC - minC) / rangeC * 100));
+
+    tempInput.style.setProperty('--temp-safe-pct', safePct + '%');
+    tempInput.style.setProperty('--temp-danger-pct', dangerPct + '%');
+
+    if (tempC >= currentC) {
+      smokeContainer.classList.add('smoking');
+    } else {
+      smokeContainer.classList.remove('smoking');
+    }
+  }
+
+  function calculate() {
+    const preset = presetsData[activeOilId] || presetsData['sunflower-refined'];
+    const baseC = preset.baseC;
+    const uses = parseInt(usesInput.value) || 0;
+    const tempC = getTempC();
+
+    const baseDegradation = preset.refined ? 4 : 9;
+    const tempFactor = 1 + Math.max(0, tempC - 180) * 0.06;
+    const foodFactor = activeFoodType === 'breaded' ? 2.2 : 1.0;
+
+    const degradationPerUse = baseDegradation * tempFactor * foodFactor;
+    const currentC = Math.max(60, baseC - uses * degradationPerUse);
+
+    const basePolarIncrease = preset.refined ? 1.5 : 3.0;
+    const polarCompounds = Math.min(100, 2 + uses * basePolarIncrease * tempFactor * foodFactor);
+    const healthPercent = Math.max(0, Math.round(100 - (polarCompounds / 35) * 100));
+
+    const status = getStatus(polarCompounds, currentC);
+
+    updateUI({ baseC, currentC, polarCompounds, healthPercent, status, uses, tempC });
+  }
+
+  const STORAGE_KEY = 'ospt-v1';
+
+  function save() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        oil: activeOilId,
+        uses: usesInput.value,
+        temp: getTempC(),
+        food: activeFoodType,
+        unit: activeUnit
+      }));
+    } catch {}
+  }
+
+  function restoreSettings(v) {
+    if (v.oil) {
+      activeOilId = v.oil;
+      presets.forEach((btn) => {
+        btn.classList.toggle('active', btn.getAttribute('data-id') === activeOilId);
+      });
+    }
+    if (v.uses) usesInput.value = v.uses;
+    if (v.food) {
+      activeFoodType = v.food;
+      radioButtons.forEach((btn) => {
+        btn.classList.toggle('active', btn.getAttribute('data-type') === activeFoodType);
+      });
+    }
+    if (v.unit) activeUnit = v.unit;
+    if (v.temp) {
+      tempInput.value = activeUnit === 'imperial' ? cToF(parseInt(v.temp)) : parseInt(v.temp);
+    }
+  }
+
+  function load() {
+    try {
+      const d = localStorage.getItem(STORAGE_KEY);
+      if (!d) return;
+      const v = JSON.parse(d);
+      restoreSettings(v);
+    } catch {}
+  }
+
+  function refresh() {
+    updateDisplayValues();
+    calculate();
+    save();
+  }
+
+  function toggleUnit(unit) {
+    const tempC = getTempC();
+    activeUnit = unit;
+    unitMetricBtn.classList.toggle('active', unit === 'metric');
+    unitImperialBtn.classList.toggle('active', unit === 'imperial');
+    if (unit === 'imperial') {
+      tempInput.min = 212;
+      tempInput.max = 446;
+      tempInput.step = 10;
+      tempInput.value = cToF(tempC);
+    } else {
+      tempInput.min = 100;
+      tempInput.max = 230;
+      tempInput.step = 5;
+      tempInput.value = tempC;
+    }
+    refresh();
+  }
+
+  unitMetricBtn.addEventListener('click', () => toggleUnit('metric'));
+  unitImperialBtn.addEventListener('click', () => toggleUnit('imperial'));
+
+  presets.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      presets.forEach((p) => p.classList.remove('active'));
+      btn.classList.add('active');
+      activeOilId = btn.getAttribute('data-id');
+      refresh();
+    });
+  });
+
+  radioButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      radioButtons.forEach((r) => r.classList.remove('active'));
+      btn.classList.add('active');
+      activeFoodType = btn.getAttribute('data-type');
+      refresh();
+    });
+  });
+
+  document.querySelectorAll('.ospt-adjuster-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const dir = btn.getAttribute('data-dir');
+      const slider = getEl(targetId);
+      if (!slider) return;
+      const step = parseFloat(slider.getAttribute('step')) || 1;
+      const current = parseFloat(slider.value) || 0;
+      const next = dir === 'up' ? current + step : current - step;
+      slider.value = Math.max(parseFloat(slider.min), Math.min(parseFloat(slider.max), next));
+      refresh();
+    });
+  });
+
+  usesInput.addEventListener('input', refresh);
+  tempInput.addEventListener('input', refresh);
+
+  load();
+  toggleUnit(activeUnit);
+</script>

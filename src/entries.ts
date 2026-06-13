@@ -20,6 +20,7 @@ export { maillardReaction } from './tool/maillard-reaction-optimizer/entry';
 export { macaronDrying } from './tool/macaron-drying-predictor/entry';
 export { brixSorbetDensity } from './tool/brix-sorbet-density-calculator/entry';
 export { botulismCanningSafety } from './tool/botulism-canning-safety/entry';
+export { oilSmokePoint } from './tool/oil-smoke-point-tracker/entry';
 export { cookingCategory } from './category';
 import { americanKitchenConverter } from './tool/american-kitchen-converter/entry';
 import { bananaCare } from './tool/banana-ripeness/entry';
@@ -43,5 +44,6 @@ import { carryOverCooking } from './tool/carry-over-cooking-predictor/entry';
 import { maillardReaction } from './tool/maillard-reaction-optimizer/entry';
 import { macaronDrying } from './tool/macaron-drying-predictor/entry';
 import { brixSorbetDensity } from './tool/brix-sorbet-density-calculator/entry';
-export const ALL_ENTRIES = [americanKitchenConverter, bananaCare, brine, cookwareGuide, eggTimer, ingredientRescaler, kitchenTimer, meringuePeak, moldScaler, pizza, rouxGuide, sourdoughCalculator, yeastConverter, lactoFermentationSalt, spherificationBath, iceCreamPacPod, botulismCanningSafety, meatBinder, carryOverCooking, maillardReaction, macaronDrying, brixSorbetDensity];
+import { oilSmokePoint } from './tool/oil-smoke-point-tracker/entry';
+export const ALL_ENTRIES = [americanKitchenConverter, bananaCare, brine, cookwareGuide, eggTimer, ingredientRescaler, kitchenTimer, meringuePeak, moldScaler, pizza, rouxGuide, sourdoughCalculator, yeastConverter, lactoFermentationSalt, spherificationBath, iceCreamPacPod, botulismCanningSafety, meatBinder, carryOverCooking, maillardReaction, macaronDrying, brixSorbetDensity, oilSmokePoint];
 
