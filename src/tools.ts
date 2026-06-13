@@ -21,6 +21,7 @@ import { MEAT_BINDER_TRANSGLUTAMINASE_TOOL } from './tool/meat-binder-transgluta
 import { CARRY_OVER_COOKING_TOOL } from './tool/carry-over-cooking-predictor';
 import { MAILLARD_REACTION_TOOL } from './tool/maillard-reaction-optimizer';
 import { MACARON_DRYING_TOOL } from './tool/macaron-drying-predictor';
+import { BRIX_SORBET_DENSITY_CALCULATOR_TOOL } from './tool/brix-sorbet-density-calculator';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   AMERICAN_KITCHEN_CONVERTER_TOOL,
@@ -44,5 +45,6 @@ export const ALL_TOOLS: ToolDefinition[] = [
   CARRY_OVER_COOKING_TOOL,
   MAILLARD_REACTION_TOOL,
   MACARON_DRYING_TOOL,
+  BRIX_SORBET_DENSITY_CALCULATOR_TOOL,
 ];
 

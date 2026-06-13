@@ -19,6 +19,7 @@ import { meatBinder } from '../tool/meat-binder-transglutaminase-calculator/entr
 import { carryOverCooking } from '../tool/carry-over-cooking-predictor/entry';
 import { maillardReaction } from '../tool/maillard-reaction-optimizer/entry';
 import { macaronDrying } from '../tool/macaron-drying-predictor/entry';
+import { brixSorbetDensity } from '../tool/brix-sorbet-density-calculator/entry';
 
 export const cookingCategory: CookingCategoryEntry = {
   icon: 'mdi:chef-hat',
@@ -43,6 +44,7 @@ export const cookingCategory: CookingCategoryEntry = {
     carryOverCooking,
     maillardReaction,
     macaronDrying,
+    brixSorbetDensity,
   ],
 
   i18n: {

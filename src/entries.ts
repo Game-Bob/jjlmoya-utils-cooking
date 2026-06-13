@@ -18,6 +18,7 @@ export { meatBinder } from './tool/meat-binder-transglutaminase-calculator/entry
 export { carryOverCooking } from './tool/carry-over-cooking-predictor/entry';
 export { maillardReaction } from './tool/maillard-reaction-optimizer/entry';
 export { macaronDrying } from './tool/macaron-drying-predictor/entry';
+export { brixSorbetDensity } from './tool/brix-sorbet-density-calculator/entry';
 export { botulismCanningSafety } from './tool/botulism-canning-safety/entry';
 export { cookingCategory } from './category';
 import { americanKitchenConverter } from './tool/american-kitchen-converter/entry';
@@ -41,5 +42,6 @@ import { meatBinder } from './tool/meat-binder-transglutaminase-calculator/entry
 import { carryOverCooking } from './tool/carry-over-cooking-predictor/entry';
 import { maillardReaction } from './tool/maillard-reaction-optimizer/entry';
 import { macaronDrying } from './tool/macaron-drying-predictor/entry';
-export const ALL_ENTRIES = [americanKitchenConverter, bananaCare, brine, cookwareGuide, eggTimer, ingredientRescaler, kitchenTimer, meringuePeak, moldScaler, pizza, rouxGuide, sourdoughCalculator, yeastConverter, lactoFermentationSalt, spherificationBath, iceCreamPacPod, botulismCanningSafety, meatBinder, carryOverCooking, maillardReaction, macaronDrying];
+import { brixSorbetDensity } from './tool/brix-sorbet-density-calculator/entry';
+export const ALL_ENTRIES = [americanKitchenConverter, bananaCare, brine, cookwareGuide, eggTimer, ingredientRescaler, kitchenTimer, meringuePeak, moldScaler, pizza, rouxGuide, sourdoughCalculator, yeastConverter, lactoFermentationSalt, spherificationBath, iceCreamPacPod, botulismCanningSafety, meatBinder, carryOverCooking, maillardReaction, macaronDrying, brixSorbetDensity];
 

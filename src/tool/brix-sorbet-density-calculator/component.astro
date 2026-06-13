@@ -1,0 +1,532 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="bsdc">
+  <div class="bsdc-card">
+    <div class="bsdc-unit-row">
+      <button type="button" id="bsdc-unit-metric" class="bsdc-unit-btn active">Metric</button>
+      <button type="button" id="bsdc-unit-imperial" class="bsdc-unit-btn">Imperial</button>
+    </div>
+    <div class="bsdc-body">
+      <div class="bsdc-controls">
+        <div class="bsdc-input-group">
+          <label class="bsdc-label">{ui.fruitPresetLabel}</label>
+          <div class="bsdc-custom-select" id="bsdc-fruit-selector">
+            <button type="button" class="bsdc-select-trigger" id="bsdc-select-trigger">
+              <span class="bsdc-select-trigger-content">
+                <span class="bsdc-preset-icon" id="bsdc-selected-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 2C8 2 5 5 5 10C5 16 9 22 12 22C15 22 19 16 19 10C19 5 16 2 12 2Z" fill="currentColor"/></svg>
+                </span>
+                <span id="bsdc-selected-name">{ui.presetMango}</span>
+              </span>
+              <span class="bsdc-select-arrow">▼</span>
+            </button>
+            <div class="bsdc-select-dropdown" id="bsdc-select-dropdown">
+              <button type="button" class="bsdc-select-option" data-value="custom">
+                <span class="bsdc-preset-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" fill="currentColor"/></svg>
+                </span>
+                <span>{ui.presetCustom}</span>
+              </button>
+              <button type="button" class="bsdc-select-option" data-value="2">
+                <span class="bsdc-preset-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20"><ellipse cx="12" cy="12" rx="9" ry="6" fill="currentColor"/></svg>
+                </span>
+                <span>{ui.presetLemon}</span>
+              </button>
+              <button type="button" class="bsdc-select-option" data-value="8">
+                <span class="bsdc-preset-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 22C12 22 4 14 4 9C4 5 7 3 12 3C17 3 20 5 20 9C20 14 12 22 12 22Z" fill="currentColor"/></svg>
+                </span>
+                <span>{ui.presetStrawberry}</span>
+              </button>
+              <button type="button" class="bsdc-select-option" data-value="10">
+                <span class="bsdc-preset-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="8" fill="currentColor"/></svg>
+                </span>
+                <span>{ui.presetOrange}</span>
+              </button>
+              <button type="button" class="bsdc-select-option selected" data-value="14">
+                <span class="bsdc-preset-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 2C8 2 5 5 5 10C5 16 9 22 12 22C15 22 19 16 19 10C19 5 16 2 12 2Z" fill="currentColor"/></svg>
+                </span>
+                <span>{ui.presetMango}</span>
+              </button>
+              <button type="button" class="bsdc-select-option" data-value="21">
+                <span class="bsdc-preset-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20"><path d="M19 4C14 4 7 8 4 13C2.5 15.5 2 18 2 20C4.5 20 7 19.5 9.5 18C14.5 15 19 8 19 4Z" fill="currentColor"/></svg>
+                </span>
+                <span>{ui.presetBanana}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bsdc-card-group">
+          <div class="bsdc-input-group">
+            <label class="bsdc-label" for="bsdc-fruit-weight">{ui.fruitWeightLabel}</label>
+            <div class="bsdc-slider-wrap">
+              <button type="button" class="bsdc-adjuster-btn" data-dir="down" data-target="bsdc-fruit-weight">-</button>
+              <input type="range" id="bsdc-fruit-weight" class="bsdc-slider" min="100" max="2000" step="50" value="500" />
+              <button type="button" class="bsdc-adjuster-btn" data-dir="up" data-target="bsdc-fruit-weight">+</button>
+              <span class="bsdc-value-display"><span id="bsdc-fruit-weight-val">500</span><span class="bsdc-unit bsdc-weight-unit">{ui.gramsUnit}</span></span>
+            </div>
+            <div class="bsdc-desc">Provides the main flavor, color, natural sugars, and pulp texture.</div>
+          </div>
+        </div>
+
+        <div class="bsdc-card-group">
+          <div class="bsdc-input-group">
+            <label class="bsdc-label" for="bsdc-fruit-brix">{ui.fruitBrixLabel}</label>
+            <div class="bsdc-slider-wrap">
+              <button type="button" class="bsdc-adjuster-btn" data-dir="down" data-target="bsdc-fruit-brix">-</button>
+              <input type="range" id="bsdc-fruit-brix" class="bsdc-slider" min="0" max="30" step="1" value="14" />
+              <button type="button" class="bsdc-adjuster-btn" data-dir="up" data-target="bsdc-fruit-brix">+</button>
+              <span class="bsdc-value-display"><span id="bsdc-fruit-brix-val">14</span><span class="bsdc-unit">{ui.brixUnit}</span></span>
+            </div>
+            <div class="bsdc-desc">Natural sugar percentage in the fruit. Measured using a refractometer.</div>
+          </div>
+        </div>
+
+        <div class="bsdc-card-group">
+          <div class="bsdc-input-group">
+            <label class="bsdc-label" for="bsdc-sugar-weight">{ui.sugarWeightLabel}</label>
+            <div class="bsdc-slider-wrap">
+              <button type="button" class="bsdc-adjuster-btn" data-dir="down" data-target="bsdc-sugar-weight">-</button>
+              <input type="range" id="bsdc-sugar-weight" class="bsdc-slider" min="0" max="1000" step="10" value="150" />
+              <button type="button" class="bsdc-adjuster-btn" data-dir="up" data-target="bsdc-sugar-weight">+</button>
+              <span class="bsdc-value-display"><span id="bsdc-sugar-weight-val">150</span><span class="bsdc-unit bsdc-weight-unit">{ui.gramsUnit}</span></span>
+            </div>
+            <div class="bsdc-desc">Adds sweetness, baseline solids, and lowers the freezing point (PAC = 100).</div>
+          </div>
+        </div>
+
+        <div class="bsdc-card-group">
+          <div class="bsdc-input-group">
+            <label class="bsdc-label" for="bsdc-dextrose-weight">{ui.dextroseWeightLabel}</label>
+            <div class="bsdc-slider-wrap">
+              <button type="button" class="bsdc-adjuster-btn" data-dir="down" data-target="bsdc-dextrose-weight">-</button>
+              <input type="range" id="bsdc-dextrose-weight" class="bsdc-slider" min="0" max="1000" step="10" value="0" />
+              <button type="button" class="bsdc-adjuster-btn" data-dir="up" data-target="bsdc-dextrose-weight">+</button>
+              <span class="bsdc-value-display"><span id="bsdc-dextrose-weight-val">0</span><span class="bsdc-unit bsdc-weight-unit">{ui.gramsUnit}</span></span>
+            </div>
+            <div class="bsdc-desc">Boosts softness and anti-freezing capacity (PAC = 190) with 30% less sweetness than sucrose.</div>
+          </div>
+        </div>
+
+        <div class="bsdc-card-group">
+          <div class="bsdc-input-group">
+            <label class="bsdc-label" for="bsdc-water-weight">{ui.waterWeightLabel}</label>
+            <div class="bsdc-slider-wrap">
+              <button type="button" class="bsdc-adjuster-btn" data-dir="down" data-target="bsdc-water-weight">-</button>
+              <input type="range" id="bsdc-water-weight" class="bsdc-slider" min="0" max="2000" step="50" value="350" />
+              <button type="button" class="bsdc-adjuster-btn" data-dir="up" data-target="bsdc-water-weight">+</button>
+              <span class="bsdc-value-display"><span id="bsdc-water-weight-val">350</span><span class="bsdc-unit bsdc-weight-unit">{ui.gramsUnit}</span></span>
+            </div>
+            <div class="bsdc-desc">Balances density and sweetness to hit the targeted Brix concentration.</div>
+          </div>
+        </div>
+
+        <div class="bsdc-card-group">
+          <div class="bsdc-input-group">
+            <label class="bsdc-label" for="bsdc-target-brix">{ui.targetBrixLabel}</label>
+            <div class="bsdc-slider-wrap">
+              <button type="button" class="bsdc-adjuster-btn" data-dir="down" data-target="bsdc-target-brix">-</button>
+              <input type="range" id="bsdc-target-brix" class="bsdc-slider" min="20" max="40" step="1" value="28" />
+              <button type="button" class="bsdc-adjuster-btn" data-dir="up" data-target="bsdc-target-brix">+</button>
+              <span class="bsdc-value-display"><span id="bsdc-target-brix-val">28</span><span class="bsdc-unit">{ui.brixUnit}</span></span>
+            </div>
+            <div class="bsdc-desc">Target total sugar percentage. Professional pastry standard is 28% Brix.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bsdc-result-panel">
+        <div class="bsdc-refractometer-view">
+          <div class="bsdc-refractometer-lens" id="bsdc-lens"></div>
+          <div class="bsdc-refractometer-scale">
+            <div class="bsdc-scale-mark" style="top: 0%"><span class="bsdc-scale-line"></span><span class="bsdc-scale-label">50</span></div>
+            <div class="bsdc-scale-mark" style="top: 20%"><span class="bsdc-scale-line"></span><span class="bsdc-scale-label">40</span></div>
+            <div class="bsdc-scale-mark" style="top: 40%"><span class="bsdc-scale-line"></span><span class="bsdc-scale-label">30</span></div>
+            <div class="bsdc-scale-mark" style="top: 60%"><span class="bsdc-scale-line"></span><span class="bsdc-scale-label">20</span></div>
+            <div class="bsdc-scale-mark" style="top: 80%"><span class="bsdc-scale-line"></span><span class="bsdc-scale-label">10</span></div>
+            <div class="bsdc-scale-mark" style="top: 100%"><span class="bsdc-scale-line"></span><span class="bsdc-scale-label">0</span></div>
+          </div>
+          <div class="bsdc-refractometer-crosshair"></div>
+        </div>
+
+        <div class="bsdc-stats-grid">
+          <div class="bsdc-stat-box bsdc-stat-box-large">
+            <span class="bsdc-stat-label">{ui.totalBrixLabel}</span>
+            <span class="bsdc-stat-value" id="bsdc-total-brix">0%</span>
+            <span class="bsdc-badge" id="bsdc-status-badge">OPTIMAL</span>
+          </div>
+
+          <div class="bsdc-stat-box">
+            <span class="bsdc-stat-label">{ui.totalWeightLabel}</span>
+            <span class="bsdc-stat-value" id="bsdc-total-weight">0 g</span>
+          </div>
+
+          <div class="bsdc-stat-box">
+            <span class="bsdc-stat-label">{ui.totalPACLabel}</span>
+            <span class="bsdc-stat-value" id="bsdc-total-pac">0</span>
+          </div>
+        </div>
+
+        <div class="bsdc-temp-gauge">
+          <div class="bsdc-gauge-title">Optimal Scoopable Range: <span id="bsdc-temp-range-val"></span></div>
+          <div class="bsdc-gauge-bar-wrap">
+            <div class="bsdc-gauge-marker" id="bsdc-temp-marker"></div>
+          </div>
+          <div class="bsdc-gauge-labels" id="bsdc-temp-labels">
+            <span>-25°C</span>
+            <span>-20°C</span>
+            <span>-15°C</span>
+            <span>-10°C</span>
+            <span>-5°C</span>
+          </div>
+          <div class="bsdc-gauge-status" id="bsdc-temp-status"></div>
+        </div>
+
+        <div class="bsdc-recommendation">
+          <div class="bsdc-rec-title">{ui.recommendedTitle}</div>
+          <div class="bsdc-rec-values">
+            <div class="bsdc-rec-item">
+              <span class="bsdc-rec-label">{ui.recommendedSugarLabel}</span>
+              <span class="bsdc-rec-val" id="bsdc-rec-sugar">0 g</span>
+            </div>
+            <div class="bsdc-rec-item">
+              <span class="bsdc-rec-label">{ui.recommendedWaterLabel}</span>
+              <span class="bsdc-rec-val" id="bsdc-rec-water">0 g</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ ui }}>
+  const getEl = (id) => document.getElementById(id);
+
+  const selectTrigger = getEl('bsdc-select-trigger');
+  const selectDropdown = getEl('bsdc-select-dropdown');
+  const selectOptions = document.querySelectorAll('.bsdc-select-option');
+  const selectedIcon = getEl('bsdc-selected-icon');
+  const selectedName = getEl('bsdc-selected-name');
+
+  const fruitWeight = getEl('bsdc-fruit-weight');
+  const fruitBrix = getEl('bsdc-fruit-brix');
+  const sugarWeight = getEl('bsdc-sugar-weight');
+  const dextroseWeight = getEl('bsdc-dextrose-weight');
+  const waterWeight = getEl('bsdc-water-weight');
+  const targetBrix = getEl('bsdc-target-brix');
+
+  const fruitWeightVal = getEl('bsdc-fruit-weight-val');
+  const fruitBrixVal = getEl('bsdc-fruit-brix-val');
+  const sugarWeightVal = getEl('bsdc-sugar-weight-val');
+  const dextroseWeightVal = getEl('bsdc-dextrose-weight-val');
+  const waterWeightVal = getEl('bsdc-water-weight-val');
+  const targetBrixVal = getEl('bsdc-target-brix-val');
+
+  const totalBrixDisp = getEl('bsdc-total-brix');
+  const totalWeightDisp = getEl('bsdc-total-weight');
+  const totalPacDisp = getEl('bsdc-total-pac');
+  const statusBadge = getEl('bsdc-status-badge');
+  const lens = getEl('bsdc-lens');
+
+  const recSugarDisp = getEl('bsdc-rec-sugar');
+  const recWaterDisp = getEl('bsdc-rec-water');
+
+  const unitMetricBtn = getEl('bsdc-unit-metric');
+  const unitImperialBtn = getEl('bsdc-unit-imperial');
+
+  let activeUnit = 'metric';
+  let activePreset = '14';
+
+  function getUnitLabel() {
+    return activeUnit === 'metric' ? ui.gramsUnit : ui.ouncesUnit;
+  }
+
+  function formatWeight(g) {
+    if (activeUnit === 'imperial') {
+      return (g * 0.035274).toFixed(2) + ' ' + ui.ouncesUnit;
+    }
+    return Math.round(g) + ' ' + ui.gramsUnit;
+  }
+
+  function formatWeightValueOnly(g) {
+    if (activeUnit === 'imperial') {
+      return (g * 0.035274).toFixed(2);
+    }
+    return g;
+  }
+
+  function cToF(c) {
+    return c * 9 / 5 + 32;
+  }
+
+  function updateDisplayValues() {
+    fruitWeightVal.textContent = formatWeightValueOnly(parseFloat(fruitWeight.value) || 0);
+    fruitBrixVal.textContent = fruitBrix.value;
+    sugarWeightVal.textContent = formatWeightValueOnly(parseFloat(sugarWeight.value) || 0);
+    dextroseWeightVal.textContent = formatWeightValueOnly(parseFloat(dextroseWeight.value) || 0);
+    waterWeightVal.textContent = formatWeightValueOnly(parseFloat(waterWeight.value) || 0);
+    targetBrixVal.textContent = targetBrix.value;
+
+    const unitLabels = document.querySelectorAll('.bsdc-weight-unit');
+    const labelText = getUnitLabel();
+    unitLabels.forEach((el) => {
+      el.textContent = labelText;
+    });
+
+    const labelsEl = getEl('bsdc-temp-labels');
+    if (labelsEl) {
+      if (activeUnit === 'imperial') {
+        labelsEl.innerHTML = '<span>-13°F</span><span>-4°F</span><span>5°F</span><span>14°F</span><span>23°F</span>';
+      } else {
+        labelsEl.innerHTML = '<span>-25°C</span><span>-20°C</span><span>-15°C</span><span>-10°C</span><span>-5°C</span>';
+      }
+    }
+  }
+
+  function updatePresetDropdownUI() {
+    selectOptions.forEach((opt) => {
+      const isSelected = opt.getAttribute('data-value') === activePreset;
+      opt.classList.toggle('selected', isSelected);
+      if (isSelected) {
+        selectedIcon.innerHTML = opt.querySelector('.bsdc-preset-icon').innerHTML;
+        selectedName.textContent = opt.querySelector('span:not(.bsdc-preset-icon)').textContent;
+      }
+    });
+  }
+
+  function updateBadge(brix) {
+    const card = document.querySelector('.bsdc-card');
+    if (card) {
+      card.classList.remove('status-hard', 'status-soft', 'status-optimal');
+    }
+    if (brix < 25) {
+      statusBadge.textContent = ui.statusHard;
+      statusBadge.className = 'bsdc-badge hard';
+      if (card) card.classList.add('status-hard');
+    } else if (brix > 30) {
+      statusBadge.textContent = ui.statusSoft;
+      statusBadge.className = 'bsdc-badge soft';
+      if (card) card.classList.add('status-soft');
+    } else {
+      statusBadge.textContent = ui.statusOptimal;
+      statusBadge.className = 'bsdc-badge optimal';
+      if (card) card.classList.add('status-optimal');
+    }
+  }
+
+  function updateTempGauge(totalPAC) {
+    const marker = getEl('bsdc-temp-marker');
+    const rangeVal = getEl('bsdc-temp-range-val');
+    const tempStatus = getEl('bsdc-temp-status');
+    const tIdeal = - (totalPAC / 18);
+    const tMin = tIdeal - 2.5;
+    const tMax = tIdeal + 2.5;
+
+    marker.classList.remove('out-of-range-cold', 'out-of-range-warm');
+
+    if (tIdeal < -25) {
+      marker.style.left = '0%';
+      marker.style.width = '12%';
+      marker.classList.add('out-of-range-cold');
+    } else if (tIdeal > -5) {
+      marker.style.left = '88%';
+      marker.style.width = '12%';
+      marker.classList.add('out-of-range-warm');
+    } else {
+      let pctMin = ((tMin + 25) / 20) * 100;
+      let pctMax = ((tMax + 25) / 20) * 100;
+      pctMin = Math.max(0, Math.min(100, pctMin));
+      pctMax = Math.max(0, Math.min(100, pctMax));
+      marker.style.left = pctMin.toFixed(1) + '%';
+      marker.style.width = Math.max(8, pctMax - pctMin).toFixed(1) + '%';
+    }
+
+    if (activeUnit === 'imperial') {
+      const fIdeal = cToF(tIdeal);
+      const fMin = fIdeal - 4.5;
+      const fMax = fIdeal + 4.5;
+      rangeVal.textContent = fMin.toFixed(0) + '°F to ' + fMax.toFixed(0) + '°F';
+    } else {
+      rangeVal.textContent = tMin.toFixed(0) + '°C to ' + tMax.toFixed(0) + '°C';
+    }
+
+    if (tempStatus) {
+      if (tIdeal > -10) {
+        tempStatus.textContent = "Soft/Melting - Serve very cold";
+        tempStatus.className = "bsdc-gauge-status status-soft-melt";
+      } else if (tIdeal <= -10 && tIdeal > -16) {
+        tempStatus.textContent = "Ideal Serving Cabinet - Temper if stored in home freezer";
+        tempStatus.className = "bsdc-gauge-status status-ideal-cabinet";
+      } else if (tIdeal <= -16 && tIdeal >= -22) {
+        tempStatus.textContent = "Home Freezer Ready - Scoopable straight from the freezer";
+        tempStatus.className = "bsdc-gauge-status status-home-freezer";
+      } else {
+        tempStatus.textContent = "Over-concentrated - Extremely soft/Liquid at normal freezer temps";
+        tempStatus.className = "bsdc-gauge-status status-liquid";
+      }
+    }
+  }
+
+  function getRecs(fw, fb, tb) {
+    const tFraction = tb / 100;
+    const fFraction = fb / 100;
+    const recSugar = Math.max(0, fw * (2 * tFraction - fFraction));
+    const recWater = Math.max(0, fw - recSugar);
+    return { recSugar, recWater };
+  }
+
+  function calculate() {
+    const fw = parseFloat(fruitWeight.value) || 0;
+    const fb = parseFloat(fruitBrix.value) || 0;
+    const sw = parseFloat(sugarWeight.value) || 0;
+    const dw = parseFloat(dextroseWeight.value) || 0;
+    const ww = parseFloat(waterWeight.value) || 0;
+    const tb = parseFloat(targetBrix.value) || 28;
+
+    const fruitSugar = fw * (fb / 100);
+    const totalSugar = fruitSugar + sw + dw;
+    const totalWeight = fw + ww + sw + dw;
+
+    const brix = totalWeight > 0 ? (totalSugar / totalWeight) * 100 : 0;
+
+    const fruitPAC = fruitSugar * 1.9;
+    const sugarPAC = sw * 1.0;
+    const dextrosePAC = dw * 1.9;
+    const totalPAC = fruitPAC + sugarPAC + dextrosePAC;
+
+    totalBrixDisp.textContent = brix.toFixed(1) + '%';
+    totalWeightDisp.textContent = formatWeight(totalWeight);
+    totalPacDisp.textContent = totalPAC.toFixed(1);
+
+    const brixPct = Math.max(0, Math.min(100, (brix / 50) * 100));
+    lens.style.transform = `translateY(-${brixPct * 0.5}%)`;
+
+    updateBadge(brix);
+    updateTempGauge(totalPAC);
+
+    const rec = getRecs(fw, fb, tb);
+    recSugarDisp.textContent = formatWeight(rec.recSugar);
+    recWaterDisp.textContent = formatWeight(rec.recWater);
+  }
+
+  const STORAGE_KEY = 'bsdc-v1';
+
+  function save() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        fw: fruitWeight.value,
+        fb: fruitBrix.value,
+        sw: sugarWeight.value,
+        dw: dextroseWeight.value,
+        ww: waterWeight.value,
+        tb: targetBrix.value,
+        pr: activePreset,
+        un: activeUnit
+      }));
+    } catch {}
+  }
+
+  function load() {
+    try {
+      const d = localStorage.getItem(STORAGE_KEY);
+      if (!d) return;
+      const v = JSON.parse(d);
+      if (v.un) activeUnit = v.un;
+      if (v.fw) fruitWeight.value = v.fw;
+      if (v.fb) fruitBrix.value = v.fb;
+      if (v.sw) sugarWeight.value = v.sw;
+      if (v.dw) dextroseWeight.value = v.dw;
+      if (v.ww) waterWeight.value = v.ww;
+      if (v.tb) targetBrix.value = v.tb;
+      if (v.pr) activePreset = v.pr;
+    } catch {}
+  }
+
+  function refresh() {
+    updateDisplayValues();
+    calculate();
+    save();
+  }
+
+  function toggleUnit(unit) {
+    activeUnit = unit;
+    unitMetricBtn.classList.toggle('active', unit === 'metric');
+    unitImperialBtn.classList.toggle('active', unit === 'imperial');
+    refresh();
+  }
+
+  unitMetricBtn.addEventListener('click', () => toggleUnit('metric'));
+  unitImperialBtn.addEventListener('click', () => toggleUnit('imperial'));
+
+  selectTrigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    selectTrigger.classList.toggle('open');
+    selectDropdown.classList.toggle('open');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!selectTrigger.contains(e.target) && !selectDropdown.contains(e.target)) {
+      selectTrigger.classList.remove('open');
+      selectDropdown.classList.remove('open');
+    }
+  });
+
+  selectOptions.forEach((opt) => {
+    opt.addEventListener('click', () => {
+      const val = opt.getAttribute('data-value');
+      activePreset = val;
+      if (val !== 'custom') {
+        fruitBrix.value = val;
+      }
+      selectTrigger.classList.remove('open');
+      selectDropdown.classList.remove('open');
+      updatePresetDropdownUI();
+      refresh();
+    });
+  });
+
+  document.querySelectorAll('.bsdc-adjuster-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const dir = btn.getAttribute('data-dir');
+      const slider = getEl(targetId);
+      if (!slider) return;
+      const step = parseFloat(slider.getAttribute('step')) || 1;
+      const current = parseFloat(slider.value) || 0;
+      const next = dir === 'up' ? current + step : current - step;
+      slider.value = Math.max(parseFloat(slider.min), Math.min(parseFloat(slider.max), next));
+      if (targetId === 'bsdc-fruit-brix') {
+        activePreset = 'custom';
+        updatePresetDropdownUI();
+      }
+      refresh();
+    });
+  });
+
+  fruitWeight.addEventListener('input', refresh);
+  fruitBrix.addEventListener('input', () => {
+    activePreset = 'custom';
+    updatePresetDropdownUI();
+    refresh();
+  });
+  sugarWeight.addEventListener('input', refresh);
+  dextroseWeight.addEventListener('input', refresh);
+  waterWeight.addEventListener('input', refresh);
+  targetBrix.addEventListener('input', refresh);
+
+  load();
+  updatePresetDropdownUI();
+  toggleUnit(activeUnit);
+</script>
