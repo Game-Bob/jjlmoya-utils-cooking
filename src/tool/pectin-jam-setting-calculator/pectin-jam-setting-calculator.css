@@ -2,9 +2,11 @@
   --color-ruby: #e11d48;
   --color-ruby-dark: #be123c;
   --color-ruby-light: #fda4af;
+  --color-garnet: #9f1239;
   --color-amber: #d97706;
   --color-amber-dark: #b45309;
   --color-amber-light: #fcd34d;
+  --color-topaz: #ea580c;
   --color-amethyst: #7c3aed;
   --color-amethyst-dark: #6d28d9;
   --color-amethyst-light: #c4b5fd;
@@ -12,6 +14,9 @@
   --color-emerald: #059669;
   --color-emerald-dark: #047857;
   --color-emerald-bright: #34d399;
+  --color-peridot: #65a30d;
+  --color-ivory: #fef3c7;
+  --color-cream: #fef9ef;
   --color-white: #fff;
   --color-slate-900: #1e1b2e;
   --color-slate-800: #2d2a3e;
@@ -22,21 +27,32 @@
   --color-slate-200: #d4d1e0;
   --color-slate-100: #eae7f2;
   --color-slate-50: #f7f5fb;
+  --jam-radius-sm: 16px;
+  --jam-radius-md: 24px;
+  --jam-radius-lg: 32px;
+  --jam-radius-xl: 40px;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   box-sizing: border-box;
 }
 
 .jam-card {
   position: relative;
   width: 100%;
+  max-width: 720px;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: 0;
-  padding: 1.25rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+  border-radius: var(--jam-radius-xl);
+  padding: 2.25rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.02);
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -98,34 +114,34 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2.25rem;
+  width: 100%;
 }
 
 .jam-section-label {
-  font-size: 0.95rem;
+  font-size: 1.35rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   color: var(--color-slate-500);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.1rem;
 }
 
 .theme-dark .jam-section-label {
   color: var(--color-slate-300);
 }
 
-/* ── Fruit Selector ── */
-
 .jam-fruit-scroll {
   display: flex;
-  gap: 0.6rem;
+  gap: 1.25rem;
   overflow-x: auto;
-  overflow-y: hidden;
-  padding: 0.25rem 0 0.5rem;
+  padding: 0.6rem 0 1.25rem;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .jam-fruit-scroll::-webkit-scrollbar {
@@ -137,15 +153,15 @@
 
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.95rem;
   background: var(--color-white);
   border: 2px solid rgba(0, 0, 0, 0.08);
   border-radius: 999px;
-  padding: 0.6rem 1rem;
+  padding: 1.15rem 1.85rem;
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   flex-shrink: 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .theme-dark .jam-fruit-pill {
@@ -156,8 +172,8 @@
 .jam-fruit-pill.active {
   border-color: var(--fruit-color);
   background: var(--fruit-color);
-  box-shadow: 0 4px 16px rgba(var(--fruit-color-rgb, 225, 29, 72), 0.3);
-  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(var(--fruit-color-rgb, 225, 29, 72), 0.35);
+  transform: translateY(-2px);
 }
 
 .jam-fruit-pill.active .jam-fruit-name {
@@ -169,15 +185,15 @@
 }
 
 .jam-fruit-dot {
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   flex-shrink: 0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .jam-fruit-name {
-  font-size: 0.95rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: var(--color-slate-700);
   white-space: nowrap;
@@ -187,25 +203,27 @@
   color: var(--color-slate-200);
 }
 
-/* ── Filter Pills ── */
-
 .jam-filter-pills {
   display: flex;
-  gap: 0.4rem;
-  margin-top: 0.5rem;
+  gap: 1rem;
+  margin-top: 1.25rem;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
 }
 
 .jam-filter-pill {
   background: transparent;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 999px;
-  padding: 0.35rem 0.8rem;
-  font-size: 0.8rem;
+  padding: 0.75rem 1.45rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  color: var(--color-slate-400);
+  color: var(--color-slate-500);
   cursor: pointer;
   transition: all 0.2s;
+  white-space: normal;
+  text-align: center;
 }
 
 .theme-dark .jam-filter-pill {
@@ -215,28 +233,26 @@
 
 .jam-filter-pill.active {
   background: var(--color-slate-100);
-  color: var(--color-slate-700);
-  border-color: var(--color-slate-200);
+  color: var(--color-slate-900);
+  border-color: var(--color-slate-300);
 }
 
 .theme-dark .jam-filter-pill.active {
   background: rgba(255, 255, 255, 0.08);
-  color: var(--color-slate-200);
-  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--color-slate-100);
+  border-color: rgba(255, 255, 255, 0.15);
 }
-
-/* ── Inputs ── */
 
 .jam-inputs-section {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.85rem;
 }
 
 .jam-input-row {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.85rem;
   position: relative;
 }
 
@@ -245,11 +261,11 @@
 }
 
 .jam-input-label {
-  font-size: 0.85rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--color-slate-700);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
 .theme-dark .jam-input-label {
@@ -261,8 +277,8 @@
   align-items: center;
   background: rgba(247, 245, 251, 0.6);
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 14px;
-  padding: 0.15rem;
+  border-radius: var(--jam-radius-md);
+  padding: 0.8rem;
   transition: border-color 0.2s;
 }
 
@@ -273,7 +289,7 @@
 
 .jam-weight-input-wrap:focus-within {
   border-color: var(--color-amethyst);
-  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
 }
 
 .jam-weight-input {
@@ -281,12 +297,11 @@
   background: transparent;
   border: none;
   outline: none;
-  font-size: 1.7rem;
+  font-size: 2.8rem;
   font-weight: 800;
   color: var(--color-slate-900);
-  padding: 0.5rem 0.75rem;
+  padding: 1rem 1.3rem;
   min-width: 0;
-  width: 100%;
   -moz-appearance: textfield;
 }
 
@@ -301,10 +316,10 @@
 }
 
 .jam-weight-unit {
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  color: var(--color-slate-400);
-  padding-right: 0.75rem;
+  color: var(--color-slate-500);
+  padding-right: 1.45rem;
   flex-shrink: 0;
 }
 
@@ -313,23 +328,21 @@
 }
 
 .jam-sugar-auto-hint {
-  font-size: 0.75rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--color-slate-400);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-top: -0.2rem;
+  letter-spacing: 0.05em;
+  margin-top: -0.25rem;
 }
-
-/* ── Toggles ── */
 
 .jam-toggle-wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: rgba(234, 231, 242, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 12px;
-  padding: 0.25rem;
+  border-radius: var(--jam-radius-sm);
+  padding: 0.6rem;
 }
 
 .theme-dark .jam-toggle-wrap {
@@ -340,13 +353,15 @@
 .jam-toggle-btn {
   background: transparent;
   border: none;
-  padding: 0.7rem;
-  border-radius: 10px;
-  font-size: 0.9rem;
+  padding: 1.3rem;
+  border-radius: calc(var(--jam-radius-sm) - 2px);
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--color-slate-500);
   cursor: pointer;
   transition: all 0.2s;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .theme-dark .jam-toggle-btn {
@@ -356,7 +371,7 @@
 .jam-toggle-btn.active {
   background: var(--color-white);
   color: var(--color-slate-900);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 .theme-dark .jam-toggle-btn.active {
@@ -365,8 +380,6 @@
   box-shadow: none;
 }
 
-/* ── Drop Test ── */
-
 .jam-visual-section {
   display: flex;
   flex-direction: column;
@@ -374,10 +387,10 @@
 }
 
 .jam-drop-hint {
-  font-size: 0.9rem;
+  font-size: 1.25rem;
   color: var(--color-slate-500);
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
   margin-top: -0.5rem;
 }
 
@@ -388,11 +401,11 @@
 .jam-plate-stage {
   position: relative;
   width: 100%;
-  max-width: 100%;
+  max-width: 380px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1.25rem;
 
   --jam-fruit-color: #e11d48;
   --jam-fruit-color-light: #fda4af;
@@ -401,7 +414,7 @@
 
 .jam-plate-svg {
   width: 100%;
-  max-width: 260px;
+  max-width: 300px;
   height: auto;
   color: var(--color-slate-300);
 }
@@ -421,13 +434,13 @@
 .jam-drop-status {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 1.1rem;
-  font-weight: 700;
-  text-align: center;
-  padding: 0.4rem 0;
-  transition: opacity 0.3s;
+  gap: 0.95rem;
   opacity: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: left;
+  padding: 0.95rem 0;
+  transition: opacity 0.3s;
 }
 
 .jam-drop-status.visible {
@@ -464,8 +477,6 @@
   color: var(--color-ruby-light);
 }
 
-/* ── Recipe Grid ── */
-
 .jam-recipe-section {
   --fruit-color: #e11d48;
   --fruit-color-rgb: 225, 29, 72;
@@ -473,19 +484,31 @@
 
 .jam-recipe-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.6rem;
-  margin-bottom: 0.75rem;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.45rem;
+}
+
+@media (min-width: 600px) {
+  .jam-recipe-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .jam-recipe-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .jam-recipe-item {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 1.1rem;
   background: rgba(247, 245, 251, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.04);
-  border-radius: 14px;
-  padding: 0.75rem;
+  border-radius: var(--jam-radius-md);
+  padding: 1.45rem;
 }
 
 .theme-dark .jam-recipe-item {
@@ -509,7 +532,7 @@
 }
 
 .jam-recipe-val {
-  font-size: 1.3rem;
+  font-size: 2.2rem;
   font-weight: 800;
   color: var(--color-slate-900);
   line-height: 1.2;
@@ -522,19 +545,19 @@
 }
 
 .jam-recipe-unit {
-  font-size: 0.75rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--color-slate-400);
-  margin-left: 0.15rem;
+  margin-left: 0.35rem;
 }
 
 .jam-recipe-label {
-  font-size: 0.7rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--color-slate-500);
   text-transform: uppercase;
-  letter-spacing: 0.03em;
-  margin-top: 0.1rem;
+  letter-spacing: 0.04em;
+  margin-top: 0.25rem;
 }
 
 .theme-dark .jam-recipe-label {
@@ -548,22 +571,20 @@
 }
 
 .jam-recipe-sub {
-  font-size: 0.7rem;
+  font-size: 1.1rem;
   color: var(--color-slate-400);
-  margin-top: 0.1rem;
+  margin-top: 0.25rem;
 }
 
 .theme-dark .jam-recipe-sub {
   color: var(--color-slate-500);
 }
 
-/* ── Sugar Bar ── */
-
 .jam-sugar-bar-wrap {
   background: rgba(247, 245, 251, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.04);
-  border-radius: 14px;
-  padding: 0.75rem;
+  border-radius: var(--jam-radius-md);
+  padding: 1.45rem;
 }
 
 .theme-dark .jam-sugar-bar-wrap {
@@ -575,20 +596,23 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  font-size: 0.7rem;
+  font-size: 1.15rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   color: var(--color-slate-500);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.95rem;
+  flex-wrap: wrap;
+  gap: 0.8rem;
 }
 
 .jam-sugar-bar-val {
-  font-size: 0.95rem;
+  font-size: 1.45rem;
   color: var(--color-slate-900);
   display: flex;
   align-items: baseline;
-  gap: 0.3rem;
+  gap: 0.6rem;
+  flex-wrap: wrap;
 }
 
 .theme-dark .jam-sugar-bar-val {
@@ -596,7 +620,7 @@
 }
 
 #sugar-pct-context {
-  font-size: 0.6rem;
+  font-size: 1rem;
   font-weight: 400;
   text-transform: none;
   letter-spacing: 0;
@@ -606,11 +630,11 @@
 .jam-sugar-bar {
   position: relative;
   width: 100%;
-  height: 10px;
+  height: 16px;
   background: rgba(0, 0, 0, 0.05);
-  border-radius: 5px;
+  border-radius: 8px;
   overflow: visible;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.8rem;
 }
 
 .theme-dark .jam-sugar-bar {
@@ -619,7 +643,7 @@
 
 .jam-sugar-bar-fill {
   height: 100%;
-  border-radius: 5px;
+  border-radius: 8px;
   background: linear-gradient(90deg, var(--fruit-color), var(--color-amber));
   transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -645,7 +669,7 @@
 .jam-sugar-bar-labels {
   display: flex;
   justify-content: space-between;
-  font-size: 0.65rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--color-slate-400);
 }
@@ -653,4 +677,54 @@
 .jam-sugar-bar-ideal {
   color: var(--color-emerald);
   font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .jam-card {
+    padding: 1.75rem;
+    border-radius: var(--jam-radius-lg);
+  }
+
+  .jam-weight-input {
+    font-size: 2.2rem;
+  }
+
+  .jam-recipe-val {
+    font-size: 1.8rem;
+  }
+
+  .jam-fruit-pill {
+    padding: 0.95rem 1.45rem;
+  }
+
+  .jam-fruit-name {
+    font-size: 1.25rem;
+  }
+
+  .jam-fruit-dot {
+    width: 18px;
+    height: 18px;
+  }
+
+  .jam-toggle-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0.6rem;
+  }
+
+  .jam-toggle-btn {
+    padding: 1.1rem;
+    font-size: 1.25rem;
+  }
+
+  .jam-sugar-bar-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .jam-sugar-bar-val {
+    font-size: 1.25rem;
+  }
 }
