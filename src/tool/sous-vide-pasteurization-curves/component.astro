@@ -1,0 +1,275 @@
+---
+import Controls from './components/Controls.astro';
+import ResultsDisplay from './components/ResultsDisplay.astro';
+import LethalityChart from './components/LethalityChart.astro';
+
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="sv-container">
+  <div class="sv-dashboard">
+    <div class="sv-bg-particles" id="sv-particles-container"></div>
+    
+    <div class="sv-row-top">
+      <LethalityChart ui={ui} />
+    </div>
+    
+    <div class="sv-row-bottom">
+      <Controls ui={ui} />
+      <ResultsDisplay ui={ui} />
+    </div>
+  </div>
+  
+  <p class="sv-disclaimer">{ui.disclaimer}</p>
+</div>
+
+<script>
+  import { SousVideLogic } from './logic';
+
+  const $ = (id: string) => document.getElementById(id);
+  const $$ = (sel: string) => document.querySelectorAll(sel);
+
+  const STORAGE_KEY = 'sous_vide_pasteurization_state';
+
+  let system: 'metric' | 'imperial' = 'metric';
+  let bathTemp = 56.0;
+  let thickness = 25;
+  let shape: 'slab' | 'cylinder' | 'sphere' = 'slab';
+  let pathogen: 'salmonella' | 'listeria' = 'salmonella';
+
+  const tempSlider = $('sv-temp-slider') as HTMLInputElement;
+  const tempBadge = $('sv-temp-badge');
+  const thicknessSlider = $('sv-thickness-slider') as HTMLInputElement;
+  const thicknessBadge = $('sv-thickness-badge');
+  const systemButtons = $$('#sv-system-toggle .sv-toggle-btn');
+  const shapeButtons = $$('#sv-shape-toggle .sv-toggle-btn');
+  const pathogenButtons = $$('#sv-pathogen-toggle .sv-toggle-btn');
+  const heatingVal = $('sv-heating-val');
+  const lethalityVal = $('sv-lethality-val');
+  const totalVal = $('sv-total-val');
+  const dangerAlert = $('sv-danger-alert');
+  const curveLine = $('sv-curve-line');
+  const yGrid = $('sv-y-grid');
+  const xGrid = $('sv-x-grid');
+  const particlesContainer = $('sv-particles-container');
+
+  function initParticles() {
+    if (!particlesContainer) return;
+    particlesContainer.innerHTML = '';
+    const numParticles = 15;
+    for (let i = 0; i < numParticles; i++) {
+      const bubble = document.createElement('div');
+      bubble.className = 'sv-bg-bubble';
+      const size = Math.random() * 8 + 4;
+      bubble.style.width = `${size}px`;
+      bubble.style.height = `${size}px`;
+      bubble.style.left = `${Math.random() * 100}%`;
+      bubble.style.animationDelay = `${Math.random() * 8}s`;
+      particlesContainer.appendChild(bubble);
+    }
+  }
+
+  function updateParticlesSpeed() {
+    const bubbles = $$('.sv-bg-bubble') as NodeListOf<HTMLElement>;
+    const speedFactor = Math.max(0.5, (bathTemp - 50) / 10);
+    bubbles.forEach(b => {
+      const duration = 8 / speedFactor;
+      b.style.animationDuration = `${duration}s`;
+    });
+  }
+
+  function drawGrid(totalMinutes: number) {
+    if (!yGrid || !xGrid) return;
+    
+    let yHTML = '';
+    for (let i = 0; i <= 7; i++) {
+      const y = 170 - (i * (140 / 7));
+      yHTML += `<line x1="50" y1="${y}" x2="360" y2="${y}" class="sv-grid-line" />`;
+      yHTML += `<text x="40" y="${y + 4}" class="sv-axis-text" text-anchor="end">${i}D</text>`;
+    }
+    yGrid.innerHTML = yHTML;
+
+    let xHTML = '';
+    const intervals = 5;
+    const intervalMinutes = totalMinutes / intervals;
+    for (let i = 0; i <= intervals; i++) {
+      const x = 50 + (i * (310 / intervals));
+      const label = Math.round(i * intervalMinutes);
+      xHTML += `<line x1="${x}" y1="30" x2="${x}" y2="170" class="sv-grid-line" />`;
+      xHTML += `<text x="${x}" y="188" class="sv-axis-text" text-anchor="middle">${label}</text>`;
+    }
+    xGrid.innerHTML = xHTML;
+  }
+
+  function updateChart(heatingMinutes: number, totalMinutes: number) {
+    if (!curveLine) return;
+    
+    const xStart = 50;
+    const xEnd = 360;
+    const yStart = 170;
+    const yEnd = 30;
+
+    const heatRatio = totalMinutes > 0 ? (heatingMinutes / totalMinutes) : 0;
+    const xMid = xStart + (xEnd - xStart) * heatRatio;
+    const yMid = yStart - 5;
+
+    let d = `M ${xStart} ${yStart}`;
+    d += ` Q ${(xStart + xMid) / 2} ${yStart}, ${xMid} ${yMid}`;
+    d += ` Q ${(xMid + xEnd) / 2} ${yMid}, ${xEnd} ${yEnd}`;
+    
+    curveLine.setAttribute('d', d);
+  }
+
+  function save() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        system,
+        sliderTemp: tempSlider.value,
+        sliderThick: thicknessSlider.value,
+        shape,
+        pathogen
+      }));
+    } catch {}
+  }
+
+  function restoreSystem(sys: string) {
+    system = sys;
+    systemButtons.forEach(b => {
+      b.classList.remove('active');
+      if (b.getAttribute('data-value') === system) b.classList.add('active');
+    });
+    if (system === 'metric') {
+      tempSlider.min = '50'; tempSlider.max = '70'; tempSlider.step = '0.5';
+      thicknessSlider.min = '5'; thicknessSlider.max = '100'; thicknessSlider.step = '1';
+    } else {
+      tempSlider.min = '122'; tempSlider.max = '158'; tempSlider.step = '1';
+      thicknessSlider.min = '0.2'; thicknessSlider.max = '4.0'; thicknessSlider.step = '0.1';
+    }
+  }
+
+  function restore() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      const data = JSON.parse(raw);
+      if (data.system) restoreSystem(data.system);
+      if (data.sliderTemp) tempSlider.value = data.sliderTemp;
+      if (data.sliderThick) thicknessSlider.value = data.sliderThick;
+    } catch {}
+  }
+
+  function readSliders() {
+    if (system === 'metric') {
+      bathTemp = parseFloat(tempSlider.value);
+      thickness = parseFloat(thicknessSlider.value);
+      if (tempBadge) tempBadge.textContent = bathTemp.toFixed(1) + uniTemp;
+      if (thicknessBadge) thicknessBadge.textContent = thickness + uniThick;
+    } else {
+      const f = parseFloat(tempSlider.value);
+      const inch = parseFloat(thicknessSlider.value);
+      bathTemp = (f - 32) / 1.8;
+      thickness = inch * 25.4;
+      if (tempBadge) tempBadge.textContent = f.toFixed(0) + uniTemp;
+      if (thicknessBadge) thicknessBadge.textContent = inch.toFixed(1) + uniThick;
+    }
+  }
+
+  function showResults(result: ReturnType<typeof SousVideLogic.calculate>) {
+    if (heatingVal) heatingVal.textContent = result.heatingMinutes + ' min';
+    if (lethalityVal) lethalityVal.textContent = result.lethalityMinutes + ' min';
+    if (totalVal) totalVal.textContent = String(result.totalMinutes);
+    if (dangerAlert) dangerAlert.style.display = result.isDangerZone ? 'flex' : 'none';
+    drawGrid(result.totalMinutes);
+    updateChart(result.heatingMinutes, result.totalMinutes);
+    updateParticlesSpeed();
+  }
+
+  function update() {
+    readSliders();
+    const result = SousVideLogic.calculate({ bathTemp, thickness, shape, pathogen });
+    showResults(result);
+    save();
+  }
+
+  function handleSystemChange(newSystem: 'metric' | 'imperial') {
+    if (system === newSystem) return;
+
+    const oldSliderTemp = parseFloat(tempSlider.value);
+    const oldSliderThick = parseFloat(thicknessSlider.value);
+
+    system = newSystem;
+
+    if (system === 'metric') {
+      const tempC = (oldSliderTemp - 32) / 1.8;
+      tempSlider.min = '50';
+      tempSlider.max = '70';
+      tempSlider.step = '0.5';
+      tempSlider.value = Math.max(50, Math.min(70, tempC)).toFixed(1);
+
+      const thickMm = oldSliderThick * 25.4;
+      thicknessSlider.min = '5';
+      thicknessSlider.max = '100';
+      thicknessSlider.step = '1';
+      thicknessSlider.value = Math.max(5, Math.min(100, thickMm)).toFixed(0);
+    } else {
+      const tempF = oldSliderTemp * 1.8 + 32;
+      tempSlider.min = '122';
+      tempSlider.max = '158';
+      tempSlider.step = '1';
+      tempSlider.value = Math.max(122, Math.min(158, tempF)).toFixed(0);
+
+      const thickIn = oldSliderThick / 25.4;
+      thicknessSlider.min = '0.2';
+      thicknessSlider.max = '4.0';
+      thicknessSlider.step = '0.1';
+      thicknessSlider.value = Math.max(0.2, Math.min(4.0, thickIn)).toFixed(1);
+    }
+
+    update();
+  }
+
+  if (tempSlider) {
+    tempSlider.addEventListener('input', update);
+  }
+
+  if (thicknessSlider) {
+    thicknessSlider.addEventListener('input', update);
+  }
+
+  systemButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      systemButtons.forEach(b => b.classList.remove('active'));
+      const target = e.currentTarget as HTMLButtonElement;
+      target.classList.add('active');
+      handleSystemChange(target.getAttribute('data-value') as 'metric' | 'imperial');
+    });
+  });
+
+  shapeButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      shapeButtons.forEach(b => b.classList.remove('active'));
+      const target = e.currentTarget as HTMLButtonElement;
+      target.classList.add('active');
+      shape = target.getAttribute('data-value') as 'slab' | 'cylinder' | 'sphere';
+      update();
+    });
+  });
+
+  pathogenButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      pathogenButtons.forEach(b => b.classList.remove('active'));
+      const target = e.currentTarget as HTMLButtonElement;
+      target.classList.add('active');
+      pathogen = target.getAttribute('data-value') as 'salmonella' | 'listeria';
+      update();
+    });
+  });
+
+  restore();
+  initParticles();
+  update();
+</script>

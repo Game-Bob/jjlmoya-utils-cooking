@@ -1,0 +1,90 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="sv-controls-panel">
+  <div class="sv-glass-card">
+    <div class="sv-input-group">
+      <span class="sv-label">{ui.systemLabel}</span>
+      <div id="sv-system-toggle" class="sv-toggle-grid">
+        <button type="button" class="sv-toggle-btn active" data-value="metric">
+          {ui.systemMetric}
+        </button>
+        <button type="button" class="sv-toggle-btn" data-value="imperial">
+          {ui.systemImperial}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="sv-glass-card">
+    <div class="sv-input-group">
+      <div class="sv-label-container">
+        <label for="sv-temp-slider" class="sv-label">{ui.bathTempLabel}</label>
+        <span id="sv-temp-badge" class="sv-value-badge">56.0{ui.tempUnitC}</span>
+      </div>
+      <input
+        type="range"
+        id="sv-temp-slider"
+        class="sv-slider"
+        min="50"
+        max="70"
+        step="0.5"
+        value="56.0"
+      />
+    </div>
+  </div>
+
+  <div class="sv-glass-card">
+    <div class="sv-input-group">
+      <div class="sv-label-container">
+        <label for="sv-thickness-slider" class="sv-label">{ui.thicknessLabel}</label>
+        <span id="sv-thickness-badge" class="sv-value-badge">25{ui.mmUnit}</span>
+      </div>
+      <input
+        type="range"
+        id="sv-thickness-slider"
+        class="sv-slider"
+        min="5"
+        max="100"
+        step="1"
+        value="25"
+      />
+    </div>
+  </div>
+
+  <div class="sv-glass-card">
+    <div class="sv-input-group">
+      <span class="sv-label">{ui.shapeLabel}</span>
+      <div id="sv-shape-toggle" class="sv-toggle-grid">
+        <button type="button" class="sv-toggle-btn active" data-value="slab">
+          {ui.shapeSlab.split(' ')[0]}
+        </button>
+        <button type="button" class="sv-toggle-btn" data-value="cylinder">
+          {ui.shapeCylinder.split(' ')[0]}
+        </button>
+        <button type="button" class="sv-toggle-btn" data-value="sphere">
+          {ui.shapeSphere.split(' ')[0]}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="sv-glass-card">
+    <div class="sv-input-group">
+      <span class="sv-label">{ui.pathogenLabel}</span>
+      <div id="sv-pathogen-toggle" class="sv-pathogen-grid sv-toggle-grid">
+        <button type="button" class="sv-toggle-btn active" data-value="salmonella">
+          {ui.pathogenSalmonella.split(' ')[0]}
+        </button>
+        <button type="button" class="sv-toggle-btn" data-value="listeria">
+          Listeria
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

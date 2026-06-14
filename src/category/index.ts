@@ -23,6 +23,7 @@ import { brixSorbetDensity } from '../tool/brix-sorbet-density-calculator/entry'
 import { oilSmokePoint } from '../tool/oil-smoke-point-tracker/entry';
 import { leavenerAcidNeutralizer } from '../tool/leavener-acid-neutralizer/entry';
 import { pectinJam } from '../tool/pectin-jam-setting-calculator/entry';
+import { sousVidePasteurization } from '../tool/sous-vide-pasteurization-curves/entry';
 
 export const cookingCategory: CookingCategoryEntry = {
   icon: 'mdi:chef-hat',
@@ -51,7 +52,9 @@ export const cookingCategory: CookingCategoryEntry = {
     oilSmokePoint,
     leavenerAcidNeutralizer,
     pectinJam,
+    sousVidePasteurization,
   ],
+
 
   i18n: {
     es: () => import('./i18n/es').then((m) => m.content),

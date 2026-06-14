@@ -1,0 +1,28 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="sv-chart-panel">
+  <h3 class="sv-chart-title">{ui.chartTitle}</h3>
+  
+  <svg class="sv-svg-chart" viewBox="0 0 400 220" id="sv-chart-svg">
+    <line x1="40" y1="20" x2="40" y2="180" stroke="rgba(226,232,240,0.2)" stroke-width="1.5" />
+    <line x1="40" y1="180" x2="380" y2="180" stroke="rgba(226,232,240,0.2)" stroke-width="1.5" />
+    
+    <g id="sv-y-grid"></g>
+    <g id="sv-x-grid"></g>
+    
+    <text x="15" y="100" class="sv-axis-text" transform="rotate(-90 15 100)" text-anchor="middle">
+      {ui.chartYLabel}
+    </text>
+    <text x="210" y="210" class="sv-axis-text" text-anchor="middle">
+      {ui.chartXLabel}
+    </text>
+    
+    <path id="sv-curve-line" class="sv-curve-path" d="" />
+  </svg>
+</div>

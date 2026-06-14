@@ -25,6 +25,7 @@ import { BRIX_SORBET_DENSITY_CALCULATOR_TOOL } from './tool/brix-sorbet-density-
 import { OIL_SMOKE_POINT_TRACKER_TOOL } from './tool/oil-smoke-point-tracker';
 import { LEAVENER_ACID_NEUTRALIZER_TOOL } from './tool/leavener-acid-neutralizer';
 import { PECTIN_JAM_SETTING_TOOL } from './tool/pectin-jam-setting-calculator';
+import { SOUS_VIDE_PASTEURIZATION_TOOL } from './tool/sous-vide-pasteurization-curves';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   AMERICAN_KITCHEN_CONVERTER_TOOL,
@@ -52,5 +53,7 @@ export const ALL_TOOLS: ToolDefinition[] = [
   OIL_SMOKE_POINT_TRACKER_TOOL,
   LEAVENER_ACID_NEUTRALIZER_TOOL,
   PECTIN_JAM_SETTING_TOOL,
+  SOUS_VIDE_PASTEURIZATION_TOOL,
 ];
+
 

@@ -1,0 +1,36 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="sv-glass-card sv-results-panel">
+  <h3 class="sv-chart-title">{ui.resultsTitle}</h3>
+  
+  <div class="sv-results-hero">
+    <div class="sv-hero-ring">
+      <span id="sv-total-val" class="sv-hero-value">--</span>
+      <span class="sv-hero-unit">{ui.minutesUnit}</span>
+    </div>
+    <span class="sv-hero-label">{ui.totalTime}</span>
+  </div>
+
+  <div class="sv-results-grid">
+    <div class="sv-result-card">
+      <span class="sv-card-metric-label">{ui.heatingTime}</span>
+      <span id="sv-heating-val" class="sv-card-metric-value">--</span>
+    </div>
+    
+    <div class="sv-result-card">
+      <span class="sv-card-metric-label">{ui.lethalityTime}</span>
+      <span id="sv-lethality-val" class="sv-card-metric-value">--</span>
+    </div>
+  </div>
+
+  <div id="sv-danger-alert" class="sv-danger-alert" style="display: none;">
+    <h4 class="sv-danger-title">{ui.dangerZoneTitle}</h4>
+    <p class="sv-danger-desc">{ui.dangerZoneDesc}</p>
+  </div>
+</div>

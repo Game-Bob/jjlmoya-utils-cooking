@@ -23,6 +23,7 @@ export { botulismCanningSafety } from './tool/botulism-canning-safety/entry';
 export { oilSmokePoint } from './tool/oil-smoke-point-tracker/entry';
 export { leavenerAcidNeutralizer } from './tool/leavener-acid-neutralizer/entry';
 export { pectinJam } from './tool/pectin-jam-setting-calculator/entry';
+export { sousVidePasteurization } from './tool/sous-vide-pasteurization-curves/entry';
 export { cookingCategory } from './category';
 import { americanKitchenConverter } from './tool/american-kitchen-converter/entry';
 import { bananaCare } from './tool/banana-ripeness/entry';
@@ -49,5 +50,7 @@ import { brixSorbetDensity } from './tool/brix-sorbet-density-calculator/entry';
 import { oilSmokePoint } from './tool/oil-smoke-point-tracker/entry';
 import { leavenerAcidNeutralizer } from './tool/leavener-acid-neutralizer/entry';
 import { pectinJam } from './tool/pectin-jam-setting-calculator/entry';
-export const ALL_ENTRIES = [americanKitchenConverter, bananaCare, brine, cookwareGuide, eggTimer, ingredientRescaler, kitchenTimer, meringuePeak, moldScaler, pizza, rouxGuide, sourdoughCalculator, yeastConverter, lactoFermentationSalt, spherificationBath, iceCreamPacPod, botulismCanningSafety, meatBinder, carryOverCooking, maillardReaction, macaronDrying, brixSorbetDensity, oilSmokePoint, leavenerAcidNeutralizer, pectinJam];
+import { sousVidePasteurization } from './tool/sous-vide-pasteurization-curves/entry';
+export const ALL_ENTRIES = [americanKitchenConverter, bananaCare, brine, cookwareGuide, eggTimer, ingredientRescaler, kitchenTimer, meringuePeak, moldScaler, pizza, rouxGuide, sourdoughCalculator, yeastConverter, lactoFermentationSalt, spherificationBath, iceCreamPacPod, botulismCanningSafety, meatBinder, carryOverCooking, maillardReaction, macaronDrying, brixSorbetDensity, oilSmokePoint, leavenerAcidNeutralizer, pectinJam, sousVidePasteurization];
+
 
