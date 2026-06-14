@@ -24,6 +24,7 @@ import { MACARON_DRYING_TOOL } from './tool/macaron-drying-predictor';
 import { BRIX_SORBET_DENSITY_CALCULATOR_TOOL } from './tool/brix-sorbet-density-calculator';
 import { OIL_SMOKE_POINT_TRACKER_TOOL } from './tool/oil-smoke-point-tracker';
 import { LEAVENER_ACID_NEUTRALIZER_TOOL } from './tool/leavener-acid-neutralizer';
+import { PECTIN_JAM_SETTING_TOOL } from './tool/pectin-jam-setting-calculator';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   AMERICAN_KITCHEN_CONVERTER_TOOL,
@@ -50,5 +51,6 @@ export const ALL_TOOLS: ToolDefinition[] = [
   BRIX_SORBET_DENSITY_CALCULATOR_TOOL,
   OIL_SMOKE_POINT_TRACKER_TOOL,
   LEAVENER_ACID_NEUTRALIZER_TOOL,
+  PECTIN_JAM_SETTING_TOOL,
 ];
 

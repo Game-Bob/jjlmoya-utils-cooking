@@ -25,6 +25,7 @@ export { MACARON_DRYING_TOOL } from './tool/macaron-drying-predictor';
 export { BRIX_SORBET_DENSITY_CALCULATOR_TOOL } from './tool/brix-sorbet-density-calculator';
 export { OIL_SMOKE_POINT_TRACKER_TOOL } from './tool/oil-smoke-point-tracker';
 export { LEAVENER_ACID_NEUTRALIZER_TOOL } from './tool/leavener-acid-neutralizer';
+export { PECTIN_JAM_SETTING_TOOL } from './tool/pectin-jam-setting-calculator';
 
 
 export type {

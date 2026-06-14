@@ -1,0 +1,44 @@
+---
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="jam-inputs-section">
+  <div class="jam-input-row">
+    <label class="jam-input-label" for="fruit-weight">{ui.weightLabel}</label>
+    <div class="jam-weight-input-wrap">
+      <input type="number" id="fruit-weight" class="jam-weight-input" value="1000" min="10" max="99999"
+      placeholder={ui.weightPlaceholder} />
+      <span class="jam-weight-unit" id="weight-unit-label">{ui.weightUnitMetric}</span>
+    </div>
+  </div>
+
+  <div class="jam-input-row">
+    <label class="jam-input-label">{ui.pectinTypeLabel}</label>
+    <div class="jam-toggle-wrap" id="pectin-toggle">
+      <button class="jam-toggle-btn active" data-value="HM">{ui.pectinHM}</button>
+      <button class="jam-toggle-btn" data-value="LM">{ui.pectinLM}</button>
+    </div>
+  </div>
+
+  <div class="jam-input-row">
+    <label class="jam-input-label">{ui.sugarModeLabel}</label>
+    <div class="jam-toggle-wrap" id="sugar-mode-toggle">
+      <button class="jam-toggle-btn active" data-value="auto">{ui.sugarModeAuto}</button>
+      <button class="jam-toggle-btn" data-value="manual">{ui.sugarModeManual}</button>
+    </div>
+    <span class="jam-sugar-auto-hint" id="sugar-auto-hint">{ui.sugarAutoHint}</span>
+  </div>
+
+  <div class="jam-input-row jam-hidden" id="sugar-manual-row">
+    <label class="jam-input-label" for="sugar-weight">{ui.sugarLabel}</label>
+    <div class="jam-weight-input-wrap">
+      <input type="number" id="sugar-weight" class="jam-weight-input" value="650" min="0" max="99999"
+      placeholder={ui.sugarPlaceholder} />
+      <span class="jam-weight-unit">{ui.weightUnitMetric}</span>
+    </div>
+  </div>
+</div>

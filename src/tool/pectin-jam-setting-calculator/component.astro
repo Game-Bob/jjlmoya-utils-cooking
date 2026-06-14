@@ -1,0 +1,170 @@
+---
+import FruitSelector from './components/FruitSelector.astro';
+import CalculatorInputs from './components/CalculatorInputs.astro';
+import DropTestVisualizer from './components/DropTestVisualizer.astro';
+import RecipeResults from './components/RecipeResults.astro';
+
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+
+const fruits = [
+  { id: 'apple', name: 'Apple', pectin: 'high', acidity: 'high', color: '#dc2626' },
+  { id: 'quince', name: 'Quince', pectin: 'high', acidity: 'medium', color: '#ea580c' },
+  { id: 'blackberry', name: 'Blackberry', pectin: 'high', acidity: 'low', color: '#7c3aed' },
+  { id: 'cranberry', name: 'Cranberry', pectin: 'high', acidity: 'high', color: '#be123c' },
+  { id: 'gooseberry', name: 'Gooseberry', pectin: 'high', acidity: 'high', color: '#65a30d' },
+  { id: 'plum', name: 'Plum', pectin: 'medium', acidity: 'medium', color: '#7c3aed' },
+  { id: 'apricot', name: 'Apricot', pectin: 'medium', acidity: 'medium', color: '#d97706' },
+  { id: 'blueberry', name: 'Blueberry', pectin: 'medium', acidity: 'low', color: '#4f46e5' },
+  { id: 'raspberry', name: 'Raspberry', pectin: 'medium', acidity: 'high', color: '#e11d48' },
+  { id: 'peach', name: 'Peach', pectin: 'low', acidity: 'medium', color: '#d97706' },
+  { id: 'strawberry', name: 'Strawberry', pectin: 'low', acidity: 'low', color: '#e11d48' },
+  { id: 'pear', name: 'Pear', pectin: 'low', acidity: 'low', color: '#65a30d' },
+  { id: 'fig', name: 'Fig', pectin: 'low', acidity: 'low', color: '#92400e' },
+  { id: 'cherry', name: 'Cherry', pectin: 'low', acidity: 'high', color: '#be123c' },
+  { id: 'grape', name: 'Grape', pectin: 'low', acidity: 'high', color: '#7c3aed' },
+  { id: 'mango', name: 'Mango', pectin: 'low', acidity: 'medium', color: '#d97706' },
+];
+---
+
+<div class="jam-container">
+  <div class="jam-card">
+    <div class="jam-glow-1"></div>
+    <div class="jam-glow-2"></div>
+    <div class="jam-glow-3"></div>
+
+    <div class="jam-main-grid">
+      <FruitSelector ui={ui} fruits={fruits} />
+      <CalculatorInputs ui={ui} />
+      <DropTestVisualizer ui={ui} />
+      <RecipeResults ui={ui} />
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ ui }}>
+  const STORAGE_KEY = 'jamcalc_state';
+  let aP = 'HM', aSM = 'auto', aF = 'all';
+  const $ = function(id){ return document.getElementById(id); };
+  const $$ = function(sel){ return document.querySelectorAll(sel); };
+  const fs = $('fruit-scroll'), fw = $('fruit-weight'), sw = $('sugar-weight');
+  const smr = $('sugar-manual-row'), sah = $('sugar-auto-hint'), sh = $('sugar-hint');
+  const jd = $('jam-drop'), jdh = $('jam-drop-highlight'), dst = $('drop-status-text');
+  const ds = $('drop-status'), dsi = $('drop-status-icon'), rs = $('recipe-section');
+
+  const ICONS = {
+  perfect: '<svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M7 12l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  warn: '<svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2.5"/><line x1="12" y1="8" x2="12" y2="13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="12" cy="17" r="1.2" fill="currentColor"/></svg>',
+  fail: '<svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2.5"/><line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="9" y1="9" x2="15" y2="15" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>'
+};
+
+  function gd(p){ return { id: p.getAttribute('data-fruit'), pectin: p.getAttribute('data-pectin'), acidity: p.getAttribute('data-acidity'), color: p.getAttribute('data-color') }; }
+  function rgb(h){ return parseInt(h.slice(1,3),16)+','+parseInt(h.slice(3,5),16)+','+parseInt(h.slice(5,7),16); }
+  function lc(h,f){ const c=function(i){ return Math.min(255,parseInt(h.slice(i,i+2),16)+Math.round((255-parseInt(h.slice(i,i+2),16))*f)); }; return '#'+c(1).toString(16).padStart(2,'0')+c(3).toString(16).padStart(2,'0')+c(5).toString(16).padStart(2,'0'); }
+  function dc(h,f){ const c=function(i){ return Math.max(0,Math.round(parseInt(h.slice(i,i+2),16)*(1-f))); }; return '#'+c(1).toString(16).padStart(2,'0')+c(3).toString(16).padStart(2,'0')+c(5).toString(16).padStart(2,'0'); }
+
+  function save(){
+    const ae = fs.querySelector('.jam-fruit-pill.active');
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ fruit: ae?ae.getAttribute('data-fruit'):'strawberry', weight: fw.value, pectin: aP, sugarMode: aSM, sugarWeight: sw.value, filter: aF })); } catch {}
+  }
+
+  function setTgl(id, v){ $$('#'+id+' .jam-toggle-btn').forEach(function(b){ b.classList.remove('active'); if(b.getAttribute('data-value')===v) b.classList.add('active'); }); }
+  function setFl(v){ aF=v; $$('#filter-pills .jam-filter-pill').forEach(function(p){ p.classList.remove('active'); if(p.getAttribute('data-filter')===v) p.classList.add('active'); }); $$('.jam-fruit-pill').forEach(function(p){ p.style.display=(v==='all'||p.getAttribute('data-pectin')===v)?'':'none'; }); }
+
+  function restoreFruit(s){
+    if(!s.fruit) return;
+    const t=document.querySelector('.jam-fruit-pill[data-fruit="'+s.fruit+'"]');
+    if(!t) return;
+    $$('.jam-fruit-pill').forEach(function(p){ p.classList.remove('active'); });
+    t.classList.add('active');
+  }
+
+  function applyState(s){
+    if(s.pectin){ setTgl('pectin-toggle',s.pectin); aP=s.pectin; }
+    if(s.sugarMode){ setTgl('sugar-mode-toggle',s.sugarMode); aSM=s.sugarMode; }
+    if(s.filter) setFl(s.filter);
+    if(s.weight) fw.value=s.weight;
+    if(s.sugarWeight) sw.value=s.sugarWeight;
+    if(s.sugarMode==='manual'){ smr.classList.remove('jam-hidden'); sah.style.display='none'; }
+    restoreFruit(s);
+  }
+
+  function restore(){
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY); if(!raw) return;
+      applyState(JSON.parse(raw));
+    } catch {}
+  }
+
+  function gf(){
+    const p = fs.querySelector('.jam-fruit-pill.active');
+    return p ? gd(p) : { id:'strawberry',pectin:'low',acidity:'low',color:'#e11d48' };
+  }
+
+  function cp(fwG, p){ if(p==='high') return 0; const r = p==='medium'?0.003:0.006; return parseFloat((fwG*r).toFixed(1)); }
+  function cc(fwG, a){ if(a==='high') return 0; const r = a==='medium'?0.003:0.008; return parseFloat((fwG*r).toFixed(1)); }
+  function csg(fwG){ if(aSM==='manual') return parseFloat(sw.value)||0; const r=aP==='LM'?0.1:1.0; return parseFloat((fwG*r).toFixed(0)); }
+  function cst(sp, hp, pg){
+    if(aP==='LM'){ if(hp) return 'perfect'; return pg>0?'slightly-thin':'too-thin'; }
+    const t = aSM==='auto'?55:60;
+    if(sp>=t && hp) return 'perfect';
+    if(sp>=50) return 'slightly-thin';
+    return 'too-thin';
+  }
+
+  function calc(){
+    const fr = gf(), fwG = Math.max(10,parseFloat(fw.value)||1000);
+    const pg = cp(fwG, fr.pectin), ca = cc(fwG, fr.acidity);
+    const sg = csg(fwG), cooked = parseFloat((fwG*0.55).toFixed(0));
+    const ty = parseFloat((cooked+sg+pg+ca).toFixed(0));
+    const sp = ty>0?parseFloat(((sg/ty)*100).toFixed(1)):0, spF = parseFloat(((sg/fwG)*100).toFixed(0));
+    const hp = fr.pectin!=='low'||pg>0, st = cst(sp, hp, pg);
+    return { pectinGrams:pg, citricGrams:ca, lemonMl:parseFloat((ca*15).toFixed(0)), sugarGrams:sg, totalYield:ty, sugarPct:sp, sugarPctFruit:spF, status:st, fruitColor:fr.color };
+  }
+
+  function upd(r){
+    $('pectin-val').textContent=r.pectinGrams.toFixed(1); $('citric-val').textContent=r.citricGrams.toFixed(1);
+    $('lemon-val').textContent=ui.lemonJuiceNeeded+': '+r.lemonMl+' ml';
+    $('sugar-val').textContent=r.sugarGrams; $('yield-val').textContent=r.totalYield;
+    $('sugar-pct-val').textContent=r.sugarPct; $('sugar-pct-context').textContent=ui.sugarOfTotal+'  |  '+r.sugarPctFruit+'% '+ui.sugarOfFruit;
+    const bar=$('sugar-bar-fill'); bar.style.width=Math.min(100,Math.max(0,r.sugarPct))+'%';
+    bar.style.setProperty('--fruit-color',r.fruitColor);
+    bar.className='jam-sugar-bar-fill '+(r.status==='perfect'?'good':'warn');
+    sh.textContent = aSM==='auto'?'('+ui.sugarAutoHint+')':'';
+    rs.style.setProperty('--fruit-color',r.fruitColor); rs.style.setProperty('--fruit-color-rgb',rgb(r.fruitColor));
+  }
+
+  function anim(r){
+    const s=$('plate-stage'); s.style.setProperty('--jam-fruit-color',r.fruitColor);
+    s.style.setProperty('--jam-fruit-color-light',lc(r.fruitColor,0.3)); s.style.setProperty('--jam-fruit-color-dark',dc(r.fruitColor,0.3));
+    jd.setAttribute('cy','30'); jd.style.transition='none'; jdh.setAttribute('cy','22'); jdh.style.transition='none';
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){ jd.style.transition='cy 0.5s cubic-bezier(0.25,0.46,0.45,0.94)'; jdh.style.transition='cy 0.5s cubic-bezier(0.25,0.46,0.45,0.94)'; jd.setAttribute('cy','110'); jdh.setAttribute('cy','102'); }); });
+    setTimeout(function(){
+      let cy, txt, cls, ico;
+      if(r.status==='perfect'){ cy='118'; txt=ui.dropTestPerfect; cls='perfect'; ico='perfect'; }
+      else if(r.status==='too-thin'){ cy='145'; txt=ui.dropTestThin; cls='too-thin'; ico='fail'; }
+      else { cy='128'; txt=ui.dropTestThin; cls='slightly-thin'; ico='warn'; }
+      jd.style.transition='cy 0.7s cubic-bezier(0.25,0.1,0.25,1)'; jdh.style.transition='cy 0.7s cubic-bezier(0.25,0.1,0.25,1)';
+      jd.setAttribute('cy',cy); jdh.setAttribute('cy',(parseFloat(cy)-8).toString());
+      dst.textContent=txt; ds.className='jam-drop-status visible '+cls; dsi.innerHTML=ICONS[ico];
+    },500);
+  }
+
+  function ua(){ const r=calc(); upd(r); anim(r); if(aSM==='auto') sw.value=Math.round(r.sugarGrams); save(); }
+
+  fw.addEventListener('input',ua); sw.addEventListener('input',function(){ if(aSM==='manual') ua(); });
+
+  function st(id,cb){ $$('#'+id+' .jam-toggle-btn').forEach(function(b){ b.addEventListener('click',function(){ $$('#'+id+' .jam-toggle-btn').forEach(function(x){ x.classList.remove('active'); }); b.classList.add('active'); cb(b.getAttribute('data-value')); }); }); }
+  st('pectin-toggle',function(v){ aP=v; ua(); });
+  st('sugar-mode-toggle',function(v){ aSM=v; if(v==='manual'){ smr.classList.remove('jam-hidden'); sah.style.display='none'; } else { smr.classList.add('jam-hidden'); sah.style.display=''; } ua(); });
+
+  $$('#filter-pills .jam-filter-pill').forEach(function(p){ p.addEventListener('click',function(){ $$('#filter-pills .jam-filter-pill').forEach(function(x){ x.classList.remove('active'); }); p.classList.add('active'); setFl(p.getAttribute('data-filter')); }); });
+  $$('.jam-fruit-pill').forEach(function(p){ p.addEventListener('click',function(){ $$('.jam-fruit-pill').forEach(function(x){ x.classList.remove('active'); }); p.classList.add('active'); ua(); }); });
+
+  restore();
+  if(!fs.querySelector('.jam-fruit-pill.active')){ const f = fs.querySelector('[data-fruit="strawberry"]'); if(f) f.classList.add('active'); }
+  ua();
+</script>

@@ -22,6 +22,7 @@ import { macaronDrying } from '../tool/macaron-drying-predictor/entry';
 import { brixSorbetDensity } from '../tool/brix-sorbet-density-calculator/entry';
 import { oilSmokePoint } from '../tool/oil-smoke-point-tracker/entry';
 import { leavenerAcidNeutralizer } from '../tool/leavener-acid-neutralizer/entry';
+import { pectinJam } from '../tool/pectin-jam-setting-calculator/entry';
 
 export const cookingCategory: CookingCategoryEntry = {
   icon: 'mdi:chef-hat',
@@ -49,6 +50,7 @@ export const cookingCategory: CookingCategoryEntry = {
     brixSorbetDensity,
     oilSmokePoint,
     leavenerAcidNeutralizer,
+    pectinJam,
   ],
 
   i18n: {
