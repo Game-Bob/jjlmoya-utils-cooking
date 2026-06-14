@@ -18,7 +18,7 @@ Follow `prompts/create_tool.md` in the repository root for detailed instructions
 
 4. **SEO text** — El texto SEO debe aportar muchísimo valor al usuario, no ser vago ni corto, y responder a la intención de búsqueda del usuario. Cada párrafo, título y sección debe tener un propósito claro.
 
-5. **Design** — El diseño debe ser único, muy visual y gráfico, con prioridad en una UX bonita y cuidada. Las interfaces deben diseñarse desde cero, sin copiar ni reutilizar el diseño de otras tools. Cada herramienta tiene que ser totalmente única en su planteamiento visual y de interacción. No uses diseños genéricos.
+5. **Design** — El diseño debe ser único, muy visual y gráfico, con prioridad en una UX bonita y cuidada. Las interfaces deben diseñarse desde cero, sin copiar ni reutilizar el diseño de otras tools. Cada herramienta tiene que ser totalmente única en su planteamiento visual y de interacción. No uses diseños genéricos. Textos grandes, mobile FIRST, SIEMPRE
 
 6. **Register the tool** by reading and updating:
    `src/index.ts`, `src/entries.ts`, `src/tools.ts`, `src/category/index.ts`

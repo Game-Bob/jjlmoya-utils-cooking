@@ -23,6 +23,7 @@ import { MAILLARD_REACTION_TOOL } from './tool/maillard-reaction-optimizer';
 import { MACARON_DRYING_TOOL } from './tool/macaron-drying-predictor';
 import { BRIX_SORBET_DENSITY_CALCULATOR_TOOL } from './tool/brix-sorbet-density-calculator';
 import { OIL_SMOKE_POINT_TRACKER_TOOL } from './tool/oil-smoke-point-tracker';
+import { LEAVENER_ACID_NEUTRALIZER_TOOL } from './tool/leavener-acid-neutralizer';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   AMERICAN_KITCHEN_CONVERTER_TOOL,
@@ -48,5 +49,6 @@ export const ALL_TOOLS: ToolDefinition[] = [
   MACARON_DRYING_TOOL,
   BRIX_SORBET_DENSITY_CALCULATOR_TOOL,
   OIL_SMOKE_POINT_TRACKER_TOOL,
+  LEAVENER_ACID_NEUTRALIZER_TOOL,
 ];
 

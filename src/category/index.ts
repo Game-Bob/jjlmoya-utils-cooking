@@ -21,6 +21,7 @@ import { maillardReaction } from '../tool/maillard-reaction-optimizer/entry';
 import { macaronDrying } from '../tool/macaron-drying-predictor/entry';
 import { brixSorbetDensity } from '../tool/brix-sorbet-density-calculator/entry';
 import { oilSmokePoint } from '../tool/oil-smoke-point-tracker/entry';
+import { leavenerAcidNeutralizer } from '../tool/leavener-acid-neutralizer/entry';
 
 export const cookingCategory: CookingCategoryEntry = {
   icon: 'mdi:chef-hat',
@@ -47,6 +48,7 @@ export const cookingCategory: CookingCategoryEntry = {
     macaronDrying,
     brixSorbetDensity,
     oilSmokePoint,
+    leavenerAcidNeutralizer,
   ],
 
   i18n: {

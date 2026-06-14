@@ -1,0 +1,335 @@
+---
+import './leavener-acid-neutralizer.css';
+
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="leavener-container">
+  <div class="leavener-card">
+    <div class="recipe-setup-card">
+      <div class="top-row">
+        <div class="luxury-title-group">
+          <span class="luxury-badge">{ui.stoichiometryBadge}</span>
+        </div>
+        <div class="unit-selector">
+          <button id="unit-metric-btn" class="unit-btn active">{ui.metricUnit}</button>
+          <button id="unit-imperial-btn" class="unit-btn">{ui.imperialUnit}</button>
+        </div>
+      </div>
+      
+      <div class="flour-slider-group">
+        <div class="flour-header">
+          <span class="flour-title-label">{ui.flourLabel}</span>
+          <span id="flour-val-display" class="flour-val-num">150g</span>
+        </div>
+        <input type="range" id="flour-slider" min="50" max="1000" step="10" value="150" class="premium-range-slider" />
+      </div>
+    </div>
+    
+    <div class="main-workspace-layout">
+      <div class="control-panel-card">
+        <h4 class="panel-subtitle">Select Acidic Ingredients</h4>
+        <div class="ingredients-pills">
+          <button class="pill-btn" data-type="buttermilk" data-name={ui.acid_buttermilk}>{ui.acid_buttermilk}</button>
+          <button class="pill-btn active" data-type="yogurt" data-name={ui.acid_yogurt}>{ui.acid_yogurt}</button>
+          <button class="pill-btn" data-type="sour_cream" data-name={ui.acid_sour_cream}>{ui.acid_sour_cream}</button>
+          <button class="pill-btn" data-type="honey" data-name={ui.acid_honey}>{ui.acid_honey}</button>
+          <button class="pill-btn" data-type="molasses" data-name={ui.acid_molasses}>{ui.acid_molasses}</button>
+          <button class="pill-btn" data-type="cocoa" data-name={ui.acid_cocoa}>{ui.acid_cocoa}</button>
+          <button class="pill-btn" data-type="lemon_juice" data-name={ui.acid_lemon_juice}>{ui.acid_lemon_juice}</button>
+          <button class="pill-btn" data-type="vinegar" data-name={ui.acid_vinegar}>{ui.acid_vinegar}</button>
+        </div>
+        
+        <div id="active-sliders-container" class="active-sliders-list"></div>
+      </div>
+      
+      <div class="analysis-panel-card">
+        <h4 class="panel-subtitle">{ui.scaleBalanceTitle}</h4>
+        
+        <div class="linear-ph-scale-card">
+          <div class="ph-track">
+            <div class="ph-zone acid-zone"></div>
+            <div class="ph-zone neutral-zone"></div>
+            <div class="ph-zone alkaline-zone"></div>
+            <div id="ph-pointer-orb" class="ph-pointer-orb"></div>
+          </div>
+          <div class="ph-labels">
+            <span>{ui.statusAcidic}</span>
+            <span class="neutral-label">{ui.statusBalanced}</span>
+            <span>{ui.statusAlkaline}</span>
+          </div>
+        </div>
+        
+        <div class="simulation-adjuster">
+          <div class="slider-header-row">
+            <span class="adjuster-label">{ui.simulateSodaLabel}</span>
+            <div class="adjuster-controls">
+              <span id="simulator-val" class="adjuster-val">3.00g</span>
+              <button id="auto-balance-btn" class="btn-auto-balance">{ui.autoBalanceBtn}</button>
+            </div>
+          </div>
+          <input type="range" id="simulator-slider" min="0" max="10" step="0.05" value="3.0" class="premium-range-slider" />
+        </div>
+        
+        <div class="perfect-recipe-card">
+          <h4 class="recipe-title">{ui.resultsTitle}</h4>
+          
+          <div class="recipe-stat-row">
+            <div class="recipe-stat-info">
+              <span class="stat-main-label">{ui.bakingSodaNeeded}</span>
+              <span class="stat-sub-label">Required to neutralize all acid</span>
+            </div>
+            <div class="recipe-stat-numbers">
+              <span id="formula-soda-g" class="num-large">0.00g</span>
+              <span id="formula-soda-tsp" class="num-small">0.00 tsp</span>
+            </div>
+          </div>
+          
+          <div class="recipe-stat-row">
+            <div class="recipe-stat-info">
+              <span class="stat-main-label">{ui.boosterBakingPowder}</span>
+              <span class="stat-sub-label">Additional booster for leavening</span>
+            </div>
+            <div class="recipe-stat-numbers">
+              <span id="formula-booster-g" class="num-large">0.00g</span>
+              <span id="formula-booster-tsp" class="num-small">0.00 tsp</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ ui }}>
+  const flourSlider = document.getElementById('flour-slider');
+  const flourValDisplay = document.getElementById('flour-val-display');
+  const unitMetricBtn = document.getElementById('unit-metric-btn');
+  const unitImperialBtn = document.getElementById('unit-imperial-btn');
+  const pillBtns = document.querySelectorAll('.pill-btn');
+  const activeSlidersContainer = document.getElementById('active-sliders-container');
+  
+  const phPointerOrb = document.getElementById('ph-pointer-orb');
+  const simulatorSlider = document.getElementById('simulator-slider');
+  const simulatorVal = document.getElementById('simulator-val');
+  const autoBalanceBtn = document.getElementById('auto-balance-btn');
+  
+  const formulaSodaG = document.getElementById('formula-soda-g');
+  const formulaSodaTsp = document.getElementById('formula-soda-tsp');
+  const formulaBoosterG = document.getElementById('formula-booster-g');
+  const formulaBoosterTsp = document.getElementById('formula-booster-tsp');
+  
+  let currentUnit = 'metric';
+  let targetRecommendedSoda = 3.0;
+  
+  const activeIngredients = {
+    yogurt: 240
+  };
+  
+  const ACID_RATIOS = {
+    buttermilk: 1.5 / 120,
+    yogurt: 1.5 / 120,
+    sour_cream: 1.5 / 120,
+    honey: 3 / 340,
+    molasses: 3 / 328,
+    cocoa: 3 / 80,
+    lemon_juice: 1.5 / 15,
+    vinegar: 1.5 / 15
+  };
+  
+  const MAX_LIMITS = {
+    buttermilk: 500,
+    yogurt: 500,
+    sour_cream: 500,
+    honey: 400,
+    molasses: 400,
+    cocoa: 100,
+    lemon_juice: 100,
+    vinegar: 100
+  };
+  
+  unitMetricBtn.addEventListener('click', () => {
+    if (currentUnit !== 'metric') {
+      const oldFlour = parseFloat(flourSlider.value) || 0;
+      flourSlider.min = "50";
+      flourSlider.max = "1000";
+      flourSlider.step = "10";
+      flourSlider.value = (oldFlour * 28.3495).toFixed(0);
+      
+      for (const key in activeIngredients) {
+        activeIngredients[key] = parseFloat((activeIngredients[key] * 28.3495).toFixed(0));
+      }
+      
+      const oldSlider = parseFloat(simulatorSlider.value);
+      simulatorSlider.value = (oldSlider * 28.3495).toFixed(2);
+      
+      currentUnit = 'metric';
+      unitMetricBtn.classList.add('active');
+      unitImperialBtn.classList.remove('active');
+      renderSliders();
+      update();
+    }
+  });
+  
+  unitImperialBtn.addEventListener('click', () => {
+    if (currentUnit !== 'imperial') {
+      const oldFlour = parseFloat(flourSlider.value) || 0;
+      flourSlider.min = "2";
+      flourSlider.max = "36";
+      flourSlider.step = "0.5";
+      flourSlider.value = (oldFlour / 28.3495).toFixed(1);
+      
+      for (const key in activeIngredients) {
+        activeIngredients[key] = parseFloat((activeIngredients[key] / 28.3495).toFixed(1));
+      }
+      
+      const oldSlider = parseFloat(simulatorSlider.value);
+      simulatorSlider.value = (oldSlider / 28.3495).toFixed(3);
+      
+      currentUnit = 'imperial';
+      unitImperialBtn.classList.add('active');
+      unitMetricBtn.classList.remove('active');
+      renderSliders();
+      update();
+    }
+  });
+  
+  pillBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const type = btn.getAttribute('data-type');
+      if (activeIngredients[type] !== undefined) {
+        delete activeIngredients[type];
+        btn.classList.remove('active');
+      } else {
+        activeIngredients[type] = currentUnit === 'metric' ? 100 : 3.5;
+        btn.classList.add('active');
+      }
+      renderSliders();
+      update();
+    });
+  });
+  
+  function createSliderElement(key, isMetric, unitText) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'slider-wrapper-card';
+    const maxVal = isMetric ? MAX_LIMITS[key] : parseFloat((MAX_LIMITS[key] / 28.3495).toFixed(1));
+    const stepVal = isMetric ? 5 : 0.1;
+    wrapper.innerHTML = `<div class="slider-header-row"><span class="slider-label-name">${ui[`acid_${key}`] || key}</span><span class="slider-value-num">${activeIngredients[key]}${unitText}</span></div><input type="range" class="premium-range-slider" min="0" max="${maxVal}" stroke-linecap="round" step="${stepVal}" value="${activeIngredients[key]}" />`;
+    wrapper.querySelector('input').addEventListener('input', (e) => {
+      activeIngredients[key] = parseFloat(e.target.value) || 0;
+      wrapper.querySelector('.slider-value-num').textContent = `${activeIngredients[key]}${unitText}`;
+      update();
+    });
+    return wrapper;
+  }
+  
+  function renderSliders() {
+    activeSlidersContainer.innerHTML = '';
+    const isMetric = currentUnit === 'metric';
+    const unitText = isMetric ? 'g' : 'oz';
+    
+    for (const key in activeIngredients) {
+      const element = createSliderElement(key, isMetric, unitText);
+      activeSlidersContainer.appendChild(element);
+    }
+  }
+  
+  autoBalanceBtn.addEventListener('click', () => {
+    const isMetric = currentUnit === 'metric';
+    if (isMetric) {
+      simulatorSlider.value = targetRecommendedSoda.toFixed(2);
+    } else {
+      simulatorSlider.value = (targetRecommendedSoda / 28.3495).toFixed(3);
+    }
+    update();
+  });
+  
+  function getNeutralizedSoda(multiplier) {
+    let neutralized = 0;
+    for (const key in activeIngredients) {
+      const weightGrams = activeIngredients[key] * multiplier;
+      const ratio = ACID_RATIOS[key] || 0;
+      neutralized += weightGrams * ratio;
+    }
+    return neutralized;
+  }
+  
+  function updatePointer(diff, neutralizedSoda, simulatedSoda) {
+    let leftPercent = 50;
+    if (neutralizedSoda > 0) {
+      const ratio = simulatedSoda / neutralizedSoda;
+      if (ratio > 1) {
+        leftPercent = 50 + Math.min(45, (ratio - 1) * 35);
+      } else if (ratio < 1) {
+        leftPercent = 50 - Math.min(45, (1 - ratio) * 50);
+      }
+    } else {
+      leftPercent = simulatedSoda > 0 ? 95 : 50;
+    }
+    
+    phPointerOrb.style.left = `${leftPercent}%`;
+    
+    if (Math.abs(diff) <= 0.15) {
+      phPointerOrb.style.backgroundColor = '#10b981';
+      phPointerOrb.style.boxShadow = '0 0 20px #10b981';
+    } else if (diff > 0.15) {
+      phPointerOrb.style.backgroundColor = '#3b82f6';
+      phPointerOrb.style.boxShadow = '0 0 20px #3b82f6';
+    } else {
+      phPointerOrb.style.backgroundColor = '#ec4899';
+      phPointerOrb.style.boxShadow = '0 0 20px #ec4899';
+    }
+  }
+  
+  function updateOutputs(data) {
+    const isMetric = data.isMetric;
+    const neutralizedSoda = data.neutralizedSoda;
+    const boosterPowder = data.boosterPowder;
+    const simulatedSoda = data.simulatedSoda;
+    const sodaTsp = (neutralizedSoda / 6);
+    const boosterTsp = (boosterPowder / 4.8);
+
+    if (isMetric) {
+      formulaSodaG.textContent = `${neutralizedSoda.toFixed(2)}${ui.gramsUnit}`;
+      formulaBoosterG.textContent = `${boosterPowder.toFixed(2)}${ui.gramsUnit}`;
+      simulatorVal.textContent = `${simulatedSoda.toFixed(2)}${ui.gramsUnit}`;
+      formulaSodaTsp.style.display = 'none';
+      formulaBoosterTsp.style.display = 'none';
+      sodaSliderLabel.textContent = `${ui.sodaAddedLabel} (${ui.gramsUnit})`;
+    } else {
+      formulaSodaG.textContent = `${(neutralizedSoda / 28.3495).toFixed(3)}${ui.ouncesUnit}`;
+      formulaBoosterG.textContent = `${(boosterPowder / 28.3495).toFixed(3)}${ui.ouncesUnit}`;
+      simulatorVal.textContent = `${(simulatedSoda / 28.3495).toFixed(3)}${ui.ouncesUnit}`;
+      formulaSodaTsp.style.display = 'block';
+      formulaBoosterTsp.style.display = 'block';
+      formulaSodaTsp.textContent = `${sodaTsp.toFixed(2)} ${ui.teaspoonsUnit}`;
+      formulaBoosterTsp.textContent = `${boosterTsp.toFixed(2)} ${ui.teaspoonsUnit}`;
+      sodaSliderLabel.textContent = `${ui.sodaAddedLabel} (${ui.ouncesUnit})`;
+    }
+  }
+  
+  function update() {
+    const isMetric = currentUnit === 'metric';
+    const multiplier = isMetric ? 1 : 28.3495;
+    const flourVal = parseFloat(flourSlider.value) || 0;
+    flourValDisplay.textContent = `${flourVal}${isMetric ? 'g' : 'oz'}`;
+    const neutralizedSoda = getNeutralizedSoda(multiplier);
+    targetRecommendedSoda = neutralizedSoda;
+    const requiredPowder = flourVal * multiplier * 0.04;
+    const boosterPowder = Math.max(0, requiredPowder - (neutralizedSoda * 4));
+    simulatorSlider.max = Math.max(10, Math.ceil((neutralizedSoda / multiplier) * 2)).toString();
+    const simulatedSoda = parseFloat(simulatorSlider.value) * multiplier;
+    updateOutputs({ isMetric, neutralizedSoda, requiredPowder, boosterPowder, simulatedSoda });
+    updatePointer(simulatedSoda - neutralizedSoda, neutralizedSoda, simulatedSoda);
+  }
+  
+  flourSlider.addEventListener('input', update);
+  simulatorSlider.addEventListener('input', update);
+  
+  renderSliders();
+  update();
+</script>
