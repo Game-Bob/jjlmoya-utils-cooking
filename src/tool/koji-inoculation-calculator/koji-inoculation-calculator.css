@@ -99,16 +99,16 @@
 
 .koji-input-group .koji-input-field {
   width: 100%;
-  margin: 0 !important;
-  padding: 0.5rem 0 !important;
-  border: none !important;
-  border-bottom: 1.5px solid var(--koji-border-light) !important;
-  border-radius: 0 !important;
-  background-color: transparent !important;
+  margin: 0;
+  padding: 0.5rem 0;
+  border: none;
+  border-bottom: 1.5px solid var(--koji-border-light);
+  border-radius: 0;
+  background-color: transparent;
   font-size: 1.15rem;
   color: var(--koji-text-dark);
   outline: none;
-  box-shadow: none !important;
+  box-shadow: none;
   transition: border-color 0.2s ease;
 }
 
