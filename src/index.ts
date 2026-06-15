@@ -32,6 +32,7 @@ export { KOJI_INOCULATION_CALCULATOR_TOOL } from './tool/koji-inoculation-calcul
 export { CHEESE_FLOCCULATION_MULTIPLIER_TOOL } from './tool/cheese-flocculation-multiplier';
 export { DEHYDRATOR_MOISTURE_ESTIMATOR_TOOL } from './tool/dehydrator-moisture-estimator';
 export { DRY_AGING_MEAT_ESTIMATOR_TOOL } from './tool/dry-aging-meat-estimator';
+export { CHOCOLATE_TEMPERING_CURVE_GUIDE_TOOL } from './tool/chocolate-tempering-curve-guide';
 
 
 

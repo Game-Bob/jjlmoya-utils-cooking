@@ -29,6 +29,7 @@ import { kojiInoculationCalculator } from '../tool/koji-inoculation-calculator/e
 import { cheeseFlocculationMultiplier } from '../tool/cheese-flocculation-multiplier/entry';
 import { dehydratorMoistureEstimator } from '../tool/dehydrator-moisture-estimator/entry';
 import { dryAgingMeatEstimator } from '../tool/dry-aging-meat-estimator/entry';
+import { chocolateTemperingCurveGuide } from '../tool/chocolate-tempering-curve-guide/entry';
 
 
 export const cookingCategory: CookingCategoryEntry = {
@@ -64,6 +65,7 @@ export const cookingCategory: CookingCategoryEntry = {
     cheeseFlocculationMultiplier,
     dehydratorMoistureEstimator,
     dryAgingMeatEstimator,
+    chocolateTemperingCurveGuide,
   ],
 
 

@@ -29,6 +29,7 @@ export { kojiInoculationCalculator } from './tool/koji-inoculation-calculator/en
 export { cheeseFlocculationMultiplier } from './tool/cheese-flocculation-multiplier/entry';
 export { dehydratorMoistureEstimator } from './tool/dehydrator-moisture-estimator/entry';
 export { dryAgingMeatEstimator } from './tool/dry-aging-meat-estimator/entry';
+export { chocolateTemperingCurveGuide } from './tool/chocolate-tempering-curve-guide/entry';
 export { cookingCategory } from './category';
 import { americanKitchenConverter } from './tool/american-kitchen-converter/entry';
 import { bananaCare } from './tool/banana-ripeness/entry';
@@ -61,9 +62,10 @@ import { kojiInoculationCalculator } from './tool/koji-inoculation-calculator/en
 import { cheeseFlocculationMultiplier } from './tool/cheese-flocculation-multiplier/entry';
 import { dehydratorMoistureEstimator } from './tool/dehydrator-moisture-estimator/entry';
 import { dryAgingMeatEstimator } from './tool/dry-aging-meat-estimator/entry';
+import { chocolateTemperingCurveGuide } from './tool/chocolate-tempering-curve-guide/entry';
 
 
-export const ALL_ENTRIES = [americanKitchenConverter, bananaCare, brine, cookwareGuide, eggTimer, ingredientRescaler, kitchenTimer, meringuePeak, moldScaler, pizza, rouxGuide, sourdoughCalculator, yeastConverter, lactoFermentationSalt, spherificationBath, iceCreamPacPod, botulismCanningSafety, meatBinder, carryOverCooking, maillardReaction, macaronDrying, brixSorbetDensity, oilSmokePoint, leavenerAcidNeutralizer, pectinJam, sousVidePasteurization, emulsionStabilityCalculator, kojiInoculationCalculator, cheeseFlocculationMultiplier, dehydratorMoistureEstimator, dryAgingMeatEstimator];
+export const ALL_ENTRIES = [americanKitchenConverter, bananaCare, brine, cookwareGuide, eggTimer, ingredientRescaler, kitchenTimer, meringuePeak, moldScaler, pizza, rouxGuide, sourdoughCalculator, yeastConverter, lactoFermentationSalt, spherificationBath, iceCreamPacPod, botulismCanningSafety, meatBinder, carryOverCooking, maillardReaction, macaronDrying, brixSorbetDensity, oilSmokePoint, leavenerAcidNeutralizer, pectinJam, sousVidePasteurization, emulsionStabilityCalculator, kojiInoculationCalculator, cheeseFlocculationMultiplier, dehydratorMoistureEstimator, dryAgingMeatEstimator, chocolateTemperingCurveGuide];
 
 
 

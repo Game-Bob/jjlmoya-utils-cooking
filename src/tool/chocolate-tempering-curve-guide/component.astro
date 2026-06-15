@@ -1,0 +1,128 @@
+---
+import './chocolate-tempering-curve-guide.css';
+
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="choc-container" id="choc-app" data-ui={JSON.stringify(ui)}>
+  <div class="choc-outer-card">
+    <div class="choc-header-row">
+      <div class="choc-controls-header">
+        <div class="choc-unit-toggle">
+          <button type="button" id="choc-unit-metric" class="choc-unit-btn active">Metric</button>
+          <button type="button" id="choc-unit-imperial" class="choc-unit-btn">Imperial</button>
+        </div>
+      </div>
+    </div>
+    <div class="choc-grid">
+      
+      <div class="choc-inputs-col">
+        <div class="choc-input-group">
+          <label for="choc-type-select">{ui.chocolateTypeLabel}</label>
+          <div class="choc-select-wrapper">
+            <select id="choc-type-select" class="choc-select">
+              <option value="dark" selected>{ui.darkOption}</option>
+              <option value="milk">{ui.milkOption}</option>
+              <option value="white">{ui.whiteOption}</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="choc-input-group">
+          <div class="choc-slider-header">
+            <label for="choc-weight-input">{ui.totalWeightLabel}</label>
+            <span id="choc-weight-display" class="choc-slider-val">500 g</span>
+          </div>
+          <input
+            type="range"
+            id="choc-weight-input"
+            class="choc-slider-input"
+            min="100"
+            max="2000"
+            step="50"
+            value="500"
+          />
+        </div>
+        
+        <div class="choc-input-group">
+          <label class="choc-section-label">{ui.stepTitle}</label>
+          <div class="choc-steps-wrapper">
+            <div class="choc-thermometer-col">
+              <div class="choc-thermo-body">
+                <div class="choc-thermo-ticks">
+                  <span class="choc-thermo-tick"></span>
+                  <span class="choc-thermo-tick"></span>
+                  <span class="choc-thermo-tick"></span>
+                  <span class="choc-thermo-tick"></span>
+                  <span class="choc-thermo-tick"></span>
+                </div>
+                <div class="choc-thermo-fluid" id="choc-thermo-fluid"></div>
+              </div>
+              <div class="choc-thermo-bulb"></div>
+            </div>
+            
+            <div class="choc-steps-container">
+              <div class="choc-step-card active" data-step="1" id="choc-step-1">
+                <div class="choc-step-header">
+                  <span class="choc-step-title">{ui.meltLabel}</span>
+                </div>
+                <div class="choc-step-temp-massive" id="choc-step-melt-temp">50 °C</div>
+                <div class="choc-step-desc">Heat chocolate to break all existing crystal structures.</div>
+              </div>
+              
+              <div class="choc-step-card" data-step="2" id="choc-step-2">
+                <div class="choc-step-header">
+                  <span class="choc-step-title">{ui.coolLabel}</span>
+                </div>
+                <div class="choc-step-temp-massive" id="choc-step-cool-temp">28 °C</div>
+                <div class="choc-step-desc">Cool chocolate down and add seed callets to initiate crystallization.</div>
+              </div>
+              
+              <div class="choc-step-card" data-step="3" id="choc-step-3">
+                <div class="choc-step-header">
+                  <span class="choc-step-title">{ui.workLabel}</span>
+                </div>
+                <div class="choc-step-temp-massive" id="choc-step-work-temp">32 °C</div>
+                <div class="choc-step-desc">Reheat slightly to melt away unstable crystals while keeping form V.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="choc-visual-column">
+        <div class="choc-results-panel">
+          <h3 class="choc-results-title">{ui.seedingTitle}</h3>
+          <div class="choc-result-row">
+            <span class="choc-result-label">{ui.meltWeightLabel}</span>
+            <span class="choc-result-val" id="choc-melt-weight-display">375.0 g</span>
+          </div>
+          <div class="choc-result-row">
+            <span class="choc-result-label">{ui.seedWeightLabel}</span>
+            <span class="choc-result-val" id="choc-seed-weight-display">125.0 g</span>
+          </div>
+        </div>
+
+        <div class="choc-canvas-container">
+          <canvas id="choc-canvas" width="180" height="180" class="choc-canvas"></canvas>
+        </div>
+        
+        <div class="choc-molecular-box">
+          <h4 class="choc-molecular-title">{ui.molecularLabel}</h4>
+          <p class="choc-molecular-text" id="choc-molecular-display">
+            At this temperature, all crystal forms (I through VI) are completely melted, creating a completely fluid liquid of fat and sugar.
+          </p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  import './component.js';
+</script>
