@@ -1,0 +1,122 @@
+---
+import './dry-aging-meat-estimator.css';
+
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="dryaging-container" data-ui={JSON.stringify(ui)}>
+  <div class="dryaging-outer-card">
+    <div class="dryaging-header-row">
+      <div class="dryaging-controls-header">
+        <div class="dryaging-unit-toggle">
+          <button type="button" id="dryaging-unit-metric" class="dryaging-unit-btn active">Metric</button>
+          <button type="button" id="dryaging-unit-imperial" class="dryaging-unit-btn">Imperial</button>
+        </div>
+        <select id="dryaging-currency-select" class="dryaging-currency-select">
+          <option value="EUR" selected>EUR (€)</option>
+          <option value="USD">USD ($)</option>
+          <option value="GBP">GBP (£)</option>
+          <option value="JPY">JPY (¥)</option>
+          <option value="CHF">CHF</option>
+          <option value="PLN">PLN (zł)</option>
+          <option value="HUF">HUF (Ft)</option>
+          <option value="RUB">RUB (₽)</option>
+          <option value="SEK">SEK (kr)</option>
+          <option value="TRY">TRY (₺)</option>
+          <option value="CNY">CNY (¥)</option>
+          <option value="KRW">KRW (₩)</option>
+          <option value="IDR">IDR (Rp)</option>
+          <option value="CAD">CAD ($)</option>
+          <option value="AUD">AUD ($)</option>
+          <option value="BRL">BRL (R$)</option>
+        </select>
+      </div>
+    </div>
+    <div class="dryaging-grid">
+      <div class="dryaging-inputs-column">
+        <div class="dryaging-input-group">
+          <div class="dryaging-slider-header">
+            <label for="dryaging-startweight-input">{ui.startWeightLabel}</label>
+            <span id="dryaging-startweight-display" class="dryaging-slider-num"></span>
+          </div>
+          <input type="range" id="dryaging-startweight-input" class="dryaging-slider-input" min="1.0" max="25.0" step="0.5" value="10.0" />
+        </div>
+        <div class="dryaging-input-group">
+          <div class="dryaging-slider-header">
+            <label for="dryaging-days-input">{ui.daysLabel}</label>
+            <span id="dryaging-days-display" class="dryaging-slider-num"></span>
+          </div>
+          <input type="range" id="dryaging-days-input" class="dryaging-slider-input" min="0" max="60" step="1" value="30" />
+        </div>
+        <div class="dryaging-input-group">
+          <div class="dryaging-slider-header">
+            <label for="dryaging-humidity-input">{ui.humidityLabel}</label>
+            <span id="dryaging-humidity-display" class="dryaging-slider-num"></span>
+          </div>
+          <input type="range" id="dryaging-humidity-input" class="dryaging-slider-input" min="60" max="95" step="1" value="80" />
+        </div>
+        <div class="dryaging-input-group">
+          <div class="dryaging-slider-header">
+            <label for="dryaging-price-input">{ui.pricePerKgLabel}</label>
+            <span id="dryaging-price-display" class="dryaging-slider-num"></span>
+          </div>
+          <input type="range" id="dryaging-price-input" class="dryaging-slider-input" min="5.00" max="100.00" step="1.00" value="15.00" />
+        </div>
+        <div class="dryaging-timeline-container">
+          <h3 class="dryaging-timeline-title">{ui.timelineTitle}</h3>
+          <svg viewBox="0 0 300 120" class="dryaging-svg-timeline" id="dryaging-timeline-svg" xmlns="http://www.w3.org/2000/svg">
+            <path id="dryaging-timeline-track" d="M 20 80 L 280 40" fill="none" stroke="#e5e5ea" stroke-width="2" />
+            <path id="dryaging-timeline-curve" d="M 20 80 L 150 60" fill="none" stroke="#dc4c46" stroke-width="3.5" class="dryaging-timeline-line" />
+            <circle id="dryaging-timeline-dot" cx="150" cy="60" r="6" fill="#dc4c46" class="dryaging-timeline-pulse-dot" />
+            <line id="dryaging-timeline-axis-y" x1="150" y1="60" x2="150" y2="98" stroke="#dc4c46" stroke-width="1.2" stroke-dasharray="2 2" opacity="0.45" />
+            <text x="20" y="110" font-size="8" fill="currentColor" text-anchor="middle">0d</text>
+            <text x="85" y="110" font-size="8" fill="currentColor" text-anchor="middle">14d</text>
+            <text x="150" y="110" font-size="8" fill="currentColor" text-anchor="middle">30d</text>
+            <text x="215" y="110" font-size="8" fill="currentColor" text-anchor="middle">45d</text>
+            <text x="280" y="110" font-size="8" fill="currentColor" text-anchor="middle">60d</text>
+            <rect id="dryaging-timeline-interactive-trigger" x="0" y="0" width="300" height="120" fill="transparent" cursor="pointer" />
+          </svg>
+          <div id="dryaging-timeline-badges" class="dryaging-timeline-badges"></div>
+        </div>
+      </div>
+      <div class="dryaging-visual-column">
+        <div class="dryaging-status-display">
+          <div class="dryaging-canvas-container">
+            <canvas id="dryaging-canvas" width="160" height="160" class="dryaging-canvas"></canvas>
+          </div>
+          <div id="dryaging-status-badge" class="dryaging-status-badge"></div>
+          <div class="dryaging-giant-metric">
+            <span id="dryaging-finalweight-val" class="dryaging-giant-number"></span>
+            <span class="dryaging-giant-label">{ui.finalWeightLabel}</span>
+          </div>
+        </div>
+        <div class="dryaging-results-panel">
+          <div class="dryaging-result-card">
+            <span class="dryaging-result-label">{ui.yieldLabel}</span>
+            <span id="dryaging-yield-val" class="dryaging-result-val"></span>
+          </div>
+          <div class="dryaging-result-card">
+            <span class="dryaging-result-label">{ui.finalCostPerKgLabel}</span>
+            <span id="dryaging-finalcost-val" class="dryaging-result-val"></span>
+          </div>
+          <div class="dryaging-result-card">
+            <span class="dryaging-result-label">{ui.moistureLossLabel}</span>
+            <span id="dryaging-moistureloss-val" class="dryaging-result-val"></span>
+          </div>
+          <div class="dryaging-result-card">
+            <span class="dryaging-result-label">{ui.trimmingLossLabel}</span>
+            <span id="dryaging-trimmingloss-val" class="dryaging-result-val"></span>
+          </div>
+        </div>
+        <div id="dryaging-warning-low" class="dryaging-alert dryaging-alert-low">{ui.warningLowHumidity}</div>
+        <div id="dryaging-warning-high" class="dryaging-alert dryaging-alert-high">{ui.warningHighHumidity}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./component.js"></script>

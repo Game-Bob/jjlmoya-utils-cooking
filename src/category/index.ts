@@ -28,6 +28,8 @@ import { emulsionStabilityCalculator } from '../tool/emulsion-stability-calculat
 import { kojiInoculationCalculator } from '../tool/koji-inoculation-calculator/entry';
 import { cheeseFlocculationMultiplier } from '../tool/cheese-flocculation-multiplier/entry';
 import { dehydratorMoistureEstimator } from '../tool/dehydrator-moisture-estimator/entry';
+import { dryAgingMeatEstimator } from '../tool/dry-aging-meat-estimator/entry';
+
 
 export const cookingCategory: CookingCategoryEntry = {
   icon: 'mdi:chef-hat',
@@ -61,6 +63,7 @@ export const cookingCategory: CookingCategoryEntry = {
     kojiInoculationCalculator,
     cheeseFlocculationMultiplier,
     dehydratorMoistureEstimator,
+    dryAgingMeatEstimator,
   ],
 
 
