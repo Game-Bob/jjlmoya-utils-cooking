@@ -1,0 +1,157 @@
+---
+import './dehydrator-moisture-estimator.css';
+
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="dehydrator-container">
+  <div class="dehydrator-outer-card">
+    <div class="dehydrator-grid">
+      <div class="dehydrator-inputs-column">
+        <div class="dehydrator-section-header">
+          <h2>Inputs</h2>
+        </div>
+
+        <div class="dehydrator-input-group">
+          <label for="dehydrator-unit-system">{ui.unitSystemLabel}</label>
+          <select id="dehydrator-unit-system" class="dehydrator-input-field dehydrator-select-field">
+            <option value="metric" selected>{ui.metricOption}</option>
+            <option value="imperial">{ui.imperialOption}</option>
+          </select>
+        </div>
+
+        <div class="dehydrator-input-group">
+          <label for="dehydrator-preset">{ui.ingredientLabel}</label>
+          <select id="dehydrator-preset" class="dehydrator-input-field dehydrator-select-field">
+            <option value="beef" selected>{ui.beefOption}</option>
+            <option value="watermelon">{ui.watermelonOption}</option>
+            <option value="apple">{ui.appleOption}</option>
+            <option value="mango">{ui.mangoOption}</option>
+            <option value="mushroom">{ui.mushroomOption}</option>
+            <option value="custom">{ui.customOption}</option>
+          </select>
+        </div>
+
+        <div class="dehydrator-input-group">
+          <div class="dehydrator-slider-container">
+            <label for="dehydrator-initial-moisture">{ui.initialMoistureLabel}</label>
+            <span id="dehydrator-initial-moisture-val" class="dehydrator-slider-num">70%</span>
+          </div>
+          <input
+            type="range"
+            id="dehydrator-initial-moisture"
+            class="dehydrator-slider-input"
+            min="10"
+            max="98"
+            step="1"
+            value="70"
+          />
+        </div>
+
+        <div class="dehydrator-input-group">
+          <div class="dehydrator-slider-container">
+            <label for="dehydrator-target-moisture">{ui.targetMoistureLabel}</label>
+            <span id="dehydrator-target-moisture-val" class="dehydrator-slider-num">10%</span>
+          </div>
+          <input
+            type="range"
+            id="dehydrator-target-moisture"
+            class="dehydrator-slider-input"
+            min="2"
+            max="50"
+            step="1"
+            value="10"
+          />
+        </div>
+
+        <div class="dehydrator-input-group">
+          <label for="dehydrator-weight">{ui.weightLabel} <span id="dehydrator-weight-unit">(g)</span></label>
+          <input
+            type="number"
+            id="dehydrator-weight"
+            class="dehydrator-input-field"
+            min="10"
+            max="10000"
+            step="10"
+            value="500"
+          />
+        </div>
+
+        <div class="dehydrator-input-group">
+          <label for="dehydrator-temp">{ui.tempLabel} <span id="dehydrator-temp-unit">(°C)</span></label>
+          <input
+            type="number"
+            id="dehydrator-temp"
+            class="dehydrator-input-field"
+            min="30"
+            max="90"
+            step="1"
+            value="68"
+          />
+        </div>
+      </div>
+
+      <div class="dehydrator-results-column">
+        <div class="dehydrator-section-header">
+          <h2>Results</h2>
+        </div>
+
+        <div class="dehydrator-results-pane">
+          <div>
+            <div class="dehydrator-output-stat">
+              <div id="dehydrator-target-weight" class="dehydrator-giant-number">0g</div>
+              <div class="dehydrator-giant-label">{ui.targetWeightLabel}</div>
+            </div>
+
+            <div class="dehydrator-output-stat">
+              <div id="dehydrator-water-evaporated" class="dehydrator-giant-number">0g</div>
+              <div class="dehydrator-giant-label">{ui.waterEvaporatedLabel}</div>
+            </div>
+
+            <div class="dehydrator-output-stat">
+              <div id="dehydrator-estimated-hours" class="dehydrator-giant-number">0h</div>
+              <div class="dehydrator-giant-label">{ui.estimatedHoursLabel}</div>
+            </div>
+          </div>
+
+          <div class="dehydrator-shrinkage-visualizer">
+            <svg
+              id="dehydrator-visual-slice"
+              class="dehydrator-visual-svg"
+              viewBox="0 0 120 120"
+              width="280"
+              height="280"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <radialGradient id="slice-grad" cx="50%" cy="50%" r="50%" fx="35%" fy="35%">
+                  <stop offset="0%" stop-color="#ffcc80" />
+                  <stop offset="70%" stop-color="#ffb74d" />
+                  <stop offset="100%" stop-color="#ffa726" />
+                </radialGradient>
+                <filter id="shrivel-filter" x="-30%" y="-30%" width="160%" height="160%">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" result="noise" />
+                  <feDisplacementMap in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" id="shrivel-displacement" />
+                </filter>
+              </defs>
+              <circle cx="60" cy="60" r="45" fill="none" class="dehydrator-dashed-ring" />
+              <g id="dehydrator-active-group" style="filter: url('#shrivel-filter'); transform-origin: 60px 60px;">
+                <circle cx="60" cy="60" r="45" fill="url(#slice-grad)" stroke="#e65100" stroke-width="3" />
+                <path d="M 60 60 L 60 15 M 60 60 L 99 38 M 60 60 L 99 82 M 60 60 L 60 105 M 60 60 L 21 82 M 60 60 L 21 38" stroke="#e65100" stroke-width="1.5" />
+              </g>
+            </svg>
+            <div class="dehydrator-giant-label" style="margin-top: 1.5rem;">{ui.shrinkageLabel}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import './client';
+</script>

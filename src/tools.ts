@@ -58,8 +58,11 @@ export const ALL_TOOLS: ToolDefinition[] = [
   EMULSION_STABILITY_CALCULATOR_TOOL,
   KOJI_INOCULATION_CALCULATOR_TOOL,
   CHEESE_FLOCCULATION_MULTIPLIER_TOOL,
+  DEHYDRATOR_MOISTURE_ESTIMATOR_TOOL,
 ];
 import { KOJI_INOCULATION_CALCULATOR_TOOL } from './tool/koji-inoculation-calculator';
 import { CHEESE_FLOCCULATION_MULTIPLIER_TOOL } from './tool/cheese-flocculation-multiplier';
+import { DEHYDRATOR_MOISTURE_ESTIMATOR_TOOL } from './tool/dehydrator-moisture-estimator';
+
 
 

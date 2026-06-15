@@ -30,6 +30,8 @@ export { SOUS_VIDE_PASTEURIZATION_TOOL } from './tool/sous-vide-pasteurization-c
 export { EMULSION_STABILITY_CALCULATOR_TOOL } from './tool/emulsion-stability-calculator';
 export { KOJI_INOCULATION_CALCULATOR_TOOL } from './tool/koji-inoculation-calculator';
 export { CHEESE_FLOCCULATION_MULTIPLIER_TOOL } from './tool/cheese-flocculation-multiplier';
+export { DEHYDRATOR_MOISTURE_ESTIMATOR_TOOL } from './tool/dehydrator-moisture-estimator';
+
 
 
 

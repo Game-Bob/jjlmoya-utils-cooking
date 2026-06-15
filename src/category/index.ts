@@ -27,6 +27,7 @@ import { sousVidePasteurization } from '../tool/sous-vide-pasteurization-curves/
 import { emulsionStabilityCalculator } from '../tool/emulsion-stability-calculator/entry';
 import { kojiInoculationCalculator } from '../tool/koji-inoculation-calculator/entry';
 import { cheeseFlocculationMultiplier } from '../tool/cheese-flocculation-multiplier/entry';
+import { dehydratorMoistureEstimator } from '../tool/dehydrator-moisture-estimator/entry';
 
 export const cookingCategory: CookingCategoryEntry = {
   icon: 'mdi:chef-hat',
@@ -59,6 +60,7 @@ export const cookingCategory: CookingCategoryEntry = {
     emulsionStabilityCalculator,
     kojiInoculationCalculator,
     cheeseFlocculationMultiplier,
+    dehydratorMoistureEstimator,
   ],
 
 
