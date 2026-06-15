@@ -13,6 +13,12 @@
   --cheese-warning-text: #b45309;
   --cheese-glow: rgba(217, 119, 6, 0.15);
   --cheese-clock-bg: rgba(120, 113, 108, 0.04);
+  --cheese-white: #fff;
+  --cheese-success: #10b981;
+  --cheese-status-coag-bg: #047857;
+  --cheese-status-coag-border: #065f46;
+  --cheese-border-gray: #71717a;
+  --cheese-text-dark: #27272a;
 }
 
 .theme-dark :root,
@@ -31,18 +37,18 @@
   --cheese-warning-text: #fbbf24;
   --cheese-glow: rgba(245, 158, 11, 0.2);
   --cheese-clock-bg: rgba(255, 255, 255, 0.01);
+  --cheese-option-bg-dark: #18181b;
 }
 
 .theme-dark select.cheese-select-field option {
-  background-color: #18181b;
-  color: #e4e4e7;
+  background-color: var(--cheese-option-bg-dark);
+  color: var(--cheese-text);
 }
 
 .cheese-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem 1rem;
-  font-family: 'Outfit', sans-serif;
   color: var(--cheese-text);
 }
 
@@ -111,7 +117,6 @@
   cursor: pointer;
   border-radius: 10px;
   transition: all 0.2s ease;
-  font-family: inherit;
 }
 
 .cheese-tab-btn.active {
@@ -142,7 +147,6 @@
   border-radius: 14px;
   font-size: 1rem;
   color: var(--cheese-text-strong);
-  font-family: inherit;
   transition: all 0.2s ease;
   box-sizing: border-box;
 }
@@ -196,13 +200,13 @@
   border-radius: 50%;
   background: var(--cheese-accent);
   cursor: pointer;
-  border: 3px solid #ffffff;
+  border: 3px solid var(--cheese-white);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.15s ease;
 }
 
 .theme-dark .cheese-slider-input::-webkit-slider-thumb {
-  border-color: #18181b;
+  border-color: var(--cheese-option-bg-dark);
 }
 
 .cheese-slider-input::-webkit-slider-thumb:hover {
@@ -249,7 +253,6 @@
   font-weight: 700;
   border: none;
   cursor: pointer;
-  font-family: inherit;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
@@ -260,7 +263,7 @@
 
 .cheese-btn-primary {
   background: var(--cheese-accent);
-  color: #ffffff;
+  color: var(--cheese-white);
 }
 
 .cheese-btn-primary:hover:not(:disabled) {
@@ -273,8 +276,8 @@
 
 .cheese-btn-secondary {
   background: transparent;
-  border: 1px solid #71717a;
-  color: #27272a;
+  border: 1px solid var(--cheese-border-gray);
+  color: var(--cheese-text-dark);
 }
 
 .theme-dark .cheese-btn-secondary {
@@ -303,7 +306,7 @@
 
 .cheese-action-panel.is-completed #btn-primary {
   background: var(--cheese-accent);
-  color: #ffffff;
+  color: var(--cheese-white);
   border: none;
   opacity: 1;
 }
@@ -343,9 +346,9 @@
 }
 
 .cheese-status-badge.waiting {
-  background: #047857;
-  border: 1px solid #065f46;
-  color: #ffffff;
+  background: var(--cheese-status-coag-bg);
+  border: 1px solid var(--cheese-status-coag-border);
+  color: var(--cheese-white);
   font-variant: all-small-caps;
   letter-spacing: 0.1em;
   font-weight: 700;
@@ -356,13 +359,13 @@
   border: 1px solid rgba(245, 158, 11, 0.3);
   color: var(--cheese-accent);
   font-variant: normal;
-  animation: badgePulse 2s infinite ease-in-out;
+  animation: badge-pulse 2s infinite ease-in-out;
 }
 
 .cheese-status-badge.coagulating {
-  background: #047857;
-  border: 1px solid #065f46;
-  color: #ffffff;
+  background: var(--cheese-status-coag-bg);
+  border: 1px solid var(--cheese-status-coag-border);
+  color: var(--cheese-white);
   font-variant: all-small-caps;
   letter-spacing: 0.1em;
   font-weight: 700;
@@ -373,10 +376,10 @@
   border: 1px solid rgba(245, 158, 11, 0.3);
   color: var(--cheese-accent);
   font-variant: normal;
-  animation: badgePulse 2s infinite ease-in-out;
+  animation: badge-pulse 2s infinite ease-in-out;
 }
 
-@keyframes badgePulse {
+@keyframes badge-pulse {
   0%, 100% {
     opacity: 0.7;
   }
@@ -387,7 +390,7 @@
 
 .cheese-status-badge.ready {
   background: rgba(16, 185, 129, 0.08);
-  color: #10b981;
+  color: var(--cheese-success);
 }
 
 .cheese-timer-wrapper {
@@ -426,7 +429,7 @@
 }
 
 .cheese-svg-progress.solid {
-  stroke: #10b981;
+  stroke: var(--cheese-success);
   stroke-width: 10;
 }
 
@@ -446,7 +449,6 @@
   font-size: 3.5rem;
   font-weight: 800;
   color: var(--cheese-text-strong);
-  font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
   line-height: 1;
   letter-spacing: -0.02em;
 }
