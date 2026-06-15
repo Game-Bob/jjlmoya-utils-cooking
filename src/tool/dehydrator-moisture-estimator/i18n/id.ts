@@ -165,7 +165,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'tip',
-      title: 'Selalu Lakukan Pra-perlakuan pada Buah',
+      title: 'Selalu Lakukan Praolahan pada Buah',
       html: 'Celupkan apel, pisang, dan pir ke dalam jus lemon ou larutan asam askorbat sebelum dikeringkan untuk mencegah pencokelatan dan mempertahankan warna.'
     },
     {

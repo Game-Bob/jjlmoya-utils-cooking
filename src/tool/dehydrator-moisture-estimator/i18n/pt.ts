@@ -165,7 +165,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'tip',
-      title: 'Sempre faça o pré-tratamento das frutas',
+      title: 'Sempre faça o pretratamento das frutas',
       html: 'Mergulhe maçãs, bananas e peras em suco de limão ou solução de ácido ascórbico antes de desidratar para evitar o escurecimento e preservar a cor.'
     },
     {

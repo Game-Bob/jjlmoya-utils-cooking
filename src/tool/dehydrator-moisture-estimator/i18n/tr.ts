@@ -143,20 +143,20 @@ export const content: ToolLocaleContent = {
       columns: 3,
       items: [
         {
-          title: 'Düşük Sıcaklık 40 - 50 °C',
+          title: 'Düsük Sicaklik 40 ile 50 °C',
           icon: 'mdi:thermometer',
           description: 'Enzimleri, besin değerlerini ve hassas aromaları korumak için en iyisidir.',
           points: ['Otlar ve yapraklı yeşillikler', 'Mantarlar', 'Çiğ gıda (raw food) koruma', 'Daha uzun kuruma süresi gerekir']
         },
         {
-          title: 'Orta Sıcaklık 50 - 60 °C',
+          title: 'Orta Sicaklik 50 ile 60 °C',
           icon: 'mdi:thermometer',
           description: 'Çoğu meyve ve sebze için standart aralık.',
           highlight: true,
           points: ['Elma ve mango dilimleri', 'Sebzelerin çoğu', 'Meyve pestilleri', 'Denge kuruma hızı ve kalite']
         },
         {
-          title: 'Yüksek Sıcaklık 60 - 70 °C',
+          title: 'Yüksek Sicaklik 60 ile 70 °C',
           icon: 'mdi:thermometer',
           description: 'Kuru et ve gıda güvenliği gerektiren yoğun gıdalar için kullanılır.',
           points: ['Dana ve hindi eti kurusu', 'Yoğun kök sebzeler', 'Gıda güvenliği önceliği', 'Daha kısa kurutma aralığı']

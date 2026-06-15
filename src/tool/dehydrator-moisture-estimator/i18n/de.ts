@@ -123,7 +123,7 @@ export const content: ToolLocaleContent = {
     {
       type: 'list',
       items: [
-        '<strong>Endurecimiento exterior (Case hardening):</strong> Die äußere Schicht trocknet zu schnell und schließt Feuchtigkeit im Inneren ein. Reduzieren Sie die Temperatur um 5–10 °C und erhöhen Sie die Luftzirkulation.',
+        '<strong>Endurecimiento exterior (Case hardening):</strong> Die äußere Schicht trocknet zu schnell und schließt Feuchtigkeit im Inneren ein. Reduzieren Sie die Temperatur um 5-10 °C und erhöhen Sie die Luftzirkulation.',
         '<strong>Schimmel während der Lagerung:</strong> Die Lebensmittel wurden nicht ausreichend getrocknet. Verwenden Sie den Rechner, um Ihr Zielgewicht zu bestimmen, und überprüfen Sie es mit einem Feuchtigkeitstest.',
         '<strong>Uneinheitliches Trocknen:</strong> Stücke wurden in unterschiedlichen Dicken geschnitten oder der Dörrautomat wurde überladen. Schneiden Sie gleichmäßige Stücke und lassen Sie Platz dazwischen.',
         '<strong>Lebensmittel zu trocken und brüchig:</strong> Übermäßiges Dörren führt zu Geschmacks- und Texturverlust. Überprüfen Sie die Ziel-Feuchtigkeitswerte für Ihre spezifische Zutat.'
@@ -171,7 +171,7 @@ export const content: ToolLocaleContent = {
     {
       type: 'tip',
       title: 'Gitter während des Trocknens rotieren',
-      html: 'Dörrautomaten haben oft heiße Zonen. Rotieren Sie die Gitter alle 2–3 Stunden von oben nach unten und von vorne nach hinten für gleichmäßiges Trocknen.'
+      html: 'Dörrautomaten haben oft heiße Zonen. Rotieren Sie die Gitter alle 2-3 Stunden von oben nach unten und von vorne nach hinten für gleichmäßiges Trocknen.'
     },
     {
       type: 'tip',
@@ -196,9 +196,9 @@ export const content: ToolLocaleContent = {
       type: 'summary',
       title: 'Wichtige Erkenntnisse für perfektes Dörren',
       items: [
-        'Verschiedene Zutaten haben sehr unterschiedliche Anfangsfeuchtigkeiten (70–92 %). Nutzen Sie die Voreinstellungen für genaue Schätzungen.',
-        'Die Zielfeuchtigkeit variiert je nach Lebensmittel: 10 % für Jerky, 15–20 % für Obst, 5–8 % für Gemüse und Pilze.',
-        'Die Dörrtemperatur beeinflusst Geschwindigkeit und Qualität. Bleiben Sie für die meisten Lebensmittel im Bereich von 50–60 °C.',
+        'Verschiedene Zutaten haben sehr unterschiedliche Anfangsfeuchtigkeiten (70-92 %). Nutzen Sie die Voreinstellungen für genaue Schätzungen.',
+        'Die Zielfeuchtigkeit variiert je nach Lebensmittel: 10 % für Jerky, 15-20 % für Obst, 5-8 % für Gemüse und Pilze.',
+        'Die Dörrtemperatur beeinflusst Geschwindigkeit und Qualität. Bleiben Sie für die meisten Lebensmittel im Bereich von 50-60 °C.',
         'Case Hardening ruiniert die Textur. Vermeiden Sie Temperaturen über 70 °C und sorgen Sie für eine gute Luftzirkulation.',
         'Konditionieren Sie gedörrte Lebensmittel immer 1 Woche lang vor der langfristigen Lagerung, um eine gleichmäßige Feuchtigkeitsverteilung zu gewährleisten.'
       ]

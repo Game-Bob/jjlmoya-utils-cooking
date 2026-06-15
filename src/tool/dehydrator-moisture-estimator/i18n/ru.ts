@@ -123,7 +123,7 @@ export const content: ToolLocaleContent = {
     {
       type: 'list',
       items: [
-        '<strong>«Закаливание» поверхности (Case hardening):</strong> Внешний слой сохнет слишком быстро, запирая влагу внутри. Снизьте температуру на 5-10 °C и улучшите вентиляцию.',
+        '<strong>"Zakalivaniye" poverkhnosti (Case hardening):</strong> Vneshniy sloy sokhnet slishkom bystro, zapiraya vlagu vnutri. Snizyte temperaturu na 5-10 °C i uluchshite ventilyatsiyu.',
         '<strong>Плесень при хранении:</strong> Продукт не был досушен до безопасного уровня влажности. С помощью калькулятора определите целевой вес и проверьте готовность.',
         '<strong>Неравномерная сушка:</strong> Кусочки нарезаны разной толщины или дегидратор перегружен. Нарезайте продукты одинаково и оставляйте место между ними.',
         '<strong>Продукты пересушены и крошатся:</strong> Избыточная сушка приводит к потере вкуса и текстуры. Проверяйте нормы влажности для каждого конкретного ингредиента.'
@@ -136,27 +136,27 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Температура влияет как на скорость сушки, так и на качество готового продукта. Высокие температуры ускоряют испарение воды, но могут вызвать «закаливание» поверхности, разрушение полезных веществ и неравномерный результат. Используйте следующие ориентиры для дегидратора:'
+      html: 'Temperatura vlijaet kak na skorost sushki, tak i na kachestvo gotovogo produkta. Vysokiye temperatury uskorjajut ispareniye vody, no mogut vyzvat zhestkost poverkhnosti, razrusheniye poleznykh veshchestv i neravnomernyy rezultat. Ispolzuyte sledujushchiye oriyentiry dlya degidratatora:'
     },
     {
       type: 'comparative',
       columns: 3,
       items: [
         {
-          title: 'Низкая температура (40–50 °C)',
+          title: 'Nizkaya temperatura 40 do 50 gradusov',
           icon: 'mdi:thermometer',
           description: 'Идеально для сохранения энзимов, витаминов и деликатных ароматов.',
           points: ['Травы и зелень', 'Грибы', 'Сохранение сыроедческих продуктов', 'Требуется больше времени']
         },
         {
-          title: 'Средняя температура (50–60 °C)',
+          title: 'Srednyaya temperatura 50 do 60 gradusov',
           icon: 'mdi:thermometer',
           description: 'Стандартный диапазон для большинства фруктов и овощей.',
           highlight: true,
           points: ['Яблоки и манго', 'Большинство овощей', 'Фруктовая пастила', 'Баланс скорости и качества']
         },
         {
-          title: 'Высокая температура (60–70 °C)',
+          title: 'Vysokaya temperatura 60 do 70 gradusov',
           icon: 'mdi:thermometer',
           description: 'Используется для вяленого мяса и плотных продуктов из соображений безопасности.',
           points: ['Джерки из говядины и птицы', 'Плотные корнеплоды', 'Приоритет пищевой безопасности', 'Более короткий цикл сушки']
@@ -171,12 +171,12 @@ export const content: ToolLocaleContent = {
     {
       type: 'tip',
       title: 'Поворачивайте поддоны во время сушки',
-      html: 'В дегидраторах часто бывают более горячие зоны. Переставляйте поддоны сверху вниз и поворачивайте их каждые 2–3 часа для равномерного результата.'
+      html: 'V degidratorakh chasto byvajut boleye goryachiye zony. Perestavlyayte poddony sverkhu vniz i povernivayte ikh kazhdyye 2-3 chasa dlya ravnomernogo rezultata.'
     },
     {
       type: 'tip',
-      title: 'Дайте продуктам «отлежаться» перед хранением',
-      html: 'После сушки остудите продукты и подержите в закрытой емкости 1 неделю ежедневно встряхивая. Если появится конденсат, досушите.'
+      title: 'Dayte produktam otlezhatsa pered khraneniyem',
+      html: 'Posle sushki ostudite produkty i podderzhite v zakrytoy emkosti 1 nedelyu ezhednevno vstryakhivaja. Yesli poyavitsya kondensat, dousushite.'
     },
     {
       type: 'title',
@@ -186,7 +186,7 @@ export const content: ToolLocaleContent = {
     {
       type: 'glossary',
       items: [
-        { term: '«Закаливание» поверхности', definition: 'Состояние, когда внешняя поверхность продукта высыхает слишком быстро, образуя корку, которая задерживает влагу внутри и мешает полной сушке.' },
+        { term: 'Zhestkost poverkhnosti', definition: 'Sostoyaniye, kogda vneshnyaya poverkhnost produkta vysykhayet slishkom bystro, obrazuya korku, kotoraya zaderzhivayet vlagu vnutri i meshayet polnoy sushke.' },
         { term: 'Активность воды (aw)', definition: 'Показатель свободной воды, доступной для роста микроорганизмов. Для безопасного хранения вяленых продуктов aw должна быть ниже 0,60.' },
         { term: 'Содержание влаги', definition: 'Процент веса воды относительно общего веса продукта. Позволяет контролировать ход сушки и безопасность хранения.' },
         { term: 'Коэффициент усушки', definition: 'Отношение первоначального веса к весу готового продукта после сушки. Важно для расчета объемов сырья и тары.' }
@@ -196,11 +196,11 @@ export const content: ToolLocaleContent = {
       type: 'summary',
       title: 'Ключевые выводы для идеальной сушки',
       items: [
-        'У разных продуктов разная начальная влажность (70-92%). Используйте предустановки для точных расчетов.',
-        'Целевая влажность зависит от продукта: 10% для джерки, 15-20% для фруктов, 5-8% для овощей и грибов.',
-        'Температура сушки влияет на скорость и качество. Держитесь диапазона 50-60 °C для большинства продуктов.',
-        '«Закаливание» портит текстуру. Не превышайте температуру в 70 °C и обеспечьте хорошую циркуляцию воздуха.',
-        'Всегда давайте продуктам отлежаться неделю перед долгосрочным хранением, чтобы влага внутри распределилась равномерно.'
+        'U raznykh produktov raznaya nachalnaya vlazhnost (70-92%). Ispolzuyte predoustanovki dlya tochnykh raschetov.',
+        'Tselevaya vlazhnost zavisit ot produkta: 10% dlya dzhurki, 15-20% dlya fruktov, 5-8% dlya ovoshchey i gribov.',
+        'Temperatura sushki vlijaet na skorost i kachestvo. Derzhites diapazona 50-60 °C dlya bolshinstva produktov.',
+        'Zhestkost poverkhnosti portit teksturu. Ne prevyshajte temperaturu v 70 °C i obespechtye khoroshuyu tsirkulyatsiyu vozdukha.',
+        'Vsegda davayte produktam otlezhatsa nedelyu pered dolgosrochnym khraneniyem, chtoby vlaga vnutri raspredelilas ravnomerno.'
       ]
     }
   ],

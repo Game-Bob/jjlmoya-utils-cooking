@@ -197,7 +197,7 @@ export const content: ToolLocaleContent = {
       title: 'Points clés pour une déshydratation parfaite',
       items: [
         'Différents ingrédients ont des taux d\'humidité initiaux très différents (70-92 %). Utilisez les préréglages pour des estimations précises.',
-        'L\'humidité cible varie selon l\'aliment : 10 % pour le jerky, 15-20 % pour les fruits, 5-8 % pour les légumes et champignons.',
+        'L\'humidité cible varie selon l\'aliment: 10 % pour le jerky, 15-20 % pour les fruits, 5-8 % pour les légumes et champignons.',
         'La température de séchage affecte à la fois la vitesse et la qualité. Restez dans la plage de 50-60 °C pour la plupart des aliments.',
         'L\'endurcissement superficiel gâche la texture. Évitez les températures supérieures à 70 °C et assurez une bonne circulation de l\'air.',
         'Conditionnez toujours les aliments déshydratés pendant 1 semaine avant le stockage à long terme pour assurer une répartition uniforme de l\'humidité.'
