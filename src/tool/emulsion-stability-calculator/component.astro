@@ -1,0 +1,300 @@
+---
+import './emulsion-stability-calculator.css';
+
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="emulsion-container">
+  <div class="emulsion-outer-card">
+    <div class="emulsion-grid">
+      <div class="emulsion-inputs-column">
+        <div class="emulsion-section-header">
+          <h2>Ingredients</h2>
+        </div>
+
+        <div class="emulsion-input-group">
+          <label for="emulsifier-select">{ui.emulsifierLabel}</label>
+          <select id="emulsifier-select" class="emulsion-input-field emulsion-select-field">
+            <option value="yolk" selected>{ui.yolkOption}</option>
+            <option value="mustard">{ui.mustardOption}</option>
+            <option value="soy_lecithin">{ui.soyLecithinOption}</option>
+            <option value="polysorbate">{ui.polysorbateOption}</option>
+          </select>
+        </div>
+
+        <div class="emulsion-input-group">
+          <div class="emulsion-slider-header">
+            <label for="water-input">{ui.waterLabel}</label>
+            <span id="water-val-display" class="emulsion-slider-num">30 ml</span>
+          </div>
+          <input
+            type="range"
+            id="water-input"
+            class="emulsion-slider-input"
+            min="10"
+            max="150"
+            step="1"
+            value="30"
+          />
+        </div>
+
+        <div class="emulsion-input-group">
+          <div class="emulsion-slider-header">
+            <label for="oil-input">{ui.oilLabel}</label>
+            <span id="oil-val-display" class="emulsion-slider-num">100 ml</span>
+          </div>
+          <input
+            type="range"
+            id="oil-input"
+            class="emulsion-slider-input"
+            min="20"
+            max="400"
+            step="5"
+            value="100"
+          />
+        </div>
+      </div>
+
+      <div class="emulsion-visual-column">
+        <div class="emulsion-status-display">
+          <div id="status-badge" class="emulsion-status-badge"></div>
+          <div class="emulsion-giant-metric">
+            <span id="ratio-val" class="emulsion-giant-number">0%</span>
+            <span class="emulsion-giant-label">{ui.ratioLabel}</span>
+          </div>
+        </div>
+
+        <div class="emulsion-visualizer">
+          <svg viewBox="0 0 240 240" class="emulsion-svg" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="oil-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#fbbf24" />
+                <stop offset="100%" stop-color="#d97706" />
+              </linearGradient>
+              <linearGradient id="water-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#f8fafc" />
+                <stop offset="100%" stop-color="#f1f5f9" />
+              </linearGradient>
+              <linearGradient id="stable-mix-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#fef08a" />
+                <stop offset="100%" stop-color="#fde047" />
+              </linearGradient>
+            </defs>
+
+            <path id="beaker-stable" d="M 62 80 L 62 188 A 10 10 0 0 0 72 198 L 168 198 A 10 10 0 0 0 178 188 L 178 80 Z" fill="url(#stable-mix-grad)" opacity="0.95" />
+            
+            <g id="split-beaker" opacity="0">
+              <path id="beaker-water" d="M 62 130 L 62 188 A 10 10 0 0 0 72 198 L 168 198 A 10 10 0 0 0 178 188 L 178 130 Z" fill="url(#water-grad)" />
+              <path id="beaker-oil" d="M 62 80 L 62 130 L 178 130 L 178 80 Z" fill="url(#oil-grad)" />
+              <path id="beaker-wave" d="M 62 130 Q 120 125 178 130" stroke="#d97706" stroke-width="2" fill="none" />
+            </g>
+
+            <path d="M 60 40 L 60 190 A 12 12 0 0 0 72 202 L 168 202 A 12 12 0 0 0 180 190 L 180 40" fill="none" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" />
+            <path d="M 52 40 L 188 40" stroke="#94a3b8" stroke-width="6" stroke-linecap="round" />
+
+            <g id="droplets-group">
+              <circle class="emulsion-droplet" cx="120" cy="120" r="4" fill="url(#oil-grad)" />
+              <circle class="emulsion-droplet" cx="90" cy="90" r="4" fill="url(#oil-grad)" />
+              <circle class="emulsion-droplet" cx="150" cy="100" r="4" fill="url(#oil-grad)" />
+              <circle class="emulsion-droplet" cx="100" cy="140" r="4" fill="url(#oil-grad)" />
+              <circle class="emulsion-droplet" cx="140" cy="150" r="4" fill="url(#oil-grad)" />
+              <circle class="emulsion-droplet" cx="110" cy="80" r="4" fill="url(#oil-grad)" />
+              <circle class="emulsion-droplet" cx="130" cy="160" r="4" fill="url(#oil-grad)" />
+              <circle class="emulsion-droplet" cx="80" cy="120" r="4" fill="url(#oil-grad)" />
+              <circle class="emulsion-droplet" cx="160" cy="130" r="4" fill="url(#oil-grad)" />
+              <circle class="emulsion-droplet" cx="100" cy="110" r="4" fill="url(#oil-grad)" />
+              <circle class="emulsion-droplet" cx="140" cy="120" r="4" fill="url(#oil-grad)" />
+              <circle class="emulsion-droplet" cx="120" cy="145" r="4" fill="url(#oil-grad)" />
+              <circle class="emulsion-droplet" cx="115" cy="95" r="4" fill="url(#oil-grad)" />
+              <circle class="emulsion-droplet" cx="85" cy="150" r="4" fill="url(#oil-grad)" />
+              <circle class="emulsion-droplet" cx="155" cy="75" r="4" fill="url(#oil-grad)" />
+            </g>
+          </svg>
+        </div>
+
+        <div class="emulsion-limit-indicator">
+          <span>{ui.maxLimitLabel}</span>
+          <strong id="limit-val">0 ml</strong>
+        </div>
+
+        <div id="fix-panel" class="emulsion-fix-panel" style="display: none;">
+          <h3 class="emulsion-fix-title">{ui.fixTitle}</h3>
+          <p class="emulsion-fix-item">
+            {ui.waterFixText} <strong id="fix-water-val">0</strong> ml
+          </p>
+          <p class="emulsion-fix-item">
+            {ui.yolkFixText} <strong id="fix-yolk-val">0</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ ui }}>
+  const STORAGE_KEY = 'emulsion-stability-state-v4';
+  const emulsifierSelect = document.getElementById('emulsifier-select');
+  const waterInput = document.getElementById('water-input');
+  const oilInput = document.getElementById('oil-input');
+
+  const waterValDisplay = document.getElementById('water-val-display');
+  const oilValDisplay = document.getElementById('oil-val-display');
+
+  const beakerStable = document.getElementById('beaker-stable');
+  const splitBeaker = document.getElementById('split-beaker');
+  const beakerWater = document.getElementById('beaker-water');
+  const beakerOil = document.getElementById('beaker-oil');
+  const beakerWave = document.getElementById('beaker-wave');
+  const dropletsGroup = document.getElementById('droplets-group');
+  const droplets = document.querySelectorAll('.emulsion-droplet');
+
+  const statusBadge = document.getElementById('status-badge');
+  const ratioVal = document.getElementById('ratio-val');
+  const limitVal = document.getElementById('limit-val');
+
+  const fixPanel = document.getElementById('fix-panel');
+  const fixWaterVal = document.getElementById('fix-water-val');
+  const fixYolkVal = document.getElementById('fix-yolk-val');
+
+  const EMULSIFIERS = {
+    yolk: { maxFraction: 0.78, baseVolume: 15 },
+    mustard: { maxFraction: 0.70, baseVolume: 10 },
+    soy_lecithin: { maxFraction: 0.82, baseVolume: 5 },
+    polysorbate: { maxFraction: 0.85, baseVolume: 2 }
+  };
+
+  const dropletBases = [
+    { x: 120, y: 120 },
+    { x: 90, y: 90 },
+    { x: 150, y: 100 },
+    { x: 100, y: 140 },
+    { x: 140, y: 150 },
+    { x: 110, y: 80 },
+    { x: 130, y: 160 },
+    { x: 80, y: 120 },
+    { x: 160, y: 130 },
+    { x: 100, y: 110 },
+    { x: 140, y: 120 },
+    { x: 120, y: 145 },
+    { x: 115, y: 95 },
+    { x: 85, y: 150 },
+    { x: 155, y: 75 }
+  ];
+
+  function loadState() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        const data = JSON.parse(saved);
+        if (data.emulsifier) emulsifierSelect.value = data.emulsifier;
+        if (data.water !== undefined) waterInput.value = data.water;
+        if (data.oil !== undefined) oilInput.value = data.oil;
+      }
+    } catch {}
+  }
+
+  function saveState(emulsifier, water, oil) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ emulsifier, water, oil }));
+    } catch {}
+  }
+
+  function renderBroken(details, oilFraction, liquidHeight) {
+    statusBadge.innerText = ui.brokenStatus;
+    statusBadge.className = 'emulsion-status-badge emulsion-status-broken';
+    
+    beakerStable.setAttribute('opacity', '0');
+    splitBeaker.setAttribute('opacity', '1');
+    dropletsGroup.setAttribute('opacity', '0');
+
+    const waterHeight = liquidHeight * (1 - oilFraction);
+    const oilHeight = liquidHeight * oilFraction;
+    const waterTopY = 198 - waterHeight;
+    const oilTopY = waterTopY - oilHeight;
+
+    beakerWater.setAttribute('d', `M 62 ${waterTopY.toFixed(1)} L 62 188 A 10 10 0 0 0 72 198 L 168 198 A 10 10 0 0 0 178 188 L 178 ${waterTopY.toFixed(1)} Z`);
+    beakerOil.setAttribute('d', `M 62 ${oilTopY.toFixed(1)} L 62 ${waterTopY.toFixed(1)} L 178 ${waterTopY.toFixed(1)} L 178 ${oilTopY.toFixed(1)} Z`);
+    beakerWave.setAttribute('d', `M 62 ${waterTopY.toFixed(1)} Q 120 ${(waterTopY - 4).toFixed(1)} 178 ${waterTopY.toFixed(1)}`);
+
+    fixPanel.style.display = 'block';
+  }
+
+  function renderStable(oilFraction, topY) {
+    statusBadge.innerText = ui.stableStatus;
+    statusBadge.className = 'emulsion-status-badge emulsion-status-stable';
+
+    beakerStable.setAttribute('opacity', '0.95');
+    beakerStable.setAttribute('d', `M 62 ${topY.toFixed(1)} L 62 188 A 10 10 0 0 0 72 198 L 168 198 A 10 10 0 0 0 178 188 L 178 ${topY.toFixed(1)} Z`);
+    
+    splitBeaker.setAttribute('opacity', '0');
+    dropletsGroup.setAttribute('opacity', '1');
+    fixPanel.style.display = 'none';
+
+    droplets.forEach((droplet, i) => {
+      const base = dropletBases[i];
+      const factor = 1 - oilFraction;
+      const currentX = 120 + (base.x - 120) * factor;
+      const relativeY = (base.y - 75) / 85;
+      const currentY = topY + relativeY * (190 - topY);
+      
+      droplet.setAttribute('cx', currentX.toFixed(1));
+      droplet.setAttribute('cy', currentY.toFixed(1));
+      
+      const scale = 0.6 + oilFraction * 1.6;
+      droplet.setAttribute('r', (4 * scale).toFixed(1));
+    });
+  }
+
+  function renderFixPanel(details, oil, totalAqueous) {
+    const requiredAqueous = oil * (1 - details.maxFraction) / details.maxFraction;
+    const waterNeeded = Math.max(0, requiredAqueous - totalAqueous);
+    const yolksNeeded = Math.ceil(waterNeeded / 15);
+
+    fixWaterVal.innerText = waterNeeded.toFixed(1);
+    fixYolkVal.innerText = yolksNeeded.toString();
+  }
+
+  function update() {
+    const emulsifier = emulsifierSelect.value;
+    const water = Math.max(0, parseFloat(waterInput.value) || 0);
+    const oil = Math.max(0, parseFloat(oilInput.value) || 0);
+
+    waterValDisplay.innerText = `${water} ml`;
+    oilValDisplay.innerText = `${oil} ml`;
+
+    saveState(emulsifier, water, oil);
+
+    const details = EMULSIFIERS[emulsifier];
+    const totalAqueous = water + details.baseVolume;
+    const totalVolume = totalAqueous + oil;
+
+    const oilFraction = totalVolume > 0 ? oil / totalVolume : 0;
+    const maxOilLimit = totalAqueous * (details.maxFraction / (1 - details.maxFraction));
+    const isBroken = oilFraction >= details.maxFraction;
+
+    ratioVal.innerText = `${(oilFraction * 100).toFixed(1)}%`;
+    limitVal.innerText = `${maxOilLimit.toFixed(0)} ml`;
+
+    const fillRatio = Math.min(0.9, Math.max(0.15, totalVolume / 550));
+    const liquidHeight = 150 * fillRatio;
+    const topY = 198 - liquidHeight;
+
+    if (isBroken) {
+      renderBroken(details, oilFraction, liquidHeight);
+      renderFixPanel(details, oil, totalAqueous);
+    } else {
+      renderStable(oilFraction, topY);
+    }
+  }
+
+  emulsifierSelect.addEventListener('change', update);
+  waterInput.addEventListener('input', update);
+  oilInput.addEventListener('input', update);
+
+  loadState();
+  update();
+</script>

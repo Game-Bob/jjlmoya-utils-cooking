@@ -24,6 +24,7 @@ import { oilSmokePoint } from '../tool/oil-smoke-point-tracker/entry';
 import { leavenerAcidNeutralizer } from '../tool/leavener-acid-neutralizer/entry';
 import { pectinJam } from '../tool/pectin-jam-setting-calculator/entry';
 import { sousVidePasteurization } from '../tool/sous-vide-pasteurization-curves/entry';
+import { emulsionStabilityCalculator } from '../tool/emulsion-stability-calculator/entry';
 
 export const cookingCategory: CookingCategoryEntry = {
   icon: 'mdi:chef-hat',
@@ -53,6 +54,7 @@ export const cookingCategory: CookingCategoryEntry = {
     leavenerAcidNeutralizer,
     pectinJam,
     sousVidePasteurization,
+    emulsionStabilityCalculator,
   ],
 
 
