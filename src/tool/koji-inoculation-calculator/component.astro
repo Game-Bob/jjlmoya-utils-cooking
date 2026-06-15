@@ -1,0 +1,104 @@
+---
+import './koji-inoculation-calculator.css';
+
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="koji-container" data-ui={JSON.stringify(ui)}>
+  <div class="koji-outer-card">
+    <div class="koji-grid">
+      <div class="koji-inputs-column">
+        <div class="koji-header-row">
+          <div class="koji-section-header">
+            <h2>Parameters</h2>
+          </div>
+          <div class="koji-unit-toggle">
+            <button type="button" id="koji-unit-metric" class="koji-unit-btn active">Metric</button>
+            <button type="button" id="koji-unit-imperial" class="koji-unit-btn">Imperial</button>
+          </div>
+        </div>
+        <div class="koji-input-group">
+          <div class="koji-slider-header">
+            <label for="dry-weight-input">{ui.dryWeightLabel}</label>
+            <span id="dry-weight-display" class="koji-slider-num">1000 g</span>
+          </div>
+          <input type="range" id="dry-weight-input" class="koji-slider-input" min="100" max="5000" step="50" value="1000" />
+        </div>
+        <div class="koji-input-group">
+          <div class="koji-slider-header">
+            <label for="steamed-weight-input">{ui.steamedWeightLabel}</label>
+            <span id="steamed-weight-display" class="koji-slider-num">1370 g</span>
+          </div>
+          <input type="range" id="steamed-weight-input" class="koji-slider-input" min="100" max="7500" step="50" value="1370" />
+        </div>
+        <div class="koji-input-group">
+          <label for="potency-select">{ui.potencyLabel}</label>
+          <select id="potency-select" class="koji-input-field koji-select-field">
+            <option value="standard" selected>{ui.standardPotency}</option>
+            <option value="concentrated">{ui.concentratedPotency}</option>
+            <option value="diluted">{ui.dilutedPotency}</option>
+          </select>
+        </div>
+        <div class="koji-input-group">
+          <div class="koji-slider-header">
+            <label for="temp-input">{ui.tempLabel}</label>
+            <span id="temp-display" class="koji-slider-num">30°C</span>
+          </div>
+          <input type="range" id="temp-input" class="koji-slider-input" min="15" max="45" step="1" value="30" />
+        </div>
+        <div class="koji-input-group">
+          <div class="koji-slider-header">
+            <label for="humidity-input">{ui.humidityLabel}</label>
+            <span id="humidity-display" class="koji-slider-num">70%</span>
+          </div>
+          <input type="range" id="humidity-input" class="koji-slider-input" min="30" max="95" step="5" value="70" />
+        </div>
+      </div>
+      <div class="koji-visual-column">
+        <div class="koji-status-display">
+          <div id="status-badge" class="koji-status-badge"></div>
+          <div class="koji-giant-metric">
+            <span id="moisture-val" class="koji-giant-number">0%</span>
+            <span class="koji-giant-label">{ui.moistureLabel}</span>
+          </div>
+        </div>
+        <div class="koji-results-panel">
+          <div class="koji-result-item">
+            <span class="koji-result-label">{ui.targetRangeLabel}</span>
+            <span id="target-range-val" class="koji-result-val">0 - 0 g</span>
+          </div>
+          <div class="koji-result-item">
+            <span class="koji-result-label">{ui.sporeDosageLabel}</span>
+            <span id="spore-dosage-val" class="koji-result-val">0 g</span>
+          </div>
+        </div>
+        <div class="koji-visualizer">
+          <div class="koji-canvas-container">
+            <canvas id="koji-canvas" width="200" height="200" class="koji-canvas"></canvas>
+          </div>
+        </div>
+        <div class="koji-timeline-container">
+          <h3 class="koji-timeline-title">{ui.timelineTitle}</h3>
+          <svg viewBox="0 0 300 120" class="koji-svg-timeline" id="koji-timeline-svg" xmlns="http://www.w3.org/2000/svg">
+            <path id="timeline-curve" d="M 20 80 C 50 80 60 70 85 70 C 110 70 130 35 150 35 C 170 35 200 55 215 55 C 230 55 260 50 280 50" fill="none" stroke="#e6c894" stroke-width="3.5" class="koji-timeline-line" />
+            <circle id="timeline-dot" cx="20" cy="80" r="6" fill="#8a9a86" class="koji-timeline-pulse-dot" />
+            <line id="timeline-axis-y" x1="20" y1="80" x2="20" y2="98" stroke="#8a9a86" stroke-width="1.2" stroke-dasharray="2 2" opacity="0.45" />
+            <text x="20" y="105" font-size="8" fill="#6b7569" text-anchor="middle">0h</text>
+            <text x="85" y="105" font-size="8" fill="#6b7569" text-anchor="middle">12h</text>
+            <text x="150" y="105" font-size="8" fill="#6b7569" text-anchor="middle">24h</text>
+            <text x="215" y="105" font-size="8" fill="#6b7569" text-anchor="middle">36h</text>
+            <text x="280" y="105" font-size="8" fill="#6b7569" text-anchor="middle">48h</text>
+            <rect id="timeline-interactive-trigger" x="0" y="0" width="300" height="120" fill="transparent" cursor="pointer" />
+          </svg>
+          <p id="timeline-info-text" class="koji-timeline-info-text">Click along the curve to see phase diagnostics</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./component.js"></script>

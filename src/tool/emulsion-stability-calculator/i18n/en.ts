@@ -106,12 +106,12 @@ export const content: ToolLocaleContent = {
   seo: [
     {
       type: 'title',
-      text: 'How Much Oil Can a Mayonnaise or Aioli Handle Before Breaking?',
+      text: 'Why Does My Mayonnaise Break? Find the Exact Oil Limit for Any Emulsifier',
       level: 2
     },
     {
       type: 'paragraph',
-      html: 'Every cook has asked this question: <strong>why did my mayonnaise split?</strong> The answer is simpler than it seems. An emulsion - whether a classic aioli, a creamy vinaigrette, or a modernist foam - can only hold a finite amount of oil before it collapses. Our <strong>emulsion stability calculator</strong> tells you exactly where that breaking point is, based on your specific ingredients and portions.'
+      html: 'If you have ever asked yourself <strong>"why did my mayonnaise split?"</strong> or <strong>"how much oil can I add before my aioli breaks?"</strong>, the answer lies in a single number: the oil volume fraction. Every emulsion - whether a classic French mayonnaise, a garlicky aioli, a creamy vinaigrette, or a modernist foam - can only hold a finite amount of oil before it collapses. Our <strong>emulsion stability calculator</strong> tells you exactly where that breaking point is, based on your specific emulsifier, water phase, and oil volume. No more guessing, no more wasted ingredients.'
     },
     {
       type: 'stats',
@@ -140,17 +140,86 @@ export const content: ToolLocaleContent = {
       ]
     },
     {
+      type: 'list',
+      items: [
+        '<strong>You are adding oil too fast</strong> - Speed is rarely the real cause. If your oil fraction stays below the emulsifier limit, the emulsion will hold regardless of pouring speed.',
+        '<strong>Your ingredients are too cold</strong> - Cold eggs or cold oil increase viscosity and make droplet formation harder. Always bring ingredients to room temperature.',
+        '<strong>You exceeded the oil limit for your emulsifier</strong> - Each emulsifier has a maximum packing fraction. Egg yolk caps at 78% oil, mustard at 70%, soy lecithin at 82%, and polysorbate at 85%.',
+        '<strong>Your water phase is too small</strong> - Without enough water to surround the oil droplets, they have nowhere to go but into each other. The calculator below tells you exactly how much water you need.'
+      ]
+    },
+    {
       type: 'title',
-      text: 'The Science: Why Emulsions Break',
+      text: 'Which Emulsifier Should You Use? A Practical Comparison',
       level: 2
     },
     {
       type: 'paragraph',
-      html: 'A culinary emulsion works by dispersing tiny oil droplets throughout a continuous water phase. <strong>Emulsifiers</strong> - such as the lecithin in egg yolk, the mucilage in mustard, or synthetic surfactants like polysorbate - coat each droplet and prevent it from merging with its neighbors.'
+      html: 'Choosing the right emulsifier depends on your recipe, flavor profile, and desired oil capacity. Here is how the four most common culinary emulsifiers stack up against each other in real kitchen conditions.'
     },
     {
-      type: 'paragraph',
-      html: 'The breaking point is determined by pure geometry. Oil droplets behave like tiny spheres packed together. The maximum volume of spheres you can fit into a given space - known as <strong>Kepler\'s conjecture</strong> - is about 74%. In real kitchen systems, this can stretch to 80-85% with powerful emulsifiers, but beyond that, the droplets are squeezed so tightly they merge, and the emulsion collapses instantly.'
+      type: 'proscons',
+      title: 'Egg Yolk',
+      pros: [
+        'Highest flavor compatibility for classic sauces',
+        'Contains both lecithin and lipoproteins for robust emulsions',
+        'Adds natural color and richness',
+        'Works with up to 78% oil fraction'
+      ],
+      cons: [
+        'Adds cholesterol and egg flavor',
+        'Requires careful temperature control',
+        'Not suitable for vegan preparations',
+        'Limited to about 15 ml water contribution per yolk'
+      ]
+    },
+    {
+      type: 'proscons',
+      title: 'Mustard',
+      pros: [
+        'Adds tangy flavor and complexity to dressings',
+        'Widely available and easy to use',
+        'Works well at room temperature',
+        'Ideal for quick vinaigrettes'
+      ],
+      cons: [
+        'Lower max oil capacity (70%)',
+        'Weaker emulsifying power than egg yolk',
+        'Flavor may conflict with delicate sauces',
+        'Not suitable for neutral-tasting emulsions'
+      ]
+    },
+    {
+      type: 'proscons',
+      title: 'Soy Lecithin',
+      pros: [
+        'High oil tolerance (82%) for stable sauces',
+        'Neutral taste does not alter recipes',
+        'Plant-based and vegan friendly',
+        'Works with small water volumes'
+      ],
+      cons: [
+        'Requires precise weighing',
+        'Less forgiving than egg yolk',
+        'Not a pantry staple for most home cooks',
+        'Can create a slightly artificial texture'
+      ]
+    },
+    {
+      type: 'proscons',
+      title: 'Polysorbate',
+      pros: [
+        'Highest oil capacity of any emulsifier (85%)',
+        'Creates ultra-stable foams and airs',
+        'Works with minimal water phase',
+        'Ideal for modernist and experimental cuisine'
+      ],
+      cons: [
+        'Synthetic additive, not natural',
+        'Hard to source for home kitchens',
+        'Requires scale for accurate dosing',
+        'Overpowering if used in excess'
+      ]
     },
     {
       type: 'comparative',
@@ -215,23 +284,66 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'title',
+      text: 'The Science: Why Emulsions Break and How Kepler\'s Conjecture Applies to Your Kitchen',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'A culinary emulsion works by dispersing tiny oil droplets throughout a continuous water phase. <strong>Emulsifiers</strong> - such as the lecithin in egg yolk, the mucilage in mustard, or synthetic surfactants like polysorbate - coat each droplet and prevent it from merging with its neighbors. The science behind this is pure geometry: oil droplets behave like tiny spheres packed together in a confined space.'
+    },
+    {
+      type: 'paragraph',
+      html: 'The maximum volume of spheres you can fit into a given space - known as <strong>Kepler\'s conjecture</strong> - is about 74%. In real kitchen systems, powerful emulsifiers stretch this limit to 80-85%, but beyond that point, the droplets are squeezed so tightly they merge, and the emulsion collapses instantly. This is not a gradual process: it happens in a split second, turning a silky sauce into a pool of grease.'
+    },
+    {
+      type: 'card',
+      columns: 2,
+      items: [
+        {
+          icon: 'mdi:egg-outline',
+          title: 'Classic Mayonnaise & Aioli',
+          html: 'Use <strong>egg yolk</strong> for up to 78% oil. Start with one yolk per cup of oil. Add a teaspoon of water or lemon juice before pouring oil for a wider safety margin.'
+        },
+        {
+          icon: 'mdi:shaker-outline',
+          title: 'Vinaigrettes & Light Dressings',
+          html: 'Use <strong>mustard</strong> for up to 70% oil. The mucilage in mustard provides enough emulsification for a temporary vinaigrette. Best when consumed fresh.'
+        },
+        {
+          icon: 'mdi:leaf',
+          title: 'Modernist Sauces & Stable Foams',
+          html: 'Use <strong>soy lecithin</strong> for up to 82% oil. Ideal for neutral-tasting emulsions where you want the flavor of the oil and acid to shine through without interference.'
+        },
+        {
+          icon: 'mdi:flask-outline',
+          title: 'Experimental Foams & Airs',
+          html: 'Use <strong>polysorbate</strong> for up to 85% oil. The go-to choice for modernist hydrocolloid techniques where maximum oil loading and foam stability are required.'
+        }
+      ]
+    },
+    {
+      type: 'title',
       text: 'How to Rescue a Broken Emulsion Step by Step',
       level: 2
     },
     {
       type: 'paragraph',
-      html: 'If your mayonnaise or sauce has already split, <strong>do not throw it away</strong>. The fix is straightforward - but only if you understand the phase ratio. Blending harder won\'t help; you need to add more of the continuous (water) phase.'
+      html: 'If your mayonnaise or sauce has already split, <strong>do not throw it away</strong>. The fix is straightforward - but only if you understand the phase ratio. Blending harder won\'t help; you need to add more of the continuous (water) phase. Our calculator tells you exactly how much water or how many additional egg yolks you need to restore balance.'
     },
     {
       type: 'diagnostic',
       variant: 'warning',
-      title: 'Common Signs Your Emulsion Is About to Break',
-      html: 'Watch for <strong>thickening followed by sudden thinning</strong>, a <strong>glossy surface turning grainy</strong>, or visible oil pooling at the edges. If you see any of these, stop adding oil immediately and whisk in a teaspoon of cold water before continuing.'
+      title: '3 Signs Your Emulsion Is About to Break',
+      html: 'Watch for <strong>thickening followed by sudden thinning</strong> as the first warning. Then look for a <strong>glossy surface turning grainy</strong> or <strong>visible oil pooling at the edges</strong> of the bowl. If you see any of these signs, stop adding oil immediately and whisk in a teaspoon of cold water before continuing.'
     },
     {
       type: 'title',
       text: 'Practical Tips for Perfect Emulsions Every Time',
       level: 3
+    },
+    {
+      type: 'message',
+      html: '<strong>The golden rule:</strong> The ratio of oil to water matters more than technique, temperature, or speed. Use our calculator to find your exact oil limit before you start whisking.'
     },
     {
       type: 'tip',
@@ -241,7 +353,7 @@ export const content: ToolLocaleContent = {
     {
       type: 'tip',
       title: 'The Water Safety Net',
-      html: 'If your recipe doesn\'t include enough acid (vinegar, lemon juice), add <strong>one teaspoon of cold water per egg yolk</strong> before you start adding oil. This extra water creates a wider safety margin.'
+      html: 'If your recipe doesn\'t include enough acid (vinegar, lemon juice), add <strong>one teaspoon of cold water per egg yolk</strong> before you start adding oil. This extra water creates a wider safety margin and makes your emulsion more forgiving.'
     },
     {
       type: 'tip',
@@ -279,8 +391,15 @@ export const content: ToolLocaleContent = {
       ]
     },
     {
-      type: 'paragraph',
-      html: 'Whether you\'re making a classic French mayonnaise, a garlicky aioli, a stable vinaigrette, or experimenting with modernist hydrocolloids, understanding the <strong>oil-to-water ratio</strong> is the single most important factor. Our calculator handles the math so you can cook with confidence.'
+      type: 'summary',
+      title: 'Key Takeaways for Stable Emulsions',
+      items: [
+        'Each emulsifier has a maximum oil fraction: egg yolk 78%, mustard 70%, soy lecithin 82%, polysorbate 85%.',
+        'The breaking point is determined by geometry (Kepler\'s conjecture at 74%), not by mixing speed.',
+        'Always start with room temperature ingredients and add a small amount of water as a safety buffer.',
+        'A broken emulsion can be rescued by adding fresh emulsifier and more water phase, not by blending harder.',
+        'Use our emulsion stability calculator above to get the exact oil limit for your specific ingredients.'
+      ]
     }
   ],
   bibliography,

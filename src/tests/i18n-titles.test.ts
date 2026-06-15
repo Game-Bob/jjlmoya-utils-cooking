@@ -36,7 +36,7 @@ describe("i18n titles for FAQ", () => {
 
   it("should have 19 tools with complete i18n setup", async () => {
     const completeTools = ALL_TOOLS.filter((t) => Object.keys(t.entry.i18n).length > 1);
-    expect(completeTools.length).toBe(27);
+    expect(completeTools.length).toBe(28);
   });
 
   it("tool IDs should be correctly registered", () => {
