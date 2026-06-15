@@ -57,7 +57,9 @@ export const ALL_TOOLS: ToolDefinition[] = [
   SOUS_VIDE_PASTEURIZATION_TOOL,
   EMULSION_STABILITY_CALCULATOR_TOOL,
   KOJI_INOCULATION_CALCULATOR_TOOL,
+  CHEESE_FLOCCULATION_MULTIPLIER_TOOL,
 ];
 import { KOJI_INOCULATION_CALCULATOR_TOOL } from './tool/koji-inoculation-calculator';
+import { CHEESE_FLOCCULATION_MULTIPLIER_TOOL } from './tool/cheese-flocculation-multiplier';
 
 

@@ -1,0 +1,629 @@
+---
+import './cheese-flocculation-multiplier.css';
+
+interface Props {
+  ui: Record<string, string>;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="cheese-container">
+  <div class="cheese-outer-card">
+    <div class="cheese-grid">
+      <div class="cheese-inputs-column">
+        <div class="cheese-section-header">
+          <h2 id="phase-title">{ui.phase1Title}</h2>
+        </div>
+
+        <div class="cheese-mode-selector" id="mode-selector">
+          <button type="button" id="tab-realtime" class="cheese-tab-btn active">Real-Time Test</button>
+          <button type="button" id="tab-manual" class="cheese-tab-btn">Input Past Data</button>
+        </div>
+
+        <div class="cheese-input-group">
+          <label for="cheese-select">{ui.cheeseTypeLabel}</label>
+          <select id="cheese-select" class="cheese-input-field cheese-select-field">
+            <option value="custom" selected>{ui.customOption}</option>
+            <option value="cheddar">Cheddar (3.0x)</option>
+            <option value="camembert">Camembert / Brie (5.0x)</option>
+            <option value="mozzarella">Mozzarella (2.0x)</option>
+            <option value="swiss">Swiss / Alpine (2.5x)</option>
+            <option value="parmesan">Parmesan (2.0x)</option>
+          </select>
+        </div>
+
+        <div class="cheese-input-group">
+          <div class="cheese-slider-header">
+            <label for="multiplier-input">{ui.multiplierLabel}</label>
+            <span id="multiplier-val-display" class="cheese-slider-num">3.0</span>
+          </div>
+          <input
+            type="range"
+            id="multiplier-input"
+            class="cheese-slider-input"
+            min="1.5"
+            max="6.0"
+            step="0.1"
+            value="3.0"
+          />
+        </div>
+
+        <div class="cheese-input-group" id="manual-inputs-container" style="display: none;">
+          <label>Manual Flocculation Time</label>
+          <div class="cheese-time-inputs-row">
+            <div class="cheese-time-input-wrapper">
+              <input
+                type="number"
+                id="manual-floc-minutes"
+                class="cheese-input-field"
+                min="0"
+                max="90"
+                value="10"
+              />
+              <span class="cheese-time-input-unit">Min</span>
+            </div>
+            <div class="cheese-time-input-wrapper">
+              <input
+                type="number"
+                id="manual-floc-seconds"
+                class="cheese-input-field"
+                min="0"
+                max="59"
+                value="0"
+              />
+              <span class="cheese-time-input-unit">Sec</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cheese-action-panel">
+          <button id="btn-primary" class="cheese-btn cheese-btn-primary">
+            <span id="btn-primary-text">Start Flocculation Test</span>
+          </button>
+          <button id="btn-reset" class="cheese-btn cheese-btn-secondary" style="display: none;">
+            {ui.resetTimer}
+          </button>
+        </div>
+
+        <div id="warning-panel" class="cheese-warning" style="display: none;">
+          <h3 class="cheese-warning-title">{ui.warningTitle}</h3>
+          <p class="cheese-warning-text">{ui.warningText}</p>
+        </div>
+      </div>
+
+      <div class="cheese-divider-line"></div>
+
+      <div class="cheese-visual-column">
+        <div id="status-badge" class="cheese-status-badge">{ui.statusWaiting}</div>
+
+        <div class="cheese-timer-wrapper">
+          <svg viewBox="0 0 200 200" class="cheese-svg" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="90" class="cheese-svg-bg" />
+            <circle cx="100" cy="100" r="87" class="cheese-svg-inner-clock" />
+            <g id="fluid-micelles"></g>
+            <circle
+              id="progress-ring"
+              cx="100"
+              cy="100"
+              r="90"
+              class="cheese-svg-progress"
+              stroke-dasharray="565.48"
+              stroke-dashoffset="565.48"
+            />
+          </svg>
+
+          <div class="cheese-timer-text-container">
+            <span id="timer-display" class="cheese-timer-metric">00:00</span>
+            <span id="timer-label" class="cheese-timer-label">{ui.flocculationTimeLabel}</span>
+          </div>
+        </div>
+
+        <div class="cheese-info-card">
+          <div class="cheese-info-row">
+            <span>{ui.flocculationTimeLabel}</span>
+            <strong id="info-flocculation-time">-</strong>
+          </div>
+          <div class="cheese-info-row">
+            <span>{ui.totalCoagulationLabel}</span>
+            <strong id="info-total-time">-</strong>
+          </div>
+          <div class="cheese-info-row-block">
+            <span>{ui.moistureLabel}</span>
+            <strong id="info-moisture">-</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ ui }}>
+  const STORAGE_KEY = 'cheese-flocculation-state-v3';
+
+  const tabRealtime = document.getElementById('tab-realtime');
+  const tabManual = document.getElementById('tab-manual');
+  const modeSelector = document.getElementById('mode-selector');
+
+  const cheeseSelect = document.getElementById('cheese-select');
+  const multiplierInput = document.getElementById('multiplier-input');
+  const multiplierValDisplay = document.getElementById('multiplier-val-display');
+
+  const manualMinutesInput = document.getElementById('manual-floc-minutes');
+  const manualSecondsInput = document.getElementById('manual-floc-seconds');
+  const manualInputsContainer = document.getElementById('manual-inputs-container');
+
+  const btnPrimary = document.getElementById('btn-primary');
+  const btnPrimaryText = document.getElementById('btn-primary-text');
+  const btnReset = document.getElementById('btn-reset');
+
+  const phaseTitle = document.getElementById('phase-title');
+  const statusBadge = document.getElementById('status-badge');
+  const timerDisplay = document.getElementById('timer-display');
+  const timerLabel = document.getElementById('timer-label');
+  const progressRing = document.getElementById('progress-ring');
+  const fluidMicelles = document.getElementById('fluid-micelles');
+
+  const infoFlocculationTime = document.getElementById('info-flocculation-time');
+  const infoTotalTime = document.getElementById('info-total-time');
+  const infoMoisture = document.getElementById('info-moisture');
+  const warningPanel = document.getElementById('warning-panel');
+
+  const PRESETS = {
+    cheddar: { multiplier: 3.0, moisture: 'Medium-Low' },
+    camembert: { multiplier: 5.0, moisture: 'High' },
+    mozzarella: { multiplier: 2.0, moisture: 'Very High' },
+    swiss: { multiplier: 2.5, moisture: 'Low' },
+    parmesan: { multiplier: 2.0, moisture: 'Very Low' }
+  };
+
+  const CIRCUMFERENCE = 2 * Math.PI * 90;
+  const MICELLE_COUNT = 36;
+  const micelles = [];
+
+  let state = {
+    mode: 'realtime',
+    phase: 'idle',
+    startTime: 0,
+    flocculationTime: 0,
+    totalTime: 0,
+    elapsedSinceFloc: 0,
+    preset: 'custom',
+    multiplier: 3.0,
+    manualMin: 10,
+    manualSec: 0
+  };
+
+  let intervalId = null;
+  let animId = null;
+
+  function initMicelles() {
+    fluidMicelles.innerHTML = '';
+    micelles.length = 0;
+
+    for (let i = 0; i < MICELLE_COUNT; i++) {
+      const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      const angle = (i / MICELLE_COUNT) * Math.PI * 2 + Math.random() * 0.2;
+      const baseRadius = 25 + Math.random() * 50;
+      
+      circle.setAttribute('r', (2 + Math.random() * 3).toFixed(1));
+      circle.setAttribute('fill', '#f59e0b');
+      circle.setAttribute('opacity', (0.3 + Math.random() * 0.5).toFixed(2));
+      fluidMicelles.appendChild(circle);
+
+      micelles.push({
+        element: circle,
+        angle: angle,
+        baseRadius: baseRadius,
+        currentRadius: baseRadius,
+        speed: 0.02 + Math.random() * 0.03,
+        seed: Math.random() * 100
+      });
+    }
+  }
+
+  function updateMicellesAnimation() {
+    const now = Date.now();
+    
+    micelles.forEach((m, idx) => {
+      let speedFactor = 1.0;
+      let targetRad = m.baseRadius;
+
+      if (state.phase === 'phase1') {
+        speedFactor = 3.5;
+        targetRad = m.baseRadius + Math.sin(now * 0.005 + m.seed) * 8;
+      } else if (state.phase === 'phase2') {
+        const elapsed = Math.floor((now - state.startTime) / 1000);
+        const ratio = Math.min(1.0, elapsed / (state.totalTime - state.flocculationTime || 1));
+        
+        speedFactor = Math.max(0.01, 3.5 * (1 - ratio));
+        
+        const clusterAngle = Math.floor(m.angle / (Math.PI / 4)) * (Math.PI / 4);
+        m.angle = m.angle * 0.96 + clusterAngle * 0.04;
+
+        const targetClusterRadius = 22 + Math.sin(idx * 2) * 6;
+        targetRad = m.baseRadius * (1 - ratio) + targetClusterRadius * ratio;
+      } else if (state.phase === 'complete') {
+        speedFactor = 0.0;
+        const clusterAngle = Math.floor(m.angle / (Math.PI / 4)) * (Math.PI / 4);
+        m.angle = clusterAngle;
+        targetRad = 22 + Math.sin(idx * 2) * 6;
+      } else {
+        speedFactor = 0.5;
+        targetRad = m.baseRadius + Math.sin(now * 0.001 + m.seed) * 3;
+      }
+
+      m.angle += m.speed * speedFactor;
+      m.currentRadius = m.currentRadius * 0.95 + targetRad * 0.05;
+
+      const x = 100 + Math.cos(m.angle) * m.currentRadius;
+      const y = 100 + Math.sin(m.angle) * m.currentRadius;
+
+      m.element.setAttribute('cx', x.toFixed(1));
+      m.element.setAttribute('cy', y.toFixed(1));
+    });
+
+    animId = requestAnimationFrame(updateMicellesAnimation);
+  }
+
+  function formatDuration(totalSeconds) {
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = Math.floor(totalSeconds % 60);
+    return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  }
+
+  function getMoistureText(multiplier) {
+    if (multiplier >= 4.5) return 'High';
+    if (multiplier >= 3.5) return 'Medium-High';
+    if (multiplier >= 2.8) return 'Medium-Low';
+    if (multiplier >= 2.2) return 'Low';
+    return 'Very Low';
+  }
+
+  function updatePresetDropdown() {
+    const sel = cheeseSelect.value;
+    if (sel !== 'custom') {
+      const preset = PRESETS[sel];
+      multiplierInput.value = preset.multiplier;
+      multiplierInput.disabled = true;
+      multiplierValDisplay.innerText = preset.multiplier.toFixed(1);
+      infoMoisture.innerText = preset.moisture;
+    } else {
+      multiplierInput.disabled = false;
+      const val = parseFloat(multiplierInput.value);
+      multiplierValDisplay.innerText = val.toFixed(1);
+      infoMoisture.innerText = getMoistureText(val);
+    }
+  }
+
+  function setMode(newMode) {
+    state.mode = newMode;
+    saveToLocalStorage();
+
+    if (newMode === 'realtime') {
+      tabRealtime.classList.add('active');
+      tabManual.classList.remove('active');
+      manualInputsContainer.style.display = 'none';
+      if (state.phase === 'idle') {
+        btnPrimaryText.innerText = 'Start Flocculation Test';
+      }
+    } else {
+      tabRealtime.classList.remove('active');
+      tabManual.classList.add('active');
+      manualInputsContainer.style.display = 'block';
+      if (state.phase === 'idle') {
+        btnPrimaryText.innerText = 'Calculate & Start Countdown';
+      }
+    }
+  }
+
+  function saveToLocalStorage() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  }
+
+  function loadFromLocalStorage() {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        state = { ...state, ...parsed };
+
+        cheeseSelect.value = state.preset;
+        multiplierInput.value = state.multiplier;
+        manualMinutesInput.value = state.manualMin;
+        manualSecondsInput.value = state.manualSec;
+
+        updatePresetDropdown();
+        setMode(state.mode);
+
+        if (state.phase === 'phase1') {
+          resumePhase1();
+        } else if (state.phase === 'phase2') {
+          resumePhase2();
+        } else if (state.phase === 'complete') {
+          renderComplete();
+        } else {
+          renderIdle();
+        }
+      }
+    } catch {}
+  }
+
+  function updateProgressRing(percent, isShaky, isSolid) {
+    const offset = CIRCUMFERENCE - (percent / 100) * CIRCUMFERENCE;
+    progressRing.style.strokeDashoffset = offset;
+
+    progressRing.classList.remove('shaky', 'solid');
+    if (isShaky) {
+      progressRing.classList.add('shaky');
+    }
+    if (isSolid) {
+      progressRing.classList.add('solid');
+    }
+  }
+
+  function renderIdle() {
+    phaseTitle.innerText = ui.phase1Title;
+    statusBadge.innerText = ui.statusWaiting;
+    statusBadge.className = 'cheese-status-badge waiting';
+    btnPrimary.disabled = false;
+    btnPrimaryText.innerText = state.mode === 'realtime' ? 'Start Flocculation Test' : 'Calculate & Start Countdown';
+    btnReset.style.display = 'none';
+    timerDisplay.innerText = '00:00';
+    timerLabel.innerText = ui.flocculationTimeLabel;
+    updateProgressRing(0, false, false);
+
+    infoFlocculationTime.innerText = '-';
+    infoTotalTime.innerText = '-';
+    warningPanel.style.display = 'none';
+
+    modeSelector.style.opacity = '1';
+    modeSelector.style.pointerEvents = 'auto';
+
+    if (state.mode === 'realtime') {
+      manualInputsContainer.style.display = 'none';
+    } else {
+      manualInputsContainer.style.display = 'block';
+    }
+
+    cheeseSelect.disabled = false;
+    multiplierInput.disabled = cheeseSelect.value !== 'custom';
+    manualMinutesInput.disabled = false;
+    manualSecondsInput.disabled = false;
+  }
+
+  function startPhase1() {
+    state.phase = 'phase1';
+    state.startTime = Date.now();
+    state.flocculationTime = 0;
+    state.totalTime = 0;
+    state.preset = cheeseSelect.value;
+    state.multiplier = parseFloat(multiplierInput.value);
+    state.manualMin = parseInt(manualMinutesInput.value, 10) || 0;
+    state.manualSec = parseInt(manualSecondsInput.value, 10) || 0;
+    saveToLocalStorage();
+
+    resumePhase1();
+  }
+
+  function resumePhase1() {
+    modeSelector.style.opacity = '0.4';
+    modeSelector.style.pointerEvents = 'none';
+    manualInputsContainer.style.display = 'none';
+
+    cheeseSelect.disabled = true;
+    multiplierInput.disabled = true;
+    manualMinutesInput.disabled = true;
+    manualSecondsInput.disabled = true;
+
+    btnPrimaryText.innerText = 'Flocculation Detected!';
+    btnReset.style.display = 'inline-block';
+    statusBadge.innerText = ui.statusWaiting;
+    statusBadge.className = 'cheese-status-badge waiting';
+
+    if (intervalId) clearInterval(intervalId);
+
+    intervalId = setInterval(() => {
+      const elapsed = Math.floor((Date.now() - state.startTime) / 1000);
+      timerDisplay.innerText = formatDuration(elapsed);
+
+      const wave = Math.sin(elapsed / 2) * 5 + 5;
+      updateProgressRing(Math.min(95, wave), true, false);
+    }, 1000);
+  }
+
+  function stopPhase1() {
+    if (intervalId) clearInterval(intervalId);
+
+    const elapsed = Math.floor((Date.now() - state.startTime) / 1000);
+    state.flocculationTime = elapsed;
+
+    state.preset = cheeseSelect.value;
+    state.multiplier = parseFloat(multiplierInput.value);
+
+    state.totalTime = state.flocculationTime * state.multiplier;
+    state.elapsedSinceFloc = 0;
+    state.startTime = Date.now();
+    state.phase = 'phase2';
+    saveToLocalStorage();
+
+    resumePhase2();
+  }
+
+  function useManualFlocTime() {
+    const mins = parseInt(manualMinutesInput.value, 10) || 0;
+    const secs = parseInt(manualSecondsInput.value, 10) || 0;
+    const totalSecs = mins * 60 + secs;
+
+    if (totalSecs <= 0) return;
+
+    state.flocculationTime = totalSecs;
+    state.preset = cheeseSelect.value;
+    state.multiplier = parseFloat(multiplierInput.value);
+    state.totalTime = state.flocculationTime * state.multiplier;
+    state.elapsedSinceFloc = totalSecs;
+    state.startTime = Date.now() - (totalSecs * 1000);
+    state.phase = 'phase2';
+    saveToLocalStorage();
+
+    resumePhase2();
+  }
+
+  function resumePhase2() {
+    modeSelector.style.opacity = '0.3';
+    modeSelector.style.pointerEvents = 'none';
+    manualInputsContainer.style.display = 'none';
+
+    cheeseSelect.disabled = true;
+    multiplierInput.disabled = true;
+    manualMinutesInput.disabled = true;
+    manualSecondsInput.disabled = true;
+
+    phaseTitle.innerText = ui.phase2Title;
+    btnPrimaryText.innerText = ui.phaseComplete;
+    btnPrimary.disabled = true;
+    btnReset.style.display = 'inline-block';
+    document.querySelector('.cheese-action-panel').classList.remove('is-completed');
+    statusBadge.innerText = ui.statusCoagulating;
+    statusBadge.className = 'cheese-status-badge coagulating';
+    timerLabel.innerText = ui.timeRemainingLabel;
+
+    infoFlocculationTime.innerText = formatDuration(state.flocculationTime);
+    infoTotalTime.innerText = formatDuration(state.totalTime);
+
+    if (state.flocculationTime < 480) {
+      warningPanel.style.display = 'block';
+    } else {
+      warningPanel.style.display = 'none';
+    }
+
+    if (intervalId) clearInterval(intervalId);
+
+    const flocSeconds = state.flocculationTime;
+    const totalSeconds = state.totalTime;
+
+    intervalId = setInterval(() => {
+      const elapsedFromStart = Math.floor((Date.now() - state.startTime) / 1000);
+      const currentElapsed = Math.min(totalSeconds, elapsedFromStart);
+
+      const remaining = Math.max(0, totalSeconds - currentElapsed);
+      timerDisplay.innerText = formatDuration(remaining);
+
+      const coagulationDuration = totalSeconds - flocSeconds;
+      const currentCoagulation = Math.max(0, currentElapsed - flocSeconds);
+
+      let pct = 0;
+      if (coagulationDuration > 0) {
+        pct = (currentCoagulation / coagulationDuration) * 100;
+      }
+      updateProgressRing(pct, false, false);
+
+      if (remaining <= 0) {
+        clearInterval(intervalId);
+        state.phase = 'complete';
+        saveToLocalStorage();
+        renderComplete();
+      }
+    }, 1000);
+  }
+
+  function renderComplete() {
+    phaseTitle.innerText = ui.phaseComplete;
+    statusBadge.innerText = ui.statusReady;
+    statusBadge.className = 'cheese-status-badge ready';
+    btnPrimaryText.innerText = ui.phaseComplete;
+    btnPrimary.disabled = true;
+    btnReset.style.display = 'inline-block';
+    document.querySelector('.cheese-action-panel').classList.add('is-completed');
+    timerDisplay.innerText = formatDuration(state.totalTime);
+    timerLabel.innerText = ui.statusReady;
+    updateProgressRing(100, false, true);
+
+    modeSelector.style.opacity = '0.3';
+    modeSelector.style.pointerEvents = 'none';
+
+    infoFlocculationTime.innerText = formatDuration(state.flocculationTime);
+    infoTotalTime.innerText = formatDuration(state.totalTime);
+
+    if (state.flocculationTime < 480) {
+      warningPanel.style.display = 'block';
+    } else {
+      warningPanel.style.display = 'none';
+    }
+  }
+
+  function resetAll() {
+    if (intervalId) clearInterval(intervalId);
+    state = {
+      mode: state.mode,
+      phase: 'idle',
+      startTime: 0,
+      flocculationTime: 0,
+      totalTime: 0,
+      elapsedSinceFloc: 0,
+      preset: cheeseSelect.value,
+      multiplier: parseFloat(multiplierInput.value),
+      manualMin: parseInt(manualMinutesInput.value, 10) || 10,
+      manualSec: parseInt(manualSecondsInput.value, 10) || 0
+    };
+    saveToLocalStorage();
+    btnPrimary.disabled = false;
+    document.querySelector('.cheese-action-panel').classList.remove('is-completed');
+    renderIdle();
+  }
+
+  tabRealtime.addEventListener('click', () => {
+    if (state.phase === 'idle') setMode('realtime');
+  });
+
+  tabManual.addEventListener('click', () => {
+    if (state.phase === 'idle') setMode('manual');
+  });
+
+  cheeseSelect.addEventListener('change', () => {
+    updatePresetDropdown();
+    state.preset = cheeseSelect.value;
+    state.multiplier = parseFloat(multiplierInput.value);
+    saveToLocalStorage();
+  });
+
+  multiplierInput.addEventListener('input', () => {
+    const val = parseFloat(multiplierInput.value);
+    multiplierValDisplay.innerText = val.toFixed(1);
+    infoMoisture.innerText = getMoistureText(val);
+    state.multiplier = val;
+    saveToLocalStorage();
+  });
+
+  manualMinutesInput.addEventListener('change', () => {
+    state.manualMin = parseInt(manualMinutesInput.value, 10) || 0;
+    saveToLocalStorage();
+  });
+
+  manualSecondsInput.addEventListener('change', () => {
+    state.manualSec = parseInt(manualSecondsInput.value, 10) || 0;
+    saveToLocalStorage();
+  });
+
+  btnPrimary.addEventListener('click', () => {
+    if (state.phase === 'idle') {
+      if (state.mode === 'manual') {
+        useManualFlocTime();
+      } else {
+        startPhase1();
+      }
+    } else if (state.phase === 'phase1') {
+      stopPhase1();
+    }
+  });
+
+  btnReset.addEventListener('click', resetAll);
+
+  initMicelles();
+  updateMicellesAnimation();
+  loadFromLocalStorage();
+  if (state.phase === 'idle') {
+    updatePresetDropdown();
+    setMode(state.mode);
+  }
+</script>

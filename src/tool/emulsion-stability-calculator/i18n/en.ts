@@ -160,65 +160,41 @@ export const content: ToolLocaleContent = {
     {
       type: 'proscons',
       title: 'Egg Yolk',
-      pros: [
-        'Highest flavor compatibility for classic sauces',
-        'Contains both lecithin and lipoproteins for robust emulsions',
-        'Adds natural color and richness',
-        'Works with up to 78% oil fraction'
-      ],
-      cons: [
-        'Adds cholesterol and egg flavor',
-        'Requires careful temperature control',
-        'Not suitable for vegan preparations',
-        'Limited to about 15 ml water contribution per yolk'
+      items: [
+        { pro: 'Highest flavor compatibility for classic sauces', con: 'Adds cholesterol and egg flavor' },
+        { pro: 'Contains both lecithin and lipoproteins for robust emulsions', con: 'Requires careful temperature control' },
+        { pro: 'Adds natural color and richness', con: 'Not suitable for vegan preparations' },
+        { pro: 'Works with up to 78% oil fraction', con: 'Limited to about 15 ml water contribution per yolk' }
       ]
     },
     {
       type: 'proscons',
       title: 'Mustard',
-      pros: [
-        'Adds tangy flavor and complexity to dressings',
-        'Widely available and easy to use',
-        'Works well at room temperature',
-        'Ideal for quick vinaigrettes'
-      ],
-      cons: [
-        'Lower max oil capacity (70%)',
-        'Weaker emulsifying power than egg yolk',
-        'Flavor may conflict with delicate sauces',
-        'Not suitable for neutral-tasting emulsions'
+      items: [
+        { pro: 'Adds tangy flavor and complexity to dressings', con: 'Lower max oil capacity (70%)' },
+        { pro: 'Widely available and easy to use', con: 'Weaker emulsifying power than egg yolk' },
+        { pro: 'Works well at room temperature', con: 'Flavor may conflict with delicate sauces' },
+        { pro: 'Ideal for quick vinaigrettes', con: 'Not suitable for neutral-tasting emulsions' }
       ]
     },
     {
       type: 'proscons',
       title: 'Soy Lecithin',
-      pros: [
-        'High oil tolerance (82%) for stable sauces',
-        'Neutral taste does not alter recipes',
-        'Plant-based and vegan friendly',
-        'Works with small water volumes'
-      ],
-      cons: [
-        'Requires precise weighing',
-        'Less forgiving than egg yolk',
-        'Not a pantry staple for most home cooks',
-        'Can create a slightly artificial texture'
+      items: [
+        { pro: 'High oil tolerance (82%) for stable sauces', con: 'Requires precise weighing' },
+        { pro: 'Neutral taste does not alter recipes', con: 'Less forgiving than egg yolk' },
+        { pro: 'Plant-based and vegan friendly', con: 'Not a pantry staple for most home cooks' },
+        { pro: 'Works with small water volumes', con: 'Can create a slightly artificial texture' }
       ]
     },
     {
       type: 'proscons',
       title: 'Polysorbate',
-      pros: [
-        'Highest oil capacity of any emulsifier (85%)',
-        'Creates ultra-stable foams and airs',
-        'Works with minimal water phase',
-        'Ideal for modernist and experimental cuisine'
-      ],
-      cons: [
-        'Synthetic additive, not natural',
-        'Hard to source for home kitchens',
-        'Requires scale for accurate dosing',
-        'Overpowering if used in excess'
+      items: [
+        { pro: 'Highest oil capacity of any emulsifier (85%)', con: 'Synthetic additive, not natural' },
+        { pro: 'Creates ultra-stable foams and airs', con: 'Hard to source for home kitchens' },
+        { pro: 'Works with minimal water phase', con: 'Requires scale for accurate dosing' },
+        { pro: 'Ideal for modernist and experimental cuisine', con: 'Overpowering if used in excess' }
       ]
     },
     {

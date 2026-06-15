@@ -26,6 +26,7 @@ export { pectinJam } from './tool/pectin-jam-setting-calculator/entry';
 export { sousVidePasteurization } from './tool/sous-vide-pasteurization-curves/entry';
 export { emulsionStabilityCalculator } from './tool/emulsion-stability-calculator/entry';
 export { kojiInoculationCalculator } from './tool/koji-inoculation-calculator/entry';
+export { cheeseFlocculationMultiplier } from './tool/cheese-flocculation-multiplier/entry';
 export { cookingCategory } from './category';
 import { americanKitchenConverter } from './tool/american-kitchen-converter/entry';
 import { bananaCare } from './tool/banana-ripeness/entry';
@@ -55,6 +56,8 @@ import { pectinJam } from './tool/pectin-jam-setting-calculator/entry';
 import { sousVidePasteurization } from './tool/sous-vide-pasteurization-curves/entry';
 import { emulsionStabilityCalculator } from './tool/emulsion-stability-calculator/entry';
 import { kojiInoculationCalculator } from './tool/koji-inoculation-calculator/entry';
-export const ALL_ENTRIES = [americanKitchenConverter, bananaCare, brine, cookwareGuide, eggTimer, ingredientRescaler, kitchenTimer, meringuePeak, moldScaler, pizza, rouxGuide, sourdoughCalculator, yeastConverter, lactoFermentationSalt, spherificationBath, iceCreamPacPod, botulismCanningSafety, meatBinder, carryOverCooking, maillardReaction, macaronDrying, brixSorbetDensity, oilSmokePoint, leavenerAcidNeutralizer, pectinJam, sousVidePasteurization, emulsionStabilityCalculator, kojiInoculationCalculator];
+import { cheeseFlocculationMultiplier } from './tool/cheese-flocculation-multiplier/entry';
+
+export const ALL_ENTRIES = [americanKitchenConverter, bananaCare, brine, cookwareGuide, eggTimer, ingredientRescaler, kitchenTimer, meringuePeak, moldScaler, pizza, rouxGuide, sourdoughCalculator, yeastConverter, lactoFermentationSalt, spherificationBath, iceCreamPacPod, botulismCanningSafety, meatBinder, carryOverCooking, maillardReaction, macaronDrying, brixSorbetDensity, oilSmokePoint, leavenerAcidNeutralizer, pectinJam, sousVidePasteurization, emulsionStabilityCalculator, kojiInoculationCalculator, cheeseFlocculationMultiplier];
 
 

@@ -29,6 +29,7 @@ export { PECTIN_JAM_SETTING_TOOL } from './tool/pectin-jam-setting-calculator';
 export { SOUS_VIDE_PASTEURIZATION_TOOL } from './tool/sous-vide-pasteurization-curves';
 export { EMULSION_STABILITY_CALCULATOR_TOOL } from './tool/emulsion-stability-calculator';
 export { KOJI_INOCULATION_CALCULATOR_TOOL } from './tool/koji-inoculation-calculator';
+export { CHEESE_FLOCCULATION_MULTIPLIER_TOOL } from './tool/cheese-flocculation-multiplier';
 
 
 
