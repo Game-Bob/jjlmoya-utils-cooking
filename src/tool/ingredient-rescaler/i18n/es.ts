@@ -90,7 +90,7 @@ export const content: ToolLocaleContent = {
 		exampleLine4: '10g Sal',
 		result: 'Resultado',
 		copy: 'Copiar',
-		copied: 'Copiado!',
+		copied: '¡Copiado!',
 		emptyState: 'Tus ingredientes ajustados aparecerán aquí...',
 		defaultIngredient1: '200g Harina',
 		defaultIngredient2: '100ml Leche',

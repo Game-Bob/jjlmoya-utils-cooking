@@ -1,12 +1,12 @@
-﻿import type { ToolLocaleContent } from '../../../types';
+import type { ToolLocaleContent } from '../../../types';
 import { bibliography } from '../bibliography';
 
 const title = 'Calcolatore Moltiplicatore di Flocculazione del Formaggio';
 const description = 'Trova il momento esatto per tagliare la cagliata nella caseificazione artigianale. Usa il metodo del moltiplicatore di flocculazione per calcolare il tempo di coagulazione, controllare l umidita e migliorare la resa del formaggio con il nostro calcolatore gratuito.';
 const faq = [
   {
-    question: 'Cos e il metodo di flocculazione nella caseificazione?',
-    answer: 'Il metodo di flocculazione e una tecnica utilizzata per determinare il momento preciso per tagliare la cagliata. Misura il tempo dall aggiunta del caglio al primo segno di gelificazione (flocculazione) e moltiplica questo tempo per un fattore specifico a seconda dello stile di formaggio.'
+    question: 'Cos\'è il metodo di flocculazione nella caseificazione?',
+    answer: 'Il metodo di flocculazione è una tecnica utilizzata per determinare il momento preciso per tagliare la cagliata. Misura il tempo dall aggiunta del caglio al primo segno di gelificazione (flocculazione) e moltiplica questo tempo per un fattore specifico a seconda dello stile di formaggio.'
   },
   {
     question: 'Come si rileva il punto di flocculazione?',

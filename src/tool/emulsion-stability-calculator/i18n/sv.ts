@@ -1,47 +1,47 @@
 import type { ToolLocaleContent } from '../../../types';
 import { bibliography } from '../bibliography';
 
-const title = "Kalkylator for Emulsionsstabilitet och Oljegrans";
-const description = "Ta reda pa exakt hur mycket olja din majonnas, aioli eller vinagrett klarar innan den skar sig. Forhindra skurna safer med var kostnadsfria kalkylator for emulsionsstabilitet.";
+const title = "Kalkylator för Emulsionsstabilitet och Oljegräns";
+const description = "Ta reda på exakt hur mycket olja din majonnäs, aioli eller vinägrett klarar innan den skär sig. Förhindra skurna såser med vår kostnadsfria kalkylator för emulsionsstabilitet.";
 const faq = [
   {
-    question: "Hur mycket olja kan jag tillsatta till min majonnas innan den skar sig?",
-    answer: "Det beror pa emulgeringsmedlet. Aggula klarar upp till ~78% olja (ungefar 3,5 ganger vattenvolymen), senap upp till 70%, sojalecitin upp till 82% och polysorbat upp till 85%. Anvand kalkylatorn ovan for att fa exakt maxvarde for dina specifika mangder."
+    question: "Hur mycket olja kan jag tillsätta till min majonnäs innan den skär sig?",
+    answer: "Det beror på emulgeringsmedlet. Äggula klarar upp till ~78% olja (ungefär 3,5 gånger vattenvolymen), senap upp till 70%, sojalecitin upp till 82% och polysorbat upp till 85%. Använd kalkylatorn ovan för att få exakt maxvärde för dina specifika mängder."
   },
   {
-    question: "Varfor skar sig eller separerade min emulsion?",
-    answer: "En emulsion skar sig nar oljans volymfraktion overskrider emulgeringsmedlets maximala packningsgrans. Da pressas oljedropparna sa hart ihop att de smalter samman och blandningen separerar. Detta sker omedelbart - det ar inte en gradvis process."
+    question: "Varför skär sig eller separerade min emulsion?",
+    answer: "En emulsion skär sig när oljans volymfraktion överskrider emulgeringsmedlets maximala packningsgräns. Då pressas oljedropparna så hårt ihop att de smälter samman och blandningen separerar. Detta sker omedelbart - det är inte en gradvis process."
   },
   {
-    question: "Hur lagar jag en skuren majonnas eller aioli?",
-    answer: "Borja med en farsk aggula eller en matsked varmt vatten i en ren skal. Ringla langsamt den skurna blandningen i skalen medan du vispar konstant, precis som om du tillsatte ra olja. Kalkylatorn ovan talar om exakt hur mycket vatten eller gula du behover."
+    question: "Hur lagar jag en skuren majonnäs eller aioli?",
+    answer: "Börja med en färsk äggula eller en matsked varmt vatten in a ren skål. Ringla långsamt den skurna blandningen i skålen medan du vispar konstant, precis som om du tillsatte rå olja. Kalkylatorn ovan talar om exakt hur mycket vatten eller gula du behöver."
   },
   {
-    question: "Gor tillsattning av olja for snabbt att en emulsion skar sig?",
-    answer: "Att tillsatta olja for snabbt kan tillfalligt overbelasta emulgeringsmedlet, men den verkliga orsaken till skarning ar alltid ett felaktigt fasforhallande. Om din oljefraktion haller sig under emulgeringsmedlets grans forblir emulsionen stabil oavsett hastighet. Om den overskrider gransen ar skarning oundviklig."
+    question: "Gör tillsättning av olja för snabbt att en emulsion skär sig?",
+    answer: "Att tillsätta olja för snabbt kan tillfälligt överbelasta emulgeringsmedlet, maste den verkliga orsaken till skärning är alltid ett felaktigt fasförhållande. Om din oljefraktion håller sig under emulgeringsmedlets gräns förblir emulsionen stabil oavsett hastighet. Om den överskrider gränsen är skärning oundviklig."
   },
   {
-    question: "Vad ar skillnaden mellan aggula och senap som emulgeringsmedel?",
-    answer: "Aggula (max 78% olja) innehaller lecitin och lipoproteiner som bildar ett robust filmer runt dropparna. Senap (max 70% olja) forlitar sig pa slem och proteiner - den ar svagare men tillfor smak. Sojalecitin (82%) och polysorbat (85%) ar mycket effektiva industriella emulgeringsmedel."
+    question: "Vad är skillnaden mellan äggula och senap som emulgeringsmedel?",
+    answer: "Äggula (max 78% olja) innehåller lecitin och lipoproteine som bildar ett robust filmer runt dropparna. Senap (max 70% olja) förlitar sig på slem och proteiner - den är svagare men tillför smak. Sojalecitin (82%) och polysorbat (85%) är mycket effektiva industriella emulgeringsmedel."
   }
 ];
 
 const howTo = [
   {
-    name: "Vajj ditt emulgeringsmedel",
-    text: "Vajj det emulgeringsmedel som finns i ditt recept - aggula for klassisk majonnas, senap for vinagretter, eller sojalecitin/polysorbat for modernistisk matlagning. Varje typ anger en annan maximal oljegrans."
+    name: "Välj ditt emulgeringsmedel",
+    text: "Välj det emulgeringsmedel som finns i ditt recept - äggula för klassisk majonnäs, senap för vinägretter, eller sojalecitin/polysorbat för modernistisk matlagning. Varje typ anger en annan maximal oljegräns."
   },
   {
     name: "Ange din vattenfasvolym",
-    text: "Ange det totala antalet milliliter av dina vattenbaserade ingredienser: vatten, vinager, citronsaft, vin eller nagon annan vattenbaserad vatska. Kalkylatorn lagger automatiskt till vatteninnehallet fran ditt valda emulgeringsmedel."
+    text: "Ange det totala antalet milliliter av dina vattenbaserade ingredienser: vatten, vinäger, citronsaft, vin eller någon annan vattenbaserad vätska. Kalkylatorn lägger automatiskt till vatteninnehållet från ditt valda emulgeringsmedel."
   },
   {
-    name: "Stall in din oljevolym",
-    text: "Ange mangden olja du planerar att anvanda. Anvand reglaget eller skriv in vardet. Kalkylatorn visar omedelbart om denna mangd ger en stabil emulsion eller far den att skara sig."
+    name: "Ställ in din oljevolym",
+    text: "Ange mängden olja du planerar att använda. Använd reglaget eller skriv in värdet. Kalkylatorn visar omedelbart om denna mängd ger en stabil emulsion eller får den att skära sig."
   },
   {
-    name: "Las stabilitetsresultatet och atgarda vid behov",
-    text: "Kontrollera mataren for oljans volymfraktion. Om den ar stabil ar du redo att ga vidare. Om den ar skuren talar raddningspanelen om exakt hur mycket vatten (i ml) eller hur manga extra aggulor du behover tillsatta for att aterstalla balansen."
+    name: "Läs stabilitetsresultatet och åtgärda vid behov",
+    text: "Kontrollera mätaren för oljans volymfraktion. Om den är stabil är du redo att gå vidare. Om den är skuren talar räddningspanelen om exakt hur mycket vatten (i ml) oder hur många extra äggulor du behöver tillsätta för att återställa balansen."
   }
 ];
 
@@ -79,39 +79,39 @@ const appSchema = {
 
 export const content: ToolLocaleContent = {
   slug: 'kalkylator-emulsionsstabilitet',
-  title: 'Kalkylator for Emulsionsstabilitet och Oljegrans',
-  description: 'Ta reda pa exakt hur mycket olja din majonnas, aioli eller vinagrett klarar innan den skar sig. Forhindra skurna safer med var kostnadsfria kalkylator for emulsionsstabilitet.',
-  faqTitle: 'Vanliga Fragor',
+  title: 'Kalkylator för Emulsionsstabilitet och Oljegräns',
+  description: 'Ta reda på exakt hur mycket olja din majonnäs, aioli eller vinägrett klarar innan den skär sig. Förhindra skurna såser med vår kostnadsfria kalkylator för emulsionsstabilitet.',
+  faqTitle: 'Vanliga Frågor',
   ui: {
     title: 'Emulsionsstabilitetsanalysator',
-    subtitle: 'Hur mycket olja tal din saf innan den skar sig?',
+    subtitle: 'Hur mycket olja tål din sås innan den skär sig?',
     waterLabel: 'Vattenfas (ml)',
     oilLabel: 'Oljevolym (ml)',
     emulsifierLabel: 'Typ av Emulgeringsmedel',
-    yolkOption: 'Aggula',
+    yolkOption: 'Äggula',
     mustardOption: 'Senap',
     soyLecithinOption: 'Sojalecitin',
     polysorbateOption: 'Polysorbat',
     stableStatus: 'Stabil Emulsion',
     brokenStatus: 'Skuren Emulsion',
     ratioLabel: 'Oljans Volymfraktion',
-    maxLimitLabel: 'Maximal Oljegrans',
-    fixTitle: 'Raddningsstrategi',
-    waterFixText: 'Tillsatt vatten for att aterstalla fasbalansen:',
-    yolkFixText: 'Alternativt, anvand extra aggula:',
-    idealRangeText: 'Idealiskt intervall ligger under den kritiska packningsgransen pa 74% till 80%.'
+    maxLimitLabel: 'Maximal Oljegräns',
+    fixTitle: 'Räddningsstrategi',
+    waterFixText: 'Tillsätt vatten för att återställa fasbalansen:',
+    yolkFixText: 'Alternativt, använd extra äggula:',
+    idealRangeText: 'Idealiskt intervall ligger under den kritiska packningsgränsen på 74% till 80%.'
   },
   faq,
   howTo,
   seo: [
     {
       type: 'title',
-      text: 'Hur Mycket Olja Tal en Majonnas eller Aioli Innan Den Skar Sig?',
+      text: 'Hur Mycket Olja Tål en Majonnäs eller Aioli Innan Den Skär Sig?',
       level: 2
     },
     {
       type: 'paragraph',
-      html: 'Varje kock har stallt denna fraga: <strong>varfor skar sig min majonnas?</strong> Svaret ar enklare an det verkar. En emulsion - vare sig det ar en klassisk aioli, en kramig vinagrett eller ett modernistiskt skum - kan bara halla en begransad mangd olja innan den kollapsar. Var <strong>kalkylator for emulsionsstabilitet</strong> talar om exakt var den brytpunkten ligger, baserat pa dina specifika ingredienser och mangder.'
+      html: 'Varje kock har ställt denna fråga: <strong>varför skär sig min majonnäs?</strong> Svaret är enklare än det verkar. En emulsion - vare sig det är en klassisk aioli, en krämig vinägrett eller ett modernistiskt skum - kan bara hålla en begränsad mängd olja innan den kollapsar. Vår <strong>kalkylator för emulsionsstabilitet</strong> talar om exakt var den brytpunkten ligger, baserat på dina specifika ingredienser och mängder.'
     },
     {
       type: 'stats',
@@ -119,12 +119,12 @@ export const content: ToolLocaleContent = {
       items: [
         {
           value: '78%',
-          label: 'Aggula Max Olja',
+          label: 'Äggula Max Olja',
           icon: 'mdi:egg-outline'
         },
         {
           value: '85%',
-          label: 'Polysorbat Grans',
+          label: 'Polysorbat Gräns',
           icon: 'mdi:flask-outline'
         },
         {
@@ -134,58 +134,58 @@ export const content: ToolLocaleContent = {
         },
         {
           value: '15 ml',
-          label: 'Gulans Vatteninnehall',
+          label: 'Gulans Vatteninnehåll',
           icon: 'mdi:water'
         }
       ]
     },
     {
       type: 'title',
-      text: 'Vetenskapen: Varfor Emulsioner Skar Sig',
+      text: 'Vetenskapen: Varför Emulsioner Skär Sig',
       level: 2
     },
     {
       type: 'paragraph',
-      html: 'En kulinarisk emulsion fungerar genom att sprida sma oljedroppar i en kontinuerlig vattenfas. <strong>Emulgeringsmedel</strong> - sadana som lecitinet i aggula, slemmet i senap eller syntetiska ytaktiva anmen som polysorbat - belagger varje droppe och forhindrar att den slas samman med sina grannar.'
+      html: 'En kulinarisk emulsion fungerar genom att sprida små oljedroppar i en kontinuerlig vattenfas. <strong>Emulgeringsmedel</strong> - sådana som lecitinet i äggula, slemmet i senap oder syntetiska ytaktiva ämnen som polysorbat - belägger varje droppe och förhindrar att den slås samman med sina grannar.'
     },
     {
       type: 'paragraph',
-      html: 'Brytpunkten bestams av ren geometri. Oljedroppar beter sig som sma klot packade tillsammans. Den maximala volymen klot som far plats i ett givet utrymme - kant som <strong>Keplers formodan</strong> - ar ungefar 74%. I verkliga kokssystem kan detta strackas till 80-85% med kraftfulla emulgeringsmedel, men darover pressas dropparna sa hart att de slas samman och emulsionen kollapsar omedelbart.'
+      html: 'Brytpunkten bestäms av ren geometri. Oljedroppar beter sig som små klot packade tillsammans. Den maximala volymen klot som får plats i ett givet utrymme - känt som <strong>Keplers förmodan</strong> - är ungefär 74%. I verkliga kökssystem kan detta sträckas till 80-85% med kraftfulla emulgeringsmedel, men därutöver pressas dropparna så hårt att de slås samman och emulsionen kollapsar omedelbart.'
     },
     {
       type: 'comparative',
       columns: 4,
       items: [
         {
-          title: 'Aggula',
+          title: 'Äggula',
           icon: 'mdi:egg-outline',
-          description: 'Det klassiska majonnasemulgeringsmedlet. Innehaller lecitin och lipoproteiner.',
+          description: 'Det klassiska majonnäsemulgeringsmedlet. Innehåller lecitin och lipoproteiner.',
           highlight: true,
           points: [
             'Max olja: 78%',
             '~15 ml vatten per gula',
-            'Ger rikedom och farg',
-            'Bast for majonnas och aioli'
+            'Ger rikedom och färg',
+            'Bäst för majonnäs och aioli'
           ]
         },
         {
           title: 'Senap',
           icon: 'mdi:shaker-outline',
-          description: 'Forlitar sig pa slem och froteiner. Ger syrlig smak.',
+          description: 'Förlitar sig på slem och proteiner. Ger syrlig smak.',
           points: [
             'Max olja: 70%',
-            '~10 ml vatteninnehall',
-            'Svagare emulgeringsformaga',
-            'Idealisk for vinagretter'
+            '~10 ml vatteninnehåll',
+            'Svagare emulgeringsförmåga',
+            'Idealisk för vinägretter'
           ]
         },
         {
           title: 'Sojalecitin',
           icon: 'mdi:leaf',
-          description: 'Hogt koncentrerat vaxthaserat ytaktivt anme.',
+          description: 'Högt koncentrerat växtbaserat ytaktivt ämne.',
           points: [
             'Max olja: 82%',
-            '~5 ml vatteninnehall',
+            '~5 ml vatteninnehåll',
             'Neutral smakprofil',
             'Modernistisk basvara'
           ]
@@ -196,61 +196,61 @@ export const content: ToolLocaleContent = {
           description: 'Syntetiskt emulgeringsmedel med maximal ytaktiv kapacitet.',
           points: [
             'Max olja: 85%',
-            '~2 ml vatteninnehall',
-            'Hogsta oljetolerans',
-            'Anvands i skum'
+            '~2 ml vatteninnehåll',
+            'Högsta oljetolerans',
+            'Används i skum'
           ]
         }
       ]
     },
     {
       type: 'table',
-      headers: ['Emulgeringsmedel', 'Max Olja %', 'Olja per 100 ml Vatten', 'Basta Anvandning'],
+      headers: ['Emulgeringsmedel', 'Max Olje %', 'Olja per 100 ml Vatten', 'Bästa Användning'],
       rows: [
-        ['Aggula', '78%', '~355 ml', 'Majonnas, aioli, hollandaisesaf'],
-        ['Senap', '70%', '~233 ml', 'Vinagretter, latta dressingar'],
-        ['Sojalecitin', '82%', '~456 ml', 'Modernistiska safer, skum'],
+        ['Äggula', '78%', '~355 ml', 'Majonnäs, aioli, hollandaisesås'],
+        ['Senap', '70%', '~233 ml', 'Vinägretter, lätta dressingar'],
+        ['Sojalecitin', '82%', '~456 ml', 'Modernistiska såser, skum'],
         ['Polysorbat', '85%', '~567 ml', 'Stabila skum, experimentell matlagning']
       ]
     },
     {
       type: 'title',
-      text: 'Hur Man Raddar en Skuren Emulsion Steg for Steg',
+      text: 'Hur Man Räddar en Skuren Emulsion Steg för Steg',
       level: 2
     },
     {
       type: 'paragraph',
-      html: 'Om din majonnas eller saf redan har skurit sig, <strong>slang den inte</strong>. Losningen ar enkel - men bara om du forstar fasforhallandet. Att vispa hardare hjalper inte; du maste tillsatta mer av den kontinuerliga (vatten) fasen.'
+      html: 'Om din majonnäs eller sås redan har skurit sig, <strong>släng den inte</strong>. Lösningen är enkel - men bara om du förstår fasförhållandet. Att vispa hårdare hjälper inte; du måste tillsätta mer av den kontinuerliga (vatten) fasen.'
     },
     {
       type: 'diagnostic',
       variant: 'warning',
-      title: 'Vanliga Tecken pa att Din Emulsion ar pa Vag att Skara Sig',
-      html: 'Hall utkik efter <strong>tjockning foljt av plotslig fortunning</strong>, en <strong>glansig yta som blir grynig</strong> eller synlig olja som samlas vid kanterna. Om du ser nagot av detta, sluta omedelbart tillsatta olja och vispa i en tesked kallt vatten innan du fortsatter.'
+      title: 'Vanliga Tecken på att Din Emulsion är på Väg att Skära Sig',
+      html: 'Håll utkik efter <strong>tjockning följt av plötslig förtunning</strong>, en <strong>glansig yta som blir grynig</strong> eller synlig olja som samlas vid kanterna. Om du ser något av detta, sluta omedelbart tillsätta olja och vispa i en tesked kallt vatten innan du fortsätter.'
     },
     {
       type: 'title',
-      text: 'Praktiska Tips for Perfekta Emulsioner Varje Gang',
+      text: 'Praktiska Tips för Perfekta Emulsioner Varje Gång',
       level: 3
     },
     {
       type: 'tip',
       title: 'Temperaturen Spelar Roll',
-      html: 'Alla ingredienser bor vara i <strong>rumstemperatur</strong>. Kalla agg eller kall olja okar dramatiskt risken for skarning. Ta ut ingredienserna ur kylskapet 30 minuter innan du borjar.'
+      html: 'Alla ingredienser bör vara i <strong>rumstemperatur</strong>. Kalla ägg eller kall olja ökar dramatiskt risken för skärning. Ta ut ingredienserna ur kylskåpet 30 minuter innan du börjar.'
     },
     {
       type: 'tip',
-      title: 'Vattensakerhetsnatet',
-      html: 'Om ditt recept inte innehaller tillrackligt med syra (vinager, citronsaft), tillsatt <strong>en tesked kallt vatten per aggula</strong> innan du borjar tillsatta olja. Detta extra vatten skapar en bredare sakerhetsmarginal.'
+      title: 'Vattensäkerhetsnätet',
+      html: 'Om ditt recept inte innehåller tillräckligt med syra (vinäger, citronsaft), tillsätt <strong>en tesked kallt vatten per äggula</strong> innan du börjar tillsätta olja. Detta extra vatten skapar en bredare säkerhetsmarginal.'
     },
     {
       type: 'tip',
       title: 'Laga en Skuren Sats',
-      html: 'Lagg en farsk aggula i en ren skal. Vispa den med en tesked vatten. Ringla sedan <strong>den skurna blandningen i sa langsamt som mojligt</strong>, precis som om det vore ra olja. Nar den har emulgerats om kan du tillsatta resten snabbare.'
+      html: 'Lägg en färsk äggula i en ren skål. Vispa den med en tesked vatten. Ringla sedan <strong>den skurna blandningen i så långsamt som möjligt</strong>, precis som om det vore rå olja. När den har emulgerats om kan du tillsätta resten snabbare.'
     },
     {
       type: 'title',
-      text: 'Ordlista for Kulinariska Emulsioner',
+      text: 'Ordlista för Kulinariska Emulsioner',
       level: 3
     },
     {
@@ -258,29 +258,29 @@ export const content: ToolLocaleContent = {
       items: [
         {
           term: 'Kontinuerlig Fas',
-          definition: 'Vatskan som omger dropparna - vanligtvis vatten, vinager eller citrusjuice i olja-i-vatten-emulsioner som majonnas.'
+          definition: 'Vätskan som omger dropparna - vanligtvis vatten, vinäger eller citrusjuice i olja-i-vatten-emulsioner som majonnäs.'
         },
         {
           term: 'Dispers Fas',
-          definition: 'Vatskan som ar bruten i sma droppar - olja i de flesta kulinariska emulsioner. Ju mer du tillsatter, desto tatare packas dropparna.'
+          definition: 'Vätskan som är bruten i små droppar - olja i de flesta kulinariska emulsioner. Ju mer du tillsätter, desto tätare packas dropparna.'
         },
         {
           term: 'Volymfraktion',
-          definition: 'Forhallandet mellan oljevolym och total volym. Vid ungefar 74-85% (beroende pa emulgeringsmedel) nar emulsionen sin geometriska brytpunkt.'
+          definition: 'Förhållandet mellan oljevolym och total volym. Vid ungefär 74-85% (beroende på emulgeringsmedel) når emulsionen sin geometriska brytpunkt.'
         },
         {
           term: 'Koalescens',
-          definition: 'Nar tva eller fler oljedroppar slas samman till en storre. Detta ar den mikroskopiska process som utloster ett synligt emulsionbrott.'
+          definition: 'När två eller fler oljedroppar slås samman till en större. Detta är den mikroskopiska process som utlöser ett synligt emulsionbrott.'
         },
         {
           term: 'Fasinversion',
-          definition: 'Punkten dar en olja-i-vatten-emulsion vander till vatten-i-olja - som nar man gor smor av gradde. Detta ar det ultimata felsattet.'
+          definition: 'Punkten där en olja-i-vatten-emulsion vänder till vatten-i-olja - som när man gör smör av grädde. Detta är det ultimata felsättet.'
         }
       ]
     },
     {
       type: 'paragraph',
-      html: 'Oavsett om du gor en klassisk fransk majonnas, en vitloksaik aioli, en stabil vinagrett eller experimenterar med modernistiska hydrokolloider, ar forstaelsen av <strong>olja-till-vatten-forhallandet</strong> den enskilt viktigaste faktorn. Var kalkylator skoter matematiken sa att du kan laga mat med sjalvfortroende.'
+      html: 'Oavsett om du gör en klassisk fransk majonnäs, en vitlöks-aioli, en stabil vinägrett eller experimenterar med modernistiska hydrokolloider, är förståelsen av <strong>olja-till-vatten-förhållandet</strong> den enskilt viktigaste faktorn. Vår kalkylator sköter matematiken så att du kan laga mat med självförtroende.'
     }
   ],
   bibliography,

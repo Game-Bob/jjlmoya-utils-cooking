@@ -2,23 +2,23 @@ import type { ToolLocaleContent } from '../../../types';
 import { bibliography } from '../bibliography';
 
 const title = "Calculateur d'Inoculation et d'Hydratation du Koji";
-const description = "Calculez la teneur en humidite parfaite, la dose d'inoculation de spores et la temperature d'incubation pour fabriquer du koji a la maison. Evitez les lots echoues avec notre calculateur gratuit d'inoculation et d'hydratation du koji.";
+const description = "Calculez la teneur en humidité parfaite, la dose d'inoculation de spores et la température d'incubation pour fabriquer du koji à la maison. Évitez les lots échoués avec notre calculateur gratuit d'inoculation et d'hydratation du koji.";
 const faq = [
   {
-    question: "Quel est le taux d'humidite cible pour la cuisson du substrat de koji?",
-    answer: "La teneur en humidite totale ideale pour le riz ou l'orge cuit a la vapeur lors de l'inoculation du Koji se situe entre 30% et 35%. Cela correspond a un poids vapeur d'environ 1,35x a 1,40x le poids sec initial."
+    question: "Quel est le taux d'humidité cible pour la cuisson du substrat de koji?",
+    answer: "La teneur en humidité totale idéale pour le riz ou l'orge cuit à la vapeur lors de l'inoculation du Koji se situe entre 30% et 35%. Cela correspond à un poids vapeur d'environ 1,35x à 1,40x le poids sec initial."
   },
   {
     question: "Combien de poudre de spores (tane-koji) ai-je besoin?",
-    answer: "Le taux d'inoculation standard est de 1 gramme de melange de spores standard par 1 kilogramme de substrat sec. Si vous utilisez des spores concentrees, vous avez besoin de moins (0,5 g), tandis que les melanges dilues necessitent plus (2,0 g)."
+    answer: "Le taux d'inoculation standard est de 1 gramme de mélange de spores standard par 1 kilogramme de substrat sec. Si vous utilisez des spores concentrées, vous avez besoin de moins (0,5 g), tandis que les mélanges dilués nécessitent plus (2,0 g)."
   },
   {
-    question: "Pourquoi le controle de la temperature est-il critique pendant l'incubation du koji?",
-    answer: "Aspergillus oryzae se developpe de maniere optimale entre 28C et 34C. Si la temperature depasse 38C, la moisissure peut surchauffer, cesser de croitre ou produire des spores vertes/noires indesirables. En dessous de 20C, la croissance ralentit considerablement."
+    question: "Pourquoi le contrôle de la température est-il critique pendant l'incubation du koji?",
+    answer: "Aspergillus oryzae se développe de manière optimale entre 28C et 34C. Si la température dépasse 38C, la moisissure peut surchauffer, cesser de croître ou produire des spores vertes/noires indésirables. En dessous de 20C, la croissance ralentit considérablement."
   },
   {
     question: "Que se passe-t-il pendant la phase exothermique?",
-    answer: "Apres 18 a 24 heures d'incubation, le koji commence a croitre rapidement et genere sa propre chaleur. Pendant ce pic exothermique, vous devez remuer le substrat et reduire la chaleur de l'incubateur pour eviter la surchauffe."
+    answer: "Après 18 à 24 heures d'incubation, le koji commence à croître rapidement et génère sa propre chaleur. Pendant ce pic exothermique, vous devez remuer le substrat et réduire la chaleur de l'incubateur pour éviter la surchauffe."
   }
 ];
 

@@ -1,43 +1,43 @@
 import type { ToolLocaleContent } from '../../../types';
 import { bibliography } from '../bibliography';
 
-const title = "Botulism Konservering Sakerthetskontroll Termisk Dodskalkylator";
-const description = "Berakna termisk sportminskning och F0 steriliseringseffekt for Clostridium botulinum. Bedom omraden for saker konservering av lag- och hogsyrig mat.";
+const title = "Botulism Konservering Säkerhetskontroll Termisk Dödskalkylator";
+const description = "Beräkna termisk sporminskning och F0 steriliseringseffekt för Clostridium botulinum. Bedöm områden för säker konservering av låg- och högsyrig mat.";
 const faq = [
   {
-    question: "Varfor ar Clostridium botulinum ett stort problem vid hemkonservering?",
-    answer: "Clostridium botulinum ar en anaerob, sportbildande bakterie som producerar botulinumtoxin, ett av de mest dodliga biologiska amnen som ar kant. Sporerna ar extremt varmetraliga och kan overleva i anaeroba miljoer inuti forslutna burkar om temperaturen ar otillracklig."
+    question: "Varför är Clostridium botulinum ett stort problem vid hemkonservering?",
+    answer: "Clostridium botulinum är en anaerob, sporbildande bakterie som producerar botulinumtoxin, ett av de mest dödliga biologiska ämnen som är känt. Sporerna är extremt värmetåliga och kan överleva i anaeroba miljöer inuti förslutna burkar om temperaturen är otillräcklig."
   },
   {
     question: "Vilken kritisk betydelse har pH 4.6 vid livsmedelskonservering?",
-    answer: "Livsmedel med ett pH under 4.6 klassificeras som syriga. I dessa miljoer kan botulinussporer inte gro eller producera toxiner. For livsmedel med pH 4.6 eller hogre ar tryckkonservering obligatorisk for att na temperaturer over 116 grader Celsius for att forstora sporerna."
+    answer: "Livsmedel med ett pH under 4.6 klassificeras som syriga. I dessa miljöer kan botulinussporer inte gro eller producera toxiner. För livsmedel med pH 4.6 eller högre är tryckkonservering obligatorisk för att nå temperaturer över 116 grader Celsius för att förstöra sporerna."
   },
   {
-    question: "Vad ar F0 steriliseringsvardet?",
-    answer: "F0-vardet mater den ekvivalenta steriliseringstiden vid 121.11 grader Celsius. En standardprocess for lagsyriga livsmedel kraver ett F0-varde pa 3.0 minuter eller hogre, vilket motsvarar en tolvfaldig decimalminskning av sportpopulationen."
+    question: "Vad är F0 steriliseringsvärdet?",
+    answer: "F0-värdet mäter den ekvivalenta steriliseringstiden vid 121.11 degrees Celsius. En standardprocess för lågsyriga livsmedel kräver ett F0-värde på 3.0 minuter eller högre, vilket motsvarar en tolvfaldig decimalminskning av sporpopulationen."
   },
   {
-    question: "Varfar kan jag inte anvanda vattenbad for lagsyrig mat?",
-    answer: "Konservering i vattenbad nar bara kokpunkten (100 grader Celsius). Denna temperatur ar otillracklig for att doda varmetraliga sporer av Clostridium botulinum i lagsyrig mat. Sporerna overlever och producerar toxin vid rumstemperatur."
+    question: "Varför kan jag inte använda vattenbad för lågsyrig mat?",
+    answer: "Konservering i vattenbad når bara kokpunkten (100 grader Celsius). Denna temperatur är otillräcklig för att döda värmetåliga sporer av Clostridium botulinum i lågsyrig mat. Sporerna överlever och producerar toxin vid rumstemperatur."
   }
 ];
 
 const howTo = [
   {
-    name: "Ange livsmedlets syraniva",
-    text: "Bestam och mata in pH-vardet for dina ingredienser. Om pH-vardet ar 4.6 eller hogre ar livsmedlet lagsyrigt."
+    name: "Ange livsmedlets syranivå",
+    text: "Bestäm och mata in pH-värdet för dina ingredienser. Om pH-värdet är 4.6 eller högre är livsmedlet lågsyrigt."
   },
   {
-    name: "Valj konserveringsmetod",
-    text: "Valj mellan vattenbadskonservering eller tryckkonservering beroende pa din utrustning."
+    name: "Välj konserveringsmetod",
+    text: "Välj mellan vattenbadskonservering eller tryckkonservering beroende på din utrustning."
   },
   {
     name: "Ange temperatur och tid",
-    text: "Mat in konserveringstemperaturen och tiden i minuter som burkarna haller den temperaturen."
+    text: "Mata in konserveringstemperaturen och tiden i minuter som burkarna håller den temperaturen."
   },
   {
-    name: "Utvardera sakerhetsdiagnostik",
-    text: "Kontrollera det resulterande F0-vardet, decimal sportminskning och sakerhetszonindikatorn for att bekrlfta overlensstammelse."
+    name: "Utvärdera säkerhetsdiagnostik",
+    text: "Kontrollera det resulterande F0-värdet, decimal sporminskning och säkerhetszonindikatorn för att bekräfta överensstämmelse."
   }
 ];
 
@@ -75,80 +75,80 @@ const appSchema = {
 
 export const content: ToolLocaleContent = {
   slug: 'botulism-konservering-sakerhet',
-  title: 'Botulism Konservering Sakerthetskontroll',
-  description: 'Berakna termisk sportminskning och F0 steriliseringseffekt for Clostridium botulinum. Bedom omraden for saker konservering av lag- och hogsyrig mat.',
-  faqTitle: 'Vanliga Fragor',
+  title: 'Botulism Konservering Säkerhetskontroll',
+  description: 'Beräkna termisk sporminskning och F0 steriliseringseffekt för Clostridium botulinum. Bedöm områden för säker konservering av låg- och högsyrig mat.',
+  faqTitle: 'Vanliga Frågor',
   ui: {
-    title: "Konserveringsautoklavovervakning",
-    subtitle: "Termisk doddiagnostik och botulism sakerhetsutvarderare",
+    title: "Konserveringsautoklavövervakning",
+    subtitle: "Termisk döddiagnostik och botulism säkerhetsutvärderare",
     methodLabel: "Konserveringsmetod",
     waterBath: "Vattenbadskonservering",
     pressureCanner: "Tryckkonservering",
     tempLabel: "Konserveringstemperatur",
     timeLabel: "Processingstid",
     phLabel: "Livsmedels pH",
-    f0Label: "F0 Effektvarde",
-    dLabel: "Beraknat D Varde",
-    sporesLabel: "Sportpopulation",
+    f0Label: "F0 Effektvärde",
+    dLabel: "Beräknat D Värde",
+    sporesLabel: "Sporpopulation",
     statusSafe: "Sterilisering klar",
     statusMarginal: "Marginell sterilisering",
-    statusUnsafe: "Hog botulismrisk",
-    statusSafeDesc: "Termisk effekt overstiger malet F0 pa 3.0 minuter. Sporer ar helt deaktiverade.",
-    statusMarginalDesc: "Processen nar partiell deaktivering men ligger under 12D sakerhetsstandarden. Justera tid eller temperatur.",
-    statusUnsafeDesc: "Processen misslyckas med att deaktivera Clostridium botulinum. Lagsyrig mat i vattenbad forblir farlig.",
+    statusUnsafe: "Hög botulismrisk",
+    statusSafeDesc: "Termisk effekt överstiger målet F0 på 3.0 minuter. Sporer är helt deaktiverade.",
+    statusMarginalDesc: "Processen når partiell deaktivering men ligger under 12D säkerhetsstandarden. Justera tid eller temperatur.",
+    statusUnsafeDesc: "Processen misslyckas med att deaktivera Clostridium botulinum. Lågsyrig mat i vattenbad förblir farlig.",
     cLabel: "°C",
     fLabel: "°F",
     minLabel: "min",
     logReductionLabel: "Decimal minskning",
     dValueUnit: "minuter",
-    indicatorSectionTitle: "Diagnostiska matare",
-    visualizerSectionTitle: "Sportminskning",
-    f0Tooltip: "Ekvivalent steriliseringstid i minuter vid 121.11°C. Sakert gransvarde ar 3.0 eller hogre.",
-    dTooltip: "Decimal minskningstid: tid i minuter som kravs for att forstora 90% av sporerna vid aktuell temperatur.",
-    logReductionTooltip: "Antal decimala (10-faldiga) minskningar. En 12D minskning ar sakerhetsstandarden.",
+    indicatorSectionTitle: "Diagnostiska mätare",
+    visualizerSectionTitle: "Sporminskning",
+    f0Tooltip: "Ekvivalent steriliseringstid i minuter vid 121.11°C. Säkert gränsvärde är 3.0 eller högre.",
+    dTooltip: "Decimal minskningstid: tid i minuter som krävs för att förstöra 90% av sporerna vid aktuell temperatur.",
+    logReductionTooltip: "Antal decimala (10-faldiga) minskningar. En 12D minskning är säkerhetsstandarden.",
   },
   faq,
   howTo,
   seo: [
     {
       type: 'title',
-      text: 'Vetenskapliga Mekanismer for Termisk Beredning och Sportdeaktiveringskinetik',
+      text: 'Vetenskapliga Mekanismer för Termisk Beredning och Spordeaktiveringskinetik',
       level: 2,
     },
     {
       type: 'paragraph',
-      html: 'Termisk beredning vid konservering sakerstaller kommersiell sterilitet genom att forstora patogena och fordarvarande mikroorganismer. Huvudfokus for sakerhetsriktlinjer vid konservering av lagsyrig mat ar Clostridium botulinum. Botulinussporer ar mycket varmetraliga jamfort med vegetativa celler. For att deaktivera dessa sporer kravs en termisk dodtidsprocess som tillampar hog temperatur under en beraknad tid. Det matematiska sambandet mellan temperatur och deaktiveringshastighet uttrycks genom decimal minskningstid (D-varde) och temperaturberoendefaktorn (z-varde).',
+      html: 'Termisk beredning vid konservering säkerställer kommersiell sterilitet genom att förstöra patogena och fördärvande mikroorganismer. Huvudfokus för säkerhetsriktlinjer vid konservering av lågsyrig mat är Clostridium botulinum. Botulinussporer är mycket värmetåliga jämfört med vegetativa celler. För att deaktivera dessa sporer krävs en termisk dödtidsprocess som tillämpar hög temperatur under en beräknad tid. Det matematiska sambandet mellan temperatur och deaktiveringshastighet uttrycks genom decimal minskningstid (D-värde) och temperaturberoendefaktorn (z-värde).',
     },
     {
       type: 'title',
-      text: 'Livsmedelsklassificering och den Kritiska pH 4.6 Sakerhetsgransen',
+      text: 'Livsmedelsklassificering och den Kritiska pH 4.6 Säkerhetsgränsen',
       level: 3,
     },
     {
       type: 'paragraph',
-      html: 'Ett pH-varde pa 4.6 ar skiljelinjen for konserveringssakerhet. Syriga livsmedel under pH 4.6 hindrar naturligt groning och toxinproduktion av botulinussporer. For dessa livsmedel racker beredning vid 100 grader Celsius i ett kokande vattenbad. Dock maste lagsyriga livsmedel over pH 4.6 genomga tryckkonservering for att hoga angtemperaturen och na fullstandig termisk sportforstoring. Tabellen nedan visar klassificeringar och konserveringsmetoder for vanliga ingredienser:',
+      html: 'Ett pH-värde på 4.6 är skiljelinjen för konserveringssäkerhet. Syriga livsmedel under pH 4.6 hindrar naturligt groning och toxinproduktion av botulinussporer. För dessa livsmedel räcker beredning vid 100 grader Celsius i ett kokande vattenbad. Dock måste lågsyriga livsmedel över pH 4.6 genomgå tryckkonservering för att höja ångtemperaturen och nå fullständig termisk sporförstöring. Tabellen nedan visar klassificeringar och konserveringsmetoder för vanliga ingredienser:',
     },
     {
       type: 'table',
-      headers: ['Livsmedelsgrupp', 'pH-intervall', 'Kravd konserveringsmetod', 'Vanliga exempel'],
+      headers: ['Livsmedelsgrupp', 'pH-intervall', 'Krävd konserveringsmetod', 'Vanliga exempel'],
       rows: [
-        ['Hogsyrigt', 'Under 4.0', 'Vattenbadskonservering', 'Applen, Bar, Citrus, Persikor, Vinager Inlaggningar'],
-        ['Syrad eller medelsyrigt', '4.0 till 4.6', 'Vattenbad med syrajustering', 'Tomater, Fikon, Paron'],
-        ['Lagsyrigt', '4.6 och over', 'Obligatorisk tryckkonservering', 'Kott, Skaldjur, Bonor, Majs, Potatis, Soppor'],
+        ['Högsyrigt', 'Under 4.0', 'Vattenbadskonservering', 'Äpplen, Bär, Citrus, Persikor, Vinäger Inläggningar'],
+        ['Syrad eller medelsyrigt', '4.0 till 4.6', 'Vattenbad med syrajustering', 'Tomater, Fikon, Päron'],
+        ['Lågsyrigt', '4.6 och över', 'Obligatorisk tryckkonservering', 'Kött, Skaldjur, Bönor, Majs, Potatis, Soppor'],
       ],
     },
     {
       type: 'title',
-      text: 'Hojdjusteringar och Kokpunkt Sakerhetskorrigeringar',
+      text: 'Höjdjusteringar och Kokpunkt Säkerhetskorrigeringar',
       level: 3,
     },
     {
       type: 'paragraph',
-      html: 'Nar hojden okar minskar atmosfantrycket, vilket gor att vattnets kokpunkt sjunker under 100 grader Celsius. Vid vattenbadskonservering oker denna lagre temperatur D-vardet for sporerna, vilket kraver langre beredningstid. Vid tryckkonservering maste manometer- eller viktventilsinstallningar okas for att uppratthalla den interna malsteriliseringstemperaturen. Nedan finns referensguide for kokpunkter och kravda tryckkonserveringsjusteringar:',
+      html: 'När höjden ökar minskar atmosfärstrycket, vilket gör att vattnets kokpunkt sjunker under 100 grader Celsius. Vid vattenbadskonservering ökar detta lägre temperatur D-värdet för sporerna, vilket kräver längre beredningstid. Vid tryckkonservering måste manometer- eller viktventilsinställningar ökas för att upprätthålla den interna målsteriliseringstemperaturen. Nedan finns referensguide för kokpunkter och krävda tryckkonserveringsjusteringar:',
     },
     {
       type: 'table',
-      headers: ['Hojdintervall', 'Vattens kokpunkt', 'Kravd manometertryck', 'Kravd viktventilstryck'],
+      headers: ['Höjdintervall', 'Vattens kokpunkt', 'Krävd manometertryck', 'Krävd viktventilstryck'],
       rows: [
         ['0 till 300 meter', '100.0 °C', '11 PSI (121 °C)', '10 PSI (121 °C)'],
         ['300 till 600 meter', '99.0 °C', '11 PSI (121 °C)', '15 PSI (121 °C)'],
@@ -160,26 +160,26 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Varfor 12D Sportminskningskonceptet Forhindrar Botulism',
+      text: 'Varför 12D Sporminskningskonceptet Förhindrar Botulism',
       level: 3,
     },
     {
       type: 'paragraph',
-      html: 'Bakterieforstoring genom varme ar logaritmisk. D-vardet representerar den tid som kravs vid en specifik temperatur for att forstora 90% av sportpopulationen, vilket motsvarar en decimal logminskning. Referensstandarden for Clostridium botulinum ar ett D-varde pa 0.21 minuter vid 121.11 grader Celsius. For att na hoga sakerhetsmarginaler kraver kommersiella standarder en tolvfaldig decimal minskningsprocess (12D), vilket innebar att sportpopulationen minskas med tolv faktorer av tio. Detta ger ett mal F0-varde pa 3.0 minuter, vilket garanterar sakerhet i lagsyriga livsmedel.',
+      html: 'Bakterieförstöring genom värme är logaritmisk. D-värdet representerar den tid som krävs vid en specifik temperatur för att förstöra 90% av sporpopulationen, vilket motsvarar en decimal logminskning. Referensstandarden för Clostridium botulinum är ett D-värde på 0.21 minuter vid 121.11 grader Celsius. För att nå höga säkerhetsmarginaler kräver kommersiella standarder en tolvfaldig decimal minskningsprocess (12D), vilket innebär att sporpopulationen minskas med tolv faktorer av tio. Detta ger ett mål F0-värde på 3.0 minuter, vilket garanterar säkerhet i lågsyriga livsmedel.',
     },
     {
       type: 'title',
-      text: 'Praktiska Riktlinjer for Hemkonservering och Sakerhetstips',
+      text: 'Praktiska Riktlinjer för Hemkonservering och Säkerhetstips',
       level: 3,
     },
     {
       type: 'list',
       items: [
-        'Syra alltid tomater med citronsaft eller citronsyra innan vattenbadskeredning eftersom deras naturliga pH fluktuerar nara den kritiska gransen 4.6.',
-        'Forkorta aldrig beredningstider eller sank temperaturer. Termisk dodskinetik ar logaritmisk och mindre justeringar kan gora att sporer overlever.',
-        'Sakerstall att manometrar pa tryckkonserveringsutrustning testas arligen for noggrannhet, eftersom felaktiga tryckavlasningar direkt aventyrar interna steriliseringstemperaturer.',
-        'Kompensera for hojdskillnader genom att justera beredningstider i vattenbad eller oka PSI-installningar pa tryckkonserveringsutrustning.',
-        'Undvik att konservera blandade recept som innehaller lagsyriga ingredienser som kott eller bonor i ett vattenbad, aven om hela receptet innehaller syra.',
+        'Syra alltid tomater med citronsaft eller citronsyra innan vattenbadskeredning eftersom deras naturliga pH fluktuerar nära den kritiska gränsen 4.6.',
+        'Förkorta aldrig beredningstider eller sänk temperaturer. Termisk dödskinetik är logaritmisk och mindre justeringar kan göra att sporer överlever.',
+        'Säkerställ att manometrar på tryckkonserveringsutrustning testas årligen för noggrannhet, eftersom felaktiga tryckavläsningar direkt äventyrar interna steriliseringstemperaturer.',
+        'Kompensera för höjdskillnader genom att justera beredningstider i vattenbad eller öka PSI-inställningar på tryckkonserveringsutrustning.',
+        'Undvik att konservera blandade recept som innehåller lågsyriga ingredienser som kött eller bönor i ett vattenbad, även om hela receptet innehåller syra.',
       ],
     },
   ],

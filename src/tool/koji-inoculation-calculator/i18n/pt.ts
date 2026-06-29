@@ -1,24 +1,24 @@
 import type { ToolLocaleContent } from '../../../types';
 import { bibliography } from '../bibliography';
 
-const title = "Calculadora de Inoculacao e Hidratacao de Koji";
-const description = "Calcule o teor de umidade perfeito, a dosagem de inoculacao de esporos e a temperatura de incubacao para fazer koji em casa. Evite lotes falhos com nossa calculadora gratuita de inoculacao e hidratacao de koji.";
+const title = "Calculadora de Inoculação e Hidratação de Koji";
+const description = "Calcule o teor de umidade perfeito, a dosagem de inoculação de esporos e a temperatura de incubação para fazer koji em casa. Evite lotes falhos com nossa calculadora gratuita de inoculação e hidratação de koji.";
 const faq = [
   {
-    question: "Qual e o teor de umidade ideal para cozinhar substrato de koji?",
-    answer: "O teor de umidade total ideal para arroz ou cevada cozidos no vapor ao inocular Koji esta entre 30% e 35%. Isso corresponde a um peso cozido no vapor de aproximadamente 1,35x a 1,40x o peso seco inicial."
+    question: "Qual é o teor de umidade ideal para cozinhar substrato de koji?",
+    answer: "O teor de umidade total ideal para arroz ou cevada cozidos no vapor ao inocular Koji está entre 30% e 35%. Isso corresponde a um peso cozido no vapor de aproximadamente 1,35x a 1,40x o peso seco inicial."
   },
   {
-    question: "Quanto po de esporos (tane-koji) eu preciso?",
-    answer: "A taxa de inoculacao padrao e de 1 grama de mistura de esporos padrao por 1 quilograma de substrato seco. Se usar esporos concentrados, voce precisa de menos (0,5 g), enquanto misturas diluidas requerem mais (2,0 g)."
+    question: "Quanto pó de esporos (tane-koji) eu preciso?",
+    answer: "A taxa de inoculação padrão é de 1 grama de mistura de esporos padrão por 1 quilograma de substrato seco. Se usar esporos concentrados, você precisa de menos (0,5 g), enquanto misturas diluídas requerem mais (2,0 g)."
   },
   {
-    question: "Por que o controle de temperatura e critico durante a incubacao do koji?",
-    answer: "Aspergillus oryzae cresce de forma otima entre 28C e 34C. Se a temperatura exceder 38C, o fungo pode superaquecer, parar de crescer ou produzir esporos verdes/pretos indesejados. Abaixo de 20C, o crescimento diminui significativamente."
+    question: "Por que o controle de temperatura é crítico durante a incubação do koji?",
+    answer: "Aspergillus oryzae cresce de forma ótima entre 28C e 34C. Se a temperatura exceder 38C, o fungo pode superaquecer, parar de crescer ou produzir esporos verdes/pretos indesejados. Abaixo de 20C, o crescimento diminui significativamente."
   },
   {
-    question: "O que acontece durante a fase exotermica?",
-    answer: "Apos 18 a 24 horas de incubacao, o koji comeca a crescer rapidamente e gera seu proprio calor. Durante esse pico exotermico, voce deve mexer o substrato e reduzir o calor do incubador para evitar superaquecimento."
+    question: "O que acontece durante a fase exotérmica?",
+    answer: "Após 18 a 24 horas de incubação, o koji começa a crescer rapidamente e gera seu próprio calor. Durante esse pico exotérmico, você deve mexer o substrato e reduzir o calor do incubador para evitar superaquecimento."
   }
 ];
 

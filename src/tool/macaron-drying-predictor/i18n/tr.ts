@@ -1,25 +1,25 @@
 import type { ToolLocaleContent } from '../../../types';
 import { bibliography } from '../bibliography';
 
-const title = 'Makaron Kabugu Kuruma Tahmincisi: Nem ve Sicakliga Gore Kuruma Suresi Hesaplayicisi';
-const description = 'Nem, sicaklik ve kabuk boyutuna gore makaron kabuklarinin tam olarak ne kadar sure kurumasi gerektigini hesaplayin. Catlayan kabuklardan kacinin ve her seferinde mukemmel ayak elde edin.';
+const title = 'Makaron Kabuğu Kuruma Tahmincisi: Nem ve Sıcaklığa Göre Kuruma Süresi Hesaplayıcısı';
+const description = 'Nem, sıcaklık ve kabuk boyutuna göre makaron kabuklarının tam olarak ne kadar süre kuruması gerektiğini hesaplayın. Çatlayan kabuklardan kaçının ve her seferinde mükemmel ayak elde edin.';
 
 const faq = [
   {
-    question: 'Makaron kabuklari neden pisirmeden once kurumalidir?',
-    answer: 'Kuruma, makaron kabugunun yuzeyinde ince bir zar olusturur. Bu zar hayati onemdedir cunku pisirme sirasinda buhari hapseder ve buharin ust kismi catlatmasi yerine asagiya, ayaklardan cikmasini saglar. Duzgun kuruma olmazsa makaronlar catlar, ayak olusturmaz veya esit pismez.',
+    question: 'Makaron kabukları neden pişirmeden önce kurumalıdır?',
+    answer: 'Kuruma, makaron kabuğunun yüzeyinde ince bir zar oluşturur. Bu zar hayati önem taşır çünkü pişirme sırasında buharı hapse alır ve buharın üst kısmı çatlatması yerine aşağıya, ayaklardan çıkmasını sağlar. Düzgün kuruma olmazsa makaronlar çatlar, ayak oluşturmaz veya eşit pişmez.',
   },
   {
-    question: 'Nem, makaron kuruma suresini nasil etkiler?',
-    answer: 'Nem en kritik faktordur. Yuksek nemde (%60 uzeri), hava zaten neme doymustur ve kabuk yuzeyinden buharlasmayi dramatik sekilde yavaslatir. Kuruma suresi kuru bir gune kiyasla iki veya uc katina cikabilir. Cok kuru kosullarda (%30 alti), kabuklar asiri kuruyabilir ve duzgun kabarmayi engelleyen kalin bir zar olusturabilir.',
+    question: 'Nem, makaron kuruma süresini nasıl etkiler?',
+    answer: 'Nem en kritik faktördür. Yüksek nemde (%60 üzeri), hava zaten neme doymuştur ve kabuk yüzeyinden buharlaşmayı dramatik şekilde yavaşlatır. Kuruma süresi kuru bir güne kıyasla iki veya üç katına çıkabilir. Çok kuru koşullarda (%30 altı), kabuklar aşırı kuruyabilir ve düzgün kabarmayı engelleyen kalın bir zar oluşturabilir.',
   },
   {
-    question: 'Makaron kabuklarini kurutmak icin ideal sicaklik nedir?',
-    answer: '20Â°C ile 25Â°C arasi oda sicakligi idealdir. Daha sicak hava daha fazla nem tutar ve kurumayi hizlandirir, ancak cok sicak (30Â°C uzeri) kabuklarin disinin sertlesip icinin islak kalmasina neden olabilir. 18Â°C altindaki serin sicakliklar kurumayi belirgin sekilde yavaslatir.',
+    question: 'Makaron kabuklarını kurutmak için ideal sıcaklık nedir?',
+    answer: '20°C ile 25°C arası oda sıcaklığı idealdir. Daha sıcak hava daha fazla nem tutar ve kurumayı hızlandırır, ancak çok sıcak (30°C üzeri) kabukların dışının sertleşip içinin ıslak kalmasına neden olabilir. 18°C altındaki serin sıcaklıklar kurumayı belirgin şekilde yavaşlatır.',
   },
   {
-    question: 'Kabuk boyutu kuruma suresini nasil etkiler?',
-    answer: 'Daha buyuk kabuklar daha fazla yuzey alani ve hacme sahiptir, bu da orantili olarak daha uzun kuruma gerektirir. 2 cm\'lik mini bir makaron 15 dakikada kuruyabilirken, 5 cm\'lik buyuk bir makaron bir saatten fazla surebilir. Iliski dogrusal degildir: capi iki katina cikarmak, yuzey alani-hacim iliskisindeki kare-kup yasasi nedeniyle kuruma suresini yaklasik uc katina cikarir.',
+    question: 'Kabuk boyutu kuruma süresini nasıl etkiler?',
+    answer: 'Daha büyük kabuklar daha fazla yüzey alanı ve hacme sahiptir, bu da orantılı olarak daha uzun kuruma gerektirir. 2 cm\'lik mini bir makaron 15 dakikada kuruyabilirken, 5 cm\'lik büyük bir makaron bir saatten fazla sürebilir. İlişki doğrusal değildir: çapı iki katına çıkarmak, yüzey alanı-hacim ilişkisindeki kare-küp yasası nedeniyle kuruma süresini yaklaşık üç katına çıkarır.',
   },
 ];
 

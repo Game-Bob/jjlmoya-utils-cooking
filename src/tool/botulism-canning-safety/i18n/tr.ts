@@ -1,43 +1,43 @@
 import type { ToolLocaleContent } from '../../../types';
 import { bibliography } from '../bibliography';
 
-const title = "Botulizm Konserve Guvenligi Denetleyici Termal Olum Hesaplayici";
-const description = "Clostridium botulinum icin termal spor azaltimi ve F0 sterilizasyon letalitesini hesaplayin. Dusuk asitli ve asitli konserve guvenlik bolgelerini degerlendirin.";
+const title = "Botulizm Konserve Güvenliği Denetleyici Termal Ölüm Hesaplayıcı";
+const description = "Clostridium botulinum için termal spor azaltımı ve F0 sterilizasyon letalitesini hesaplayın. Düşük asitli ve asitli konserve güvenlik bölgelerini değerlendirin.";
 const faq = [
   {
-    question: "Clostridium botulinum neden evde konserve yapiminda en buyuk endise kaynagidir?",
-    answer: "Clostridium botulinum, botulinum toksini ureten anaerobik, spor olusturan bir bakteridir ve bilinen en olucu biyolojik maddelerden biridir. Sporlar asiri derecede isiya dayanikli olup, sicaklik yetersizse kapali kavanozlar icindeki anaerobik kosullarda hayatta kalabilir."
+    question: "Clostridium botulinum neden evde konserve yapımında en büyük endişe kaynağıdır?",
+    answer: "Clostridium botulinum, botulinum toksini üreten anaerobik, spor oluşturan bir bakteridir ve bilinen en ölümcül biyolojik maddelerden biridir. Sporlar aşırı derecede ısıya dayanıklı olup, sıcaklık yetersizse kapalı kavanozlar içindeki anaerobik koşullarda hayatta kalabilir."
   },
   {
-    question: "Gida muhafazasinda pH 4.6'nin kritik onemi nedir?",
-    answer: "pH degeri 4.6'nin altinda olan gidalar asitli olarak siniflandirilir. Bu ortamlarda botulinum sporlari filizlenemez veya toksin uretemez. pH degeri 4.6 veya daha yuksek olan gidalar icin, sporlari yok etmek amaciyla 116 santigrat derecenin uzerinde sicakliklara ulasmak amaciyla basincli konserve yapimi zorunludur."
+    question: "Gıda muhafazasında pH 4.6'nın kritik önemi nedir?",
+    answer: "pH değeri 4.6'nın altında olan gıdalar asitli olarak sınıflandırılır. Bu ortamlarda botulinum sporları filizlenemez veya toksin üretemez. pH değeri 4.6 veya daha yüksek olan gıdalar için, sporları yok etmek amacıyla 116 santigrat derecenin üzerinde sıcaklıklara ulaşmak amacıyla basınçlı konserve yapımı zorunludur."
   },
   {
-    question: "F0 sterilizasyon letalite degeri nedir?",
-    answer: "F0 degeri, 121.11 santigrat derecede esdeger sterilizasyon suresini olcer. Dusuk asitli gidalar icin standart sterilizasyon prosesi, spor popilasyonunda on iki basamakli bir azalmayi temsil eden 3.0 dakika veya daha yuksek bir F0 degeri gerektirir."
+    question: "F0 sterilizasyon letalite değeri nedir?",
+    answer: "F0 değeri, 121.11 santigrat derecede eşdeğer sterilizasyon süresini ölçer. Düşük asitli gıdalar için standart sterilizasyon prosesi, spor popülasyonunda on iki basamaklı bir azalmayı temsil eden 3.0 dakika veya daha yüksek bir F0 değeri gerektirir."
   },
   {
-    question: "Dusuk asitli gidalar icin neden su banyosu kullanamam?",
-    answer: "Su banyosu konserveciligi yalnizca kaynama noktasina (100 santigrat derece) ulasir. Bu sicaklik, dusuk asitli gidalardaki Clostridium botulinum'un isiya dayanikli sporlarini oldurmek icin yetersizdir. Sporlar hayatta kalir ve oda sicakliginda toksin uretir."
+    question: "Düşük asitli gıdalar için neden su banyosu kullanamam?",
+    answer: "Su banyosu konserveciliği yalnızca kaynama noktasına (100 santigrat derece) ulaşır. Bu sıcaklık, düşük asitli gıdalardaki Clostridium botulinum'un ısıya dayanıklı sporlarını öldürmek için yetersizdir. Sporlar hayatta kalır ve oda sıcaklığında toksin üretir."
   }
 ];
 
 const howTo = [
   {
-    name: "Gida asitlik seviyesini girin",
-    text: "Malzemelerinizin pH degerini belirleyin ve girin. pH 4.6 veya daha yuksekse, gida dusuk asitlidir."
+    name: "Gıda asitlik seviyesini girin",
+    text: "Malzemelerinizin pH değerini belirleyin ve girin. pH 4.6 veya daha yüksekse, gıda düşük asitlidir."
   },
   {
-    name: "Konserve teknigini secin",
-    text: "Muhafaza ekipmaniniza bagli olarak su banyosu veya basincli konserve arasinda secim yapin."
+    name: "Konserve tekniğini seçin",
+    text: "Muhafaza ekipmanınıza bağlı olarak su banyosu veya basınçlı konserve arasında seçim yapın."
   },
   {
-    name: "Sicaklik ve sureyi belirleyin",
-    text: "Konserve isleme sicakligini ve kavanozlarin bu sicaklikta kaldigi sureyi dakika cinsinden girin."
+    name: "Sıcaklık ve süreyi belirleyin",
+    text: "Konserve işleme sıcaklığını ve kavanozların bu sıcaklıkta kaldığı süreyi dakika cinsinden girin."
   },
   {
-    name: "Guvenlik teshisini degerlendirin",
-    text: "Uygunlugu onaylamak icin ortaya cikan F0 degerini, basamakli spor azaltma sayisini ve guvenlik bolgesi gostergesini kontrol edin."
+    name: "Güvenlik teşhisini değerlendirin",
+    text: "Uygunluğu onaylamak için ortaya çıkan F0 değerini, basamaklı spor azaltma sayısını ve güvenlik bölgesi göstergesini kontrol edin."
   }
 ];
 
@@ -75,80 +75,80 @@ const appSchema = {
 
 export const content: ToolLocaleContent = {
   slug: 'botulizm-konserve-guvenligi',
-  title: 'Botulizm Konserve Guvenligi Denetleyici',
-  description: 'Clostridium botulinum icin termal spor azaltimi ve F0 sterilizasyon letalitesini hesaplayin. Dusuk asitli ve asitli konserve guvenlik bolgelerini degerlendirin.',
-  faqTitle: 'Sikca Sorulan Sorular',
+  title: 'Botulizm Konserve Güvenliği Denetleyici',
+  description: 'Clostridium botulinum için termal spor azaltımı ve F0 sterilizasyon letalitesini hesaplayın. Düşük asitli ve asitli konserve güvenlik bölgelerini değerlendirin.',
+  faqTitle: 'Sıkça Sorulan Sorular',
   ui: {
-    title: "Konserve Otoklav Monitru",
-    subtitle: "Termal olum teshisi ve botulizm guvenlik degerlendiricisi",
-    methodLabel: "Konserve Yontemi",
+    title: "Konserve Otoklav Monitörü",
+    subtitle: "Termal ölüm teşhisi ve botulizm güvenlik değerlendiricisi",
+    methodLabel: "Konserve Yöntemi",
     waterBath: "Su Banyosu Konserve",
-    pressureCanner: "Basincli Konserve",
-    tempLabel: "Konserve Sicakligi",
-    timeLabel: "Islem Suresi",
-    phLabel: "Gida pH Degeri",
-    f0Label: "F0 Letalite Degeri",
+    pressureCanner: "Basınçlı Konserve",
+    tempLabel: "Konserve Sıcaklığı",
+    timeLabel: "İşlem Süresi",
+    phLabel: "Gıda pH Değeri",
+    f0Label: "F0 Letalite Değeri",
     dLabel: "Hesaplanan D Degeri",
-    sporesLabel: "Spor Populasyonu",
-    statusSafe: "Sterilizasyon Tamamlandi",
-    statusMarginal: "Sinirda Sterilizasyon",
-    statusUnsafe: "Yuksek Botulizm Riski",
-    statusSafeDesc: "Termal letalite, hedef F0 3.0 dakikayi asmaktadir. Sporlar tamamen devre disi birakilmistir.",
-    statusMarginalDesc: "Islem kismi deaktivasyona ulasir ancak 12D guvenlik standardinin altinda kalir. Sureyi veya sicakligi ayarlayin.",
-    statusUnsafeDesc: "Islem Clostridium botulinum'u devre disi birakamaz. Su banyosundaki dusuk asitli gidalar tehlikeli olmaya devam eder.",
+    sporesLabel: "Spor Popülasyonu",
+    statusSafe: "Sterilizasyon Tamamlandı",
+    statusMarginal: "Sınırda Sterilizasyon",
+    statusUnsafe: "Yüksek Botulizm Riski",
+    statusSafeDesc: "Termal letalite, hedef F0 3.0 dakikayı aşmaktadır. Sporlar tamamen devre dışı bırakılmıştır.",
+    statusMarginalDesc: "İşlem kısmi deaktivasyona ulaşır ancak 12D güvenlik standardının altında kalır. Süreyi veya sıcaklığı ayarlayın.",
+    statusUnsafeDesc: "İşlem Clostridium botulinum'u devre dışı bırakamaz. Su banyosundaki düşük asitli gıdalar tehlikeli olmaya devam eder.",
     cLabel: "°C",
     fLabel: "°F",
     minLabel: "dk",
-    logReductionLabel: "Basamakli Azaltma",
+    logReductionLabel: "Basamaklı Azaltma",
     dValueUnit: "dakika",
-    indicatorSectionTitle: "Teshis Gostergeleri",
+    indicatorSectionTitle: "Teşhis Göstergeleri",
     visualizerSectionTitle: "Spor Azaltma",
-    f0Tooltip: "121.11°C'de dakika cinsinden esdeger sterilizasyon suresi. Guvenli esik 3.0 veya daha yuksektir.",
-    dTooltip: "Basamakli azaltma suresi: mevcut sicaklikta sporlarin %90'ini yok etmek icin gereken dakika cinsinden sure.",
-    logReductionTooltip: "Basamakli (10 katli) azaltma sayisi. 12D azaltma guvenlik standardidir.",
+    f0Tooltip: "121.11°C'de dakika cinsinden eşdeğer sterilizasyon süresi. Güvenli eşik 3.0 veya daha yüksektir.",
+    dTooltip: "Basamaklı azaltma süresi: mevcut sıcaklıkta sporların %90'ını yok etmek için gereken dakika cinsinden süre.",
+    logReductionTooltip: "Basamaklı (10 katlı) azaltma sayısı. 12D azaltma güvenlik standardıdır.",
   },
   faq,
   howTo,
   seo: [
     {
       type: 'title',
-      text: 'Termal Isleme ve Spor Deaktivasyon Kinetiginin Bilimsel Mekanizmalari',
+      text: 'Termal İşleme ve Spor Deaktivasyon Kinetiğinin Bilimsel Mekanizmaları',
       level: 2,
     },
     {
       type: 'paragraph',
-      html: "Konservecilikte termal isleme, patojen ve bozulmaya neden olan mikroorganizmalari yok ederek ticari steriliteyi guvence altina alir. Dusuk asitli gida muhafazasinda guvenlik yonergelerinin temel odagi Clostridium botulinum'dur. Botulinum sporlari, vejetatif hucrelere kiyasla oldukca isiya dayaniklidir. Bu sporlari devre disi birakmak, hesaplanan bir sure boyunca yuksek sicaklik uygulayan bir termal olum prosesini gerektirir. Sicaklik ve deaktivasyon hizi arasindaki matematiksel iliski, basamakli azaltma suresi (D degeri) ve sicaklik bagimlilik faktoru (z degeri) ile ifade edilir.",
+      html: "Konservecilikte termal işleme, patojen ve bozulmaya neden olan mikroorganizmaları yok ederek ticari steriliteyi güvence altına alır. Düşük asitli gıda muhafazasında güvenlik yönergelerinin temel odağı Clostridium botulinum'dur. Botulinum sporları, vejetatif hücrelere kıyasla oldukça ısıya dayanıklıdır. Bu sporları devre dışı bırakmak, hesaplanan bir süre boyunca yüksek sıcaklık uygulayan bir termal ölüm prosesini gerektirir. Sıcaklık ve deaktivasyon hızı arasındaki matematiksel ilişki, basamakli azaltma süresi (D değeri) ve sıcaklık bağımlılık faktörü (z değeri) ile ifade edilir.",
     },
     {
       type: 'title',
-      text: 'Gida Siniflandirmasi ve Kritik pH 4.6 Guvenlik Esigi',
+      text: 'Gıda Sınıflandırılması ve Kritik pH 4.6 Güvenlik Eşiği',
       level: 3,
     },
     {
       type: 'paragraph',
-      html: "pH 4.6 degeri, muhafaza guvenligi icin sinir cizgisidir. pH 4.6'nin altindaki asitli gidalar, dogal olarak botulinum sporlarinin filizlenmesini ve toksin uretimini engeller. Bu gidalar icin kaynar su banyosunda 100 santigrat derecede isleme yeterlidir. Ancak pH 4.6'nin uzerindeki dusuk asitli gidalar, buhar sicakligini yukseltmek ve tam termal spor yok edilmesini saglamak icin basincli konserve isleminden gecmelidir. Asagidaki tablo, yaygin malzemeler icin siniflandirmalari ve konserve yontemlerini detaylandirmaktadir:",
+      html: "pH 4.6 değeri, muhafaza güvenliği için sınır çizgisidir. pH 4.6'nın altındaki asitli gıdalar, doğal olarak botulinum sporlarının filizlenmesini ve toksin üretimini engeller. Bu gıdalar için kaynar su banyosunda 100 santigrat derecede işleme yeterlidir. Ancak pH 4.6'nın üzerindeki düşük asitli gıdalar, buhar sıcaklığını yükseltmek ve tam termal spor yok edilmesini sağlamak için basınçlı konserve işleminden geçmelidir. Aşağıdaki tablo, yaygın malzemeler için sınıflandırmaları ve konserve yöntemlerini detaylandırmaktadır:",
     },
     {
       type: 'table',
-      headers: ['Gida Grubu', 'pH Araligi', 'Gerekli Konserve Yontemi', 'Yaygin Ornekler'],
+      headers: ['Gıda Grubu', 'pH Aralığı', 'Gerekli Konserve Yöntemi', 'Yaygın Örnekler'],
       rows: [
-        ['Yuksek Asitli', '4.0 Altinda', 'Su Banyosu Konserve', 'Elma, Meyveler, Turuncgiller, Seftali, Sirke Tursulari'],
-        ['Asitlendirilmis veya Orta Asitli', '4.0 ila 4.6', 'Asit Ayarli Su Banyosu', 'Domates, Incir, Armut'],
-        ['Dusuk Asitli', '4.6 ve Uzeri', 'Zorunlu Basincli Konserve', 'Et, Deniz Urunleri, Fasulye, Misir, Patates, Corbalar'],
+        ['Yüksek Asitli', '4.0 Altında', 'Su Banyosu Konserve', 'Elma, Meyveler, Turunçgiller, Şeftali, Sirke Turşuları'],
+        ['Asitlendirilmiş veya Orta Asitli', '4.0 ila 4.6', 'Asit Ayarlı Su Banyosu', 'Domates, İncir, Armut'],
+        ['Düşük Asitli', '4.6 ve Üzeri', 'Zorunlu Basınçlı Konserve', 'Et, Deniz Ürünleri, Fasulye, Mısır, Patates, Çorbalar'],
       ],
     },
     {
       type: 'title',
-      text: 'Rakim Ayarlamalari ve Kaynama Noktasi Guvenlik Duzeltmeleri',
+      text: 'Rakım Ayarlamaları ve Kaynama Noktası Güvenlik Düzeltmeleri',
       level: 3,
     },
     {
       type: 'paragraph',
-      html: 'Rakim arttikca atmosfer basinci duser ve suyun kaynama noktasi 100 santigrat derecenin altina iner. Su banyosu konserveciliginde bu dusuk sicaklik, sporlarin D degerini arttirir ve daha uzun isleme sureleri gerektirir. Basincli konservecilikte, hedef ic sterilizasyon sicakligini korumak icin kadranli veya agirlikli olcu ayarlari yukseltilmelidir. Asagida kaynama noktalari ve gerekli basincli konserve ayarlamalari icin referans kilavuzu bulunmaktadir:',
+      html: 'Rakım arttıkça atmosfer basıncı düşer ve suyun kaynama noktası 100 santigrat derecenin altına iner. Su banyosu konserveciliğinde bu düşük sıcaklık, sporların D değerini arttırır ve daha uzun işleme süreleri gerektirir. Basınçlı konservecilikte, hedef iç sterilizasyon sıcaklığını korumak için kadranlı veya ağırlıklı ölçü ayarları yükseltilmelidir. Aşağıda kaynama noktaları ve gerekli basınçlı konserve ayarlamaları için referans kılavuzu bulunmaktadır:',
     },
     {
       type: 'table',
-      headers: ['Rakim Araligi', 'Su Kaynama Noktasi', 'Gerekli Kadranli Olcu Basinci', 'Gerekli Agirlikli Olcu Basinci'],
+      headers: ['Rakım Aralığı', 'Su Kaynama Noktası', 'Gerekli Kadranlı Ölçü Basıncı', 'Gerekli Ağırlıklı Ölçü Basıncı'],
       rows: [
         ['0 ila 300 metre', '100.0 °C', '11 PSI (121 °C)', '10 PSI (121 °C)'],
         ['300 ila 600 metre', '99.0 °C', '11 PSI (121 °C)', '15 PSI (121 °C)'],
@@ -160,26 +160,26 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'title',
-      text: '12D Spor Azaltma Konsepti Botulizmi Nasil Onler',
+      text: '12D Spor Azaltma Konsepti Botulizmi Nasıl Önler',
       level: 3,
     },
     {
       type: 'paragraph',
-      html: "Isi ile bakteri yok etme logaritmiktir. D degeri, belirli bir sicaklikta spor popilasyonunun %90'ini yok etmek icin gereken sureyi temsil eder ve bu da bir basamakli log azaltmaya esittir. Clostridium botulinum icin referans standart, 121.11 santigrat derecede 0.21 dakikalik bir D degeridir. Yuksek guvenlik marjlari elde etmek icin ticari standartlar, on iki basamakli bir azaltma prosesi (12D) talep eder, yani spor popilasyonu on iki kat on azaltilir. Bu, dusuk asitli gidalarda guvenligi garanti eden 3.0 dakikalik bir hedef F0 degeri saglar.",
+      html: "Isı ile bakteri yok etme logaritmiktir. D değeri, belirli bir sıcaklıkta spor popülasyonunun %90'ını yok etmek için gereken süreyi temsil eder ve bu da bir basamaklı log azaltmaya eşittir. Clostridium botulinum için referans standart, 121.11 santigrat derecede 0.21 dakikalık bir D değeridir. Yüksek güvenlik marjları elde etmek için ticari standartlar, on iki basamaklı bir azaltma prosesi (12D) talep eder, yani spor popülasyonu on iki kat on azaltılır. Bu, düşük asitli gıdalarda güvenliği garanti eden 3.0 dakikalık bir hedef F0 değeri sağlar.",
     },
     {
       type: 'title',
-      text: 'Pratik Ev Konserve Kilavuzu ve Guvenlik Ipuclari',
+      text: 'Pratik Ev Konserve Kılavuzu ve Güvenlik İpuçları',
       level: 3,
     },
     {
       type: 'list',
       items: [
-        'Domateslerin dogal pH degeri kritik 4.6 sinirina yakin dalgalandigi icin, su banyosu isleminden once her zaman limon suyu veya sitrik asit ile asitlendirin.',
-        'Isleme surelerini asla kisaltmayin veya sicakliklari dusurmeyin. Termal olum kinetigi logaritmiktir ve kucuk ayarlamalar sporlarin hayatta kalmasina izin verebilir.',
-        'Basincli konserve makinelerindeki kadranli olculerin dogrulugu icin yillik test edildiginden emin olun, cunku yanlis basinclik okumalari ic sterilizasyon sicakliklarini dogrudan tehlikeye atar.',
-        'Su banyolarinda isleme surelerini ayarlayarak veya basincli konserve makinelerinde PSI ayarlarini yukselterek rakim farkliliklarini telafi edin.',
-        'Genel tarif asit icerse bile, su banyosunda et veya fasulye gibi dusuk asitli malzemeler iceren karisik tarifleri konservelemekten kacinin.',
+        'Domateslerin doğal pH değeri kritik 4.6 sınırına yakın dalgalandığı için, su banyosu işleminden önce her zaman limon suyu veya sitrik asit ile asitlendirin.',
+        'İşleme sürelerini asla kısaltmayın veya sıcaklıkları düşürmeyin. Termal ölüm kinetiği logaritmiktir ve küçük ayarlamalar sporların hayatta kalmasına izin verebilir.',
+        'Basınçlı konserve makinelerindeki kadranlı ölçülerin doğruluğu için yıllık test edildiğinden emin olun, çünkü yanlış basınçlık okumaları iç sterilizasyon sıcaklıklarını doğrudan tehlikeye atar.',
+        'Su banyolarında işleme sürelerini ayarlayarak veya basınçlı konserve makinelerinde PSI ayarlarını yükselterek rakım farklılıklarını telafi edin.',
+        'Genel tarif asit içerse bile, su banyosunda et veya fasulye gibi düşük asitli malzemeler içeren karışık tarifleri konservelemekten kaçının.',
       ],
     },
   ],

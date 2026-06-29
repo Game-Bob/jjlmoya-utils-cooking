@@ -1,48 +1,48 @@
 import type { ToolLocaleContent } from '../../../types';
 import { bibliography } from '../bibliography';
 
-const title = 'Predyktor Suszenia Muszelek Makaronikow: Kalkulator Czasu Suszenia w Zaleznosci od Wilgotnosci i Temperatury';
-const description = 'Oblicz dokladnie, ile czasu muszle makaronikow potrzebuja na wysuszenie w zaleznosci od wilgotnosci, temperatury i rozmiaru. Uniknij pekajacych muszelek i ciesz sie perfekcyjnym rantem za kazdym razem.';
+const title = 'Predyktor Suszenia Muszelek Makaroników: Kalkulator Czasu Suszenia w Zależności od Wilgotności i Temperatury';
+const description = 'Oblicz dokładnie, ile czasu muszle makaroników potrzebują na wysuszenie w zależności od wilgotności, temperatury i rozmiaru. Uniknij pękających muszelek i ciesz się perfekcyjnym rantem za każdym razem.';
 
 const faq = [
   {
-    question: 'Dlaczego muszle makaronikow musza schnac przed pieczeniem?',
-    answer: 'Suszenie tworzy cienka blonke na powierzchni muszelki. Ta blonka jest niezbedna, poniewaz zatrzymuje pare podczas pieczenia i zmusza ja do ujscia dolem przez ran zamiast rozrywania wierzchu. Bez odpowiedniego wysuszenia makaroniki pekaja, nie maja rantu lub pieka sie nierowno.',
+    question: 'Dlaczego muszle makaroników muszą schnąć przed pieczeniem?',
+    answer: 'Suszenie tworzy cienką błonkę na powierzchni muszelki. Ta błonka jest niezbędna, ponieważ zatrzymuje parę podczas pieczenia i zmusza ją do ujścia dołem przez rant zamiast rozrywania wierzchu. Bez odpowiedniego wysuszenia makaroniki pękają, nie mają rantu lub pieką się nierówno.',
   },
   {
-    question: 'Jak wilgotnosc wplywa na czas suszenia makaronikow?',
-    answer: 'Wilgotnosc jest najbardziej krytycznym czynnikiem. Przy wysokiej wilgotnosci (powyzej 60%) powietrze jest juz nasycone wilgocia, co dramatycznie spowalnia parowanie z powierzchni muszelki. Czas suszenia moze byc dwa, a nawet trzy razy dluzszy niz w suchy dzien. W bardzo suchych warunkach (ponizej 30%) muszelki moga przeschnac i wytworzyc zbyt gruba blonke, ktora uniemozliwia prawidlowy wzrost.',
+    question: 'Jak wilgotność wpływa na czas suszenia makaroników?',
+    answer: 'Wilgotność jest najbardziej krytycznym czynnikiem. Przy wysokiej wilgotności (powyżej 60%) powietrze jest już nasycone wilgocią, co dramatycznie spowalnia parowanie z powierzchni muszelki. Czas suszenia może być dwa, a nawet trzy razy dłuższy niż w suchy dzień. W bardzo suchych warunkach (poniżej 30%) muszelki mogą przeschnąć i wytworzyć zbyt grubą błonkę, która uniemożliwia prawidłowy wzrost.',
   },
   {
-    question: 'Jaka jest idealna temperatura do suszenia muszelek makaronikow?',
-    answer: 'Temperatura pokojowa miedzy 20 Â°C a 25 Â°C jest idealna. Cieplejsze powietrze zatrzymuje wiecej wilgoci i przyspiesza suszenie, ale gdy jest zbyt goraco (powyzej 30 Â°C), muszelki moga schnac nierowno  -  z chrupiaca warstwa na zewnatrz i wilgotnym wnetrzem. Temperatury ponizej 18 Â°C znacznie spowalniaja suszenie.',
+    question: 'Jaka jest idealna temperatura do suszenia muszelek makaroników?',
+    answer: 'Temperatura pokojowa między 20 °C a 25 °C jest idealna. Cieplejsze powietrze zatrzymuje więcej wilgoci i przyspiesza suszenie, ale gdy jest zbyt gorąco (powyżej 30 °C), muszelki mogą schnąć nierówno  -  z chrupiącą warstwą na zewnątrz i wilgotnym wnętrzem. Temperatury poniżej 18 °C znacznie spowalniają suszenie.',
   },
   {
-    question: 'Jak wielkosc muszelki wplywa na czas suszenia?',
-    answer: 'Wieksze muszelki maja wieksza powierzchnie i objetosc, co wymaga proporcjonalnie dluzszego suszenia. Mini makaronik o srednicy 2 cm moze wyschnac w 15 minut, podczas gdy duzy makaronik 5 cm moze potrzebowac ponad godziny. Zaleznosc nie jest liniowa: podwojenie srednicy mniej wiecej trzykrotnie wydluza czas suszenia ze wzgledu na stosunek powierzchni do objetosci.',
+    question: 'Jak wielkość muszelki wpływa na czas suszenia?',
+    answer: 'Większe muszelki mają większą powierzchnię i objętość, co wymaga proporcjonalnie dłuższego suszenia. Mini makaronik o średnicy 2 cm może wyschnąć w 15 minut, podczas gdy duży makaronik 5 cm może potrzebować ponad godziny. Zależność nie jest liniowa: podwojenie średnicy mniej więcej trzykrotnie wydłuża czas suszenia ze względu na stosunek powierzchni do objętości.',
   },
 ];
 
 const howTo = [
   {
     name: 'Wykonaj muszelki',
-    text: 'Wykrecaj rowne krazki na papierze do pieczenia lub macie silikonowej. Uzyj szablonu, aby zachowac jednakowy rozmiar.',
+    text: 'Wykręcaj równe krążki na papierze do pieczenia lub macie silikonowej. Użyj szablonu, aby zachować jednakowy rozmiar.',
   },
   {
     name: 'Zmierz warunki w otoczeniu',
-    text: 'Sprawdz wilgotnosc i temperature w kuchni za pomoca higrometru i termometru.',
+    text: 'Sprawdź wilgotność i temperaturę w kuchni za pomocą higrometru i termometru.',
   },
   {
-    name: 'Wprowadz wartosci do kalkulatora',
-    text: 'Wprowadz wilgotnosc, temperature i srednice muszelki, aby uzyskac szacowany czas suszenia.',
+    name: 'Wprowadź wartości do kalkulatora',
+    text: 'Wprowadź wilgotność, temperaturę i średnicę muszelki, aby uzyskać szacowany czas suszenia.',
   },
   {
-    name: 'Sprawdz blonke',
-    text: 'Po uplywie wskazanego czasu delikatnie dotknij powierzchni muszelki. Powinna byc sucha i matowa, nie lepka. Jesli klei sie do palca, daj jej wiecej czasu.',
+    name: 'Sprawdź błonkę',
+    text: 'Po upływie wskazanego czasu delikatnie dotknij powierzchni muszelki. Powinna być sucha i matowa, nie lepka. Jeśli klei się do palca, daj jej więcej czasu.',
   },
   {
-    name: 'Piecz, gdy bedzie gotowa',
-    text: 'Gdy blonka jest juz uformowana, piecz od razu. Nie zostawiaj muszelek zbyt dlugo po wysuszeniu, bo moga przeschnac i popekac.',
+    name: 'Piecz, gdy będzie gotowa',
+    text: 'Gdy błonka jest już uformowana, piecz od razu. Nie zostawiaj muszelek zbyt długo po wysuszeniu, bo mogą przeschnąć i popękać.',
   },
 ];
 
@@ -80,65 +80,65 @@ const appSchema = {
 
 export const content: ToolLocaleContent = {
   slug: 'predyktor-suszenia-makaronikow',
-  title: 'Predyktor Suszenia Muszelek Makaronikow',
-  description: 'Oblicz dokladnie, ile czasu muszle makaronikow potrzebuja na wysuszenie w zaleznosci od wilgotnosci, temperatury i rozmiaru. Uniknij pekajacych muszelek i ciesz sie perfekcyjnym rantem za kazdym razem.',
-  faqTitle: 'Czesto Zadawane Pytania',
+  title: 'Predyktor Suszenia Muszelek Makaroników',
+  description: 'Oblicz dokładnie, ile czasu muszle makaroników potrzebują na wysuszenie w zależności od wilgotności, temperatury i rozmiaru. Uniknij pękających muszelek i ciesz się perfekcyjnym rantem za każdym razem.',
+  faqTitle: 'Często Zadawane Pytania',
   ui: {
-    humidityLabel: 'Wilgotnosc Otoczenia',
+    humidityLabel: 'Wilgotność Otoczenia',
     humidityUnit: '%',
     tempLabel: 'Temperatura Pokojowa',
-    tempUnit: 'Â°C',
-    sizeLabel: 'Srednica Muszelki',
+    tempUnit: '°C',
+    sizeLabel: 'Średnica Muszelki',
     sizeUnit: 'cm',
     dryingTimeLabel: 'Szacowany Czas Suszenia',
     minutesUnit: 'min',
     readinessLabel: 'Stan Powierzchni',
     skinStatusReady: 'Gotowa do Pieczenia',
-    skinStatusForming: 'Tworzy Blonke',
-    skinStatusSticky: 'Wciaz Lepka',
+    skinStatusForming: 'Tworzy Błonkę',
+    skinStatusSticky: 'Wciąż Lepka',
     skinStatusOverDry: 'Przesuszona',
-    humidityTagHigh: 'Wysoka wilgotnosc',
-    humidityTagNormal: 'Normalna wilgotnosc',
-    humidityTagLow: 'Niska wilgotnosc',
-    humidityDescHigh: 'Bardzo wilgotny dzien. Suszenie potrwa znacznie dluzej. Jesli to mozliwe, uzyj osuszacza powietrza lub klimatyzowanego pomieszczenia.',
-    humidityDescNormal: 'Umiarkowana wilgotnosc. Suszenie powinno przebiegac normalnie, z dobrym formowaniem sie blonki.',
-    humidityDescLow: 'Bardzo suche powietrze. Muszelki moga schnac zbyt szybko i istnieje ryzyko przesuszenia. Obserwuj uwaznie i skroc czas suszenia.',
-    tempTagHot: 'Cieply pokoj',
+    humidityTagHigh: 'Wysoka wilgotność',
+    humidityTagNormal: 'Normalna wilgotność',
+    humidityTagLow: 'Niska wilgotność',
+    humidityDescHigh: 'Bardzo wilgotny dzień. Suszenie potrwa znacznie dłużej. Jeśli to możliwe, użyj osuszacza powietrza lub klimatyzowanego pomieszczenia.',
+    humidityDescNormal: 'Umiarkowana wilgotność. Suszenie powinno przebiegać normalnie, z dobrym formowaniem się błonki.',
+    humidityDescLow: 'Bardzo suche powietrze. Muszelki mogą schnąć zbyt szybko i istnieje ryzyko przesuszenia. Obserwuj uważnie i skróć czas suszenia.',
+    tempTagHot: 'Ciepły pokój',
     tempTagIdeal: 'Idealna temp. pokojowa',
-    tempTagCool: 'Chlodny pokoj',
+    tempTagCool: 'Chłodny pokój',
     sizeTagMini: 'Mini',
     sizeTagStandard: 'Standardowy',
-    sizeTagLarge: 'Duzy',
+    sizeTagLarge: 'Duży',
   },
   faq,
   howTo,
   seo: [
     {
       type: 'title',
-      text: 'Nauka Suszenia Muszelek Makaronikow: Dlaczego Blonka Decyduje o Sukcesie',
+      text: 'Nauka Suszenia Muszelek Makaroników: Dlaczego Błonka Decyduje o Sukcesie',
       level: 2,
     },
     {
       type: 'paragraph',
-      html: 'Makaronik to jedno z najbardziej wymagajacych technicznie ciast w cukiernictwie francuskim. Jego charakterystyczna gladka kopulka i falbankowata podstawa, zwana "rantem" lub "pied", zaleza calkowicie od kluczowego etapu: suszenia wykreconych muszelek przed pieczeniem. Ten okres odpoczynku pozwala na wytworzenie sie cienkiego bialkowego filmu na powierzchni kazdej muszelki. Podczas pieczenia blonka ta zatrzymuje rozprezajaca sie pare wewnatrz muszelki, zmuszajac ja do ujscia dolem przez podstawe, co unosi muszelke i tworzy upragniony rant. Bez odpowiedniego suszenia para rozrywa wierzch, powodujac pekniecia. Przy nadmiernym suszeniu blonka staje sie zbyt sztywna i muszelki nie moga prawidlowo urosnac.',
+      html: 'Makaronik to jedno z najbardziej wymagających technicznie ciast w cukiernictwie francuskim. Jego charakterystyczna gładka kopułka i falbankowata podstawa, zwana "rantem" lub "pied", zależą całkowicie od kluczowego etapu: suszenia wykręconych muszelek przed pieczeniem. Ten okres odpoczynku pozwala na wytworzenie się cienkiego białkowego filmu na powierzchni każdej muszelki. Podczas pieczenia błonka ta zatrzymuje rozprężającą się parę wewnątrz muszelki, zmuszając ją do ujścia dołem przez podstawę, co unosi muszelkę i tworzy upragniony rant. Bez odpowiedniego suszenia para rozrywa wierzch, powodując pęknięcia. Przy nadmiernym suszeniu błonka staje się zbyt sztywna i muszelki nie mogą prawidłowo urosnąć.',
     },
     {
       type: 'title',
-      text: 'Wilgotnosc i Jej Dominujaca Rola w Kinetyce Suszenia',
+      text: 'Wilgotność i Jej Dominująca Rola w Kinetyce Suszenia',
       level: 3,
     },
     {
       type: 'paragraph',
-      html: 'Wilgotnosc wzgledna jest najbardziej wplywowa zmienna w suszeniu muszelek makaronikow. Przy 50% wilgotnosci wzglednej standardowa muszelka 3 cm potrzebuje zazwyczaj 30-40 minut na wytworzenie odpowiedniej blonki. Przy 70% wilgotnosci czas ten moze sie wydluzyc do 60-90 minut. Przy 30% wilgotnosci suszenie moze zakonczyc sie juz po 15-20 minutach. Fizyka stojaca za tym jest prosta: szybkosc parowania jest proporcjonalna do deficytu cisnienia pary miedzy powierzchnia muszelki a otaczajacym powietrzem. Wilgotne powietrze ma mniejszy deficyt, co spowalnia parowanie. Profesjonalne cukiernie skrupulatnie kontroluja wilgotnosc, czesto utrzymujac dedykowane pomieszczenia dla makaronikow przy wilgotnosci wzglednej 40-50%.',
+      html: 'Wilgotność względna jest najbardziej wpływową zmienną w suszeniu muszelek makaroników. Przy 50% wilgotności względnej standardowa muszelka 3 cm potrzebuje zazwyczaj 30-40 minutos na wytworzenie odpowiedniej błonki. Przy 70% wilgotności czas ten może się wydłużyć do 60-90 minut. Przy 30% wilgotności suszenie może zakończyć się już po 15-20 minutach. Fizyka stojąca za tym jest prosta: szybkość parowania jest proporcjonalna do deficytu ciśnienia pary między powierzchnią muszelki a otaczającym powietrzem. Wilgotne powietrze ma mniejszy deficyt, co spowalnia parowanie. Profesjonalne cukiernie skrupulatnie kontrolują wilgotność, często utrzymując dedykowane pomieszczenia dla makaroników przy wilgotności względnej 40-50%.',
     },
     {
       type: 'title',
-      text: 'Tabela Referencyjna Czasow Suszenia wg Wilgotnosci i Wielkosci Muszelki',
+      text: 'Tabela Referencyjna Czasów Suszenia wg Wilgotności i Wielkości Muszelki',
       level: 3,
     },
     {
       type: 'table',
-      headers: ['Wilgotnosc', '2 cm Mini', '3 cm Standard', '4 cm Duza', '5 cm Bardzo Duza'],
+      headers: ['Wilgotność', '2 cm Mini', '3 cm Standard', '4 cm Duża', '5 cm Bardzo Duża'],
       rows: [
         ['30% (Bardzo sucho)', '10-15 min', '15-20 min', '25-30 min', '35-45 min'],
         ['40% (Sucho)', '15-20 min', '20-30 min', '30-40 min', '45-60 min'],
@@ -150,94 +150,94 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Rola Temperatury w Szybkosci Parowania',
+      text: 'Rola Temperatury w Szybkości Parowania',
       level: 3,
     },
     {
       type: 'paragraph',
-      html: 'Temperatura wplywa na suszenie poprzez dwa mechanizmy. Po pierwsze, cieplejsze powietrze moze pomiescic wiecej pary wodnej, zwiekszajac potencjalna szybkosc parowania z powierzchni muszelki. Po drugie, molekularna energia kinetyczna rosnie wraz z temperatura, przyspieszajac tempo, w jakim czasteczki wody opuszczaja faze ciekla. Jednak temperatura wplywa rowniez na stabilnosc bezy. Powyzej 28 Â°C bialka jaj w bezie moga zaczac sie destabilizowac, prowadzac do oslabionej struktury. Idealny zakres dla suszenia makaronikow to 20-25 Â°C. Ponizej 18 Â°C szybkosc parowania spowalnia do tego stopnia, ze suszenie staje sie niepraktyczne dla muszelek o standardowym rozmiarze.',
+      html: 'Temperatura wpływa na suszenie poprzez dwa mechanizmy. Po pierwsze, cieplejsze powietrze może pomieścić więcej pary wodnej, zwiększając potencjalną szybkość parowania z powierzchni muszelki. Po drugie, molekularna energia kinetyczna rośnie wraz z temperaturą, przyspieszając tempo, w jakim cząsteczki wody opuszczają fazę ciekłą. Jednak temperatura wpływa również na stabilność bezy. Powyżej 28 °C białka jaj w bezie mogą zacząć się destabilizować, prowadząc do osłabionej struktury. Idealny zakres dla suszenia makaroników to 20-25 °C. Poniżej 18 °C szybkość parowania spowalnia do tego stopnia, ze suszenie staje się niepraktyczne dla muszelek o standardowym rozmiarze.',
     },
     {
       type: 'title',
-      text: 'Wielkosc Muszelki i Prawo Kwadrat-Szescian w Suszeniu',
+      text: 'Wielkość Muszelki i Prawo Kwadrat-Sześcian w Suszeniu',
       level: 3,
     },
     {
       type: 'paragraph',
-      html: 'Srednica muszelki ma nieliniowy wplyw na czas suszenia ze wzgledu na stosunek powierzchni do objetosci. Mini makaronik 2 cm ma okolo 3,1 cmÂ² powierzchni na 0,5 cmÂ³ objetosci, co daje korzystny stosunek powierzchni do objetosci okolo 6:1. Duzy makaronik 5 cm ma okolo 19,6 cmÂ² powierzchni na 8,2 cmÂ³ objetosci  -  stosunek zaledwie 2,4:1. Oznacza to, ze wieksze muszelki maja proporcjonalnie mniejsza powierzchnie, przez ktora wilgoc moze uciekac, co dramatycznie wydluza czas suszenia. Kalkulator modeluje to za pomoca zaleznosci potegowej skalibrowanej na podstawie danych empirycznych z profesjonalnych cukierni.',
+      html: 'Średnica muszelki ma nieliniowy wpływ na czas suszenia ze względu na stosunek powierzchni do objętości. Mini makaronik 2 cm ma około 3,1 cm² powierzchni na 0,5 cm³ objętości, co daje korzystny stosunek powierzchni do objętości około 6:1. Duży makaronik 5 cm ma około 19,6 cm² powierzchni na 8,2 cm³ objętości  -  stosunek zaledwie 2,4:1. Oznacza to, ze większe muszelki mają proporcjonalnie mniejszą powierzchnię, przez którą wilgoć może uciekać, co dramatycznie wydłuża czas suszenia. Kalkulator modeluje to za pomocą zależności potęgowej skalibrowanej na podstawie danych empirycznych z profesjonalnych cukierni.',
     },
     {
       type: 'title',
-      text: 'Rozwiazywanie Typowych Problemow z Suszeniem Makaronikow',
+      text: 'Rozwiązywanie Typowych Problemów z Suszeniem Makaroników',
       level: 3,
     },
     {
       type: 'diagnostic',
       variant: 'warning',
-      title: 'Pekniete muszelki bez rantu',
-      html: 'Najczestsza porazka przy makaronikach. Prawie zawsze oznacza to, ze muszelki nie byly suszone wystarczajaco dlugo przed pieczeniem. Blonka powierzchniowa byla zbyt slaba, aby utrzymac rozprezajaca sie pare, ktora wyrwala sie przez wierzch. <strong>Rozwiazanie: wydluz czas suszenia o 10-15 minut i sprawdz powierzchnie lekkim dotykiem opuszkiem palca przed pieczeniem.</strong>',
+      title: 'Pęknięte muszelki bez rantu',
+      html: 'Najczęstsza porażka przy makaronikach. Prawie zawsze oznacza to, ze muszelki nie były suszone wystarczająco długo przed pieczeniem. Błonki powierzchniowa była zbyt słaba, aby utrzymać rozprężającą się parę, która wyrwała się przez wierzch. <strong>Rozwiązanie: wydłuż czas suszenia o 10-15 minut i sprawdź powierzchnię lekkim dotykiem opuszkiem palca przed pieczeniem.</strong>',
     },
     {
       type: 'diagnostic',
       variant: 'error',
       title: 'Krzywy lub pochylony rant',
-      html: 'Winowajca jest nierowne suszenie. Jesli jedna strona blachy schnie szybciej niz druga, rant wyrosnie nierowno. Zdarza sie to czesto, gdy blachy stoja przy oknie, wentylatorze lub zrodle ciepla. <strong>Rozwiazanie: obracaj blachy w trakcie suszenia i zapewnij rownomierny przeplyw powietrza wokol wszystkich muszelek.</strong>',
+      html: 'Winowajcą jest nierówne suszenie. Jeśli jedna strona blachy schnie szybciej niż druga, rant wyrośnie nierówno. Zdarza się to często, gdy blachy stoją przy oknie, wentylatorze lub źródle ciepła. <strong>Rozwiązanie: obracaj blachy w trakcie suszenia i zapewnij równomierny przepływ powietrza wokół wszystkich muszelek.</strong>',
     },
     {
       type: 'diagnostic',
       variant: 'info',
       title: 'Puste muszelki po upieczeniu',
-      html: 'Puste wnetrze moze byc skutkiem nadmiernego suszenia, ktore tworzy zbyt gruba i sztywna blonke. Muszelka nie moze prawidlowo wyrosnac podczas pieczenia, pozostawiajac w srodku pusta przestrzen. <strong>Rozwiazanie: skroc czas suszenia i wczesniej sprawdzaj, czy blonka sie formuje. Powierzchnia powinna byc sucha, ale powinna lekko uginac sie przy delikatnym nacisku.</strong>',
+      html: 'Puste wnętrze może być skutkiem nadmiernego suszenia, które tworzy zbyt grubą i sztywną błonkę. Muszelka nie może prawidłowo wyrosnąć podczas pieczenia, pozostawiając w środku pustą przestrzeń. <strong>Rozwiązanie: skróć czas suszenia i wcześniej sprawdzaj, czy błonka się formuje. Powierzchnia powinna być sucha, ale powinna lekko uginać się przy delikatnym nacisku.</strong>',
     },
     {
       type: 'title',
-      text: 'Profesjonalne Porady od Cukiernikow',
+      text: 'Profesjonalne Porady od Cukierników',
       level: 3,
     },
     {
       type: 'tip',
       title: 'Technika Suszenia w Piekarniku na Wilgotne Dni',
-      html: 'W wyjatkowo wilgotne dni profesjonalni cukiernicy stosuja technike zwana "suszeniem w piekarniku". Rozgrzej piekarnik do najnizszej mozliwej temperatury (zazwyczaj 50 Â°C), wylacz go, a nastepnie wstaw wykrecone makaroniki do srodka z lekko uchylonymi drzwiczkami na 5-10 minut. Tworzy to cieply, suchy mikroklimat, ktory przyspiesza formowanie blonki, nie rozpoczynajac jeszcze pieczenia muszelek.',
+      html: 'W wyjątkowo wilgotne dni profesjonalni cukiernicy stosują technikę zwaną "suszeniem w piekarniku". Rozgrzej piekarnik do najniższej możliwej temperatury (zazwyczaj 50 °C), wyłącz go, a następnie wstaw wykręcone makaroniki do środka z lekko uchylonymi drzwiczkami na 5-10 minut. Tworzy to ciepły, suchy mikroklimat, który przyspiesza formowanie błonki, nie rozpoczynając jeszcze pieczenia muszelek.',
     },
     {
       type: 'tip',
-      title: 'Test Dotyku dla Perfekcyjnej Blonki',
-      html: 'Ostateczny test gotowosci makaronikow: delikatnie dotknij powierzchni muszelki czystym, suchym opuszkiem palca. Jesli masa klei sie do palca, potrzebuje wiecej czasu. Jesli powierzchnia jest sucha i matowa i nie klei sie, blonka jest uformowana. Jesli powierzchnia jest twarda, skorupiasta i nie ugina sie, muszelki sa przesuszone.',
+      title: 'Test Dotyku dla Perfekcyjnej Błonki',
+      html: 'Ostateczny test gotowości makaroników: delikatnie dotknij powierzchni muszelki czystym, suchym opuszkiem palca. Jeśli masa klei się do palca, potrzebuje więcej czasu. Jeśli powierzchnia jest sucha i matowa i nie klei się, błonka jest uformowana. Jeśli powierzchnia jest twarda, skorupiasta i nie ugina się, muszelki są przesuszone.',
     },
     {
       type: 'tip',
-      title: 'Kontrola Wilgotnosci bez Sprzetu',
-      html: 'Jesli nie masz osuszacza, postaw miseczke z suchym ryzem lub saszetki zelowe z krzemionka obok schnacych makaronikow. Te srodki suszace pochlaniana wilgoc z otoczenia, tworzac bardziej suchy mikroklimat wokol blachy. W profesjonalnych kuchniach bez klimatyzacji ta prosta sztuczka moze skrocic czas suszenia o 30-40% w wilgotne dni.',
+      title: 'Kontrola Wilgotności bez Sprzętu',
+      html: 'Jeśli nie masz osuszacza, postaw miseczkę z suchym ryżem lub saszetki żelowe z krzemionką obok schnących makaroników. Te środki suszące pochłaniają wilgoć z otoczenia, tworząc bardziej suchy mikroklimat wokół blachy. W profesjonalnych kuchniach bez klimatyzacji ta prosta sztuczka może skrócić czas suszenia o 30-40% w wilgotne dni.',
     },
     {
       type: 'title',
-      text: 'Czynnik Starzenia Bialek Jaj',
+      text: 'Czynnik Starzenia Białek Jaj',
       level: 3,
     },
     {
       type: 'paragraph',
-      html: 'Starzone bialka daja bardziej stabilne bezy, ktore schna w bardziej przewidywalny sposob. Swieze bialka zawieraja wiecej wody i mniej elastyczna strukture bialkowa, co prowadzi do slabszych bez, ktore potrzebuja wiecej czasu na wytworzenie wlasciwej blonki. Profesjonalne przepisy wymagaja bialek starzonych przez 24-72 godziny w temperaturze pokojowej lub 3-5 dni w lodowce. Starzone bialka traca okolo 10-15% swojej zawartosci wody przez parowanie, co zageszcza bialka i poprawia wytrzymalosc bezy.',
+      html: 'Starzone białka dają bardziej stabilne bezy, które schną w bardziej przewidywalny sposób. Świeże białka zawierają więcej wody i mniej elastyczną strukturę białkową, co prowadzi do słabszych bez, które potrzebują więcej czasu na wytworzenie właściwej błonki. Profesjonalne przepisy wymagają białek starzonych przez 24-72 godziny w temperaturze pokojowej lub 3-5 dni w lodówce. Starzone białka tracą około 10-15% swojej zawartości wody przez parowanie, co zagęszcza białka i poprawia wytrzymałość bezy.',
     },
     {
       type: 'title',
-      text: 'Szybkie Zestawienie: Czasy Suszenia dla Typowych Warunkow',
+      text: 'Szybkie Zestawienie: Czasy Suszenia dla Typowych Warunków',
       level: 3,
     },
     {
       type: 'summary',
-      title: 'Typowe czasy suszenia dla standardowych muszelek makaronikow 3 cm',
+      title: 'Typowe czasy suszenia dla standardowych muszelek makaroników 3 cm',
       items: [
-        'Klimatyzowana kuchnia (22 Â°C, 45% wilgotnosci): 25-30 minut',
-        'Wiosenny dzien, otwarte okna (20 Â°C, 55% wilgotnosci): 35-45 minut',
-        'Letni dzien, bez klimatyzacji (28 Â°C, 70% wilgotnosci): 60-90 minut  -  zastosuj technike suszenia w piekarniku',
-        'Ogrzewany dom zima (21 Â°C, 30% wilgotnosci): 15-20 minut  -  uwazaj na przesuszenie',
-        'Deszczowy dzien (18 Â°C, 80% wilgotnosci): 75-100 minut  -  powaznie rozwaz uzycie osuszacza',
-        'Profesjonalna cukiernia (22 Â°C, 45% wilgotnosci, konwekcja): 20-25 minut',
+        'Klimatyzowana kuchnia (22 °C, 45% wilgotności): 25-30 minut',
+        'Wiosenny dzień, otwarte okna (20 °C, 55% wilgotności): 35-45 minut',
+        'Letni dzień, bez klimatyzacji (28 °C, 70% wilgotności): 60-90 minut  -  zastosuj technikę suszenia w piekarniku',
+        'Ogrzewany dom zimą (21 °C, 30% wilgotności): 15-20 minut  -  uważaj na przesuszenie',
+        'Deszczowy dzień (18 °C, 80% wilgotności): 75-100 minut  -  poważnie rozważ użycie osuszacza',
+        'Profesjonalna cukiernia (22 °C, 45% wilgotności, konwekcja): 20-25 minut',
       ],
     },
     {
       type: 'paragraph',
-      html: 'Kazda kuchnia jest wyjatkowym srodowiskiem. Ten kalkulator uwzglednia trzy kluczowe zmienne  -  wilgotnosc, temperature i rozmiar muszelki  -  aby podac Ci spersonalizowane przewidywanie czasu suszenia. Wprowadz swoje warunki i wykrej z pewnoscia siebie.',
+      html: 'Każda kuchnia jest wyjątkowym środowiskiem. Ten kalkulator uwzględnia trzy kluczowe zmienne  -  wilgotność, temperaturę i rozmiar muszelki  -  aby podać Ci spersonalizowane przewidywanie czasu suszenia. Wprowadź swoje warunki i wykreuj z pewnością siebie.',
     },
   ],
   bibliography,

@@ -2,15 +2,15 @@ import type { ToolLocaleContent } from '../../../types';
 import { bibliography } from '../bibliography';
 
 const title = "Koji Impfung und Hydratation Rechner";
-const description = "Berechnen Sie den perfekten Feuchtigkeitsgehalt, die Sporeninokulationsdosis und die Inkubationstemperatur fur die Herstellung von Koji zu Hause. Vermeiden Sie fehlgeschlagene Chargen mit unserem kostenlosen Koji-Inokulations- und Hydratationsrechner.";
+const description = "Berechnen Sie den perfekten Feuchtigkeitsgehalt, die Sporeninokulationsdosis und die Inkubationstemperatur für die Herstellung von Koji zu Hause. Vermeiden Sie fehlgeschlagene Chargen mit unserem kostenlosen Koji-Inokulations- und Hydratationsrechner.";
 const faq = [
   {
-    question: "Was ist der ideale Feuchtigkeitsgehalt fur das Kochen von Koji-Substrat?",
-    answer: "Der ideale Gesamtfeuchtigkeitsgehalt fur gedampften Reis oder Gerste bei der Inokulation von Koji liegt zwischen 30% und 35%. Dies entspricht einem Dampfgewicht von etwa 1,35x bis 1,40x des anfanglichen Trockengewichts."
+    question: "Was ist der ideale Feuchtigkeitsgehalt für das Kochen von Koji-Substrat?",
+    answer: "Der ideale Gesamtfeuchtigkeitsgehalt für gedämpften Reis oder Gerste bei der Inokulation von Koji liegt zwischen 30% und 35%. Dies entspricht einem Dampfgewicht von etwa 1,35x bis 1,40x des anfänglichen Trockengewichts."
   },
   {
-    question: "Wie viel Sporenpulver (Tane-Koji) benotige ich?",
-    answer: "Die standardmassige Inokulationsrate betragt 1 Gramm Standard-Sporenmischung pro 1 Kilogramm Trockensubstrat. Bei konzentrierten Sporen benotigen Sie weniger (0,5 g), wahrend verdunnte Mischungen mehr erfordern (2,0 g)."
+    question: "Wie viel Sporenpulver (Tane-Koji) benötige ich?",
+    answer: "Die standardmässige Inokulationsrate beträgt 1 Gramm Standard-Sporenmischung pro 1 Kilogramm Trockensubstrat. Bei konzentrierten Sporen benötigen Sie weniger (0,5 g), während verdünnte Mischungen mehr erfordern (2,0 g)."
   },
   {
     question: "Warum ist die Temperaturkontrolle wahrend der Koji-Inkubation entscheidend?",

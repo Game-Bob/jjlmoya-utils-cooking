@@ -2,23 +2,23 @@ import type { ToolLocaleContent } from '../../../types';
 import { bibliography } from '../bibliography';
 
 const title = "Kalkulator Inokulacji i Hydracji Koji";
-const description = "Oblicz idealna zawartosc wilgoci, dawke zarodnikow i temperature inkubacji do domowej produkcji koji. Unikaj nieudanych partii dzieki naszemu bezplatnemu kalkulatorowi inokulacji i hydracji koji.";
+const description = "Oblicz idealną zawartość wilgoci, dawkę zarodników i temperaturę inkubacji do domowej produkcji koji. Unikaj nieudanych partii dzięki naszemu bezpłatnemu kalkulatorowi inokulacji i hydracji koji.";
 const faq = [
   {
-    question: "Jaka jest docelowa wilgotnosc podczas gotowania substratu koji?",
-    answer: "Idealna calkowita wilgotnosc dla gotowanego na parze ryzu lub jeczmienia podczas inokulacji koji wynosi od 30% do 35%. Odpowiada to wadze po gotowaniu na parze wynoszacej okolo 1,35x do 1,40x poczatkowej suchej masy."
+    question: "Jaka jest docelowa wilgotność podczas gotowania substratu koji?",
+    answer: "Idealna całkowita wilgotność dla gotowanego na parze ryżu lub jęczmienia podczas inokulacji koji wynosi od 30% do 35%. Odpowiada to wadze po gotowaniu na parze wynoszącej około 1,35x do 1,40x początkowej suchej masy."
   },
   {
-    question: "Ile proszku zarodnikowego (tane-koji) potrzebuje?",
-    answer: "Standardowa dawka inokulacji to 1 gram standardowej mieszanki zarodnikowej na 1 kilogram suchego substratu. W przypadku skoncentrowanych zarodnikow potrzebujesz mniej (0,5 g), natomiast rozcienczone mieszanki wymagaja wiecej (2,0 g)."
+    question: "Ile proszku zarodnikowego (tane-koji) potrzebuję?",
+    answer: "Standardowa dawka inokulacji to 1 gram standardowej mieszanki zarodnikowej na 1 kilogram suchego substratu. W przypadku skoncentrowanych zarodników potrzebujesz mniej (0,5 g), natomiast rozcieńczone mieszanki wymagają więcej (2,0 g)."
   },
   {
     question: "Dlaczego kontrola temperatury jest kluczowa podczas inkubacji koji?",
-    answer: "Aspergillus oryzae rosnie optymalnie w temperaturze od 28C do 34C. Jesli temperatura przekroczy 38C, ple sn moze sie przegrzac, przestac rosnac lub wytwarzac niepozadane zielone/czarne zarodniki. Ponizej 20C wzrost znacznie spowalnia."
+    answer: "Aspergillus oryzae rośnie optymalnie w temperaturze od 28C do 34C. Jeśli temperatura przekroczy 38C, pleśń może się przegrzać, przestać rosnąć lub wytwarzać niepożądane zielone/czarne zarodniki. Poniżej 20C wzrost znacznie spowalnia."
   },
   {
-    question: "Co dzieje sie podczas fazy egzotermicznej?",
-    answer: "Po 18 do 24 godzinach inkubacji koji zaczyna szybko rosnac i wytwarzac wlasne cieplo. Podczas tego egzotermicznego szczytu nalezy mieszac substrat i obnizyc temperature inkubatora, aby zapobiec przegrzaniu."
+    question: "Co dzieje się podczas fazy egzotermicznej?",
+    answer: "Po 18 do 24 godzinach inkubacji koji zaczyna szybko rosnąć i wytwarzać własne ciepło. Podczas tego egzotermicznego szczytu należy mieszać substrat i obniżyć temperaturę inkubatora, aby zapobiec przegrzaniu."
   }
 ];
 

@@ -1,43 +1,43 @@
 import type { ToolLocaleContent } from '../../../types';
 import { bibliography } from '../bibliography';
 
-const title = "Calculadora de Inoculacion e Hidratacion de Koji";
-const description = "Calcule el contenido de humedad perfecto, la dosis de inoculacion de esporas y la temperatura de incubacion para hacer koji en casa. Evite lotes fallidos con nuestra calculadora gratuita de inoculacion e hidratacion de koji.";
+const title = "Calculadora de Inoculación e Hidratación de Koji";
+const description = "Calcule el contenido de humedad perfecto, la dosis de inoculación de esporas y la temperatura de incubación para hacer koji en casa. Evite lotes fallidos con nuestra calculadora gratuita de inoculación e hidratación de koji.";
 const faq = [
   {
-    question: "Cual es el contenido de humedad objetivo para cocinar sustrato de koji?",
-    answer: "El contenido de humedad total ideal para arroz o cebada al vapor al inocular Koji esta entre 30% y 35%. Esto corresponde a un peso al vapor de aproximadamente 1,35x a 1,40x el peso seco inicial."
+    question: "¿Cuál es el contenido de humedad objetivo para cocinar sustrato de koji?",
+    answer: "El contenido de humedad total ideal para arroz o cebada al vapor al inocular Koji está entre 30% y 35%. Esto corresponde a un peso al vapor de aproximadamente 1,35x a 1,40x el peso seco inicial."
   },
   {
-    question: "Cuanto polvo de esporas (tane-koji) necesito?",
-    answer: "La tasa de inoculacion estandar es de 1 gramo de mezcla de esporas estandar por 1 kilogramo de sustrato seco. Si usa esporas concentradas, necesita menos (0,5 g), mientras que las mezclas diluidas requieren mas (2,0 g)."
+    question: "¿Cuánto polvo de esporas (tane-koji) necesito?",
+    answer: "La tasa de inoculación estándar es de 1 gramo de mezcla de esporas estándar por 1 kilogramo de sustrato seco. Si usa esporas concentradas, necesita menos (0,5 g), mientras que las mezclas diluidas requieren más (2,0 g)."
   },
   {
-    question: "Por que es critico el control de temperatura durante la incubacion del koji?",
-    answer: "Aspergillus oryzae crece optimamente entre 28C y 34C. Si la temperatura supera los 38C, el moho puede sobrecalentarse, dejar de crecer o producir esporas verdes/negras no deseadas. Por debajo de 20C, el crecimiento se ralentiza significativamente."
+    question: "¿Por qué es crítico el control de temperatura durante la incubación del koji?",
+    answer: "Aspergillus oryzae crece óptimamente entre 28C y 34C. Si la temperatura supera los 38C, el moho puede sobrecalentarse, dejar de crecer o producir esporas verdes/negras no deseadas. Por debajo de 20C, el crecimiento se ralentiza significativamente."
   },
   {
-    question: "Que sucede durante la fase exotermica?",
-    answer: "Despues de 18 a 24 horas de incubacion, el koji comienza a crecer rapidamente y genera su propio calor. Durante este pico exotermico, debe remover el sustrato y reducir el calor del incubador para evitar el sobrecalentamiento."
+    question: "¿Qué sucede durante la fase exotérmica?",
+    answer: "Después de 18 a 24 horas de incubación, el koji comienza a crecer rápidamente y genera su propio calor. Durante este pico exotérmico, debe remover el sustrato y reducir el calor del incubador para evitar el sobrecalentamiento."
   }
 ];
 
 const howTo = [
   {
     name: "Ingrese el peso seco del sustrato",
-    text: "Ingrese el peso seco inicial de su arroz o cebada para establecer los umbrales de hidratacion objetivo."
+    text: "Ingrese el peso seco inicial de su arroz o cebada para establecer los umbrales de hidratación objetivo."
   },
   {
     name: "Registre el peso al vapor",
-    text: "Ingrese el peso real al vapor despues de cocinar. La calculadora determina el porcentaje de humedad y verifica si se encuentra dentro del rango ideal de 30-35%."
+    text: "Ingrese el peso real al vapor después de cocinar. La calculadora determina el porcentaje de humedad y verifica si se encuentra dentro del rango ideal de 30-35%."
   },
   {
     name: "Calcule la dosis de esporas",
-    text: "Seleccione la potencia de sus esporas (estandar, concentrada o diluida) para obtener el peso exacto de polvo de esporas para inocular."
+    text: "Seleccione la potencia de sus esporas (estándar, concentrada o diluida) para obtener el peso exacto de polvo de esporas para inocular."
   },
   {
-    name: "Monitoree los parametros de incubacion",
-    text: "Ajuste la temperatura y la humedad relativa para simular el crecimiento del micelio y revise la curva termica de 48 horas."
+    name: "Monitoree los parámetros de incubación",
+    text: "Ajuste la temperatura y la humedad relativa para simular el crecimiento del micelio y revise la curva térmica de 48 horas."
   }
 ];
 
@@ -75,43 +75,43 @@ const appSchema = {
 
 export const content: ToolLocaleContent = {
   slug: 'calculadora-inoculacion-koji',
-  title: 'Calculadora de Inoculacion e Hidratacion de Koji',
-  description: 'Calcule el contenido de humedad perfecto, la dosis de inoculacion de esporas y la temperatura de incubacion para hacer koji en casa. Evite lotes fallidos con nuestra calculadora gratuita de inoculacion e hidratacion de koji.',
+  title: 'Calculadora de Inoculación e Hidratación de Koji',
+  description: 'Calcule el contenido de humedad perfecto, la dosis de inoculación de esporas y la temperatura de incubación para hacer koji en casa. Evite lotes fallidos con nuestra calculadora gratuita de inoculación e hidratación de koji.',
   faqTitle: 'Preguntas Frecuentes',
   ui: {
-    title: 'Analizador de Inoculacion de Koji',
-    subtitle: 'Optimice los parametros de fermentacion solida de koji',
+    title: 'Analizador de Inoculación de Koji',
+    subtitle: 'Optimice los parámetros de fermentación sólida de koji',
     dryWeightLabel: 'Peso Seco del Sustrato',
     steamedWeightLabel: 'Peso Real al Vapor',
     targetRangeLabel: 'Rango de Peso al Vapor Objetivo',
     moistureLabel: 'Humedad Actual',
     potencyLabel: 'Potencia de Esporas',
-    standardPotency: 'Esporas Estandar',
+    standardPotency: 'Esporas Estándar',
     concentratedPotency: 'Concentrado',
     dilutedPotency: 'Mezcla Diluida',
     sporeDosageLabel: 'Dosis de Esporas',
     tempLabel: 'Temperatura del Incubador',
     humidityLabel: 'Humedad Relativa',
-    statusIdeal: 'Incubacion Ideal',
+    statusIdeal: 'Incubación Ideal',
     statusSlow: 'Crecimiento Lento',
-    statusInhibited: 'Inhibido / Frio',
-    statusOverheating: 'Sobrecalentamiento / Esporulacion',
-    timelineTitle: 'Ciclo Termico de Incubacion 48h',
+    statusInhibited: 'Inhibido / Frío',
+    statusOverheating: 'Sobrecalentamiento / Esporulación',
+    timelineTitle: 'Ciclo Térmico de Incubación 48h',
     stage1Name: '0-18h: Calentamiento',
-    stage2Name: '18-36h: Pico Exotermico',
-    stage3Name: '36-48h: Maduracion'
+    stage2Name: '18-36h: Pico Exotérmico',
+    stage3Name: '36-48h: Maduración'
   },
   faq,
   howTo,
   seo: [
     {
       type: 'title',
-      text: 'Como Hacer Koji: La Humedad, Dosis de Esporas y Temperatura Perfectas para Aspergillus Oryzae',
+      text: 'Cómo Hacer Koji: La Humedad, Dosis de Esporas y Temperatura Perfectas para Aspergillus Oryzae',
       level: 2
     },
     {
       type: 'paragraph',
-      html: 'Hacer koji en casa requiere tres cosas que funcionen correctamente: <strong>hidratacion del sustrato</strong>, <strong>densidad de inoculacion de esporas</strong> y <strong>control de temperatura de incubacion</strong>. Si alguna falla, su lote puede sobrecalentarse, no inocularse o desarrollar el moho equivocado. Nuestra <strong>calculadora de inoculacion de koji</strong> elimina las conjeturas calculando su peso al vapor objetivo, la dosis exacta de esporas y el estado de incubacion en tiempo real segun sus datos.'
+      html: 'Hacer koji en casa requiere tres cosas que funcionen correctamente: <strong>hidratación del sustrato</strong>, <strong>densidad de inoculación de esporas</strong> y <strong>control de temperatura de incubación</strong>. Si alguna falla, su lote puede sobrecalentarse, no inocularse o desarrollar el moho equivocado. Nuestra <strong>calculadora de inoculación de koji</strong> elimina las conjeturas calculando su peso al vapor objetivo, la dosis exacta de esporas y el estado de incubación en tiempo real según sus datos.'
     },
     {
       type: 'stats',
@@ -124,7 +124,7 @@ export const content: ToolLocaleContent = {
         },
         {
           value: '1 g/kg',
-          label: 'Tasa Estandar de Esporas',
+          label: 'Tasa Estándar de Esporas',
           icon: 'mdi:seed-outline'
         },
         {
@@ -134,27 +134,27 @@ export const content: ToolLocaleContent = {
         },
         {
           value: '48 h',
-          label: 'Incubacion Total',
+          label: 'Incubación Total',
           icon: 'mdi:clock-outline'
         }
       ]
     },
     {
       type: 'title',
-      text: 'Por Que el Contenido de Humedad Determina la Calidad del Koji',
+      text: 'Por qué el Contenido de Humedad Determina la Calidad del Koji',
       level: 2
     },
     {
       type: 'paragraph',
-      html: 'El factor mas importante en el cultivo exitoso de koji es la <strong>humedad del sustrato</strong>. Cuando el arroz o la cebada se cuecen al vapor, los granulos de almidon se gelatinizan y absorben agua, volviendose accesibles a las enzimas producidas por Aspergillus oryzae. El rango de humedad ideal es estrecho: <strong>30% a 35%</strong>. Por debajo del 30%, el micelio no puede absorber suficiente agua para crecer y la produccion de enzimas se detiene. Por encima del 35%, los granos se vuelven pegajosos y se agrupan, reduciendo la porosidad del aire y asfixiando el moho aerobico.'
+      html: 'El factor más importante en el cultivo exitoso de koji es la <strong>humedad del sustrato</strong>. Cuando el arroz o la cebada se cuecen al vapor, los gránulos de almidón se gelatinizan y absorben agua, volviéndose accesibles a las enzimas producidas por Aspergillus oryzae. El rango de humedad ideal es estrecho: <strong>30% a 35%</strong>. Por debajo del 30%, el micelio no puede absorber suficiente agua para crecer и la producción de enzimas se detiene. Por encima del 35%, los granos se vuelven pegajosos y se agrupan, reduciendo la porosidad del aire y asfixiando el moho aeróbico.'
     },
     {
       type: 'list',
       items: [
-        '<strong>Demasiado seco (menos del 30%):</strong> El crecimiento del micelio se atrofia, la produccion de enzimas disminuye y el koji nunca coloniza completamente el grano.',
-        '<strong>Demasiado humedo (mas del 35%):</strong> Los granos se pegan, las bolsas de aire colapsan y las bacterias o mohos no deseados pueden superar a Aspergillus oryzae.',
-        '<strong>Rango objetivo (30-35%):</strong> El grano se siente firme, los granos individuales se separan facilmente y el micelio se extiende uniformemente en 48 horas.',
-        '<strong>Como medir:</strong> Pese su grano seco, cocine al vapor, luego pese nuevamente. La calculadora calcula su porcentaje de humedad exacto a partir de estos dos numeros.'
+        '<strong>Demasiado seco (menos del 30%):</strong> El crecimiento del micelio se atrofia, la producción de enzimas disminuye y el koji nunca coloniza completamente el grano.',
+        '<strong>Demasiado húmedo (más del 35%):</strong> Los granos se pegan, las bolsas de aire colapsan y las bacterias o mohos no deseados pueden superar a Aspergillus oryzae.',
+        '<strong>Rango objetivo (30-35%):</strong> El grano se siente firme, los granos individuales se separan fácilmente y el micelio se extiende uniformemente en 48 horas.',
+        '<strong>Cómo medir:</strong> Pese su grano seco, cocine al vapor, luego pese nuevamente. La calculadora calcula su porcentaje de humedad exacto a partir de estos dos números.'
       ]
     },
     {
@@ -169,82 +169,82 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Inoculacion de Esporas: Cuanto Tane-Koji Necesita?',
+      text: 'Inoculación de Esporas: ¿Cuánto Tane-Koji Necesita?',
       level: 2
     },
     {
       type: 'paragraph',
-      html: 'La densidad de inoculacion afecta directamente la rapidez con que el moho coloniza el sustrato y que tan competitivo es contra contaminantes. La tasa estandar es de <strong>1 gramo de mezcla de esporas por kilogramo de sustrato seco</strong>, pero esto varia segun el tipo de espora.'
+      html: 'La densidad de inoculación afecta directamente la rapidez con que el moho coloniza el sustrato y qué tan competitivo es contra contaminantes. La tasa estándar es de <strong>1 gramo de mezcla de esporas por kilogramo de sustrato seco</strong>, pero esto varía según el tipo de espora.'
     },
     {
       type: 'proscons',
       title: 'Eligiendo Su Tipo de Espora',
       items: [
         {
-          pro: 'Las esporas estandar son el formato mas comun, tolerantes para principiantes y bien documentadas en la literatura de elaboracion casera.',
-          con: 'Mayor volumen de polvo por lote y pueden contener relleno que no contribuye a la inoculacion.'
+          pro: 'Las esporas estándar son el formato más común, tolerantes para principiantes y bien documentadas en la literatura de elaboración casera.',
+          con: 'Mayor volumen de polvo por lote y pueden contener relleno que no contribuye a la inoculación.'
         },
         {
-          pro: 'Las esporas concentradas usan la mitad del polvo para la misma inoculacion, tienen mayor pureza y son mas economicas para lotes grandes.',
-          con: 'Mas faciles de sobredosificar, requieren una bascula precisa (resolucion de 0,01 g) y dejan menos margen de error si se subdosifican.'
+          pro: 'Las esporas concentradas usan la mitad del polvo para la misma inoculación, tienen mayor pureza y son más económicas para lotes grandes.',
+          con: 'Más fáciles de sobredosificar, requieren una báscula precisa (resolución de 0,01 g) y dejan menos margen de error si se subdosifican.'
         },
         {
-          pro: 'Las mezclas diluidas se distribuyen facilmente sobre superficies grandes, son mas tolerantes con la mezcla desigual y son adecuadas para principiantes que prefieren cobertura visible.',
-          con: 'Usan mas polvo por lote y pueden introducir exceso de almidon del relleno.'
+          pro: 'Las mezclas diluidas se distribuyen fácilmente sobre superficies grandes, son más tolerantes con la mezcla desigual y son adecuadas para principiantes que prefieren cobertura visible.',
+          con: 'Usan más polvo por lote y pueden introducir exceso de almidón del relleno.'
         }
       ]
     },
     {
       type: 'title',
-      text: 'La Curva de Calor Exotermico: Por Que el Koji Genera Su Propio Calor',
+      text: 'La Curva de Calor Exotérmico: Por qué el Koji Genera Su Propio Calor',
       level: 2
     },
     {
       type: 'paragraph',
-      html: 'A medida que Aspergillus oryzae consume almidones y los transforma en azucares simples, genera calor metabolico. Entre las horas <strong>18 y 36</strong> de incubacion, la actividad biologica alcanza su punto maximo, produciendo un aumento exotermico que puede elevar la temperatura del lecho de grano 5-10C por encima de la temperatura ambiente del incubador.'
+      html: 'A medida que Aspergillus oryzae consume almidones y los transforma en azúcares simples, genera calor metabólico. Entre las horas <strong>18 y 36</strong> de incubación, la actividad biológica alcanza su punto máximo, produciendo un aumento exotérmico que puede elevar la temperatura del lecho de grano 5-10C por encima de la temperatura ambiente del incubador.'
     },
     {
       type: 'diagnostic',
       variant: 'warning',
-      title: 'Senales de Que Su Koji Se Sobrecalienta',
-      html: 'Si la temperatura del lecho de grano supera los <strong>38C</strong>, las enzimas del moho comienzan a desnaturalizarse y el hongo cambia a modo reproductivo, produciendo <strong>esporas verdes o negras</strong>. El lote olera a amoniaco en lugar de dulce y a castanas. Debe remover el sustrato inmediatamente y reducir la temperatura del incubador para llevarla por debajo de 34C.'
+      title: 'Señales de Que Su Koji Se Sobrecalienta',
+      html: 'Si la temperatura del lecho de grano supera los <strong>38C</strong>, las enzimas del moho comienzan a desnaturalizarse y el hongo cambia a modo reproductivo, produciendo <strong>esporas verdes o negras</strong>. El lote olerá a amoníaco en lugar de dulce y a castañas. Debe remover el sustrato inmediatamente y reducir la temperatura del incubador para llevarla por debajo de 34C.'
     },
     {
       type: 'tip',
       title: 'El Programa de Volteo de 12 Horas',
-      html: 'A partir de la hora 18, rompa el lecho de grano y remuevalo cada 12 horas. Esto libera el calor atrapado, redistribuye la humedad y da al micelio acceso a oxigeno fresco. Use manos limpias y desinfectadas o una cuchara esteril.'
+      html: 'A partir de la hora 18, rompa el lecho de grano y remuévalo cada 12 horas. Esto libera el calor atrapado, redistribuye la humedad y da al micelio acceso a oxígeno fresco. Use manos limpias y desinfectadas o una cuchara estéril.'
     },
     {
       type: 'tip',
-      title: 'La Humedad Tambien Importa',
-      html: 'Mantenga la humedad relativa por encima del <strong>65%</strong> durante la incubacion. Por debajo del 40%, el sustrato se seca y el crecimiento se detiene. Por encima del 90%, la condensacion puede promover el crecimiento bacteriano en la superficie del grano.'
+      title: 'La Humedad También Importa',
+      html: 'Mantenga la humedad relativa por encima del <strong>65%</strong> durante la incubación. Por debajo del 40%, el sustrato se seca и el crecimiento se detiene. Por encima del 90%, la condensación puede promover el crecimiento bacteriano en la superficie del grano.'
     },
     {
       type: 'tip',
-      title: 'Confie en Su Nariz',
-      html: 'El koji saludable huele a castanas asadas dulces o a champinones frescos. Si detecta amoniaco, acidez o podredumbre, el lote puede haberse sobrecalentado o contaminado. Retire y deseche el grano afectado inmediatamente.'
+      title: 'Confíe en Su Nariz',
+      html: 'El koji saludable huele a castañas asadas dulces o a champiñones frescos. Si detecta amoníaco, acidez o podredumbre, el lote puede haberse sobrecalentado o contaminado. Retire y deseche el grano afectado inmediatamente.'
     },
     {
       type: 'card',
       icon: 'mdi:rice',
-      title: 'Elaboracion de Sake y Miso',
-      html: 'El arroz inoculado con koji es la base del <strong>sake</strong>, <strong>miso</strong> y <strong>amazake</strong>. El control preciso de la humedad asegura el desarrollo adecuado de enzimas para la conversion de almidon en azucar.'
+      title: 'Elaboración de Sake y Miso',
+      html: 'El arroz inoculado con koji es la base del <strong>sake</strong>, <strong>miso</strong> y <strong>amazake</strong>. El control preciso de la humedad asegura el desarrollo adecuado de enzimas para la conversión de almidón en azúcar.'
     },
     {
       type: 'card',
       icon: 'mdi:soy-sauce',
       title: 'Salsa de Soja y Tamari',
-      html: 'El koji cultivado en <strong>soja</strong> o una mezcla de soja y trigo impulsa la fermentacion que produce salsa de soja rica en umami. La temperatura constante evita sabores desagradables.'
+      html: 'El koji cultivado en <strong>soja</strong> o una mezcla de soja y trigo impulsa la fermentación que produce salsa de soja rica en umami. La temperatura constante evita sabores desagradables.'
     },
     {
       type: 'card',
       icon: 'mdi:shaker-outline',
       title: 'Shio Koji y Garum',
-      html: '<strong>Shio koji</strong> (koji fermentado con sal) y <strong>garums de carne</strong> dependen del grano completamente colonizado. Nuestra calculadora asegura que su sustrato este en la ventana de humedad ideal antes de la inoculacion.'
+      html: '<strong>Shio koji</strong> (koji fermentado con sal) y <strong>garums de carne</strong> dependen del grano completamente colonizado. Nuestra calculadora asegura que su sustrato esté en la ventana de humedad ideal antes de la inoculación.'
     },
     {
       type: 'title',
-      text: 'Glosario de Incubacion de Koji',
+      text: 'Glosario de Incubación de Koji',
       level: 3
     },
     {
@@ -252,19 +252,19 @@ export const content: ToolLocaleContent = {
       items: [
         {
           term: 'Tane-Koji',
-          definition: 'El polvo de esporas utilizado para inocular grano al vapor. Tipicamente esporas de Aspergillus oryzae mezcladas con un portador de almidon como harina de arroz.'
+          definition: 'El polvo de esporas utilizado para inocular grano al vapor. Típicamente esporas de Aspergillus oryzae mezcladas con un portador de almidón como harina de arroz.'
         },
         {
-          term: 'Fase Exotermica',
-          definition: 'El periodo entre 18 y 36 horas de incubacion en el que Aspergillus oryzae genera suficiente calor metabolico para elevar la temperatura del lecho de grano por encima de los niveles ambiente.'
+          term: 'Fase Exotérmica',
+          definition: 'El periodo entre 18 y 36 horas de incubación en el que Aspergillus oryzae genera suficiente calor metabólico para elevar la temperatura del lecho de grano por encima de los niveles ambiente.'
         },
         {
-          term: 'Gelatinizacion',
+          term: 'Gelatinización',
           definition: 'El proceso de calentar el almidon en presencia de agua para que los granulos se hinchen y se vuelvan accesibles a las enzimas amilasa producidas por el moho.'
         },
         {
-          term: 'Esporulacion',
-          definition: 'Cuando el moho cambia del crecimiento vegetativo al modo reproductivo, volviendose verde o negro. Esto es desencadenado por el estres termico por encima de 38C y arruina el lote para uso culinario.'
+          term: 'Esporulación',
+          definition: 'Cuando el moho cambia del crecimiento vegetativo al modo reproductivo, volviéndose verde o negro. Esto es desencadenado por el estrés térmico por encima de 38C y arruina el lote para uso culinario.'
         }
       ]
     },
@@ -273,10 +273,10 @@ export const content: ToolLocaleContent = {
       title: 'Conclusiones Clave para un Koji Perfecto',
       items: [
         'Apunte a 30-35% de humedad en el grano al vapor. Use la calculadora para encontrar su peso al vapor objetivo exacto.',
-        'Inocule a 1 g/kg para esporas estandar, 0,5 g/kg para concentradas o 2 g/kg para mezclas diluidas.',
-        'Mantenga 28-34C y mas del 65% de humedad durante la incubacion. Remueva cada 12 horas despues de la hora 18.',
-        'Vigile el pico exotermico a las 18-36 horas. Si la temperatura supera los 38C, remueva inmediatamente y baje el calor.',
-        'Confie en sus sentidos: aroma dulce a castanas = buen koji. Olor a amoniaco o agrio = sobrecalentamiento o contaminacion.'
+        'Inocule a 1 g/kg para esporas estándar, 0,5 g/kg para concentradas o 2 g/kg para mezclas diluidas.',
+        'Mantenga 28-34C y más del 65% de humedad durante la incubación. Remueva cada 12 horas después de la hora 18.',
+        'Vigile el pico exotérmico a las 18-36 horas. Si la temperatura supera los 38C, remueva inmediatamente y baje el calor.',
+        'Confíe en sus sentidos: aroma dulce a castañas = buen koji. Olor a amoníaco o agrio = sobrecalentamiento o contaminación.'
       ]
     }
   ],

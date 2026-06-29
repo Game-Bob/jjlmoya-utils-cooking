@@ -2,42 +2,42 @@ import type { ToolLocaleContent } from '../../../types';
 import { bibliography } from '../bibliography';
 
 const title = "Botulismus Konservensicherheit Rechner Thermischer Tod";
-const description = "Berechne die thermische Sporenreduktion und die F0 Sterilisationsletalitaet fuer Clostridium botulinum. Bewerte die Sicherheitszonen fuer konserven mit niedrigem Saeuregehalt und saure Lebensmittel.";
+const description = "Berechne die thermische Sporenreduktion und die F0 Sterilisationsletalität für Clostridium botulinum. Bewerte die Sicherheitszonen für Konserven mit niedrigem Säuregehalt und saure Lebensmittel.";
 const faq = [
   {
-    question: "Warum ist Clostridium botulinum ein grosses Problem bei hausgemachten Konserven?",
-    answer: "Clostridium botulinum ist ein anaerobes sporenbildendes Bakterium, das Botulinumtoxin produziert, einen der toedlichsten bekannten biologischen Stoffe. Sporen sind extrem hitzebestaendig und koennen in anaeroben Bedingungen in verschlossenen Glaesern ueberleben, wenn die Temperaturen unzureichend sind."
+    question: "Warum ist Clostridium botulinum ein großes Problem bei hausgemachten Konserven?",
+    answer: "Clostridium botulinum ist ein anaerobes sporenbildendes Bakterium, das Botulinumtoxin produziert, einen der tödlichsten bekannten biologischen Stoffe. Sporen sind extrem hitzebeständig und können in anaeroben Bedingungen in verschlossenen Gläsern überleben, wenn die Temperaturen unzureichend sind."
   },
   {
     question: "Welche entscheidende Bedeutung hat pH 4.6 bei der Lebensmittelkonservierung?",
-    answer: "Lebensmittel mit einem pH Wert unter 4.6 werden als sauer eingestuft. In diesen Umgebungen koennen Botulinumsporen weder keimen noch Toxine produzieren. Bei Lebensmitteln mit einem pH Wert von 4.6 oder hoeher ist das Druckkonservieren zwingend erforderlich, um Temperaturen ueber 116 Grad Celsius zu erreichen und die Sporen abzutoeten."
+    answer: "Lebensmittel mit einem pH-Wert unter 4.6 werden als sauer eingestuft. In diesen Umgebungen können Botulinumsporen weder keimen noch Toxine produzieren. Bei Lebensmitteln mit einem pH-Wert von 4.6 oder höher ist das Druckkonservieren zwingend erforderlich, um Temperaturen über 116 Grad Celsius zu erreichen und die Sporen abzutöten."
   },
   {
-    question: "Was ist der F0 Sterilisationsletalitaetswert?",
-    answer: "Der F0 Wert misst die aequivalente Sterilisationszeit bei 121.11 Grad Celsius. Ein standardmaessiger Sterilisationsprozess fuer Lebensmittel mit niedrigem Saeuregehalt erfordert einen F0 Wert von 3.0 Minuten oder hoeher, was einer zwoelfstelligen Dezimalreduktion der Sporenpopulation entspricht."
+    question: "Was ist der F0 Sterilisationsletalitätswert?",
+    answer: "Der F0-Wert misst die äquivalente Sterilisationszeit bei 121.11 Grad Celsius. Ein standardmäßiger Sterilisationsprozess für Lebensmittel mit niedrigem Säuregehalt erfordert einen F0-Wert von 3.0 Minuten oder höher, was einer zwölfstelligen Dezimalreduktion der Sporenpopulation entspricht."
   },
   {
-    question: "Warum kann ich fuer Lebensmittel mit niedrigem Saeuregehalt kein Wasserbad verwenden?",
-    answer: "Das Konservieren im Wasserbad erreicht nur den Siedepunkt (100 Grad Celsius). Diese Temperatur reicht nicht aus, um hitzebestaendige Sporen von Clostridium botulinum in Lebensmitteln mit niedrigem Saeuregehalt abzutoeten. Die Sporen ueberleben und produzieren bei Raumtemperatur Giftstoffe."
+    question: "Warum kann ich für Lebensmittel mit niedrigem Säuregehalt kein Wasserbad verwenden?",
+    answer: "Das Konservieren im Wasserbad erreicht nur den Siedepunkt (100 Grad Celsius). Diese Temperatur reicht nicht aus, um hitzebeständige Sporen von Clostridium botulinum in Lebensmitteln mit niedrigem Säuregehalt abzutöten. Die Sporen überleben und produzieren bei Raumtemperatur Giftstoffe."
   }
 ];
 
 const howTo = [
   {
-    name: "Gib den Saeuregehalt des Lebensmittels ein",
-    text: "Ermittle und gib den pH Wert deiner Zutaten ein. Wenn der pH Wert gleich oder groesser als 4.6 ist, handelt es sich um ein Lebensmittel mit niedrigem Saeuregehalt."
+    name: "Gib den Säuregehalt des Lebensmittels ein",
+    text: "Ermittle und gib den pH-Wert deiner Zutaten ein. Wenn der pH-Wert gleich oder größer als 4.6 ist, handelt es sich um ein Lebensmittel mit niedrigem Säuregehalt."
   },
   {
-    name: "Waehle die Konservierungstechnik",
-    text: "Waehle zwischen Wasserbadkonservierung oder Druckkonservierung, je nach deiner Ausstattung."
+    name: "Wähle die Konservierungstechnik",
+    text: "Wähle zwischen Wasserbadkonservierung oder Druckkonservierung, je nach deiner Ausstattung."
   },
   {
     name: "Definiere Temperatur und Dauer",
-    text: "Gib die Verarbeitungstemperatur und die Zeit in Minuten ein, die die Glaeser auf dieser Temperatur bleiben."
+    text: "Gib die Verarbeitungstemperatur und die Zeit in Minuten ein, die die Gläser auf dieser Temperatur bleiben."
   },
   {
     name: "Bewerte die Sicherheitsdiagnosen",
-    text: "Ueberpruefe den resultierenden F0 Wert, die Dezimalreduktion der Sporen und den Sicherheitszonenindikator, um die Einhaltung zu bestaetigen."
+    text: "Überprüfe den resultierenden F0-Wert, die Dezimalreduktion der Sporen und den Sicherheitszonenindikator, um die Einhaltung zu bestätigen."
   }
 ];
 
@@ -76,10 +76,10 @@ const appSchema = {
 export const content: ToolLocaleContent = {
   slug: 'botulismus-konserven-sicherheit',
   title: 'Botulismus Konservensicherheit Rechner',
-  description: 'Berechne die thermische Sporenreduktion und die F0 Sterilisationsletalitaet fuer Clostridium botulinum. Bewerte die Sicherheitszonen fuer konserven mit niedrigem Saeuregehalt und saure Lebensmittel.',
-  faqTitle: 'Haeufig Gestellte Fragen',
+  description: 'Berechne die thermische Sporenreduktion und die F0 Sterilisationsletalität für Clostridium botulinum. Bewerte die Sicherheitszonen für Konserven mit niedrigem Säuregehalt und saure Lebensmittel.',
+  faqTitle: 'Häufig Gestellte Fragen',
   ui: {
-    title: "Autoklav Ueberwachung fuer Konserven",
+    title: "Autoklav Überwachung für Konserven",
     subtitle: "Thermische Todesdiagnostik und Botulismus Sicherheitsbewertung",
     methodLabel: "Konservierungsmethode",
     waterBath: "Wasserbadkonservierung",
@@ -87,15 +87,15 @@ export const content: ToolLocaleContent = {
     tempLabel: "Konservierungstemperatur",
     timeLabel: "Verarbeitungszeit",
     phLabel: "Lebensmittel pH",
-    f0Label: "F0 Letalitaetswert",
-    dLabel: "Berechneter D Wert",
+    f0Label: "F0 Letalitätswert",
+    dLabel: "Berechneter D-Wert",
     sporesLabel: "Sporenpopulation",
     statusSafe: "Sterilisation Abgeschlossen",
     statusMarginal: "Marginale Sterilisation",
     statusUnsafe: "Hohes Botulismusrisiko",
-    statusSafeDesc: "Die thermische Letalitaet uebersteigt das Ziel F0 von 3.0 Minuten. Sporen sind vollstaendig deaktiviert.",
+    statusSafeDesc: "Die thermische Letalität übersteigt das Ziel F0 von 3.0 Minuten. Sporen sind vollständig deaktiviert.",
     statusMarginalDesc: "Der Prozess erreicht eine teilweise Deaktivierung, bleibt aber unter dem 12D Sicherheitsstandard. Passe Zeit oder Temperatur an.",
-    statusUnsafeDesc: "Der Prozess deaktiviert Clostridium botulinum nicht. Lebensmittel mit niedrigem Saeuregehalt im Wasserbad bleiben gefaehrlich.",
+    statusUnsafeDesc: "Der Prozess deaktiviert Clostridium botulinum nicht. Lebensmittel mit niedrigem Säuregehalt im Wasserbad bleiben gefährlich.",
     cLabel: "°C",
     fLabel: "°F",
     minLabel: "min",
@@ -103,8 +103,8 @@ export const content: ToolLocaleContent = {
     dValueUnit: "Minuten",
     indicatorSectionTitle: "Diagnoseanzeigen",
     visualizerSectionTitle: "Sporenreduktion",
-    f0Tooltip: "Aequivalente Sterilisationszeit in Minuten bei 121.11°C. Sicherer Schwellenwert ist 3.0 oder hoeher.",
-    dTooltip: "Dezimale Reduktionszeit: Dauer in Minuten, die erforderlich ist, um 90% der Sporen bei aktueller Temperatur zu zerstoeren.",
+    f0Tooltip: "Äquivalente Sterilisationszeit in Minuten bei 121.11°C. Sicherer Schwellenwert ist 3.0 oder höher.",
+    dTooltip: "Dezimale Reduktionszeit: Dauer in Minuten, die erforderlich ist, um 90% der Sporen bei aktueller Temperatur zu zerstören.",
     logReductionTooltip: "Anzahl der Dezimalreduktionen (10er Potenzen). Eine 12D Reduktion ist der Sicherheitsstandard.",
   },
   faq,
@@ -112,12 +112,12 @@ export const content: ToolLocaleContent = {
   seo: [
     {
       type: 'title',
-      text: 'Wissenschaftliche Mechanismen der Waermebehandlung und der Kinetik der Sporendeaktivierung',
+      text: 'Wissenschaftliche Mechanismen der Wärmebehandlung und der Kinetik der Sporendeaktivierung',
       level: 2,
     },
     {
       type: 'paragraph',
-      html: 'Die Waermebehandlung bei der Konservenherstellung gewaehrleistet die kommerzielle Sterilitaet durch die Zerstoerung von pathogenen und verderbniserregenden Mikroorganismen. Der Hauptschwerpunkt der Sicherheitsrichtlinien bei der Konservierung von Lebensmitteln mit niedrigem Saeuregehalt liegt auf Clostridium botulinum. Botulinumsporen sind im Vergleich zu vegetativen Zellen stark hitzebestaendig. Die Deaktivierung dieser Sporen erfordert einen thermischen Todeszeitprozess, der eine hohe Temperatur ueber eine berechnete Dauer anwendet. Die mathematische Beziehung zwischen Temperatur und Deaktivierungsrate wird durch die Dezimalreduktionszeit (D Wert) und den Temperaturabhaengigkeitsfaktor (z Wert) ausgedrueckt.',
+      html: 'Die Wärmebehandlung bei der Konservenherstellung gewährleistet die kommerzielle Sterilität durch die Zerstörung von pathogenen und verderbniserregenden Mikroorganismen. Der Hauptschwerpunkt der Sicherheitsrichtlinien bei der Konservierung von Lebensmitteln mit niedrigem Säuregehalt liegt auf Clostridium botulinum. Botulinumsporen sind im Vergleich zu vegetativen Zellen stark hitzebeständig. Die Deaktivierung dieser Sporen erfordert einen thermischen Todeszeitprozess, der eine hohe Temperatur über eine berechnete Dauer anwendet. Die mathematische Beziehung zwischen Temperatur und Deaktivierungsrate wird durch die Dezimalreduktionszeit (D-Wert) und den Temperaturabhängigkeitsfaktor (z-Wert) ausgedrückt.',
     },
     {
       type: 'title',
@@ -126,29 +126,29 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Ein pH Wert von 4.6 ist die Trennlinie fuer die Konservierungssicherheit. Saure Lebensmittel unter pH 4.6 hemmen auf natuerliche Weise die Keimung und Toxinproduktion von Botulinumsporen. Fuer diese Lebensmittel ist die Verarbeitung bei 100 Grad Celsius in einem kochenden Wasserbad ausreichend. Lebensmittel mit niedrigem Saeuregehalt ueber pH 4.6 muessen jedoch einem Druckkonservierungsprozess unterzogen werden, um die Dampftemperatur zu erhoehen und eine vollstaendige thermische Zerstoerung der Sporen zu erreichen. Die folgende Tabelle zeigt die Klassifizierungen und Konservierungsmethoden fuer haeufige Zutaten:',
+      html: 'Ein pH-Wert von 4.6 ist die Trennlinie für die Konservierungssicherheit. Saure Lebensmittel unter pH 4.6 hemmen auf natürliche Weise die Keimung und Toxinproduktion von Botulinumsporen. Für diese Lebensmittel ist die Verarbeitung bei 100 Grad Celsius in einem kochenden Wasserbad ausreichend. Lebensmittel mit niedrigem Säuregehalt über pH 4.6 müssen jedoch einem Druckkonservierungsprozess unterzogen werden, um die Dampftemperatur zu erhöhen und eine vollständige thermische Zerstörung der Sporen zu erreichen. Die folgende Tabelle zeigt die Klassifizierungen und Konservierungsmethoden für häufige Zutaten:',
     },
     {
       type: 'table',
-      headers: ['Lebensmittelgruppe', 'pH Bereich', 'Erforderliche Konservierungsmethode', 'Haeufige Beispiele'],
+      headers: ['Lebensmittelgruppe', 'pH-Bereich', 'Erforderliche Konservierungsmethode', 'Häufige Beispiele'],
       rows: [
-        ['Hoher Saeuregehalt', 'Unter 4.0', 'Wasserbadkonservierung', 'Aepfel, Beeren, Zitrusfruechte, Pfirsiche, Essiggurken'],
-        ['Angesaeuert oder Mittlerer Saeuregehalt', '4.0 bis 4.6', 'Wasserbad mit Saeureanpassung', 'Tomaten, Feigen, Birnen'],
-        ['Niedriger Saeuregehalt', '4.6 und hoeher', 'Druckkonservierung Erforderlich', 'Fleisch, Meeresfruechte, Bohnen, Mais, Kartoffeln, Suppen'],
+        ['Hoher Säuregehalt', 'Unter 4.0', 'Wasserbadkonservierung', 'Äpfel, Beeren, Zitrusfrüchte, Pfirsiche, Essiggurken'],
+        ['Angesäuert oder Mittlerer Säuregehalt', '4.0 bis 4.6', 'Wasserbad mit Säureanpassung', 'Tomaten, Feigen, Birnen'],
+        ['Niedriger Säuregehalt', '4.6 und höher', 'Druckkonservierung Erforderlich', 'Fleisch, Meeresfrüchte, Bohnen, Mais, Kartoffeln, Suppen'],
       ],
     },
     {
       type: 'title',
-      text: 'Hoehenanpassungen und Sicherheitskorrekturen des Siedepunkts',
+      text: 'Höhenanpassungen und Sicherheitskorrekturen des Siedepunkts',
       level: 3,
     },
     {
       type: 'paragraph',
-      html: 'Mit zunehmender Hoehe sinkt der Luftdruck, wodurch der Siedepunkt von Wasser unter 100 Grad Celsius faellt. Beim Konservieren im Wasserbad erhoeht diese niedrigere Temperatur den D Wert der Sporen, was laengere Verarbeitungszeiten erfordert. Beim Druckkonservieren muessen die Einstellungen des Zeiger oder Gewichtsmanometers erhoeht werden, um die Zieltemperatur fuer die interne Sterilisation beizubehalten. Nachfolgend finden Sie die Referenztabelle fuer Siedepunkte und die erforderlichen Anpassungen beim Druckkonservieren:',
+      html: 'Mit zunehmender Höhe sinkt der Luftdruck, wodurch der Siedepunkt von Wasser unter 100 Grad Celsius fällt. Beim Konservieren im Wasserbad erhöht diese niedrigere Temperatur den D-Wert der Sporen, was längere Verarbeitungszeiten erfordert. Beim Druckkonservieren müssen die Einstellungen des Zeiger- oder Gewichtsmanometers erhöht werden, um die Zieltemperatur für die interne Sterilisation beizubehalten. Nachfolgend finden Sie die Referenztabelle für Siedepunkte und die erforderlichen Anpassungen beim Druckkonservieren:',
     },
     {
       type: 'table',
-      headers: ['Hoehenbereich', 'Siedepunkt von Wasser', 'Erforderlicher Zeigermanometerdruck', 'Erforderlicher Gewichtsmanometerdruck'],
+      headers: ['Höhenbereich', 'Siedepunkt von Wasser', 'Erforderlicher Zeigermanometerdruck', 'Erforderlicher Gewichtsmanometerdruck'],
       rows: [
         ['0 bis 300 Meter', '100.0 °C', '11 PSI (121 °C)', '10 PSI (121 °C)'],
         ['300 bis 600 Meter', '99.0 °C', '11 PSI (121 °C)', '15 PSI (121 °C)'],
@@ -165,21 +165,21 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Die bakterielle Abtoetung durch Hitze erfolgt logarithmisch. Der D Wert stellt die Zeit dar, die bei einer bestimmten Temperatur erforderlich ist, um 90% der Sporenpopulation abzutoeten, was einer Dezimallogarithmusreduktion entspricht. Der Referenzstandard fuer Clostridium botulinum ist ein D Wert von 0.21 Minuten bei 121.11 Grad Celsius. Um hohe Sicherheitsspielraeume zu erreichen, verlangen kommerzielle Standards einen zwoelffachen Dezimalreduktionsprozess (12D), was bedeutet, dass die Sporenpopulation um zwoelf Zehnerpotenzen reduziert wird. Dies ergibt einen Ziel F0 Wert von 3.0 Minuten, der die Sicherheit bei Lebensmitteln mit niedrigem Saeuregehalt garantiert.',
+      html: 'Die bakterielle Abtötung durch Hitze erfolgt logarithmisch. Der D-Wert stellt die Zeit dar, die bei einer bestimmten Temperatur erforderlich ist, um 90% der Sporenpopulation abzutöten, was einer Dezimallogarithmusreduktion entspricht. Der Referenzstandard für Clostridium botulinum ist ein D-Wert von 0.21 Minuten bei 121.11 Grad Celsius. Um hohe Sicherheitsspielräume zu erreichen, verlangen kommerzielle Standards einen zwölffachen Dezimalreduktionsprozess (12D), was bedeutet, dass die Sporenpopulation um zwölf Zehnerpotenzen reduziert wird. Dies ergibt einen Ziel F0-Wert von 3.0 Minuten, der die Sicherheit bei Lebensmitteln mit niedrigem Säuregehalt garantiert.',
     },
     {
       type: 'title',
-      text: 'Praktischer Leitfaden fuer Hausgemachte Konserven und Sicherheitstipps',
+      text: 'Praktischer Leitfaden für Hausgemachte Konserven und Sicherheitstipps',
       level: 3,
     },
     {
       type: 'list',
       items: [
-        'Saeuere Tomaten vor der Wasserbadverarbeitung immer mit Zitronensaft oder Zitronensaeure an, da ihr natuerlicher pH Wert nahe der kritischen Schwelle von 4.6 schwankt.',
-        'Verkuerze niemals die Verarbeitungszeiten oder senke die Temperaturen. Die thermische Todeskinetik ist logarithmisch und kleine Aenderungen koennen Sporen ueberleben lassen.',
-        'Stelle sicher, dass Zeigermanometer an Druckkonservengeraeten jaehrlich auf Genauigkeit geprueft werden, da falsche Druckmesswerte die internen Sterilisationstemperaturen direkt beeintraechtigen.',
-        'Gleiche Hoehenunterschiede aus, indem du die Verarbeitungszeiten in Wasserbaedern anpasst oder die PSI Einstellungen an Druckkonservengeraeten erhoehst.',
-        'Vermeide es, gemischte Rezepte mit Zutaten mit niedrigem Saeuregehalt wie Fleisch oder Bohnen in einem Wasserbadkonservierer zu verarbeiten, selbst wenn das Gesamtrezept Saeure enthaelt.',
+        'Säuere Tomaten vor der Wasserbadverarbeitung immer mit Zitronensaft oder Zitronensäure an, da ihr natürlicher pH-Wert nahe der kritischen Schwelle von 4.6 schwankt.',
+        'Verkürze niemals die Verarbeitungszeiten oder senke die Temperaturen. Die thermische Todeskinetik ist logarithmisch und kleine Änderungen können Sporen überleben lassen.',
+        'Stelle sicher, dass Zeigermanometer an Druckkonservengeräten jährlich auf Genauigkeit geprüft werden, da falsche Druckmesswerte die internen Sterilisationstemperaturen direkt beeinträchtigen.',
+        'Gleiche Höhenunterschiede aus, indem du die Verarbeitungszeiten in Wasserbädern anpasst oder die PSI-Einstellungen an Druckkonservengeräten erhöhst.',
+        'Vermeide es, gemischte Rezepte mit Zutaten mit niedrigem Säuregehalt wie Fleisch oder Bohnen in einem Wasserbadkonservierer zu verarbeiten, selbst wenn das Gesamtrezept Säure enthält.',
       ],
     },
   ],

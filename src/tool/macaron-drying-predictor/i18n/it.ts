@@ -1,25 +1,25 @@
 import type { ToolLocaleContent } from '../../../types';
 import { bibliography } from '../bibliography';
 
-const title = 'Predittore di Essiccazione dei Gusci dei Macaron: Calcolatore del Tempo di Asciugatura in Base a Umidita e Temperatura';
-const description = 'Calcola esattamente quanto tempo devono asciugare i gusci dei macaron in base a umidita, temperatura e dimensione. Evita gusci crepati e assicurati un piedino perfetto ogni volta.';
+const title = 'Predittore di Essiccazione dei Gusci dei Macaron: Calcolatore del Tempo di Asciugatura in Base a Umidità e Temperatura';
+const description = 'Calcola esattamente quanto tempo devono asciugare i gusci dei macaron in base a umidità, temperatura e dimensione. Evita gusci crepati e assicurati un piedino perfetto ogni volta.';
 
 const faq = [
   {
-    question: 'Perche i gusci dei macaron devono asciugare prima della cottura?',
-    answer: 'L\'asciugatura forma una sottile pellicola sulla superficie del guscio. Questa pellicola e essenziale perche intrappola il vapore durante la cottura, costringendolo a uscire verso il basso attraverso il piedino invece di rompere la superficie. Senza un\'asciugatura adeguata, i macaron si crepano, non formano il piedino o cuociono in modo irregolare.',
+    question: 'Perché i gusci dei macaron devono asciugare prima della cottura?',
+    answer: 'L\'asciugatura forma una sottile pellicola sulla superficie del guscio. Questa pellicola è essenziale perché intrappola il vapore durante la cottura, costringendolo a uscire verso il basso attraverso il piedino invece di rompere la superficie. Senza un\'asciugatura adeguata, i macaron si crepano, non formano il piedino o cuociono in modo irregolare.',
   },
   {
-    question: 'In che modo l\'umidita influisce sul tempo di asciugatura dei macaron?',
-    answer: 'L\'umidita e il fattore piu critico. Con umidita elevata (oltre il 60%), l\'aria e gia satura di umidita, rallentando drasticamente l\'evaporazione dalla superficie del guscio. Il tempo di asciugatura puo raddoppiare o triplicare rispetto a una giornata secca. In condizioni molto secche (sotto il 30%), i gusci possono asciugarsi troppo e sviluppare una pellicola spessa che impedisce la corretta lievitazione.',
+    question: 'In che modo l\'umidità influisce sul tempo di asciugatura dei macaron?',
+    answer: 'L\'umidità è il fattore più critico. Con umidità elevata (oltre il 60%), l\'aria è già satura di umidità, rallentando drasticamente l\'evaporazione dalla superficie del guscio. Il tempo di asciugatura può raddoppiare o triplicare rispetto a una giornata secca. In condizioni molto secche (sotto il 30%), i gusci possono asciugarsi troppo e sviluppare una pellicola spessa che impedisce la corretta lievitazione.',
   },
   {
-    question: 'Qual e la temperatura ideale per asciugare i gusci dei macaron?',
-    answer: 'La temperatura ambiente tra 20 Â°C e 25 Â°C e l\'ideale. L\'aria piu calda trattiene piu umidita e accelera l\'asciugatura, ma se fa troppo caldo (oltre 30 Â°C) i gusci possono asciugarsi in modo irregolare, con un esterno crostoso e un interno ancora umido. Temperature inferiori a 18 Â°C rallentano notevolmente l\'asciugatura.',
+    question: 'Qual è la temperatura ideale per asciugare i gusci dei macaron?',
+    answer: 'La temperatura ambiente tra 20 °C e 25 °C è l\'ideale. L\'aria più calda trattiene più umidità e accelera l\'asciugatura, ma se fa troppo caldo (oltre 30 °C) i gusci possono asciugarsi in modo irregolare, con un esterno crostoso e un interno ancora umido. Temperature inferiori a 18 °C rallentano notevolmente l\'asciugatura.',
   },
   {
     question: 'In che modo la dimensione del guscio influisce sul tempo di asciugatura?',
-    answer: 'I gusci piu grandi hanno maggiore superficie e volume, richiedendo un\'asciugatura proporzionalmente piu lunga. Un mini macaron da 2 cm puo asciugare in 15 minuti, mentre un macaron grande da 5 cm puo impiegare oltre un\'ora. La relazione non e lineare: raddoppiare il diametro triplica all\'incirca il tempo di asciugatura a causa del rapporto superficie-volume.',
+    answer: 'I gusci più grandi hanno maggiore superficie e volume, richiedendo un\'asciugatura proporzionalmente più lunga. Un mini macaron da 2 cm può asciugare in 15 minuti, mentre un macaron grande da 5 cm può impiegare oltre un\'ora. La relazione non è lineare: raddoppiare il diametro triplica all\'incirca il tempo di asciugatura a causa del rapporto superficie-volume.',
   },
 ];
 
@@ -30,19 +30,19 @@ const howTo = [
   },
   {
     name: 'Misurate l\'ambiente di lavoro',
-    text: 'Controllate l\'umidita e la temperatura della vostra cucina usando un igrometro e un termometro.',
+    text: 'Controllate l\'umidità e la temperatura della vostra cucina usando un igrometro e un termometro.',
   },
   {
     name: 'Inserite i valori nel calcolatore',
-    text: 'Inserite l\'umidita, la temperatura e il diametro del guscio per ottenere il tempo di asciugatura stimato.',
+    text: 'Inserite l\'umidità, la temperatura e il diametro del guscio per ottenere il tempo di asciugatura stimato.',
   },
   {
     name: 'Testate la pellicola',
     text: 'Dopo il tempo indicato, toccate leggermente la superficie di un guscio. Dovrebbe risultare asciutta e opaca, non appiccicosa. Se si attacca al dito, lasciate asciugare ancora.',
   },
   {
-    name: 'Infornate quando e pronto',
-    text: 'Una volta che la pellicola si e formata, infornate subito. Non lasciate riposare i gusci troppo a lungo dopo l\'asciugatura, altrimenti rischiano di asciugarsi troppo e creparsi.',
+    name: 'Infornate quando è pronto',
+    text: 'Una volta che la pellicola si è formata, infornate subito. Non lasciate riposare i gusci troppo a lungo dopo l\'asciugatura, altrimenti rischiano di asciugarsi troppo e creparsi.',
   },
 ];
 
@@ -81,13 +81,13 @@ const appSchema = {
 export const content: ToolLocaleContent = {
   slug: 'predittore-essiccazione-macaron',
   title: 'Predittore di Essiccazione dei Gusci dei Macaron',
-  description: 'Calcola esattamente quanto tempo devono asciugare i gusci dei macaron in base a umidita, temperatura e dimensione. Evita gusci crepati e assicurati un piedino perfetto ogni volta.',
+  description: 'Calcola esattamente quanto tempo devono asciugare i gusci dei macaron in base a umidità, temperatura e dimensione. Evita gusci crepati e assicurati un piedino perfetto ogni volta.',
   faqTitle: 'Domande Frequenti',
   ui: {
-    humidityLabel: 'Umidita Ambiente',
+    humidityLabel: 'Umidità Ambiente',
     humidityUnit: '%',
     tempLabel: 'Temperatura Ambiente',
-    tempUnit: 'Â°C',
+    tempUnit: '°C',
     sizeLabel: 'Diametro Guscio',
     sizeUnit: 'cm',
     dryingTimeLabel: 'Tempo di Asciugatura Stimato',
@@ -97,11 +97,11 @@ export const content: ToolLocaleContent = {
     skinStatusForming: 'Pellicola in Formazione',
     skinStatusSticky: 'Ancora Appiccicoso',
     skinStatusOverDry: 'Troppo Asciutto',
-    humidityTagHigh: 'Umidita alta',
-    humidityTagNormal: 'Umidita normale',
-    humidityTagLow: 'Umidita bassa',
-    humidityDescHigh: 'Giornata molto umida. L\'asciugatura richiedera molto piu tempo. Se possibile, usa un deumidificatore o un ambiente con aria condizionata.',
-    humidityDescNormal: 'Umidita moderata. L\'asciugatura dovrebbe procedere a un ritmo normale con una buona formazione della pellicola.',
+    humidityTagHigh: 'Umidità alta',
+    humidityTagNormal: 'Umidità normale',
+    humidityTagLow: 'Umidità bassa',
+    humidityDescHigh: 'Giornata molto umida. L\'asciugatura richiederà molto più tempo. Se possibile, usa un deumidificatore o un ambiente con aria condizionata.',
+    humidityDescNormal: 'Umidità moderata. L\'asciugatura dovrebbe procedere a un ritmo normale con una buona formazione della pellicola.',
     humidityDescLow: 'Aria molto secca. I gusci potrebbero asciugarsi troppo in fretta e rischiare di seccarsi eccessivamente. Controlla spesso e riduci il tempo di asciugatura.',
     tempTagHot: 'Stanza calda',
     tempTagIdeal: 'Temperatura ideale',
@@ -115,30 +115,30 @@ export const content: ToolLocaleContent = {
   seo: [
     {
       type: 'title',
-      text: 'La Scienza dell\'Essiccazione dei Gusci dei Macaron: Perche la Pellicola Determina il Successo',
+      text: 'La Scienza dell\'Essiccazione dei Gusci dei Macaron: Perché la Pellicola Determina il Successo',
       level: 2,
     },
     {
       type: 'paragraph',
-      html: 'Il macaron e uno dei dolci tecnicamente piu impegnativi della pasticceria francese. La sua caratteristica calotta liscia e la base arricciata, detta "piedino" o "pied", dipendono interamente da un passaggio critico: l\'asciugatura dei gusci formati prima della cottura. Questo periodo di riposo permette a un sottile film proteico di formarsi sulla superficie di ogni guscio. Durante la cottura, questa pellicola intrappola il vapore in espansione all\'interno del guscio, costringendolo a uscire verso il basso attraverso la base, sollevando il guscio e creando l\'ambito piedino. Senza un\'asciugatura adeguata, il vapore fuoriesce dalla superficie causando crepe. Con un\'asciugatura eccessiva, la pellicola diventa troppo rigida e i gusci non riescono a lievitare correttamente.',
+      html: 'Il macaron è uno dei dolci tecnicamente più impegnativi della pasticceria francese. La sua caratteristica calotta liscia e la base arricciata, detta "piedino" o "pied", dipendono interamente da un passaggio critico: l\'asciugatura dei gusci formati prima della cottura. Questo periodo di riposo permette a un sottile film proteico di formarsi sulla superficie di ogni guscio. Durante la cottura, questa pellicola intrappola il vapore in espansione all\'interno del guscio, costringendolo a uscire verso il basso attraverso la base, sollevando il guscio e creando l\'ambito piedino. Senza un\'asciugatura adeguata, il vapore fuoriesce dalla superficie causando crepe. Con un\'asciugatura eccessiva, la pellicola diventa troppo rigida e i gusci non riescono a lievitare correttamente.',
     },
     {
       type: 'title',
-      text: 'L\'Umidita e il Suo Ruolo Dominante nella Cinetica di Essiccazione',
+      text: 'L\'Umidità e il Suo Ruolo Dominante nella Cinetica di Essiccazione',
       level: 3,
     },
     {
       type: 'paragraph',
-      html: 'L\'umidita relativa e la variabile piu influente nell\'essiccazione dei gusci dei macaron. Al 50% di umidita relativa, un guscio standard da 3 cm richiede in genere 30-40 minuti per sviluppare una pellicola adeguata. Al 70% di umidita, questo tempo puo allungarsi a 60-90 minuti. Al 30% di umidita, l\'asciugatura puo completarsi in soli 15-20 minuti. La fisica dietro tutto questo e semplice: il tasso di evaporazione e proporzionale al deficit di pressione di vapore tra la superficie del guscio e l\'aria circostante. L\'aria umida ha un deficit minore, rallentando l\'evaporazione. Le pasticcerie professionali controllano l\'umidita con grande attenzione, spesso mantenendo locali dedicati ai macaron con un\'umidita relativa del 40-50%.',
+      html: 'L\'umidità relativa è la variabile più influente nell\'essiccazione dei gusci dei macaron. Al 50% di umidità relativa, un guscio standard da 3 cm richiede in genere 30-40 minuti per sviluppare una pellicola adeguata. Al 70% di umidità, questo tempo può allungarsi a 60-90 minuti. Al 30% di umidità, l\'asciugatura può completarsi in soli 15-20 minuti. La fisica dietro tutto questo è semplice: il tasso di evaporazione è proporzionale al deficit di pressione di vapore tra la superficie del guscio e l\'aria circostante. L\'aria umida ha un deficit minore, rallentando l\'evaporazione. Le pasticcerie professionali controllano l\'umidità con grande attenzione, spesso mantenendo locali dedicati ai macaron con un\'umidita relativa del 40-50%.',
     },
     {
       type: 'title',
-      text: 'Tabella di Riferimento dei Tempi di Asciugatura per Umidita e Dimensione del Guscio',
+      text: 'Tabella di Riferimento dei Tempi di Asciugatura per Umidità e Dimensione del Guscio',
       level: 3,
     },
     {
       type: 'table',
-      headers: ['Umidita', '2 cm Mini', '3 cm Standard', '4 cm Grande', '5 cm Extra Large'],
+      headers: ['Umidità', '2 cm Mini', '3 cm Standard', '4 cm Grande', '5 cm Extra Large'],
       rows: [
         ['30% (Molto secco)', '10-15 min', '15-20 min', '25-30 min', '35-45 min'],
         ['40% (Secco)', '15-20 min', '20-30 min', '30-40 min', '45-60 min'],
@@ -155,7 +155,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'La temperatura influisce sull\'asciugatura attraverso due meccanismi. Primo, l\'aria piu calda puo trattenere piu vapore acqueo, aumentando il tasso di evaporazione potenziale dalla superficie del guscio. Secondo, l\'energia cinetica molecolare aumenta con la temperatura, accelerando la velocita con cui le molecole d\'acqua abbandonano la fase liquida. Tuttavia, la temperatura influisce anche sulla stabilita della meringa. Sopra i 28 Â°C, le proteine dell\'albume nella meringa possono iniziare a destabilizzarsi, portando a una struttura indebolita. L\'intervallo ideale per l\'asciugatura dei macaron e 20-25 Â°C. Sotto i 18 Â°C, il tasso di evaporazione rallenta al punto che l\'asciugatura diventa impraticabile per gusci di dimensioni standard.',
+      html: 'La temperatura influisce sull\'asciugatura attraverso due meccanismi. Primo, l\'aria più calda può trattenere più vapore acqueo, aumentando il tasso di evaporazione potenziale dalla superficie del guscio. Secondo, l\'energia cinetica molecolare aumenta con la temperatura, accelerando la velocità con cui le molecole d\'acqua abbandonano la fase liquida. Tuttavia, la temperatura influisce anche sulla stabilità della meringa. Sopra i 28 °C, le proteine dell\'albume nella meringa possono iniziare a destabilizzarsi, portando a una struttura indebolita. L\'intervallo ideale per l\'asciugatura dei macaron è 20-25 °C. Sotto i 18 °C, il tasso di evaporazione rallenta al punto che l\'asciugatura diventa impraticabile per gusci di dimensioni standard.',
     },
     {
       type: 'title',
@@ -164,7 +164,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Il diametro del guscio ha un effetto non lineare sul tempo di asciugatura a causa del rapporto superficie-volume. Un mini macaron da 2 cm ha circa 3,1 cmÂ² di superficie per 0,5 cmÂ³ di volume, con un rapporto superficie-volume favorevole di circa 6:1. Un macaron grande da 5 cm ha circa 19,6 cmÂ² di superficie per 8,2 cmÂ³ di volume, un rapporto di soli 2,4:1. Questo significa che i gusci piu grandi hanno proporzionalmente meno superficie attraverso cui l\'umidita puo fuoriuscire, aumentando notevolmente il tempo di asciugatura. Il calcolatore modella questo fenomeno usando una relazione a legge di potenza calibrata su dati empirici provenienti da laboratori di pasticceria professionale.',
+      html: 'Il diametro del guscio ha un effetto non lineare sul tempo di asciugatura a causa del rapporto superficie-volume. Un mini macaron da 2 cm ha circa 3,1 cm² di superficie per 0,5 cm³ di volume, con un rapporto superficie-volume favorevole di circa 6:1. Un macaron grande da 5 cm ha circa 19,6 cm² di superficie per 8,2 cm³ di volume, un rapporto di soli 2,4:1. Questo significa che i gusci più grandi hanno proporzionalmente meno superficie attraverso cui l\'umidità può fuoriuscire, aumentando notevolmente il tempo di asciugatura. Il calcolatore modella questo fenomeno usando una relazione a legge di potenza calibrata su dati empirici provenienti da laboratori di pasticceria professionale.',
     },
     {
       type: 'title',
@@ -175,13 +175,13 @@ export const content: ToolLocaleContent = {
       type: 'diagnostic',
       variant: 'warning',
       title: 'Gusci crepati senza piedino',
-      html: 'Il fallimento piu comune dei macaron. Quasi sempre indica che i gusci non sono stati asciugati abbastanza a lungo prima della cottura. La pellicola superficiale era troppo debole per contenere il vapore in espansione, che e fuoriuscito dalla superficie. <strong>Soluzione: aumentare il tempo di asciugatura di 10-15 minuti e testare la superficie con un leggero tocco del polpastrello prima di infornare.</strong>',
+      html: 'Il fallimento più comune dei macaron. Quasi sempre indica que i gusci non sono stati asciugati abbastanza a lungo prima della cottura. La pellicola superficiale era troppo debole per contenere il vapore in espansione, che è fuoriuscito dalla superficie. <strong>Soluzione: aumentare il tempo di asciugatura di 10-15 minuti e testare la superficie con un leggero tocco del polpastrello prima di infornare.</strong>',
     },
     {
       type: 'diagnostic',
       variant: 'error',
       title: 'Piedino storto o inclinato',
-      html: 'La causa e un\'asciugatura non uniforme. Se un lato della teglia si asciuga piu velocemente dell\'altro, il piedino lievitera in modo irregolare. Succede spesso quando le teglie sono posizionate vicino a una finestra, un ventilatore o una fonte di calore. <strong>Soluzione: ruotare le teglie durante l\'asciugatura e garantire una circolazione dell\'aria uniforme intorno a tutti i gusci.</strong>',
+      html: 'La causa è un\'asciugatura non uniforme. Se un lato della teglia si asciuga più velocemente dell\'altro, il piedino lieviterà in modo irregolare. Succede spesso quando le teglie sono posizionate vicino a una finestra, un ventilatore o una fonte di calore. <strong>Soluzione: ruotare le teglie durante l\'asciugatura e garantire una circolazione dell\'aria uniforme intorno a tutti i gusci.</strong>',
     },
     {
       type: 'diagnostic',
@@ -197,17 +197,17 @@ export const content: ToolLocaleContent = {
     {
       type: 'tip',
       title: 'La Tecnica del Forno per le Giornate Umide',
-      html: 'Nelle giornate estremamente umide, gli chef professionisti usano una tecnica chiamata "asciugatura in forno". Preriscalda il forno alla temperatura piu bassa possibile (in genere 50 Â°C), spegnilo, poi metti i macaron formati all\'interno con lo sportello leggermente aperto per 5-10 minuti. Si crea cosi un microclima caldo e a bassa umidita che accelera la formazione della pellicola senza iniziare a cuocere i gusci.',
+      html: 'Nelle giornate estremamente umide, gli chef professionisti usano una tecnica chiamata "asciugatura in forno". Preriscalda il forno alla temperatura più bassa possibile (in genere 50 °C), spegnilo, poi metti i macaron formati all\'interno con lo sportello leggermente aperto per 5-10 minuti. Si crea così un microclima caldo e a bassa umidità che accelera la formazione della pellicola senza iniziare a cuocere i gusci.',
     },
     {
       type: 'tip',
       title: 'Il Test del Tocco per una Pellicola Perfetta',
-      html: 'Il test definitivo per verificare se i macaron sono pronti: tocca leggermente la superficie di un guscio con un polpastrello pulito e asciutto. Se l\'impasto si attacca al dito, serve piu tempo. Se la superficie e asciutta e opaca e non si attacca, la pellicola si e formata. Se la superficie risulta dura e crostosa senza alcuna cedevolezza, i gusci si sono asciugati troppo.',
+      html: 'Il test definitivo per verificare se i macaron sono pronti: tocca leggermente la superficie di un guscio con un polpastrello pulito e asciutto. Se l\'impasto si attacca al dito, serve più tempo. Se la superficie è asciutta e opaca e non si attacca, la pellicola si è formata. Se la superficie risulta dura e crostosa senza alcuna cedevolezza, i gusci si sono asciugati troppo.',
     },
     {
       type: 'tip',
-      title: 'Controllo dell\'Umidita Senza Attrezzatura',
-      html: 'Se non hai un deumidificatore, metti una ciotola di riso crudo o delle bustine di gel di silice vicino ai macaron in asciugatura. Questi essiccanti assorbono l\'umidita ambientale, creando un microclima piu secco intorno alla teglia. Nelle cucine professionali senza climatizzazione, questo semplice trucco puo ridurre il tempo di asciugatura del 30-40% nelle giornate umide.',
+      title: 'Controllo dell\'Umidità Senza Attrezzatura',
+      html: 'Se non hai un deumidificatore, metti una ciotola di riso crudo o delle bustine di gel di silice vicino ai macaron in asciugatura. Questi essiccanti assorbono l\'umidità ambientale, creando un microclima più secco intorno alla teglia. Nelle cucine professionali senza climatizzazione, questo semplice trucco può ridurre il tempo di asciugatura del 30-40% nelle giornate umide.',
     },
     {
       type: 'title',
@@ -216,7 +216,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Gli albumi invecchiati producono meringhe piu stabili che si asciugano in modo piu prevedibile. Gli albumi freschi contengono piu acqua e una struttura proteica meno elastica, producendo meringhe piu deboli che impiegano piu tempo a formare una pellicola adeguata. Le ricette professionali prevedono albumi invecchiati 24-72 ore a temperatura ambiente o 3-5 giorni in frigorifero. Gli albumi invecchiati perdono circa il 10-15% del loro contenuto d\'acqua per evaporazione, concentrando le proteine e migliorando la forza della meringa.',
+      html: 'Gli albumi invecchiati producono meringhe più stabili che si asciugano in modo più prevedibile. Gli albumi freschi contengono più acqua e una struttura proteica meno elastica, producendo meringhe più deboli che impiegano più tempo a formare una pellicola adeguata. Le ricette professionali prevedono albumi invecchiati 24-72 ore a temperatura ambiente o 3-5 giorni in frigorifero. Gli albumi invecchiati perdono circa il 10-15% del loro contenuto d\'acqua per evaporazione, concentrando le proteine e migliorando la forza della meringa.',
     },
     {
       type: 'title',
@@ -227,17 +227,17 @@ export const content: ToolLocaleContent = {
       type: 'summary',
       title: 'Tempi di asciugatura tipici per gusci di macaron standard da 3 cm',
       items: [
-        'Cucina climatizzata (22 Â°C, 45% umidita): 25-30 minuti',
-        'Giornata primaverile, finestre aperte (20 Â°C, 55% umidita): 35-45 minuti',
-        'Giornata estiva, senza aria condizionata (28 Â°C, 70% umidita): 60-90 minuti  -  usa la tecnica di asciugatura in forno',
-        'Casa riscaldata d\'inverno (21 Â°C, 30% umidita): 15-20 minuti  -  attenzione all\'eccessiva asciugatura',
-        'Giornata di pioggia (18 Â°C, 80% umidita): 75-100 minuti  -  considera seriamente l\'uso del deumidificatore',
-        'Laboratorio di pasticceria professionale (22 Â°C, 45% umidita, convezione): 20-25 minuti',
+        'Cucina climatizzata (22 °C, 45% umidità): 25-30 minuti',
+        'Giornata primaverile, finestre aperte (20 °C, 55% umidità): 35-45 minuti',
+        'Giornata estiva, senza aria condizionata (28 °C, 70% umidità): 60-90 minuti  -  usa la tecnica di asciugatura in forno',
+        'Casa riscaldata d\'inverno (21 °C, 30% umidità): 15-20 minuti  -  attenzione all\'eccessiva asciugatura',
+        'Giornata di pioggia (18 °C, 80% umidità): 75-100 minuti  -  considera seriamente l\'uso del deumidificatore',
+        'Laboratorio di pasticceria professionale (22 °C, 45% umidità, convezione): 20-25 minuti',
       ],
     },
     {
       type: 'paragraph',
-      html: 'Ogni cucina e un ambiente unico. Questo calcolatore tiene conto delle tre variabili critiche  -  umidita, temperatura e dimensione del guscio  -  per fornirti una previsione personalizzata del tempo di asciugatura. Inserisci le tue condizioni e forma i gusci con sicurezza.',
+      html: 'Ogni cucina è un ambiente unico. Questo calcolatore tiene conto delle tre variabili critiche  -  umidità, temperatura e dimensione del guscio  -  per fornirti una previsione personalizzata del tempo di asciugatura. Inserisci le tue condizioni e forma i gusci con sicurezza.',
     },
   ],
   bibliography,

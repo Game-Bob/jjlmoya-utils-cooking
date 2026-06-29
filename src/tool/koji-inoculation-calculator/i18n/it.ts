@@ -2,23 +2,23 @@ import type { ToolLocaleContent } from '../../../types';
 import { bibliography } from '../bibliography';
 
 const title = "Calcolatore di Inoculazione e Idratazione del Koji";
-const description = "Calcola il perfetto contenuto di umidita, il dosaggio di inoculazione delle spore e la temperatura di incubazione per produrre koji a casa. Evita lotti falliti con il nostro calcolatore gratuito di inoculazione e idratazione del koji.";
+const description = "Calcola il perfetto contenuto di umidità, il dosaggio di inoculazione delle spore e la temperatura di incubazione per produrre koji a casa. Evita lotti falliti con il nostro calcolatore gratuito di inoculazione e idratazione del koji.";
 const faq = [
   {
-    question: "Qual e il contenuto di umidita target per la cottura del substrato di koji?",
-    answer: "Il contenuto di umidita totale ideale per riso o orzo al vapore quando si inocula il Koji e tra 30% e 35%. Corrisponde a un peso al vapore di circa 1,35x a 1,40x il peso secco iniziale."
+    question: "Qual è il contenuto di umidità target per la cottura del substrato di koji?",
+    answer: "Il contenuto di umidità totale ideale per riso o orzo al vapore quando si inocula il Koji è tra 30% e 35%. Corrisponde a un peso al vapore di circa 1,35x a 1,40x il peso secco iniziale."
   },
   {
     question: "Quanta polvere di spore (tane-koji) mi serve?",
-    answer: "Il tasso di inoculazione standard e di 1 grammo di miscela di spore standard per 1 chilogrammo di substrato secco. Se si utilizzano spore concentrate, serve meno (0,5 g), mentre le miscele diluite richiedono di piu (2,0 g)."
+    answer: "Il tasso di inoculazione standard è di 1 grammo di miscela di spore standard per 1 chilogrammo di substrato secco. Se si utilizzano spore concentrate, serve meno (0,5 g), mentre le miscele diluite richiedono di più (2,0 g)."
   },
   {
-    question: "Perche il controllo della temperatura e fondamentale durante l'incubazione del koji?",
-    answer: "Aspergillus oryzae cresce in modo ottimale tra 28C e 34C. Se la temperatura supera i 38C, la muffa puo surriscaldarsi, smettere di crescere o produrre spore verdi/neri indesiderati. Sotto i 20C, la crescita rallenta significativamente."
+    question: "Perché il controllo della temperatura è fondamentale durante l'incubazione del koji?",
+    answer: "Aspergillus oryzae cresce in modo ottimale tra 28C e 34C. Se la temperatura supera i 38C, la muffa può surriscaldarsi, smettere di crescere o produrre spore verdi/neri indesiderati. Sotto i 20C, la crescita rallenta significativamente."
   },
   {
     question: "Cosa succede durante la fase esotermica?",
-    answer: "Dopo 18-24 ore di incubazione, il koji inizia a crescere rapidamente e genera il proprio calore. Durante questo picco esotermico, e necessario mescolare il substrato e ridurre il calore dell'incubatore per evitare il surriscaldamento."
+    answer: "Dopo 18-24 ore di incubazione, il koji inizia a crescere rapidamente e genera il proprio calore. Durante questo picco esotermico, è necessario mescolare il substrato e ridurre il calore dell'incubatore per evitare il surriscaldamento."
   }
 ];
 
