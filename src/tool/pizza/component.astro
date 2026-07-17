@@ -21,7 +21,7 @@ const { ui } = Astro.props;
         <div class="pizza-controls-space">
           <div class="pizza-control-group">
             <div class="pizza-label-row">
-              <label class="pizza-label">{ui.quantity}</label>
+              <label class="pizza-label" for="input-pizzas">{ui.quantity}</label>
               <span class="pizza-value">
                 <span id="display-pizzas">4</span>
                 <span class="pizza-unit">{ui.pizzas}</span>
@@ -40,7 +40,7 @@ const { ui } = Astro.props;
 
           <div class="pizza-control-group">
             <div class="pizza-label-row">
-              <label class="pizza-label">{ui.weight}</label>
+              <label class="pizza-label" for="input-weight">{ui.weight}</label>
               <span class="pizza-value">
                 <span id="display-weight">260</span>
                 <span class="pizza-unit">g</span>
@@ -64,7 +64,7 @@ const { ui } = Astro.props;
 
           <div class="pizza-control-group">
             <div class="pizza-label-row">
-              <label class="pizza-label">{ui.hydration}</label>
+              <label class="pizza-label" for="input-hydration">{ui.hydration}</label>
               <span class="pizza-value pizza-value-blue">
                 <span id="display-hydration">65</span>%
               </span>
@@ -87,7 +87,7 @@ const { ui } = Astro.props;
 
           <div class="pizza-control-group">
             <div class="pizza-label-row">
-              <label class="pizza-label">{ui.salt}</label>
+              <label class="pizza-label" for="input-salt">{ui.salt}</label>
               <span class="pizza-value">
                 <span id="display-salt">3.0</span>%
               </span>

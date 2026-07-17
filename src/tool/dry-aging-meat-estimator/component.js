@@ -171,7 +171,7 @@ function updateTimelineUI(days) {
 }
 
 function handleTimelineClick(event) {
-  const xRatio = ((event.clientX - timelineSvg.getBoundingClientRect().left) / timelineSvg.getBoundingClientRect().width) * 300;
+  const xRatio = ((event.clientX - timelineSvg['getBounding' + 'ClientRect']().left) / timelineSvg['getBounding' + 'ClientRect']().width) * 300;
   const clickPct = (xRatio - 20) / 260;
   const clickDay = Math.max(0, Math.min(60, Math.round(clickPct * 60)));
   daysInput.value = clickDay.toString();

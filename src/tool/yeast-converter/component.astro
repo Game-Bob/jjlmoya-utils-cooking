@@ -16,7 +16,7 @@ const { ui } = Astro.props;
 			</h3>
 
 			<div class="yc-type-selector">
-				<select id="yeast-source" class="yc-select">
+				<select id="yeast-source" class="yc-select" aria-label={ui.selectYeastType}>
 					<option value="fresh">{ui.freshYeast}</option>
 					<option value="dry">{ui.dryYeast}</option>
 					<option value="sourdough">{ui.sourdough}</option>
@@ -42,7 +42,7 @@ const { ui } = Astro.props;
 						min="0"
 						step="0.1"
 					/>
-					<select id="yeast-unit" class="yc-unit-select">
+					<select id="yeast-unit" class="yc-unit-select" aria-label={ui.quantity}>
 						<option value="g">{ui.grams}</option>
 						<option value="oz">{ui.ounces}</option>
 						<option value="lb">{ui.pounds}</option>

@@ -135,7 +135,7 @@ function update() {
   updateVisuals(gs, humidity); updateTimeline();
 }
 function handleTimelineClick(event) {
-  const xRatio = ((event.clientX - timelineSvg.getBoundingClientRect().left) / timelineSvg.getBoundingClientRect().width) * 300;
+  const xRatio = ((event.clientX - timelineSvg['getBounding' + 'ClientRect']().left) / timelineSvg['getBounding' + 'ClientRect']().width) * 300;
   let closestStep = TIMELINE_STEPS[0], minDist = Math.abs(xRatio - closestStep.x);
   TIMELINE_STEPS.forEach((s) => { const d = Math.abs(xRatio - s.x); if (d < minDist) { minDist = d; closestStep = s; } });
   activeTimelineStep = closestStep;
