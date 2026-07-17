@@ -24,6 +24,7 @@ const { ui } = Astro.props;
 								value={ui.timerDefault1}
 								class="timer-name"
 								placeholder={ui.label}
+								aria-label={ui.label}
 							/>
 						</div>
 						<div class="status-badge">
@@ -40,6 +41,7 @@ const { ui } = Astro.props;
 								value="00"
 								class="time-input minutes"
 								placeholder="00"
+								aria-label={ui.minutes}
 							/>
 							<label class="time-label">{ui.minutes}</label>
 						</div>
@@ -54,6 +56,7 @@ const { ui } = Astro.props;
 								value="00"
 								class="time-input seconds"
 								placeholder="00"
+								aria-label={ui.seconds}
 							/>
 							<label class="time-label">{ui.seconds}</label>
 						</div>
@@ -98,6 +101,7 @@ const { ui } = Astro.props;
 								value={ui.timerDefault2}
 								class="timer-name"
 								placeholder={ui.label}
+								aria-label={ui.label}
 							/>
 						</div>
 						<div class="status-badge">
@@ -114,6 +118,7 @@ const { ui } = Astro.props;
 								value="00"
 								class="time-input minutes"
 								placeholder="00"
+								aria-label={ui.minutes}
 							/>
 							<label class="time-label">{ui.minutes}</label>
 						</div>
@@ -128,6 +133,7 @@ const { ui } = Astro.props;
 								value="00"
 								class="time-input seconds"
 								placeholder="00"
+								aria-label={ui.seconds}
 							/>
 							<label class="time-label">{ui.seconds}</label>
 						</div>
@@ -172,6 +178,7 @@ const { ui } = Astro.props;
 								value={ui.timerDefault3}
 								class="timer-name"
 								placeholder={ui.label}
+								aria-label={ui.label}
 							/>
 						</div>
 						<div class="status-badge">
@@ -188,6 +195,7 @@ const { ui } = Astro.props;
 								value="00"
 								class="time-input minutes"
 								placeholder="00"
+								aria-label={ui.minutes}
 							/>
 							<label class="time-label">{ui.minutes}</label>
 						</div>
@@ -202,6 +210,7 @@ const { ui } = Astro.props;
 								value="00"
 								class="time-input seconds"
 								placeholder="00"
+								aria-label={ui.seconds}
 							/>
 							<label class="time-label">{ui.seconds}</label>
 						</div>
@@ -265,6 +274,7 @@ const { ui } = Astro.props;
 							value={ui.newTimerName}
 							class="timer-name"
 							placeholder={ui.label}
+							aria-label={ui.label}
 						/>
 					</div>
 					<div class="status-badge">
@@ -281,6 +291,7 @@ const { ui } = Astro.props;
 							value="00"
 							class="time-input minutes"
 							placeholder="00"
+							aria-label={ui.minutes}
 						/>
 						<label class="time-label">{ui.minutes}</label>
 					</div>
@@ -295,6 +306,7 @@ const { ui } = Astro.props;
 							value="00"
 							class="time-input seconds"
 							placeholder="00"
+							aria-label={ui.seconds}
 						/>
 						<label class="time-label">{ui.seconds}</label>
 					</div>

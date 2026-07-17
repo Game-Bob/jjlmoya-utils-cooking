@@ -61,7 +61,7 @@ const { ui } = Astro.props;
                 <div class="controls-panel">
                     <div class="control-group">
                         <div class="ripeness-header">
-                            <span class="ripeness-label">{ui.ripesnessLabel}</span>
+                            <label class="ripeness-label" for="ripeness-slider">{ui.ripesnessLabel}</label>
                             <span id="level-display" class="level-value">2.0</span>
                         </div>
                         <input
@@ -87,7 +87,7 @@ const { ui } = Astro.props;
                         <div class="settings-column">
                             <div class="setting-item temp">
                                 <div class="setting-header">
-                                    <span class="setting-label">{ui.tempLabel}</span>
+                                    <label class="setting-label" for="temp-slider">{ui.tempLabel}</label>
                                     <span id="temp-display" class="setting-value">20°C</span>
                                 </div>
                                 <input
@@ -101,7 +101,7 @@ const { ui } = Astro.props;
                             </div>
                             <div class="setting-item humidity">
                                 <div class="setting-header">
-                                    <span class="setting-label">{ui.humidityLabel}</span>
+                                    <label class="setting-label" for="humidity-slider">{ui.humidityLabel}</label>
                                     <span id="humidity-display" class="setting-value">50%</span>
                                 </div>
                                 <input

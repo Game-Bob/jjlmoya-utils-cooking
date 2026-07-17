@@ -54,7 +54,7 @@ const { ui } = Astro.props;
 
       <div class="co-controls">
         <div class="co-control-group">
-          <span class="co-control-label">{ui.geometryLabel}</span>
+          <label class="co-control-label" for="co-geometry">{ui.geometryLabel}</label>
           <select id="co-geometry" class="co-select">
             <option value="whole-bird">{ui.wholeBird}</option>
             <option value="cylindrical-roast">{ui.cylindricalRoast}</option>

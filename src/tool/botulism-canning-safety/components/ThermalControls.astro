@@ -32,7 +32,7 @@ const { ui } = Astro.props;
           <span class="param-unit" id="temp-unit-display">{ui.cLabel}</span>
         </div>
       </div>
-      <input type="range" id="temp-slider" min="90" max="130" step="1" value="100" class="autoclave-slider" />
+      <input type="range" id="temp-slider" min="90" max="130" step="1" value="100" class="autoclave-slider" aria-label={ui.tempLabel} />
     </div>
 
     <div class="parameter-row">
@@ -43,7 +43,7 @@ const { ui } = Astro.props;
           <span class="param-unit">{ui.minLabel}</span>
         </div>
       </div>
-      <input type="range" id="time-slider" min="1" max="180" step="1" value="30" class="autoclave-slider" />
+      <input type="range" id="time-slider" min="1" max="180" step="1" value="30" class="autoclave-slider" aria-label={ui.timeLabel} />
     </div>
 
     <div class="parameter-row">
@@ -54,7 +54,7 @@ const { ui } = Astro.props;
           <span class="param-unit">pH</span>
         </div>
       </div>
-      <input type="range" id="ph-slider" min="2.0" max="7.0" step="0.1" value="5.0" class="autoclave-slider" />
+      <input type="range" id="ph-slider" min="2.0" max="7.0" step="0.1" value="5.0" class="autoclave-slider" aria-label={ui.phLabel} />
     </div>
   </div>
 </div>

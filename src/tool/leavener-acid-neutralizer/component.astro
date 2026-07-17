@@ -23,7 +23,7 @@ const { ui } = Astro.props;
       
       <div class="flour-slider-group">
         <div class="flour-header">
-          <span class="flour-title-label">{ui.flourLabel}</span>
+          <label class="flour-title-label" for="flour-slider">{ui.flourLabel}</label>
           <span id="flour-val-display" class="flour-val-num">150g</span>
         </div>
         <input type="range" id="flour-slider" min="50" max="1000" step="10" value="150" class="premium-range-slider" />
@@ -66,7 +66,7 @@ const { ui } = Astro.props;
         
         <div class="simulation-adjuster">
           <div class="slider-header-row">
-            <span class="adjuster-label">{ui.simulateSodaLabel}</span>
+            <label class="adjuster-label" for="simulator-slider">{ui.simulateSodaLabel}</label>
             <div class="adjuster-controls">
               <span id="simulator-val" class="adjuster-val">3.00g</span>
               <button id="auto-balance-btn" class="btn-auto-balance">{ui.autoBalanceBtn}</button>
@@ -218,7 +218,7 @@ const { ui } = Astro.props;
     wrapper.className = 'slider-wrapper-card';
     const maxVal = isMetric ? MAX_LIMITS[key] : parseFloat((MAX_LIMITS[key] / 28.3495).toFixed(1));
     const stepVal = isMetric ? 5 : 0.1;
-    wrapper.innerHTML = `<div class="slider-header-row"><span class="slider-label-name">${ui[`acid_${key}`] || key}</span><span class="slider-value-num">${activeIngredients[key]}${unitText}</span></div><input type="range" class="premium-range-slider" min="0" max="${maxVal}" stroke-linecap="round" step="${stepVal}" value="${activeIngredients[key]}" />`;
+    wrapper.innerHTML = `<div class="slider-header-row"><span class="slider-label-name">${ui[`acid_${key}`] || key}</span><span class="slider-value-num">${activeIngredients[key]}${unitText}</span></div><input type="range" class="premium-range-slider" min="0" max="${maxVal}" stroke-linecap="round" step="${stepVal}" value="${activeIngredients[key]}" aria-label="${ui[`acid_${key}`] || key}" />`;
     wrapper.querySelector('input').addEventListener('input', (e) => {
       activeIngredients[key] = parseFloat(e.target.value) || 0;
       wrapper.querySelector('.slider-value-num').textContent = `${activeIngredients[key]}${unitText}`;
