@@ -89,7 +89,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'zhengzong-nabulisi-pisa-miantuan-jisuanqi',
+  slug: 'neapolitan-pizza-dough-calculator-authentic-recipe',
   title,
   description,
   faqTitle: "常见问题",

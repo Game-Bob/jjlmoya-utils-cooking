@@ -79,7 +79,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'emulsion-stability-calculator',
+  slug: 'emulsiye-stabilitesi-hesaplayici',
   title,
   description,
   faqTitle: 'Sıkça Sorulan Sorular',

@@ -73,7 +73,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-	slug: 'tianran-jiaomu-suanmianzhong-jisuanqi',
+	slug: 'sourdough-starter-feeding-calculator-ratio-proportions',
 	title,
 	description,
 	faqTitle: '常见问题',

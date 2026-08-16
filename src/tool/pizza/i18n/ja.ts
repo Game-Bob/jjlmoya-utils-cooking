@@ -89,7 +89,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'napoli-pizza-kiji-keisanki',
+  slug: 'neapolitan-pizza-dough-calculator-authentic-recipe',
   title,
   description,
   faqTitle: "よくある質問",

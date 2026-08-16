@@ -202,7 +202,7 @@ export const content: ToolLocaleContent = {
 		{
 			type: 'diagnostic',
 			variant: 'warning',
-			title: 'Tanda-tanda Sourdough Lapar',
+			title: 'Tanda Tanda Sourdough Lapar',
 			html: 'Jika timbul cairan gelap (hooch) di permukaan, berbau cuka/aseton yang kuat, atau mengempis dengan cepat setelah puncak, ia memerlukan rasio pemberian makan yang lebih tinggi.',
 		},
 		{

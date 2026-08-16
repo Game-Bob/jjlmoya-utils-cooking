@@ -89,7 +89,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'napoli-pizza-dou-gyesangi',
+  slug: 'neapolitan-pizza-dough-calculator-authentic-recipe',
   title,
   description,
   faqTitle: "자주 묻는 질문",
@@ -174,7 +174,7 @@ export const content: ToolLocaleContent = {
       columns: 3,
       items: [
         {
-          title: '가수율 55 - 60%',
+          title: '가수율 55~60%',
           icon: 'mdi:water-percent',
           description: '다루기 매우 쉬우며 초보자와 가정용 오븐에 적합합니다.',
           points: [
@@ -184,7 +184,7 @@ export const content: ToolLocaleContent = {
           ],
         },
         {
-          title: '가수율 63 - 67%',
+          title: '가수율 63~67%',
           icon: 'mdi:water',
           description: 'AVPN 표준. 가벼운 도우를 위한 완벽한 균형.',
           highlight: true,

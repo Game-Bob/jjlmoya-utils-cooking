@@ -174,7 +174,7 @@ export const content: ToolLocaleContent = {
       columns: 3,
       items: [
         {
-          title: 'Hidrasyon %55 - %60',
+          title: 'Hidrasyon %55 ile %60',
           icon: 'mdi:water-percent',
           description: 'İşlenmesi çok kolay, yeni başlayanlar ve ev fırınları için idealdir.',
           points: [
@@ -184,7 +184,7 @@ export const content: ToolLocaleContent = {
           ],
         },
         {
-          title: 'Hidrasyon %63 - %67',
+          title: 'Hidrasyon %63 ile %67',
           icon: 'mdi:water',
           description: 'AVPN standardı. Hafif bir hamur için mükemmel denge.',
           highlight: true,

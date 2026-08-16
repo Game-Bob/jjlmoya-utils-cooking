@@ -257,7 +257,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'tip',
-      title: 'Vinäger-Tricket',
+      title: 'Vinäger Tricket',
       html: 'Rengör skålen med vinäger eller citron före start. Minsta spår av fett hindrar äggvitorna från att lyfta.',
     },
     {

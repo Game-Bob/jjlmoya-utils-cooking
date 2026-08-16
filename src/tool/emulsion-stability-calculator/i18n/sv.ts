@@ -11,7 +11,7 @@ const faq = [
   },
   {
     question: "Varför skar sig eller separerade min emulsion?",
-    answer: "En emulsion skär sig när oljans volymfraktion överskrider emulgeringsmedlets maximala packningsgräns. Vid den punkten pressas oljedropparna så tätt ihop att de sammansmälter och blandningen separerar. Detta sker omedelbart – det är inte en gradvis process."
+    answer: "En emulsion skär sig när oljans volymfraktion överskrider emulgeringsmedlets maximala packningsgräns. Vid den punkten pressas oljedropparna så tätt ihop att de sammansmälter och blandningen separerar. Detta sker omedelbart - det är inte en gradvis process."
   },
   {
     question: "Hur räddar jag en sprucken majonnäs eller aioli?",
@@ -23,14 +23,14 @@ const faq = [
   },
   {
     question: "Vad är skillnaden mellan äggula och senap som emulgeringsmedel?",
-    answer: "Äggula (max 78 % olja) innehåller lecitin och lipoproteiner som bildar en robust film runt dropparna. Senap (max 70 % olja) bygger på växtslem och proteiner – den är svagare men ger smak. Sojalecitin (82 %) och polysorbat (85 %) är mycket effektiva industriella emulgeringsmedel."
+    answer: "Äggula (max 78 % olja) innehåller lecitin och lipoproteiner som bildar en robust film runt dropparna. Senap (max 70 % olja) bygger på växtslem och proteiner - den är svagare men ger smak. Sojalecitin (82 %) och polysorbat (85 %) är mycket effektiva industriella emulgeringsmedel."
   }
 ];
 
 const howTo = [
   {
     name: "Välj ditt emulgeringsmedel",
-    text: "Välj emulgeringsmedel i ditt recept – äggula för klassisk majonnäs, senap för vinägrett, eller sojalecitin/polysorbat för modernistisk matlagning. Varje medel sätter en unik maximal oljegräns."
+    text: "Välj emulgeringsmedel i ditt recept - äggula för klassisk majonnäs, senap för vinägrett, eller sojalecitin/polysorbat för modernistisk matlagning. Varje medel sätter en unik maximal oljegräns."
   },
   {
     name: "Ange volymen på din vattenfas",
@@ -79,7 +79,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'emulsion-stability-calculator',
+  slug: 'emulgering-stabilitekalkylator',
   title,
   description,
   faqTitle: 'Vanliga Frågor',
@@ -112,7 +112,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Alla kockar har ställt sig frågan: <strong>varför skar sig min majonnäs?</strong> Svaret är enklare än det verkar. En emulsion – oavsett om det är en klassisk aioli, en krämig vinägrett eller ett modernistiskt skum – kan bara bära en ändlig mängd olja innan den kollapsar. Vår <strong>kalkylator för emulsionsstabilitet</strong> visar exakt var brytpunkten ligger baserat på dina ingredienser och proportioner.'
+      html: 'Alla kockar har ställt sig frågan: <strong>varför skar sig min majonnäs?</strong> Svaret är enklare än det verkar. En emulsion - oavsett om det är en klassisk aioli, en krämig vinägrett eller ett modernistiskt skum - kan bara bära en ändlig mängd olja innan den kollapsar. Vår <strong>kalkylator för emulsionsstabilitet</strong> visar exakt var brytpunkten ligger baserat på dina ingredienser och proportioner.'
     },
     {
       type: 'stats',
@@ -127,10 +127,10 @@ export const content: ToolLocaleContent = {
     {
       type: 'list',
       items: [
-        '<strong>Du tillsätter oljan för snabbt</strong> – Hastigheten är sällan den verkliga orsaken. Om oljefraktionen hålls under emulgeringsmedlets gräns håller emulsionen oavsett hur snabbt du häller.',
-        '<strong>Dina ingredienser är för kalla</strong> – Kalla ägg eller kall olja ökar viskositeten och gör det svårare för droppar att bildas. Rumstemperera alltid ingredienserna.',
-        '<strong>Du har överskridit oljegränsen för ditt emulgeringsmedel</strong> – Varje medel har en maximal packningsfraktion. Äggula upp till 78 %, senap 70 %, sojalecitin 82 % och polysorbat 85 %.',
-        '<strong>Din vattenfas är för liten</strong> – Utan tillräckligt med vatten som omger oljedropparna har de ingenstans att ta vägen förutom att flyta ihop.'
+        '<strong>Du tillsätter oljan för snabbt</strong> - Hastigheten är sällan den verkliga orsaken. Om oljefraktionen hålls under emulgeringsmedlets gräns håller emulsionen oavsett hur snabbt du häller.',
+        '<strong>Dina ingredienser är för kalla</strong> - Kalla ägg eller kall olja ökar viskositeten och gör det svårare för droppar att bildas. Rumstemperera alltid ingredienserna.',
+        '<strong>Du har överskridit oljegränsen för ditt emulgeringsmedel</strong> - Varje medel har en maximal packningsfraktion. Äggula upp till 78 %, senap 70 %, sojalecitin 82 % och polysorbat 85 %.',
+        '<strong>Din vattenfas är för liten</strong> - Utan tillräckligt med vatten som omger oljedropparna har de ingenstans att ta vägen förutom att flyta ihop.'
       ]
     },
     {
@@ -230,11 +230,11 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'En kulinarisk emulsion fungerar genom att sprida ut mikroskopiska oljedroppar i en kontinuerlig vattenfas. <strong>Emulgeringsmedel</strong> – som lecitin i äggula, växtslem i senap eller syntetiska ämnen som polysorbat – omger varje droppe och förhindrar att de flyter ihop.'
+      html: 'En kulinarisk emulsion fungerar genom att sprida ut mikroskopiska oljedroppar i en kontinuerlig vattenfas. <strong>Emulgeringsmedel</strong> - som lecitin i äggula, växtslem i senap eller syntetiska ämnen som polysorbat - omger varje droppe och förhindrar att de flyter ihop.'
     },
     {
       type: 'paragraph',
-      html: 'Brytpunkten styrs av ren geometri. Oljedropparna uppträder som små packade sfärer. Den maximala volymen sfärer som får plats i ett givet utrymme – känt som <strong>Keplers förmodan</strong> – är cirka 74 %. I praktisk matlagning kan detta sträckas till 80–85 % med starka emulgeringsmedel, men därutöver pressas dropparna så hårt att de sammansmälter och emulsionen kollapsar omedelbart.'
+      html: 'Brytpunkten styrs av ren geometri. Oljedropparna uppträder som små packade sfärer. Den maximala volymen sfärer som får plats i ett givet utrymme - känt som <strong>Keplers förmodan</strong> - är cirka 74 %. I praktisk matlagning kan detta sträckas till 80-85 % med starka emulgeringsmedel, men därutöver pressas dropparna så hårt att de sammansmälter och emulsionen kollapsar omedelbart.'
     },
     {
       type: 'card',
@@ -269,7 +269,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Om din majonnäs eller sås redan har skurit sig – <strong>släng den inte</strong>. Lösningen är enkel, men bara om du förstår fasförhållandet. Att vispa hårdare hjälper inte; du måste tillsätta mer kontinuerlig fas (vatten).'
+      html: 'Om din majonnäs eller sås redan har skurit sig - <strong>släng den inte</strong>. Lösningen är enkel, men bara om du förstår fasförhållandet. Att vispa hårdare hjälper inte; du måste tillsätta mer kontinuerlig fas (vatten).'
     },
     {
       type: 'diagnostic',
@@ -311,15 +311,15 @@ export const content: ToolLocaleContent = {
       items: [
         {
           term: 'Kontinuerlig Fas',
-          definition: 'Vätskan som omger oljedropparna – vanligtvis vatten, vinäger eller citrussaft i olja-i-vatten-emulsioner som majonnäs.'
+          definition: 'Vätskan som omger oljedropparna - vanligtvis vatten, vinäger eller citrussaft i olja-i-vatten-emulsioner som majonnäs.'
         },
         {
           term: 'Dispergerad Fas',
-          definition: 'Vätskan som är uppdelad i mikroskopiska droppar – oljan i de flesta kulinariska emulsioner. Ju mer du tillsätter, desto tätare packas dropparna.'
+          definition: 'Vätskan som är uppdelad i mikroskopiska droppar - oljan i de flesta kulinariska emulsioner. Ju mer du tillsätter, desto tätare packas dropparna.'
         },
         {
           term: 'Volymfraktion',
-          definition: 'Förhållandet mellan oljevolym och totalvolym. Vid cirka 74–85 % (beroende på emulgeringsmedel) når emulsionen sin geometriska brytpunkt.'
+          definition: 'Förhållandet mellan oljevolym och totalvolym. Vid cirka 74-85 % (beroende på emulgeringsmedel) når emulsionen sin geometriska brytpunkt.'
         },
         {
           term: 'Koalescens',
@@ -327,7 +327,7 @@ export const content: ToolLocaleContent = {
         },
         {
           term: 'Fasinversion',
-          definition: 'Punkten där en olja-i-vatten-emulsion slår om till vatten-i-olja – som när man kärnar smör av grädde.'
+          definition: 'Punkten där en olja-i-vatten-emulsion slår om till vatten-i-olja - som när man kärnar smör av grädde.'
         }
       ]
     },

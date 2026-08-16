@@ -142,10 +142,10 @@ export const content: ToolLocaleContent = {
     {
       type: 'list',
       items: [
-        '<strong>Jours 1-14 :</strong> Évaporation rapide. La viande perd 10% à 12% de son poids (principalement de l\'eau). Les fibres musculaires se rétrécissent et les arômes se concentrent.',
-        '<strong>Jours 15-30 :</strong> L\'évaporation ralentit grâce à la formation de la pellicule. Les enzymes (calpaïnes et cathepsines) décomposent le collagène et rendent la viande plus tendre.',
-        '<strong>Jours 30-45 :</strong> Perte d\'eau supplémentaire minimale. Développement de notes profondes de noisette et de fromage bleu par oxydation des graisses.',
-        '<strong>Perte de parage :</strong> À la fin de la maturation, la croûte doit être retirée, ce qui représente environ 15% de perte.'
+        '<strong>Jours 1-14:</strong> Évaporation rapide. La viande perd 10% à 12% de son poids (principalement de l\'eau). Les fibres musculaires se rétrécissent et les arômes se concentrent.',
+        '<strong>Jours 15-30:</strong> L\'évaporation ralentit grâce à la formation de la pellicule. Les enzymes (calpaïnes et cathepsines) décomposent le collagène et rendent la viande plus tendre.',
+        '<strong>Jours 30-45:</strong> Perte d\'eau supplémentaire minimale. Développement de notes profondes de noisette et de fromage bleu par oxydation des graisses.',
+        '<strong>Perte de parage:</strong> À la fin de la maturation, la croûte doit être retirée, ce qui représente environ 15% de perte.'
       ]
     },
     {
@@ -160,9 +160,9 @@ export const content: ToolLocaleContent = {
     {
       type: 'list',
       items: [
-        '<strong>Température :</strong> Doit rester entre 1°C et 3°C. En dessous de 0°C, les enzymes gèlent ; au-dessus de 4°C, des bactéries pathogènes se développent.',
-        '<strong>Humidité Relative :</strong> L\'intervalle idéal est de 75% à 85%. En dessous de 70%, un croûtage prématuré se produit ; au-dessus de 85%, des moisissures indésirables apparaissent.',
-        '<strong>Flux d\'air :</strong> Une circulation d\'air continue est nécessaire pour sécher la surface de façon homogène.'
+        '<strong>Température:</strong> Doit rester entre 1°C et 3°C. En dessous de 0°C, les enzymes gèlent ; au-dessus de 4°C, des bactéries pathogènes se développent.',
+        '<strong>Humidité Relative:</strong> L\'intervalle idéal est de 75% à 85%. En dessous de 70%, un croûtage prématuré se produit ; au-dessus de 85%, des moisissures indésirables apparaissent.',
+        '<strong>Flux d\'air:</strong> Une circulation d\'air continue est nécessaire pour sécher la surface de façon homogène.'
       ]
     },
     {
@@ -187,7 +187,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Directives de Sécurité : Microbiologie et Identification des Moisissures',
+      text: 'Directives de Sécurité: Microbiologie et Identification des Moisissures',
       level: 2
     },
     {
@@ -197,9 +197,9 @@ export const content: ToolLocaleContent = {
     {
       type: 'list',
       items: [
-        '<strong>Bons Indicateurs :</strong> Une croûte sèche, ferme, violet foncé ou brune. Un fin duvet blanc (semblable à la croûte de fromage) est normal.',
-        '<strong>Mauvais Indicateurs :</strong> Surfaces poisseuses, gluantes ou humides. Moisissures vertes, noires ou jaunâtres. Odeur d\'ammoniac ou de putréfaction.',
-        '<strong>Propreté :</strong> Stérilisez toujours la chambre et les crochets avant d\'installer une nouvelle pièce de viande.'
+        '<strong>Bons Indicateurs:</strong> Une croûte sèche, ferme, violet foncé ou brune. Un fin duvet blanc (semblable à la croûte de fromage) est normal.',
+        '<strong>Mauvais Indicateurs:</strong> Surfaces poisseuses, gluantes ou humides. Moisissures vertes, noires ou jaunâtres. Odeur d\'ammoniac ou de putréfaction.',
+        '<strong>Propreté:</strong> Stérilisez toujours la chambre et les crochets avant d\'installer une nouvelle pièce de viande.'
       ]
     }
   ],

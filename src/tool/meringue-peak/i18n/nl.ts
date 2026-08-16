@@ -257,7 +257,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'tip',
-      title: 'De Azijn-Truc',
+      title: 'De Azijn Truc',
       html: 'Maak de kom vooraf schoon met azijn of citroen. Elk spoortje vet voorkomt dat de eiwitten stijf worden.',
     },
     {

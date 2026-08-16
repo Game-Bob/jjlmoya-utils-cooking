@@ -125,7 +125,7 @@ export const content: ToolLocaleContent = {
 			columns: 2,
 			items: [
 				{
-					title: 'Lievito Liquido (Licoli - 100% Idr.)',
+					title: 'Lievito Liquido (Licoli 100% Idr.)',
 					icon: 'mdi:water',
 					description: 'La scelta più diffusa nella panificazione moderna. Facile da rinfrescare e incorporare.',
 					points: [

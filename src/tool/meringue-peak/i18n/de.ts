@@ -257,7 +257,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'tip',
-      title: 'Der Essig-Trick',
+      title: 'Der Essig Trick',
       html: 'Reinigen Sie die Schüssel vor Beginn mit Essig oder Zitrone. Fettspuren verhindern das Steifwerden des Eiweißes.',
     },
     {

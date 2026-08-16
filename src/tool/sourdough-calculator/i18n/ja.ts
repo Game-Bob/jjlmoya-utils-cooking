@@ -73,7 +73,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-	slug: 'sourdough-tane-tsugi-keisanki',
+	slug: 'sourdough-starter-feeding-calculator-ratio-proportions',
 	title,
 	description,
 	faqTitle: 'よくある質問',

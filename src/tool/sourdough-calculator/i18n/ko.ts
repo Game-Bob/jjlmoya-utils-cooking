@@ -73,7 +73,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-	slug: 'sourdough-starter-meogi-gyesangi',
+	slug: 'sourdough-starter-feeding-calculator-ratio-proportions',
 	title,
 	description,
 	faqTitle: '자주 묻는 질문',

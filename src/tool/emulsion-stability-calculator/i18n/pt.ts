@@ -79,7 +79,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'emulsion-stability-calculator',
+  slug: 'calculadora-estabilidade-emulsao',
   title,
   description,
   faqTitle: 'Perguntas Frequentes',
@@ -333,7 +333,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'summary',
-      title: 'Pontos-Chave para Emulsões Estáveis',
+      title: 'Pontos Chave para Emulsões Estáveis',
       items: [
         'Cada emulsionante tem uma fração máxima de óleo: gema de ovo 78%, mostarda 70%, lecitina de soja 82%, polisorbato 85%.',
         'O ponto de rutura é determinado pela geometria (conjetura de Kepler a 74%), e não pela velocidade de bater.',

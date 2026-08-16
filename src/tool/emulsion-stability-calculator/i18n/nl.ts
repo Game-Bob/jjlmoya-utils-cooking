@@ -79,7 +79,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'emulsion-stability-calculator',
+  slug: 'emulsie-stabiliteit-calculator',
   title,
   description,
   faqTitle: 'Veelgestelde Vragen',
@@ -293,7 +293,7 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'tip',
-      title: 'Het Water-veiligheidsnet',
+      title: 'Het Water Veiligheidsnet',
       html: 'Als uw recept niet genoeg zuur (azijn, citroensap) bevat, voeg dan <strong>één theelepel koud water per eigeel</strong> toe voordat u olie begint toe te voegen. Dit extra water creëert een bredere veiligheidsmarge.'
     },
     {
