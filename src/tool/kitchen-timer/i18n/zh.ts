@@ -113,9 +113,17 @@ export const content: ToolLocaleContent = {
       html: '专业烹饪不仅仅关乎食谱，更在于<strong>对时间的精准掌控</strong>。法国烹饪理念 <em>"Mise en Place"</em>（一切就绪）视时间为一种核心辅料。静置 5 分钟的牛排能锁住肉汁，而无需等待的牛排切开即会干涩。',
     },
     {
+      type: 'paragraph',
+      html: '这款<strong>多功能厨房计时器</strong>专为家庭大厨和专业厨师设计，助您同时完美协调多道菜肴的烹饪进程。',
+    },
+    {
       type: 'title',
       text: '温度与时间的化学反应',
       level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: '烹饪本质上是在特定时间内施加热量以改变食物的化学结构。蛋白质变性和美拉德反应都极度依赖精准的计时。',
     },
     {
       type: 'table',

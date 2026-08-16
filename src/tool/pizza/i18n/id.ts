@@ -20,6 +20,14 @@ const faq = [
     question: "Bisakah saya membuat pizza Neapolitan di oven rumah?",
     answer: "Ya, tetapi dengan penyesuaian. Panaskan oven secara maksimal (250-280°C) dengan batu pizza selama 45-60 menit. Pemanggangan akan memakan waktu 5-7 menit, bukan 60-90 detik.",
   },
+  {
+    question: "Tepung apa yang harus saya gunakan?",
+    answer: "Ideal: Caputo Pizzeria (W260-280) atau Manitoba (W350-400). Alternatif: Tepung apa pun dengan 11-13g protein per 100g. Hindari tepung lemah (W130-160) untuk fermentasi panjang.",
+  },
+  {
+    question: "Mengapa adonan robek saat diregangkan?",
+    answer: "Gluten belum rileks. Biarkan bola adonan istirahat 2-3 jam pada suhu ruang. Jika terus berulang, pengulengan kurang atau tepung terlalu lemah.",
+  },
 ];
 const howTo = [
   {
@@ -31,8 +39,20 @@ const howTo = [
     text: "Campurkan tepung dengan air suam-suam kuku (22-25°C), garam, dan ragi. Uleni selama 8-10 menit dengan mikser atau 15-20 menit dengan tangan.",
   },
   {
+    name: "Fermentasi utama",
+    text: "Biarkan seluruh adonan fermentasi 1-2 jam pada suhu ruang (20-25°C) hingga mengembang dua kali lipat.",
+  },
+  {
+    name: "Bagi menjadi bola",
+    text: "Bagi adonan menjadi porsian sesuai berat. Istirahatkan sebelum membentuk bola adonan.",
+  },
+  {
     name: "Fermentasi dingin",
     text: "Tempatkan bola adonan dalam wadah kedap udara di kulkas (4°C) selama 24-72 jam. Ini adalah langkah kritis untuk rasa dan daya cerna.",
+  },
+  {
+    name: "Regangkan dan panggang",
+    text: "Keluarkan dari kulkas 30 menit sebelumnya. Regangkan dari tengah ke luar. Panggang pada suhu maksimal.",
   },
 ];
 
@@ -69,7 +89,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'kalkulator-dough-pizza-napolitana',
+  slug: 'kalkulator-adonan-pizza-neapolitan',
   title,
   description,
   faqTitle: "Pertanyaan Umum",
@@ -103,7 +123,8 @@ export const content: ToolLocaleContent = {
       "Ukuran visual mewakili perkiraan diameter pizza yang diregangkan berdasarkan berat bola adonan.",
   },
   faq,
-  howTo, seo: [
+  howTo,
+  seo: [
     {
       type: 'title',
       text: 'Panduan Ahli Adonan Pizza Neapolitan Asli',
@@ -112,6 +133,167 @@ export const content: ToolLocaleContent = {
     {
       type: 'paragraph',
       html: '<strong>Pizza Neapolitan</strong> adalah warisan budaya. Kesuksesan terletak pada presisi antara waktu, suhu, dan hidrasi.',
+    },
+    {
+      type: 'stats',
+      columns: 4,
+      items: [
+        {
+          value: '480°C',
+          label: 'Suhu Panggang',
+          icon: 'mdi:fire',
+        },
+        {
+          value: '60-90s',
+          label: 'Waktu Pemanggangan',
+          icon: 'mdi:clock-fast',
+        },
+        {
+          value: '65%',
+          label: 'Hidrasi Std.',
+          icon: 'mdi:water-percent',
+        },
+        {
+          value: 'W280',
+          label: 'Kekuatan Tepung',
+          icon: 'mdi:grain',
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Pentingnya Pentingnya Hidrasi',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Hidrasi (persentase air terhadap berat tepung) menentukan tekstur <strong>cornicione</strong> (pinggiran).',
+    },
+    {
+      type: 'comparative',
+      columns: 3,
+      items: [
+        {
+          title: 'Hidrasi 55 hingga 60%',
+          icon: 'mdi:water-percent',
+          description: 'Sangat mudah ditangani, ideal untuk pemula dan oven rumah.',
+          points: [
+            'Pembentukan jaring gluten mudah',
+            'Adonan tidak terlalu lengket',
+            'Pinggiran kokoh dan renyah',
+          ],
+        },
+        {
+          title: 'Hidrasi 63 hingga 67%',
+          icon: 'mdi:water',
+          description: 'Standar AVPN. Keseimbangan sempurna untuk adonan ringan.',
+          highlight: true,
+          points: [
+            'Tekstur elastis tradisional',
+            'Ideal untuk oven kayu',
+            'Membutuhkan keterampilan menguleni sedang',
+          ],
+        },
+        {
+          title: 'Hidrasi 70%+',
+          icon: 'mdi:water-plus',
+          description: 'Pizza modern dengan pinggiran raksasa. Membutuhkan teknik lanjutan.',
+          points: [
+            'Rongga udara sangat besar',
+            'Sangat ringan dan mudah dicerna',
+            'Membutuhkan tepung sangat kuat',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Jenis Ragi dan Cara Memilihnya',
+      level: 3,
+    },
+    {
+      type: 'comparative',
+      columns: 2,
+      items: [
+        {
+          title: 'Ragi Segar Tekan',
+          icon: 'mdi:bread-slice-outline',
+          description: 'Pilihan tradisional pembuat pizza. Memberikan profil rasa yang lebih kompleks.',
+          points: [
+            'Rasa lebih dalam dan bersih',
+            'Aktivitas enzim seimbang',
+            'Mudah larut dalam air hangat',
+            'Masa simpan singkat',
+          ],
+        },
+        {
+          title: 'Ragi Kering Instan',
+          icon: 'mdi:shaker-outline',
+          description: 'Jauh lebih stabil dan mudah disimpan.',
+          points: [
+            'Masa simpan lama',
+            'Tidak perlu rehidrasi awal',
+            'Tiga kali lebih kuat dari ragi segar',
+            'Rasa sedikit lebih netral',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Panduan Pemilihan Tepung Berdasarkan Indeks Kekuatan W',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['Jenis Tepung', 'Kekuatan (W)', 'Waktu Fermentasi', 'Penggunaan Direkomendasikan'],
+      rows: [
+        ['Tepung Lemah', 'W130-180', '4-8 jam', 'Kue cepat'],
+        ['Kekuatan Sedang', 'W200-240', '8-24 jam', 'Pizza cepat atau roti biasa'],
+        ['Tepung Kuat', 'W260-320', '24-72 jam', 'Pizza Neapolitan Asli'],
+        ['Ekstra Kuat', 'W350+', '72+ jam', 'Fermentasi sangat panjang'],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'Kontrol Suhu Pengulengan',
+      html: 'Adonan tidak boleh melebihi 24°C pada akhir pengulengan agar jaring gluten tidak rusak.',
+    },
+    {
+      type: 'title',
+      text: 'Glosarium Pembuat Pizza Masa Depan',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Cornicione',
+          definition: 'Pinggiran pizza Neapolitan yang mengembang dan berongga.',
+        },
+        {
+          term: 'Maturasi',
+          definition: 'Proses enzimatis pemecahan protein dan gula untuk rasa dan daya cerna.',
+        },
+        {
+          term: 'Pengembangan Adonan',
+          definition: 'Titik di mana adonan mencapai elastisitas optimal.',
+        },
+        {
+          term: 'Autolisis',
+          definition: 'Istirahat tepung dan air saja untuk memfasilitasi pembentukan gluten.',
+        },
+      ],
+    },
+    {
+      type: 'tip',
+      title: 'Trik Kulkas',
+      html: 'Fermentasi selama 24 jam pada suhu 4°C menciptakan senyawa aromatik kompleks.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Kalkulator kami mengotomatiskan proporsi sehingga Anda dapat fokus pada teknik dan passion.',
     },
   ],
   bibliography,

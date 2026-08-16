@@ -129,6 +129,78 @@ export const content: ToolLocaleContent = {
           icon: 'mdi:clock-outline'
         }
       ]
+    },
+    {
+      type: 'title',
+      text: 'Ağırlık Kaybı Dinamiklerini ve Asimptotik Eğriyi Anlamak',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Kuru dinlendirme sırasındaki ağırlık kaybı asimptotiktir. İlk 14 günde su dış katmanlardan hızla buharlaşır. Sert ve koyu bir kabuk (pelikül) oluşur ve 2 ila 3 hafta sonra buharlaşmayı yavaşlatır.'
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>1-14. Günler:</strong> Hızlı buharlaşma. Et ağırlığının %10 ila %12\'sini (öncelikle su) kaybeder. Kas lifleri büzülür ve lezzet yoğunlaşır.',
+        '<strong>15-30. Günler:</strong> Pelikül oluşumuyla buharlaşma yavaşlar. Enzimler (kalpain ve katepsin) kolajeni parçalayarak eti yumuşatır.',
+        '<strong>30-45. Günler:</strong> Minimum ek su kaybı. Yağ oksidasyonu yoluyla fındıksı ve küflü peynirimsi derin lezzet notaları gelişir.',
+        '<strong>Kırpma Firesi:</strong> Dinlendirme tamamlandığında dış kabuk kesilip çıkarılmalıdır; bu da toplam ağırlığın yaklaşık %15\'ine denk gelir.'
+      ]
+    },
+    {
+      type: 'title',
+      text: 'Dinlendirme Dolabında Çevresel Kontroller',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Tutarlı hava kalitesi, sıcaklık ve nem hayati önem taşır. Sapmalar etin bozulmasına neden olabilir.'
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Sıcaklık:</strong> 1°C ile 3°C arasında kalmalıdır. 0°C altında enzimler donar; 4°C üzerinde patojen bakteriler ürer.',
+        '<strong>Bağıl Nem (RH):</strong> İdeal aralık %75 ila %85\'tir. %70 altında dış çeper erken sertleşir; %85 üzerinde istenmeyen küfler oluşur.',
+        '<strong>Hava Akışı:</strong> Yüzeyin eşit kuruması için sürekli hava sirkülasyonu gereklidir.'
+      ]
+    },
+    {
+      type: 'title',
+      text: 'Mali Etkiler ve Maliyet Hesaplamaları',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Buharlaşma ve kırpma nedeniyle yenilebilir porsiyon küçülür, bu da kilogram başına efektif fiyatı artırır.'
+    },
+    {
+      type: 'table',
+      headers: ['Dinlendirme Süresi', 'Ø Buharlaşma Firesi', 'Ø Kırpma Firesi', 'Toplam Verim', 'Maliyet Çarpanı'],
+      rows: [
+        ['14 Gün', '10.5%', '15.0%', '74.5%', '1.34x'],
+        ['21 Gün', '13.5%', '15.0%', '71.5%', '1.40x'],
+        ['30 Gün', '17.5%', '15.0%', '67.5%', '1.48x'],
+        ['45 Gün', '21.0%', '15.0%', '64.0%', '1.56x'],
+        ['60 Gün', '24.0%', '15.0%', '61.0%', '1.64x']
+      ]
+    },
+    {
+      type: 'title',
+      text: 'Güvenlik Kılavuzu: Mikrobiyoloji ve İyi vs Kötü Küf Teşhisi',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Güvenli kuru dinlendirme, yararlı mikrofloranın (<em>Thamnidium</em>, <em>Mucor</em>, <em>Rhizopus</em> cinsi küfler) gelişimine dayanır. Sıkı hijyen şarttır.'
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>İyi Göstergeler:</strong> Kuru, sert, koyu mor veya kahverengi kabuk. İnce beyaz tozsu küf tabakası (peynir kabuğuna benzer) normaldir.',
+        '<strong>Kötü Göstergeler:</strong> Yapışkan, kaygan veya ıslak yüzeyler. Yeşil, siyah veya sarımsı küfler. Ekşi veya amonyak kokusu bozulmayı gösterir.',
+        '<strong>Temizlik:</strong> Yeni et koymadan önce dolabı, kancaları ve ızgaraları daima sterilize edin.'
+      ]
     }
   ],
   bibliography,

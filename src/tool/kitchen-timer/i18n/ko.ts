@@ -113,9 +113,17 @@ export const content: ToolLocaleContent = {
       html: '전문적인 요리는 단순한 레시피가 아니라 <strong>정확한 시간 관리</strong>의 결과물입니다. 프랑스 요리 개념인 <em>"Mise en Place"</em>(미장플라스: 준비 완료)에는 시간도 중요한 재료로 포함됩니다. 5분간 레스팅한 스테이크는 육즙을 품고 부드러워지지만, 기다림 없는 고기는 육즙을 잃게 됩니다.',
     },
     {
+      type: 'paragraph',
+      html: '이 <strong>다중 타이머</strong> 도구는 여러 요리를 동시에 조율해야 하는 홈셰프와 전문가를 위해 설계되었습니다.',
+    },
+    {
       type: 'title',
       text: '온도와 시간의 상관관계',
       level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: '조리는 본질적으로 음식을 화학적으로 변형시키기 위해 특정 시간 동안 열을 가하는 과정입니다. 단백질 변성과 마야르 반응은 타이머에 결정적으로 의존합니다.',
     },
     {
       type: 'table',

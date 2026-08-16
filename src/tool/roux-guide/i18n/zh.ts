@@ -34,6 +34,10 @@ const howTo = [
     name: '输入液体体积',
     text: '指定需要增稠的液体毫升数。计算器将确切告知您需要使用多少黄油和面粉。',
   },
+  {
+    name: '应用正确的烹煮时间',
+    text: '将黄油和面粉的混合物烹煮至指定程度（白色、金色或黑色）。',
+  },
 ];
 
 const faqSchema = {
@@ -83,6 +87,137 @@ export const content: ToolLocaleContent = {
     {
       type: 'paragraph',
       html: '<strong>Roux</strong> 是经典法式料理的结构基础。理解面粉、黄油和液体之间的关系，是制作丝滑酱汁与制作结块或带生粉味液体的区别所在。',
+    },
+    {
+      type: 'stats',
+      columns: 4,
+      items: [
+        {
+          value: '1:1',
+          label: '面粉:油脂比例',
+          icon: 'mdi:scale-balance',
+        },
+        {
+          value: '3 分钟',
+          label: '白 Roux 时间',
+          icon: 'mdi:timer-sand',
+        },
+        {
+          value: '100g/L',
+          label: '浓酱比例',
+          icon: 'mdi:waves',
+        },
+        {
+          value: '15 分钟',
+          label: '黑 Roux 时间',
+          icon: 'mdi:fire',
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: '烘焙程度与增稠能力',
+      level: 3,
+    },
+    {
+      type: 'comparative',
+      columns: 3,
+      items: [
+        {
+          title: '白 Roux',
+          icon: 'mdi:flask-round-bottom-outline',
+          description: '烹煮 2-3 分钟。最强效的淀粉粘合剂。',
+          points: [
+            '白酱基础',
+            '最大增稠能力',
+            '中性牛奶风味',
+            '无明显颜色变化',
+          ],
+        },
+        {
+          title: '金 Roux',
+          icon: 'mdi:gold',
+          description: '烹煮 5-8 分钟至淡金色。',
+          highlight: true,
+          points: [
+            '天鹅绒酱基础',
+            '中等增稠能力',
+            '淡坚果香气',
+            '淡色高汤的理想选择',
+          ],
+        },
+        {
+          title: '黑 Roux',
+          icon: 'mdi:coffee',
+          description: '烹煮 15-20 分钟。深沉的烘焙风味。',
+          points: [
+            '褐酱基础',
+            '增稠能力较低 (-30%)',
+            '复杂的烘焙坚果风味',
+            '较稀薄的质感',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: '按所需质感计算每升所需的 Roux 重量',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['所需质感', '黄油 (g)', '面粉 (g)', '液体 (L)'],
+      rows: [
+        ['淡汤 / 奶油', '25g', '25g', '1 升'],
+        ['常规挂浆酱汁', '50g', '50g', '1 升'],
+        ['焗烤粘合酱汁', '70g', '70g', '1 升'],
+        ['炸饼面团 / 填充物', '125g', '125g', '1 升'],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: '酱汁结块或有面粉味？',
+      html: '如果酱汁结块，通常是因为将热液体加入了热 Roux 中。请始终应用热休克原则（冷液体倒在热 Roux 上）。如果有面粉味，请在加入液体前延长初始烹煮时间。',
+    },
+    {
+      type: 'title',
+      text: '酱汁工艺术语表',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: '糊精化',
+          definition:
+            '淀粉受热分解为短链的过程。能增加风味但会减弱增稠能力。',
+        },
+        {
+          term: '糊化',
+          definition:
+            '淀粉颗粒吸收液体并膨胀的过程。',
+        },
+        {
+          term: 'Beurre Manié',
+          definition:
+            '用于在最后快速调整浓度的冷面粉黄油混合物。',
+        },
+        {
+          term: '母酱',
+          definition:
+            '埃斯科菲耶定义的 5 种基础酱汁（白酱、天鹅绒酱、褐酱、荷兰酱和番茄酱）。',
+        },
+      ],
+    },
+    {
+      type: 'tip',
+      title: '冷黄油技巧 (Monter au Beurre)',
+      html: '在最后加入一小块冷黄油搅拌。这能在出盘时提供专业级的高光泽度与极度丝滑的口感。',
+    },
+    {
+      type: 'paragraph',
+      html: '我们的 Roux 比例计算器可确保您的酱汁始终具有完美的专业质感。',
     },
   ],
   ui: {

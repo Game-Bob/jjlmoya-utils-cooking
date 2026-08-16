@@ -18,10 +18,6 @@ const faq = [
 		answer: 'Depende del ingrediente. Para harinas, sí. Para levaduras o especias, la precisión importa menos (escala al 75% de lo indicado). Para huevos: si obtienes 2.3, usa 2 completos + parte de un tercero (pesada), o redondea a 2 si el plato lo permite.',
 	},
 	{
-		question: '¿Por qué no cambia el resultado cuando cambio las raciones?',
-		answer: 'Asegúrate de que el campo de ingredientes tenga contenido. Si está vacío, no hay nada que escalar. También verifica que los números en tus ingredientes sean reconocibles (ej: "500g", "1/2 cucharadita").',
-	},
-	{
 		question: '¿Funciona con medidas imperiales (onzas, tazas)?',
 		answer: 'Técnicamente sí, la herramienta lee números y escala. Pero la precisión es limitada con tazas (volumen inconsistente). Se recomienda convertir a gramos antes de escalar.',
 	},

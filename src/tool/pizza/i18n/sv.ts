@@ -20,6 +20,14 @@ const faq = [
     question: "Kan jag göra neapolitansk pizza i en vanlig ugn?",
     answer: "Ja, men med anpassningar. Förvärm ugnen till max (250-280°C) med baksten i 45-60 minuter. Gräddningen tar då 5-7 minuter istället för 60-90 sekunder.",
   },
+  {
+    question: "Vilket mjöl bör jag använda?",
+    answer: "Idealiskt: Caputo Pizzeria (W260-280) eller Manitoba (W350-400). Alternativ: Mjöl med 11-13g protein per 100g. Undvik svagt mjöl (W130-160) för långa jäsningar.",
+  },
+  {
+    question: "Varför går degen sönder när jag formar den?",
+    answer: "Glutenet är inte avslappnat. Låt degbollarna vila 2-3 timmar i rumstemperatur. Om det återupprepas var knådningen otillräcklig eller mjölet för svagt.",
+  },
 ];
 const howTo = [
   {
@@ -41,6 +49,10 @@ const howTo = [
   {
     name: "Lång jäsning",
     text: "Placera bollarna i en lufttät låda i kylskåp (4°C) i 24-72 timmar. Detta är det kritiska steget för smak och smältbarhet.",
+  },
+  {
+    name: "Forma och grädda",
+    text: "Ta ut ur kylen 30 minuter innan. Forma från mitten och utåt. Grädda på högsta temperatur.",
   },
 ];
 
@@ -96,7 +108,7 @@ export const content: ToolLocaleContent = {
     salt: "Salt",
     fermentation_tip_title: "Jäsningstips",
     fermentation_tip:
-      "För en mer lättsmält deg, låt den jäsa i kylskåp (4°C) i 24 timmar med <strong>0,3g</strong> färsk jäst per 100g mjöl.",
+      "För en mer lättsmält deg, låt den jäsa i bulk i 24 timmar i kylskåp (4°C) med <strong>0.3g</strong> färsk jäst per 100g mjöl.",
     your_recipe: "Ditt Recept",
     fresh_yeast: "Färsk Jäst",
     dry_yeast: "Torrjäst",
@@ -111,7 +123,8 @@ export const content: ToolLocaleContent = {
       "Den visuella storleken representerar pizzans ungefärliga diameter baserat på degbollens vikt.",
   },
   faq,
-  howTo, seo: [
+  howTo,
+  seo: [
     {
       type: 'title',
       text: 'Mästarguide till Äkta Neapolitansk Pizzadeg',
@@ -148,9 +161,139 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'Den Avgörande Betydelsen av Hydrering',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Hydreringen (vattenmängd i förhållande till mjölvikt) avgör texturen på <strong>cornicione</strong> (kanten).',
+    },
+    {
+      type: 'comparative',
+      columns: 3,
+      items: [
+        {
+          title: 'Hydrering 55 till 60%',
+          icon: 'mdi:water-percent',
+          description: 'Mycket lättarbetad deg, idealisk för nybörjare och vanliga hushållsugnar.',
+          points: [
+            'Enkel glutennätsbildning',
+            'Mindre klibbig deg',
+            'Fast och krispig kant',
+          ],
+        },
+        {
+          title: 'Hydrering 63 till 67%',
+          icon: 'mdi:water',
+          description: 'AVPN-standarden. Perfekt balans för en luftig deg.',
+          highlight: true,
+          points: [
+            'Traditionell elastisk struktur',
+            'Idealisk för vedugn',
+            'Kräver viss knådningsvana',
+          ],
+        },
+        {
+          title: 'Hydrering 70%+',
+          icon: 'mdi:water-plus',
+          description: 'Moderna pizzor med gigantiska kanter. Kräver avancerad teknik.',
+          points: [
+            'Extremt stora luftbubblor',
+            'Mycket lättsmält',
+            'Kräver mycket starkt mjöl',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Jästtyper och att Välja Rätt',
+      level: 3,
+    },
+    {
+      type: 'comparative',
+      columns: 2,
+      items: [
+        {
+          title: 'Färsk Bagerijäst',
+          icon: 'mdi:bread-slice-outline',
+          description: 'Det traditionella valet för pizzabagare. Ger en mer komplex smakprofil.',
+          points: [
+            'Djupare och renare smak',
+            'Balanserad enzymatisk aktivitet',
+            'Löser sig lätt i ljummet vatten',
+            'Kort hållbarhet',
+          ],
+        },
+        {
+          title: 'Instant Torrjäst',
+          icon: 'mdi:shaker-outline',
+          description: 'Betydligt mer stabil och lätt att förvara i skafferiet.',
+          points: [
+            'Lång hållbarhet',
+            'Ingen förhydrering krävs',
+            'Tre gånger starkare än färsk jäst',
+            'Något mer neutral smak',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Mjölguide baserad på W-Styrkeindex',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['Mjöltyp', 'Styrka (W)', 'Jästid', 'Rekommenderad Användning'],
+      rows: [
+        ['Svagt Mjöl', 'W130-180', '4-8 timmar', 'Snabba bakverk'],
+        ['Medelstarkt Mjöl', 'W200-240', '8-24 timmar', 'Snabb pizza eller enkelt bröd'],
+        ['Starkt Mjöl', 'W260-320', '24-72 timmar', 'Äkta Neapolitansk Pizza'],
+        ['Extra Starkt Mjöl', 'W350+', '72+ timmar', 'Extremt lång jäsning'],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'Temperaturkontroll vid Knådning',
+      html: 'Degen bör inte överstiga 24°C vid slutet av knådningen för att inte skada glutennätet.',
+    },
+    {
+      type: 'title',
+      text: 'Ordlista för Framtida Pizzabagare',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Cornicione',
+          definition: 'Den luftiga och höga kanten på den neapolitanska pizzan.',
+        },
+        {
+          term: 'Mognad',
+          definition: 'Enzymatisk process där stärkelse och proteiner bryts ned för bättre smak.',
+        },
+        {
+          term: 'Degutveckling',
+          definition: 'Punkten där degen når sin optimala elasticitet.',
+        },
+        {
+          term: 'Autolys',
+          definition: 'Vila av enbart mjöl och vatten för att underlätta glutennätet.',
+        },
+      ],
+    },
+    {
       type: 'tip',
       title: 'Kylskåpstricket',
       html: 'En 24-timmars jäsning vid 4°C skapar komplexa smaker som är omöjliga att uppnå i rumstemperatur.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Vår kalkylator automatiserar beräkningarna så att du kan fokusera på hantverket och passionen.',
     },
   ],
   bibliography,

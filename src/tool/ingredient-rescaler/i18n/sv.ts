@@ -18,10 +18,6 @@ const faq = [
     answer: 'Det beror på ingrediensen. För mjöl, ja. För jäst eller kryddor är precision mindre viktig (skala till 75% av det angivna värdet). För ägg: om du får 2,3, använd 2 hela ägg + en del av ett tredje (vägt), eller runda ner till 2 om rätten tillåter det.',
   },
   {
-    question: 'Varför ändras inte resultatet när jag ändrar portionerna?',
-    answer: 'Se till att ingrediensfältet har innehåll. Om det är tomt finns det inget att skala. Kontrollera även att siffrorna i dina ingredienser är igenkännbara (t.ex. "500g", "1/2 tsk").',
-  },
-  {
     question: 'Fungerar det med imperialenheter (ounces, cups)?',
     answer: 'Tekniskt sett ja, verktyget läser siffror och skalar. Men precisionen är begränsad med "cups" (inkonsistent volym). Vi rekommenderar att du konverterar till gram innan du skalar.',
   },

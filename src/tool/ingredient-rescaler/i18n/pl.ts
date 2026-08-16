@@ -18,10 +18,6 @@ const faq = [
     answer: 'To zależy od składnika. W przypadku mąki - tak. Przy drożdżach lub przyprawach precyzja ma mniejsze znaczenie (skaluj do 75% wskazanej wartości). Dla jajek: jeśli otrzymasz 2,3, użyj 2 całych + części trzeciego (odważonej) lub zaokrąglij do 2, jeśli potrawa na to pozwala.',
   },
   {
-    question: 'Dlaczego wynik nie zmienia się po zmianie porcji?',
-    answer: 'Upewnij się, że pole składników nie jest puste. Jeśli jest puste, nie ma czego skalować. Sprawdź również, czy liczby w składnikach są rozpoznawalne (np. "500g", "1/2 łyżeczki").',
-  },
-  {
     question: 'Czy to działa z miarami imperialnymi (uncje, szklanki)?',
     answer: 'Technicznie tak, narzędzie odczytuje liczby i skaluje. Ale precyzja w przypadku szklanek jest ograniczona (niejednolita objętość). Zaleca się przeliczenie na gramy przed skalowaniem.',
   },

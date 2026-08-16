@@ -34,6 +34,10 @@ const howTo = [
     name: "Inserisci il volume del liquido",
     text: "Specifica quanti ml di liquido devi addensare. Il calcolatore ti dirà esattamente quanto burro e farina usare.",
   },
+  {
+    name: "Applica il corretto tempo di cottura",
+    text: "Cuoci la miscela di burro e farina fino al livello specificato (Bianco, Biondo o Scuro).",
+  },
 ];
 
 const faqSchema = {
@@ -109,6 +113,111 @@ export const content: ToolLocaleContent = {
           icon: 'mdi:fire',
         },
       ],
+    },
+    {
+      type: 'title',
+      text: 'Livelli di Tostatura e Potere Addensante',
+      level: 3,
+    },
+    {
+      type: 'comparative',
+      columns: 3,
+      items: [
+        {
+          title: 'Roux Bianco',
+          icon: 'mdi:flask-round-bottom-outline',
+          description: 'Cotto per 2-3 minuti. Il più potente addensante.',
+          points: [
+            'Base per Besciamella',
+            'Massimo potere addensante',
+            'Sapore neutro di latte',
+            'Nessun cambio di colore',
+          ],
+        },
+        {
+          title: 'Roux Biondo',
+          icon: 'mdi:gold',
+          description: 'Cotto per 5-8 minuti fino a doratura chiara.',
+          highlight: true,
+          points: [
+            'Base per Velouté',
+            'Medio potere addensante',
+            'Leggero aroma di nocciola',
+            'Ideale per fondi chiari',
+          ],
+        },
+        {
+          title: 'Roux Scuro',
+          icon: 'mdi:coffee',
+          description: 'Cotto per 15-20 minuti. Profilo di sapore tostato.',
+          points: [
+            'Base per Salsa Spagnola',
+            'Minor potere addensante (-30%)',
+            'Sapore complesso tostato',
+            'Consistenza più liquida',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Peso del Roux per Litro per Consistenza Desiderata',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['Consistenza Desiderata', 'Burro (g)', 'Farina (g)', 'Liquido (L)'],
+      rows: [
+        ['Zuppa Leggera / Crema', '25g', '25g', '1 Litro'],
+        ['Salsa Standard', '50g', '50g', '1 Litro'],
+        ['Salsa per Casseruole', '70g', '70g', '1 Litro'],
+        ['Impasto per Crocchette', '125g', '125g', '1 Litro'],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'Salsa con Grumi o Sapore di Farina?',
+      html: 'Se la salsa presenta grumi, hai aggiunto liquido caldo a un roux caldo. Applica sempre lo shock termico (liquido freddo su roux caldo). Se sa di farina, aumenta il tempo di cottura iniziale.',
+    },
+    {
+      type: 'title',
+      text: 'Glossario della Tecnologia delle Salse',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Destrinizzazione',
+          definition:
+            'La scomposizione termica dell amido in catene brevi. Aumenta il sapore ma riduce l addensamento.',
+        },
+        {
+          term: 'Gelatinizzazione',
+          definition:
+            'Il processo in cui i granuli di amido assorbono liquido e si espandono.',
+        },
+        {
+          term: 'Beurre Manié',
+          definition:
+            'Miscela fredda di farina e burro usata per rapide correzioni finali.',
+        },
+        {
+          term: 'Salse Madri',
+          definition:
+            'Le 5 salse base di Escoffier (Besciamella, Velouté, Spagnola, Olandese e Pomodoro).',
+        },
+      ],
+    },
+    {
+      type: 'tip',
+      title: 'Il Trucco del Burro Freddo (Monter au Beurre)',
+      html: 'Alla fine, incorpora un tocchetto di burro freddo per una lucentezza professionale.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Il nostro calcolatore di roux garantisce una consistenza perfetta.',
     },
   ],
   ui: {

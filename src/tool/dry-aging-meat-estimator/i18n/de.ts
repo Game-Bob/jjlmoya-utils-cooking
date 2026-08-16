@@ -184,6 +184,23 @@ export const content: ToolLocaleContent = {
         ['45 Tage', '21.0%', '15.0%', '64.0%', '1.56x'],
         ['60 Tage', '24.0%', '15.0%', '61.0%', '1.64x']
       ]
+    },
+    {
+      type: 'title',
+      text: 'Sicherheitsrichtlinien: Mikrobiologie und Identifizierung von gutem vs. schlechtem Schimmel',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Sicheres Dry Aging beruht auf dem Wachstum nützlicher Mikroflora, insbesondere Pilzen der Gattungen <em>Thamnidium</em>, <em>Mucor</em> und <em>Rhizopus</em>. Diese Schimmelpilze setzen Enzyme frei, die das Fleisch zart machen. Die Einhaltung strenger Hygiene ist jedoch unerlässlich, um Kontaminationen zu vermeiden.'
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Gute Indikatoren:</strong> Eine trockene, feste, dunkelviolette oder dunkelbraune Kruste. Eine weiße, staubige, fadenförmige Schimmelschicht (ähnlich einer Käserinde) ist normal und sicher, da sie abgeschnitten wird.',
+        '<strong>Schlechte Indikatoren:</strong> Klebrige, schleimige oder nasse Oberflächenbereiche. Grüne, schwarze oder gelbliche Schimmelpilze. Saurer, fauliger oder ammoniakartiger Geruch weist auf Verderb hin. Entsorgen Sie das Fleisch, wenn diese vorhanden sind.',
+        '<strong>Sauberkeit:</strong> Sterilisieren Sie die Kammer, Haken und Gitter immer, bevor Sie neues Fleisch einlegen. Tragen Sie beim Umgang mit dem Teilstück Handschuhe und desinfizieren Sie alle Messer und Schneidbretter vor dem Parieren.'
+      ]
     }
   ],
   bibliography,

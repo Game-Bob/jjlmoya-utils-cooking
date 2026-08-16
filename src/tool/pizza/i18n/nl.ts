@@ -20,6 +20,14 @@ const faq = [
     question: "Kan ik Napolitaanse pizza maken in een gewone oven?",
     answer: "Ja, maar met aanpassingen. Verwarm de oven voor op de maximale stand (250-280°C) met een pizzasteen gedurende 45-60 minuten. De baktijd is dan 5-7 minuten.",
   },
+  {
+    question: "Welke bloem moet ik gebruiken?",
+    answer: "Ideaal: Caputo Pizzeria (W260-280) of Manitoba (W350-400). Alternatief: Elke bloem met 11-13g eiwit per 100g. Vermijd zwakke bloem (W130-160) voor lange rijping.",
+  },
+  {
+    question: "Waarom scheurt het deeg bij het uitrekken?",
+    answer: "De gluten zijn niet ontspannen. Laat de deegbollen 2-3 uur op kamertemperatuur rusten. Als het blijft gebeuren, was het kneden onvoldoende of is de bloem te zwak.",
+  },
 ];
 const howTo = [
   {
@@ -41,6 +49,10 @@ const howTo = [
   {
     name: "Lange rijping",
     text: "Plaats de bollen in een luchtdichte doos in de koelkast (4°C) voor 24-72 uur. Dit is de cruciale stap voor smaak en verteerbaarheid.",
+  },
+  {
+    name: "Uitrekken en bakken",
+    text: "30 minuten voor het bakken uit de koeling halen. Vanuit het midden naar buiten uitrekken. Bakken op maximale temperatuur.",
   },
 ];
 
@@ -84,7 +96,7 @@ export const content: ToolLocaleContent = {
   ui: {
     parameters: "Parameters",
     quantity: "Aantal",
-    pizzas: "pizza's",
+    pizzas: "pizzas",
     weight: "Gewicht per bol",
     small: "Klein (180g)",
     standard: "Standaard (260g)",
@@ -94,9 +106,9 @@ export const content: ToolLocaleContent = {
     modern: "Modern (65-70%)",
     high: "Hoog (75%+)",
     salt: "Zout",
-    fermentation_tip_title: "Rijpings Tip",
+    fermentation_tip_title: "Rijpingstip",
     fermentation_tip:
-      "Voor een beter verteerbaar deeg, laat je het 24u in de koelkast (4°C) rijpen met <strong>0,3g</strong> verse gist per 100g bloem.",
+      "Voor een lichter verteerbaar deeg laat je het 24u in de koelkast (4°C) rijpen met <strong>0.3g</strong> verse gist per 100g bloem.",
     your_recipe: "Jouw Recept",
     fresh_yeast: "Verse Gist",
     dry_yeast: "Droog",
@@ -111,10 +123,11 @@ export const content: ToolLocaleContent = {
       "De visuele grootte staat voor de geschatte diameter van de pizza op basis van het gewicht van de deegbol.",
   },
   faq,
-  howTo, seo: [
+  howTo,
+  seo: [
     {
       type: 'title',
-      text: 'Gids voor Authentiek Napolitaans Pizzadeeg',
+      text: 'Meestergids voor Authentiek Napolitaans Pizzadeeg',
       level: 2,
     },
     {
@@ -148,9 +161,139 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'Het Cruciale Belang van Hydratatie',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Hydratatie (percentage water t.o.v. bloemgewicht) bepaalt de textuur van de <strong>cornicione</strong> (korst).',
+    },
+    {
+      type: 'comparative',
+      columns: 3,
+      items: [
+        {
+          title: 'Hydratatie 55 tot 60%',
+          icon: 'mdi:water-percent',
+          description: 'Zeer makkelijk te verwerken, ideaal voor beginners en thuisovens.',
+          points: [
+            'Eenvoudige glutenvorming',
+            'Minder kleverig deeg',
+            'Stevige en knapperige korst',
+          ],
+        },
+        {
+          title: 'Hydratatie 63 tot 67%',
+          icon: 'mdi:water',
+          description: 'De AVPN-standaard. Perfecte balans voor een licht deeg.',
+          highlight: true,
+          points: [
+            'Traditionele elastische textur',
+            'Ideaal voor houtovens',
+            'Vereist gemiddelde kneedervaring',
+          ],
+        },
+        {
+          title: 'Hydratatie 70%+',
+          icon: 'mdi:water-plus',
+          description: 'Moderne pizza\'s met gigantische randen. Vereist geavanceerde techniek.',
+          points: [
+            'Extreem grote luchtbellen',
+            'Zeer licht en licht verteerbaar',
+            'Vereist zeer sterke bloem',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Gistsoorten en de Juiste Keuze',
+      level: 3,
+    },
+    {
+      type: 'comparative',
+      columns: 2,
+      items: [
+        {
+          title: 'Verse Bakkersgist',
+          icon: 'mdi:bread-slice-outline',
+          description: 'De traditionele keuze van pizzabakkers. Geeft een complexer aromaprofiel.',
+          points: [
+            'Diepere en schonere smaak',
+            'Balanced enzymatische werking',
+            'Lost makkelijk op in warm water',
+            'Korte houdbaarheid',
+          ],
+        },
+        {
+          title: 'Instant Droge Gist',
+          icon: 'mdi:shaker-outline',
+          description: 'Veel stabieler en makkelijk te bewaren. Ideaal voor in de voorraadkast.',
+          points: [
+            'Lange houdbaarheid',
+            'Geen voorafgaande hydratatie nodig',
+            'Drie keer zo krachtig als vers',
+            'Iets neutralere smaak',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Bloemgids op Basis van W-Waarde',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['Bloemtype', 'Sterkte (W)', 'Rijstijd', 'Aanbevolen Gebruik'],
+      rows: [
+        ['Zwakke Bloem', 'W130-180', '4-8 uur', 'Snelle bakproducten'],
+        ['Middelsterk', 'W200-240', '8-24 uur', 'Snelle pizza of eenvoudig brood'],
+        ['Sterke Bloem', 'W260-320', '24-72 uur', 'Authentieke Napolitaanse Pizza'],
+        ['Extra Sterk', 'W350+', '72+ uur', 'Zeer lange deegrijping'],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'Temperatuurcontrole Tijdens het Kneaden',
+      html: 'Het deeg mag aan het einde van het kneaden niet warmer worden dan 24°C om de glutenstructuur niet te beschadigen.',
+    },
+    {
+      type: 'title',
+      text: 'Woordenlijst voor de Toekomstige Pizzabakker',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Cornicione',
+          definition: 'De reizende en luchtige rand van de Napolitaanse pizza.',
+        },
+        {
+          term: 'Rijping',
+          definition: 'Enzymatisch proces waarbij eiwitten en suikers worden afgebroken voor betere smaak en verteerbaarheid.',
+        },
+        {
+          term: 'Deegontwikkeling',
+          definition: 'Het punt waarop het deeg zijn optimale elasticiteit bereikt.',
+        },
+        {
+          term: 'Autolyse',
+          definition: 'Rustperiode van alleen bloem en water om de glutenvorming te vergemakkelijken.',
+        },
+      ],
+    },
+    {
       type: 'tip',
       title: 'De Koelkast Truc',
       html: 'Een rijping van 24 uur bij 4°C zorgt voor complexe smaken die op kamertemperatuur onmogelijk zijn.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Onze calculator automatiseert de berekeningen zodat jij je kunt richten op wat echt telt: techniek en passie.',
     },
   ],
   bibliography,

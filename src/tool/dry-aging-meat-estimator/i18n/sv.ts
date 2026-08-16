@@ -129,6 +129,78 @@ export const content: ToolLocaleContent = {
           icon: 'mdi:clock-outline'
         }
       ]
+    },
+    {
+      type: 'title',
+      text: 'Förstå Viktminskningsdynamik och den Asymptotiska Kurvan',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Viktminskningen under hängmörning är asymptotisk. Under de första 14 dagarna avdunstar vatten snabbt. En hård, mörk skorpa (pellikel) bildas och bromsar vidare avdunstning efter 2-3 veckor.'
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Dag 1-14:</strong> Snabb avdunstning. Köttet tappar 10% till 12% av sin vikt (främst vatten). Muskelfibrer krymper och smakerna koncentreras.',
+        '<strong>Dag 15-30:</strong> Avdunstningen saktar ner tack vare pellikeln. Enzymer (kalpainer och katepsiner) bryter ner kollagen och gör köttet mört.',
+        '<strong>Dag 30-45:</strong> Minimal ytterligare vattenförlust. Djupa nötiga och ädelostliknande aromer utvecklas genom fettoxidation.',
+        '<strong>Putsförlust:</strong> När mörningen är klar måste den yttre skorpan skäras bort, vilket motsvarar ca 15% förlust av totalvikten.'
+      ]
+    },
+    {
+      type: 'title',
+      text: 'Miljökontroll i Mörningsskåpet',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Konstant luftkvalitet, temperatur och luftfuktighet är avgörande. Avvikelser kan förstöra köttet.'
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Temperatur:</strong> Måste hållas mellan 1°C och 3°C. Under 0°C fryser enzymerna; över 4°C växer bakterier.',
+        '<strong>Relativ Luftfuktighet (RH):</strong> Idealiskt intervall är 75% till 85%. Under 70% uppstår ythärdning; över 85% växer oönskat mögel.',
+        '<strong>Luftflöde:</strong> Kontinuerlig luftcirkulation krävs för att torka ytan jämnt.'
+      ]
+    },
+    {
+      type: 'title',
+      text: 'Ekonomiska Effekter och Kostnadsberäkningar',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'På grund av avdunstning och putsning blir den ätbara delen mindre, vilket höjer det effektiva kilopriset.'
+    },
+    {
+      type: 'table',
+      headers: ['Mörningstid', 'Ø Avdunstningsförlust', 'Ø Putsförlust', 'Total Utbyte', 'Kostnadsmultiplikator'],
+      rows: [
+        ['14 Dagar', '10.5%', '15.0%', '74.5%', '1.34x'],
+        ['21 Dagar', '13.5%', '15.0%', '71.5%', '1.40x'],
+        ['30 Dagar', '17.5%', '15.0%', '67.5%', '1.48x'],
+        ['45 Dagar', '21.0%', '15.0%', '64.0%', '1.56x'],
+        ['60 Dagar', '24.0%', '15.0%', '61.0%', '1.64x']
+      ]
+    },
+    {
+      type: 'title',
+      text: 'Säkerhetsriktlinjer: Mikrobiologi och Bra vs Dåligt Mögel',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Säker hängmörning bygger på tillväxt av nyttig mikroflora (svampar ur släktena <em>Thamnidium</em>, <em>Mucor</em>, <em>Rhizopus</em>). Strikt hygien är ett krav.'
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Bra Indikatorer:</strong> Torr, fast, mörklila eller mörkbrun skorpa. Ett tunt vitt mögellager (likt ostkant) är normalt.',
+        '<strong>Dåliga Indikatorer:</strong> Klibbiga, glatta eller blöta ytor. Grönt, svart eller gulaktigt mögel. Lukt av ammoniak eller röta tyder på förskämning.',
+        '<strong>Hygien:</strong> Sterilisera alltid skåpet, krokar och hyllor innan nytt kött sätts in.'
+      ]
     }
   ],
   bibliography,

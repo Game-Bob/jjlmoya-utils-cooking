@@ -18,10 +18,6 @@ const faq = [
     answer: 'Dat hangt af van het ingrediënt. Voor bloem wel. Voor gist of kruiden is precisie minder cruciaal (schaal naar 75% van de aangegeven waarde). Voor eieren: als je 2,3 krijgt, gebruik dan 2 hele eieren + een deel van een derde (afgewogen), of rond af naar 2 als het gerecht dat toelaat.',
   },
   {
-    question: 'Waarom verandert het resultaat niet als ik de porties aanpas?',
-    answer: 'Zorg ervoor dat het ingrediëntenveld tekst bevat. Als het leeg is, valt er niets te schalen. Controleer ook of de getallen in je ingrediënten herkenbaar zijn (bijv. "500g", "1/2 theelepel").',
-  },
-  {
     question: 'Werkt het met imperiale maten (ounces, cups)?',
     answer: 'Technisch gezien wel, het tool leest getallen en schaalt. Maar bij cups is de precisie beperkt (inconsistent volume). Het wordt aanbevolen om voor het schalen om te rekenen naar grammen.',
   },

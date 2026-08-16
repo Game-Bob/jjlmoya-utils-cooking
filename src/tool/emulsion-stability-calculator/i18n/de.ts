@@ -140,17 +140,62 @@ export const content: ToolLocaleContent = {
       ]
     },
     {
+      type: 'list',
+      items: [
+        '<strong>Öl wird zu schnell hinzugefügt</strong> - Die Geschwindigkeit ist selten die Ursache. Wenn der Ölanteil unter der Grenze liegt, hält die Emulsion.',
+        '<strong>Zutaten zu kalt</strong> - Kalte Eier oder kaltes Öl erhöhen die Viskosität. Zutaten immer auf Zimmertemperatur bringen.',
+        '<strong>Ölgrenze überschritten</strong> - Jeder Emulgator hat ein Limit: Eigelb 78%, Senf 70%, Sojalecithin 82%, Polysorbat 85%.',
+        '<strong>Wasserphase zu klein</strong> - Ohne genug Wasser um die Öltröpfchen können sie nur miteinander verschmelzen.'
+      ]
+    },
+    {
       type: 'title',
-      text: 'Die Wissenschaft: Warum Emulsionen Brechen',
+      text: 'Welchen Emulgator Sollten Sie Verwenden? Ein Praktischer Vergleich',
       level: 2
     },
     {
       type: 'paragraph',
-      html: 'Eine kulinarische Emulsion funktioniert, indem winzige Öltröpfchen in einer kontinuierlichen Wasserphase verteilt werden. <strong>Emulgatoren</strong> - wie das Lecithin im Eigelb, der Schleimstoff im Senf oder synthetische Tenside wie Polysorbat - umhüllen jedes Tröpfchen und verhindern, dass es mit seinen Nachbarn verschmilzt.'
+      html: 'Die Wahl des richtigen Emulgators hängt von Ihrem Rezept ab. Hier ist ein Vergleich der vier häufigsten Emulgatoren.'
     },
     {
-      type: 'paragraph',
-      html: 'Der Bruchpunkt wird durch reine Geometrie bestimmt. Öltröpfchen verhalten sich wie winzige Kugeln, die zusammengepackt werden. Das maximale Volumen an Kugeln, das in einen gegebenen Raum passt - bekannt als <strong>Keplersche Vermutung</strong> - beträgt etwa 74%. In realen Küchensystemen kann dies mit starken Emulgatoren auf 80-85% gedehnt werden, aber darüber hinaus werden die Tröpfchen so stark zusammengedrückt, dass sie verschmelzen und die Emulsion sofort zusammenbricht.'
+      type: 'proscons',
+      title: 'Eigelb',
+      items: [
+        { pro: 'Höchste Geschmackskompatibilität für klassische Saucen', con: 'Enthält Cholesterin und Eigeschmack' },
+        { pro: 'Enthält Lecithin und Lipoproteine für robuste Emulsionen', con: 'Erfordert sorgfältige Temperaturkontrolle' },
+        { pro: 'Verleiht natürliche Farbe und Reichhaltigkeit', con: 'Nicht für vegane Zubereitungen geeignet' },
+        { pro: 'Funktioniert bis zu 78% Ölanteil', con: 'Begrenzt auf ca. 15 ml Wassergehalt pro Eigelb' }
+      ]
+    },
+    {
+      type: 'proscons',
+      title: 'Senf',
+      items: [
+        { pro: 'Verleiht Dressings würzigen Geschmack', con: 'Geringere maximale Ölkapazität (70%)' },
+        { pro: 'Weit verbreitet und einfach zu verwenden', con: 'Schwächere Emulgierkraft als Eigelb' },
+        { pro: 'Funktioniert gut bei Zimmertemperatur', con: 'Geschmack kann mit feinen Saucen kollidieren' },
+        { pro: 'Ideal für schnelle Vinaigretten', con: 'Nicht für geschmacksneutrale Emulsionen geeignet' }
+      ]
+    },
+    {
+      type: 'proscons',
+      title: 'Sojalecithin',
+      items: [
+        { pro: 'Hohe Öltoleranz (82%) für stabile Saucen', con: 'Erfordert präzises Abwiegen' },
+        { pro: 'Neutraler Geschmack verändert Rezepte nicht', con: 'Weniger verzeihend als Eigelb' },
+        { pro: 'Pflanzlich und veganfreundlich', con: 'Kein Standardzutat in der Haushaltsküche' },
+        { pro: 'Funktioniert mit kleinen Wassermengen', con: 'Kann eine leicht künstliche Textur erzeugen' }
+      ]
+    },
+    {
+      type: 'proscons',
+      title: 'Polysorbat',
+      items: [
+        { pro: 'Höchste Ölkapazität aller Emulgatoren (85%)', con: 'Synthetischer Zusatzstoff' },
+        { pro: 'Erzeugt ultrastabile Schäume', con: 'Schwer für Haushaltsküchen zu beschaffen' },
+        { pro: 'Funktioniert mit minimaler Wasserphase', con: 'Erfordert Waage für genaue Dosierung' },
+        { pro: 'Ideal für experimentelle Küche', con: 'Bei Überdosierung störend im Geschmack' }
+      ]
     },
     {
       type: 'comparative',
@@ -215,6 +260,45 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'title',
+      text: 'Die Wissenschaft: Warum Emulsionen Brechen',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Eine kulinarische Emulsion funktioniert, indem winzige Öltröpfchen in einer kontinuierlichen Wasserphase verteilt werden. <strong>Emulgatoren</strong> - wie das Lecithin im Eigelb, der Schleimstoff im Senf oder synthetische Tenside wie Polysorbat - umhüllen jedes Tröpfchen und verhindern, dass es mit seinen Nachbarn verschmilzt.'
+    },
+    {
+      type: 'paragraph',
+      html: 'Der Bruchpunkt wird durch reine Geometrie bestimmt. Öltröpfchen verhalten sich wie winzige Kugeln, die zusammengepackt werden. Das maximale Volumen an Kugeln, das in einen gegebenen Raum passt - bekannt als <strong>Keplersche Vermutung</strong> - beträgt etwa 74%. In realen Küchensystemen kann dies mit starken Emulgatoren auf 80-85% gedehnt werden, aber darüber hinaus werden die Tröpfchen so stark zusammengedrückt, dass sie verschmelzen und die Emulsion sofort zusammenbricht.'
+    },
+    {
+      type: 'card',
+      columns: 2,
+      items: [
+        {
+          icon: 'mdi:egg-outline',
+          title: 'Klassische Mayonnaise & Aioli',
+          html: 'Verwenden Sie <strong>Eigelb</strong> bis zu 78% Öl Anteil. Geben Sie vor dem Öl einen Teelöffel Wasser hinzu.'
+        },
+        {
+          icon: 'mdi:shaker-outline',
+          title: 'Vinaigretten & Leichte Dressings',
+          html: 'Verwenden Sie <strong>Senf</strong> bis zu 70% Öl Anteil. Bietet genügend Emulgierung für Vinaigretten.'
+        },
+        {
+          icon: 'mdi:leaf',
+          title: 'Moderne Saucen & Schäume',
+          html: 'Verwenden Sie <strong>Sojalecithin</strong> bis zu 82% Öl Anteil. Ideal für geschmacksneutrale Emulsionen.'
+        },
+        {
+          icon: 'mdi:flask-outline',
+          title: 'Experimentelle Schäume',
+          html: 'Verwenden Sie <strong>Polysorbat</strong> bis zu 85% Öl Anteil. Maximale Ölladung.'
+        }
+      ]
+    },
+    {
+      type: 'title',
       text: 'Wie Man Eine Gebrochene Emulsion Schritt Für Schritt Rettet',
       level: 2
     },
@@ -232,6 +316,10 @@ export const content: ToolLocaleContent = {
       type: 'title',
       text: 'Praktische Tipps Für Perfekte Emulsionen Jedes Mal',
       level: 3
+    },
+    {
+      type: 'message',
+      html: '<strong>Die goldene Regel:</strong> Das Verhältnis von Öl zu Wasser ist wichtiger als Technik oder Geschwindigkeit. Nutzen Sie unseren Rechner.'
     },
     {
       type: 'tip',
@@ -279,8 +367,15 @@ export const content: ToolLocaleContent = {
       ]
     },
     {
-      type: 'paragraph',
-      html: 'Egal, ob Sie eine klassische französische Mayonnaise, eine knoblauchige Aioli, eine stabile Vinaigrette zubereiten oder mit modernistischen Hydrokolloiden experimentieren, das Verständnis des <strong>Öl-Wasser-Verhältnisses</strong> ist der wichtigste Faktor. Unser Rechner übernimmt die Mathematik, damit Sie mit Zuversicht kochen können.'
+      type: 'summary',
+      title: 'Wichtigste Erkenntnisse Für Stabile Emulsionen',
+      items: [
+        'Jeder Emulgator hat ein Öllimit: Eigelb 78%, Senf 70%, Sojalecithin 82%, Polysorbat 85%.',
+        'Der Bruchpunkt wird durch Geometrie bestimmt (Keplersche Vermutung bei 74%), nicht durch Rührgeschwindigkeit.',
+        'Immer mit Zutaten bei Zimmertemperatur beginnen.',
+        'Geronnene Emulsionen können durch Zugabe von Wasser und frischem Emulgator gerettet werden.',
+        'Verwenden Sie unseren Emulsionsrechner oben für exakte Ölgrenzen.'
+      ]
     }
   ],
   bibliography,

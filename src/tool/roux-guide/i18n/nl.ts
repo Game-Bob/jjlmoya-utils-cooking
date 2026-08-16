@@ -31,8 +31,12 @@ const howTo = [
     text: 'Van soep/crème tot deeg voor kroketten. De calculator past automatisch de benodigde roux-verhouding aan.',
   },
   {
-    name: 'Voer vloeistofvolume in',
-    text: 'Geef aan hoeveel ml vloeistof je wilt binden. De calculator vertelt je precies hoeveel boter en bloem je moet gebruiken.',
+    name: 'Voer het volume vloeistof in',
+    text: 'Specificeer hoeveel ml vloeistof u wilt binden. De calculator geeft u de exacte hoeveelheden boter en bloem.',
+  },
+  {
+    name: 'Pas de juiste kooktijd toe',
+    text: 'Kook het boter-bloemmengsel tot het gespecificeerde niveau (Wit, Blond of Donker).',
   },
 ];
 
@@ -109,6 +113,111 @@ export const content: ToolLocaleContent = {
           icon: 'mdi:fire',
         },
       ],
+    },
+    {
+      type: 'title',
+      text: 'Niveaus van Roosteren en Bindkracht',
+      level: 3,
+    },
+    {
+      type: 'comparative',
+      columns: 3,
+      items: [
+        {
+          title: 'Witte Roux',
+          icon: 'mdi:flask-round-bottom-outline',
+          description: 'Gekookt gedurende 2-3 minuten. De krachtigste binder.',
+          points: [
+            'Basis voor Béchamel',
+            'Maximale bindkracht',
+            'Neutrale melksmaak',
+            'Geen zichtbare kleurverandering',
+          ],
+        },
+        {
+          title: 'Blonde Roux',
+          icon: 'mdi:gold',
+          description: 'Gekookt gedurende 5-8 minuten tot een lichtgouden tint.',
+          highlight: true,
+          points: [
+            'Basis voor Velouté',
+            'Middelgrote bindkracht',
+            'Licht nootachtig aroma',
+            'Ideaal voor lichte fonds',
+          ],
+        },
+        {
+          title: 'Donkere Roux',
+          icon: 'mdi:coffee',
+          description: 'Gekookt gedurende 15-20 minuten. Diep geroosterd smaakprofiel.',
+          points: [
+            'Basis voor Espagnolesaus',
+            'Minder bindkracht (-30%)',
+            'Complex geroosterde noot smaak',
+            'Vloeibaardere textuur',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Roux Gewicht per Liter per Gewenste Textuur',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['Gewenste Textuur', 'Boter (g)', 'Bloem (g)', 'Vloeistof (L)'],
+      rows: [
+        ['Lichte Soep / Creme', '25g', '25g', '1 Liter'],
+        ['Standaard Saus', '50g', '50g', '1 Liter'],
+        ['Gebonden Saus', '70g', '70g', '1 Liter'],
+        ['Kroketten Deeg', '125g', '125g', '1 Liter'],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'Klonterige Saus of Bloemsmaak?',
+      html: 'Als uw saus klontert, heeft u hete vloeistof aan een hete roux toegevoegd. Pas altijd thermische shock toe (koude vloeistof op hete roux). Als het naar bloem smaakt, verleng dan de initiële kooktijd.',
+    },
+    {
+      type: 'title',
+      text: 'Glossarium van Saustechnologie',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Dextrinisatie',
+          definition:
+            'De thermische afbraak van zetmeel in korte ketens. Verhoogt smaak maar vermindert binding.',
+        },
+        {
+          term: 'Verstijfseling',
+          definition:
+            'Het proces waarbij zetmeelkorrels vloeistof absorberen en uitzetten.',
+        },
+        {
+          term: 'Beurre Manié',
+          definition:
+            'Koud mengsel van bloem en boter gebruikt voor snelle correcties aan het einde.',
+        },
+        {
+          term: 'Moedersauzen',
+          definition:
+            'Escoffiers 5 basissauzen (Béchamel, Velouté, Espagnole, Hollandaise en Tomaten).',
+        },
+      ],
+    },
+    {
+      type: 'tip',
+      title: 'De Koude Boter Truc (Monter au Beurre)',
+      html: 'Roer er op het einde een klontje koude boter door voor een professionele glans.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Onze roux calculator garandeert een perfecte technische textuur.',
     },
   ],
   ui: {

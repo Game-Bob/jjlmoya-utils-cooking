@@ -150,6 +150,11 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'Vergelijking van Meringue Technieken',
+      level: 3,
+    },
+    {
       type: 'comparative',
       columns: 3,
       items: [
@@ -190,9 +195,74 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'Visuele Fases van het Eiwit Stijfkloppen',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['Fase', 'Visuele Beschrijving', 'Aanbevolen Gebruik', 'Stabiliteit'],
+      rows: [
+        ['Schuimig', 'Heldere, grote zeepbellen', 'Zuur of suiker toevoegen', 'Geen'],
+        ['Zachte Pieken', 'Punten buigen om', 'Mousses en soufflés', 'Laag'],
+        [
+          'Stijve Pieken',
+          'Stevige, verticale punt',
+          'Decoratie en bakken',
+          'Hoog',
+        ],
+        [
+          'Te ver geklopt',
+          'Korrelige en droge textuur',
+          'Onbruikbaar (geschift)',
+          'Ingeklapt',
+        ],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'Lekt uw Meringue Vocht?',
+      html: 'Als u siroop ziet lekken (synerese), is de suiker niet volledig opgelost of is de luchtvochtigheid hoog. Giet bij Italiaanse meringue de siroop in een gestage straal bij de eiwitten.',
+    },
+    {
+      type: 'title',
+      text: 'Pâtisserie Glossarium',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Ovalbumine',
+          definition:
+            'Het belangrijkste eiwit in eiwit dat verantwoordelijk is voor het vasthouden van lucht.',
+        },
+        {
+          term: 'Hygroscopisch',
+          definition:
+            'De eigenschap van suiker om vocht uit de lucht op te nemen.',
+        },
+        {
+          term: 'Wijnsteen',
+          definition:
+            'Een zuur zout dat het schuim stabiliseert en overkloppen voorkomt.',
+        },
+        {
+          term: 'Bain-Marie',
+          definition:
+            'Indirecte verwarmingsmethode om suiker veilig op te lossen voor Zwitserse meringue.',
+        },
+      ],
+    },
+    {
       type: 'tip',
-      title: 'De truc met de metalen kom',
-      html: 'Maak de kom schoon met azijn of citroen. Elk spoortje vet voorkomt dat de eiwitten stijf worden.',
+      title: 'De Azijn-Truc',
+      html: 'Maak de kom vooraf schoon met azijn of citroen. Elk spoortje vet voorkomt dat de eiwitten stijf worden.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Onze calculator neemt het rekenwerk over zodat u zich kunt concentreren op het kloppen van de perfecte meringue.',
     },
   ],
   bibliography,

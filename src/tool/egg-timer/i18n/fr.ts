@@ -1,53 +1,48 @@
 import type { ToolLocaleContent } from "../../../types";
 import { bibliography } from '../bibliography';
 
-const title = "Minuteur Scientifique Précis pour Œufs et Calculatrice d";
-const description = "Jaune coulant, blancs juste figés.";
+const title = "Minuteur de Précision pour Œufs et Calculateur d'Altitude";
+const description = "Maîtrisez la thermodynamique de la cuisson parfaite des œufs. Calculez les temps exacts d'ébullition selon l'altitude, la taille de l'œuf et sa température initiale.";
 const faq = [
-    {
-      question: "Pourquoi l'altitude affecte-t-elle le temps de cuisson des œufs?",
-      answer:
-        "À une altitude plus élevée, la pression atmosphérique est plus basse, ce qui réduit le point d'ébullition de l'eau. Par exemple, au niveau de la mer, l'eau bout à 100°C, mais à 1500m d'altitude, elle bout à seulement 95°C. Cela signifie que la cuisson prend plus de temps.",
-    },
-    {
-      question: "Quelle est la différence entre un œuf mollet et un œuf dur?",
-      answer:
-        "Un œuf mollet a un jaune crémeux et coulant au centre, tandis que les blancs sont fermes. Un œuf dur a complètement cuit le jaune et les blancs. La différence réside principalement dans le temps de cuisson et la température atteinte.",
-    },
-    {
-      question: "Comment puis-je obtenir des œufs durs parfaits?",
-      answer:
-        "Utilisez des œufs à température ambiante si possible, portez l'eau à ébullition, puis plongez les œufs et laissez-les cuire selon votre altitude. Refroidissez-les immédiatement dans de l'eau glacée pour arrêter la cuisson. Notre calculateur vous donne le temps exact pour votre localisation.",
-    },
-    {
-      question: "Pourquoi dois-je refroidir les œufs après la cuisson?",
-      answer:
-        "Refroidir les œufs rapidement dans de l'eau glacée arrête le processus de cuisson et facilite l'épluchage. Cela empêche la cuisson excessive du jaune qui pourrait créer une bordure grisâtre.",
-    },
-    {
-      question: "Quel est l'âge idéal des œufs pour les faire bouillir?",
-      answer:
-        "Les œufs plus anciens (au moins une semaine) sont plus faciles à éplucher car l'albumine se sépare plus facilement de la coquille. Les œufs très frais peuvent être plus difficiles à éplucher.",
-    },
-  ];
+  {
+    question: "Pourquoi l'altitude affecte-t-elle le temps de cuisson des œufs?",
+    answer:
+      "À une altitude plus élevée, la pression atmosphérique est plus basse, ce qui réduit le point d'ébullition de l'eau. À 2 000 mètres, l'eau bout à environ 93°C au lieu de 100°C, ce qui signifie que l'œuf nécessite plus de temps pour atteindre la même température interne.",
+  },
+  {
+    question: "Dois-je utiliser des œufs sortant directement du réfrigérateur?",
+    answer:
+      "Les œufs du réfrigérateur (environ 4°C) nécessitent environ 1.5 à 2 minutes de plus que les œufs à température ambiante. Notre calculateur s'ajuste automatiquement.",
+  },
+  {
+    question: "Qu'est-ce qui cause le cercle vert autour du jaune?",
+    answer:
+      "Le cercle vert est du sulfure ferreux. Il se forme lorsque le soufre du blanc réagit avec le fer du jaune en raison d'une cuisson excessive. Pour l'éviter, plongez immédiatement l'œuf dans un bain glacé.",
+  },
+  {
+    question: "Pourquoi certains œufs sont-ils si difficiles à écaler?",
+    answer:
+      "Les œufs très frais ont un pH plus bas, ce qui fait adhérer la membrane à la coquille. Utilisez des œufs vieux de 1 à 2 semaines et plongez-les dans un bain glacé après cuisson.",
+  },
+];
 const howTo = [
-    {
-      name: "Sélectionnez Vos Paramètres",
-      text: "Choisissez la température initiale de l'œuf, sa taille, et votre altitude. Notre calculateur déterminera automatiquement le temps de cuisson optimal.",
-    },
-    {
-      name: "Portez l'Eau à Ébullition",
-      text: "Utilisez une casserole avec suffisamment d'eau pour couvrir les œufs d'environ 2-3cm. Portez à ébullition complète.",
-    },
-    {
-      name: "Plongez et Laissez Cuire",
-      text: "Plongez délicatement les œufs dans l'eau bouillante et commencez le minuteur selon le temps recommandé. La précision est essentielle pour le résultat parfait.",
-    },
-    {
-      name: "Refroidissez Immédiatement",
-      text: "Quand le temps est écoulé, plongez les œufs dans de l'eau glacée pendant au moins 5 minutes pour arrêter la cuisson et faciliter l'épluchage.",
-    },
-  ];
+  {
+    name: "Définissez les conditions initiales",
+    text: "Sélectionnez la température initiale de votre œuf et sa taille pour établir la base thermodynamique.",
+  },
+  {
+    name: "Ajustez selon votre altitude",
+    text: "Entrez votre altitude pour calibrer le point d'ébullition exact de l'eau à votre pression actuelle.",
+  },
+  {
+    name: "Démarrez le minuteur de précision",
+    text: "Lancez le décompte. Notre outil calcule les secondes précises nécessaires pour dénaturer les protéines de l'œuf.",
+  },
+  {
+    name: "Appliquez le bain glacé",
+    text: "Dès la fin du minuteur, plongez l'œuf dans de l'eau glacée pour stopper la cuisson et faciliter l'écalage.",
+  },
+];
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -82,105 +77,176 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: "minuteur-oeuf-parfait-calculatrice-altitude",
-  title: "Minuteur Scientifique Précis pour Œufs et Calculatrice d'Altitude",
+  slug: "minuteur-oeuf-calculateur-altitude",
+  title: "Minuteur de Précision pour Œufs et Calculateur d'Altitude",
   description:
-    "Maîtrisez la thermodynamique de l'œuf parfait. Calculez le temps d'ébullition exact en fonction de votre altitude, de la taille de l'œuf et de la température initiale.",
+    "Maîtrisez la thermodynamique de la cuisson parfaite des œufs. Calculez les temps exacts d'ébullition selon l'altitude, la taille de l'œuf et sa température initiale.",
   ui: {
     parameters: "Paramètres de Cuisson",
-    initial_temperature: "Température Initiale",
+    initial_temperature: "Temp. Initiale",
     fridge: "Frigo (4°C)",
     ambient: "Ambiante (20°C)",
     egg_size: "Taille de l'Œuf",
     altitude: "Votre Altitude",
-    use_location: "Détecter la Localisation",
+    use_location: "Détecter la Position",
     altitude_help:
       "La pression atmosphérique plus basse en altitude réduit le point d'ébullition de l'eau.",
     sea_level: "0m",
-    soft_cooked: "Œuf Mollet",
-    soft_description: "Jaune coulant, blancs juste figés.",
-    mollet: "Mollet (Crémeuse)",
-    mollet_description: "Jaune crémeux, blancs fermes.",
+    soft_cooked: "Œuf Coque",
+    soft_description: "Jaune coulant, blanc juste pris.",
+    mollet: "Œuf Mollet",
+    mollet_description: "Jaune crémeux, blanc ferme.",
     hard_cooked: "Œuf Dur",
-    hard_description: "Jaune solide, blancs entièrement figés.",
+    hard_description: "Jaune solide, blanc entièrement pris.",
   },
   faqTitle: "Questions Fréquemment Posées",
-  faq: [
-    {
-      question: "Pourquoi l'altitude affecte-t-elle le temps de cuisson des œufs?",
-      answer:
-        "À une altitude plus élevée, la pression atmosphérique est plus basse, ce qui réduit le point d'ébullition de l'eau. Par exemple, au niveau de la mer, l'eau bout à 100°C, mais à 1500m d'altitude, elle bout à seulement 95°C. Cela signifie que la cuisson prend plus de temps.",
-    },
-    {
-      question: "Quelle est la différence entre un œuf mollet et un œuf dur?",
-      answer:
-        "Un œuf mollet a un jaune crémeux et coulant au centre, tandis que les blancs sont fermes. Un œuf dur a complètement cuit le jaune et les blancs. La différence réside principalement dans le temps de cuisson et la température atteinte.",
-    },
-    {
-      question: "Comment puis-je obtenir des œufs durs parfaits?",
-      answer:
-        "Utilisez des œufs à température ambiante si possible, portez l'eau à ébullition, puis plongez les œufs et laissez-les cuire selon votre altitude. Refroidissez-les immédiatement dans de l'eau glacée pour arrêter la cuisson. Notre calculateur vous donne le temps exact pour votre localisation.",
-    },
-    {
-      question: "Pourquoi dois-je refroidir les œufs après la cuisson?",
-      answer:
-        "Refroidir les œufs rapidement dans de l'eau glacée arrête le processus de cuisson et facilite l'épluchage. Cela empêche la cuisson excessive du jaune qui pourrait créer une bordure grisâtre.",
-    },
-    {
-      question: "Quel est l'âge idéal des œufs pour les faire bouillir?",
-      answer:
-        "Les œufs plus anciens (au moins une semaine) sont plus faciles à éplucher car l'albumine se sépare plus facilement de la coquille. Les œufs très frais peuvent être plus difficiles à éplucher.",
-    },
-  ],
-  howTo: [
-    {
-      name: "Sélectionnez Vos Paramètres",
-      text: "Choisissez la température initiale de l'œuf, sa taille, et votre altitude. Notre calculateur déterminera automatiquement le temps de cuisson optimal.",
-    },
-    {
-      name: "Portez l'Eau à Ébullition",
-      text: "Utilisez une casserole avec suffisamment d'eau pour couvrir les œufs d'environ 2-3cm. Portez à ébullition complète.",
-    },
-    {
-      name: "Plongez et Laissez Cuire",
-      text: "Plongez délicatement les œufs dans l'eau bouillante et commencez le minuteur selon le temps recommandé. La précision est essentielle pour le résultat parfait.",
-    },
-    {
-      name: "Refroidissez Immédiatement",
-      text: "Quand le temps est écoulé, plongez les œufs dans de l'eau glacée pendant au moins 5 minutes pour arrêter la cuisson et faciliter l'épluchage.",
-    },
-  ],
+  faq,
+  howTo,
   seo: [
     {
       type: "title",
-      text: "Thermodynamique de la Cuisson Parfaite d'Œufs",
+      text: "Guide Scientifique de la Cuisson des Œufs et Thermodynamique",
       level: 2,
     },
     {
       type: "paragraph",
-      text: "La cuisson d'un œuf est un processus thermodynamique délicat. Les protéines se dénaturent à différentes températures, créant des textures distinctes du blanc et du jaune.",
+      html: "Cuire un œuf est un exercice classique de <strong>thermodynamique appliquée</strong>. Obtenir la texture souhaitée implique de contrôler le transfert thermique de l'eau bouillante jusqu'au cœur de l'œuf.",
+    },
+    {
+      type: "stats",
+      columns: 4,
+      items: [
+        {
+          value: "62°C",
+          label: "Blanc Pris",
+          icon: "mdi:egg-outline",
+        },
+        {
+          value: "68°C",
+          label: "Jaune Pris",
+          icon: "mdi:egg-fried",
+        },
+        {
+          value: "-1°C",
+          label: "Baisse / 300m",
+          icon: "mdi:mountain",
+        },
+        {
+          value: "0s",
+          label: "Marge Précision",
+          icon: "mdi:timer-check-outline",
+        },
+      ],
     },
     {
       type: "title",
-      text: "Impact de l'Altitude sur la Cuisson",
+      text: "Comparaison des Stades de Cuisson",
       level: 3,
+    },
+    {
+      type: "comparative",
+      columns: 3,
+      items: [
+        {
+          title: "Œuf Coque",
+          icon: "mdi:coffee-outline",
+          description: "Blanc partiellement pris et jaune parfaitement liquide.",
+          points: [
+            "Texture soyeuse délicate",
+            "Parfait pour les mouillettes",
+            "Temps de cuisson rapide 3-5 min",
+            "Écalage délicat",
+          ],
+        },
+        {
+          title: "Œuf Mollet",
+          icon: "mdi:water-percent",
+          description: "Blanc ferme avec un jaune crémeux.",
+          highlight: true,
+          points: [
+            "Le standard gastronomique",
+            "Texture du jaune onctueuse",
+            "Blanc élastique et résistant",
+            "Idéal pour salades et ramen",
+          ],
+        },
+        {
+          title: "Œuf Dur",
+          icon: "mdi:circle-slice-8",
+          description: "Protéines entièrement coagulées avec un jaune solide.",
+          points: [
+            "Centre solide et opaque",
+            "Très facile à écaler et transporter",
+            "Incontournable pour mimosa",
+            "Nécessite un refroidissement immédiat",
+          ],
+        },
+      ],
+    },
+    {
+      type: "title",
+      text: "Point d'Ébullition de l'Eau selon l'Altitude",
+      level: 3,
+    },
+    {
+      type: "table",
+      headers: [
+        "Ville / Altitude",
+        "Altitude (m)",
+        "Point d'Ébullition (°C)",
+        "Temps Ajouté",
+      ],
+      rows: [
+        ["Niveau de la mer", "0m", "100°C", "0s"],
+        ["Denver, USA", "1600m", "94.5°C", "+55s"],
+        ["Mexico City", "2240m", "92.6°C", "+75s"],
+        ["La Paz, Bolivie", "3640m", "88.1°C", "+140s"],
+      ],
+    },
+    {
+      type: "diagnostic",
+      variant: "warning",
+      title: "Difficile à Écaler ou Cercle Vert autour du Jaune?",
+      html: "Le cercle vert est du <strong>sulfure ferreux</strong> causé par une surcuisson. Si les œufs sont durs à écaler, ils sont trop frais. Utilisez des œufs vieux d'une semaine et un bain glacé.",
+    },
+    {
+      type: "title",
+      text: "Glossaire Technique",
+      level: 3,
+    },
+    {
+      type: "glossary",
+      items: [
+        {
+          term: "Ovotransferrine",
+          definition:
+            "Protéine du blanc d'œuf coagulant en premier à 62°C.",
+        },
+        {
+          term: "Ovalbumine",
+          definition:
+            "Protéine majeure nécessitant une température plus élevée (80°C) pour se solidifier.",
+        },
+        {
+          term: "Pression Atmosphérique",
+          definition:
+            "Force externe affectant la température d'ébullition.",
+        },
+        {
+          term: "Choc Thermique",
+          definition:
+            "Procédé de refroidissement rapide pour stopper la cuisson résiduelle.",
+        },
+      ],
+    },
+    {
+      type: "tip",
+      title: "L'Astuce du Vinaigre",
+      html: "Ajoutez du vinaigre dans l'eau bouillante. Si un œuf fêle, l'acide coagulera immédiatement le blanc s'échappant.",
     },
     {
       type: "paragraph",
-      text: "Au niveau de la mer, l'eau bout à 100°C. À 1000m d'altitude, elle bout à 96°C. À 2000m, à seulement 93°C. Cette différence affecte significativement les temps de cuisson.",
-    },
-    {
-      type: "title",
-      text: "Types d'Œufs Cuits",
-      level: 3,
-    },
-    {
-      type: "list",
-      items: [
-        "Mollet (6-7 minutes): Jaune crémeux, blancs fermes",
-        "Dur (10-12 minutes): Complètement cuit, légèrement collet gris si non refroidi",
-        "Jammy (8-9 minutes): Équilibre parfait entre coulant et figé",
-      ],
+      html: "Notre calculateur utilise l'équation de Charles Williams pour calibrer chaque seconde de cuisson.",
     },
   ],
   bibliography,

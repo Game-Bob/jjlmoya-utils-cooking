@@ -150,6 +150,11 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'Beze Tekniklerinin Karşılaştırılması',
+      level: 3,
+    },
+    {
       type: 'comparative',
       columns: 3,
       items: [
@@ -190,9 +195,74 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'Yumurta Akının Çırpılma Aşamaları',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['Aşama', 'Görsel Tanım', 'Önerilen Kullanım', 'Stabilite'],
+      rows: [
+        ['Köpüksü', 'Şeffaf büyük kabarcıklar', 'Asit veya şeker ekleme zamanı', 'Yok'],
+        ['Yumuşak Tepeler', 'Uçlar kıvrılır', 'Muslar ve sufleler', 'Düşük'],
+        [
+          'Sert Tepeler (Köpük)',
+          'Dik ve sert uçlar',
+          'Süsleme ve pişirme',
+          'Yüksek',
+        ],
+        [
+          'Aşırı Çırpılmış',
+          'Pürüzlü ve kuru doku',
+          'Kullanılamaz (çökmüş)',
+          'Çöküş',
+        ],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'Bezeniz Su Salıyor mu?',
+      html: 'Şerbet sızması görüyorsanız (sinerez), şeker tamamen erimemiş ya da ortam nemi yüksektir. İtalyan bezesinde şerbeti yavaş ve ince bir hat şeklinde dökün.',
+    },
+    {
+      type: 'title',
+      text: 'Pastacılık Teknik Sözlüğü',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Ovalbumin',
+          definition:
+            'Yumurta akında çırpma sırasında havayı hapseden ana protein.',
+        },
+        {
+          term: 'Hygroscopic (Higgroskopik)',
+          definition:
+            'Şekerin havadaki nemi emme özelliği.',
+        },
+        {
+          term: 'Krem Tartar',
+          definition:
+            'Köpük yapısını stabilize eden ve aşırı çırpmayı önleyen asidik tuz.',
+        },
+        {
+          term: 'Benmari (Bain-Marie)',
+          definition:
+            'İsviçre bezesinde şekeri güvenle eritmek için kullanılan dolaylı ısıtma yöntemi.',
+        },
+      ],
+    },
+    {
       type: 'tip',
-      title: 'Metal Kap İpucu',
-      html: 'Başlamadan önce kabınızı sirke veya limonla temizleyin. En ufak yağ izi yumurta aklarının kabarmasını engeller.',
+      title: 'Sirke İpucu',
+      html: 'Kabınızı sirke veya limonla ıslatılmış peçeteyle silin. En ufak yağ izi yumurta aklarının kabarmasını engeller.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Hesaplayıcımız matematiği üstlenir, böylece kusursuz parlaklıkta sert tepelere ulaşmaya odaklanabilirsiniz.',
     },
   ],
   bibliography,

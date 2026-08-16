@@ -8,13 +8,33 @@ const faq = [
   {
     question: 'Hur beräknas viktminskningen vid torkning?',
     answer: 'Viktminskningen beräknas genom att separera torrsubstans från vatten. Eftersom torrsubstansen förblir konstant beräknas slutvikten som torrsubstansen delat med 1 minus målfuktighetsprocenten.'
+  },
+  {
+    question: 'Varför påverkar torktemperaturen torktiden?',
+    answer: 'Högre temperaturer snabbar på avdunstningen av vatten från matens yta. För hög temperatur kan dock orsaka ythärdning (case hardening), där det yttre lagret torkar för snabbt och stänger in fukten inuti.'
+  },
+  {
+    question: 'Hur vet jag när maten är helt torkad?',
+    answer: 'Korrekt torkad mat ska kännas torr och inte klibbig. Frukt ska vara böjlig och läderartad, grönsaker spröda eller krispiga, och kött till jerky segt och böjbart utan att gå av.'
   }
 ];
 
 const howTo = [
   {
     name: 'Välj en ingrediens eller manuell fuktighet',
-    text: 'Välj en förinställning eller ställ in fuktigheten manuellt.'
+    text: 'Välj från våra förinställningar som Beef Jerky, Vattenmelon-snaps, Äppelringar, Mangoskivor eller Svamp, vilket automatiskt ställer in startfuktighet och bastorktid.'
+  },
+  {
+    name: 'Justera start- och målfuktighetsmängd',
+    text: 'Ställ in din mats startfuktighet och din önskade målfuktighet med hjälp av skjutreglagen.'
+  },
+  {
+    name: 'Ställ in startvikt och torktemperatur',
+    text: 'Ange matens råvikt och drifttemperaturen på din mattork.'
+  },
+  {
+    name: 'Visa beräknad torktid och slutvikt',
+    text: 'Läs av det beräknade resultatet som visar din mats målvikt, avdunstat vatten och uppskattat antal timmar som behövs.'
   }
 ];
 

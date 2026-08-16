@@ -26,6 +26,11 @@ const faq = [
 		answer:
 			'하단 버튼을 클릭하여 새 행을 추가하세요. 재료 이름과 원래 무게를 적으면 변환된 양이 즉시 실시간으로 업데이트됩니다.',
 	},
+	{
+		question: '매우 큰 오븐 팬에 대한 변환도 신뢰할 수 있나요?',
+		answer:
+			'수학적으로는 정확하지만, 매우 큰 케이크는 중앙까지 익는 데 훨씬 오랜 시간이 걸립니다. 오븐 온도를 약간 낮추는 조정을 고려하세요.',
+	},
 ];
 
 const howTo = [
@@ -115,12 +120,18 @@ export const content: ToolLocaleContent = {
 	seo: [
 		{
 			type: 'title',
-			text: '베이킹 틀 사이즈별 레시피 변환 가이드',
+			text: '베이킹 틀 사이즈별 레시피 변환 고급 가이드',
 			level: 2,
 		},
 		{
 			type: 'paragraph',
-			html: '레시피를 다른 틀에 맞춰 변환할 때는 <strong>기하학적 비율</strong>을 지키는 것이 매우 중요합니다. 그래야만 이상적인 식감과 굽기 상태를 유지할 수 있습니다.',
+			html: '레시피를 다른 틀에 맞춰 변환할 때는 <strong>기하학적 비율</strong>을 지키는 것이 매우 중요합니다. 그래야만 이상적인 식감, 높이, 수분감을 유지할 수 있습니다.',
+		},
+		{
+			type: 'diagnostic',
+			variant: 'info',
+			title: '바닥 면적의 비밀',
+			html: '올바른 변환의 비밀은 지름이 아닌 바닥 면적에 있습니다. 원형 틀의 지름이 25% 증가하면 전체 면적과 필요한 재료량은 거의 두 배가 됩니다.',
 		},
 		{
 			type: 'stats',
@@ -132,9 +143,9 @@ export const content: ToolLocaleContent = {
 					icon: 'mdi:resize',
 				},
 				{
-					value: 'πr²',
-					label: '원 면적 공식',
-					icon: 'mdi:math-compass',
+					value: 'x2.25',
+					label: '15cm→22.5cm 계수',
+					icon: 'mdi:arrow-up-bold-outline',
 				},
 				{
 					value: '0.64',
@@ -142,15 +153,125 @@ export const content: ToolLocaleContent = {
 					icon: 'mdi:arrow-down-bold-outline',
 				},
 				{
-					value: '2/3',
-					label: '최대 충전량',
-					icon: 'mdi:format-vertical-align-top',
+					value: 'πr²',
+					label: '원 면적 공식',
+					icon: 'mdi:math-compass',
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: '틀 형태 비교 및 열효율성',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 3,
+			items: [
+				{
+					title: '원형 틀',
+					icon: 'mdi:circle-outline',
+					description: '베이킹의 표준입니다. 가장자리에서 중앙으로 매우 균일하게 열이 전달됩니다.',
+					points: [
+						'최적의 열분배',
+						'높은 스펀지 케이크에 이상적',
+						'반지름을 기준으로 계산',
+					],
+				},
+				{
+					title: '정사각형 틀',
+					icon: 'mdi:square-outline',
+					description: '오븐 공간 활용을 극대화합니다. 브라우니와 깔끔한 사각 컷팅에 좋습니다.',
+					highlight: true,
+					points: [
+						'모서리가 더 빠르게 익음',
+						'자르기 쉬움',
+						'한 변 x 한 변으로 계산',
+					],
+				},
+				{
+					title: '직사각형 틀',
+					icon: 'mdi:rectangle-outline',
+					description: '대형 시트 케이크에 완벽합니다. 중앙부 익힘 상태 확인이 필요합니다.',
+					points: [
+						'가장 높은 총 용량',
+						'다용도 활용',
+						'가로 x 세로로 계산',
+					],
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: '면적 계산의 수학적 원리',
+			level: 3,
+		},
+		{
+			type: 'paragraph',
+			html: '올바른 변환 계수를 계산하기 위해 다음 기하학 공식을 사용하여 바닥 면적을 비교합니다:',
+		},
+		{
+			type: 'table',
+			headers: ['틀 형태', '면적 공식', '핵심 고려사항'],
+			rows: [
+				['원형', 'π × 반지름²', '반지름은 지름의 절반입니다'],
+				['정사각형', '한 변 × 한 변', '내부 치수만 사용하세요'],
+				['직사각형', '가로 × 세로', '시트 케이크 및 브라우니의 표준'],
+			],
+		},
+		{
+			type: 'title',
+			text: '틀 사이즈 변경 시 흔한 실수',
+			level: 3,
+		},
+		{
+			type: 'list',
+			items: [
+				'<strong>단순 비례 계산:</strong> 지름을 두 배로 늘려도 재료는 두 배가 아니라 4배가 됩니다.',
+				'<strong>높이 무시:</strong> 깊은 틀은 낮은 온도에서 더 오래 구워야 합니다.',
+				'<strong>팽창제 양:</strong> 베이킹파우더가 항상 완벽하게 비례하여 늘어나는 것은 아닙니다.',
+				'<strong>수분 증발:</strong> 적은 양의 반죽은 표면적 비율이 높아 더 빠르게 건조될 수 있습니다.',
+			],
+		},
+		{
+			type: 'diagnostic',
+			variant: 'warning',
+			title: '틀 용량 한계',
+			html: '계산된 계수와 관계없이, 틀의 2/3 이상 내용물을 채우지 않도록 주의하세요.',
+		},
+		{
+			type: 'title',
+			text: '변환 용어집',
+			level: 3,
+		},
+		{
+			type: 'glossary',
+			items: [
+				{
+					term: '변환 계수',
+					definition: '새로운 틀에 레시피를 맞추기 위해 모든 재료에 곱해야 하는 숫자.',
+				},
+				{
+					term: '바닥 면적',
+					definition: '틀 바닥의 표면적 측정값.',
+				},
+				{
+					term: '반지름',
+					definition: '원의 중심에서 가장자리까지의 거리.',
+				},
+				{
+					term: '열전달',
+					definition: '열에너지가 틀의 형태와 재질에 따라 이동하는 방식.',
 				},
 			],
 		},
 		{
 			type: 'tip',
-			html: '계산된 계수와 관계없이, 틀의 2/3 이상 내용물을 채우지 않도록 주의하세요.',
+			html: '훨씬 큰 틀로 변경할 때는 중앙까지 균일하게 열이 전달되도록 전용 벨트나 힐링 코어를 활용하세요.',
+		},
+		{
+			type: 'paragraph',
+			html: '틀 변환법을 마스터하면 어떤 레시피든 자유롭게 조절할 수 있습니다. 이 계산기를 통해 전문적인 결과를 만들어보세요.',
 		},
 	],
   bibliography,

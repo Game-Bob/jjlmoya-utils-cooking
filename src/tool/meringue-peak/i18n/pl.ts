@@ -150,6 +150,11 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'Porównanie Technik Robienia Bezy',
+      level: 3,
+    },
+    {
       type: 'comparative',
       columns: 3,
       items: [
@@ -190,9 +195,74 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'Wizualne Etapy Ubijania Białek',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['Etap', 'Opis Wizualny', 'Zalecane Zastosowanie', 'Stabilność'],
+      rows: [
+        ['Pienista', 'Duże, przeźroczyste pęcherzyki', 'Dodanie kwasu lub cukru', 'Brak'],
+        ['Miękkie Wierzchołki', 'Końcówki się opadają', 'Musy i suflety', 'Niska'],
+        [
+          'Sztywne Wierzchołki',
+          'Sztywna, pionowa końcówka',
+          'Dekoracja i pieczenie',
+          'Wysoka',
+        ],
+        [
+          'Przebite Białka',
+          'Ziarnista i sucha struktura',
+          'Nieużyteczne (zwarzone)',
+          'Zapadnięcie',
+        ],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'Czy Twoja Beza "Płacze" lub Wydziela Płyn?',
+      html: 'Jeśli widzisz wyciekający syrop (syneraza), cukier nie rozpuścił się całkowicie lub wilgotność powietrza jest wysoka. W bezie włoskiej wlewaj syrop powolnym, stałym strumieniem.',
+    },
+    {
+      type: 'title',
+      text: 'Słowniczek Techniczny Cukiernictwa',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Ovalbumina',
+          definition:
+            'Główne białko w białku jaja odpowiedzialne za zatrzymywanie powietrza.',
+        },
+        {
+          term: 'Hygroskopijność',
+          definition:
+            'Właściwość cukru do pochłaniania wilgoci z powietrza.',
+        },
+        {
+          term: 'Kamień Winny (Cream of Tartar)',
+          definition:
+            'Kwaśna sól, która stabilizuje pianę i zapobiega przebiciu białek.',
+        },
+        {
+          term: 'Kąpiel Wodna (Bain-Marie)',
+          definition:
+            'Pośrednia metoda podgrzewania do bezpiecznego rozpuszczania cukru w bezie szwajcarskiej.',
+        },
+      ],
+    },
+    {
       type: 'tip',
-      title: 'Triki z metalową miską',
-      html: 'Przetrzyj miskę octem lub cytryną. Każdy ślad tłuszczu uniemożliwi ubicie białek.',
+      title: 'Sposób z Octem',
+      html: 'Przetrzyj miskę ręcznikiem papierowym zwilżonym octem lub sokiem z cytryny. Każdy ślad tłuszczu uniemożliwi ubicie białek.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Nasz kalkulator wykonuje obliczenia za Ciebie, dzięki czemu możesz skupić się na ubijaniu aż do uzyskania idealnej, błyszczącej bezy.',
     },
   ],
   bibliography,

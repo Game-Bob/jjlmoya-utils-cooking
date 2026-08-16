@@ -26,6 +26,11 @@ const faq = [
 		answer:
 			'Klicken Sie auf die Schaltfläche unten, um eine neue Zeile hinzuzufügen. Geben Sie den Namen und das Originalgewicht ein; das skalierte Gewicht wird sofort berechnet.',
 	},
+	{
+		question: 'Ist die Skalierung für sehr große Bleche zuverlässig?',
+		answer:
+			'Mathematisch ja, aber bedenken Sie, dass sehr große Kuchen in der Mitte länger brauchen. Eventuell müssen Sie die Ofentemperatur leicht senken.',
+	},
 ];
 
 const howTo = [
@@ -115,12 +120,18 @@ export const content: ToolLocaleContent = {
 	seo: [
 		{
 			type: 'title',
-			text: 'Leitfaden zur Skalierung von Backrezepten',
+			text: 'Erweiterter Leitfaden zur Skalierung von Backrezepten',
 			level: 2,
 		},
 		{
 			type: 'paragraph',
-			html: 'Das Umrechnen von Rezeptmengen für verschiedene Backformen ist eine grundlegende Aufgabe in der Konditorei. Es geht darum, die <strong>geometrischen Proportionen</strong> zu wahren.',
+			html: 'Das Umrechnen von Rezeptmengen für verschiedene Backformen ist eine grundlegende Aufgabe in der Konditorei. Es geht darum, die <strong>geometrischen Proportionen</strong> zu wahren, um Kuchenhöhe und Textur zu erhalten.',
+		},
+		{
+			type: 'diagnostic',
+			variant: 'info',
+			title: 'Das Geheimnis der Grundfläche',
+			html: 'Das Geheimnis der richtigen Skalierung liegt in der Grundfläche, nicht im Durchmesser. Eine Erhöhung des Durchmessers um 25 % verdoppelt die Fläche nahezu.',
 		},
 		{
 			type: 'stats',
@@ -132,9 +143,9 @@ export const content: ToolLocaleContent = {
 					icon: 'mdi:resize',
 				},
 				{
-					value: 'πr²',
-					label: 'Kreisflächenformel',
-					icon: 'mdi:math-compass',
+					value: 'x2.25',
+					label: 'Faktor 15cm zu 22.5cm',
+					icon: 'mdi:arrow-up-bold-outline',
 				},
 				{
 					value: '0.64',
@@ -142,15 +153,75 @@ export const content: ToolLocaleContent = {
 					icon: 'mdi:arrow-down-bold-outline',
 				},
 				{
-					value: '2/3',
-					label: 'Max. Füllhöhe',
-					icon: 'mdi:format-vertical-align-top',
+					value: 'πr²',
+					label: 'Kreisflächenformel',
+					icon: 'mdi:math-compass',
 				},
 			],
 		},
 		{
 			type: 'title',
-			text: 'Fehler beim Ändern der Größe',
+			text: 'Formenvergleich und Backeffizienz',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 3,
+			items: [
+				{
+					title: 'Runde Backformen',
+					icon: 'mdi:circle-outline',
+					description: 'Der Backstandard. Gleichmäßige Hitzeverteilung vom Rand zur Mitte.',
+					points: [
+						'Optimale Hitzeverteilung',
+						'Ideal für hohe Biskuits',
+						'Berechnung über den Radius',
+					],
+				},
+				{
+					title: 'Quadratische Formen',
+					icon: 'mdi:square-outline',
+					description: 'Maximal ausgenutzter Ofenraum. Ideal für Brownies und saubere Schnitte.',
+					highlight: true,
+					points: [
+						'Schnelleres Backen der Ecken',
+						'Einfach zu portionieren',
+						'Berechnung Seite x Seite',
+					],
+				},
+				{
+					title: 'Rechteckige Formen',
+					icon: 'mdi:rectangle-outline',
+					description: 'Perfekt für Blechkuchen. Mitte auf Garzustand prüfen.',
+					points: [
+						'Höchste Gesamtkapazität',
+						'Vielseitig einsetzbar',
+						'Berechnung Breite x Länge',
+					],
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Mathematik der Flächenskalierung',
+			level: 3,
+		},
+		{
+			type: 'paragraph',
+			html: 'Um den korrekten Skalierungsfaktor zu berechnen, vergleichen wir die Grundflächen mit diesen Formeln:',
+		},
+		{
+			type: 'table',
+			headers: ['Formform', 'Flächenformel', 'Wichtiger Hinweis'],
+			rows: [
+				['Kreisförmig', 'π × Radius²', 'Radius ist der halbe Durchmesser'],
+				['Quadratisch', 'Seite × Seite', 'Nur Innenmaße verwenden'],
+				['Rechteckig', 'Breite × Länge', 'Standard für Blechkuchen'],
+			],
+		},
+		{
+			type: 'title',
+			text: 'Häufige Fehler beim Ändern der Formgröße',
 			level: 3,
 		},
 		{
@@ -159,11 +230,48 @@ export const content: ToolLocaleContent = {
 				'<strong>Lineare Skalierung:</strong> Den Durchmesser zu verdoppeln vervierfacht die Zutatenmenge.',
 				'<strong>Höhe ignorieren:</strong> Tiefere Formen brauchen deutlich mehr Zeit im Zentrum.',
 				'<strong>Backtriebmittel:</strong> Backpulver muss nicht immer exakt linear mitskaliert werden.',
+				'<strong>Verdunstung:</strong> Kleinere Mengen können schneller austrocknen.',
+			],
+		},
+		{
+			type: 'diagnostic',
+			variant: 'warning',
+			title: 'Kapazitätsgrenze beachten',
+			html: 'Füllen Sie eine Backform nie mehr als zu 2/3, um ein Überlaufen beim Aufgehen zu verhindern.',
+		},
+		{
+			type: 'title',
+			text: 'Glossar zur Umrechnung',
+			level: 3,
+		},
+		{
+			type: 'glossary',
+			items: [
+				{
+					term: 'Skalierungsfaktor',
+					definition: 'Der Multiplikator für alle Zutaten zur Anpassung an die neue Form.',
+				},
+				{
+					term: 'Grundfläche',
+					definition: 'Die Bodenfläche der Form. Entscheidend für das Teigvolumen.',
+				},
+				{
+					term: 'Radius',
+					definition: 'Abstand von der Mitte zum Rand eines Kreises.',
+				},
+				{
+					term: 'Wärmeübertragung',
+					definition: 'Wie Hitze durch die Form wandert. Abhängig von Form und Material.',
+				},
 			],
 		},
 		{
 			type: 'tip',
-			html: 'Füllen Sie eine Backform nie mehr als zu 2/3, um ein Überlaufen beim Backen zu verhindern.',
+			html: 'Bei sehr viel größeren Formen helfen Isolierbänder um die Form für gleichmäßige Hitzeverteilung.',
+		},
+		{
+			type: 'paragraph',
+			html: 'Mit präziser Skalierung gelingt jeder Kuchen in jeder Wunschform perfekt.',
 		},
 	],
   bibliography,

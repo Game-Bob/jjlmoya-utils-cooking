@@ -122,6 +122,10 @@ export const content: ToolLocaleContent = {
       level: 3,
     },
     {
+      type: 'paragraph',
+      html: 'Cucinare significa essenzialmente applicare calore per una durata specifica per trasformare la struttura chimica del cibo. La denaturazione delle proteine e la reazione di Maillard dipendono criticamente dal timer.',
+    },
+    {
       type: 'table',
       headers: ['Alimento', 'Punto di Cottura', 'Tempo', 'Vantaggio'],
       rows: [

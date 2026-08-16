@@ -20,6 +20,10 @@ const faq = [
 		question: 'Czy mogę użyć własnych proporcji?',
 		answer: 'Oczywiście. Jeśli masz konkretny protokół, możesz wpisać własne dane. Niektórzy piekarze używają 1:10:10 do bardzo długiej fermentacji.',
 	},
+	{
+		question: 'Czy kalkulator zaokrągla gramy?',
+		answer: 'Tak. Zaokrągla do najbliższej liczby całkowitej dla wygody. Małe różnice zaokrągleń nie wpływają znacząco na fermentację.',
+	},
 ];
 const howTo = [
 	{
@@ -69,11 +73,12 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-	slug: 'zakwas',
+	slug: 'kalkulator-zakwasu-chlebowego',
 	title,
 	description,
 	faqTitle: 'Często zadawane pytania',
-	faq,  howTo,
+	faq,
+	howTo,
 	seo: [
 		{
 			type: 'title',
@@ -83,6 +88,157 @@ export const content: ToolLocaleContent = {
 		{
 			type: 'paragraph',
 			html: '<strong>Zakwas</strong> to nie tylko składnik, to żywy ekosystem dzikich drożdży i bakterii kwasu mlekowego (LAB). Klucz do doskonałego chleba tkwi w zdrowiu tej kultury.',
+		},
+		{
+			type: 'stats',
+			columns: 4,
+			items: [
+				{
+					value: '24-26°C',
+					label: 'Optymalna Temp.',
+					icon: 'mdi:thermometer',
+				},
+				{
+					value: '3.8 - 4.2',
+					label: 'Idealne pH',
+					icon: 'mdi:test-tube',
+				},
+				{
+					value: '100%',
+					label: 'Std. Hydracja',
+					icon: 'mdi:water-percent',
+				},
+				{
+					value: 'x2 - x3',
+					label: 'Wzrost w Szczycie',
+					icon: 'mdi:trending-up',
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Porównanie Rodzajów Zakwasu',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 2,
+			items: [
+				{
+					title: 'Zakwas Płynny (100% Hydr.)',
+					icon: 'mdi:water',
+					description: 'Najpopularniejszy wybór we współczesnym piekarnictwie rzemieślniczym. Łatwy w mieszaniu.',
+					points: [
+						'Szybsza fermentacja',
+						'Łagodniejszy, bardziej mlekowy profil smakowy',
+						'Łatwy do odmierzania i dokarmiania',
+						'Idealny do bagietek i chlebów pszennych',
+					],
+				},
+				{
+					title: 'Zakwas Gęsty (Pasta Madre)',
+					icon: 'mdi:bread-slice-outline',
+					description: 'Tradycyjny we Włoszech. Hydracja zazwyczaj w granicach 50%. Bardzo silny.',
+					highlight: true,
+					points: [
+						'Wolniejsza i bardziej stabilna fermentacja',
+						'Bardziej octowy profil smakowy',
+						'Duża siła wyrastania dla ciast bogatych',
+						'Idealny do Panettone i Brioche',
+					],
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Zrozumienie Matematycznych Proporcji Dokarmiania',
+			level: 3,
+		},
+		{
+			type: 'paragraph',
+			html: 'Proporcja oznacza części zakwasu matki w stosunku do Mąki i Wody. Np. 1:2:2 oznacza 1 część zakwasu na 2 części mąki i 2 części wody.',
+		},
+		{
+			type: 'table',
+			headers: ['Proporcja', 'Zalecane Zastosowanie', 'Szacowany Czas (24°C)', 'Główna Zaleta'],
+			rows: [
+				['1:1:1', 'Codzienne dokarmianie', '4-6 godzin', 'Szybka pielęgnacja'],
+				['1:2:2', 'Aktywacja przed pieczeniem', '6-8 godzin', 'Równowaga kwasowości'],
+				['1:5:5', 'Standardowe użycie do chleba', '8-12 godzin', 'Przewidywalny szczyt'],
+				['1:10:10', 'Długie opóźnienie', '16-24 godzin', 'Elastyczny harmonogram'],
+			],
+		},
+		{
+			type: 'title',
+			text: 'Wybór Mąki do Dokarmiania Zakwasu',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 2,
+			items: [
+				{
+					title: 'Mąka Żytnia Razowa',
+					icon: 'mdi:grain',
+					description: 'Super-pożywienie dla dzikich drożdży. Zawiera więcej składników odżywczych niż pszenica.',
+					points: [
+						'Eksplozywna aktywność fermentacyjna',
+						'Daje głębokie, głębokie aromaty',
+						'Utrzymuje stabilniejszy poziom kwasowości',
+					],
+				},
+				{
+					title: 'Mąka Pszenna Chlebowa',
+					icon: 'mdi:shaker-outline',
+					description: 'Idealna dla poszukujących łagodniejszego smaku, gdzie zakwas nie dominuje w chlebie.',
+					points: [
+						'Bardziej neutralny i wszechstronny smak',
+						'Bardzo wyraźna obserwacja pęcherzyków',
+						'Mniejsza tendencja do przefermentowania',
+					],
+				},
+			],
+		},
+		{
+			type: 'diagnostic',
+			variant: 'warning',
+			title: 'Oznaki Głodnego Zakwasu',
+			html: 'Jeśli na powierzchni pojawi się ciemny płyn (hooch), pachnie intensywnie octem lub acetonem albo szybko opada po szczycie, wymaga wyższej proporcji dokarmiania.',
+		},
+		{
+			type: 'title',
+			text: 'Techniczny Słowniczek Zakwasowy',
+			level: 3,
+		},
+		{
+			type: 'glossary',
+			items: [
+				{
+					term: 'Levain / Zaczyn',
+					definition: 'Zaczyn przygotowany z zakwasu matki przeznaczony do konkretnego wypieku.',
+				},
+				{
+					term: 'Hooch',
+					definition: 'Warstwa alkoholu i wody powstająca, gdy kultura wyczerpie pożywienie.',
+				},
+				{
+					term: 'Szczyt Aktywności',
+					definition: 'Moment maksymalnej objętości i gęstości drożdży. Idealny czas na mieszanie ciasta.',
+				},
+				{
+					term: 'Bakterie Kwasu Mlekowego (LAB)',
+					definition: 'Mikroorganizmy odpowiedzialne za wytwarzanie kwasów organicznych dających smak i świeżość.',
+				},
+			],
+		},
+		{
+			type: 'tip',
+			title: 'Test Pływalności',
+			html: 'Aby sprawdzić, czy zakwas jest gotowy, wrzuć łyżeczkę do szklanki z wodą: jeśli unosi się na powierzchni, zawiera wystarczająco dużo CO2.',
+		},
+		{
+			type: 'paragraph',
+			html: 'Użycie naszego kalkulatora pozwala ustandaryzować proces wypieku i lepiej zrozumieć biologię chleba.',
 		},
 	],
 	ui: {

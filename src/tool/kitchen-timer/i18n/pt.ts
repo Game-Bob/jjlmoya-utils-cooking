@@ -122,6 +122,10 @@ export const content: ToolLocaleContent = {
       level: 3,
     },
     {
+      type: 'paragraph',
+      html: 'Cozinhar é essencialmente aplicar calor durante uma duração específica para transformar a estrutura química dos alimentos. A desnaturação das proteínas e a reação de Maillard dependem criticamente do temporizador.',
+    },
+    {
       type: 'table',
       headers: ['Alimento', 'Ponto de Cozedura', 'Tempo', 'Benefício'],
       rows: [

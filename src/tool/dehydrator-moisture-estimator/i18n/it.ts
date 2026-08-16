@@ -8,13 +8,33 @@ const faq = [
   {
     question: "Come si calcola la perdita di peso durante l'essiccazione?",
     answer: "La perdita di peso si calcola separando il contenuto solido dall'acqua. Poiché la massa solida rimane costante, il peso finale si calcola dividendo la parte solida per 1 meno la percentuale di umidità desiderata."
+  },
+  {
+    question: "Perché la temperatura dell'essiccatore influisce sul tempo di essiccazione?",
+    answer: "Temperature più elevate accelerano il tasso di evaporazione dell'acqua dalla superficie del cibo. Tuttavia, una temperatura troppo elevata può causare l'indurimento superficiale (case hardening), in cui lo strato esterno si asciuga troppo velocemente intrappolando l'umidità all'interno."
+  },
+  {
+    question: "Come faccio a sapere quando il cibo è completamente essiccato?",
+    answer: "Il cibo correttamente essiccato deve risultare asciutto e non appiccicoso. La frutta deve essere flessibile e cuoiosa, le verdure fragili o croccanti, e la carne per jerky dura e pieghevole senza spezzarsi."
   }
 ];
 
 const howTo = [
   {
     name: "Seleziona un ingrediente o imposta l'umidità manuale",
-    text: "Scegli un preset o configura la kelembapan iniziale a piacere."
+    text: "Scegli tra i nostri preset come Carne Secca, Chips di Anguria, Anelli di Mela, Fette di Mango o Funghi, impostando automaticamente l'umidità iniziale e il tempo di essiccazione base."
+  },
+  {
+    name: "Regola il contenuto di umidità iniziale e finale",
+    text: "Imposta l'umidità di partenza del cibo e il livello di umidità finale desiderato utilizzando i cursori."
+  },
+  {
+    name: "Imposta il peso iniziale e la temperatura di essiccazione",
+    text: "Inserisci il peso a crudo del cibo e la temperatura di funzionamento del tuo essiccatore."
+  },
+  {
+    name: "Visualizza il tempo stimato e il peso finale",
+    text: "Leggi il risultato calcolato che mostra il peso finale del cibo, l'acqua evaporata e le ore stimate necessarie."
   }
 ];
 

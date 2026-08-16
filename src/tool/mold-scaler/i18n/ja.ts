@@ -26,6 +26,11 @@ const faq = [
 		answer:
 			'下部のボタンをクリックして新しい行を追加します。材料名と元の分量を入力すると、即座に換算後の分量が表示されます。',
 	},
+	{
+		question: '非常に大きな天板への換算も正確ですか？',
+		answer:
+			'数学的には正確ですが、非常に大きなケーキは中央部まで火が通るのに時間がかかります。オーブンの温度を少し下げて調整することをおすすめします。',
+	},
 ];
 
 const howTo = [
@@ -120,7 +125,13 @@ export const content: ToolLocaleContent = {
 		},
 		{
 			type: 'paragraph',
-			html: '異なるサイズの型に合わせて材料を計算することは、プロの製菓において非常に重要です。単なる勘ではなく、<strong>幾何学的な比率</strong>を守ることで、理想的な食感と焼き上がりを維持できます。',
+			html: '異なるサイズの型に合わせて材料を計算することは、プロの製菓において非常に重要です。単なる勘ではなく、<strong>幾何学的な比率</strong>を守ることで、理想的な食感、高さ、水分量を維持できます。',
+		},
+		{
+			type: 'diagnostic',
+			variant: 'info',
+			title: '底面積の秘密',
+			html: '適切な換算の秘密は直径ではなく底面積にあります。丸型の直径を25%大きくすると、底面積と必要な材料はほぼ倍増します。',
 		},
 		{
 			type: 'stats',
@@ -132,9 +143,9 @@ export const content: ToolLocaleContent = {
 					icon: 'mdi:resize',
 				},
 				{
-					value: 'πr²',
-					label: '円の面積公式',
-					icon: 'mdi:math-compass',
+					value: 'x2.25',
+					label: '15cmから22.5cmへの係数',
+					icon: 'mdi:arrow-up-bold-outline',
 				},
 				{
 					value: '0.64',
@@ -142,15 +153,125 @@ export const content: ToolLocaleContent = {
 					icon: 'mdi:arrow-down-bold-outline',
 				},
 				{
-					value: '2/3',
-					label: '最大投入量',
-					icon: 'mdi:format-vertical-align-top',
+					value: 'πr²',
+					label: '円の面積公式',
+					icon: 'mdi:math-compass',
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: '型の形状比較と熱効率',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 3,
+			items: [
+				{
+					title: '丸型',
+					icon: 'mdi:circle-outline',
+					description: '製菓の王道。外側から中央に向かって非常に均一に火が通ります。',
+					points: [
+						'最適な熱分散',
+						'背の高いスポンジに最適',
+						'半径から計算',
+					],
+				},
+				{
+					title: '角型',
+					icon: 'mdi:square-outline',
+					description: 'オーブン内のスペースを最大限に活用。ブラウニーや四角いカットに最適。',
+					highlight: true,
+					points: [
+						'四隅の火通りが早い',
+						'切り分けが容易',
+						'一辺 x 一辺で計算',
+					],
+				},
+				{
+					title: '長方形型',
+					icon: 'mdi:rectangle-outline',
+					description: '天板ケーキやシートケーキに最適。中央の焼き上がりチェックが必要です。',
+					points: [
+						'最大級の容量',
+						'多目的な用途',
+						'幅 x 奥行きで計算',
+					],
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: '底面積計算の数学的根拠',
+			level: 3,
+		},
+		{
+			type: 'paragraph',
+			html: '正確な換算倍率を計算するため、以下の幾何学公式を用いて底面積を比較します：',
+		},
+		{
+			type: 'table',
+			headers: ['型の形状', '面積公式', '重要な注意点'],
+			rows: [
+				['丸型', 'π × 半径²', '半径は直径の半分です'],
+				['角型', '一辺 × 一辺', '内寸のみを使用してください'],
+				['長方形型', '幅 × 奥行き', 'シートケーキやブラウニーの標準'],
+			],
+		},
+		{
+			type: 'title',
+			text: '型サイズ変更時のよくある失敗',
+			level: 3,
+		},
+		{
+			type: 'list',
+			items: [
+				'<strong>単純な比例計算:</strong> 直径を2倍にしても材料は2倍ではなく、4倍になります。',
+				'<strong>型の深さの軽視:</strong> 深い型は低温でじっくり焼く必要があります。',
+				'<strong>膨張剤の量:</strong> ベーキングパウダーは必ずしも単純な倍率計算通りにいかない場合があります。',
+				'<strong>水分蒸発:</strong> 少量の生地は表面積の比率が高いため乾燥しやすくなります。',
+			],
+		},
+		{
+			type: 'diagnostic',
+			variant: 'warning',
+			title: '型の容量限界',
+			html: '計算結果に関わらず、生地の膨らみを考慮して型には8分目（2/3）以上入れないでください。',
+		},
+		{
+			type: 'title',
+			text: '製菓・幾何学用語集',
+			level: 3,
+		},
+		{
+			type: 'glossary',
+			items: [
+				{
+					term: '換算倍率',
+					definition: '新しい型にレシピを適応させるために、すべての材料に掛ける数値。',
+				},
+				{
+					term: '底面積',
+					definition: '型の底面の測定値。お菓子作りにおいて生地量を決める最も重要な要素です。',
+				},
+				{
+					term: '半径',
+					definition: '円の中心から端までの距離。公式πr²の必須数値。',
+				},
+				{
+					term: '熱伝導',
+					definition: '熱エネルギーが型を通じて移動する仕組み。形状や材質によって大きく異なります。',
 				},
 			],
 		},
 		{
 			type: 'tip',
-			html: '算出された係数に関わらず、型には容量の2/3以上は入れないようにしてください。',
+			html: '非常に大きな型に変更する場合は、周りが焦げずに中央まで均一に焼けるようロールケーキ用帯やヒートコアをご活用ください。',
+		},
+		{
+			type: 'paragraph',
+			html: '型の換算マスターになれば、どんな型でもレシピを自由自在にアレンジできます。この計算機を使ってプロのような仕上がりを目指しましょう。',
 		},
 	],
   bibliography,

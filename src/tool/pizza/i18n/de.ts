@@ -20,6 +20,14 @@ const faq = [
     question: 'Geht neapolitanische Pizza im Haushaltsbackofen?',
     answer: 'Ja, aber mit Anpassungen. Heizen Sie den Ofen bei maximaler Temperatur (250-280°C) mit Pizzastein 45-60 Min. vor. Die Backzeit beträgt 5-7 Min. statt 60-90 Sek.',
   },
+  {
+    question: 'Welches Mehl sollte ich verwenden?',
+    answer: 'Ideal: Caputo Pizzeria (W260-280) oder Manitoba (W350-400). Alternative: Jedes Mehl mit 11-13g Eiweiß pro 100g. Vermeiden Sie schwache Mehle (W130-160) für lange Reifung.',
+  },
+  {
+    question: 'Warum reißt der Teig beim Dehnen?',
+    answer: 'Das Gluten ist nicht entspannt. Lassen Sie die Teigkugel 2-3 Stunden bei Raumtemperatur ruhen. Wenn es wiederholt auftritt, war das Kneten unzureichend oder das Mehl zu schwach.',
+  },
 ];
 const howTo = [
   {
@@ -41,6 +49,10 @@ const howTo = [
   {
     name: 'Lange Fermentation',
     text: 'Lagern Sie die Kugeln in einem luftdichten Behälter 24-72 Stunden im Kühlschrank. Dieser Schritt sorgt für Aroma und Bekömmlichkeit.',
+  },
+  {
+    name: 'Dehnen und Backen',
+    text: '30 Minuten vor dem Backen aus der Kälte nehmen. Von der Mitte nach außen dehnen. Bei maximaler Temperatur backen.',
   },
 ];
 
@@ -114,7 +126,7 @@ export const content: ToolLocaleContent = {
   howTo, seo: [
     {
       type: 'title',
-      text: 'Leitfaden für authentischen neapolitanischen Pizzateig',
+      text: 'Meister-Leitfaden für authentischen neapolitanischen Pizzateig',
       level: 2,
     },
     {
@@ -148,9 +160,139 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'Die entscheidende Bedeutung der Hydratation',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Die Hydratation (Wassergehalt bezogen auf das Mehlgewicht) bestimmt die Textur der <strong>Cornicione</strong> (Teigrand).',
+    },
+    {
+      type: 'comparative',
+      columns: 3,
+      items: [
+        {
+          title: 'Hydratation 55 bis 60%',
+          icon: 'mdi:water-percent',
+          description: 'Sehr einfach zu handhaben, ideal für Anfänger und Haushaltsöfen.',
+          points: [
+            'Leichte Glutennetzwerk-Bildung',
+            'Wenig klebriger Teig',
+            'Feste und knusprige Kruste',
+          ],
+        },
+        {
+          title: 'Hydratation 63 bis 67%',
+          icon: 'mdi:water',
+          description: 'Der AVPN-Standard. Perfekte Balance für einen leichten Teig.',
+          highlight: true,
+          points: [
+            'Traditionelle elastische Textur',
+            'Ideal für Holzöfen',
+            'Mittlere Kneterfahrung erforderlich',
+          ],
+        },
+        {
+          title: 'Hydratation 70%+',
+          icon: 'mdi:water-plus',
+          description: 'Moderne Pizzas mit riesigem Rand. Erfordert fortgeschrittene Technik.',
+          points: [
+            'Extrem große Poren',
+            'Sehr leicht und bekömmlich',
+            'Erfordert sehr starkes Mehl',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Hefearten und die richtige Auswahl',
+      level: 3,
+    },
+    {
+      type: 'comparative',
+      columns: 2,
+      items: [
+        {
+          title: 'Frische Hefe',
+          icon: 'mdi:bread-slice-outline',
+          description: 'Die traditionelle Wahl der Pizzabäcker. Verleiht ein komplexeres Aroma.',
+          points: [
+            'Tieferer und sauberer Geschmack',
+            'Ausgewogene enzymatische Aktivität',
+            'Löst sich leicht in warmem Wasser',
+            'Kürzere Haltbarkeit',
+          ],
+        },
+        {
+          title: 'Trockenhefe',
+          icon: 'mdi:shaker-outline',
+          description: 'Sehr stabil und einfach zu lagern. Ideal für den Vorrat.',
+          points: [
+            'Lange Haltbarkeit',
+            'Keine vorherige Hydratisierung nötig',
+            'Dreimal stคำer als frische Hefe',
+            'Neutralerer Geschmack',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Mehlwahl nach W-Stärkeindex',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['Mehltyp', 'Stärke (W)', 'Gehzeit', 'Empfehlung'],
+      rows: [
+        ['Schwaches Mehl', 'W130-180', '4-8 Stunden', 'Schnelle Backwaren'],
+        ['Mittleres Mehl', 'W200-240', '8-24 Stunden', 'Schnelle Pizza'],
+        ['Starkes Mehl', 'W260-320', '24-72 Stunden', 'Authentische neapolitanische Pizza'],
+        ['Extra starkes Mehl', 'W350+', '72+ Stunden', 'Sehr lange Teigführung'],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'Temperaturkontrolle beim Kneten',
+      html: 'Der Teig sollte am Ende des Knetens 24°C nicht überschreiten, um das Glutennetzwerk nicht zu schädigen.',
+    },
+    {
+      type: 'title',
+      text: 'Glossar für Pizzabäcker',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Cornicione',
+          definition: 'Der aufgegangene Rand der neapolitanischen Pizza.',
+        },
+        {
+          term: 'Reifung',
+          definition: 'Enzymatischer Prozess zum Abbau von Stärke und Proteinen.',
+        },
+        {
+          term: 'Teigentwicklung',
+          definition: 'Der Punkt optimaler Elastizität des Glutennetzwerks.',
+        },
+        {
+          term: 'Autolyse',
+          definition: 'Ruhephase von Mehl und Wasser zur leichteren Teigentwicklung.',
+        },
+      ],
+    },
+    {
       type: 'tip',
       title: 'Der Kühlschrank Trick',
       html: 'Eine 24-stündige Stockgare bei 4°C erzeugt komplexe Aromen, die bei Raumtemperatur nicht möglich sind.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Unser Rechner automatisiert die Berechnungen, damit Sie sich auf das Kneten und Backen konzentrieren können.',
     },
   ],
   bibliography,

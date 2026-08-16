@@ -34,6 +34,10 @@ const howTo = [
     name: 'Sıvı hacmini girin',
     text: 'Koyulaştırmak istediğiniz sıvının ml miktarını belirtin. Hesaplayıcı size tam olarak ne kadar tereyağı ve un kullanacağınızı söyleyecektir.',
   },
+  {
+    name: 'Doğru pişirme süresini uygulayın',
+    text: 'Tereyağı-un karışımınızı belirtilen seviyeye (Beyaz, Sarı veya Kahverengi) kadar pişirin.',
+  },
 ];
 
 const faqSchema = {
@@ -83,6 +87,137 @@ export const content: ToolLocaleContent = {
     {
       type: 'paragraph',
       html: '<strong>Meyane</strong>, klasik Fransız mutfağının yapısal temelidir. Un, tereyağı ve sıvı arasındaki ilişkiyi anlamak, ipeksi bir sos ile topaklanmış bir sıvı arasındaki farktır.',
+    },
+    {
+      type: 'stats',
+      columns: 4,
+      items: [
+        {
+          value: '1:1',
+          label: 'Un:Yağ Oranı',
+          icon: 'mdi:scale-balance',
+        },
+        {
+          value: '3 dk',
+          label: 'Beyaz Meyane Süresi',
+          icon: 'mdi:timer-sand',
+        },
+        {
+          value: '100g/L',
+          label: 'Koyu Sos Oranı',
+          icon: 'mdi:waves',
+        },
+        {
+          value: '15 dk',
+          label: 'Kahverengi Meyane',
+          icon: 'mdi:fire',
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Kavurma Seviyeleri ve Kıvam Verme Gücü',
+      level: 3,
+    },
+    {
+      type: 'comparative',
+      columns: 3,
+      items: [
+        {
+          title: 'Beyaz Meyane',
+          icon: 'mdi:flask-round-bottom-outline',
+          description: '2-3 dakika pişirilir. En güçlü koyulaştırıcı.',
+          points: [
+            'Beşamel için temel',
+            'Maksimum koyulaştırma gücü',
+            'Nötr süt lezzeti',
+            'Renk değişimi yok',
+          ],
+        },
+        {
+          title: 'Sarı Meyane',
+          icon: 'mdi:gold',
+          description: '5-8 dakika hafif altın sarısı renge kadar pişirilir.',
+          highlight: true,
+          points: [
+            'Velouté için temel',
+            'Orta koyulaştırma gücü',
+            'Hafif fındıksı aroma',
+            'Açık renk stoklar için ideal',
+          ],
+        },
+        {
+          title: 'Kahverengi Meyane',
+          icon: 'mdi:coffee',
+          description: '15-20 dakika pişirilir. Derin kavrulmuş lezzet.',
+          points: [
+            'Espanyol sos için temel',
+            'Daha düşük koyulaştırma gücü (-30%)',
+            'Karmaşık kavrulmuş fındık lezzeti',
+            'Daha akışkan doku',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'İstenen Dokuya Göre Litre Başına Meyane Ağırlığı',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['İstenen Doku', 'Tereyağı (g)', 'Un (g)', 'Sıvı (L)'],
+      rows: [
+        ['Hafif Çorba / Krema', '25g', '25g', '1 Litre'],
+        ['Standart Sos', '50g', '50g', '1 Litre'],
+        ['Koyu Bağlayıcı Sos', '70g', '70g', '1 Litre'],
+        ['Kroket Hamuru / Dolgu', '125g', '125g', '1 Litre'],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'Topaklanmış Sos mu yoksa Un Tadı mı?',
+      html: 'Sosunuz topaklandıysa, sıcak meyaneye sıcak sıvı eklemişsinizdir. Her zaman termal şok uygulayın (sıcak meyaneye soğuk sıvı). Un tadı geliyorsa başlangıç pişirme süresini uzatın.',
+    },
+    {
+      type: 'title',
+      text: 'Sos Teknolojisi Sözlüğü',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Dekstrinleşme',
+          definition:
+            'Nişastanın ısıl işlemle kısa zincirlere ayrılması. Lezzeti artırır ancak koyulaştırmayı zayıflatır.',
+        },
+        {
+          term: 'Jelleşme',
+          definition:
+            'Nişasta taneciklerinin sıvıyı emerek şişmesi süreci.',
+        },
+        {
+          term: 'Beurre Manié',
+          definition:
+            'Son dakikada hızlı kıvam düzeltmeleri için kullanılan soğuk un ve tereyağı karışımı.',
+        },
+        {
+          term: 'Temel Soslar',
+          definition:
+            'Escoffier nin 5 temel sosu (Beşamel, Velouté, Espanyol, Hollandez ve Domates).',
+        },
+      ],
+    },
+    {
+      type: 'tip',
+      title: 'Soğuk Tereyağı Hilesi (Monter au Beurre)',
+      html: 'En son aşamada profesyonel bir parlaklık ve ipeksi doku için bir parça soğuk tereyağı çırpın.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Meyane hesaplayıcımız soslarınızın her zaman mükemmel teknik kıvamda olmasını sağlar.',
     },
   ],
   ui: {

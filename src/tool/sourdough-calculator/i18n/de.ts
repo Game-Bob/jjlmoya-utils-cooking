@@ -20,6 +20,10 @@ const faq = [
 		question: 'Kann ich benutzerdefinierte Verhältnisse verwenden?',
 		answer: 'Absolut. Wenn Sie ein spezielles Protokoll haben, können Sie Ihre eigenen Werte eingeben, z.B. 1:10:10 für eine sehr langsame Fermentation.',
 	},
+	{
+		question: 'Rundet der Rechner die Grammangaben ab?',
+		answer: 'Ja. Er rundet aus praktischen Gründen auf die nächste ganze Zahl. Kleine Rundungsdifferenzen beeinträchtigen die Fermentation nicht spürbar.',
+	},
 ];
 const howTo = [
 	{
@@ -109,6 +113,131 @@ export const content: ToolLocaleContent = {
 					icon: 'mdi:trending-up',
 				},
 			],
+		},
+		{
+			type: 'title',
+			text: 'Vergleich verschiedener Sauerteig-Kulturen',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 2,
+			items: [
+				{
+					title: 'Flüssiger Sauerteig (100% Hydr.)',
+					icon: 'mdi:water',
+					description: 'Die am weitesten verbreitete Form im modernen handwerklichen Backen. Leicht zu mischen.',
+					points: [
+						'Schnellere Fermentation',
+						'Milder, milchsaurer Geschmack',
+						'Einfach zu messen und aufzufrischen',
+						'Ideal für Baguettes und Landbrote',
+					],
+				},
+				{
+					title: 'Fester Sauerteig (Pasta Madre)',
+					icon: 'mdi:bread-slice-outline',
+					description: 'Traditionell in Italien. Hydratation liegt meist bei ca. 50%. Sehr triebstark.',
+					highlight: true,
+					points: [
+						'Langsamer und stabiler',
+						'Essigsaureres Geschmacksprofil',
+						'Hohe Triebkraft für schwere Teige',
+						'Ideal für Panettone und Brioche',
+					],
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Mathematische Auffrischungsverhältnisse verstehen',
+			level: 3,
+		},
+		{
+			type: 'paragraph',
+			html: 'Das Verhältnis gibt den Anteil von Anstellgut (ASG) zu Mehl und Wasser an. 1:2:2 bedeutet 1 Teil ASG auf 2 Teile Mehl und 2 Teile Wasser.',
+		},
+		{
+			type: 'table',
+			headers: ['Verhältnis', 'Empfohlene Nutzung', 'Geschätzte Zeit (24°C)', 'Hauptvorteil'],
+			rows: [
+				['1:1:1', 'Tägliche Fütterung', '4-6 Stunden', 'Schnelle Pflege'],
+				['1:2:2', 'Aktivierung vor dem Backen', '6-8 Stunden', 'Ausgewogene Säure'],
+				['1:5:5', 'Standard-Backansatz', '8-12 Stunden', 'Vorhersehbarer Peak'],
+				['1:10:10', 'Verzögerte Fütterung', '16-24 Stunden', 'Flexibler Zeitplan'],
+			],
+		},
+		{
+			type: 'title',
+			text: 'Mehlwahl für die Sauerteigfütterung',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 2,
+			items: [
+				{
+					title: 'Roggenvollkornmehl',
+					icon: 'mdi:grain',
+					description: 'Nahrung pur für wilde Hefen. Enthält mehr Nährstoffe und Enzyme als Weizen.',
+					points: [
+						'Explosive Fermentationsaktivität',
+						'Bringt tiefe, erdige Aromen',
+						'Hält den Säuregehalt stabil',
+					],
+				},
+				{
+					title: 'Weizenmehl Type 550',
+					icon: 'mdi:shaker-outline',
+					description: 'Ideal für alle, die ein mildes Aroma suchen, bei dem der Sauerteig das Brot nicht dominiert.',
+					points: [
+						'Neutralerer und vielseitiger Geschmack',
+						'Sehr gute Sichtbarkeit der Bläschen',
+						'Neigt weniger zur Überfermentation',
+					],
+				},
+			],
+		},
+		{
+			type: 'diagnostic',
+			variant: 'warning',
+			title: 'Anzeichen für einen hungrigen Sauerteig',
+			html: 'Wenn sich eine dunkle Flüssigkeit (Fusel) bildet, der Ansatz stark nach Essig oder Aceton riecht oder nach dem Peak schnell zusammenfällt, benötigt er ein höheres Fütterungsverhältnis.',
+		},
+		{
+			type: 'title',
+			text: 'Technisches Sauerteig-Glossar',
+			level: 3,
+		},
+		{
+			type: 'glossary',
+			items: [
+				{
+					term: 'Levain',
+					definition: 'Ein aus der Mutterkultur angesetzter Vorteig für ein konkretes Brot-Rezept.',
+				},
+				{
+					term: 'Fusel (Hooch)',
+					definition: 'Eine Alkoholschicht, die entsteht, wenn die Nahrung aufgebraucht ist. Harmlos, zeigt aber Hunger an.',
+				},
+				{
+					term: 'Aktivitätspeak',
+					definition: 'Der Zeitpunkt maximaler Volumen- und Hefedichte. Der ideale Zeitpunkt zum Verbacken.',
+				},
+				{
+					term: 'Milchsäurebakterien (LAB)',
+					definition: 'Mikroorganismen, die organische Säuren bilden und für Geschmack und Haltbarkeit sorgen.',
+				},
+			],
+		},
+		{
+			type: 'tip',
+			title: 'Der Schwimmtest',
+			html: 'Um zu prüfen, ob der Sauerteig backbereit ist, gib einen Teelöffel in ein Glas Wasser. Schwimmt er oben, enthält er genug CO2.',
+		},
+		{
+			type: 'paragraph',
+			html: 'Mit unserem Rechner standardisieren Sie Ihren Backprozess und verstehen die Biologie Ihres Brotes besser.',
 		},
 	],
 	ui: {

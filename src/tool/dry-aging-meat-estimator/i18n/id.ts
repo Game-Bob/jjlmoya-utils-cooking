@@ -129,6 +129,78 @@ export const content: ToolLocaleContent = {
           icon: 'mdi:clock-outline'
         }
       ]
+    },
+    {
+      type: 'title',
+      text: 'Memahami Dinamika Penurunan Berat dan Kurva Asimptotik',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Penurunan berat selama dry aging bersifat asimptotik. Dalam 14 hari pertama, air menguap dengan cepat dari lapisan luar. Lapisan keras dan gelap (pelikel) terbentuk dan memperlambat penguapan lebih lanjut setelah 2 hingga 3 minggu.'
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Hari 1-14:</strong> Penguapan cepat. Daging kehilangan 10% hingga 12% beratnya (terutama air). Serat otot menyusut dan rasa terkonsentrasi.',
+        '<strong>Hari 15-30:</strong> Penguapan melambat berkat pembentukan pelikel. Enzim (kalpain dan katepsin) mengurai kolagen lunak sehingga daging lebih empuk.',
+        '<strong>Hari 30-45:</strong> Kehilangan air tambahan minimal. Perkembangan rasa gurih seperti kacang dan keju biru melalui oksidasi lemak.',
+        '<strong>Kerugian Pemotongan:</strong> Setelah pematangan selesai, pelikel harus dipotong, yang menghabiskan sekitar 15% dari total berat.'
+      ]
+    },
+    {
+      type: 'title',
+      text: 'Kontrol Lingkungan dalam Ruang Dry Aging',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Kualitas udara, suhu, dan kelembaban yang konsisten sangat penting. Penyimpangan dapat merusak daging.'
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Suhu:</strong> Harus tetap antara 1°C dan 3°C. Di bawah 0°C, enzim membeku; di atas 4°C, bakteri patogen berkembang.',
+        '<strong>Kelembaban Relatif (RH):</strong> Rentang ideal adalah 75% hingga 85%. Di bawah 70%, terjadi pengerasan bagian luar; di atas 85%, jamur berbahaya tumbuh.',
+        '<strong>Aliran Udara:</strong> Sirkulasi udara yang berkesinambungan diperlukan untuk mengeringkan permukaan secara merata.'
+      ]
+    },
+    {
+      type: 'title',
+      text: 'Implikasi Biaya dan Kalkulasi Finansial Dry Aging',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Karena penguapan dan pemotongan, porsi yang dapat dimakan lebih kecil, yang meningkatkan harga efektif per kilogram.'
+    },
+    {
+      type: 'table',
+      headers: ['Durasi Pematangan', 'Ø Kerugian Penguapan', 'Ø Kerugian Potong', 'Total Hasil', 'Multiplier Biaya'],
+      rows: [
+        ['14 Hari', '10.5%', '15.0%', '74.5%', '1.34x'],
+        ['21 Hari', '13.5%', '15.0%', '71.5%', '1.40x'],
+        ['30 Hari', '17.5%', '15.0%', '67.5%', '1.48x'],
+        ['45 Hari', '21.0%', '15.0%', '64.0%', '1.56x'],
+        ['60 Hari', '24.0%', '15.0%', '61.0%', '1.64x']
+      ]
+    },
+    {
+      type: 'title',
+      text: 'Panduan Keselamatan: Mikrobiologi dan Identifikasi Jamur Baik vs Buruk',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Dry aging yang aman mengandalkan pertumbuhan mikroflora menguntungkan (jamur dari genus <em>Thamnidium</em>, <em>Mucor</em>, <em>Rhizopus</em>). Kebersihan ketat tetap wajib diutamakan.'
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Indikator Baik:</strong> Kerak yang kering, padat, berwarna ungu tua atau cokelat tua. Lapisan jamur putih halus seperti kulit keju adalah normal.',
+        '<strong>Indikator Buruk:</strong> Permukaan lengket, berlendir, atau basah. Jamur berwarna hijau, hitam, atau kekuningan. Bau busuk atau amonia menandakan pembusukan.',
+        '<strong>Kebersihan:</strong> Selalu sterilkan ruangan, kait, dan rak sebelum memasukkan daging baru.'
+      ]
     }
   ],
   bibliography,

@@ -18,10 +18,6 @@ const faq = [
     answer: 'Malzemeye bağlıdır. Un için evet. Mayalar veya baharatlar için hassasiyet daha az önemlidir (belirtilenin %75\'ine ölçeklendirin). Yumurtalar için: 2.3 alırsanız, 2 tam + üçüncünün bir kısmını (tartarak) kullanın veya yemek uygunsa 2\'ye yuvarlayın.',
   },
   {
-    question: 'Porsiyonları değiştirdiğimde sonuç neden değişmiyor?',
-    answer: 'Malzeme alanının boş olmadığından emin olun. Boşsa ölçeklendirecek bir şey yoktur. Ayrıca malzemelerinizdeki sayıların tanınabilir olduğunu kontrol edin (örn: "500g", "1/2 çay kaşığı").',
-  },
-  {
     question: 'İngiliz ölçü birimleriyle (ons, fincan) çalışır mı?',
     answer: 'Teknik olarak evet, araç sayıları okur ve ölçeklendirir. Ancak fincan ölçülerinde hassasiyet sınırlıdır (tutarsız hacim). Ölçeklendirmeden önce grama çevirmeniz önerilir.',
   },

@@ -113,9 +113,17 @@ export const content: ToolLocaleContent = {
       html: 'Professionell matlagning handlar om <strong>exakt tidshantering</strong>. Det franska konceptet <em>"Mise en Place"</em> inkluderar tid som en viktig ingrediens.',
     },
     {
+      type: 'paragraph',
+      html: 'Detta <strong>Multi-Timer</strong> verktyg är utformat för hemmakockar och proffs som behöver samordna flera rätter samtidigt.',
+    },
+    {
       type: 'title',
       text: 'Temperatur och Tids Roll',
       level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Matlagning handlar i grunden om att applicera värme under en specifik tid för att omvandla matens kemiska struktur. Proteindenaturering och Maillard-reaktionen beror kritiskt på timern.',
     },
     {
       type: 'table',

@@ -150,6 +150,11 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'Comparação de Técnicas de Merengue',
+      level: 3,
+    },
+    {
       type: 'comparative',
       columns: 3,
       items: [
@@ -190,9 +195,74 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'Fases Visuais do Bater das Claras',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['Fase', 'Descrição Visual', 'Uso Recomendado', 'Estabilidade'],
+      rows: [
+        ['Espumoso', 'Bolhas grandes e transparentes', 'Adicionar ácido ou açúcar', 'Nenhuma'],
+        ['Picos Suaves', 'As pontas dobram-se', 'Mousses e suflês', 'Baixa'],
+        [
+          'Picos Firmes (Em Castelo)',
+          'Ponta firme e vertical',
+          'Decoração e cozedura',
+          'Alta',
+        ],
+        [
+          'Sobrebatido',
+          'Textura granulosa e seca',
+          'Inutilizável (cortado)',
+          'Colapso',
+        ],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'O Merengue Liberta Líquido?',
+      html: 'Se notar calda a verter (sinérese), o açúcar não se dissolveu completamente ou a humidade é elevada. No merengue italiano, verta o xarope em fio lento e contínuo.',
+    },
+    {
+      type: 'title',
+      text: 'Glossário Técnico de Pastelaria',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Ovalbumina',
+          definition:
+            'A principal proteína das claras responsável por aprisionar o ar.',
+        },
+        {
+          term: 'Higroscópico',
+          definition:
+            'A propriedade do açúcar de absorver a humidade do ar.',
+        },
+        {
+          term: 'Cremor Tártaro',
+          definition:
+            'Um sal ácido que estabiliza a espuma e previne o excesso de batimento.',
+        },
+        {
+          term: 'Banho-Maria',
+          definition:
+            'Método de aquecimento indireto para dissolver o açúcar com segurança no merengue suíço.',
+        },
+      ],
+    },
+    {
       type: 'tip',
-      title: 'O truque da taça de metal',
-      html: 'Limpa a taça com vinagre ou limão. Qualquer rasto de gordura impedirá que as claras subam.',
+      title: 'O Truque do Vinagre',
+      html: 'Limpe a taça com papel toalha humedecido em vinagre ou limão. Qualquer rasto de gordura impedirá que as claras subam.',
+    },
+    {
+      type: 'paragraph',
+      html: 'A nossa calculadora automatiza a matemática para que se possa focar em bater até atingir o ponto perfeito.',
     },
   ],
   bibliography,

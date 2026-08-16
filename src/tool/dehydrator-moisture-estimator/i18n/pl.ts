@@ -8,13 +8,33 @@ const faq = [
   {
     question: 'Jak oblicza się utratę wagi podczas dehydratacji?',
     answer: 'Utratę wagi oblicza się, rozdzielając suchą masę od zawartości wody. Ponieważ sucha masa pozostaje stała, końcowa waga to sucha masa podzielona przez 1 minus docelowy procent wilgotności.'
+  },
+  {
+    question: 'Dlaczego temperatura dehydratacji wpływa na czas suszenia?',
+    answer: 'Wyższe temperatury przyspieszają tempo parowania wody z powierzchni żywności. Jednak zbyt wysoka temperatura może spowodować stwardnienie powierzchni (case hardening), gdzie zewnętrzna warstwa wysycha zbyt szybko i zamyka wilgoć w środku.'
+  },
+  {
+    question: 'Skąd mam wiedzieć, że żywność jest całkowicie ususzona?',
+    answer: 'Prawidłowo ususzona żywność powinna być sucha w dotyku i nie lepić się. Owoce powinny być elastyczne i skórzaste, warzywa kruche lub chrupiące, a mięso na jerky twarde i giętkie bez łamania się.'
   }
 ];
 
 const howTo = [
   {
     name: 'Wybierz gotowe ustawienie składnika lub wilgotność ręczną',
-    text: 'Wybierz składnik z listy lub ręcznie ustaw wilgotność początkową.'
+    text: 'Wybierz z naszych gotowych ustawień, takich jak Wołowina Jerky, Chrupiący Arbuz, Plastry Jabłka, Plastry Mango lub Grzyby, co automatycznie ustawi początkową wilgotność i podstawowy czas suszenia.'
+  },
+  {
+    name: 'Dostosuj początkową i docelową zawartość wilgotności',
+    text: 'Ustaw wilgotność początkową żywności oraz pożądaną wilgotność docelową za pomocą suwaków.'
+  },
+  {
+    name: 'Ustaw wagę początkową i temperaturę suszenia',
+    text: 'Wprowadź surową wagę żywności oraz temperaturę pracy dehydratora.'
+  },
+  {
+    name: 'Wyświetl szacowany czas suszenia i wagę końcową',
+    text: 'Odczytaj obliczony wynik pokazujący docelową wagę żywności, odparowaną wodę i szacowane potrzebne godziny.'
   }
 ];
 

@@ -11,15 +11,11 @@ const faq = [
   },
   {
     question: 'Was passiert, wenn ich "1/2 Teelöffel Salz" eingebe?',
-    answer: 'Der Parser sucht zuerst nach der Zahl. Er erkennt "1" als Menge und "/2" als Teil der Einheit. Das Ergebnis wird "0,5", was korrekt skaliert wird. Für Brüche wie "1/2" können Sie direkt "0,5" eingeben (klarer), oder das Tool interpretiert es als Division.',
+    answer: 'Der Parser sucht zuerst nach der Zahl. Er erkennt "1" als Menge und "/2" als Teil der Einheit. Das Ergebnis wird "0,5", was korrekt skaliert wird. Für Brüche wie "1/2" können Sie direkt "0,5" eingeben (klarer), oder das Tool interpreteert es als Division.',
   },
   {
     question: 'Sollte ich die Endergebnisse runden?',
     answer: 'Das hängt von der Zutat ab. Bei Mehl ja. Bei Hefe oder Gewürzen ist Präzision weniger kritisch (skalieren Sie auf 75% des angegebenen Wertes). Bei Eiern: Wenn Sie 2,3 erhalten, verwenden Sie 2 ganze Eier + einen Teil eines dritten (abgewogen) oder runden Sie auf 2, wenn das Gericht es zulässt.',
-  },
-  {
-    question: 'Warum ändert sich das Ergebnis nicht, wenn ich die Portionen ändere?',
-    answer: 'Stellen Sie sicher, dass das Zutatenfeld Inhalt hat. Wenn es leer ist, gibt es nichts zu skalieren. Überprüfen Sie auch, ob die Zahlen in Ihren Zutaten erkennbar sind (z.B. "500g", "1/2 Teelöffel").',
   },
   {
     question: 'Funktioniert das auch mit imperialen Maßen (Unzen, Tassen)?',

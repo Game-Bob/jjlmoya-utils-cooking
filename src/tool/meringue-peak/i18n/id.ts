@@ -149,6 +149,11 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'Perbandingan Teknik Meringue',
+      level: 3,
+    },
+    {
       type: 'comparative',
       columns: 3,
       items: [
@@ -189,9 +194,74 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'Tahapan Visual Pengocokan Putih Telur',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['Tahap', 'Deskripsi Visual', 'Penggunaan Rekomendasi', 'Stabilitas'],
+      rows: [
+        ['Berbusa', 'Gelembung besar transparan', 'Tambahkan asam atau gula', 'Tidak ada'],
+        ['Puncak Lembut', 'Ujung membengkok', 'Mousse dan soufflé', 'Rendah'],
+        [
+          'Puncak Kaku (Stiff Peak)',
+          'Ujung kaku & tegak',
+          'Dekorasi dan pemanggangan',
+          'Tinggi',
+        ],
+        [
+          'Terkocok Berlebih',
+          'Tekstur berbutir & kering',
+          'Tidak dapat digunakan (gumpal)',
+          'Hancur',
+        ],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'Apakah Meringue Anda Mengeluarkan Cairan?',
+      html: 'Jika terlihat sirup bocor (sineresis), gula belum larut sepenuhnya atau kelembapan udara tinggi. Pada meringue Italia, tuangkan sirup perlahan dalam aliran kecil yang stabil.',
+    },
+    {
+      type: 'title',
+      text: 'Glosarium Teknis Pastry',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Ovalbumin',
+          definition:
+            'Protein utama dalam putih telur yang bertanggung jawab memerangkap udara.',
+        },
+        {
+          term: 'Higroskopis',
+          definition:
+            'Sifat gula yang menyerap kelembapan dari udara.',
+        },
+        {
+          term: 'Cream of Tartar',
+          definition:
+            'Garam asam yang membantu menstabilkan busa dan mencegah pengocokan berlebih.',
+        },
+        {
+          term: 'Bain-Marie',
+          definition:
+            'Metode pemanasan tidak langsung untuk melarutkan gula dengan aman pada meringue Swiss.',
+        },
+      ],
+    },
+    {
       type: 'tip',
-      title: 'Trik Wadah Logam',
-      html: 'Bersihkan wadah dengan cuka atau lemon. Sisa lemak sekecil apa pun akan menghalangi putih telur mengembang.',
+      title: 'Trik Cuka',
+      html: 'Seka wadah Anda dengan tisu dapur yang dibasahi cuka atau jus lemon sebelum mulai. Sisa lemak sekecil apa pun akan menghalangi putih telur mengembang.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Kalkulator kami mengotomatiskan perhitungan sehingga Anda dapat fokus mengocok hingga mencapai puncak kaku yang sempurna.',
     },
   ],
   bibliography,

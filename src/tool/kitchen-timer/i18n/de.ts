@@ -122,6 +122,10 @@ export const content: ToolLocaleContent = {
       level: 3,
     },
     {
+      type: 'paragraph',
+      html: 'Kochen ist im Wesentlichen das Anwenden von Hitze über eine bestimmte Dauer, um die chemische Struktur von Lebensmitteln zu verändern. Protein-Denaturierung und Maillard-Reaktion hängen kritisch vom Timer ab.',
+    },
+    {
       type: 'table',
       headers: ['Lebensmittel', 'Garstufe', 'Zeit', 'Vorteil'],
       rows: [

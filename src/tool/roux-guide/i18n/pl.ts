@@ -34,6 +34,10 @@ const howTo = [
     name: 'Wprowadź objętość płynu',
     text: 'Określ, ile ml płynu chcesz zagęścić. Kalkulator poda dokładną ilość masła i mąki.',
   },
+  {
+    name: 'Zastosuj odpowiedni czas gotowania',
+    text: 'Gotuj mieszankę masła i mąki do określonego stopnia (Biała, Złota lub Ciemna).',
+  },
 ];
 
 const faqSchema = {
@@ -83,6 +87,137 @@ export const content: ToolLocaleContent = {
     {
       type: 'paragraph',
       html: '<strong>Zasmażka Roux</strong> to strukturalna podstawa klasycznej kuchni francuskiej. Zrozumienie relacji między mąką, masłem i płynem to różnica między aksamitnym sosem a płynem z grudkami.',
+    },
+    {
+      type: 'stats',
+      columns: 4,
+      items: [
+        {
+          value: '1:1',
+          label: 'Proporcja Mąka:Tłuszcz',
+          icon: 'mdi:scale-balance',
+        },
+        {
+          value: '3 min',
+          label: 'Czas białej Roux',
+          icon: 'mdi:timer-sand',
+        },
+        {
+          value: '100g/L',
+          label: 'Ratio gęstych sosów',
+          icon: 'mdi:waves',
+        },
+        {
+          value: '15 min',
+          label: 'Czas ciemnej Roux',
+          icon: 'mdi:fire',
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Stopnie wysmażenia i siła zagęszczania',
+      level: 3,
+    },
+    {
+      type: 'comparative',
+      columns: 3,
+      items: [
+        {
+          title: 'Biała Zasmażka',
+          icon: 'mdi:flask-round-bottom-outline',
+          description: 'Gotowana 2-3 minuty. Najsilniejszy zagęszczacz.',
+          points: [
+            'Baza do Beszamelu',
+            'Maksymalna siła zagęszczania',
+            'Neutralny mleczny smak',
+            'Brak zmiany koloru',
+          ],
+        },
+        {
+          title: 'Złota Zasmażka',
+          icon: 'mdi:gold',
+          description: 'Gotowana 5-8 minut do jasnozłoceistego koloru.',
+          highlight: true,
+          points: [
+            'Baza do Velouté',
+            'Średnia siła zagęszczania',
+            'Lekki orzechowy aromat',
+            'Idealna do jasnych bulionów',
+          ],
+        },
+        {
+          title: 'Ciemna Zasmażka',
+          icon: 'mdi:coffee',
+          description: 'Gotowana 15-20 minut. Głęboki prażony smak.',
+          points: [
+            'Baza do sosu Espagnole',
+            'Mniejsza siła zagęszczania (-30%)',
+            'Złożony prażony smak',
+            'Bardziej płynna konsystencja',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Waga Roux na litr według pożądanej gęstości',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['Pożądana gęstość', 'Masło (g)', 'Mąka (g)', 'Płyn (L)'],
+      rows: [
+        ['Lekka Zupa / Krem', '25g', '25g', '1 Litr'],
+        ['Standardowy Sos', '50g', '50g', '1 Litr'],
+        ['Sos do Zapiekanek', '70g', '70g', '1 Litr'],
+        ['Ciasto na Krokiety', '125g', '125g', '1 Litr'],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'Sos z grudkami lub smakiem mąki?',
+      html: 'Jeśli sos ma grudki, dodano gorący płyn do gorącego roux. Zawsze stosuj szok termiczny (zimny płyn na gorące roux). Jeśli czuć mąkę, wydłuż czas gotowania.',
+    },
+    {
+      type: 'title',
+      text: 'Słowniczek technologii sosów',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Dekstrynizacja',
+          definition:
+            'Termiczny rozpad skrobi na krótkie łańcuchy. Zwiększa smak, ale osłabia zagęszczanie.',
+        },
+        {
+          term: 'Kleikowanie',
+          definition:
+            'Proces, w którym ziarna skrobi wchłaniają płyn i pęcznieją.',
+        },
+        {
+          term: 'Beurre Manié',
+          definition:
+            'Zimna mieszanka mąki i masła do szybkiej korekty na końcu.',
+        },
+        {
+          term: 'Sosy Matki',
+          definition:
+            '5 podstawowych sosów Escoffiera (Beszamel, Velouté, Espagnole, Holenderski i Pomidorowy).',
+        },
+      ],
+    },
+    {
+      type: 'tip',
+      title: 'Sposób na zimne masło (Monter au Beurre)',
+      html: 'Na samym końcu wmieszaj kawałek zimnego masła dla gładkości i połysku.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Nasz kalkulator zasmażki gwarantuje idealną konsystencję sosu.',
     },
   ],
   ui: {

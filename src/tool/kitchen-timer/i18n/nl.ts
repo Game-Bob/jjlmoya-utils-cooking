@@ -122,6 +122,10 @@ export const content: ToolLocaleContent = {
       level: 3,
     },
     {
+      type: 'paragraph',
+      html: 'Koken is in essentie het toepassen van warmte gedurende een specifieke tijdsduur om de chemische structuur van voedsel te veranderen. Eiwitdenaturatie en de Maillard-reactie hangen kritisch af van de timer.',
+    },
+    {
       type: 'table',
       headers: ['Voedsel', 'Gaarheid', 'Tijd', 'Voordeel'],
       rows: [

@@ -20,6 +20,10 @@ const faq = [
 		question: 'Özel oranlar kullanabilir miyim?',
 		answer: 'Kesinlikle. Belirli bir protokolünüz varsa kendi oranlarınızı girebilirsiniz. Bazı fırıncılar çok yavaş fermantasyon için 1:10:10 kullanır.',
 	},
+	{
+		question: 'Hesaplayıcı gramları yuvarlar mı?',
+		answer: 'Evet. Pratik kullanım için en yakın tam sayıya yuvarlar. Küçük yuvarlama farkları fermantasyonu önemli ölçüde etkilemez.',
+	},
 ];
 const howTo = [
 	{
@@ -69,11 +73,12 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-	slug: 'eksi-maya',
+	slug: 'eksi-maya-hesaplayici',
 	title,
 	description,
 	faqTitle: 'Sıkça Sorulan Sorular',
-	faq,  howTo,
+	faq,
+	howTo,
 	seo: [
 		{
 			type: 'title',
@@ -83,6 +88,157 @@ export const content: ToolLocaleContent = {
 		{
 			type: 'paragraph',
 			html: '<strong>Ekşi maya</strong> sadece bir malzeme değil, yabani mayalar ve laktik asit bakterilerinden (LAB) oluşan canlı bir ekosistemdir.',
+		},
+		{
+			type: 'stats',
+			columns: 4,
+			items: [
+				{
+					value: '24-26°C',
+					label: 'Optimum Sıcaklık',
+					icon: 'mdi:thermometer',
+				},
+				{
+					value: '3.8 - 4.2',
+					label: 'İdeal pH',
+					icon: 'mdi:test-tube',
+				},
+				{
+					value: '100%',
+					label: 'Std. Hidrasyon',
+					icon: 'mdi:water-percent',
+				},
+				{
+					value: 'x2 - x3',
+					label: 'Zirvede Büyüme',
+					icon: 'mdi:trending-up',
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Ekşi Maya Türlerinin Karşılaştırılması',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 2,
+			items: [
+				{
+					title: 'Sıvı Ekşi Maya (%100 Hidr.)',
+					icon: 'mdi:water',
+					description: 'Modern fırıncılıkta en yaygın tercih. Karıştırması ve kullanımı kolaydır.',
+					points: [
+						'Daha hızlı fermantasyon',
+						'Daha hafif laktik lezzet',
+						'Ölçmesi ve tazelemesi kolay',
+						'Baget ve somun ekmekler için ideal',
+					],
+				},
+				{
+					title: 'Koyu/Sert Ekşi Maya (Pasta Madre)',
+					icon: 'mdi:bread-slice-outline',
+					description: 'İtalyan fırıncılığında gelenekseldir. Hidrasyon genelde %50 civarındadır.',
+					highlight: true,
+					points: [
+						'Daha yavaş ve kararlı fermantasyon',
+						'Daha asetik lezzet profili',
+						'Zengin hamurlar için yüksek kabartma gücü',
+						'Panettone ve Brioche için ideal',
+					],
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Matematiksel Besleme Oranlarını Anlamak',
+			level: 3,
+		},
+		{
+			type: 'paragraph',
+			html: 'Oran, Un ve Suya kıyasla maya miktarını gösterir. Örneğin 1:2:2; 1 ölçek maya, 2 ölçek un ve 2 ölçek su demektir.',
+		},
+		{
+			type: 'table',
+			headers: ['Oran', 'Önerilen Kullanım', 'Tahmini Süre (24°C)', 'En Büyük Avantaj'],
+			rows: [
+				['1:1:1', 'Günlük besleme', '4-6 saat', 'Hızlı bakım'],
+				['1:2:2', 'Pişirme öncesi aktivasyon', '6-8 saat', 'Asitlik dengesi'],
+				['1:5:5', 'Standart ekmek kullanımı', '8-12 saat', 'Öngörülebilir zirve'],
+				['1:10:10', 'Uzun süreli bekletme', '16-24 saat', 'Esnek zamanlama'],
+			],
+		},
+		{
+			type: 'title',
+			text: 'Ekşi Maya Beslemesi İçin Un Seçimi',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 2,
+			items: [
+				{
+					title: 'Tam Çavdar Unu',
+					icon: 'mdi:grain',
+					description: 'Yabani mayalar için süper gıda. Buğdaydan daha fazla besin ve enzim içerir.',
+					points: [
+						'Patlayıcı fermantasyon aktivitesi',
+						'Derin, toprak aromaları katar',
+						'Asitlik seviyelerini daha kararlı tutar',
+					],
+				},
+				{
+					title: 'Beyaz Buğday Unu',
+					icon: 'mdi:shaker-outline',
+					description: 'Mayanın ekmek lezzetini baskılamadığı daha hafif bir tat arayanlar için idealdir.',
+					points: [
+						'Daha nötr ve çok yönlü lezzet',
+						'Çok net kabarcık gözlemi',
+						'Aşırı fermantasyona daha az eğilimli',
+					],
+				},
+			],
+		},
+		{
+			type: 'diagnostic',
+			variant: 'warning',
+			title: 'Acıkmış Bir Ekşi Mayanın Belirtileri',
+			html: 'Yüzeyde koyu bir sıvı (hooch) birikmişse, yoğun bir şekilde sirke/aseton kokuyorsa veya zirveden sonra hızla çökmüşse daha yüksek bir besleme oranına ihtiyacı vardır.',
+		},
+		{
+			type: 'title',
+			text: 'Teknik Ekşi Maya Sözlüğü',
+			level: 3,
+		},
+		{
+			type: 'glossary',
+			items: [
+				{
+					term: 'Levain',
+					definition: 'Ana mayadan belirli bir ekmek tarifi için hazırlanan ön maya.',
+				},
+				{
+					term: 'Hooch',
+					definition: 'Maya besini tükettiğinde oluşan alkol ve su tabakası.',
+				},
+				{
+					term: 'Aktivite Zirvesi',
+					definition: 'Maksimum hacim ve maya yoğunluğu anı. Hamur karıştırmak için ideal an.',
+				},
+				{
+					term: 'Laktik Asit Bakterileri (LAB)',
+					definition: 'Lezzet ve raf ömrü sağlayan organik asitleri üretmekten sorumlu mikroorganizmalar.',
+				},
+			],
+		},
+		{
+			type: 'tip',
+			title: 'Yüzme Testi',
+			html: 'Mayanızın hazır olup olmadığını kontrol etmek için bir çay kaşığı mayayı bir bardak suya bırakın: yüzüyorsa yeterli CO2 tutmuştur.',
+		},
+		{
+			type: 'paragraph',
+			html: 'Hesaplayıcımızı kullanmak pişirme sürecinizi standartlaştırmanıza ve ekmeğinizin biyolojisini daha iyi anlamanıza yardımcı olur.',
 		},
 	],
 	ui: {

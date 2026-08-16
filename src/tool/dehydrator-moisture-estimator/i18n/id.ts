@@ -8,13 +8,33 @@ const faq = [
   {
     question: 'Bagaimana cara menghitung penurunan berat selama dehidrasi?',
     answer: 'Penurunan berat dihitung dengan memisahkan bahan padat dari air. Karena berat padat konstan, berat akhir dihitung dengan membagi padatan dengan 1 dikurangi target persentase kelembapan.'
+  },
+  {
+    question: 'Mengapa suhu dehidrasi mempengaruhi waktu pengeringan?',
+    answer: 'Suhu yang lebih tinggi mempercepat laju penguapan air dari permukaan makanan. Namun, suhu yang terlalu tinggi dapat menyebabkan pengherasan permukaan (case hardening), di mana lapisan luar mengering terlalu cepat dan mengunci kelembapan di dalam.'
+  },
+  {
+    question: 'Bagaimana saya tahu kapan makanan sudah terdehidrasi sepenuhnya?',
+    answer: 'Makanan yang terdehidrasi dengan benar harus terasa kering dan tidak lengket. Buah-buahan harus lentur seperti kulit, sayuran harus rapuh atau garing, dan daging untuk jerky harus liat serta dapat dibengkokkan tanpa patah.'
   }
 ];
 
 const howTo = [
   {
     name: 'Pilih preset bahan atau kelembapan manual',
-    text: 'Pilih preset atau masukkan nilai kelembapan secara manual.'
+    text: 'Pilih dari preset kami seperti Daging Sapi Jerky, Keripik Semangka, Cincin Apel, Irisan Mangga, atau Jamur, yang secara otomatis mengatur kelembapan awal dan waktu pengeringan dasar.'
+  },
+  {
+    name: 'Sesuaikan kadar kelembapan awal dan target',
+    text: 'Atur kelembapan awal makanan Anda dan kadar kelembapan target yang diinginkan menggunakan penggeser.'
+  },
+  {
+    name: 'Atur berat awal dan suhu pengeringan',
+    text: 'Masukkan berat mentah makanan dan suhu pengoperasian dehidrator Anda.'
+  },
+  {
+    name: 'Lihat estimasi waktu pengeringan dan berat akhir',
+    text: 'Baca hasil kalkulasi yang menampilkan berat target makanan Anda, air yang menguap, dan estimasi jam yang dibutuhkan.'
   }
 ];
 

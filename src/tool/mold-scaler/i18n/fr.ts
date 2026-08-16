@@ -226,10 +226,6 @@ export const content: ToolLocaleContent = {
 			level: 3,
 		},
 		{
-			type: 'paragraph',
-			html: "De nombreux pâtissiers amateurs font l'erreur d'adapter les ingrédients de manière linéaire en se basant sur le diamètre. Évitez ces pièges courants :",
-		},
-		{
 			type: 'list',
 			items: [
 				'<strong>Adaptation linéaire :</strong> Doubler le diamètre ne double pas les ingrédients ; cela les quadruple.',
@@ -269,11 +265,6 @@ export const content: ToolLocaleContent = {
 					definition: "La manière dont l'énergie voyage dans le moule. Change drastiquement selon la forme et le matériau.",
 				},
 			],
-		},
-		{
-			type: 'title',
-			text: 'Conseils de Pro pour la Cuisson des Recettes Adaptées',
-			level: 3,
 		},
 		{
 			type: 'tip',

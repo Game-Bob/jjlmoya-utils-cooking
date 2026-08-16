@@ -34,6 +34,10 @@ const howTo = [
     name: 'Flüssigkeitsmenge eingeben',
     text: 'Geben Sie an, wie viel ml Flüssigkeit Sie binden möchten. Der Rechner nennt Ihnen die exakte Menge an Butter und Mehl.',
   },
+  {
+    name: 'Richtige Garzeit anwenden',
+    text: 'Kochen Sie die Butter-Mehl-Mischung auf die angegebene Stufe (Weiß, Blond oder Dunkel).',
+  },
 ];
 
 const faqSchema = {
@@ -76,39 +80,144 @@ export const content: ToolLocaleContent = {
   faq,  howTo,
   seo: [
     {
-      type: 'title',
-      text: 'Meisterleitfaden für die Berechnung von Roux und Saucen',
+      type: "title",
+      text: "Meisteranleitung für Mehlschwitze-Berechnung und Grundsaucen",
       level: 2,
     },
     {
-      type: 'paragraph',
-      html: 'Die <strong>Mehlschwitze</strong> (Roux) ist die strukturelle Basis der klassischen französischen Küche. Das Verständnis des Verhältnisses zwischen Mehl, Butter und Flüssigkeit ist der Schlüssel zu einer samtigen Sauce.',
+      type: "paragraph",
+      html: "Eine <strong>Mehlschwitze (Roux)</strong> ist das strukturelle Fundament der klassischen französischen Küche. Das präzise Verhältnis von Mehl, Butter und Flüssigkeit entscheidet über eine samtene Sauce.",
     },
     {
-      type: 'stats',
+      type: "stats",
       columns: 4,
       items: [
         {
-          value: '1:1',
-          label: 'Verhältnis Mehl:Fett',
-          icon: 'mdi:scale-balance',
+          value: "1:1",
+          label: "Verhältnis Mehl:Fett",
+          icon: "mdi:scale-balance",
         },
         {
-          value: '3 Min.',
-          label: 'Zeit weiße Roux',
-          icon: 'mdi:timer-sand',
+          value: "3 Min.",
+          label: "Zeit weiße Roux",
+          icon: "mdi:timer-sand",
         },
         {
-          value: '100g/L',
-          label: 'Rate dicke Saucen',
-          icon: 'mdi:waves',
+          value: "100g/L",
+          label: "Rate dicke Saucen",
+          icon: "mdi:waves",
         },
         {
-          value: '15 Min.',
-          label: 'Zeit dunkle Roux',
-          icon: 'mdi:fire',
+          value: "15 Min.",
+          label: "Zeit dunkle Roux",
+          icon: "mdi:fire",
         },
       ],
+    },
+    {
+      type: "title",
+      text: "Röststufen und Bindekraft",
+      level: 3,
+    },
+    {
+      type: "comparative",
+      columns: 3,
+      items: [
+        {
+          title: "Weiße Mehlschwitze",
+          icon: "mdi:flask-round-bottom-outline",
+          description: "2-3 Minuten gekocht. Stärkste Bindekraft.",
+          points: [
+            "Basis für Béchamel",
+            "Maximale Bindekraft",
+            "Neutraler Milchgeschmack",
+            "Keine sichtbare Färbung",
+          ],
+        },
+        {
+          title: "Blonde Mehlschwitze",
+          icon: "mdi:gold",
+          description: "5-8 Minuten gekocht bis zu einem hellen Goldton.",
+          highlight: true,
+          points: [
+            "Basis für Velouté",
+            "Mittlere Bindekraft",
+            "Leicht nussiges Aroma",
+            "Ideal für helle Fonds",
+          ],
+        },
+        {
+          title: "Dunkle Mehlschwitze",
+          icon: "mdi:coffee",
+          description: "15-20 Minuten gekocht. Tiefes Röstaroma.",
+          points: [
+            "Basis für Espagnole",
+            "Geringere Bindekraft (-30%)",
+            "Komplexer Röstgeschmack",
+            "Flüssigere Konsistenz",
+          ],
+        },
+      ],
+    },
+    {
+      type: "title",
+      text: "Mehlschwitze-Gewicht pro Liter nach Konsistenz",
+      level: 3,
+    },
+    {
+      type: "table",
+      headers: ["Gewünschte Konsistenz", "Butter (g)", "Mehl (g)", "Flüssigkeit (L)"],
+      rows: [
+        ["Leichte Suppe / Creme", "25g", "25g", "1 Liter"],
+        ["Standard Sauce", "50g", "50g", "1 Liter"],
+        ["Bindesauce (Gratins)", "70g", "70g", "1 Liter"],
+        ["Kroketten-Teig", "125g", "125g", "1 Liter"],
+      ],
+    },
+    {
+      type: "diagnostic",
+      variant: "warning",
+      title: "Klumpt die Sauce oder schmeckt sie nach Mehl?",
+      html: "Wenn die Sauce klumpt, wurde heiße Flüssigkeit zu heißer Roux gegeben. Immer den Thermoschock anwenden (kalte Flüssigkeit auf heiße Roux). Bei Mehlgeschmack die Garzeit zu Beginn verlängern.",
+    },
+    {
+      type: "title",
+      text: "Glossar der Saucen-Technologie",
+      level: 3,
+    },
+    {
+      type: "glossary",
+      items: [
+        {
+          term: "Dextrinierung",
+          definition:
+            "Der thermische Abbau von Stärke in kurze Ketten. Erhöht das Aroma, schwächt die Bindung.",
+        },
+        {
+          term: "Verkleisterung",
+          definition:
+            "Der Prozess, bei dem Stärkekörner Flüssigkeit aufnehmen und quellen.",
+        },
+        {
+          term: "Beurre Manié",
+          definition:
+            "Kaltes Gemisch aus Mehl und Butter für schnelle Korrekturen am Ende.",
+        },
+        {
+          term: "Grundsaucen",
+          definition:
+            "Escoffiers 5 Basissaucen (Béchamel, Velouté, Espagnole, Hollandaise und Tomate).",
+        },
+      ],
+    },
+    {
+      type: "tip",
+      title: "Der kalte Butter Trick (Monter au Beurre)",
+      html: "Am Ende ein kleines Stück kalte Butter einrühren. Dies sorgt für einen seidenen Glanz.",
+    },
+    {
+      type: "paragraph",
+      html: "Unser Mehlschwitze-Rechner sorgt für die perfekte technische Konsistenz.",
     },
   ],
   ui: {

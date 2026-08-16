@@ -24,79 +24,93 @@ const faq = [
 	{
 		question: 'Hur lägger jag till ingredienser i listan?',
 		answer:
-			'Klicka på knappen längst ner för att lägga till en ny rad. Skriv in namnet och ursprungsvikten; den skalade mängden beräknas direkt.',
+			'Klicka på knappen nedan för att lägga till en ny rad. Skriv namn och originalvikt; den sista kolumnen uppdateras direkt.',
+	},
+	{
+		question: 'Är omräkningen tillförlitlig för mycket stora långpannor?',
+		answer:
+			'Matematiskt ja, men tänk på att mycket stora kakor tar längre tid att grädda i mitten. Du kan behöva sänka ugnstemperaturen något.',
 	},
 ];
 
 const howTo = [
 	{
-		name: 'Definiera receptets form',
-		text: 'Välj form och mått på den bakform som receptet ursprungligen är skapat för.',
+		name: 'Definiera originalformen',
+		text: 'Välj form och mått på bakformen som receptet ursprungligen skapades för.',
 	},
 	{
-		name: 'Ställ in din egen form',
+		name: 'Ställ in din bakform',
 		text: 'Ange måtten på den form du har hemma. Systemet beräknar direkt omräkningsfaktorn.',
 	},
 	{
-		name: 'Använd ingredienskalkylatorn',
-		text: 'Lägg till ingredienserna i ditt recept för att se de exakta mängderna du behöver för din form.',
+		name: 'Använd ingrediensomräknaren',
+		text: 'Lägg till dina ingredienser för att se exakt hur mycket du behöver för den nya formen.',
 	},
 	{
-		name: 'Justera gräddningen',
-		text: 'Kom ihåg att en ändrad storlek ofta innebär ändrad gräddningstid, även om temperaturen är densamma.',
+		name: 'Anpassa gräddningstiden',
+		text: 'Kom ihåg att förändrad formstorlek oftast kräver anpassning av tiden i ugnen.',
 	},
 ];
 
 const faqSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'FAQPage',
-  mainEntity: faq.map((item) => ({
-    '@type': 'Question',
-    name: item.question,
-    acceptedAnswer: { '@type': 'Answer', text: item.answer },
-  })),
+	mainEntity: faq.map((item) => ({
+		'@type': 'Question',
+		name: item.question,
+		acceptedAnswer: { '@type': 'Answer', text: item.answer },
+	})),
 };
 
 const howToSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'HowTo',
-  name: title,
-  description,
-  step: howTo.map((step) => ({
-    '@type': 'HowToStep',
-    name: step.name,
-    text: step.text,
-  })),
+	'@context': 'https://schema.org',
+	'@type': 'HowTo',
+	name: title,
+	description,
+	step: howTo.map((step) => ({
+		'@type': 'HowToStep',
+		name: step.name,
+		text: step.text,
+	})),
 };
 
 const appSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: title,
-  description,
-  applicationCategory: 'UtilitiesApplication',
-  operatingSystem: 'All',
+	'@context': 'https://schema.org',
+	'@type': 'SoftwareApplication',
+	name: title,
+	description,
+	applicationCategory: 'UtilitiesApplication',
+	operatingSystem: 'Web',
+	offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
 };
 
 export const content: ToolLocaleContent = {
-	slug: 'bakformar',
+	slug: 'bakformsomraknare',
 	title,
 	description,
-	faqTitle: 'Vanliga frågor om Skalning',	ui: {
-		originalRecipe: 'Originalrecept',
-		yourMold: 'Din Form',
+	faqTitle: 'Vanliga Frågor',
+	ui: {
+		originalMold: 'Original Receptform',
+		yourMold: 'Din Målform',
+		shape: 'Formens Form',
+		diameter: 'Diameter',
+		side: 'Sida',
+		width: 'Bredd',
+		length: 'Längd',
+		unit: 'Enhet',
+		cm: 'cm',
+		inches: 'tum',
 		round: 'Rund',
 		square: 'Kvadratisk',
 		rectangular: 'Rektangulär',
-		diameter: 'Diameter (cm)',
-		side: 'Sida (cm)',
-		width: 'Bredd (cm)',
-		length: 'Längd (cm)',
+		resultTitle: 'Omräkningsresultat',
+		originalArea: 'Originalyta',
+		yourArea: 'Din Yta',
 		multiplyingFactor: 'Omräkningsfaktor',
 		equivalentMolds: 'Formarna är likvärdiga. Använd samma mängder.',
-		smallerMold: 'Din form är mindre. Multiplicera ingredienserna med',
-		largerMold: 'Din form är större. Multiplicera ingredienserna med',
-		ingredientCalculator: 'Ingredienskalkylator',
+		smallerMold: 'Din form är mindre. Minska ingredienserna genom att multiplicera med',
+		largerMold: 'Din form är större. Öka ingredienserna genom att multiplicera med',
+		ingredientCalculator: 'Omräknare för Ingrediensvikt',
 		addIngredient: 'Lägg till Ingrediens',
 		ingredient: 'Ingrediens',
 		original: 'Original',
@@ -111,16 +125,23 @@ export const content: ToolLocaleContent = {
 		increase: 'Öka',
 	},
 
-	faq,	howTo,
+	faq,
+	howTo,
 	seo: [
 		{
 			type: 'title',
-			text: 'Guide för att Skala Recept efter Bakform',
+			text: 'Avancerad Guide för att Skala Recept efter Bakform',
 			level: 2,
 		},
 		{
 			type: 'paragraph',
-			html: 'Att konvertera mängder för en annan form kräver att man respekterar <strong>geometriska proportioner</strong> för att behålla rätt konsistens och gräddningsgrad.',
+			html: 'Att konvertera mängder för en annan form kräver att man respekterar <strong>geometriska proportioner</strong> för att behålla rätt konsistens, höjd och saftighet.',
+		},
+		{
+			type: 'diagnostic',
+			variant: 'info',
+			title: 'Hemligheten bakom Bottenytan',
+			html: 'Hemligheten bakom korrekt skalning ligger i bottenytan, inte i diametern. En ökning med 25 % i diameter fördubblar nästan den totala ytan.',
 		},
 		{
 			type: 'stats',
@@ -132,9 +153,9 @@ export const content: ToolLocaleContent = {
 					icon: 'mdi:resize',
 				},
 				{
-					value: 'πr²',
-					label: 'Cirkelns area',
-					icon: 'mdi:math-compass',
+					value: 'x2.25',
+					label: 'Faktor 15cm till 22.5cm',
+					icon: 'mdi:arrow-up-bold-outline',
 				},
 				{
 					value: '0.64',
@@ -142,17 +163,127 @@ export const content: ToolLocaleContent = {
 					icon: 'mdi:arrow-down-bold-outline',
 				},
 				{
-					value: '2/3',
-					label: 'Max Fyllnadsnivå',
-					icon: 'mdi:format-vertical-align-top',
+					value: 'πr²',
+					label: 'Cirkelns area',
+					icon: 'mdi:math-compass',
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Formjämförelse och Ugnseffektivitet',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 3,
+			items: [
+				{
+					title: 'Runda Bakformar',
+					icon: 'mdi:circle-outline',
+					description: 'Standarden inom bakning. Ger jämn gräddning från kanten mot mitten.',
+					points: [
+						'Optimal värmefördelning',
+						'Idealisk för höga tårtbottnar',
+						'Beräknas via radien',
+					],
+				},
+				{
+					title: 'Kvadratiska Formar',
+					icon: 'mdi:square-outline',
+					description: 'Maximalt utnyttjande av ugnsytan. Idealisk för brownies.',
+					highlight: true,
+					points: [
+						'Snabbare gräddning i hörn',
+						'Lätt att skära snygga bitar',
+						'Beräknas Sida x Sida',
+					],
+				},
+				{
+					title: 'Rektangulära Formar',
+					icon: 'mdi:rectangle-outline',
+					description: 'Perfekt för långpannekakor. Kräv kontroll i mitten.',
+					points: [
+						'Högst totalkapacitet',
+						'Mångsidig användning',
+						'Beräknas Bredd x Längd',
+					],
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: 'Matematiken Bakom Ytomräkning',
+			level: 3,
+		},
+		{
+			type: 'paragraph',
+			html: 'För att beräkna rätt omräkningsfaktor jämför vi bottenytorna med dessa formler:',
+		},
+		{
+			type: 'table',
+			headers: ['Formens Form', 'Areaformel', 'Viktig Aspekt'],
+			rows: [
+				['Cirkulär', 'π × Radie²', 'Radien är hälften av diametern'],
+				['Kvadratisk', 'Sida × Sida', 'Endast innermått'],
+				['Rektangulär', 'Bredd × Längd', 'Standard för långpanna'],
+			],
+		},
+		{
+			type: 'title',
+			text: 'Vanliga Misstag vid Byte av Formstorlek',
+			level: 3,
+		},
+		{
+			type: 'list',
+			items: [
+				'<strong>Lineär skalning:</strong> Att fördubbla diametern fördubblar inte ingredienserna; det fyrdubblar dem.',
+				'<strong>Ignorera höjden:</strong> Djupa formar kräver längre tid på lägre temperatur.',
+				'<strong>Jäsningsmedel:</strong> Bakpulver kräver inte alltid exakt lineär skalning.',
+				'<strong>Avdunstning:</strong> Mindre satser kan torka ut snabbare.',
+			],
+		},
+		{
+			type: 'diagnostic',
+			variant: 'warning',
+			title: 'Maximal Fyllnadsnivå',
+			html: 'Fyll aldrig en form till mer än 2/3 av dess kapacitet, oavsett beräknad faktor.',
+		},
+		{
+			type: 'title',
+			text: 'Ordlista för Omräkning',
+			level: 3,
+		},
+		{
+			type: 'glossary',
+			items: [
+				{
+					term: 'Omräkningsfaktor',
+					definition: 'Talet du multiplicerar alla ingredienser med.',
+				},
+				{
+					term: 'Bottenyta',
+					definition: 'Måttet på formens bottenarea.',
+				},
+				{
+					term: 'Radie',
+					definition: 'Avståndet från mitten till kanten på en cirkel.',
+				},
+				{
+					term: 'Värmeöverföring',
+					definition: 'Hur värme rör sig i formen beroende på form och material.',
 				},
 			],
 		},
 		{
 			type: 'tip',
-			html: 'Fyll aldrig en form till mer än 2/3, oavsett den beräknade faktorn.',
+			html: 'Vid byte till en mycket större form, använd isoleringsband runt formen för jämn värmefördelning.',
+		},
+		{
+			type: 'paragraph',
+			html: 'Att bemästra formskalning ger dig total kreativ frihet. Använd denna räknare för jämna professionella resultat.',
 		},
 	],
-  bibliography,
-  schemas: [appSchema, faqSchema, howToSchema],
+	bibliography,
+	schemas: [appSchema, faqSchema, howToSchema],
 };

@@ -8,13 +8,33 @@ const faq = [
   {
     question: "Comment est calculée la perte de poids lors de la déshydratation ?",
     answer: "La perte de poids est calculée en séparant la matière sèche de l'eau. La masse sèche restant constante, le poids final est calculé par la matière sèche divisée par 1 moins le pourcentage d'humidité ciblé."
+  },
+  {
+    question: "Pourquoi la température de déshydratation affecte-t-elle le temps de séchage ?",
+    answer: "Des températures plus élevées accélèrent l'évaporation de l'eau à la surface des aliments. Cependant, une température trop élevée peut provoquer un durcissement de la couche externe, emprisonnant l'humidité à l'intérieur."
+  },
+  {
+    question: "Comment savoir si les aliments sont totalement déshydratés ?",
+    answer: "Les aliments correctement déshydratés doivent être secs au toucher et non collants. Les fruits doivent être souples et cuirassés, les légumes cassants ou croustillants, et la viande pour jerky doit être coriace et se plier sans se rompre."
   }
 ];
 
 const howTo = [
   {
     name: "Sélectionnez un ingrédient ou une humidité personnalisée",
-    text: "Choisissez un préréglage ou configurez manuellement."
+    text: "Choisissez parmi nos préréglages comme le Boeuf Jerky, Chips de Pastèque, Rondelles de Pomme, Tranches de Mangue ou Champignons, ce qui définit automatiquement l'humidité initiale et le temps de séchage de base."
+  },
+  {
+    name: "Ajustez la teneur en humidité initiale et ciblée",
+    text: "Définissez l'humidité de départ de vos aliments et votre taux d'humidité ciblé souhaité à l'aide des curseurs."
+  },
+  {
+    name: "Réglez le poids initial et la température de séchage",
+    text: "Saisissez le poids cru des aliments et la température de fonctionnement de votre déshydrateur."
+  },
+  {
+    name: "Consultez le temps de séchage estimé et le poids final",
+    text: "Lisez le résultat calculé indiquant le poids cible de vos aliments, l'eau évaporée et les heures estimées nécessaires."
   }
 ];
 

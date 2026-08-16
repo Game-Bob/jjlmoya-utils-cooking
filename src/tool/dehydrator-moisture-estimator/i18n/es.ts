@@ -12,17 +12,29 @@ const faq = [
   {
     question: '¿Por qué la temperatura afecta al tiempo de secado?',
     answer: 'Las temperaturas más altas aceleran la evaporación. Sin embargo, si es demasiado alta, puede endurecer la capa exterior atrapando la humedad dentro.'
+  },
+  {
+    question: '¿Cómo sé cuándo la comida está completamente deshidratada?',
+    answer: 'Los alimentos deshidratados correctamente deben sentirse secos y no pegajosos. Las frutas deben ser flexibles y corสั่ง, las verduras quebradizas o crujientes, y la carne para cecina/jerky dura pero flexible sin romperse.'
   }
 ];
 
 const howTo = [
   {
     name: 'Selecciona un ingrediente o humedad personalizada',
-    text: 'Elige un ingrediente predefinido o introduce la humedad inicial manualmente.'
+    text: 'Elige entre nuestras opciones predefinidas como cecina de ternera, crujientes de sandía, aros de manzana, rodajas de mango o champiñones, lo que configura automáticamente la humedad inicial y el tiempo de secado base.'
   },
   {
     name: 'Ajusta la humedad inicial y la humedad objetivo',
-    text: 'Desliza para configurar la humedad inicial y la humedad final que deseas obtener.'
+    text: 'Establece la humedad inicial de tu ingrediente y el nivel de humedad objetivo deseado mediante los deslizadores.'
+  },
+  {
+    name: 'Establece el peso inicial y la temperatura de secado',
+    text: 'Introduce el peso crudo del ingrediente y la temperatura de funcionamiento de tu deshidratador.'
+  },
+  {
+    name: 'Consulta el tiempo estimado de secado y el peso final',
+    text: 'Revisa el resultado calculado que muestra el peso objetivo, el agua evaporada y las horas estimadas necesarias.'
   }
 ];
 

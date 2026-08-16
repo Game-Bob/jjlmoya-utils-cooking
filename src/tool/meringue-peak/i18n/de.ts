@@ -195,15 +195,74 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'Visuelle Stufen des Eischneeschlagens',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['Stufe', 'Visuelle Beschreibung', 'Empfohlene Verwendung', 'Stabilität'],
+      rows: [
+        ['Schaumig', 'Klare, große Seifenblasen', 'Säure oder Zucker hinzufügen', 'Keine'],
+        ['Weiche Spitzen', 'Spitzen biegen sich um', 'Mousses und Soufflés', 'Niedrig'],
+        [
+          'Steife Spitzen',
+          'Feste, vertikale Spitze',
+          'Dekoration und Backen',
+          'Hoch',
+        ],
+        [
+          'Über-Schlagen',
+          'Körnige und trockene Textur',
+          'Unbrauchbar (geronnen)',
+          'Zusammengebrochen',
+        ],
+      ],
+    },
+    {
       type: 'diagnostic',
       variant: 'warning',
-      title: 'Läuft Ihr Baiser aus',
-      html: 'Wenn Sirup aus dem Baiser austritt (Synärese), wurde der Zucker nicht vollständig gelöst oder die Luftfeuchtigkeit ist zu hoch.',
+      title: 'Läuft Ihr Baiser aus?',
+      html: 'Wenn Sirup aus dem Baiser austritt (Synärese), wurde der Zucker nicht vollständig gelöst oder die Luftfeuchtigkeit ist zu hoch. Achten Sie bei italienischem Baiser darauf, den Sirup langsam einzugießen.',
+    },
+    {
+      type: 'title',
+      text: 'Glossar der Konditoreitechnik',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Ovalbumin',
+          definition:
+            'Das Hauptprotein im Eiklar, das beim Aufschlagen Luftbläschen einschließt.',
+        },
+        {
+          term: 'Hygroskopisch',
+          definition:
+            'Die Eigenschaft des Zuckers, Feuchtigkeit aus der Luft aufzunehmen.',
+        },
+        {
+          term: 'Weinstein',
+          definition:
+            'Ein saures Salz, das den Schaum stabilisiert und Über-Schlagen verhindert.',
+        },
+        {
+          term: 'Wasserbad (Bain-Marie)',
+          definition:
+            'Indirektes Erwärmen, um den Zucker für Schweizer Baiser sicher zu lösen.',
+        },
+      ],
     },
     {
       type: 'tip',
-      title: 'Der Metallschlüssel Trick',
+      title: 'Der Essig-Trick',
       html: 'Reinigen Sie die Schüssel vor Beginn mit Essig oder Zitrone. Fettspuren verhindern das Steifwerden des Eiweißes.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Unser Rechner übernimmt die Mathematik, damit Sie sich auf das Erreichen des perfekten Eischnees konzentrieren können.',
     },
   ],
   bibliography,

@@ -34,6 +34,10 @@ const howTo = [
     name: 'Introduza o volume de líquido',
     text: 'Especifique quantos ml de líquido precisa de espessar. A calculadora dirá exatamente quanta manteiga e farinha usar.',
   },
+  {
+    name: 'Aplique o tempo de cozedura correto',
+    text: 'Cozinhe a mistura de manteiga e farinha até ao nível especificado (Branco, Louro ou Escuro).',
+  },
 ];
 
 const faqSchema = {
@@ -109,6 +113,111 @@ export const content: ToolLocaleContent = {
           icon: 'mdi:fire',
         },
       ],
+    },
+    {
+      type: 'title',
+      text: 'Níveis de Tostagem e Poder Espessante',
+      level: 3,
+    },
+    {
+      type: 'comparative',
+      columns: 3,
+      items: [
+        {
+          title: 'Roux Branco',
+          icon: 'mdi:flask-round-bottom-outline',
+          description: 'Cozinhado por 2-3 minutos. O mais potente espessante.',
+          points: [
+            'Base para Bechamel',
+            'Máximo poder espessante',
+            'Sabor neutro a leite',
+            'Sem alteração de cor',
+          ],
+        },
+        {
+          title: 'Roux Louro',
+          icon: 'mdi:gold',
+          description: 'Cozinhado por 5-8 minutos até a uma cor dourada clara.',
+          highlight: true,
+          points: [
+            'Base para Velouté',
+            'Médio poder espessante',
+            'Ligeiro aroma a noz',
+            'Ideal para fundos claros',
+          ],
+        },
+        {
+          title: 'Roux Escuro',
+          icon: 'mdi:coffee',
+          description: 'Cozinhado por 15-20 minutos. Perfil de sabor tostado.',
+          points: [
+            'Base para Molho Espagnole',
+            'Menor poder espessante (-30%)',
+            'Sabor complexo tostado',
+            'Consistência mais líquida',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Peso do Roux por Litro por Consistência Desejada',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['Consistência Desejada', 'Manteiga (g)', 'Farinha (g)', 'Líquido (L)'],
+      rows: [
+        ['Sopa Leve / Creme', '25g', '25g', '1 Litro'],
+        ['Molho Standard', '50g', '50g', '1 Litro'],
+        ['Molho para Gratins', '70g', '70g', '1 Litro'],
+        ['Massa para Croquetes', '125g', '125g', '1 Litro'],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'Molho com Grumos ou Sabor a Farina?',
+      html: 'Se o molho apresentar grumos, adicionou líquido quente a um roux quente. Aplique sempre o choque térmico (líquido frio sobre roux quente). Se souber a farinha, aumente o tempo de cozedura inicial.',
+    },
+    {
+      type: 'title',
+      text: 'Glossário da Tecnologia de Molhos',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Dextrinização',
+          definition:
+            'A decomposição térmica do amido em cadeias curtas. Aumenta o sabor mas reduz o espessamento.',
+        },
+        {
+          term: 'Gelatinização',
+          definition:
+            'O processo onde os grânulos de amido absorvem líquido e expandem.',
+        },
+        {
+          term: 'Beurre Manié',
+          definition:
+            'Mistura fria de farinha e manteiga usada para rápidas correções no final.',
+        },
+        {
+          term: 'Molhos Mãe',
+          definition:
+            'Os 5 molhos base de Escoffier (Bechamel, Velouté, Espagnole, Holandês e Tomate).',
+        },
+      ],
+    },
+    {
+      type: 'tip',
+      title: 'O Truque da Manteiga Fria (Monter au Beurre)',
+      html: 'No final, incorpore um pedaço de manteiga fria para um brilho profissional.',
+    },
+    {
+      type: 'paragraph',
+      html: 'A nossa calculadora de roux garante uma consistência perfeita.',
     },
   ],
   ui: {

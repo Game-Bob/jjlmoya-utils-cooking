@@ -3,6 +3,7 @@ import { bibliography } from '../bibliography';
 
 const title = "乳液安定性とオイル限界量計算機";
 const description = "マヨネーズ、アイオリ、ビネグレットが分離する前に、どのくらいの油を加えられるかを正確に把握。この無料の乳液安定性計算機で、ソースの分離を防ぎます。";
+
 const faq = [
   {
     question: "マヨネーズが分離する前に、どれだけ油を加えられますか？",
@@ -14,7 +15,7 @@ const faq = [
   },
   {
     question: "分離したマヨネーズやアイオリをどうやって修復しますか？",
-    answer: "清潔なボウルに新鮮な卵黄または大さじ1杯のぬるま湯を入れます。そして、まるで生の油を加えるときのように、分離した混合物を絶えず泡立てながらゆっくりと注ぎます。上の計算機が必要な水または卵黄の正確な量を教えてくれます。"
+    answer: "清潔なボウルに新鮮な卵黄または大さじ1杯のぬるま湯を入れます。沸騰しないよう注意しながら絶えず泡立て、分離した混合物をゆっくりと注ぎます。上の計算機が必要な水分量を教えてくれます。"
   },
   {
     question: "油を入れすぎると乳液は破壊されますか？",
@@ -46,41 +47,41 @@ const howTo = [
 ];
 
 const faqSchema = {
-  '@context': 'https://schema.org' as const,
+  '@context': 'https://schema.org',
   '@type': 'FAQPage' as const,
   mainEntity: faq.map((item) => ({
-    '@type': 'Question' as const,
+    '@type': 'Question',
     name: item.question,
-    acceptedAnswer: { '@type': 'Answer' as const, text: item.answer },
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
   })),
 };
 
 const howToSchema = {
-  '@context': 'https://schema.org' as const,
+  '@context': 'https://schema.org',
   '@type': 'HowTo' as const,
   name: title,
   description,
   step: howTo.map((step) => ({
-    '@type': 'HowToStep' as const,
+    '@type': 'HowToStep',
     name: step.name,
     text: step.text,
   })),
 };
 
 const appSchema = {
-  '@context': 'https://schema.org' as const,
+  '@context': 'https://schema.org',
   '@type': 'SoftwareApplication' as const,
   name: title,
   description,
-  applicationCategory: 'UtilitiesApplication' as const,
+  applicationCategory: 'UtilitiesApplication',
   operatingSystem: 'Web',
-  offers: { '@type': 'Offer' as const, price: '0', priceCurrency: 'EUR' },
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
 };
 
 export const content: ToolLocaleContent = {
   slug: 'emulsion-stability-calculator',
-  title: '乳液安定性とオイル限界量計算機',
-  description: 'マヨネーズ、アイオリ、ビネグレットが分離する前に、どのくらいの油を加えられるかを正確に把握。この無料の乳液安定性計算機で、ソースの分離を防ぎます。',
+  title,
+  description,
   faqTitle: 'よくある質問',
   ui: {
     title: '乳液安定性アナライザー',
@@ -117,40 +118,69 @@ export const content: ToolLocaleContent = {
       type: 'stats',
       columns: 4,
       items: [
-        {
-          value: '78%',
-          label: '卵黄 最大油量',
-          icon: 'mdi:egg-outline'
-        },
-        {
-          value: '85%',
-          label: 'ポリソルベート限界',
-          icon: 'mdi:flask-outline'
-        },
-        {
-          value: '74%',
-          label: '理論充填率',
-          icon: 'mdi:sphere'
-        },
-        {
-          value: '15 ml',
-          label: '卵黄の水分量',
-          icon: 'mdi:water'
-        }
+        { value: '78%', label: '卵黄 最大油量', icon: 'mdi:egg-outline' },
+        { value: '85%', label: 'ポリソルベート限界', icon: 'mdi:flask-outline' },
+        { value: '74%', label: '理論充填率', icon: 'mdi:sphere' },
+        { value: '15 ml', label: '卵黄の水分量', icon: 'mdi:water' }
+      ]
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>油を投入するスピードが早すぎる</strong> - 注ぐ速度自体が原因になることは稀です。油の割合が限界以下なら、投入速度に関わらず乳化状態を維持できます。',
+        '<strong>材料の温度が低すぎる</strong> - 冷えた卵やオイルは粘度を高め、油滴の形成を妨げます。材料は必ず常温に戻して使用してください。',
+        '<strong>使用する乳化剤の油分限界を超えた</strong> - 乳化剤ごとに維持できる最大充填率が決まっています（卵黄78%、マスタード70%、大豆レシチン82%、ポリソルベート85%）。',
+        '<strong>水分（水相）が不足している</strong> - 油滴を包み込む十分な水分がない場合、油滴同士が結合して分離を引き起こします。'
       ]
     },
     {
       type: 'title',
-      text: '科学：なぜ乳液は破壊するのか',
+      text: 'どの乳化剤を使用すべきか？実用的な比較',
       level: 2
     },
     {
       type: 'paragraph',
-      html: '料理における乳液は、連続した水相の中に微小な油滴を分散させることで機能します。<strong>乳化剤</strong> - 卵黄のレシチン、マスタードの粘質物、ポリソルベートなどの合成界面活性剤 - は各油滴をコーティングし、隣同士が融合するのを防ぎます。'
+      html: '適切な乳化剤の選択は、レシピや希望する風味、必要な油の保持量によって異なります。一般的な4つの乳化剤の特性を比較します。'
     },
     {
-      type: 'paragraph',
-      html: '破壊点は純粋な幾何学によって決定されます。油滴は小さな球が密集したように振る舞います。与えられた空間に詰め込める球の最大体積 - <strong>ケプラー予想</strong>として知られるもの - は約74%です。実際の調理現場では、強力な乳化剤を使えば80〜85%まで伸ばせますが、それを超えると油滴が極限まで圧縮されて融合し、乳液は瞬時に崩壊します。'
+      type: 'proscons',
+      title: '卵黄',
+      items: [
+        { pro: '伝統的なソースとの抜群の風味の相性', con: 'コレステロールと卵の風味が加わる' },
+        { pro: 'レシチンとリポタンパク質による強固な乳化力', con: '厳密な温度管理が必要' },
+        { pro: '自然な黄色みとコクを与える', con: 'ヴィーガン料理には使用不可' },
+        { pro: '最大78%の油分率まで対応可能', con: '卵黄1個あたりの水分量は約15mlに限定される' }
+      ]
+    },
+    {
+      type: 'proscons',
+      title: 'マスタード',
+      items: [
+        { pro: 'ドレッシングに爽やかな風味と複雑さを追加', con: '最大油分保持量が低い（70%）' },
+        { pro: '手軽に入手でき扱いやすい', con: '卵黄に比べると乳化力が弱い' },
+        { pro: '常温で安定して機能する', con: '繊細な味わいのソースでは風味が衝突することがある' },
+        { pro: '手早く作るビネグレットに最適', con: '無味無臭の乳液を作りたい場合には不向き' }
+      ]
+    },
+    {
+      type: 'proscons',
+      title: '大豆レシチン',
+      items: [
+        { pro: '高油分（82%）でも安定したソースを実現', con: '精密な計量が必須' },
+        { pro: '無味無臭でレシピの風味を邪魔しない', con: '卵黄ほど失敗に対する許容度が rumour 的に低い' },
+        { pro: '植物由来でヴィーガン対応', con: '一般的な家庭の調理場には常備されていない' },
+        { pro: '少ない水分量でも効果を発揮', con: 'わずかに人工的な質感が生じることがある' }
+      ]
+    },
+    {
+      type: 'proscons',
+      title: 'ポリソルベート',
+      items: [
+        { pro: 'あらゆる乳化剤の中で最高の油分保持能力（85%）', con: '合成添加物であり天然素材ではない' },
+        { pro: '極めて安定したフォーム（泡）やエアを作成可能', con: '家庭用としては入手が困難' },
+        { pro: '最小限の水相で機能する', con: '正確な用量管理のため精密ばかりが必要' },
+        { pro: 'モダニスト料理や実験的調理に最適', con: '過剰に使用すると風味が損なわれる' }
+      ]
     },
     {
       type: 'comparative',
@@ -161,45 +191,25 @@ export const content: ToolLocaleContent = {
           icon: 'mdi:egg-outline',
           description: '古典的マヨネーズの乳化剤。レシチンとリポタンパク質を含む。',
           highlight: true,
-          points: [
-            '最大油量：78%',
-            '卵黄あたり約15mlの水分',
-            'コクと色を加える',
-            'マヨネーズとアイオリに最適'
-          ]
+          points: ['最大油量：78%', '約15mlの水分', 'コクと色を加える', 'マヨやアイオリに最適']
         },
         {
           title: 'マスタード',
           icon: 'mdi:shaker-outline',
           description: '粘質物と種子タンパク質に依存。ピリッとした風味を加える。',
-          points: [
-            '最大油量：70%',
-            '約10mlの水分含有',
-            '乳化力はやや弱い',
-            'ビネグレットに最適'
-          ]
+          points: ['最大油量：70%', '約10mlの水分含有', '乳化力はやや弱い', 'ビネグレットに最適']
         },
         {
           title: '大豆レシチン',
           icon: 'mdi:leaf',
           description: '高濃度の植物由来界面活性剤。',
-          points: [
-            '最大油量：82%',
-            '約5mlの水分含有',
-            '中性の風味',
-            'モダニスト料理の定番'
-          ]
+          points: ['最大油量：82%', '約5mlの水分含有', '中性の風味', 'モダニスト料理の定番']
         },
         {
           title: 'ポリソルベート',
           icon: 'mdi:flask-outline',
           description: '最大の界面活性能力を持つ合成乳化剤。',
-          points: [
-            '最大油量：85%',
-            '約2mlの水分含有',
-            '最高の油耐性',
-            'フォームやエアに使用'
-          ]
+          points: ['最大油量：85%', '約2mlの水分含有', '最高の油耐性', 'フォームやエアに使用']
         }
       ]
     },
@@ -215,7 +225,46 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'title',
-      text: '破壊した乳液を段階的に救う方法',
+      text: '科学：なぜ乳液は破壊するのか、ケプラー予想の調理への応用',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: '料理における乳液は、連続した水相の中に微小な油滴を分散させることで機能します。<strong>乳化剤</strong> - 卵黄のレシチン、マスタードの粘質物、ポリソルベートなどの合成界面活性剤 - は各油滴をコーティングし、隣同士が融合するのを防ぎます。'
+    },
+    {
+      type: 'paragraph',
+      html: '破壊点は純粋な幾何学によって決定されます。油滴は小さな球が密集したように振る舞います。与えられた空間に詰め込める球の最大体積 - <strong>ケプラー予想</strong>として知られるもの - は約74%です。実際の調理現場では、強力な乳化剤を使えば80〜85%まで伸ばせますが、それを超えると油滴が極限まで圧縮されて融合し、乳液は瞬時に崩壊します。'
+    },
+    {
+      type: 'card',
+      columns: 2,
+      items: [
+        {
+          icon: 'mdi:egg-outline',
+          title: 'クラシックなマヨネーズ＆アイオリ',
+          html: '油量78%までは<strong>卵黄</strong>を使用します。油1カップに対して卵黄1個から始めます。油を注ぐ前に小さじ1杯の水またはレモン汁を加えると安全域が広がります。'
+        },
+        {
+          icon: 'mdi:shaker-outline',
+          title: 'ビネグレット＆軽いドレッシング',
+          html: '油量70%までは<strong>マスタード</strong>を使用します。マスタードの粘質物が一時的なドレッシングに必要な乳化力を提供します。'
+        },
+        {
+          icon: 'mdi:leaf',
+          title: 'モダニストソース＆安定フォーム',
+          html: '油量82%までは<strong>大豆レシチン</strong>を使用します。油や酸の風味をそのまま活かしたい中性的な味わいの乳液に最適です。'
+        },
+        {
+          icon: 'mdi:flask-outline',
+          title: '実験的なフォーム＆エア',
+          html: '油量85%までは<strong>ポリソルベート</strong>を使用します。最高の油保持量と泡の安定性を必要とするモダニスト技術に欠かせない選択肢です。'
+        }
+      ]
+    },
+    {
+      type: 'title',
+      text: '分離した乳液を段階的に救う方法',
       level: 2
     },
     {
@@ -225,13 +274,17 @@ export const content: ToolLocaleContent = {
     {
       type: 'diagnostic',
       variant: 'warning',
-      title: '乳液が破壊しそうな一般的なサイン',
-      html: '<strong>とろみがついた後に突然ゆるくなる</strong>、<strong>つややかな表面がざらつく</strong>、または縁に油が浮いてくるのが見えたら注意してください。これらの兆候が見られたら、すぐに油を加えるのを止め、小さじ1杯の冷水を泡立ててから再開しましょう。'
+      title: '乳液が破壊しそうな3つの一般的なサイン',
+      html: '最初の警告として<strong>一度とろみがついた後に突然ゆるくなる</strong>状態に注意してください。次に<strong>つややかな表面がざらつく</strong>、または<strong>縁に油が浮いてくる</strong>兆候を確認します。これらが見られたら、直ちに油の追加を止め、小さじ1杯の冷水を加えて混ぜ合わせてから再開してください。'
     },
     {
       type: 'title',
       text: '毎回完璧な乳液を実現する実用的なコツ',
       level: 3
+    },
+    {
+      type: 'message',
+      html: '<strong>黄金律：</strong>油と水の比率は、テクニックや温度、混ぜる速度よりもはるかに重要です。撹拌を始める前に、当計算機で正確な油の限界量を把握しましょう。'
     },
     {
       type: 'tip',
@@ -279,8 +332,15 @@ export const content: ToolLocaleContent = {
       ]
     },
     {
-      type: 'paragraph',
-      html: 'クラシックなフレンチマヨネーズ、ガーリック風味のアイオリ、安定したビネグレット、あるいはモダニストなハイドロコロイドの実験のいずれを作るにしても、<strong>油と水の比率</strong>を理解することが最も重要な要素です。この計算機が計算を処理するので、自信を持って調理に臨めます。'
+      type: 'summary',
+      title: '安定した乳液作りの要点',
+      items: [
+        '乳化剤ごとに維持できる最大油分率が定められています（卵黄78%、マスタード70%、大豆レシチン82%、ポリソルベート85%）。',
+        '分離の限界点は幾何学的な構造（ケプラー予想の74%）によって規定され、混ぜる速度ではありません。',
+        '常に室温の材料からスタートし、安全マージンとして少量の水を事前に加えておきます。',
+        '分離した乳液は、強く混ぜるのではなく、新しい乳化剤と水分を追加することで修復可能です。',
+        '上の乳液安定性計算機を使用して、お手持ちの材料に応じた正確な油分限界を取得してください。'
+      ]
     }
   ],
   bibliography,

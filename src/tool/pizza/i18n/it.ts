@@ -24,6 +24,16 @@ const faq = [
     answer:
       "Sì, ma con adattamenti. Preriscalda al massimo (250-280°C) con pietra refrattaria per 45-60 minuti. La cottura durerà 5-7 minuti invece dei 60-90 secondi del forno a legna.",
   },
+  {
+    question: "Che farina devo usare?",
+    answer:
+      "Ideale: Caputo Pizzeria (W260-280) o Manitoba (W350-400). Alternativa: qualsiasi farina con 11-13g di proteine per 100g. Evita farine deboli (W130-160) per lunghe lievitazioni.",
+  },
+  {
+    question: "Perché l'impasto si strappa quando lo stendo?",
+    answer:
+      "Il glutine non è rilassato. Lascia riposare i panetti 2-3 ore a temperatura ambiente. Se si ripete, l'impastamento è stato insufficiente o la farina è troppo debole.",
+  },
 ];
 const howTo = [
   {
@@ -45,6 +55,10 @@ const howTo = [
   {
     name: "Maturazione lunga",
     text: "Metti i panetti in contenitori ermetici in frigo (4°C) per 24-72 ore. Questo passaggio genera sapore e digeribilità.",
+  },
+  {
+    name: "Stenditura e cottura",
+    text: "Togli dal freddo 30 minuti prima. Stendi dal centro verso l'esterno. Cuoci alla massima temperatura.",
   },
 ];
 
@@ -115,7 +129,8 @@ export const content: ToolLocaleContent = {
       "La dimensione visiva rappresenta il diametro approssimativo della pizza stesa in base al peso del panetto.",
   },
   faq,
-  howTo, seo: [
+  howTo,
+  seo: [
     {
       type: 'title',
       text: 'Guida Maestro alla Vera Pizza Napoletana',
@@ -152,9 +167,139 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'L\'Importanza Fondamentale dell\'Idratazione',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'L\'idratazione (percentuale di acqua rispetto al peso della farina) determina la consistenza del <strong>cornicione</strong>.',
+    },
+    {
+      type: 'comparative',
+      columns: 3,
+      items: [
+        {
+          title: 'Idratazione 55 a 60%',
+          icon: 'mdi:water-percent',
+          description: 'Molto facile da gestire, ideale per principianti e forni domestici.',
+          points: [
+            'Formazione maglia glutinica semplice',
+            'Impasto poco appiccicoso',
+            'Crosticina croccante',
+          ],
+        },
+        {
+          title: 'Idratazione 63 a 67%',
+          icon: 'mdi:water',
+          description: 'Lo standard AVPN. Bilanciamento perfetto per un impasto leggero.',
+          highlight: true,
+          points: [
+            'Consistenza elastica tradizionale',
+            'Ideale per forni a legna',
+            'Richiede discreta manualità',
+          ],
+        },
+        {
+          title: 'Idratazione 70%+',
+          icon: 'mdi:water-plus',
+          description: 'Pizze contemporanee con alveoli giganti. Richiede tecnica avanzata.',
+          points: [
+            'Alveolatura estrema',
+            'Altissima digeribilità',
+            'Richiede farine molto forti',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Tipi di Lievito e Come Sceglierli',
+      level: 3,
+    },
+    {
+      type: 'comparative',
+      columns: 2,
+      items: [
+        {
+          title: 'Lievito di Birra Fresco',
+          icon: 'mdi:bread-slice-outline',
+          description: 'La scelta tradizionale dei pizzaioli. Dona un profilo aromatico più complesso.',
+          points: [
+            'Gusto più profondo e pulito',
+            'Azione enzimatica bilanciata',
+            'Si scioglie facilmente in acqua',
+            'Scadenza breve',
+          ],
+        },
+        {
+          title: 'Lievito Secco Disidratato',
+          icon: 'mdi:shaker-outline',
+          description: 'Molto più stabile e facile da conservare. Ideale per la dispensa.',
+          points: [
+            'Lunga conservazione',
+            'Nessuna idratazione preventiva',
+            'Tre volte più potente del fresco',
+            'Sapore leggermente più neutro',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Guida alla Scelta della Farina in base all\'Indice W',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['Tipo di Farina', 'Forza (W)', 'Tempo Lievitazione', 'Uso Consigliato'],
+      rows: [
+        ['Farina Debole', 'W130-180', '4-8 ore', 'Prodotti da forno rapidi'],
+        ['Media Forza', 'W200-240', '8-24 ore', 'Pizza veloce o pane semplice'],
+        ['Farina Forte', 'W260-320', '24-72 ore', 'Vera Pizza Napoletana'],
+        ['Extra Forte', 'W350+', '72+ ore', 'Grandi lievitati o altissima idratazione'],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'Controllo Temperatura dell\'Impasto',
+      html: 'L\'impasto non deve mai superare i 24°C a fine impastamento per non rovinare la maglia glutinica.',
+    },
+    {
+      type: 'title',
+      text: 'Glossario per il Futuro Pizzaiolo',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Cornicione',
+          definition: 'Il bordo rialzato e alveolato della pizza napoletana.',
+        },
+        {
+          term: 'Maturazione',
+          definition: 'Processo enzimatico distinto dalla lievitazione per scindere zuccheri e proteine.',
+        },
+        {
+          term: 'Incordatura',
+          definition: 'Il punto in cui l\'impasto raggiunge la sua massima elasticità.',
+        },
+        {
+          term: 'Autolisi',
+          definition: 'Riposo di sola farina e acqua per facilitare la formazione del glutine.',
+        },
+      ],
+    },
+    {
       type: 'tip',
       title: 'Il Trucco del Frigo',
       html: 'La maturazione di 24 ore a 4°C crea sapori complessi impossibili da ottenere a temperatura ambiente.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Il nostro calcolatore automatizza le proporzioni affinché tu possa concentrarti sulla tecnica e sulla passione.',
     },
   ],
   bibliography,

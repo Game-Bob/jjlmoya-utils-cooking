@@ -18,10 +18,6 @@ const faq = [
     answer: 'Depende do ingrediente. Para farinhas, sim. Para fermentos ou especiarias, a precisão importa menos (escala a 75% do indicado). Para ovos: se obtiveres 2.3, usa 2 inteiros + parte de um terceiro (pesado), ou arredonda para 2 se o prato o permitir.',
   },
   {
-    question: 'Por que o resultado não muda quando altero as doses?',
-    answer: 'Certifica-te de que o campo de ingredientes tem conteúdo. Se estiver vazio, não há nada para escalar. Verifica também se os números nos teus ingredientes são reconhecíveis (ex: "500g", "1/2 colher de chá").',
-  },
-  {
     question: 'Funciona com medidas imperiais (onzas, chávenas)?',
     answer: 'Tecnicamente sim, a ferramenta lê números e escala. Mas a precisão é limitada com chávenas (volume inconsistente). Recomenda-se converter para gramas antes de escalar.',
   },

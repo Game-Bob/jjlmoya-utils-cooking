@@ -129,6 +129,78 @@ export const content: ToolLocaleContent = {
           icon: 'mdi:clock-outline'
         }
       ]
+    },
+    {
+      type: 'title',
+      text: 'Comprendere la Dinamica della Perdita di Peso e la Curva Asintotica',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'La perdita di peso durante il dry aging è asintotica. Nei primi 14 giorni, l\'acqua evapora rapidamente dagli strati esterni. Si forma una crosta dura e scura (la pellicola) che rallenta l\'ulteriore evaporazione dopo 2-3 settimane.'
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Giorni 1-14:</strong> Evaporazione rapida. La carne perde dal 10% al 12% del suo peso (principalmente acqua). Le fibre muscolari si restringono e i sapori si concentrano.',
+        '<strong>Giorni 15-30:</strong> L\'evaporazione rallenta grazie alla formazione della pellicola. Gli enzimi (calpaine e catepsine) scompongono il collagene rendendo la carne più tenera.',
+        '<strong>Giorni 30-45:</strong> Ulteriore perdita d\'acqua minima. Sviluppo di note profonde di nocciola e formaggio erborinato per ossidazione dei grassi.',
+        '<strong>Scarto di Rifilatura:</strong> Al termine della frollatura, la crosta esterna deve essere rimossa, con una perdita di circa il 15% del peso totale.'
+      ]
+    },
+    {
+      type: 'title',
+      text: 'Controlli Ambientali nella Camera di Frollatura',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Qualità dell\'aria, temperatura e umidità costanti sono fondamentali. Eventuali deviazioni possono rovinare il taglio.'
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Temperatura:</strong> Deve rimanere tra 1°C e 3°C. Sotto 0°C gli enzimi si congelano; sopra 4°C si sviluppano batteri patogeni.',
+        '<strong>Umidità Relativa (UR):</strong> L\'intervallo ideale è tra 75% e 85%. Sotto il 70% si verifica l\'indurimento superficiale; sopra l\'85% crescono muffe indesiderate.',
+        '<strong>Flusso d\'aria:</strong> Una ventilazione continua è necessaria per asciugare la superficie in modo uniforme.'
+      ]
+    },
+    {
+      type: 'title',
+      text: 'Implicazioni Finanziarie e Calcoli dei Costi',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'A causa dell\'evaporazione e della rifilatura, la parte edibile si riduce, aumentando il prezzo effettivo al chilogrammo.'
+    },
+    {
+      type: 'table',
+      headers: ['Durata Frollatura', 'Ø Perdita Evaporazione', 'Ø Scarto Rifilatura', 'Resa Totale', 'Moltiplicatore Costo'],
+      rows: [
+        ['14 Giorni', '10.5%', '15.0%', '74.5%', '1.34x'],
+        ['21 Giorni', '13.5%', '15.0%', '71.5%', '1.40x'],
+        ['30 Giorni', '17.5%', '15.0%', '67.5%', '1.48x'],
+        ['45 Giorni', '21.0%', '15.0%', '64.0%', '1.56x'],
+        ['60 Giorni', '24.0%', '15.0%', '61.0%', '1.64x']
+      ]
+    },
+    {
+      type: 'title',
+      text: 'Linee Guida di Sicurezza: Microbiologia e Muffe Buone vs Cattive',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Un dry aging sicuro si basa sulla crescita di microflora benefica (funghi del genere <em>Thamnidium</em>, <em>Mucor</em>, <em>Rhizopus</em>). La massima igiene è fondamentale.'
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Buoni Indicatori:</strong> Crosta asciutta, solida, viola scuro o marrone. Uno strato di muffa bianca e sottile (simile alla crosta del formaggio) è normale.',
+        '<strong>Cattivi Indicatori:</strong> Superfici appiccicose, viscide o bagnate. Muffe verdi, nere o giallastre. Odore acre o d\'ammoniaca indica deterioramento.',
+        '<strong>Pulizia:</strong> Sterilizzare sempre camera, ganci e griglie prima di inserire nuova carne.'
+      ]
     }
   ],
   bibliography,

@@ -8,13 +8,33 @@ const faq = [
   {
     question: 'Wie wird der Gewichtsverlust beim Dörren berechnet?',
     answer: 'Der Gewichtsverlust wird berechnet, indem der feste Anteil vom Wassergehalt getrennt wird. Da der Feststoffanteil konstant bleibt, entspricht das Endgewicht dem Feststoffanteil geteilt durch 1 minus dem Feuchtigkeitsziel.'
+  },
+  {
+    question: 'Warum beeinflusst die Dörrtemperatur die Trocknungszeit?',
+    answer: 'Höhere Temperaturen beschleunigen die Verdunstung von Wasser von der Oberfläche der Lebensmittel. Eine zu hohe Temperatur kann jedoch zu Case Hardening führen, bei dem die äußere Schicht zu schnell trocknet und Feuchtigkeit im Inneren einschließt.'
+  },
+  {
+    question: 'Woran erkenne ich, dass Lebensmittel vollständig getrocknet sind?',
+    answer: 'Ordnungsgemäß getrocknete Lebensmittel sollten sich trocken und nicht klebrig anfühlen. Früchte sollten biegsam und ledrig sein, Gemüse brüchig oder knusprig und Fleisch für Jerky zäh und biegsam, ohne zu brechen.'
   }
 ];
 
 const howTo = [
   {
     name: 'Wählen Sie eine Zutat oder benutzerdefinierte Feuchtigkeit',
-    text: 'Wählen Sie eine Voreinstellung oder passen Sie die Feuchtigkeit manuell an.'
+    text: 'Wählen Sie aus unseren Voreinstellungen wie Beef Jerky, Wassermelonen-Snaps, Apfelringe, Mangoscheiben oder Pilze, die automatisch die Anfangsfeuchtigkeit und die Basis-Dörrzeit einstellen.'
+  },
+  {
+    name: 'Passen Sie den Anfangs- und Ziel-Feuchtigkeitsgehalt an',
+    text: 'Stellen Sie die Anfangsfeuchtigkeit Ihrer Lebensmittel und Ihren gewünschten Ziel-Feuchtigkeitsgehalt über die Schieberegler ein.'
+  },
+  {
+    name: 'Stellen Sie Anfangsgewicht und Dörrtemperatur ein',
+    text: 'Geben Sie das Rohgewicht der Lebensmittel und die Betriebstemperatur Ihres Dörrautomaten ein.'
+  },
+  {
+    name: 'Geschätzte Dörrzeit und Endgewicht anzeigen',
+    text: 'Lesen Sie die berechnete Ausgabe ab, die Ihr Zielgewicht, das verdampfte Wasser und die geschätzte Stundenzahl anzeigt.'
   }
 ];
 

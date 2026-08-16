@@ -18,10 +18,6 @@ const faq = [
     answer: 'Dipende dall\'ingrediente. Per le farine, sì. Per lieviti o spezie, la precisione conta meno (scala al 75% di quanto indicato). Per le uova: se ottieni 2.3, usa 2 uova intere + parte di un terzo (pesato), o arrotonda a 2 se il piatto lo consente.',
   },
   {
-    question: 'Perché il risultato non cambia quando modifico le porzioni?',
-    answer: 'Assicurati che il campo degli ingredienti non sia vuoto. Se è vuoto, non c\'è nulla da scalare. Verifica anche che i numeri nei tuoi ingredienti siano riconoscibili (es: "500g", "1/2 cucchiaino").',
-  },
-  {
     question: 'Funziona con misure imperiali (once, tazze)?',
     answer: 'Tecnicamente sì, lo strumento legge i numeri e scala. Ma la precisione è limitata con le tazze (volume incoerente). Si raccomanda di convertire in grammi prima di scalare.',
   },

@@ -8,13 +8,33 @@ const faq = [
   {
     question: 'Como calcular a perda de peso na desidratação?',
     answer: 'A perda de peso é calculada separando a massa sólida da água. Como a matéria sólida permanece constante, o peso final é o sólido dividido por 1 menos a porcentagem de umidade desejada.'
+  },
+  {
+    question: 'Por que a temperatura de desidratação afeta o tempo de secagem?',
+    answer: 'Temperaturas mais altas aceleram a taxa de evaporação de água da superfície do alimento. No entanto, uma temperatura muito alta pode causar endurecimento superficial (case hardening), onde a camada externa seca muito rápido e aprisiona a umidade no interior.'
+  },
+  {
+    question: 'Como saber quando o alimento está totalmente desidratado?',
+    answer: 'Alimentos devidamente desidratados devem parecer secos e não pegajosos. Frutas devem ser flexíveis e acavaleiradas, vegetais quebradiços ou crocantes, e carnes para jerky duras e dobráveis sem quebrar.'
   }
 ];
 
 const howTo = [
   {
     name: 'Selecione um ingrediente ou umidade manual',
-    text: 'Escolha uma predefinição ou configure os valores iniciais de umidade.'
+    text: 'Escolha entre nossas predefinições como Carne Seca (Jerky), Crocantes de Melancia, Rodelas de Maçã, Fatias de Manga ou Cogumelos, o que define automaticamente a umidade inicial e o tempo de secagem base.'
+  },
+  {
+    name: 'Ajuste o teor de umidade inicial e desejado',
+    text: 'Defina a umidade inicial do seu alimento e o nível de umidade final desejado usando os seletores.'
+  },
+  {
+    name: 'Defina o peso inicial e a temperatura de secagem',
+    text: 'Insira o peso cru do alimento e a temperatura de operação do seu desidratador.'
+  },
+  {
+    name: 'Veja o tempo estimado de secagem e o peso final',
+    text: 'Leia o resultado calculado mostrando o peso final do alimento, a água evaporada e as horas estimadas necessárias.'
   }
 ];
 

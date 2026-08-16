@@ -150,6 +150,11 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: '머랭 제조 기법 비교',
+      level: 3,
+    },
+    {
       type: 'comparative',
       columns: 3,
       items: [
@@ -190,9 +195,74 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: '계란 흰자 휘핑의 시각적 단계',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['단계', '시각적 특징', '권장 용도', '안정성'],
+      rows: [
+        ['거품 상태', '투명하고 큰 거품', '산성 물질이나 설탕 투입', '없음'],
+        ['소프트 피크', '뿔 끝이 휨', '무스와 수플레', '낮음'],
+        [
+          '스티프 피크 (단단한 뿔)',
+          '단단하게 꼿꼿이 선 뿔',
+          '장식 및 구움 과자',
+          '높음',
+        ],
+        [
+          '오버 휘핑',
+          '푸석하고 건조한 질감',
+          '사용 불가 (분리됨)',
+          '붕괴',
+        ],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: '머랭에서 물(시럽)이 분리되나요?',
+      html: '시럽 분리 현상(離水)이 발생한다면 설탕이 완전히 녹지 않았거나 습도가 높은 환경 때문입니다. 이탈리안 머랭 제조 시에는 시럽을 가늘고 일정하게 부어주세요.',
+    },
+    {
+      type: 'title',
+      text: '제과 기술 용어집',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: '오발부민 (Ovalbumin)',
+          definition:
+            '계란 흰자의 주요 단백질로 휘핑 시 공기를 가두는 역할을 합니다.',
+        },
+        {
+          term: '흡습성',
+          definition:
+            '공기 중의 수분을 흡수하는 설탕의 성질.',
+        },
+        {
+          term: '주석산 (Cream of Tartar)',
+          definition:
+            '거품 구조를 안정화하고 오버 휘핑을 방지하는 산성 염.',
+        },
+        {
+          term: '중탕 (Bain-Marie)',
+          definition:
+            '스위스 머랭에서 설탕을 안전하게 녹이기 위한 간접 가열법.',
+        },
+      ],
+    },
+    {
       type: 'tip',
-      title: '볼 탈지 팁',
+      title: '식초를 활용한 탈지 팁',
       html: '휘핑을 시작하기 전, 볼을 레몬즙이나 식초로 닦아주세요. 아주 적은 유분이라도 흰자가 올라오는 것을 방해합니다.',
+    },
+    {
+      type: 'paragraph',
+      html: '당사의 계산기가 번거로운 계산을 자동으로 처리해 주므로 완벽하고 윤기 나는 뿔을 만드는 것에만 집중할 수 있습니다.',
     },
   ],
   bibliography,

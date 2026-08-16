@@ -129,6 +129,78 @@ export const content: ToolLocaleContent = {
           icon: 'mdi:clock-outline'
         }
       ]
+    },
+    {
+      type: 'title',
+      text: 'Compreender a Dinâmica de Perda de Peso e a Curva Asseptótica',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'A perda de peso durante o dry aging é assintótica. Nos primeiros 14 dias, a água evapora rapidamente das camadas externas. Forma-se uma crosta dura e escura (película) que desacelera a evaporação posterior após 2 a 3 semanas.'
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Dias 1-14:</strong> Evaporação rápida. A carne perde entre 10% e 12% do seu peso (principalmente água). As fibras musculares encolhem e os sabores concentram-se.',
+        '<strong>Dias 15-30:</strong> A evaporação desacelera com a formação da película. Enzimas (calpaínas e catepsinas) degradam o colagénio, tornando a carne mais macia.',
+        '<strong>Dias 30-45:</strong> Perda de água adicional mínima. Desenvolvimento de notas intensas a noz e queijo azul devido à oxidação de gorduras.',
+        '<strong>Perda na Aparagem:</strong> Concluída a maturação, a crosta externa deve ser cortada, representando cerca de 15% de perda do peso total.'
+      ]
+    },
+    {
+      type: 'title',
+      text: 'Controlos Ambientais na Câmara de Maturação',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Qualidade do ar, temperatura e humidade constantes são cruciais. Qualquer desvio pode estragar o corte.'
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Temperatura:</strong> Deve manter-se entre 1°C e 3°C. Abaixo de 0°C as enzimas congelam; acima de 4°C desenvolvem-se bactérias patogénicas.',
+        '<strong>Humidade Relativa (HR):</strong> O intervalo ideal é de 75% a 85%. Abaixo de 70% ocorre endurecimento precoce da crosta; acima de 85% crescem bolores indesejados.',
+        '<strong>Fluxo de Ar:</strong> É necessária uma circulação de ar contínua para secar a superfície de forma uniforme.'
+      ]
+    },
+    {
+      type: 'title',
+      text: 'Implicações Financeiras e Cálculos de Custo',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Devido à evaporação e aparagem, a porção comestível diminui, aumentando o preço efetivo por quilograma.'
+    },
+    {
+      type: 'table',
+      headers: ['Duração da Maturação', 'Ø Perda por Evaporação', 'Ø Perda na Aparagem', 'Rendimento Total', 'Multiplicador de Custo'],
+      rows: [
+        ['14 Dias', '10.5%', '15.0%', '74.5%', '1.34x'],
+        ['21 Dias', '13.5%', '15.0%', '71.5%', '1.40x'],
+        ['30 Dias', '17.5%', '15.0%', '67.5%', '1.48x'],
+        ['45 Dias', '21.0%', '15.0%', '64.0%', '1.56x'],
+        ['60 Dias', '24.0%', '15.0%', '61.0%', '1.64x']
+      ]
+    },
+    {
+      type: 'title',
+      text: 'Diretrizes de Segurança: Microbiologia e Bolores Bons vs Maus',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Um dry aging seguro baseia-se no crescimento de microflora benéfica (fungos do género <em>Thamnidium</em>, <em>Mucor</em>, <em>Rhizopus</em>). A higiene rigorosa é indispensável.'
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Bons Indicadores:</strong> Uma crosta seca, firme, roxa escura ou castanha. Uma fina camada de bolor branco (semelhante à crosta de queijo) é normal.',
+        '<strong>Maus Indicadores:</strong> Superfícies pegajosas, viscosas ou húmidas. Bolores verdes, pretos ou amarelados. Odor a amoníaco ou podridão indica deterioração.',
+        '<strong>Higiene:</strong> Esterilize sempre a câmara, ganchos e prateleiras antes de colocar nova carne.'
+      ]
     }
   ],
   bibliography,

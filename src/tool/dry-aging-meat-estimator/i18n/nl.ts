@@ -129,6 +129,78 @@ export const content: ToolLocaleContent = {
           icon: 'mdi:clock-outline'
         }
       ]
+    },
+    {
+      type: 'title',
+      text: 'Het Begrijpen van Gewichtsverlies en de Asymptotische Curve',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Het gewichtsverlies tijdens dry aging is asymptotisch. In de eerste 14 dagen vliegt het vocht er snel uit. Er vormt zich een harde, donkere korst (pellikel) die verdere verdamping na 2 tot 3 weken vertraagt.'
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Dagen 1-14:</strong> Snelle verdamping. Het vlees verliest 10% tot 12% van zijn gewicht (voornamelijk water). Spiervezels krimpen en smaken worden geconcentreerd.',
+        '<strong>Dagen 15-30:</strong> Verdamping vertraagt door de pellikelvorming. Enzymen (calpaïnes en cathepsines) breken collageen af, wat zorgt voor malsheid.',
+        '<strong>Dagen 30-45:</strong> Minimaal extra waterverlies. Ontwikkeling van diepe nootachtige en blauwe kaas-achtige aroma\'s door vetoxidatie.',
+        '<strong>Trimverlies:</strong> Na rijping moet de korst worden afgesneden, wat neerkomt op zo\'n 15% verlies van het totale gewicht.'
+      ]
+    },
+    {
+      type: 'title',
+      text: 'Omgevingscontroles in de Rijpingskast',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Constante luchtkwaliteit, temperatuur en vochtigheid zijn essentieel. Afwijkingen kunnen het vlees doen bederven.'
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Temperatuur:</strong> Moet tussen 1°C en 3°C blijven. Onder 0°C bevriezen enzymen; boven 4°C groeien ziekteverwekkers.',
+        '<strong>Relatieve Luchtvochtigheid (RLV):</strong> Het ideale bereik is 75% tot 85%. Onder 70% ontstaat korstverharding; boven 85% groeien ongewenste schimmels.',
+        '<strong>Luchtstroom:</strong> Continue luchtcirculatie is nodig om het oppervlak gelijkmatig te drogen.'
+      ]
+    },
+    {
+      type: 'title',
+      text: 'Financiële Implicaties en Kostenberekeningen',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Door verdamping en trimming wordt het eetbare gedeelte kleiner, wat de effectieve prijs per kilogram verhoogt.'
+    },
+    {
+      type: 'table',
+      headers: ['Rijpingsduur', 'Ø Verdampingsverlies', 'Ø Trimverlies', 'Totale Opbrengst', 'Kostenvermenigvuldiger'],
+      rows: [
+        ['14 Dagen', '10.5%', '15.0%', '74.5%', '1.34x'],
+        ['21 Dagen', '13.5%', '15.0%', '71.5%', '1.40x'],
+        ['30 Dagen', '17.5%', '15.0%', '67.5%', '1.48x'],
+        ['45 Dagen', '21.0%', '15.0%', '64.0%', '1.56x'],
+        ['60 Dagen', '24.0%', '15.0%', '61.0%', '1.64x']
+      ]
+    },
+    {
+      type: 'title',
+      text: 'Veiligheidsrichtlijnen: Microbiologie en Goede vs Slechte Schimmels',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Veilige dry aging vertrouwt op de groei van nuttige microflora (schimmels uit het geslacht <em>Thamnidium</em>, <em>Mucor</em>, <em>Rhizopus</em>). Strikte hygiëne is essentieel.'
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Goede Indicatoren:</strong> Een droge, stevige, donkerpaarse of donkerbruine korst. Een dunne witte pluislaag (vergelijkbaar met kaaskorst) is normaal.',
+        '<strong>Slechte Indicatoren:</strong> Plakkerige, slijmerige of natte oppervlakken. Groene, zwarte of gele schimmels. Een zure of ammoniakgeur wijst op bederf.',
+        '<strong>Hygiëne:</strong> Steriliseer de kast, haken en roosters altijd voordat u nieuw vlees plaatst.'
+      ]
     }
   ],
   bibliography,

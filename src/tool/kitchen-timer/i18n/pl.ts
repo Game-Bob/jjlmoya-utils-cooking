@@ -113,9 +113,17 @@ export const content: ToolLocaleContent = {
       html: 'Profesjonalne gotowanie to nie tylko przepisy, ale <strong>precyzyjne zarządzanie czasem</strong>. Francuska koncepcja <em>"Mise en Place"</em> (wszystko na swoim miejscu) traktuje czas jako brakujący składnik.',
     },
     {
+      type: 'paragraph',
+      html: 'To narzędzie <strong>Wielokrotnego Minutnika</strong> zostało zaprojektowane dla kucharzy domowych i profesjonalistów, którzy muszą jednocześnie koordynować wiele potraw.',
+    },
+    {
       type: 'title',
       text: 'Rola Temperatury i Czasu',
       level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Gotowanie to w istocie stosowanie ciepła przez określony czas w celu zmiany chemicznej struktury żywności. Denaturacja białek i reakcja Maillarda zależą krytycznie od minutnika.',
     },
     {
       type: 'table',

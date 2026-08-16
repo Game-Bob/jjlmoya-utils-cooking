@@ -3,6 +3,7 @@ import { bibliography } from '../bibliography';
 
 const title = "Calculateur de Stabilite d Emulsion et Limite d Huile";
 const description = "Decouvrez exactement combien d huile votre mayonnaise, aioli ou vinaigrette peut supporter avant de se briser. Evitez les sauces qui tranchent avec notre calculateur gratuit de stabilite d emulsion.";
+
 const faq = [
   {
     question: "Combien d huile puis-je ajouter a ma mayonnaise avant qu elle ne se brise?",
@@ -79,8 +80,8 @@ const appSchema = {
 
 export const content: ToolLocaleContent = {
   slug: 'calculateur-stabilite-emulsion',
-  title: 'Calculateur de Stabilite d Emulsion et Limite d Huile',
-  description: 'Decouvrez exactement combien d huile votre mayonnaise, aioli ou vinaigrette peut supporter avant de se briser. Evitez les sauces qui tranchent avec notre calculateur gratuit de stabilite d emulsion.',
+  title,
+  description,
   faqTitle: 'Questions Frequentes',
   ui: {
     title: 'Analyseur de Stabilite d Emulsion',
@@ -117,40 +118,69 @@ export const content: ToolLocaleContent = {
       type: 'stats',
       columns: 4,
       items: [
-        {
-          value: '78%',
-          label: 'Jaune d Oeuf Max Huile',
-          icon: 'mdi:egg-outline'
-        },
-        {
-          value: '85%',
-          label: 'Limite Polysorbate',
-          icon: 'mdi:flask-outline'
-        },
-        {
-          value: '74%',
-          label: 'Compactage Theorique',
-          icon: 'mdi:sphere'
-        },
-        {
-          value: '15 ml',
-          label: 'Eau du Jaune',
-          icon: 'mdi:water'
-        }
+        { value: '78%', label: 'Jaune d Oeuf Max Huile', icon: 'mdi:egg-outline' },
+        { value: '85%', label: 'Limite Polysorbate', icon: 'mdi:flask-outline' },
+        { value: '74%', label: 'Compactage Theorique', icon: 'mdi:sphere' },
+        { value: '15 ml', label: 'Eau du Jaune', icon: 'mdi:water' }
+      ]
+    },
+    {
+      type: 'list',
+      items: [
+        '<strong>Vous ajoutez l huile trop vite</strong> - La vitesse est rarement la vraie cause. Si la fraction d huile reste sous la limite de l emulsifiant, l emulsion tiendra quelle que soit la vitesse de versement.',
+        '<strong>Vos ingredients sont trop froids</strong> - Les oeufs ou l huile froids augmentent la viscosite et rendent la formation des gouttes plus difficile. Mettez toujours vos ingredients a temperature ambiante.',
+        '<strong>Vous avez depasse la limite d huile pour votre emulsifiant</strong> - Chaque emulsifiant a une fraction maximale de compactage. Jaune d oeuf jusqu a 78%, moutarde 70%, lecithine de soja 82% et polysorbate 85%.',
+        '<strong>Votre phase aqueuse est trop petite</strong> - Sans assez d eau pour entourer les gouttes d huile, elles n ont nulle part ou aller sauf fusionner entre elles.'
       ]
     },
     {
       type: 'title',
-      text: 'La Science: Pourquoi les Emulsions se Brisent',
+      text: 'Quel emulsifiant devriez-vous utiliser ? Comparaison pratique',
       level: 2
     },
     {
       type: 'paragraph',
-      html: 'Une emulsion culinaire fonctionne en dispersant de minuscules gouttelettes d huile dans une phase aqueuse continue. <strong>Les emulsifiants</strong> - comme la lecithine du jaune d oeuf, le mucilage de la moutarde ou les tensioactifs synthetiques comme le polysorbate - enrobent chaque gouttelette et l empechent de fusionner avec ses voisines.'
+      html: 'Choisir le bon emulsifiant dépend de votre recette, de votre profil de saveur et de la capacité d huile souhaitée. Voici comment se comparent les quatre emulsifiants culinaires les plus courants.'
     },
     {
-      type: 'paragraph',
-      html: 'Le point de rupture est determine par la pure geometrie. Les gouttelettes d huile se comportent comme de minuscules spheres empilees. Le volume maximum de spheres pouvant tenir dans un espace donne - connu sous le nom de <strong>conjecture de Kepler</strong> - est d environ 74%. Dans les systemes de cuisine reels, cela peut s etendre a 80-85% avec des emulsifiants puissants, mais au-dela, les gouttelettes sont si comprimees qu elles fusionnent et l emulsion s effondre instantanement.'
+      type: 'proscons',
+      title: 'Jaune d Oeuf',
+      items: [
+        { pro: 'Compatibilité de saveur maximale pour les sauces classiques', con: 'Ajoute du cholestérol et un goût d œuf' },
+        { pro: 'Contient de la lécithine et des lipoprotéines pour des émulsions robustes', con: 'Nécessite un contrôle rigoureux de la température' },
+        { pro: 'Ajoute une couleur naturelle et de la richesse', con: 'Ne convient pas aux préparations végétaliennes' },
+        { pro: 'Fonctionne jusqu à 78% de fraction d huile', con: 'Limité à environ 15 ml d apport d eau par jaune' }
+      ]
+    },
+    {
+      type: 'proscons',
+      title: 'Moutarde',
+      items: [
+        { pro: 'Ajoute une saveur piquante et de la complexité aux assaisonnements', con: 'Capacité maximale d huile plus faible (70%)' },
+        { pro: 'Largement disponible et facile à utiliser', con: 'Pouvoir émulsifiant plus faible que le jaune d œuf' },
+        { pro: 'Fonctionne bien à température ambiante', con: 'La saveur peut entrer en conflit avec les sauces délicates' },
+        { pro: 'Idéale pour les vinaigrettes rapides', con: 'Ne convient pas aux émulsions de goût neutre' }
+      ]
+    },
+    {
+      type: 'proscons',
+      title: 'Lécithine de Soja',
+      items: [
+        { pro: 'Haute tolérance à l huile (82%) pour des sauces stables', con: 'Nécessite un pesage précis' },
+        { pro: 'Le goût neutre n altère pas les recettes', con: 'Moins indulgente que le jaune d œuf' },
+        { pro: 'D origine végétale et adaptée aux végétaliens', con: 'Pas un ingrédient de base courant dans les cuisines domestiques' },
+        { pro: 'Fonctionne avec de petits volumes d eau', con: 'Peut créer une texture légèrement artificielle' }
+      ]
+    },
+    {
+      type: 'proscons',
+      title: 'Polysorbate',
+      items: [
+        { pro: 'Capacité d huile la plus élevée de tous les émulsifiants (85%)', con: 'Additif synthétique, non naturel' },
+        { pro: 'Crée des mousses et airs ultra-stables', con: 'Difficile à trouver pour la cuisine à la maison' },
+        { pro: 'Fonctionne avec une phase aqueuse minimale', con: 'Nécessite une balance pour un dosage précis' },
+        { pro: 'Idéal pour la cuisine moderniste et expérimentale', con: 'Dominant si utilisé en excès' }
+      ]
     },
     {
       type: 'comparative',
@@ -161,45 +191,25 @@ export const content: ToolLocaleContent = {
           icon: 'mdi:egg-outline',
           description: 'L emulsifiant classique de la mayonnaise. Contient lecithine et lipoproteines.',
           highlight: true,
-          points: [
-            'Max huile: 78%',
-            '~15 ml eau par jaune',
-            'Ajoute richesse et couleur',
-            'Meilleur pour mayo et aioli'
-          ]
+          points: ['Max huile: 78%', '~15 ml eau par jaune', 'Ajoute richesse et couleur', 'Meilleur pour mayo et aioli']
         },
         {
           title: 'Moutarde',
           icon: 'mdi:shaker-outline',
           description: 'Repose sur le mucilage et les proteines des graines. Ajoute une saveur piquante.',
-          points: [
-            'Max huile: 70%',
-            '~10 ml teneur en eau',
-            'Pouvoir emulsifiant plus faible',
-            'Ideale pour vinaigrettes'
-          ]
+          points: ['Max huile: 70%', '~10 ml teneur en eau', 'Pouvoir emulsifiant plus faible', 'Ideale pour vinaigrettes']
         },
         {
           title: 'Lecithine de Soja',
           icon: 'mdi:leaf',
           description: 'Tensioactif vegetal hautement concentre.',
-          points: [
-            'Max huile: 82%',
-            '~5 ml teneur en eau',
-            'Profil de gout neutre',
-            'Incontournable en cuisine moderniste'
-          ]
+          points: ['Max huile: 82%', '~5 ml teneur en eau', 'Profil de gout neutre', 'Incontournable en cuisine moderniste']
         },
         {
           title: 'Polysorbate',
           icon: 'mdi:flask-outline',
           description: 'Emulsifiant synthetique a capacite tensioactive maximale.',
-          points: [
-            'Max huile: 85%',
-            '~2 ml teneur en eau',
-            'Plus haute tolerance a l huile',
-            'Utilise dans les mousses et airs'
-          ]
+          points: ['Max huile: 85%', '~2 ml teneur en eau', 'Plus haute tolerance a l huile', 'Utilise dans les mousses et airs']
         }
       ]
     },
@@ -215,6 +225,45 @@ export const content: ToolLocaleContent = {
     },
     {
       type: 'title',
+      text: 'La Science: Pourquoi les Emulsions se Brisent et Comment la Conjecture de Kepler S Applique',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Une emulsion culinaire fonctionne en dispersant de minuscules gouttelettes d huile dans une phase aqueuse continue. <strong>Les emulsifiants</strong> - comme la lecithine du jaune d oeuf, le mucilage de la moutarde ou les tensioactifs synthetiques comme le polysorbate - enrobent chaque gouttelette et l empechent de fusionner avec ses voisines.'
+    },
+    {
+      type: 'paragraph',
+      html: 'Le point de rupture est determine par la pure geometrie. Les gouttelettes d huile se comportent comme de minuscules spheres empilees. Le volume maximum de spheres pouvant tenir dans un espace donne - connu sous le nom de <strong>conjecture de Kepler</strong> - est d environ 74%. Dans les systemes de cuisine reels, cela peut s etendre a 80-85% avec des emulsifiants puissants, mais au-dela, les gouttelettes sont si comprimees qu elles fusionnent et l emulsion s effondre instantanement.'
+    },
+    {
+      type: 'card',
+      columns: 2,
+      items: [
+        {
+          icon: 'mdi:egg-outline',
+          title: 'Mayonnaise & Aïoli Classiques',
+          html: 'Utilisez du <strong>jaune d œuf</strong> jusqu à 78% d huile. Commencez avec un jaune par tasse d huile. Ajoutez une cuillère à café d eau ou de jus de citron avant de verser l huile pour une marge de sécurité plus large.'
+        },
+        {
+          icon: 'mdi:shaker-outline',
+          title: 'Vinaigrettes & Assaisonnements Légers',
+          html: 'Utilisez de la <strong>moutarde</strong> jusqu à 70% d huile. Le mucilage de la moutarde fournit suffisamment d émulsification pour une vinaigrette temporaire.'
+        },
+        {
+          icon: 'mdi:leaf',
+          title: 'Sauces Modernistes & Mousses Stables',
+          html: 'Utilisez de la <strong>lécithine de soja</strong> jusqu à 82% d huile. Idéal pour les émulsions de goût neutre où vous souhaitez que la saveur de l huile et de l acide ressorte.'
+        },
+        {
+          icon: 'mdi:flask-outline',
+          title: 'Mousses Expérimentales & Airs',
+          html: 'Utilisez du <strong>polysorbate</strong> jusqu à 85% d huile. Le choix incontournable pour les techniques modernistes nécessitant une charge en huile et une stabilité maximales.'
+        }
+      ]
+    },
+    {
+      type: 'title',
       text: 'Comment Sauver une Emulsion Brisee Etape par Etape',
       level: 2
     },
@@ -225,13 +274,17 @@ export const content: ToolLocaleContent = {
     {
       type: 'diagnostic',
       variant: 'warning',
-      title: 'Signes Courants Que Votre Emulsion Est Sur le Point de se Briser',
+      title: '3 signes courants que votre émulsion est sur le point de se briser',
       html: 'Surveillez un <strong>epaississement suivi d un amincissement soudain</strong>, une <strong>surface brillante devenant granuleuse</strong> ou de l huile visible s accumulant sur les bords. Si vous voyez l un de ces signes, arretez d ajouter de l huile immediatement et incorporez une cuillere a cafe d eau froide avant de continuer.'
     },
     {
       type: 'title',
       text: 'Conseils Pratiques pour des Emulsions Parfaites a Chaque Fois',
       level: 3
+    },
+    {
+      type: 'message',
+      html: '<strong>La règle d or:</strong> Le rapport huile/eau compte plus que la technique ou la vitesse. Utilisez notre calculateur pour trouver votre limite exacte avant de fouetter.'
     },
     {
       type: 'tip',
@@ -246,41 +299,33 @@ export const content: ToolLocaleContent = {
     {
       type: 'tip',
       title: 'Sauver un Lot Brise',
-      html: 'Mettez un jaune d oeuf frais dans un bol propre. Fouettez-le avec une cuillere a cafe d eau. Ensuite, <strong>versez le melange brise aussi lentement que possible</strong>, exactement comme s il s agissait d huile brute. Une fois qu il se re-emulsifie, vous pouvez ajouter le reste plus rapidement.'
+      html: 'Mettez un jaune d oeuf frais dans un bol propre. Fouettez-le avec une cuillere a cafe d eau. Ensuite, <strong>versez le melange brise aussi lentamente que possible</strong>, exactamente comme s il s agissait d huile brute. Une fois qu il se re-emulsifie, vous pouvez ajouter le reste plus rapidement.'
     },
     {
       type: 'title',
-      text: 'Glossaire Culinaire des Emulsions',
+      text: 'Glossaire des émulsions culinaires',
       level: 3
     },
     {
       type: 'glossary',
       items: [
-        {
-          term: 'Phase Continue',
-          definition: 'Le liquide qui entoure les gouttelettes - generalement de l eau, du vinaigre ou du jus d agrumes dans les emulsions huile-dans-eau comme la mayonnaise.'
-        },
-        {
-          term: 'Phase Dispersee',
-          definition: 'Le liquide divise en minuscules gouttelettes - l huile dans la plupart des emulsions culinaires. Plus vous en ajoutez, plus les gouttelettes se compactent.'
-        },
-        {
-          term: 'Fraction Volumique',
-          definition: 'Le rapport du volume d huile au volume total. A environ 74-85% (selon l emulsifiant), l emulsion atteint son point de rupture geometrique.'
-        },
-        {
-          term: 'Coalescence',
-          definition: 'Lorsque deux ou plusieurs gouttelettes d huile fusionnent en une plus grosse. C est le processus microscopique qui declenche une rupture visible de l emulsion.'
-        },
-        {
-          term: 'Inversion de Phase',
-          definition: 'Le point ou une emulsion huile-dans-eau se transforme en eau-dans-huile - comme lors de la fabrication du beurre a partir de la creme. C est le mode de defaillance ultime.'
-        }
+        { term: 'Phase Continue', definition: 'Le liquide qui entoure les gouttelettes - généralement de l eau, du vinaigre ou du jus de citron dans les émulsions huile-dans-l eau comme la mayonnaise.' },
+        { term: 'Phase Dispersée', definition: 'Le liquide divisé en minuscules gouttelettes - l huile dans la plupart des émulsions culinaires.' },
+        { term: 'Fraction Volumique', definition: 'Le rapport du volume d huile sur le volume total.' },
+        { term: 'Coalescence', definition: 'Lorsque deux ou plusieurs gouttelettes d huile fusionnent pour en former une plus grande.' },
+        { term: 'Inversion de Phase', definition: 'Le point où une émulsion huile-dans-l eau bascule en eau-dans-l eau.' }
       ]
     },
     {
-      type: 'paragraph',
-      html: 'Que vous prepariez une mayonnaise francaise classique, un aioli a l ail, une vinaigrette stable ou que vous experimentiez avec des hydrocolloides modernistes, comprendre le <strong>rapport huile-eau</strong> est le facteur le plus important. Notre calculateur gere les maths pour que vous puissiez cuisiner en toute confiance.'
+      type: 'summary',
+      title: 'Points Clés pour des Émulsions Stables',
+      items: [
+        'Chaque émulsifiant a une fraction maximale d huile: jaune d œuf 78%, moutarde 70%, lécithine de soja 82%, polysorbate 85%.',
+        'Le point de rupture est déterminé par la géométrie (conjecture de Kepler à 74%), et non par la vitesse de fouettage.',
+        'Commencez toujours avec des ingrédients à température ambiante et ajoutez une petite quantité d eau comme marge de sécurité.',
+        'Une émulsion brisée se sauve en ajoutant de l émulsifiant frais et plus de phase aqueuse, pas en fouettant plus fort.',
+        'Utilisez notre calculateur de stabilité d émulsion pour obtenir la limite exacte selon vos ingrédients.'
+      ]
     }
   ],
   bibliography,

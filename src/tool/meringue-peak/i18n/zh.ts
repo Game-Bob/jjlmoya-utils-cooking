@@ -150,6 +150,11 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: '蛋白霜制作工艺对比',
+      level: 3,
+    },
+    {
       type: 'comparative',
       columns: 3,
       items: [
@@ -190,9 +195,74 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: '蛋白打发过程的视觉阶段',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['阶段', '视觉特征', '推荐用途', '稳定性'],
+      rows: [
+        ['起泡期', '透明的大泡沫', '加入酸性物质或糖', '无'],
+        ['湿性发泡 (Soft Peaks)', '尖角弯曲', '慕斯和舒芙蕾', '低'],
+        [
+          '硬性发泡 (Stiff Peaks)',
+          '直立不倒的坚硬尖角',
+          '装饰与烘烤',
+          '高',
+        ],
+        [
+          '打发过度',
+          '呈现颗粒状且干燥',
+          '无法使用（离析）',
+          '崩溃',
+        ],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: '蛋白霜是否出现"出水"（析出糖浆）现象？',
+      html: '如果发现糖浆渗出（析水），通常是因为糖未完全溶解或环境湿度过高。意式蛋白霜制作时，请将糖浆以细长稳定的流向缓缓倒入。',
+    },
+    {
+      type: 'title',
+      text: '烘焙专业学术语表',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: '卵白蛋白 (Ovalbumin)',
+          definition:
+            '蛋白中负责在打发过程中包裹空气的主要蛋白质。',
+        },
+        {
+          term: '吸湿性',
+          definition:
+            '糖吸收空气中水分的物理特性。',
+        },
+        {
+          term: '塔塔粉 (Cream of Tartar)',
+          definition:
+            '一种酸性盐，有助于稳定泡沫结构并防止打发过度。',
+        },
+        {
+          term: '隔水加热 (Bain-Marie)',
+          definition:
+            '制作瑞士蛋白霜时用于安全溶解砂糖的间接加热法。',
+        },
+      ],
+    },
+    {
       type: 'tip',
-      title: '关于搅拌盆的"除油"秘诀',
-      html: '在开始前，用纸巾蘸取少量白醋或柠檬汁擦拭搅拌盆。任何微笑的油脂残留都会导致蛋白无法打发。',
+      title: '白醋擦拭法',
+      html: '在开始前，用纸巾蘸取少量白醋擦拭搅拌盆。任何微小的油脂残留都会导致蛋白无法打发。',
+    },
+    {
+      type: 'paragraph',
+      html: '我们的计算器将繁琐的换算自动化，让您能全神贯注于打发出完美的光泽和硬性发泡尖角。',
     },
   ],
   bibliography,

@@ -150,6 +150,11 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'Jämförelse av Marängtekniker',
+      level: 3,
+    },
+    {
       type: 'comparative',
       columns: 3,
       items: [
@@ -190,9 +195,74 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'Visuella Stadier vid Uppvispning av Äggvita',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['Stadium', 'Visuell Beskrivning', 'Rekommenderad Användning', 'Stabilitet'],
+      rows: [
+        ['Skummigt', 'Klara, stora bubblor', 'Tillsätt syra eller socker', 'Ingen'],
+        ['Mjuka Toppar', 'Topparna böjer sig', 'Mousse och sufflé', 'Låg'],
+        [
+          'Fasta Toppar',
+          'Fast, vertikal topp',
+          'Dekorering och bakning',
+          'Hög',
+        ],
+        [
+          'Övervispad',
+          'Grynig och torr textur',
+          'Oanvändbar (sprucken)',
+          'Kollaps',
+        ],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'Läcker din Maräng Vätska?',
+      html: 'Om du ser sockerlag läcka (syneres) har sockret inte lösts upp helt eller så är luftfuktigheten hög. Häll sockerlagen i en tunn, jämn stråle för italiensk maräng.',
+    },
+    {
+      type: 'title',
+      text: 'Konditoriteknisk Ordlista',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Ovalbumin',
+          definition:
+            'Det huvudsakliga proteinet i äggvita som binder luft vid vispning.',
+        },
+        {
+          term: 'Hygroskopisk',
+          definition:
+            'Sockrets egenskap att absorbera fukt från luften.',
+        },
+        {
+          term: 'Vinsten',
+          definition:
+            'Ett surt salt som stabiliserar skummet och förhindrar övervispning.',
+        },
+        {
+          term: 'Vattenbad (Bain-Marie)',
+          definition:
+            'Indirekt uppvärmning för att säkert lösa upp sockret för schweizisk maräng.',
+        },
+      ],
+    },
+    {
       type: 'tip',
-      title: 'Tricket med metallskål',
-      html: 'Rengör skålen med vinäger eller citron. Minsta spår av fett hindrar äggvitorna från att lyfta.',
+      title: 'Vinäger-Tricket',
+      html: 'Rengör skålen med vinäger eller citron före start. Minsta spår av fett hindrar äggvitorna från att lyfta.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Vår kalkylator automatiserar matematiken så att du kan fokusera på vispningen tills du når den perfekta glänsande marängen.',
     },
   ],
   bibliography,

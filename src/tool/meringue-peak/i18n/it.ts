@@ -150,6 +150,11 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'Confronto delle Tecniche di Meringa',
+      level: 3,
+    },
+    {
       type: 'comparative',
       columns: 3,
       items: [
@@ -190,9 +195,74 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'Fasi Visive della Montatura a Neve',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['Fase', 'Descrizione Visiva', 'Uso Consigliato', 'Stabilità'],
+      rows: [
+        ['Schiumosa', 'Bolle grandi e trasparenti', 'Aggiungi acido o zucchero', 'Nessuna'],
+        ['Picchi Morbidi', 'Le punte si piegano', 'Mousse e soufflé', 'Bassa'],
+        [
+          'Punto di Neve (Fermo)',
+          'Punta dritta e rigida',
+          'Decorazione e cottura',
+          'Alta',
+        ],
+        [
+          'Smontata / Impazzita',
+          'Consistenza granula e asciutta',
+          'Inutilizzabile',
+          'Crollo',
+        ],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'La Meringa Rilascia Liquido?',
+      html: 'Se noti rilascio di sciroppo (sineresi), lo zucchero non si è sciolto del tutto o l\'umidità è elevata. Versa lo sciroppo a filo continuo nella meringa italiana.',
+    },
+    {
+      type: 'title',
+      text: 'Glossario Tecnico di Pasticceria',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Ovalbumina',
+          definition:
+            'La proteina principale dell\'albume responsabile dell\'inglobamento dell\'aria.',
+        },
+        {
+          term: 'Igroscopico',
+          definition:
+            'La proprietà dello zucchero di assorbire l\'umidità dell\'aria.',
+        },
+        {
+          term: 'Cremor Tartaro',
+          definition:
+            'Un sale acido che stabilizza la schiuma e previene la smontatura.',
+        },
+        {
+          term: 'Bagnomaria',
+          definition:
+            'Metodo di riscaldamento indiretto per sciogliere lo zucchero in sicurezza per la meringa svizzera.',
+        },
+      ],
+    },
+    {
       type: 'tip',
-      title: 'Il trucco della ciotola di metallo',
-      html: 'Pulisci la ciotola con aceto o limone. Ogni traccia di grasso impedirà agli albumi di montare.',
+      title: 'Il Trucco dell\'Aceto',
+      html: 'Pulisci la ciotola con aceto o limone prima di iniziare. Ogni traccia di grasso impedirà agli albumi di montare.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Il nostro calcolatore automatizza i calcoli per permetterti di concentrarti sulla montatura perfetta.',
     },
   ],
   bibliography,

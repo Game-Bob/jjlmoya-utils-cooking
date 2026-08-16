@@ -20,6 +20,14 @@ const faq = [
     question: "가정용 오븐에서도 나폴리 피자를 만들 수 있나요?",
     answer: "네, 하지만 보완책이 필요합니다. 피자 스톤을 사용하고 최고 온도(250-280°C)로 45-60분간 예열하세요. 굽는 시간은 60-90초가 아닌 5-7분 정도 걸리지만 좋은 결과물을 얻을 수 있습니다.",
   },
+  {
+    question: "어떤 밀가루를 사용해야 하나요?",
+    answer: "이상적: Caputo Pizzeria (W260-280) 또는 Manitoba (W350-400). 대안: 100g당 단백질 11-13g을 함유한 밀가루. 장기 숙성 시 약한 밀가루(W130-160)는 피하세요.",
+  },
+  {
+    question: "도우를 늘릴 때 왜 찢어지나요?",
+    answer: "글루텐이 이완되지 않았기 때문입니다. 도우 공을 실온에서 2-3시간 휴지시키세요. 반복된다면 반죽이 부족했거나 밀가루 힘이 약한 것입니다.",
+  },
 ];
 const howTo = [
   {
@@ -31,8 +39,20 @@ const howTo = [
     text: "밀가루와 미지근한 물(22-25°C), 소금, 이스트를 섞습니다. 반죽기로 8-10분, 또는 손으로 15-20분간 치대주세요.",
   },
   {
+    name: "1차 발효 (벌크)",
+    text: "전체 반죽을 실온(20-25°C)에서 1-2시간 동안 부피가 두 배가 될 때까지 발효시킵니다.",
+  },
+  {
+    name: "도우 공으로 분할",
+    text: "반죽을 지정된 무게로 나눕니다. 둥글리기 후 장기 숙성 전 휴지시키세요.",
+  },
+  {
     name: "저온 숙성",
     text: "나눈 도우 공을 밀폐 용기에 담아 냉장고(4°C)에서 24-72시간 동안 숙성시킵니다. 이것이 풍미와 소화력을 높이는 핵심 단계입니다.",
+  },
+  {
+    name: "성형 및 굽기",
+    text: "굽기 30분 전에 냉장고에서 꺼내세요. 중앙에서 바깥쪽으로 성형합니다. 최고 온도에서 구워냅니다.",
   },
 ];
 
@@ -69,7 +89,7 @@ const appSchema = {
 };
 
 export const content: ToolLocaleContent = {
-  slug: 'neapolitan-pizza-dough-calculator-authentic-recipe',
+  slug: 'napoli-pizza-dou-gyesangi',
   title,
   description,
   faqTitle: "자주 묻는 질문",
@@ -103,7 +123,8 @@ export const content: ToolLocaleContent = {
       "시각적 크기는 도우 공 무게에 따라 늘어난 피자의 대략적인 지름을 나타냅니다.",
   },
   faq,
-  howTo, seo: [
+  howTo,
+  seo: [
     {
       type: 'title',
       text: '정통 나폴리 피자 도우 마스터 가이드',
@@ -112,6 +133,167 @@ export const content: ToolLocaleContent = {
     {
       type: 'paragraph',
       html: '<strong>나폴리 피자</strong>는 문화유산입니다. 성공은 시간, 온도, 그리고 가수율 사이의 정밀함에 달려 있습니다.',
+    },
+    {
+      type: 'stats',
+      columns: 4,
+      items: [
+        {
+          value: '480°C',
+          label: '굽기 온도',
+          icon: 'mdi:fire',
+        },
+        {
+          value: '60-90초',
+          label: '굽기 시간',
+          icon: 'mdi:clock-fast',
+        },
+        {
+          value: '65%',
+          label: '표준 가수율',
+          icon: 'mdi:water-percent',
+        },
+        {
+          value: 'W280',
+          label: '밀가루 힘',
+          icon: 'mdi:grain',
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: '가수율의 결정적인 중요성',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: '가수율(밀가루 무게 대비 물의 비율)은 <strong>코르니초네</strong>(테두리)의 식감을 결정짓습니다.',
+    },
+    {
+      type: 'comparative',
+      columns: 3,
+      items: [
+        {
+          title: '가수율 55 - 60%',
+          icon: 'mdi:water-percent',
+          description: '다루기 매우 쉬우며 초보자와 가정용 오븐에 적합합니다.',
+          points: [
+            '쉬운 글루텐 형성',
+            '끈적이지 않는 반죽',
+            '바삭하고 단단한 테두리',
+          ],
+        },
+        {
+          title: '가수율 63 - 67%',
+          icon: 'mdi:water',
+          description: 'AVPN 표준. 가벼운 도우를 위한 완벽한 균형.',
+          highlight: true,
+          points: [
+            '전통적인 탄력 있는 식감',
+            '화덕 오븐에 이상적',
+            '중급 이상의 반죽 기술 필요',
+          ],
+        },
+        {
+          title: '가수율 70%+',
+          icon: 'mdi:water-plus',
+          description: '거대한 테두리를 가진 현대적 피자. 고난도 기술이 필요합니다.',
+          points: [
+            '극도로 큰 공기층',
+            '매우 가볍고 소화가 잘 됨',
+            '매우 강한 밀가루 필요',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: '이스트 종류와 올바른 선택법',
+      level: 3,
+    },
+    {
+      type: 'comparative',
+      columns: 2,
+      items: [
+        {
+          title: '압착 생이스트',
+          icon: 'mdi:bread-slice-outline',
+          description: '피자 장인들의 전통적인 선택. 더 복잡한 풍미를 선사합니다.',
+          points: [
+            '더 깊고 깔끔한 맛',
+            '균형 잡힌 효소 활동',
+            '미지근한 물에 잘 녹음',
+            '짧은 유통기한',
+          ],
+        },
+        {
+          title: '인스턴트 드라이 이스트',
+          icon: 'mdi:shaker-outline',
+          description: '매우 안정적이고 보관이 용이합니다.',
+          points: [
+            '긴 유통기한',
+            '사전 불리기 불필요',
+            '생이스트보다 3배 강함',
+            '비교적 중립적인 맛',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'W 강도 지수에 따른 밀가루 선택 가이드',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['밀가루 종류', '강도 (W)', '발효 시간', '추천 용도'],
+      rows: [
+        ['박력분계', 'W130-180', '4-8시간', '빠른 제과제빵'],
+        ['중력분계', 'W200-240', '8-24시간', '빠른 피자 또는 기본 빵'],
+        ['강력분계', 'W260-320', '24-72시간', '정통 나폴리 피자'],
+        ['초강력분', 'W350+', '72시간 이상', '초장기 발효 도우'],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: '반죽 온도 관리',
+      html: '글루텐 구조 손상을 막기 위해 반죽 완료 시 온도가 24°C를 넘지 않아야 합니다.',
+    },
+    {
+      type: 'title',
+      text: '피자 장인을 위한 용어집',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Cornicione (코르니초네)',
+          definition: '나폴리 피자의 부풀어 오르고 공기층이 많은 테두리.',
+        },
+        {
+          term: 'Maturazione (숙성)',
+          definition: '발효와는 달리 효소가 단백질과 당을 분해하여 맛과 소화력을 높이는 과정.',
+        },
+        {
+          term: 'Incordatura (글루텐 형성)',
+          definition: '반죽이 최적의 탄력과 인성을 갖추게 되는 시점.',
+        },
+        {
+          term: 'Autolisi (오토리즈)',
+          definition: '밀가루와 물만 미리 섞어 두어 글루텐 형성을 돕는 기법.',
+        },
+      ],
+    },
+    {
+      type: 'tip',
+      title: '냉장 숙성 팁',
+      html: '4°C에서 24시간 저온 숙성하면 실온에서는 얻을 수 없는 풍부한 향미가 생성됩니다.',
+    },
+    {
+      type: 'paragraph',
+      html: '본 계산기가 정확한 비율을 자동 계산해주므로 반죽 기술과 정성에 집중할 수 있습니다.',
     },
   ],
   bibliography,

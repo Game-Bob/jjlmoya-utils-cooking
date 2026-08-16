@@ -8,13 +8,33 @@ const faq = [
   {
     question: 'Dehidratör ağırlık kaybı nasıl hesaplanır?',
     answer: 'Ağırlık kaybı, gıdanın kuru maddesini suyundan ayırarak hesaplanır. Kuru madde miktarı sabit kaldığından, nihai ağırlık kuru maddenin 1 eksi hedef nem yüzdesine bölünmesiyle bulunur.'
+  },
+  {
+    question: 'Dehidrasyon sıcaklığı kurutma süresini neden etkiler?',
+    answer: 'Yüksek sıcaklıklar gıda yüzeyinden suyun buharlaşma hızını artırır. Ancak çok yüksek sıcaklık, dış tabakanın çok hızlı kurumasına ve nemin içeride hapsolmasına (dış sertleşme - case hardening) neden olabilir.'
+  },
+  {
+    question: 'Gıdanın tamamen kuruduğunu nasıl anlarım?',
+    answer: 'Uygun şekilde kurutulmuş gıda dokunulduğunda kuru hissettirmeli ve yapışkan olmamalıdır. Meyveler esnek ve deri gibi olmalı, sebzeler kırılgan veya çıtır olmalı, kurutulmuş et (jerky) ise sert olmalı ve kırılmadan bükülebilmelidir.'
   }
 ];
 
 const howTo = [
   {
     name: 'Malzeme seçin veya manuel nem ayarı yapın',
-    text: 'Önceden tanımlanmış bir malzeme seçin veya nem seviyesini kendiniz ayarlayın.'
+    text: 'Dana Eti Jerky, Karpuz Cipsi, Elma Halkaları, Mango Dilimleri veya Mantar gibi hazır ayarlarımızdan birini seçin; bu işlem başlangıç nemini ve temel kuruma süresini otomatik olarak ayarlar.'
+  },
+  {
+    name: 'Başlangıç ve hedef nem içeriğini ayarlayın',
+    text: 'Kaydırıcıları kullanarak gıdanızın başlangıç nemini ve istediğiniz hedef nem seviyesini belirleyin.'
+  },
+  {
+    name: 'Başlangıç ağırlığını ve kurutma sıcaklığını belirleyin',
+    text: 'Gıdanın ham ağırlığını ve dehidratörünüzün çalışma sıcaklığını girin.'
+  },
+  {
+    name: 'Tahmini kuruma süresini ve nihai ağırlığı görüntüleyin',
+    text: 'Hedef gıda ağırlığınızı, buharlaşan suyu ve gerekli tahmini saatleri gösteren hesaplanmış çıktıyı okuyun.'
   }
 ];
 

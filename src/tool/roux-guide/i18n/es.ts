@@ -20,10 +20,6 @@ const faq = [
     question: '¿Cómo evitar los grumos?',
     answer: 'La regla de oro es la temperatura opuesta: líquido frío sobre roux caliente, o líquido caliente sobre roux frío. Añade el líquido poco a poco y bate constantemente con varillas.',
   },
-  {
-    question: '¿Por qué necesito más roux oscuro?',
-    answer: 'Al tostar el roux, el calor rompe las cadenas de almidón en cadenas cortas (dextrinas). Estas son sabrosas pero menos efectivas espesando. Por eso un roux oscuro necesita 15% más peso que uno blanco para espesar igual.',
-  },
 ];
 const howTo = [
   {
@@ -37,6 +33,10 @@ const howTo = [
   {
     name: 'Ingresa el volumen de líquido',
     text: 'Especifica cuántos ml de líquido necesitas espesar. La calculadora te dirá exactamente cuánta mantequilla y harina usar.',
+  },
+  {
+    name: 'Aplica el tiempo de cocción correcto',
+    text: 'Cocina la mezcla de mantequilla y harina al nivel especificado (Blanco, Rubio u Oscuro) para adaptarlo al perfil de sabor de tu salsa.',
   },
 ];
 
@@ -94,10 +94,6 @@ export const content: ToolLocaleContent = {
       question: '¿Cómo evitar los grumos?',
       answer: 'La regla de oro es la temperatura opuesta: líquido frío sobre roux caliente, o líquido caliente sobre roux frío. Añade el líquido poco a poco y bate constantemente con varillas.',
     },
-    {
-      question: '¿Por qué necesito más roux oscuro?',
-      answer: 'Al tostar el roux, el calor rompe las cadenas de almidón en cadenas cortas (dextrinas). Estas son sabrosas pero menos efectivas espesando. Por eso un roux oscuro necesita 15% más peso que uno blanco para espesar igual.',
-    },
   ],  howTo: [
     {
       name: 'Selecciona el tipo de líquido',
@@ -110,6 +106,10 @@ export const content: ToolLocaleContent = {
     {
       name: 'Ingresa el volumen de líquido',
       text: 'Especifica cuántos ml de líquido necesitas espesar. La calculadora te dirá exactamente cuánta mantequilla y harina usar.',
+    },
+    {
+      name: 'Aplica el tiempo de cocción correcto',
+      text: 'Cocina la mezcla de mantequilla y harina al nivel especificado (Blanco, Rubio u Oscuro) para adaptarlo al perfil de sabor de tu salsa.',
     },
   ],
   seo: [

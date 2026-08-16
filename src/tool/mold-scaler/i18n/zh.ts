@@ -26,6 +26,11 @@ const faq = [
 		answer:
 			'点击底部的按钮添加新行。输入配料名称和原始重量，换算后的重量将立即实时更新。',
 	},
+	{
+		question: '对于超大尺寸烤盘，换算结果可靠吗？',
+		answer:
+			'在数学上完全可靠，但请注意超大蛋糕中心位置需要更长时间成熟。你可能需要适当降低烤箱温度。',
+	},
 ];
 
 const howTo = [
@@ -115,12 +120,18 @@ export const content: ToolLocaleContent = {
 	seo: [
 		{
 			type: 'title',
-			text: '根据模具规格科学换算食谱指南',
+			text: '根据模具规格科学换算食谱高级指南',
 			level: 2,
 		},
 		{
 			type: 'paragraph',
-			html: '在专业烘焙中，将食谱适配到不同的模具必须遵循<strong>几何比例</strong>，以此来保持理想的质地和成熟度。',
+			html: '在专业烘焙中，将食谱适配到不同的模具必须遵循<strong>几何比例</strong>，以此来保持理想的质地、高度和湿度。',
+		},
+		{
+			type: 'diagnostic',
+			variant: 'info',
+			title: '底面积的秘密',
+			html: '正确换算的秘密在于底面积而非直径。圆形模具直径增加 25%，底面积和所需配料几乎翻倍。',
 		},
 		{
 			type: 'stats',
@@ -132,9 +143,9 @@ export const content: ToolLocaleContent = {
 					icon: 'mdi:resize',
 				},
 				{
-					value: 'πr²',
-					label: '圆面积公式',
-					icon: 'mdi:math-compass',
+					value: 'x2.25',
+					label: '15cm换算至22.5cm系数',
+					icon: 'mdi:arrow-up-bold-outline',
 				},
 				{
 					value: '0.64',
@@ -142,15 +153,125 @@ export const content: ToolLocaleContent = {
 					icon: 'mdi:arrow-down-bold-outline',
 				},
 				{
-					value: '2/3',
-					label: '最高建议盛放量',
-					icon: 'mdi:format-vertical-align-top',
+					value: 'πr²',
+					label: '圆面积公式',
+					icon: 'mdi:math-compass',
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: '模具形状对比与烘烤热效率',
+			level: 3,
+		},
+		{
+			type: 'comparative',
+			columns: 3,
+			items: [
+				{
+					title: '圆形模具',
+					icon: 'mdi:circle-outline',
+					description: '烘焙界的标准。提供从边缘到中心极其均匀的热量传导。',
+					points: [
+						'最佳热量分布',
+						'非常适合高戚风/海绵蛋糕',
+						'通过半径计算',
+					],
+				},
+				{
+					title: '方形模具',
+					icon: 'mdi:square-outline',
+					description: '最大化利用烤箱空间。非常适合布朗尼和切块蛋糕。',
+					highlight: true,
+					points: [
+						'边角成熟更快',
+						'易于规整切块',
+						'通过 边长 x 边长 计算',
+					],
+				},
+				{
+					title: '长方形模具',
+					icon: 'mdi:rectangle-outline',
+					description: '大容量烤盘蛋糕的首选。需要密切关注中心成熟度。',
+					points: [
+						'最高总容量',
+						'用途广泛',
+						'通过 宽度 x 长度 计算',
+					],
+				},
+			],
+		},
+		{
+			type: 'title',
+			text: '面积换算背后的数学公式',
+			level: 3,
+		},
+		{
+			type: 'paragraph',
+			html: '为了计算正确的换算系数，我们使用以下几何公式对比模具底面积：',
+		},
+		{
+			type: 'table',
+			headers: ['模具形状', '面积公式', '关键注意事项'],
+			rows: [
+				['圆形', 'π × 半径²', '半径是直径的一半'],
+				['方形', '边长 × 边长', '仅测量内径尺寸'],
+				['长方形', '宽度 × 长度', '片状蛋糕和布朗尼的标配'],
+			],
+		},
+		{
+			type: 'title',
+			text: '更换模具尺寸时的常见误区',
+			level: 3,
+		},
+		{
+			type: 'list',
+			items: [
+				'<strong>线性按比例换算:</strong> 直径翻倍并不意味着配料翻倍，而是翻 4 倍。',
+				'<strong>忽视模具深度:</strong> 较深的模具需要降低温度并延长烘烤时间。',
+				'<strong>膨松剂用量:</strong> 泡打粉和酵母并不总是需要严格按比例线性增加。',
+				'<strong>水分蒸发:</strong> 较少分量的面糊表面积占比较高，更容易受热变干。',
+			],
+		},
+		{
+			type: 'diagnostic',
+			variant: 'warning',
+			title: '模具容量极限',
+			html: '无论计算出的系数如何，请务必确保面糊注入量不超过模具容量的 2/3。',
+		},
+		{
+			type: 'title',
+			text: '烘焙换算学术语表',
+			level: 3,
+		},
+		{
+			type: 'glossary',
+			items: [
+				{
+					term: '转换系数',
+					definition: '用于乘以原食谱所有配料分量的换算数值。',
+				},
+				{
+					term: '底面积',
+					definition: '模具底部的表面积测量值。',
+				},
+				{
+					term: '半径',
+					definition: '圆心到圆周边缘的距离。',
+				},
+				{
+					term: '热传递',
+					definition: '热能在不同材质和形状的模具中的传导方式。',
 				},
 			],
 		},
 		{
 			type: 'tip',
-			html: '无论计算出的系数如何，请务必确保面糊注入量不超过模具容量的 2/3。',
+			html: '当换算到非常大的模具时，建议使用烤盘保温带或中心导热柱，以确保受热均匀。',
+		},
+		{
+			type: 'paragraph',
+			html: '掌握模具换算让你在烘焙时拥有充分的创作自由。使用此计算器获得稳定专业的烘焙成果。',
 		},
 	],
   bibliography,

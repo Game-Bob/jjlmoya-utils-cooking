@@ -113,9 +113,17 @@ export const content: ToolLocaleContent = {
       html: 'Profesyonel mutfak sadece tariflerden ibaret değildir, <strong>hassas zaman yönetimi</strong> ile ilgilidir. Fransızca <em>"Mise en Place"</em> kavramı, zamanı da bir malzeme olarak görür.',
     },
     {
+      type: 'paragraph',
+      html: 'Bu <strong>Çoklu Zamanlayıcı</strong> aracı, aynı anda birden fazla yemeği yönetmesi gereken ev şefleri ve profesyoneller için tasarlanmıştır.',
+    },
+    {
       type: 'title',
       text: 'Sıcaklık ve Zamanın Rolü',
       level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Pişirme, esasen gıdanın kimyasal yapısını dönüştürmek için belirli bir süre boyunca ısı uygulanmasıdır. Protein denatürasyonu ve Maillard reaksiyonu kritik olarak zamanlayıcıya bağlıdır.',
     },
     {
       type: 'table',

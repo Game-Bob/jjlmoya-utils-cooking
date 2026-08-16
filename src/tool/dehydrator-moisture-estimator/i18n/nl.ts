@@ -8,13 +8,33 @@ const faq = [
   {
     question: 'Hoe bereken je het gewichtsverlies bij drogen?',
     answer: 'Het gewichtsverlies wordt berekend door vaste stoffen te scheiden van het water. Omdat vaste stoffen constant blijven, is het eindgewicht gelijk aan vaste stoffen gedeeld door 1 minus het gewenste doelvochtpercentage.'
+  },
+  {
+    question: 'Waarom beïnvloedt droogtemperatuur de droogtijd?',
+    answer: 'Hogere temperaturen versnellen de verdamping van water van het voedseloppervlak. Een te hoge temperatuur kan echter korstvorming (case hardening) veroorzaken, waarbij de buitenste laag te snel droogt en vocht binnenin opsluit.'
+  },
+  {
+    question: 'Hoe weet ik wanneer voedsel volledig gedroogd is?',
+    answer: 'Goed gedroogd voedsel moet droog aanvoelen en niet plakkerig zijn. Fruit moet buigzaam en lekerachtig zijn, groenten broos of knapperig, en vlees voor jerky moet taai zijn en buigen zonder te breken.'
   }
 ];
 
 const howTo = [
   {
     name: 'Selecteer een ingrediënt preset of handmatige invoer',
-    text: 'Kies een preset of pas de vochtigheid handmatig aan.'
+    text: 'Kies uit onze presets zoals Runderjerky, Watermeloensnaps, Appelringen, Mangoschijfjes of Paddenstoelen, wat automatisch het beginvochtgehalte en de basisdroogtijd instelt.'
+  },
+  {
+    name: 'Pas het begin- en doelvochtgehalte aan',
+    text: 'Stel het beginvochtgehalte van uw voedsel en uw gewenste doelvochtgehalte in met de schuifregelaars.'
+  },
+  {
+    name: 'Stel het begingewicht en de droogtemperatuur in',
+    text: 'Voer het rauwe gewicht van het voedsel en de bedrijfstemperatuur van uw voedseldroger in.'
+  },
+  {
+    name: 'Bekijk de geschatte droogtijd en het eindgewicht',
+    text: 'Lees de berekende uitvoer af die het doelgewicht van uw voedsel, het verdampte water en de geschatte benodigde uren toont.'
   }
 ];
 

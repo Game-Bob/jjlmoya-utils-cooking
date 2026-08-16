@@ -113,9 +113,17 @@ export const content: ToolLocaleContent = {
       html: 'Memasak profesional bukan hanya tentang resep, tetapi tentang <strong>manajemen waktu yang tepat</strong>. Konsep Prancis <em>"Mise en Place"</em> menyertakan waktu sebagai bahan yang sangat penting.',
     },
     {
+      type: 'paragraph',
+      html: 'Alat <strong>Timer Berganda</strong> ini dirancang untuk koki rumahan dan profesional yang perlu mengordinasikan beberapa hidangan sekaligus.',
+    },
+    {
       type: 'title',
       text: 'Peran Suhu dan Waktu',
       level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Memasak pada dasarnya adalah menerapkan panas untuk durasi tertentu guna mengubah struktur kimia makanan. Denaturasi protein dan reaksi Maillard sangat bergantung pada timer.',
     },
     {
       type: 'table',

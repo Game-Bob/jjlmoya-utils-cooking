@@ -34,6 +34,10 @@ const howTo = [
     name: '액체 용량 입력',
     text: '농도를 조절할 액체의 양을 ml 단위로 입력하세요. 계산기가 정확한 버터와 밀가루 양을 알려줍니다.',
   },
+  {
+    name: '적절한 가열 시간 적용',
+    text: '버터와 밀가루 혼합물을 지정된 단계(화이트, 블론드, 브라운)까지 가열하세요.',
+  },
 ];
 
 const faqSchema = {
@@ -83,6 +87,137 @@ export const content: ToolLocaleContent = {
     {
       type: 'paragraph',
       html: '<strong>루(Roux)</strong>는 정통 프랑스 요리의 구조적 기초입니다. 밀가루, 버터, 액체 사이의 관계를 이해하는 것이 벨벳처럼 부드러운 소스와 덩어리진 소스의 차이를 결정합니다.',
+    },
+    {
+      type: 'stats',
+      columns: 4,
+      items: [
+        {
+          value: '1:1',
+          label: '밀가루:지방 비율',
+          icon: 'mdi:scale-balance',
+        },
+        {
+          value: '3분',
+          label: '화이트 루 시간',
+          icon: 'mdi:timer-sand',
+        },
+        {
+          value: '100g/L',
+          label: '걸쭉한 소스 비율',
+          icon: 'mdi:waves',
+        },
+        {
+          value: '15분',
+          label: '브라운 루 시간',
+          icon: 'mdi:fire',
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: '가열 단계별 농도 조절 능력',
+      level: 3,
+    },
+    {
+      type: 'comparative',
+      columns: 3,
+      items: [
+        {
+          title: '화이트 루',
+          icon: 'mdi:flask-round-bottom-outline',
+          description: '2-3분 가열. 가장 강력한 농도 증점제.',
+          points: [
+            '베샤멜 소스의 기본',
+            '최대 농도 조절 능력',
+            '은은한 우유 풍미',
+            '색상 변화 없음',
+          ],
+        },
+        {
+          title: '블론드 루',
+          icon: 'mdi:gold',
+          description: '5-8분 가열하여 연한 황금빛 생성.',
+          highlight: true,
+          points: [
+            '벨루테 소스의 기본',
+            '중간 농도 조절 능력',
+            '은은한 견과류 향',
+            '연한 스톡에 적합',
+          ],
+        },
+        {
+          title: '브라운 루',
+          icon: 'mdi:coffee',
+          description: '15-20분 가열. 진한 풍미.',
+          points: [
+            '에스파뇰 소스의 기본',
+            '낮은 농도 조절 능력 (-30%)',
+            '복합적인 풍미',
+            '묽은 질감',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: '원하는 질감별 1L당 루 무게',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['원하는 질감', '버터 (g)', '밀가루 (g)', '액체 (L)'],
+      rows: [
+        ['묽은 수프 / 크림', '25g', '25g', '1L'],
+        ['일반 소스', '50g', '50g', '1L'],
+        ['그라탱용 소스', '70g', '70g', '1L'],
+        ['고로케 / 반죽', '125g', '125g', '1L'],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: '소스에 덩어리가 생기거나 밀가루 맛이 나나요?',
+      html: '소스에 덩어리가 생긴다면 뜨거운 루에 뜨거운 액체를 넣었을 가능성이 높습니다. 항상 열충격을 적용하세요. 밀가루 맛이 난다면 초기 가열 시간을 늘리세요.',
+    },
+    {
+      type: 'title',
+      text: '소스 기술 용어집',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: '덱스트린화',
+          definition:
+            '열에 의해 전분이 짧은 사슬로 분해되는 현상. 풍미는 좋아지지만 농도 형성 능력은 약해집니다.',
+        },
+        {
+          term: '호화',
+          definition:
+            '전분 입자가 액체를 흡수하여 팽창하는 과정.',
+        },
+        {
+          term: '뵈르 마니에',
+          definition:
+            '마지막에 빠르게 농도를 조절하기 위해 사용하는 차가운 밀가루와 버터의 혼합물.',
+        },
+        {
+          term: '마더 소스',
+          definition:
+            '에스코피에가 정의한 5가지 기본 소스(베샤멜, 벨루테, 에스파뇰, 홀란다이즈, 토마토).',
+        },
+      ],
+    },
+    {
+      type: 'tip',
+      title: '차가운 버터 마무리 기법 (Monter au Beurre)',
+      html: '마지막에 차가운 버터 한 조각을 넣어 저어주면 프로 수준의 윤기와 부드러운 식감을 선사합니다.',
+    },
+    {
+      type: 'paragraph',
+      html: '당사의 루 비율 계산기를 사용하면 소스가 항상 완벽한 기술적 농도를 갖추게 됩니다.',
     },
   ],
   ui: {

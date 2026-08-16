@@ -34,6 +34,10 @@ const howTo = [
     name: 'Ange vätskevolym',
     text: 'Ange hur många ml vätska du vill reda. Kalkylatorn berättar exakt hur mycket smör och mjöl du ska använda.',
   },
+  {
+    name: 'Tillämpa rätt tillagningstid',
+    text: 'Tillaga din smör- och mjölblandning till den angivna nivån (Vit, Ljus eller Mörk).',
+  },
 ];
 
 const faqSchema = {
@@ -83,6 +87,137 @@ export const content: ToolLocaleContent = {
     {
       type: 'paragraph',
       html: '<strong>Roux</strong> är den strukturella basen i det klassiska franska köket. Att förstå förhållandet mellan mjöl, smör och vätska är skillnaden mellan en silkeslen sås och en klumpig vätska.',
+    },
+    {
+      type: 'stats',
+      columns: 4,
+      items: [
+        {
+          value: '1:1',
+          label: 'Förhållande Mjöl:Fett',
+          icon: 'mdi:scale-balance',
+        },
+        {
+          value: '3 min',
+          label: 'Tid Vit Roux',
+          icon: 'mdi:timer-sand',
+        },
+        {
+          value: '100g/L',
+          label: 'Ratio Tjock Sås',
+          icon: 'mdi:waves',
+        },
+        {
+          value: '15 min',
+          label: 'Tid Mörk Roux',
+          icon: 'mdi:fire',
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Rostningsgrader och Redningsförmåga',
+      level: 3,
+    },
+    {
+      type: 'comparative',
+      columns: 3,
+      items: [
+        {
+          title: 'Vit Roux',
+          icon: 'mdi:flask-round-bottom-outline',
+          description: 'Tillagad i 2-3 minuter. Den kraftfullaste redningen.',
+          points: [
+            'Bas för Béchamel',
+            'Maximal redningsförmåga',
+            'Neutral mjölksmak',
+            'Ingen färgförändring',
+          ],
+        },
+        {
+          title: 'Ljus Roux',
+          icon: 'mdi:gold',
+          description: 'Tillagad i 5-8 minuter till en ljust gyllene ton.',
+          highlight: true,
+          points: [
+            'Bas för Velouté',
+            'Medelstark redningsförmåga',
+            'Lätt nötig arom',
+            'Idealisk för ljus buljong',
+          ],
+        },
+        {
+          title: 'Mörk Roux',
+          icon: 'mdi:coffee',
+          description: 'Tillagad i 15-20 minuter. Djup rostad smakprofil.',
+          points: [
+            'Bas för Espagnolesås',
+            'Lägre redningsförmåga (-30%)',
+            'Komplex rostad nöt smak',
+            'Mer flytande konsistens',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Vikt av Roux per Liter efter Önskad Konsistens',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['Önskad Konsistens', 'Smör (g)', 'Mjöl (g)', 'Vätska (L)'],
+      rows: [
+        ['Lätt Soppa / Kräm', '25g', '25g', '1 Liter'],
+        ['Standard Sås', '50g', '50g', '1 Liter'],
+        ['Gratängsås', '70g', '70g', '1 Liter'],
+        ['Kroketter / Deg', '125g', '125g', '1 Liter'],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'Klumpig Sås eller Mjölsmak?',
+      html: 'Om din sås klumpar sig har du tillsatt varm vätska till en varm roux. Tillämpa alltid termoschock (kall vätska på varm roux). Om den smakar mjöl, öka tillagningstiden.',
+    },
+    {
+      type: 'title',
+      text: 'Ordlista för Såsteknologi',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Dextrinisering',
+          definition:
+            'Den termiska nedbrytningen av stärkelse till korta kedjor. Ökar smaken men minskar redningen.',
+        },
+        {
+          term: 'Gelatinisering',
+          definition:
+            'Processen där stärkelsekorn absorberar vätska och sväller.',
+        },
+        {
+          term: 'Beurre Manié',
+          definition:
+            'Kall blandning av mjöl och smör för snabba justeringar på slutet.',
+        },
+        {
+          term: 'Grundsåser',
+          definition:
+            'Escoffiers 5 bas-såser (Béchamel, Velouté, Espagnole, Hollandaise och Tomat).',
+        },
+      ],
+    },
+    {
+      type: 'tip',
+      title: 'Kockknepet med Kallt Smör (Monter au Beurre)',
+      html: 'Vispa ner en klick kallt smör helt i slutet för en silkeslen finish och glans.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Vår roux-kalkylator garanterar perfekt teknisk konsistens.',
     },
   ],
   ui: {

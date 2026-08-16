@@ -123,30 +123,199 @@ export const content: ToolLocaleContent = {
   seo: [
     {
       type: 'title',
-      text: 'Sous Vide Pişirmede Termal Letalite Bilimi',
+      text: 'Sous Vide Pastörizasyon: Ev Aşçıları İçin Kapsamlı Güvenlik Rehberi',
       level: 2,
     },
     {
       type: 'paragraph',
-      html: 'Sous vide pişirme, aşırı pişirmeye neden olmadan güvenli gıda koruması sağlamak için hassas sıcaklık kontrolüne dayanır. Yüzeyleri neredeyse anında sterilize eden geleneksel yüksek ısı yöntemlerinin aksine sous vide, yaygın patojenlerin termal ölüm eşiğine daha yakın çalışır. Güvenliği garanti altına almak için, sıcaklığa, maruz kalma süresine ve ısının gıda merkezine geçiş hızına bağlı olan bakteriyel inaktivasyon kinetiğini kesin olarak hesaplamalıyız.',
+      html: 'Sous vide pişirme, kusursuz mühürlenmiş etleri ev ortamında kolayca hazırlamayı sağlayarak mutfakları dönüştürdü. Ancak bu yöntem önemli bir karmaşıklık barındırır: Düşük sıcaklıklarda tehlikeli bakterilerin termal ölüm eşiğinde çalışırsınız. Bu rehber, her et kesimi için güvenli pastörizasyon sürelerini nasıl hesaplayacağınızı açıklar.',
     },
     {
       type: 'title',
-      text: 'D-Değerleri ve z-Değerlerini Anlamak',
+      text: 'Sous Vide Güvenliği Neden Geleneksel Pişirmeden Farklıdır',
       level: 3,
     },
     {
       type: 'paragraph',
-      html: 'Bakteriyel termal ölüm logaritmik bir süreçtir. <strong>D-değeri</strong>, belirli bir sıcaklıkta mikrobiyal popülasyonu %90 oranında azaltmak (1-log azalma) için gereken süre olarak tanımlanır. <strong>z-değeri</strong>, D-değerini 10 kat azaltmak için gereken sıcaklık artışını temsil eder. Kümes hayvanlarındaki Salmonella için tipik bir z-değeri 5.5°C\'dir. Bu, pastörizasyonun 55°C\'de 90 dakika sürmesi durumunda, 60.5°C\'de yaklaşık 9 dakika süreceği anlamına gelir.',
+      html: 'Bir tavuk göğsünü 200°C\'de mühürlediğinizde yüzey anında yüksek sıcaklığa ulaşır ve bakteriler saniyeler içinde ölür. Sous vide ise farklıdır: Su banyosu hedef sıcaklıkta (örneğin 55°C) çalışır. Bu sıcaklıklarda Salmonella veya Listeria\'yı öldürmek dakikalar ve saatler alan bir süreçtir.',
     },
     {
       type: 'title',
-      text: 'Geçici Isı İletimi ve Merkez Sıcaklık Gecikmesi',
+      text: 'Gerçek Dünya Sous Vide Süreleri: Ev Aşçılarının İhtiyaç Duyduğu Bilgiler',
+      level: 2,
+    },
+    {
+      type: 'paragraph',
+      html: 'Aşağıdaki tablo ev aşçılarının aradığı bilgileri içerir: Belirli et kesimleri, yaygın sıcaklıklar ve 25 mm kalınlık için buzdolabı sıcaklığından (5°C) başlanarak hesaplanan toplam pişirme süreleri.',
+    },
+    {
+      type: 'table',
+      headers: ['Gıda', 'Banyo Sıcaklığı', 'Merkez Isınma', 'Pastörizasyon Süresi', 'Toplam Süre', 'Sonuç'],
+      rows: [
+        ['Tavuk Göğsü', '60°C / 140°F', '~35 dk', '~28 dk', '~63 dk', 'Sulu, tam pastörize'],
+        ['Tavuk Göğsü', '65°C / 149°F', '~35 dk', '~3 dk', '~38 dk', 'Daha sıkı, geleneksel doku'],
+        ['Somon Fileto', '50°C / 122°F', '~20 dk', '~55 dk', '~75 dk', 'Yumuşak, güvenli'],
+        ['Dana Biftek', '55°C / 131°F', '~40 dk', '~89 dk', '~129 dk', 'Orta az pişmiş, yüzey pastörize'],
+        ['Domuz Bonfile', '60°C / 140°F', '~35 dk', '~28 dk', '~63 dk', 'Yumuşak, hafif pembe'],
+        ['Ördek Göğsü', '57°C / 135°F', '~35 dk', '~52 dk', '~87 dk', 'Lezzetli, güvenli'],
+        ['Hindi Göğsü', '63°C / 145°F', '~40 dk', '~9 dk', '~49 dk', 'Sulu, kuru değil'],
+        ['Köfte (küre)', '60°C / 140°F', '~25 dk', '~28 dk', '~53 dk', 'Eşit pişmiş'],
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Bakteri Ölümünün Logaritmik Matematiği: D ve z Değerleri',
       level: 3,
     },
     {
       type: 'paragraph',
-      html: 'Gıdalar anında ısınmaz. Isı, su banyosundan vakum poşeti yoluyla etin merkezine iletilmelidir. Bu geçici ısı iletimi, sıcaklık değişim hızının gıdanın termal difüzyon katsayısına (yağsız kas için tipik olarak yaklaşık 0.14 mm²/s) ve geometrik sınır koşullarına bağlı olduğu Fourier kanunu kullanılarak modellenir. Düz bir biftek esas olarak iki karşıt yüzeyden ısınırken, silindirik bir rosto ısıyı her yönden alarak ısı nüfuzunu hızlandırır.',
+      html: 'Bakteri ölümü birinci derece kinetiğe uyar. <strong>D-değeri</strong>, belirli bir sıcaklıkta bakterilerin %90\'ını öldürmek için gereken süredir. <strong>z-değeri</strong> ise süreci 10 kat hızlandırmak için gereken sıcaklık artışını gösterir.',
+    },
+    {
+      type: 'title',
+      text: 'Tehlike Bölgesi: 54.4°C (130°F) Neden Mutlak Alt Sınırdır',
+      level: 3,
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: '54.4°C (130°F) Altında Biyolojik Tehlike',
+      html: '54.4°C altındaki sıcaklıklarda 4 saatten fazla sous vide pişirmeyin. Bu sınırın altında bakteriler ölme hızlarından daha hızlı çoğalabilir.',
+    },
+    {
+      type: 'title',
+      text: 'Et Şekli ve Kalınlığının Pişirme Süresine Etkisi',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Isı iletimi Fourier kanununa uyar. Merkezin ısınma süresi <strong>kalınlığın karesiyle</strong> orantılı olarak artar. Düz parçalar en yavaş, silindir ve küre şeklindeki gıdalar ise daha hızlı ısınır.',
+    },
+    {
+      type: 'title',
+      text: 'Salmonella ve Listeria: Hedef Patojen Seçimi',
+      level: 3,
+    },
+    {
+      type: 'comparative',
+      columns: 2,
+      items: [
+        {
+          title: 'Salmonella (Standart)',
+          icon: 'mdi:bacteria-outline',
+          description: 'Kümes hayvanları ve ette yaygın görülen, ısıya orta derecede duyarlı patojen.',
+          points: [
+            'z-değeri 5.5°C',
+            'Hedef: Kanatlılar için 6.5-log azalma',
+            'D60 = 4.3 dakika',
+            'Sağlıklı yetişkinler için güvenli',
+            'Et güvenliğinde standart referans',
+          ],
+        },
+        {
+          title: 'Listeria monocytogenes',
+          icon: 'mdi:shield-alert-outline',
+          description: 'Salmonella\'ya göre ısıya daha dayanıklıdır. Risk grupları için kritiktir.',
+          highlight: true,
+          points: [
+            'Salmonella\'dan daha yüksek ısı direnci',
+            'z-değeri 6.0°C',
+            'Hedef: 6-log azalma önerilir',
+            'D60 = 7.7 dakika: İki kata yakın süre gerektirir',
+            'Hamileler ve bağışıklığı zayıf olanlar için kritik',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Hassas Gruplar İçin Gıda Güvenliği',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Hamileler ve bağışıklık sistemi zayıf bireyler hedef patojen olarak Listeria\'yı seçmeli ve pişirme sürelerini uzatmalıdır.',
+    },
+    {
+      type: 'title',
+      text: 'Buzdolabı Başlangıç Sıcaklığının Önemi',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Hesaplayıcı 5°C buzdolabı başlangıç sıcaklığını esas alır. Donmuş gıdalar çözünme nedeniyle ek süre gerektirir.',
+    },
+    {
+      type: 'title',
+      text: 'Pastörizasyon Sterilizasyon Demek Değildir',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Pastörizasyon tüm bakteri sporlarını öldürmez. Pişen gıdalar hemen tüketilmeli veya buzlu suda hızla soğutulmalıdır.',
+    },
+    {
+      type: 'title',
+      text: 'USDA FSIS Standartlarına Uyum',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Hesaplama modeli, resmi USDA FSIS Ek A termal öldürme standartlarını temel alır.',
+    },
+    {
+      type: 'title',
+      text: 'Balık ve Deniz Ürünleri Özel Kuralları',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Balıklar daha hızlı ısınır ancak parazit riski taşır. Hafif pişirilecek balıklar önceden dondurulmalıdır.',
+    },
+    {
+      type: 'title',
+      text: 'Doku ve Güvenlik Dengesi',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Düşük sıcaklıklar daha sulu doku sağlar ancak süreyi uzatır. Yüksek sıcaklıklar daha hızlı pişirir.',
+    },
+    {
+      type: 'title',
+      text: 'Ekipman Kalibrasyonu',
+      level: 3,
+    },
+    {
+      type: 'tip',
+      html: '<strong>Cihazınızın sıcaklığını kalibre bir termometre ile doğrulayın.</strong> 1°C sapma bile pastörizasyon süresini etkiler.',
+    },
+    {
+      type: 'title',
+      text: 'Birden Fazla Poşet Pişirme',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Su banyosunda poşetler arasında suyun serbestçe dolaşabildiğinden emin olun.',
+    },
+    {
+      type: 'title',
+      text: 'Hızlı Referans: Minimum Güvenli Sıcaklıklar ve Süreler',
+      level: 2,
+    },
+    {
+      type: 'table',
+      headers: ['Gıda Türü', 'Min. Merkez Sıcaklık', 'Min. Sıcaklıkta Süre', 'Daha Hızlı Sıcaklık', 'Önerilen Grup'],
+      rows: [
+        ['Tavuk ve Kanatlılar', '60°C / 140°F', '~28 dk (6.5-log Salmonella)', '65°C: ~3 dk bekleme', 'Tüm tüketiciler'],
+        ['Domuz Eti', '60°C / 140°F', '~28 dk (6.5-log Salmonella)', '65°C: ~3 dk bekleme', 'Tüm tüketiciler'],
+        ['Dana Eti', '55°C / 131°F', '~89 dk (6.5-log Salmonella)', '60°C: ~28 dk bekleme', 'Sağlıklı yetişkinler'],
+        ['Kıyma', '60°C / 140°F', '~28 dk (6.5-log Salmonella)', '65°C: anında', 'Tüm tüketiciler'],
+        ['Balık ve Deniz Ürünleri', '50°C / 122°F', '~55 dk (Listeria)', '55°C: ~22 dk bekleme', 'Önceden dondurulmuş'],
+        ['Yumurta (kabuklu)', '57°C / 135°F', '~75 dk (Salmonella)', '60°C: ~28 dk bekleme', 'Pastörize yumurta'],
+        ['Sebzeler', '85°C / 185°F', 'Uygulanamaz (enzim inaktivasyonu)', 'N/A', 'Pektin yumuşatma'],
+      ],
     },
   ],
   bibliography,

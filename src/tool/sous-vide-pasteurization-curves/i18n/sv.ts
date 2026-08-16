@@ -123,30 +123,199 @@ export const content: ToolLocaleContent = {
   seo: [
     {
       type: 'title',
-      text: 'Vetenskapen bakom termisk letalitet vid sous vide-tillagning',
+      text: 'Sous vide-pasteurisering: Den kompletta säkerhetsguiden för hemmakockar',
       level: 2,
     },
     {
       type: 'paragraph',
-      html: 'Sous vide-tillagning bygger på exakt temperaturkontroll för att uppnå säker konservering utan att överkoka maten. Till skillnad från traditionella metoder med hög värme som steriliserar ytor direkt, fungerar sous vide närmare tröskeln för värmedöd för vanliga patogener. För att garantera säkerheten måste vi beräkna exakt hur snabbt bakterierna inaktiveras, vilket beror på temperatur, exponeringstid och hur snabbt värmen leds in till kärnan.',
+      html: 'Sous vide-tillagning har förvandlat hemmaköken genom att göra det enkelt att tillaga stekar med perfekt medium-rare resultat ända ut till kanten. Men metoden döljer en kritisk komplexitet: vid låga temperaturer arbetar du nära tröskeln för värmedöd för farliga bakterier. Denna guide förklarar exakt hur du beräknar säkra pasteuriseringstider för alla köttbitar och temperaturer.',
     },
     {
       type: 'title',
-      text: 'Förstå D-värden och z-värden',
+      text: 'Varför sous vide-säkerhet skiljer sig från traditionell tillagning',
       level: 3,
     },
     {
       type: 'paragraph',
-      html: 'Bakteriell värmedöd är en logaritmisk process. <strong>D-värdet</strong> definieras som den tid som krävs vid en specifik temperatur för att reducera en mikrobiell population med 90% (en 1-log reduktion). <strong>z-värdet</strong> representerar den temperaturökning som krävs för att minska D-värdet med en faktor 10. För Salmonella i fågel är ett typiskt z-värde 5.5°C. Detta innebär att om pasteurisering tar 90 minuter vid 55°C, tar det cirka 9 minuter vid 60.5°C.',
+      html: 'När du steker en kycklingfilé vid 200°C når ytan dödliga temperaturer direkt och bakterier dör på sekunder. Sous vide vänder på detta: vattenbadet håller exakt den slutliga måltemperaturen, ibland så låg som 55°C. Vid dessa temperaturer tar det tid att avdöda Salmonella eller Listeria  -  en process som mäts i minuter eller timmar.',
     },
     {
       type: 'title',
-      text: 'Värmeledning och fördröjning av kärntemperatur',
+      text: 'Verkliga sous vide-tider: Vad hemmakockar faktiskt behöver',
+      level: 2,
+    },
+    {
+      type: 'paragraph',
+      html: 'Följande tabell visar vad hemmakockar söker efter: specifika köttbitar, vanliga temperaturer och totala tider som inkluderar både uppvärmning och hålllid för pasteurisering vid 25 mm tjocklek från kylskåpstemperatur (5°C).',
+    },
+    {
+      type: 'table',
+      headers: ['Råvara', 'Badtemp', 'Uppvärmning kärna', 'Hålltid pasteurisering', 'Total tid', 'Resultat'],
+      rows: [
+        ['Kycklingfilé', '60°C / 140°F', '~35 min', '~28 min', '~63 min', 'Saftig, helt pasteuriserad'],
+        ['Kycklingfilé', '65°C / 149°F', '~35 min', '~3 min', '~38 min', 'Fastare, traditionell konsistens'],
+        ['Laxfilé', '50°C / 122°F', '~20 min', '~55 min', '~75 min', 'Mör, glansig, säker'],
+        ['Nötstek', '55°C / 131°F', '~40 min', '~89 min', '~129 min', 'Medium-rare, pasteuriserad yta'],
+        ['Fläskfilé', '60°C / 140°F', '~35 min', '~28 min', '~63 min', 'Mör med lätt rosa ton'],
+        ['Ankbröst', '57°C / 135°F', '~35 min', '~52 min', '~87 min', 'Smakrik, medium, säker'],
+        ['Kalkonbröst', '63°C / 145°F', '~40 min', '~9 min', '~49 min', 'Saftig, inte torr'],
+        ['Köttbullar (sfär)', '60°C / 140°F', '~25 min', '~28 min', '~53 min', 'Jämnt tillagade'],
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Logaritmen bakom bakteriedöd: D-värden och z-värden',
       level: 3,
     },
     {
       type: 'paragraph',
-      html: 'Mat värms inte upp omedelbart. Värmen måste ledas från vattenbadet genom vakuumpåsen och in till köttets kärna. Denna transienta värmeledning modelleras med Fouriers lag, där temperaturförändringen beror på matens termiska diffusivitet (cirka 0.14 mm²/s för magert kött) och dess geometriska form. En platt stek värms huvudsakligen från två sidor, medan en cylindrisk filé värms radiellt från alla sidor vilket påskyndar värmepenetreringen.',
+      html: 'Bakteriedöd följer första ordningens kinetik. <strong>D-värdet</strong> anger tiden som krävs vid en viss temperatur för att döda 90% av bakterierna. <strong>z-värdet</strong> visar hur mycket temperaturen behöver höjas för att avdödningen ska gå 10 gånger snabbare.',
+    },
+    {
+      type: 'title',
+      text: 'Riskzonen: Varför 54.4°C (130°F) är den absolut lägsta gränsen',
+      level: 3,
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'Biologisk risk under 54.4°C (130°F)',
+      html: 'Tillaga aldrig sous vide under 54.4°C i mer än 4 timmar. Under denna gräns kan bakterier föröka sig snabbare än de dör.',
+    },
+    {
+      type: 'title',
+      text: 'Hur köttets form och tjocklek påverkar tillagningstiden',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Värmeledning följer Fouriers lag. Tiden för kärnan att värmas upp ökar med <strong>kvadraten på tjockleken</strong>. En platt skiva värms från två sidor och är långsammast, medan cylindrar och sfärer värms snabbare.',
+    },
+    {
+      type: 'title',
+      text: 'Salmonella vs. Listeria: Att välja målpatogen',
+      level: 3,
+    },
+    {
+      type: 'comparative',
+      columns: 2,
+      items: [
+        {
+          title: 'Salmonella (Standard)',
+          icon: 'mdi:bacteria-outline',
+          description: 'Vanlig bakterie i fågel och kött, måttligt värmekänslig.',
+          points: [
+            'z-värde 5.5°C: måttligt värmekänslig',
+            'Mål: 6.5-log reduktion för fågel',
+            'D60 = 4.3 minuter',
+            'Säker för friska vuxna',
+            'Standardreferens för köttsäkerhet',
+          ],
+        },
+        {
+          title: 'Listeria monocytogenes',
+          icon: 'mdi:shield-alert-outline',
+          description: 'Högre värmeresistens än Salmonella. Kritisk för riskgrupper.',
+          highlight: true,
+          points: [
+            'Högre värmeresistens än Salmonella',
+            'z-värde 6.0°C',
+            'Mål: 6-log reduktion rekommenderas',
+            'D60 = 7.7 minuter: tar nästan dubbelt så lång tid',
+            'Kritisk för gravida och immuninsvaga',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Matlagning för riskgrupper',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Gravida och immuninsvaga bör välja Listeria som målpatogen och förlänga tillagningstiden därefter.',
+    },
+    {
+      type: 'title',
+      text: 'Vikten av starttemperatur från kylskåp',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Kalkylatorn antar en starttemperatur på 5°C. Frysta råvaror kräver avsevärd extra tid för att tina i badet.',
+    },
+    {
+      type: 'title',
+      text: 'Pasteurisering är inte sterilisering',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Pasteurisering dödar inte alla sporbildande bakterier. Maten måste serveras direkt eller kylas snabbt i isbad.',
+    },
+    {
+      type: 'title',
+      text: 'Efterlevnad av USDA FSIS-standarder',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Denna kalkylator baseras på FSIS Apändice A-modellen för termisk letalitet och bakteriell inaktivering.',
+    },
+    {
+      type: 'title',
+      text: 'Fisk och skaldjur: Särskilda regler för marina proteiner',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Fisk värms snabbare men har andra patogener och parasiter att ta hänsyn till. Frys in före tillagning om fisken ska serveras lätttillagad.',
+    },
+    {
+      type: 'title',
+      text: 'Balansen mellan konsistens och säkerhet',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Lägre temperatur ger saftigare resultat men kräver längre hålltid. Högre temperatur tillagar snabbare.',
+    },
+    {
+      type: 'title',
+      text: 'Kalibrering av utrustning',
+      level: 3,
+    },
+    {
+      type: 'tip',
+      html: '<strong>Kontrollera din cirkulator med en kalibrerad termometer.</strong> Även små avvikelser på 1°C kan påverka pasteuriseringstiden avsevärt.',
+    },
+    {
+      type: 'title',
+      text: 'Tillagning av flera påsar samtidigt',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Se till att vattnet kan cirkulera fritt mellan alla påsar i badet så att värmeöverföringen inte hindras.',
+    },
+    {
+      type: 'title',
+      text: 'Snabbreferens: Minsta säkra temperaturer och tider',
+      level: 2,
+    },
+    {
+      type: 'table',
+      headers: ['Råvarutyp', 'Minsta kärntemp', 'Pasteuriseringstid vid min temp', 'Snabbare vid', 'Rekommenderas för'],
+      rows: [
+        ['Kyckling & Fågel', '60°C / 140°F', '~28 min (6.5-log Salmonella)', '65°C: ~3 min hålltid', 'Alla konsumenter'],
+        ['Fläskkött', '60°C / 140°F', '~28 min (6.5-log Salmonella)', '65°C: ~3 min hålltid', 'Alla konsumenter'],
+        ['Nötkött', '55°C / 131°F', '~89 min (6.5-log Salmonella)', '60°C: ~28 min hålltid', 'Friska vuxna'],
+        ['Nötneutral färs', '60°C / 140°F', '~28 min (6.5-log Salmonella)', '65°C: direkt', 'Alla konsumenter'],
+        ['Fisk & Skaldjur', '50°C / 122°F', '~55 min (Listeria)', '55°C: ~22 min hålltid', 'Förfryst råvara'],
+        ['Ägg (med skal)', '57°C / 135°F', '~75 min (Salmonella)', '60°C: ~28 min hålltid', 'Pasteuriserade ägg'],
+        ['Grönsaker', '85°C / 185°F', 'Ej tillämpbart (enzyminaktivering)', 'N/A', 'Mjukgörning av pektin'],
+      ],
     },
   ],
   bibliography,

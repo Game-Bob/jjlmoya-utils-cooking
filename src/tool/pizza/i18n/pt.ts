@@ -24,6 +24,16 @@ const faq = [
     answer:
       "Sim, mas com adaptações. Pré-aqueça ao máximo (250-280°C) com pedra refratária durante 45-60 minutos. A cozedura levará 5-7 minutos em vez de 60-90 segundos.",
   },
+  {
+    question: "Que farinha devo usar?",
+    answer:
+      "Ideal: Caputo Pizzeria (W260-280) ou Manitoba (W350-400). Alternativa: qualquer farinha com 11-13g de proteína por 100g. Evita farinhas fracas (W130-160) para fermentações longas.",
+  },
+  {
+    question: "Por que razão a massa rasga ao esticar?",
+    answer:
+      "O glúten não está relaxado. Deixa as bolas repousar 2-3 horas à temperatura ambiente. Se se repetir, o amassamento foi insuficiente ou a farinha é fraca.",
+  },
 ];
 const howTo = [
   {
@@ -45,6 +55,10 @@ const howTo = [
   {
     name: "Fermentação longa",
     text: "Coloca as bolas em recipientes herméticos no frio (4°C) durante 24-72 horas. Este é o passo crítico para o sabor.",
+  },
+  {
+    name: "Esticar e cozinhar",
+    text: "Retira do frio 30 minutos antes. Estica do centro para as bordas. Cozinha à temperatura máxima.",
   },
 ];
 
@@ -115,7 +129,8 @@ export const content: ToolLocaleContent = {
       "O tamanho visual representa o diâmetro aproximado da pizza estirada segundo o peso da bola.",
   },
   faq,
-  howTo, seo: [
+  howTo,
+  seo: [
     {
       type: 'title',
       text: 'Guia Mestre para a Massa de Pizza Napolitana',
@@ -152,9 +167,139 @@ export const content: ToolLocaleContent = {
       ],
     },
     {
+      type: 'title',
+      text: 'A Importância Crucial da Hidratação',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'A hidratação (percentagem de água em relação ao peso da farinha) determina a textura da <strong>cornicione</strong>.',
+    },
+    {
+      type: 'comparative',
+      columns: 3,
+      items: [
+        {
+          title: 'Hidratação 55 a 60%',
+          icon: 'mdi:water-percent',
+          description: 'Muito fácil de manusear, ideal para principiantes e fornos domésticos.',
+          points: [
+            'Formação simples da rede de glúten',
+            'Massa pouco pegajosa',
+            'Crosta firme e crocante',
+          ],
+        },
+        {
+          title: 'Hidratação 63 a 67%',
+          icon: 'mdi:water',
+          description: 'O padrão AVPN. Equilíbrio perfeito para uma massa leve.',
+          highlight: true,
+          points: [
+            'Textura elástica tradicional',
+            'Ideal para fornos a lenha',
+            'Requer técnica média',
+          ],
+        },
+        {
+          title: 'Hidratação 70%+',
+          icon: 'mdi:water-plus',
+          description: 'Pizzas contemporâneas com bordas gigantes. Requer técnica avançada.',
+          points: [
+            'Alvéolos extremamente grandes',
+            'Muito leve e digestível',
+            'Requer farinhas muito fortes',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Tipos de Fermento e Como Escolher',
+      level: 3,
+    },
+    {
+      type: 'comparative',
+      columns: 2,
+      items: [
+        {
+          title: 'Fermento Padeiro Fresco',
+          icon: 'mdi:bread-slice-outline',
+          description: 'A escolha tradicional dos mestres pizzaiolos. Confere um sabor mais complexo.',
+          points: [
+            'Sabor mais profundo e limpo',
+            'Ação enzimática equilibrada',
+            'Dissolve facilmente em água',
+            'Validade curta',
+          ],
+        },
+        {
+          title: 'Fermento Seco Instantâneo',
+          icon: 'mdi:shaker-outline',
+          description: 'Muito mais estável e fácil de guardar. Ideal para ter sempre na despensa.',
+          points: [
+            'Longa validade',
+            'Sem necessidade de reidratação prévia',
+            'Três vezes mais potente que o fresco',
+            'Sabor ligeiramente mais neutro',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      text: 'Guia de Seleção de Farinha pelo Índice W',
+      level: 3,
+    },
+    {
+      type: 'table',
+      headers: ['Tipo de Farinha', 'Força (W)', 'Tempo de Fermentação', 'Uso Recomendado'],
+      rows: [
+        ['Farinha Fraca', 'W130-180', '4-8 horas', 'Produtos de pastelaria rápidos'],
+        ['Média Força', 'W200-240', '8-24 horas', 'Pizza rápida ou pão simples'],
+        ['Farinha Forte', 'W260-320', '24-72 horas', 'Autêntica Pizza Napolitana'],
+        ['Extra Forte', 'W350+', '72+ horas', 'Massas de altíssima hidratação'],
+      ],
+    },
+    {
+      type: 'diagnostic',
+      variant: 'warning',
+      title: 'Controlo da Temperatura da Massa',
+      html: 'A massa não deve ultrapassar os 24°C no final do amassamento para não prejudicar o glúten.',
+    },
+    {
+      type: 'title',
+      text: 'Glossário para o Futuro Mestre Pizzaiolo',
+      level: 3,
+    },
+    {
+      type: 'glossary',
+      items: [
+        {
+          term: 'Cornicione',
+          definition: 'A borda elevada e leve da pizza napolitana.',
+        },
+        {
+          term: 'Maturacão',
+          definition: 'Processo enzimático distinto da fermentação para decompor açúcares e proteínas.',
+        },
+        {
+          term: 'Ponto de Massa',
+          definition: 'O momento em que a massa atinge a elasticidade ideal.',
+        },
+        {
+          term: 'Autólise',
+          definition: 'Repouso apenas de farinha e água para facilitar a formação do glúten.',
+        },
+      ],
+    },
+    {
       type: 'tip',
       title: 'O Truque do Frigorífico',
       html: 'A fermentação de 24 horas a 4°C cria sabores complexos impossíveis de obter à temperatura ambiente.',
+    },
+    {
+      type: 'paragraph',
+      html: 'A nossa calculadora automatiza as proporções para que te possas concentrar na técnica e na paixão.',
     },
   ],
   bibliography,

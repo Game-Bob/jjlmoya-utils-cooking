@@ -18,10 +18,6 @@ const faq = [
     answer: 'Tergantung pada bahannya. Untuk tepung, ya. Untuk ragi atau rempah-rempah, presisi kurang krusial (skalakan ke 75% dari yang ditentukan). Untuk telur: jika Anda mendapatkan 2,3, gunakan 2 telur utuh + bagian dari telur ketiga (ditimbang), atau bulatkan ke 2 jika masakan memungkinkan.',
   },
   {
-    question: 'Mengapa hasilnya tidak berubah saat saya mengganti porsi?',
-    answer: 'Pastikan kolom bahan sudah terisi. Jika kosong, tidak ada yang bisa diskalakan. Periksa juga apakah angka pada bahan Anda dapat dikenali (misalnya: "500g", "1/2 sdt").',
-  },
-  {
     question: 'Apakah ini berfungsi dengan ukuran imperial (ons, cangkir)?',
     answer: 'Secara teknis ya, alat ini membaca angka dan skala. Namun presisi terbatas pada ukuran cangkir (volume tidak konsisten). Disarankan untuk mengubah ke gram sebelum mengubah skala.',
   },

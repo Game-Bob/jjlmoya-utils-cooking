@@ -140,17 +140,62 @@ export const content: ToolLocaleContent = {
       ]
     },
     {
+      type: 'list',
+      items: [
+        '<strong>Añade aceite demasiado rápido</strong> - La velocidad raramente es la causa real. Si la fracción de aceite se mantiene bajo el límite del emulsionante, la emulsión aguantará sin importar la velocidad de vertido.',
+        '<strong>Los ingredientes están demasiado fríos</strong> - Los huevos o el aceite fríos aumentan la viscosidad y dificultan la formación de gotas. Siempre lleve los ingredientes a temperatura ambiente.',
+        '<strong>Excedió el límite de aceite para su emulsionante</strong> - Cada emulsionante tiene una fracción máxima de empaquetamiento. Yema de huevo hasta 78%, mostaza 70%, lecitina de soja 82% y polisorbato 85%.',
+        '<strong>Su fase acuosa es demasiado pequeña</strong> - Sin suficiente agua para rodear las gotas de aceite, estas no tienen a dónde ir excepto fusionarse entre sí.'
+      ]
+    },
+    {
       type: 'title',
-      text: 'La Ciencia: Por qué se rompen las emulsiones',
+      text: '¿Qué emulsionante debería usar? Comparativa práctica',
       level: 2
     },
     {
       type: 'paragraph',
-      html: 'Una emulsión culinaria funciona dispersando pequeñas gotas de aceite a lo largo de una fase acuosa continua. <strong>Los emulsionantes</strong> - como la lecitina en la yema de huevo, el mucílago en la mostaza o los tensioactivos sintéticos como el polisorbato - recubren cada gota y evitan que se fusione con sus vecinas.'
+      html: 'Elegir el emulsionante adecuado depende de su receta, perfil de sabor y capacidad de aceite deseada. Así se comparan los cuatro emulsionantes culinarios más comunes.'
     },
     {
-      type: 'paragraph',
-      html: 'El punto de ruptura está determinado por la pura geometría. Las gotas de aceite se comportan como pequeñas esferas apiladas. El volumen máximo de esferas que cabe en un espacio dado - conocido como la <strong>conjetura de Kepler</strong> - es de aproximadamente 74%. En sistemas de cocina reales, esto puede extenderse al 80-85% con emulsionantes potentes, pero más allá de eso, las gotas se comprimen tanto que se fusionan y la emulsión colapsa al instante.'
+      type: 'proscons',
+      title: 'Yema de Huevo',
+      items: [
+        { pro: 'Máxima compatibilidad de sabor para salsas clásicas', con: 'Añade colesterol y sabor a huevo' },
+        { pro: 'Contiene lecitina y lipoproteínas para emulsiones robustas', con: 'Requiere control cuidadoso de temperatura' },
+        { pro: 'Añade color natural y riqueza', con: 'No apto para preparaciones veganas' },
+        { pro: 'Funciona con hasta 78% de fracción de aceite', con: 'Limitado a unos 15 ml de aporte de agua por yema' }
+      ]
+    },
+    {
+      type: 'proscons',
+      title: 'Mostaza',
+      items: [
+        { pro: 'Añade sabor picante y complejidad a aliños', con: 'Capacidad máxima de aceite menor (70%)' },
+        { pro: 'Ampliamente disponible y fácil de usar', con: 'Poder emulsionante más débil que la yema de huevo' },
+        { pro: 'Funciona bien a temperatura ambiente', con: 'El sabor puede chocar con salsas delicadas' },
+        { pro: 'Ideal para vinagretas rápidas', con: 'No apto para emulsiones de sabor neutro' }
+      ]
+    },
+    {
+      type: 'proscons',
+      title: 'Lecitina de Soja',
+      items: [
+        { pro: 'Alta tolerancia al aceite (82%) para salsas estables', con: 'Requiere pesaje preciso' },
+        { pro: 'El sabor neutro no altera las recetas', con: 'Menos indulgente que la yema de huevo' },
+        { pro: 'De origen vegetal y apto para veganos', con: 'No es un básico de despensa común en casa' },
+        { pro: 'Funciona con volúmenes de agua reducidos', con: 'Puede crear una textura ligeramente artificial' }
+      ]
+    },
+    {
+      type: 'proscons',
+      title: 'Polisorbato',
+      items: [
+        { pro: 'Máxima capacidad de aceite de cualquier emulsionante (85%)', con: 'Aditivo sintético, no natural' },
+        { pro: 'Crea espumas y aires ultraestables', con: 'Difícil de conseguir para cocinas caseras' },
+        { pro: 'Funciona con una fase acuosa mínima', con: 'Requiere báscula para una dosificación precisa' },
+        { pro: 'Ideal para cocina modernista y experimental', con: 'Dominante si se usa en exceso' }
+      ]
     },
     {
       type: 'comparative',
@@ -208,9 +253,48 @@ export const content: ToolLocaleContent = {
       headers: ['Emulsionante', 'Máx. Aceite %', 'Aceite por 100 ml Agua', 'Mejor Uso'],
       rows: [
         ['Yema de Huevo', '78%', '~355 ml', 'Mayonesa, alioli, holandesa'],
-        ['Mostaza', '70%', '~233 ml', 'Vinagretas, ali ligeros'],
+        ['Mostaza', '70%', '~233 ml', 'Vinagretas, aliños ligeros'],
         ['Lecitina de Soja', '82%', '~456 ml', 'Salsas modernistas, espumas'],
         ['Polisorbato', '85%', '~567 ml', 'Espumas estables, cocina experimental']
+      ]
+    },
+    {
+      type: 'title',
+      text: 'La Ciencia: Por qué se rompen las emulsiones y cómo la conjetura de Kepler se aplica a su cocina',
+      level: 2
+    },
+    {
+      type: 'paragraph',
+      html: 'Una emulsión culinaria funciona dispersando pequeñas gotas de aceite a lo largo de una fase acuosa continua. <strong>Los emulsionantes</strong> - como la lecitina en la yema de huevo, el mucílago en la mostaza o los tensioactivos sintéticos como el polisorbato - recubren cada gota y evitan que se fusione con sus vecinas.'
+    },
+    {
+      type: 'paragraph',
+      html: 'El punto de ruptura está determinado por la pura geometría. Las gotas de aceite se comportan como pequeñas esferas apiladas. El volumen máximo de esferas que cabe en un espacio dado - conocido como la <strong>conjetura de Kepler</strong> - es de aproximadamente 74%. En sistemas de cocina reales, esto puede extenderse al 80-85% con emulsionantes potentes, pero más allá de eso, las gotas se comprimen tanto que se fusionan y la emulsión colapsa al instante.'
+    },
+    {
+      type: 'card',
+      columns: 2,
+      items: [
+        {
+          icon: 'mdi:egg-outline',
+          title: 'Mayonesa y Alioli Clásicos',
+          html: 'Use <strong>yema de huevo</strong> hasta un 78% de aceite. Comience con una yema por taza de aceite. Añada una cucharadita de agua o jugo de limón antes de verter aceite para un margen de seguridad más amplio.'
+        },
+        {
+          icon: 'mdi:shaker-outline',
+          title: 'Vinagretas y Aliños Ligeros',
+          html: 'Use <strong>mostaza</strong> hasta un 70% de aceite. El mucílago de la mostaza proporciona suficiente emulsificación para una vinagreta temporal.'
+        },
+        {
+          icon: 'mdi:leaf',
+          title: 'Salsas Modernistas y Espumas Estables',
+          html: 'Use <strong>lecitina de soja</strong> hasta un 82% de aceite. Ideal para emulsiones de sabor neutro donde desea que brille el sabor del aceite y del ácido.'
+        },
+        {
+          icon: 'mdi:flask-outline',
+          title: 'Espumas Experimentales y Aires',
+          html: 'Use <strong>polisorbato</strong> hasta un 85% de aceite. La opción preferida para técnicas modernistas que requieren máxima carga de aceite y estabilidad.'
+        }
       ]
     },
     {
@@ -225,13 +309,17 @@ export const content: ToolLocaleContent = {
     {
       type: 'diagnostic',
       variant: 'warning',
-      title: 'Signos comunes de que su emulsión está a punto de romperse',
+      title: '3 signos de que su emulsión está a punto de romperse',
       html: 'Esté atento a <strong>espesamiento seguido de adelgazamiento repentino</strong>, una <strong>superficie brillante que se vuelve granulada</strong> o aceite visible acumulándose en los bordes. Si ve alguno de estos, deje de añadir aceite inmediatamente y bata una cucharadita de agua fría antes de continuar.'
     },
     {
       type: 'title',
       text: 'Consejos prácticos para emulsiones perfectas siempre',
       level: 3
+    },
+    {
+      type: 'message',
+      html: '<strong>La regla de oro:</strong> La relación de aceite y agua importa más que la técnica o la velocidad. Use nuestra calculadora para encontrar su límite exacto antes de batir.'
     },
     {
       type: 'tip',
@@ -279,8 +367,15 @@ export const content: ToolLocaleContent = {
       ]
     },
     {
-      type: 'paragraph',
-      html: 'Ya sea que esté haciendo una mayonesa francesa clásica, un alioli con ajo, una vinagreta estable o experimentando con hidrocoloides modernistas, entender la <strong>relación aceite-agua</strong> es el factor más importante. Nuestra calculadora maneja las matemáticas para que pueda cocinar con confianza.'
+      type: 'summary',
+      title: 'Puntos Clave para Emulsiones Estables',
+      items: [
+        'Cada emulsionante tiene una fracción máxima de aceite: yema de huevo 78%, mostaza 70%, lecitina de soja 82%, polisorbato 85%.',
+        'El punto de ruptura está determinado por la geometría (conjetura de Kepler al 74%), no por la velocidad de batido.',
+        'Comience siempre con ingredientes a temperatura ambiente y añada una pequeña cantidad de agua como margen de seguridad.',
+        'Una emulsión rota se rescata añadiendo emulsionante fresco y más fase acuosa, no batiendo más fuerte.',
+        'Use nuestra calculadora de estabilidad de emulsión para obtener el límite exacto para sus ingredientes.'
+      ]
     }
   ],
   bibliography,
