@@ -1,4 +1,4 @@
-﻿import type { ToolLocaleContent } from '../../../types';
+import type { ToolLocaleContent } from '../../../types';
 import { bibliography } from '../bibliography';
 
 const title = 'Pectin and Jam Setting Calculator for Perfect Gel Every Time';
@@ -87,6 +87,22 @@ export const content: ToolLocaleContent = {
     title: 'Pectin & Jam Setting Calculator',
     subtitle: 'Precision gel chemistry for perfect preserves',
     fruitLabel: 'Choose Your Fruit',
+    fruit_apple: 'Apple',
+    fruit_quince: 'Quince',
+    fruit_blackberry: 'Blackberry',
+    fruit_cranberry: 'Cranberry',
+    fruit_gooseberry: 'Gooseberry',
+    fruit_plum: 'Plum',
+    fruit_apricot: 'Apricot',
+    fruit_blueberry: 'Blueberry',
+    fruit_raspberry: 'Raspberry',
+    fruit_peach: 'Peach',
+    fruit_strawberry: 'Strawberry',
+    fruit_pear: 'Pear',
+    fruit_fig: 'Fig',
+    fruit_cherry: 'Cherry',
+    fruit_grape: 'Grape',
+    fruit_mango: 'Mango',
     allFruits: 'All',
     highPectin: 'High Pectin',
     mediumPectin: 'Medium Pectin',

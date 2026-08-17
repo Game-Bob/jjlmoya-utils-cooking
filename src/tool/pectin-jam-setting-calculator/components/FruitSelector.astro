@@ -1,7 +1,6 @@
 ---
 interface Fruit {
   id: string;
-  name: string;
   pectin: string;
   acidity: string;
   color: string;
@@ -15,24 +14,30 @@ interface Props {
 const { ui, fruits } = Astro.props;
 ---
 
-<div class="jam-selector-section">
-  <div class="jam-section-label">{ui.fruitLabel}</div>
-  <div class="jam-fruit-scroll" id="fruit-scroll">
-    {fruits.map((fruit) => (
-      <button class="jam-fruit-pill"
-        data-fruit={fruit.id} data-pectin={fruit.pectin} data-acidity={fruit.acidity}
-        data-color={fruit.color}
-        style={`--fruit-color:${fruit.color}`}
-        aria-label={fruit.name}>
-        <span class="jam-fruit-dot" style={`background:${fruit.color}`}></span>
-        <span class="jam-fruit-name">{fruit.name}</span>
-      </button>
-    ))}
+<div class="jam-field">
+  <span class="jam-sec-head">{ui.fruitLabel}</span>
+  <div class="jam-filter-tabs" id="jam-filter-tabs">
+    <button class="jam-filter-tab active" data-filter="all">{ui.allFruits}</button>
+    <button class="jam-filter-tab" data-filter="high">{ui.highPectin}</button>
+    <button class="jam-filter-tab" data-filter="medium">{ui.mediumPectin}</button>
+    <button class="jam-filter-tab" data-filter="low">{ui.lowPectin}</button>
   </div>
-  <div class="jam-filter-pills" id="filter-pills">
-    <button class="jam-filter-pill active" data-filter="all">{ui.allFruits}</button>
-    <button class="jam-filter-pill" data-filter="high">{ui.highPectin}</button>
-    <button class="jam-filter-pill" data-filter="medium">{ui.mediumPectin}</button>
-    <button class="jam-filter-pill" data-filter="low">{ui.lowPectin}</button>
+  <div class="jam-fruit-grid" id="fruit-scroll">
+    {fruits.map((fruit) => {
+      const fruitName = ui[`fruit_${fruit.id}`] || fruit.id;
+      return (
+        <button
+          class="jam-fruit-chip"
+          data-fruit={fruit.id}
+          data-pectin={fruit.pectin}
+          data-acidity={fruit.acidity}
+          data-color={fruit.color}
+          style={`--fruit-color:${fruit.color}`}
+          aria-label={fruitName}>
+          <span class="jam-fruit-chip-dot" style={`background:${fruit.color}`}></span>
+          <span class="jam-fruit-chip-name">{fruitName}</span>
+        </button>
+      );
+    })}
   </div>
 </div>

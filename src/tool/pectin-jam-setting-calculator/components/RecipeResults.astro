@@ -6,66 +6,39 @@ interface Props {
 const { ui } = Astro.props;
 ---
 
-<div class="jam-recipe-section" id="recipe-section">
-  <div class="jam-section-label">{ui.recipeTitle}</div>
-  <div class="jam-recipe-grid">
-    <div class="jam-recipe-item">
-      <div class="jam-recipe-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none"
-        stroke="currentColor" stroke-width="2" /><circle cx="12" cy="12" r="3" fill="currentColor" /></svg>
-      </div>
-      <div class="jam-recipe-info">
-        <div class="jam-recipe-val"><span id="pectin-val">0.0</span><span class="jam-recipe-unit"> g</span></div>
-        <div class="jam-recipe-label">{ui.pectinNeeded}</div>
-      </div>
+<div id="recipe-section">
+  <div class="jam-ing-grid">
+    <div class="jam-ing-card">
+      <div class="jam-ing-val"><span id="pectin-val">0.0</span><span class="jam-ing-unit">g</span></div>
+      <div class="jam-ing-name">{ui.pectinNeeded}</div>
     </div>
-    <div class="jam-recipe-item">
-      <div class="jam-recipe-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-        fill="none" stroke="currentColor" stroke-width="2" /></svg>
-      </div>
-      <div class="jam-recipe-info">
-        <div class="jam-recipe-val"><span id="citric-val">0.0</span><span class="jam-recipe-unit"> g</span></div>
-        <div class="jam-recipe-label">{ui.citricAcidNeeded}</div>
-        <div class="jam-recipe-sub"><span id="lemon-val">{ui.lemonJuiceNeeded}: 0 ml</span></div>
-      </div>
+    <div class="jam-ing-card">
+      <div class="jam-ing-val"><span id="citric-val">0.0</span><span class="jam-ing-unit">g</span></div>
+      <div class="jam-ing-name">{ui.citricAcidNeeded}</div>
+      <div class="jam-ing-sub" id="lemon-val"></div>
     </div>
-    <div class="jam-recipe-item">
-      <div class="jam-recipe-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="2" fill="none"
-        stroke="currentColor" stroke-width="2" /><circle cx="12" cy="5" r="3" fill="none" stroke="currentColor"
-        stroke-width="2" /></svg>
-      </div>
-      <div class="jam-recipe-info">
-        <div class="jam-recipe-val"><span id="sugar-val">650</span><span class="jam-recipe-unit"> g</span></div>
-        <div class="jam-recipe-label">{ui.sugarNeeded} <span class="jam-sugar-hint" id="sugar-hint"></span></div>
-      </div>
+    <div class="jam-ing-card">
+      <div class="jam-ing-val"><span id="sugar-val">1000</span><span class="jam-ing-unit">g</span></div>
+      <div class="jam-ing-name">{ui.sugarNeeded} <span id="sugar-hint"></span></div>
     </div>
-    <div class="jam-recipe-item">
-      <div class="jam-recipe-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none"
-        stroke="currentColor" stroke-width="2" /><circle cx="12" cy="12" r="6" fill="none" stroke="currentColor"
-        stroke-width="2" /><circle cx="12" cy="12" r="2" fill="currentColor" /></svg>
-      </div>
-      <div class="jam-recipe-info">
-        <div class="jam-recipe-val"><span id="yield-val">1650</span><span class="jam-recipe-unit"> g</span></div>
-        <div class="jam-recipe-label">{ui.totalYield}</div>
-      </div>
+    <div class="jam-ing-card">
+      <div class="jam-ing-val"><span id="yield-val">2000</span><span class="jam-ing-unit">g</span></div>
+      <div class="jam-ing-name">{ui.totalYield}</div>
     </div>
   </div>
-  <div class="jam-sugar-bar-wrap">
-    <div class="jam-sugar-bar-header">
-      <span>{ui.sugarPercent}</span>
-      <span class="jam-sugar-bar-val"><span id="sugar-pct-val">39</span>% <span id="sugar-pct-context"></span></span>
+
+  <div class="jam-gauge">
+    <div class="jam-gauge-head">
+      <span class="jam-gauge-label">{ui.sugarPercent}</span>
+      <span class="jam-gauge-pct"><span id="sugar-pct-val">39</span>% <span class="jam-gauge-ctx" id="sugar-pct-context"></span></span>
     </div>
-    <div class="jam-sugar-bar">
-      <div class="jam-sugar-bar-fill" id="sugar-bar-fill" style="width:39%"></div>
-      <div class="jam-sugar-bar-marker" style="left:60%"></div>
+    <div class="jam-gauge-track">
+      <div class="jam-gauge-needle" id="jam-gauge-needle"></div>
     </div>
-    <div class="jam-sugar-bar-labels">
+    <div class="jam-gauge-ticks">
       <span>0%</span>
       <span>{ui.sugarLow}</span>
-      <span class="jam-sugar-bar-ideal">{ui.sugarIdeal}</span>
+      <span class="jam-gauge-ideal-label">{ui.sugarIdeal}</span>
       <span>{ui.sugarHigh}</span>
     </div>
   </div>
