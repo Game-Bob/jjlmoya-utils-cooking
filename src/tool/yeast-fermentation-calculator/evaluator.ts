@@ -17,7 +17,7 @@ export function evaluateFermentation(input: FermentationInput, result: Fermentat
   const tone = strongestTone(temperatureTone, doseTone);
   const labelKey = tone as keyof FermentationUI;
   const textKey = `${tone}Text` as keyof FermentationUI;
-  return { tone, label: ui[labelKey], text: ui[textKey] };
+  return { tone, label: ui[labelKey]!, text: ui[textKey]! };
 }
 
 const TEMP_BOUNDS = {
