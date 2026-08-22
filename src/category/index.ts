@@ -30,6 +30,7 @@ import { cheeseFlocculationMultiplier } from '../tool/cheese-flocculation-multip
 import { dehydratorMoistureEstimator } from '../tool/dehydrator-moisture-estimator/entry';
 import { dryAgingMeatEstimator } from '../tool/dry-aging-meat-estimator/entry';
 import { chocolateTemperingCurveGuide } from '../tool/chocolate-tempering-curve-guide/entry';
+import { yeastFermentationCalculator } from '../tool/yeast-fermentation-calculator/entry';
 
 
 export const cookingCategory: CookingCategoryEntry = {
@@ -66,6 +67,7 @@ export const cookingCategory: CookingCategoryEntry = {
     dehydratorMoistureEstimator,
     dryAgingMeatEstimator,
     chocolateTemperingCurveGuide,
+    yeastFermentationCalculator,
   ],
 
 

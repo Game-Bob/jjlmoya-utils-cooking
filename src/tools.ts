@@ -13,6 +13,7 @@ import { SOURDOUGH_CALCULATOR_TOOL } from './tool/sourdough-calculator';
 import { ROUX_GUIDE_TOOL } from './tool/roux-guide';
 import { COOKWARE_GUIDE_TOOL } from './tool/cookware-guide';
 import { YEAST_CONVERTER_TOOL } from './tool/yeast-converter';
+import { YEAST_FERMENTATION_CALCULATOR_TOOL } from './tool/yeast-fermentation-calculator';
 import { LACTO_FERMENTATION_SALT_TOOL } from './tool/lacto-fermentation-salt-calculator';
 import { SPHERIFICATION_BATH_TOOL } from './tool/spherification-bath-calculator';
 import { ICE_CREAM_PAC_POD_TOOL } from './tool/ice-cream-pac-pod';
@@ -42,6 +43,7 @@ export const ALL_TOOLS: ToolDefinition[] = [
   ROUX_GUIDE_TOOL,
   COOKWARE_GUIDE_TOOL,
   YEAST_CONVERTER_TOOL,
+  YEAST_FERMENTATION_CALCULATOR_TOOL,
   LACTO_FERMENTATION_SALT_TOOL,
   SPHERIFICATION_BATH_TOOL,
   ICE_CREAM_PAC_POD_TOOL,

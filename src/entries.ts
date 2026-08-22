@@ -11,6 +11,7 @@ export { pizza } from './tool/pizza/entry';
 export { rouxGuide } from './tool/roux-guide/entry';
 export { sourdoughCalculator } from './tool/sourdough-calculator/entry';
 export { yeastConverter } from './tool/yeast-converter/entry';
+export { yeastFermentationCalculator } from './tool/yeast-fermentation-calculator/entry';
 export { lactoFermentationSalt } from './tool/lacto-fermentation-salt-calculator/entry';
 export { spherificationBath } from './tool/spherification-bath-calculator/entry';
 export { iceCreamPacPod } from './tool/ice-cream-pac-pod/entry';
@@ -44,6 +45,7 @@ import { pizza } from './tool/pizza/entry';
 import { rouxGuide } from './tool/roux-guide/entry';
 import { sourdoughCalculator } from './tool/sourdough-calculator/entry';
 import { yeastConverter } from './tool/yeast-converter/entry';
+import { yeastFermentationCalculator } from './tool/yeast-fermentation-calculator/entry';
 import { lactoFermentationSalt } from './tool/lacto-fermentation-salt-calculator/entry';
 import { spherificationBath } from './tool/spherification-bath-calculator/entry';
 import { iceCreamPacPod } from './tool/ice-cream-pac-pod/entry';
@@ -65,7 +67,7 @@ import { dryAgingMeatEstimator } from './tool/dry-aging-meat-estimator/entry';
 import { chocolateTemperingCurveGuide } from './tool/chocolate-tempering-curve-guide/entry';
 
 
-export const ALL_ENTRIES = [americanKitchenConverter, bananaCare, brine, cookwareGuide, eggTimer, ingredientRescaler, kitchenTimer, meringuePeak, moldScaler, pizza, rouxGuide, sourdoughCalculator, yeastConverter, lactoFermentationSalt, spherificationBath, iceCreamPacPod, botulismCanningSafety, meatBinder, carryOverCooking, maillardReaction, macaronDrying, brixSorbetDensity, oilSmokePoint, leavenerAcidNeutralizer, pectinJam, sousVidePasteurization, emulsionStabilityCalculator, kojiInoculationCalculator, cheeseFlocculationMultiplier, dehydratorMoistureEstimator, dryAgingMeatEstimator, chocolateTemperingCurveGuide];
+export const ALL_ENTRIES = [americanKitchenConverter, bananaCare, brine, cookwareGuide, eggTimer, ingredientRescaler, kitchenTimer, meringuePeak, moldScaler, pizza, rouxGuide, sourdoughCalculator, yeastConverter, yeastFermentationCalculator, lactoFermentationSalt, spherificationBath, iceCreamPacPod, botulismCanningSafety, meatBinder, carryOverCooking, maillardReaction, macaronDrying, brixSorbetDensity, oilSmokePoint, leavenerAcidNeutralizer, pectinJam, sousVidePasteurization, emulsionStabilityCalculator, kojiInoculationCalculator, cheeseFlocculationMultiplier, dehydratorMoistureEstimator, dryAgingMeatEstimator, chocolateTemperingCurveGuide];
 
 
 

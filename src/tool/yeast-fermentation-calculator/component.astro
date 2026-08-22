@@ -1,0 +1,111 @@
+---
+import './yeast-fermentation-calculator.css';
+import type { FermentationUI } from './ui';
+
+interface Props {
+  ui: FermentationUI;
+}
+
+const { ui } = Astro.props;
+---
+
+<section class="ffc-tool" data-fermentation-tool>
+  <div class="ffc-shell">
+    <div class="ffc-unit-bar">
+      <span><span class="ffc-unit-dot"></span>{ui.systemLabel}: <strong data-unit-system>{ui.metricSystem}</strong></span>
+      <button type="button" data-unit-toggle aria-label={ui.useImperial}>{ui.useImperial}</button>
+    </div>
+    <div class="ffc-mode-bar" role="group" aria-label="Fermentation mode">
+      <button class="ffc-mode" type="button" data-mode="bread" aria-pressed="true">
+        <span class="ffc-mode-mark">B</span>
+        <span><strong>{ui.modeBread}</strong><small>{ui.modeBreadHint}</small></span>
+      </button>
+      <button class="ffc-mode" type="button" data-mode="sourdough" aria-pressed="false">
+        <span class="ffc-mode-mark">S</span>
+        <span><strong>{ui.modeSourdough}</strong><small>{ui.modeSourdoughHint}</small></span>
+      </button>
+      <button class="ffc-mode" type="button" data-mode="beer" aria-pressed="false">
+        <span class="ffc-mode-mark">A</span>
+        <span><strong>{ui.modeBeer}</strong><small>{ui.modeBeerHint}</small></span>
+      </button>
+    </div>
+
+    <div class="ffc-layout">
+      <div class="ffc-controls">
+        <div class="ffc-section-heading"><span>01</span><strong>Set the culture</strong></div>
+        <div class="ffc-control-group">
+          <label for="ffc-yeast">{ui.yeastType}</label>
+          <div class="ffc-chip-grid" id="ffc-yeast">
+            <button type="button" data-yeast="instant" data-bread-yeast aria-pressed="true">{ui.instant}</button>
+            <button type="button" data-yeast="active" data-bread-yeast aria-pressed="false">{ui.active}</button>
+            <button type="button" data-yeast="fresh" data-bread-yeast aria-pressed="false">{ui.fresh}</button>
+            <button type="button" data-yeast="starter" data-sourdough-yeast aria-pressed="false">{ui.starter}</button>
+            <button type="button" data-yeast="ale" data-beer-yeast aria-pressed="false">{ui.ale}</button>
+            <button type="button" data-yeast="lager" data-beer-yeast aria-pressed="false">{ui.lager}</button>
+          </div>
+        </div>
+
+        <div class="ffc-control-group">
+          <div class="ffc-label-line"><label for="ffc-temperature">{ui.temperature}</label><output data-value="temperatureC">24</output><span data-unit-label="temperature">°C</span></div>
+          <input id="ffc-temperature" type="range" data-input="temperatureC" min="12" max="35" step="1" value="24" />
+          <p>{ui.temperatureHelp}</p>
+          <div class="ffc-preset-row">
+            <button type="button" data-preset data-temperature="18" aria-pressed="false">{ui.presetCool} <span data-preset-display="18">18°C</span></button>
+            <button type="button" data-preset data-temperature="24" aria-pressed="true">{ui.presetRoom} <span data-preset-display="24">24°C</span></button>
+            <button type="button" data-preset data-temperature="28" aria-pressed="false">{ui.presetWarm} <span data-preset-display="28">28°C</span></button>
+            <button type="button" data-preset data-temperature="12" aria-pressed="false">{ui.presetOvernight} <span data-preset-display="12">12°C</span></button>
+          </div>
+        </div>
+
+        <div class="ffc-section-heading"><span>02</span><strong>Give it a volume</strong></div>
+        <div class="ffc-two-up">
+          <div class="ffc-control-group">
+            <label for="ffc-batch" data-batch-label>{ui.flour}</label>
+            <div class="ffc-number-wrap"><input id="ffc-batch" type="number" data-input="batchSize" min="1" step="1" value="1000" /><span data-unit-label="batch">g</span></div>
+            <p>{ui.batchSizeHelp}</p>
+          </div>
+          <div class="ffc-control-group">
+            <label for="ffc-yeast-amount">{ui.yeastAmount}</label>
+            <div class="ffc-number-wrap"><input id="ffc-yeast-amount" type="number" data-input="yeastAmount" min="0.1" step="0.1" value="10" /><span data-unit-label="yeast">g</span></div>
+            <p>{ui.yeastAmountHelp}</p>
+          </div>
+        </div>
+
+        <div class="ffc-section-heading"><span>03</span><strong>Choose the finish line</strong></div>
+        <div class="ffc-control-group">
+          <div class="ffc-label-line"><label for="ffc-target" data-target-label>{ui.targetRise}</label><output data-value="target">2</output><span data-target-unit>{ui.riseUnit}</span></div>
+          <input id="ffc-target" type="range" data-input="target" min="1.2" max="3.5" step="0.1" value="2" />
+          <p>{ui.targetHelp}</p>
+        </div>
+
+        <button class="ffc-reset" type="button" data-reset>{ui.reset}</button>
+      </div>
+
+      <div class="ffc-observatory" aria-live="polite">
+        <div class="ffc-observatory-top"><span class="ffc-eyebrow">FERMENTATION OBSERVATORY</span><span class="ffc-scene-label" data-scene-label>{ui.riseScene}</span></div>
+        <div class="ffc-vessel-stage">
+          <div class="ffc-vessel-glow"></div>
+          <div class="ffc-vessel" aria-hidden="true"><div class="ffc-vessel-fill" data-vessel-fill></div><i class="ffc-bubble bubble-one"></i><i class="ffc-bubble bubble-two"></i><i class="ffc-bubble bubble-three"></i></div>
+          <div class="ffc-target-marker" data-target-marker><span>{ui.targetMarker}</span></div>
+          <div class="ffc-axis"><span>active</span><span>quiet</span></div>
+        </div>
+        <div class="ffc-result-card">
+          <span class="ffc-result-label">{ui.estimatedWindow}</span>
+          <strong data-result-window>--</strong>
+          <span class="ffc-result-rate" data-result-rate>{ui.enterValid}</span>
+        </div>
+        <div class="ffc-status" data-result-status>{ui.status}: {ui.steady}</div>
+        <details class="ffc-assumptions"><summary>{ui.assumptions}</summary><p>{ui.assumptionsText}</p></details>
+      </div>
+    </div>
+  </div>
+
+  <script is:inline type="application/json" id="ffc-ui" set:html={JSON.stringify(ui)}></script>
+  <script>
+    import { initFermentationController } from './controller';
+
+    const root = document.querySelector<HTMLElement>('[data-fermentation-tool]');
+    const uiNode = document.querySelector<HTMLScriptElement>('#ffc-ui');
+    if (root && uiNode?.textContent) initFermentationController(root, JSON.parse(uiNode.textContent));
+  </script>
+</section>
