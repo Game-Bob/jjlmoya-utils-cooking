@@ -8,12 +8,16 @@ export interface FermentationEvaluation {
   text: string;
 }
 
-export function evaluateFermentation(input: FermentationInput, result: FermentationResult, ui: Record<string, string>): FermentationEvaluation {
+import type { FermentationUI } from './ui';
+
+export function evaluateFermentation(input: FermentationInput, result: FermentationResult, ui: FermentationUI): FermentationEvaluation {
   if (!result.valid) return { tone: 'invalid', label: ui.invalid, text: ui.invalidText };
   const temperatureTone = getTemperatureTone(input);
   const doseTone = getDoseTone(result);
   const tone = strongestTone(temperatureTone, doseTone);
-  return { tone, label: ui[tone], text: ui[`${tone}Text`] };
+  const labelKey = tone as keyof FermentationUI;
+  const textKey = `${tone}Text` as keyof FermentationUI;
+  return { tone, label: ui[labelKey], text: ui[textKey] };
 }
 
 const TEMP_BOUNDS = {

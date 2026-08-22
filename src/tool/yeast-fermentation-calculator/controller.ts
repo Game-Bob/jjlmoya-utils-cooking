@@ -133,7 +133,7 @@ function updateRanges(root: HTMLElement, mode: FermentationMode, system: Measure
   if (temperature) { temperature.min = formatValue(toDisplayTemperature(bounds.minimum, system)); temperature.max = formatValue(toDisplayTemperature(bounds.maximum, system)); temperature.step = formatValue(system === 'imperial' ? bounds.step * 1.8 : bounds.step); }
 }
 
-function getBatchUnitLabel(mode: FermentationMode, imperial: boolean, ui: Record<string, string>): string {
+function getBatchUnitLabel(mode: FermentationMode, imperial: boolean, ui: FermentationUI): string {
   if (mode === 'beer') {
     return imperial ? ui.imperialWortUnit : ui.metricWortUnit;
   }
