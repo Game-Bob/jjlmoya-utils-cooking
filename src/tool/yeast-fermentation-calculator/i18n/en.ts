@@ -40,22 +40,22 @@ const howTo = [
 ];
 
 const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })),
+  '@context': 'https://schema.org' as const,
+  '@type': 'FAQPage' as const,
+  mainEntity: faq.map((item) => ({ '@type': 'Question' as const, name: item.question, acceptedAnswer: { '@type': 'Answer' as const, text: item.answer } })),
 };
 
 const howToSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'HowTo',
+  '@context': 'https://schema.org' as const,
+  '@type': 'HowTo' as const,
   name: title,
   description,
-  step: howTo.map((step) => ({ '@type': 'HowToStep', name: step.name, text: step.text })),
+  step: howTo.map((step) => ({ '@type': 'HowToStep' as const, name: step.name, text: step.text })),
 };
 
 const appSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
+  '@context': 'https://schema.org' as const,
+  '@type': 'SoftwareApplication' as const,
   name: title,
   description,
   applicationCategory: 'UtilitiesApplication',
