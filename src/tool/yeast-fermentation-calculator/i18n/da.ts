@@ -166,6 +166,7 @@ export const content: ToolLocaleContent<FermentationUI> = {
     { type: 'title', text: "Hvorfor resultatet er et tidsinterval", level: 3 },
     { type: 'paragraph', html: "Deje med samme opskrift kan hæve i forskelligt tempo pga. temperatur og gæraktivitet. Intervallet visar denne usikkerhed." },
     { type: 'tip', title: "Brug målet som visuel indikator", html: "For dej, vurder volumen og luftighed. For øl, bekræft stabil vægtfylde med hydrometer." },
+    { type: 'paragraph', html: 'Brug temperatur og volumen som praktiske kontrolpunkter under hævningen. Et tidsinterval er kun en vurdering, så se efter dejens struktur og bekræft øllets afslutning med en stabil måling. Notér også starttemperaturen, så du lettere kan sammenligne forskellige portioner og gentage et godt resultat.' },
   ],
   schemas: [appSchema, faqSchema, howToSchema],
 };

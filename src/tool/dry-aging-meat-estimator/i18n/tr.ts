@@ -201,7 +201,11 @@ export const content: ToolLocaleContent = {
         '<strong>Kötü Göstergeler:</strong> Yapışkan, kaygan veya ıslak yüzeyler. Yeşil, siyah veya sarımsı küfler. Ekşi veya amonyak kokusu bozulmayı gösterir.',
         '<strong>Temizlik:</strong> Yeni et koymadan önce dolabı, kancaları ve ızgaraları daima sterilize edin.'
       ]
-    }
+    },
+    {
+      type: 'paragraph',
+      html: 'Kuru olgunlaştırma sırasında başlangıç tarihini, ağırlığı ve sıcaklığı kaydedin. Hava akışının açık kaldığını düzenli olarak kontrol edin ve son ağırlığı tahminle karşılaştırın. Kabuğu yalnızca etin kokusunu, rengini ve yüzeyini dikkatle değerlendirdikten sonra kesin. Eti soğuk ve temiz koşullarda saklayın. Her kontrolü not etmek, değişiklikleri erken fark etmenizi ve aynı yöntemi sonraki parçada tekrarlamanızı sağlar.',
+    },
   ],
   bibliography,
   schemas: [faqSchema, howToSchema, appSchema]

@@ -335,7 +335,11 @@ export const content: ToolLocaleContent = {
   {
     "type": "paragraph",
     "html": "Felaktig temperering ger gråa ränder. Detta löses genom att smälta om chokladen till Fas 1 och göra om processen."
-  }
+  },
+  {
+    "type": "paragraph",
+    "html": "Under temperering bör du kontrollera temperaturen på flera ställen, röra lugnt och undvika även små mängder vatten. Gör ett prov på en ren kniv eller en bit papper när processen är klar. Chokladen ska stelna jämnt, bli blank och brytas med ett tydligt knäpp. Om ytan fortfarande är matt eller mjuk behöver du kontrollera temperaturen och börja om. Skriv ned kurvan som användes så blir det enklare att anpassa metoden till chokladens sort och kökets temperatur. Använd rena torra verktyg, låt provet svalna orört och notera även rumstemperaturen för nästa omgång. Ta hänsyn till luftfuktigheten, förvara chokladen tätt och kontrollera kurvan igen när du byter sort. En enkel logg över temperaturerna gör felsökningen tydligare och hjälper dig att upprepa rätt konsistens. Kontrollera alltid resultatet innan servering.",
+  },
 ],
   bibliography,
   schemas: [faqSchema, howToSchema, appSchema]

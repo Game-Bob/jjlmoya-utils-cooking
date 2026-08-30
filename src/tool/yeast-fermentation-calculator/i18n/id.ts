@@ -166,6 +166,7 @@ export const content: ToolLocaleContent<FermentationUI> = {
     { type: 'title', text: "Mengapa hasilnya berupa rentang waktu", level: 3 },
     { type: 'paragraph', html: "Adonan dengan resep sama dapat berfermentasi pada kecepatan berbeda karena fluktuasi suhu dan vitalitas ragi. Rentang menunjukkan ketidakpastian ini." },
     { type: 'tip', title: "Gunakan target sebagai petunjuk visual", html: "Untuk roti, amati kenaikan volume dan kelembutan adonan. Untuk bir, konfirmasikan gravitasi stabil dengan hidrometer." },
+    { type: 'paragraph', html: 'Gunakan suhu dan volume sebagai titik pemeriksaan praktis selama fermentasi. Rentang waktu hanyalah perkiraan, jadi amati struktur adonan dan pastikan fermentasi bir selesai melalui hasil pengukuran yang stabil.' },
   ],
   schemas: [appSchema, faqSchema, howToSchema],
 };

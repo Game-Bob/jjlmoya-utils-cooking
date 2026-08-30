@@ -162,6 +162,10 @@ export const content: ToolLocaleContent = {
       type: 'tip',
       html: '<strong>Porada eksperta:</strong> precyzja czasu odróżnia szefa kuchni od amatora. Używaj technologii, by zagwarantować powtarzalność.',
     },
+    {
+      type: 'paragraph',
+      html: 'Aby uzyskać powtarzalny rezultat, zaplanuj wcześniej kolejne etapy przepisu i ustaw osobny minutnik dla każdego dania. Sprawdzaj gotowość wzrokowo i przechowuj żywność w bezpiecznych warunkach.',
+    },
   ],
   bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],

@@ -162,6 +162,10 @@ export const content: ToolLocaleContent = {
       type: 'tip',
       html: '<strong>Proffstips:</strong> Precision i tid skiljer en chefskock från en hemmakock. Använd tekniken för att garantera jämna resultat.',
     },
+    {
+      type: 'paragraph',
+      html: 'En timer gör det enklare att följa flera moment samtidigt utan att tappa överblicken. Skriv gärna ned temperatur, starttid och kontrollpunkt för varje rätt. Då blir processen lättare att upprepa och du kan jämföra resultat när recept eller portionsstorlek ändras.',
+    },
   ],
   bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],

@@ -201,6 +201,10 @@ export const content: ToolLocaleContent = {
         '<strong>Cattivi Indicatori:</strong> Superfici appiccicose, viscide o bagnate. Muffe verdi, nere o giallastre. Odore acre o d\'ammoniaca indica deterioramento.',
         '<strong>Pulizia:</strong> Sterilizzare sempre camera, ganci e griglie prima di inserire nuova carne.'
       ]
+    },
+    {
+      type: 'paragraph',
+      html: 'Usa la tabella come guida alla pianificazione e controlla sempre temperatura, umidità, peso e superficie della carne durante la maturazione.',
     }
   ],
   bibliography,

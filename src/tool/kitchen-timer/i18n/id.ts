@@ -162,6 +162,10 @@ export const content: ToolLocaleContent = {
       type: 'tip',
       html: '<strong>Tips profesional:</strong> Presisi waktu membedakan koki dari pemasak rumahan. Gunakan teknologi untuk menjamin konsistensi.',
     },
+    {
+      type: 'paragraph',
+      html: 'Untuk hasil yang konsisten, rencanakan setiap tahap resep terlebih dahulu dan pasang timer terpisah untuk tiap hidangan. Periksa kematangan secara visual dan simpan makanan dalam kondisi yang aman.',
+    },
   ],
   bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],

@@ -166,6 +166,7 @@ export const content: ToolLocaleContent<FermentationUI> = {
     { type: 'title', text: "Por que o resultado é uma janela de tempo", level: 3 },
     { type: 'paragraph', html: "A velocidade de fermentação varia conforme a farinha, vitalidade da levedura e temperatura. O intervalo reflete essa incerteza real." },
     { type: 'tip', title: "Use o alvo como guia visual", html: "Para pão, observe o crescimento e a estrutura. Para cerveja, confirme a densidade constante." },
+    { type: 'paragraph', html: 'Durante a fermentação, use a temperatura e o volume como pontos de controlo práticos. O intervalo é uma estimativa: observe a estrutura da massa e confirme o fim da fermentação da cerveja com uma medição estável.' },
   ],
   schemas: [appSchema, faqSchema, howToSchema],
 };

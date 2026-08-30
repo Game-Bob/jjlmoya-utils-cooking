@@ -166,6 +166,7 @@ export const content: ToolLocaleContent<FermentationUI> = {
     { type: 'title', text: "Hvorfor resultatet er et tidsintervall", level: 3 },
     { type: 'paragraph', html: "Deiger med samme oppskrift kan heve i forskjellig tempo pga. temperatur og gjæraktivitet. Intervallet viser denne usikkerheten." },
     { type: 'tip', title: "Bruk målet som visuell indikator", html: "For deig, vurder volum og luftighet. For øl, bekreft stabil egenvekt med hydrometer." },
+    { type: 'paragraph', html: 'Følg med på temperatur og volum som praktiske kontrollpunkter under gjæringen. Tidsintervallet er et estimat, så vurder deigens struktur og bekreft at ølet er ferdig med en stabil måling. Noter starttemperaturen for å sammenligne batcher og gjenta et godt resultat.' },
   ],
   schemas: [appSchema, faqSchema, howToSchema],
 };

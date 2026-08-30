@@ -201,7 +201,11 @@ export const content: ToolLocaleContent = {
         '<strong>Złe Wskaźniki:</strong> Lepkie, śliskie lub mokre powierzchnie. Pleśnie zielone, czarne lub żółtawe. Zapach amoniaku lub gnicia oznacza zepsucie.',
         '<strong>Czystość:</strong> Zawsze sterylizuj komorę, haki i półki przed umieszczeniem nowego płata mięsa.'
       ]
-    }
+    },
+    {
+      type: 'paragraph',
+      html: 'Podczas dojrzewania zapisuj datę rozpoczęcia, masę i temperaturę. Regularnie sprawdzaj przepływ powietrza i porównuj masę końcową z obliczeniami. Skórkę odcinaj dopiero po ocenie zapachu, koloru i powierzchni mięsa.',
+    },
   ],
   bibliography,
   schemas: [faqSchema, howToSchema, appSchema]

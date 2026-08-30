@@ -98,7 +98,7 @@ export const content: CategoryLocaleContent = {
     {
       type: 'list',
       items: [
-        '<strong>Guaranteed Reproducibility:</strong> When you document and control every variable, you can replicate a perfect dish infinitely. This is the secret of high-level restaurants.',
+        '<strong>Reproducible Results:</strong> When you document and control every variable, you can repeat a dish more consistently. This is one of the habits used in high-level restaurants.',
         '<strong>Grounded Innovation:</strong> To innovate responsibly in cooking, you must first master the fundamentals. Only then can you understand what you are breaking and why.',
         '<strong>Efficiency and Economy:</strong> Technical control reduces waste. A chef who controls meat cooking avoids dry and rejected pieces; saves money and resources.',
         '<strong>Food Safety:</strong> Fermentations, cooking, and preservation require precision. Ignoring variables = contamination, toxins, diseases.',
@@ -201,7 +201,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Learning technical cooking is not an expense; it\'s an investment. Someone who masters fermentation saves money on bread purchases. Someone who understands emulsions creates their own sauces without additives. Someone who controls preservation reduces food waste. At a professional level, a competent chef is worth 5-10x more than a mediocre one. Culinary precision is education with a guaranteed return.',
+      html: 'Learning technical cooking is not an expense; it\'s an investment. Someone who masters fermentation saves money on bread purchases. Someone who understands emulsions creates their own sauces without additives. Someone who controls preservation reduces food waste. Culinary precision is practical education with a measurable benefit.',
     },
   ],
 };

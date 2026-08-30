@@ -166,6 +166,7 @@ export const content: ToolLocaleContent<FermentationUI> = {
     { type: 'title', text: "Perché il risultato è un intervallo di tempo", level: 3 },
     { type: 'paragraph', html: "La velocità di fermentazione varia in base a farina, vitalità dei lieviti e temperatura. L'intervallo riflette questa reale incertezza." },
     { type: 'tip', title: "Usa l'obiettivo come riferimento visivo", html: "Per il pane valuta volume e alveolatura. Per la birra conferma la densità costante con il densimetro." },
+    { type: 'paragraph', html: 'Durante la fermentazione usa temperatura e volume come controlli pratici. L\'intervallo è una stima: osserva la struttura dell\'impasto e conferma la fine della fermentazione della birra con una misurazione stabile.' },
   ],
   schemas: [appSchema, faqSchema, howToSchema],
 };

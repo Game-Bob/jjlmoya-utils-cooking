@@ -335,7 +335,11 @@ export const content: ToolLocaleContent = {
   {
     "type": "paragraph",
     "html": "Hatalı temperleme yüzeyde gri lekelere yol açar. Çikolatayı eritip adımları en baştan tekrarlayarak çözebilirsiniz."
-  }
+  },
+  {
+    "type": "paragraph",
+    "html": "Temperleme sırasında sıcaklığı birkaç noktada kontrol edin, karışımı sakin biçimde karıştırın ve su damlası girmesini önleyin. İşlem bitince temiz bir bıçak veya kâğıt üzerinde deneme yapın. Çikolata eşit şekilde sertleşmeli, parlak görünmeli ve belirgin bir çıt sesiyle kırılmalıdır. Yüzey mat ya da yumuşak kalırsa sıcaklığı kontrol edip işlemi tekrarlayın. Kullandığınız eğriyi kaydetmek, yöntemi çikolata türüne ve mutfak sıcaklığına göre ayarlamayı kolaylaştırır. Temiz ve kuru araçlar kullanın, numunenin hareketsiz soğumasını bekleyin ve oda sıcaklığını da not edin. Nem oranını da dikkate alın, çikolatayı hava geçirmez saklayın ve tür değiştiğinde eğriyi yeniden kontrol edin. Sıcaklık kayıtları sorunları izlemeyi ve aynı kıvamı yeniden elde etmeyi kolaylaştırır.",
+  },
 ],
   bibliography,
   schemas: [faqSchema, howToSchema, appSchema]

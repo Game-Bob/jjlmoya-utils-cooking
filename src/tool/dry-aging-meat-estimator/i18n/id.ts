@@ -202,6 +202,11 @@ export const content: ToolLocaleContent = {
         '<strong>Kebersihan:</strong> Selalu sterilkan ruangan, kait, dan rak sebelum memasukkan daging baru.'
       ]
     }
+    ,
+    {
+      type: 'paragraph',
+      html: 'Gunakan tabel sebagai panduan perencanaan, bukan sebagai pengganti pemeriksaan langsung. Catat berat awal, suhu, kelembapan, lama pematangan, dan perubahan permukaan agar hasil setiap potongan dapat dibandingkan dengan aman.',
+    }
   ],
   bibliography,
   schemas: [faqSchema, howToSchema, appSchema]

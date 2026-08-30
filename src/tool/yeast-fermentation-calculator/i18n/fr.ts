@@ -166,6 +166,7 @@ export const content: ToolLocaleContent<FermentationUI> = {
     { type: 'title', text: "Pourquoi le résultat est une plage horaire", level: 3 },
     { type: 'paragraph', html: "La vitesse de fermentation varie selon les Farines, la vitalité des levures et la température. La plage reflète cette variabilité réelle." },
     { type: 'tip', title: "Utiliser l'objectif comme repère visuel", html: "Pour le pain, observez la pousse et l'alvéolage. Pour la bière, validez par la stabilité de la densité." },
+    { type: 'paragraph', html: 'Pendant la fermentation, utilisez la température et le volume comme repères pratiques. La durée reste une estimation: observez la structure de la pâte et confirmez la fin de la fermentation de la bière par une mesure stable.' },
   ],
   schemas: [appSchema, faqSchema, howToSchema],
 };

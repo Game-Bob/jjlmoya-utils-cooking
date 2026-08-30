@@ -166,6 +166,7 @@ export const content: ToolLocaleContent<FermentationUI> = {
     { type: 'title', text: "Miksi tulos on aikaväli", level: 3 },
     { type: 'paragraph', html: "Saman reseptin taikinat voivat käydä eri tahtiin lämpötilan ja hiivan aktiivisuuden vuoksi. Väli kuvaa tätä todellista epävarmuutta." },
     { type: 'tip', title: "Käytä tavoitetta visuaalisena merkkinä", html: "Leivässä arvioi kohotusta ja ilmavutta. Oluelle varmista vakaa tiheys ominaispainomittarilla." },
+    { type: 'paragraph', html: 'Seuraa käymisen aikana lämpötilaa ja tilavuutta käytännön tarkistuspisteinä. Aikaikkuna on arvio, joten tarkkaile taikinan rakennetta ja varmista oluen loppu vakaalla mittaustuloksella.' },
   ],
   schemas: [appSchema, faqSchema, howToSchema],
 };

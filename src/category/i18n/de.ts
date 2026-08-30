@@ -3,7 +3,7 @@ import type { CategoryLocaleContent } from '../../types';
 export const content: CategoryLocaleContent = {
   slug: 'kueche',
   title: 'Präzisions Küchenutensilien und Rechner',
-  description: 'Vermeiden Sie häufige Fehler in der Küche. Wissenschaftliche Werkzeuge und kostenlose Online-Rechner zur Berechnung von Proportionen, Zeiten, Umrechnungen und Techniken für die professionelle und häusliche Gastronomie.',
+  description: 'Kostenlose Rechner für Proportionen, Zeiten, Umrechnungen und Techniken in der professionellen und häuslichen Küche.',
   seo: [
     {
       type: 'title',

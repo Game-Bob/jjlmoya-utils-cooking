@@ -201,7 +201,11 @@ export const content: ToolLocaleContent = {
         '<strong>Slechte Indicatoren:</strong> Plakkerige, slijmerige of natte oppervlakken. Groene, zwarte of gele schimmels. Een zure of ammoniakgeur wijst op bederf.',
         '<strong>Hygiëne:</strong> Steriliseer de kast, haken en roosters altijd voordat u nieuw vlees plaatst.'
       ]
-    }
+    },
+    {
+      type: 'paragraph',
+      html: 'Noteer tijdens het rijpen de startdatum, het gewicht en de temperatuur. Controleer regelmatig of de luchtstroom vrij blijft en vergelijk het eindgewicht met de berekende waarden. Snijd de korst pas weg na een zorgvuldige controle van geur, kleur en oppervlak.',
+    },
   ],
   bibliography,
   schemas: [faqSchema, howToSchema, appSchema]

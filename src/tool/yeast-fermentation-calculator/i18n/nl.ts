@@ -166,6 +166,7 @@ export const content: ToolLocaleContent<FermentationUI> = {
     { type: 'title', text: "Waarom het resultaat een bereik is", level: 3 },
     { type: 'paragraph', html: "Twee degen met hetzelfde recept kunnen door temperatuurschommelingen en gistvitaliteit in een ander tempo rijpen. De spanne toont deze onzekerheit." },
     { type: 'tip', title: "Gebruik het doel als visuele indicator", html: "Let bij deeg op volumetoename en luchtigheid. Bij bier op een stabiel hydrometerniveau." },
+    { type: 'paragraph', html: 'Gebruik temperatuur en volume als praktische controlepunten tijdens de fermentatie. Het tijdsvenster blijft een schatting: let op de structuur van het deeg en bevestig het einde van bierfermentatie met een stabiele meting.' },
   ],
   schemas: [appSchema, faqSchema, howToSchema],
 };

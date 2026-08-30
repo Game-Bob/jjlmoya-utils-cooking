@@ -162,6 +162,10 @@ export const content: ToolLocaleContent = {
       type: 'tip',
       html: '<strong>Profesyonel İpucu:</strong> Zaman hassasiyeti, bir şefi ev aşçısından ayıran şeydir. İstikrarlı sonuçlar için teknolojiyi kullanın.',
     },
+    {
+      type: 'paragraph',
+      html: 'Daha tutarlı sonuçlar için tarifin aşamalarını önceden planlayın ve her yemek için ayrı bir zamanlayıcı kurun. Pişmişliği görsel olarak kontrol edin ve yiyecekleri güvenli koşullarda saklayın.',
+    },
   ],
   bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],

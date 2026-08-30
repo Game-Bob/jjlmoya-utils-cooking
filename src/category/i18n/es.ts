@@ -3,7 +3,7 @@ import type { CategoryLocaleContent } from '../../types';
 export const content: CategoryLocaleContent = {
   slug: 'cocina',
   title: 'Utilidades y Calculadoras de Cocina de Precisión',
-  description: 'Evita errores comunes en la cocina. Herramientas científicas y calculadoras online gratis para calcular proporciones, tiempos, conversiones y técnicas en gastronomía profesional y casera.',
+  description: 'Calculadoras online gratuitas para proporciones, tiempos, conversiones y técnicas de cocina profesional y casera.',
   seo: [
     {
       type: 'title',
@@ -67,7 +67,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Ignorar las variables de pH, temperatura y tiempo en conservación es arriesgado. Esta herramienta integra protocolos USDA para garantizar que tu conserva no solo es segura, sino deliciosa. La fermentación es ciencia, no intuición.',
+      html: 'Ignorar las variables de pH, temperatura y tiempo en conservación es arriesgado. Esta herramienta toma como referencia protocolos USDA para que puedas revisar la seguridad de tu conserva antes de valorar el resultado culinario. La fermentación es ciencia, no intuición.',
     },
     {
       type: 'title',
@@ -98,7 +98,7 @@ export const content: CategoryLocaleContent = {
     {
       type: 'list',
       items: [
-        '<strong>Reproducibilidad Garantizada:</strong> Cuando documentas y controlas cada variable, puedes replicar un plato perfecto infinitas veces. Este es el secreto de los restaurantes de alto nivel.',
+        '<strong>Resultados Repetibles:</strong> Cuando documentas y controlas cada variable, puedes repetir un plato con mayor consistencia. Es uno de los hábitos de los restaurantes de alto nivel.',
         '<strong>Innovación Fundamentada:</strong> Para innovar responsablemente en cocina, primero debes dominar los fundamentos. Solo así puedes entender qué rompes y por qué.',
         '<strong>Eficiencia y Economía:</strong> El control técnico reduce desperdicios. Un chef que controla la cocción de carnes evita piezas secas y rechazadas; economiza dinero y recursos.',
         '<strong>Seguridad Alimentaria:</strong> Fermentaciones, cocciones y conservación requieren precisión. Ignorar variables = contaminación, toxinas, enfermedades.',
@@ -201,8 +201,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Aprender cocina técnica no es gasto; es inversión. Alguien que domina fermentación ahorra dinero en compras de pan. Alguien que entiende emulsiones crea sus propias salsas sin aditivos. Alguien que controla conservación reduce desperdicios de alimentos. A nivel profesional, un chef competente vale 5-10x más que uno mediocre. La precisión culinaria es educación con retorno garantizado.',
+      html: 'Aprender cocina técnica no es gasto; es inversión. Alguien que domina fermentación ahorra dinero en compras de pan. Alguien que entiende emulsiones crea sus propias salsas sin aditivos. Alguien que controla conservación reduce desperdicios de alimentos. La precisión culinaria es formación práctica con beneficios medibles.',
     },
   ],
 };
-

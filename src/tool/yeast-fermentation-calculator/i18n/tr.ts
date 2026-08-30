@@ -166,6 +166,7 @@ export const content: ToolLocaleContent<FermentationUI> = {
     { type: 'title', text: "Sonuç neden bir zaman aralığıdır?", level: 3 },
     { type: 'paragraph', html: "Aynı reçetedeki hamurlar sıcaklık dalgalanmaları ve maya canlılığı nedeniyle farklı hızlarda kabarabilir. Aralık bu belirsizliği yansıtır." },
     { type: 'tip', title: "Hedefi görsel bir ipucu olarak kullanın", html: "Ekmek için hacim ve dokuyu değerlendirin. Bira için hidrometre ile kararlı yoğunluğu doğrulayın." },
+    { type: 'paragraph', html: 'Fermasyon sırasında sıcaklığı ve hacmi pratik kontrol noktaları olarak izleyin. Zaman aralığı bir tahmindir; hamurun yapısını gözlemleyin ve biranın tamamlandığını sabit bir ölçümle doğrulayın.' },
   ],
   schemas: [appSchema, faqSchema, howToSchema],
 };

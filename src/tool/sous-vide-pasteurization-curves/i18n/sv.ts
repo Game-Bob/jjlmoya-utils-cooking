@@ -317,6 +317,46 @@ export const content: ToolLocaleContent = {
         ['Grönsaker', '85°C / 185°F', 'Ej tillämpbart (enzyminaktivering)', 'N/A', 'Mjukgörning av pektin'],
       ],
     },
+    {
+      type: 'paragraph',
+      html: 'Den här guiden hjälper dig att planera sous vide med en tydlig skillnad mellan kärntemperatur, uppvärmningstid och pastöriseringstid. Temperaturen beskriver vilken textur du siktar på, medan tiden beror på råvarans tjocklek och starttemperatur. Läs alltid tabellen tillsammans med råvarans form och storlek innan du väljer ett program.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Förbered råvaran med rena händer, rena redskap och en påse som är lämplig för uppvärmning. Se till att vattnet cirkulerar runt hela påsen och att inget flyter upp över ytan. Om flera påsar används samtidigt ska de inte ligga tätt mot varandra, eftersom det kan bromsa värmeöverföringen och göra resultatet ojämnt.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Tjockleken är viktigare än vikten när värmen ska nå mitten. En tjock bit tar längre tid än en tunn bit med samma vikt, och en fryst råvara behöver en annan uppvärmningsfas än en kyld råvara. Mät eller uppskatta den tjockaste delen och välj en konservativ tid när informationen om råvaran är osäker.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Pastörisering bygger på en kombination av temperatur och tid. En högre temperatur kan minska den nödvändiga hålltid, men påverkar ofta konsistensen. En lägre temperatur kan ge en annan textur men kräver att tiden och råvarans storlek följs noggrant. Använd inte ett värde från en annan råvara utan att kontrollera vilken mikrobiologisk risk och tjocklek tabellen avser.',
+    },
+    {
+      type: 'paragraph',
+      html: 'När maten ska serveras senare behöver den kylas snabbt i ett isbad och förvaras kallt. Låt inte en vakuumförpackad råvara stå länge i temperaturintervallet där bakterier växer snabbt. Märk påsarna med innehåll, datum, temperatur och vald tid så att du kan spåra varje tillagning och upptäcka avvikelser.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Tabellen är ett planeringsunderlag och ersätter inte lokala livsmedelsregler eller professionell riskbedömning. Personer med särskilda medicinska risker, gravida och mycket unga eller äldre personer kan behöva striktare rutiner. När en råvara luktar fel, läcker eller har hanterats osäkert ska den inte serveras även om tid och temperatur ser korrekta ut.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Kontrollera alltid att cirkulatorn håller den valda temperaturen under hela tillagningen. En kort temperaturdipp kan påverka både uppvärmning och pastörisering, särskilt när badet är fullt eller när maten läggs i fryst. Låt vattnet återgå till inställd temperatur innan du börjar räkna hålltid.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Olika råvaror kräver olika avvägningar mellan säkerhet och textur. Fågel och malet kött behöver extra uppmärksamhet, medan hela styckdetaljer kan bedömas efter tjocklek och yttemperatur. Använd separata redskap för rå och färdig mat och kyl rester snabbt om de inte ska ätas direkt.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Om du ändrar temperaturen ska du också kontrollera den nya kombinationen av tid och tjocklek. Skriv ned råvarans starttemperatur, mått, inställning och faktiska sluttid. Den dokumentationen gör det möjligt att upprepa ett bra resultat och att se när en avvikelse berodde på utrustning eller hantering.',
+    },
+    {
+      type: 'paragraph',
+      html: 'Förvaring efter tillagning kräver samma omsorg som själva badet. Lägg förpackningen i ett isbad när maten ska sparas, håll kylkedjan obruten och märk den med datum. Vid minsta tvekan om temperatur, tid, tätning eller lukt är det säkrare att inte servera maten.',
+    },
   ],
   bibliography,
   schemas: [faqSchema, howToSchema, appSchema],

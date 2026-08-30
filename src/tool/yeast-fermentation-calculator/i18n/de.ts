@@ -166,6 +166,7 @@ export const content: ToolLocaleContent<FermentationUI> = {
     { type: 'title', text: "Warum das Ergebnis als Spanne angegeben wird", level: 3 },
     { type: 'paragraph', html: "Zwei Teige mit gleichem Rezept können je nach Vitalität und Temperatur unterschiedlich schnell gären. Das Fenster zeigt diese Unsicherheit transparent an." },
     { type: 'tip', title: "Zielwert als visuellen Anhaltspunkt nutzen", html: "Achten Sie beim Teig auf Volumen und Porigkeit, beim Bier auf konstante Messwerte." },
+    { type: 'paragraph', html: 'Nutze Temperatur und Volumen als praktische Kontrollpunkte während der Gärung. Ein Zeitfenster bleibt eine Schätzung: Beobachte die Teigstruktur und bestätige das Ende der Biergärung durch stabile Messwerte.' },
   ],
   schemas: [appSchema, faqSchema, howToSchema],
 };

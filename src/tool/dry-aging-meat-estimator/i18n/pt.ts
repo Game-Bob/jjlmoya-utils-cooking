@@ -201,7 +201,11 @@ export const content: ToolLocaleContent = {
         '<strong>Maus Indicadores:</strong> Superfícies pegajosas, viscosas ou húmidas. Bolores verdes, pretos ou amarelados. Odor a amoníaco ou podridão indica deterioração.',
         '<strong>Higiene:</strong> Esterilize sempre a câmara, ganchos e prateleiras antes de colocar nova carne.'
       ]
-    }
+    },
+    {
+      type: 'paragraph',
+      html: 'Durante a maturação, registe a data de início, o peso e a temperatura. Verifique regularmente a circulação de ar e compare o peso final com a estimativa. Remova a crosta apenas depois de avaliar cuidadosamente o cheiro, a cor e a superfície da carne.',
+    },
   ],
   bibliography,
   schemas: [faqSchema, howToSchema, appSchema]

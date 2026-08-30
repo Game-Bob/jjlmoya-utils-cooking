@@ -162,6 +162,10 @@ export const content: ToolLocaleContent = {
       type: 'tip',
       html: '<strong>Profi-tip:</strong> precisie in tijd onderscheidt een chef-kok van een hobbykok. Gebruik technologie voor constante resultaten.',
     },
+    {
+      type: 'paragraph',
+      html: 'Een kookwekker helpt je meerdere stappen tegelijk te volgen zonder de aandacht te verliezen. Noteer per gerecht de temperatuur, de bereidingstijd en het moment waarop je moet controleren. Zo blijft het proces overzichtelijk en kun je recepten beter vergelijken.',
+    },
   ],
   bibliography,
   schemas: [faqSchema as any, howToSchema as any, appSchema as any],

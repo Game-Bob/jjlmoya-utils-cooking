@@ -335,6 +335,14 @@ export const content: ToolLocaleContent = {
   {
     "type": "paragraph",
     "html": "Tempering yang salah menghasilkan bercak abu-abu di permukaan. Selesaikan masalah ini dengan mencairkan cokelat kembali dan mengulangi proses."
+  },
+  {
+    "type": "paragraph",
+    "html": "Suhu ruangan, jenis cokelat, dan ukuran kristal lemak memengaruhi hasil akhir. Gunakan termometer yang akurat, aduk perlahan agar panas merata, dan hindari air masuk ke dalam cokelat. Setelah suhu kerja tercapai, uji sedikit cokelat pada pisau atau kertas: hasil yang baik mengeras dengan permukaan mengilap dan patahan yang tegas. Jika hasilnya lunak atau belang, kembali ke tahap leleh lalu turunkan suhu secara bertahap sebelum menguji lagi."
+  },
+  {
+    "type": "paragraph",
+    "html": "Catat suhu leleh, suhu pendinginan, dan suhu kerja sesuai jenis cokelat yang digunakan. Perubahan kecil pada suhu atau kelembapan dapat mengubah kilau dan tekstur, jadi lakukan uji kecil sebelum mencetak seluruh adonan."
   }
 ],
   bibliography,

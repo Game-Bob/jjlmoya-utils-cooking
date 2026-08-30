@@ -335,7 +335,11 @@ export const content: ToolLocaleContent = {
   {
     "type": "paragraph",
     "html": "Se o chocolate não for temperado corretamente, a gordura separa-se e migra para a superfície criando um véu cinzento. Resolva derretendo o chocolate de novo e repetindo o processo."
-  }
+  },
+  {
+    "type": "paragraph",
+    "html": "Durante a temperagem, controle a temperatura em vários pontos, mexa com calma e evite qualquer gota de água. No fim, faça um teste numa faca limpa ou numa folha de papel. O chocolate deve solidificar de forma uniforme, ficar brilhante e partir com um estalo claro. Se continuar baço ou macio, verifique a temperatura e repita o processo. Registar a curva usada ajuda a adaptar o método ao tipo de chocolate e à temperatura da cozinha.",
+  },
 ],
   bibliography,
   schemas: [faqSchema, howToSchema, appSchema]

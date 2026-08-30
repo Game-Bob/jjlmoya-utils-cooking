@@ -166,6 +166,7 @@ export const content: ToolLocaleContent<FermentationUI> = {
     { type: 'title', text: "Dlaczego wynik jest zakresem czasowym", level: 3 },
     { type: 'paragraph', html: "Ciasta o tym samym przepisie mogą fermentować w różnym tempie z powodu wahań temperatury i witalności drożdży. Zakres ukazuje tę niepewność." },
     { type: 'tip', title: "Używaj celu jako wskaźnika wizualnego", html: "Dla ciasta oceniaj wzrost i strukturę. Dla piwa potwierdź stały odczyt spławikiem." },
+    { type: 'paragraph', html: 'Podczas fermentacji traktuj temperaturę i objętość jako praktyczne punkty kontroli. Przedział czasu jest oceną, dlatego obserwuj strukturę ciasta i potwierdź koniec fermentacji piwa stabilnym pomiarem.' },
   ],
   schemas: [appSchema, faqSchema, howToSchema],
 };

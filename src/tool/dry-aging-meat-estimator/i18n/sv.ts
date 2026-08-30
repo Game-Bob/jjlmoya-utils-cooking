@@ -201,7 +201,11 @@ export const content: ToolLocaleContent = {
         '<strong>Dåliga Indikatorer:</strong> Klibbiga, glatta eller blöta ytor. Grönt, svart eller gulaktigt mögel. Lukt av ammoniak eller röta tyder på förskämning.',
         '<strong>Hygien:</strong> Sterilisera alltid skåpet, krokar och hyllor innan nytt kött sätts in.'
       ]
-    }
+    },
+    {
+      type: 'paragraph',
+      html: 'Under torrmognaden bör du skriva ned startdatum, vikt och temperatur. Kontrollera regelbundet att luftflödet är fritt och jämför slutvikten med uppskattningen. Skär bort ytan först efter en noggrann kontroll av lukt, färg och köttets struktur. Förvara sedan köttet kallt och rent. Anteckningar om varje kontroll gör det lättare att upptäcka förändringar i tid och att använda samma metod vid nästa styckdetalj.',
+    },
   ],
   bibliography,
   schemas: [faqSchema, howToSchema, appSchema]

@@ -3,7 +3,7 @@ import type { CategoryLocaleContent } from '../../types';
 export const content: CategoryLocaleContent = {
   slug: 'mutfak',
   title: 'Hassas Mutfak Gereçleri ve Hesaplayıcılar',
-  description: 'Mutfaktaki yaygın hatalardan kaçının. Profesyonel ve ev gastronomisinde oranları, süreleri, dönüşümleri ve teknikleri hesaplamak için bilimsel araçlar ve ücretsiz çevrimiçi hesaplayıcılar.',
+  description: 'Profesyonel ve ev mutfağında oran, süre, dönüşüm ve teknikler için ücretsiz hesaplayıcılar ve bilimsel araçlar.',
   seo: [
     {
       type: 'title',

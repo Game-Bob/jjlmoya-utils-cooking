@@ -166,6 +166,7 @@ export const content: ToolLocaleContent<FermentationUI> = {
     { type: 'title', text: "Varför resultatet är ett tidsintervall", level: 3 },
     { type: 'paragraph', html: "Degar med samma recept kan jäsa i olika takt på grund av temperatur och jästaktivitet. Intervallet visar denna osäkerhet." },
     { type: 'tip', title: "Använd målet som visuell indikator", html: "För deg, bedöm volymökning och luftighet. För öl, bekräfta stabil densitet med jäsmätare." },
+    { type: 'paragraph', html: 'Följ temperatur och volym som praktiska kontrollpunkter under jäsningen. Tidsintervallet är en uppskattning: observera degens struktur och bekräfta att ölet jäst klart med ett stabilt mätvärde. Anteckna starttemperaturen för att kunna jämföra satser och upprepa ett bra resultat.' },
   ],
   schemas: [appSchema, faqSchema, howToSchema],
 };

@@ -3,7 +3,7 @@ import type { CategoryLocaleContent } from '../../types';
 export const content: CategoryLocaleContent = {
   slug: 'cuisine',
   title: 'Outils et Calculateurs de Cuisine de Précision',
-  description: 'Évitez les erreurs de cuisine courantes. Outils scientifiques et calculateurs en ligne gratuits pour calculer les ratios, les temps, les conversions et les techniques en gastronomie professionnelle et domestique.',
+  description: 'Calculateurs gratuits pour ratios, temps, conversions et techniques de cuisine professionnelle et familiale.',
   seo: [
     {
       type: 'title',

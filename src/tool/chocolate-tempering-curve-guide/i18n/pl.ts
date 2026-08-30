@@ -335,7 +335,11 @@ export const content: ToolLocaleContent = {
   {
     "type": "paragraph",
     "html": "Niewłaściwe temperowanie skutkuje szarym nalotem na powierzchni. Rozwiążesz to topiąc czekoladę i powtarzając proces."
-  }
+  },
+  {
+    "type": "paragraph",
+    "html": "Podczas temperowania kontroluj temperaturę w kilku punktach, mieszaj spokojnie i unikaj kropli wody. Po zakończeniu wykonaj próbę na czystym nożu lub kawałku papieru. Czekolada powinna zastygać równomiernie, mieć połysk i łamać się wyraźnie. Jeśli powierzchnia pozostaje matowa lub miękka, sprawdź temperaturę i powtórz proces. Zapisanie użytej krzywej pomaga dopasować pracę do rodzaju czekolady i temperatury pomieszczenia. Pracuj na czystych, suchych narzędziach i pozwól próbce ostygnąć bez poruszania. Zwróć uwagę na wilgotność, przechowuj gotowy produkt szczelnie i nie mieszaj różnych rodzajów czekolady bez ponownego ustalenia temperatur.",
+  },
 ],
   bibliography,
   schemas: [faqSchema, howToSchema, appSchema]

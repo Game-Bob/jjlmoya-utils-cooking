@@ -166,6 +166,7 @@ export const content: ToolLocaleContent<FermentationUI> = {
     { type: 'title', text: "为什么结果显示为一个时间区间", level: 3 },
     { type: 'paragraph', html: "即使配方相同，温度波动与酵母活力也会导致发酵速度差异。显示区间能够客观呈现这种真实的不确定性。" },
     { type: 'tip', title: "将目标值作为视觉与测量依据", html: "面包请观察膨胀体积与气孔结构；啤酒请通过比重计确认读数稳定。定时器仅作为规划辅助。" },
+    { type: 'paragraph', html: '发酵时请同时观察温度和体积。时间只是估计值，应结合面团状态或稳定的啤酒密度读数判断。' },
   ],
   schemas: [appSchema, faqSchema, howToSchema],
 };
