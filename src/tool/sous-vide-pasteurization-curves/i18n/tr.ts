@@ -305,6 +305,15 @@ export const content: ToolLocaleContent = {
       level: 2,
     },
     {
+      type: 'title',
+      text: 'Servis Öncesi Pratik Kontrol',
+      level: 3,
+    },
+    {
+      type: 'paragraph',
+      html: 'Servisten önce poşetin tamamen suya battığını, su dolaşımının engellenmediğini ve termometrenin kalibre edildiğini kontrol edin. Farklı kalınlıktaki parçalar için süreyi en kalın parçaya göre değerlendirin. Yemek hemen tüketilmeyecekse soğuk zincir ve hızlı soğutma kurallarına uyun.',
+    },
+    {
       type: 'table',
       headers: ['Gıda Türü', 'Min. Merkez Sıcaklık', 'Min. Sıcaklıkta Süre', 'Daha Hızlı Sıcaklık', 'Önerilen Grup'],
       rows: [
