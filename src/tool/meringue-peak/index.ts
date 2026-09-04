@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { meringuePeak } from './entry';
 export * from './entry';
 export const MERENGUE_CALCULATOR_TOOL: ToolDefinition = {

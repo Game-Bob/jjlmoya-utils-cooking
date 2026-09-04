@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { bananaCare } from './entry';
 export * from './entry';
 export const BANANA_CARE_TOOL: ToolDefinition = {

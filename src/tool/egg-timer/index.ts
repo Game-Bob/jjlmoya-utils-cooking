@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { eggTimer } from './entry';
 export * from './entry';
 export const EGG_TIMER_TOOL: ToolDefinition = {

@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { americanKitchenConverter } from './entry';
 export * from './entry';
 export const AMERICAN_KITCHEN_CONVERTER_TOOL: ToolDefinition = {

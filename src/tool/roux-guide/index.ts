@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { rouxGuide } from './entry';
 export * from './entry';
 export const ROUX_GUIDE_TOOL: ToolDefinition = {

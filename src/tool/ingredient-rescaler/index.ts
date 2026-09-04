@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { ingredientRescaler } from './entry';
 export * from './entry';
 export const INGREDIENT_RESCALER_TOOL: ToolDefinition = {

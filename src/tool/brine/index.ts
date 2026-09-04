@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { brine } from './entry';
 export * from './entry';
 export const BRINE_TOOL: ToolDefinition = {
