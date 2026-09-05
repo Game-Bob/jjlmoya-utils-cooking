@@ -1,2045 +1,2105 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-04T19:03:24.855Z",
+  "generatedAt": "2026-09-05T21:56:32.490Z",
   "pages": {
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/amerikanische-kuechenmasse-umrechner/": {
-      "hash": "0f7e9eb36a9d4da7e353f97d85451f066d735da03d1709bb0b7d273a1e19f6ec",
+      "hash": "ab1dec9e26f7da0a5aa7481f3efee75649c0989cb25422787e5ab7864df21580",
       "route": "/de/werkzeuge/kategorien/kueche/amerikanische-kuechenmasse-umrechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/backform-rechner/": {
-      "hash": "d6d0effae3c260d228ebefddb11f5ec5803ec24486e6f62d5eda2ab52406855f",
+      "hash": "0e6dab87f542c6b1061b190de87bd5820ef8948efd48c22628d22abd3d124f0e",
       "route": "/de/werkzeuge/kategorien/kueche/backform-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/bananen-diagnose/": {
-      "hash": "0522feec14ba3fcc02367cf1dc221705003f8f29d0ae00014e2e66ba8018c902",
+      "hash": "4ae37709f42f8b0f662d3dc2e27d0a695513d5d2ecf3fc50f7701f4484c63a09",
       "route": "/de/werkzeuge/kategorien/kueche/bananen-diagnose/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/botulismus-konserven-sicherheit/": {
-      "hash": "bcd8d07ead860bb4eea7a8bd32c9db21150464f290a97f8adcecbf73377763c9",
+      "hash": "eb3871dc91a1b51cceadf5834d62360038ed35fb314857592de5c84a0bd4b248",
       "route": "/de/werkzeuge/kategorien/kueche/botulismus-konserven-sicherheit/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/brix-sorbet-dichte-rechner/": {
-      "hash": "20f4f7efa377db6cd658b9a32cd8a950e7b53ada099b2c7efa3a28b9d95000aa",
+      "hash": "cae9308510e1420884d7f4ad53421c9c30ea7354ad9d175ce55a9b18de622b35",
       "route": "/de/werkzeuge/kategorien/kueche/brix-sorbet-dichte-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/carry-over-garen-vorhersage/": {
-      "hash": "d7c1fc99debed83ea652eaf7ccebb7cdf504a0ea0f89965995ad5478f5d1e94b",
+      "hash": "2426eeccb40864ad892ee7e6a637de348aed48fe5dd1f3b01d4376653a9bb096",
       "route": "/de/werkzeuge/kategorien/kueche/carry-over-garen-vorhersage/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/doerrautomat-feuchtigkeitsrechner/": {
-      "hash": "c497548219563fa6c4c5ec179909beaf209b8899b9ed28750fce98e4541594f0",
+      "hash": "a57ffe57550c16260abceef059cb32875767ce5b7fb84477e6549705543785b6",
       "route": "/de/werkzeuge/kategorien/kueche/doerrautomat-feuchtigkeitsrechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/eieruhr/": {
-      "hash": "3fcd4b81caaa5a255b9b67547c6ace1cbe97db5f7dc06ef5b121c434c72c5b06",
+      "hash": "8585cafdee0ec2f2011e95ad31bf22be6298e8a4b462ab476016a7d88e2b3277",
       "route": "/de/werkzeuge/kategorien/kueche/eieruhr/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/eis-pac-pod/": {
-      "hash": "2d24e6c293b33f57ef1b1106d7ebba7fa89fd418846a950fc3b7395b145a6e12",
+      "hash": "ae3772091b1774bf513cda5a95035cc8c793574b70cd799aa58d52aeef123230",
       "route": "/de/werkzeuge/kategorien/kueche/eis-pac-pod/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/eischnee-baiser-rechner/": {
-      "hash": "56f0bd2e35141f9199c9843438dba3c6088418f3d2e33053aca7805d2ff056c4",
+      "hash": "d49cfe52f7d05676ebf8b4496884e11773adce6de0006942532ad88ef854c58a",
       "route": "/de/werkzeuge/kategorien/kueche/eischnee-baiser-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/emulsionsstabilitaet-oelgrenzrechner/": {
-      "hash": "03012ec12ededbb864e6d78c302c54fe638c5719fdfdab550a97f43d0ef5439a",
+      "hash": "1b58d87c2b413d698520314995e0f02f7732936126a00c0c4337c29f01ca87a7",
       "route": "/de/werkzeuge/kategorien/kueche/emulsionsstabilitaet-oelgrenzrechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/fleisch-trockenreifungs-rechner/": {
-      "hash": "baafba8620c64c690c65ea9ac427ae22b2494cd6347cdbb49d35764dbbc38bb3",
+      "hash": "a1dcdd26d1a7ac226bbef0cbd998c59f2018083b37e708120435a37c57f4fe3a",
       "route": "/de/werkzeuge/kategorien/kueche/fleisch-trockenreifungs-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/fleischbinder-transglutaminase-rechner/": {
-      "hash": "40d85855906db0dee56360bd2b3369905fcc981f8e98917ff4c72c8566468ff9",
+      "hash": "c9ae16e07d98d5132dfb1c33095638736dacd6bbb821eaad97182dd04fd98357",
       "route": "/de/werkzeuge/kategorien/kueche/fleischbinder-transglutaminase-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/hefe-garzeit-rechner/": {
-      "hash": "4e1526fe06e57587fba7f5b3d9b81482844d9e52931245a81abd459112b52634",
+      "hash": "d40be51af65c8a7b1cd74a4215085acb66591cbcbd6f1ca58f9a94d97286d1a8",
       "route": "/de/werkzeuge/kategorien/kueche/hefe-garzeit-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/hefe-umrechner-frischhefe-trockenhefe-sauerteig/": {
-      "hash": "8d23df1d7df28f994e6cd45c78cd27f9ff240892df605ac750053806be748d97",
+      "hash": "0648f476f5010edb5e6f8e17cf51950a936b2f074cc2bbdd4691600ae381022f",
       "route": "/de/werkzeuge/kategorien/kueche/hefe-umrechner-frischhefe-trockenhefe-sauerteig/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/": {
-      "hash": "2c3b06095dc1e82fcfd52aed98ddc938b5ab9dd18e787a2901c040db79607e02",
+      "hash": "a87d702e9b1cd94da017ca89ba007832ce9460da465cc5796a3981876547883e",
       "route": "/de/werkzeuge/kategorien/kueche/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/kaese-flockungsmultiplikator-rechner/": {
-      "hash": "2f8c1214fb24b8d2884dfddec0c93374f6bda5b3085e06f240e4a1961e93079b",
+      "hash": "c8e6363d5abcc070c3498649f45d181b28398699604db6555ef729054b507a10",
       "route": "/de/werkzeuge/kategorien/kueche/kaese-flockungsmultiplikator-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/koji-inokulation-rechner/": {
-      "hash": "3379f5d3f5aa78d5d661dff96970d7ca4da0f1554888c7caa5f6b0bd2c7e9ce9",
+      "hash": "62f3dfd3d3650dd4ec3f90b6d0c3d8aae8fd62724165dc6763fac95f5bdb32f2",
       "route": "/de/werkzeuge/kategorien/kueche/koji-inokulation-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/kuechen-timer/": {
-      "hash": "dd5da32b4b85ce58bc05dca866d42c01556d8e4d29c9ca681ce61dca7fde482d",
+      "hash": "8afdc40430ad848007c11045586835c1be23f16f1de5f9ff6deb582496fb2338",
       "route": "/de/werkzeuge/kategorien/kueche/kuechen-timer/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/lacto-fermentationsalz-rechner/": {
-      "hash": "fba9e6cd0dab0ec13ae8657ec78d3cd3792dc0b1fbd565aa0ea6d11c56df7e6d",
+      "hash": "e6f4bdd3589daf127bbdb7bf5bbb1deac69ad0baee95eca1b30008ac208a1c25",
       "route": "/de/werkzeuge/kategorien/kueche/lacto-fermentationsalz-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/maillard-reaktions-optimierer/": {
-      "hash": "f697bdba5830d506a5b198bded1dc8741883cd5d0b29bef4564c5d7a566aa880",
+      "hash": "6bd5c1f2d8b79e83a13b92def8b4eac12c984ae31d41dc6d8715a8de90c3659e",
       "route": "/de/werkzeuge/kategorien/kueche/maillard-reaktions-optimierer/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/makronen-trocknungsrechner/": {
-      "hash": "1557271d8e760acdac8302803b2047b794abac69547a3090f8df5dbc3a12b4c1",
+      "hash": "437fee9a75b8c606be9f8929419b23c3bfcf83b1cb9f206fd2c1bc195fe232cb",
       "route": "/de/werkzeuge/kategorien/kueche/makronen-trocknungsrechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/oel-rauchpunkt-tracker/": {
-      "hash": "0b84abb8e376aefaa498d253d29ce786839caf7533a33800d47381f91533a918",
+      "hash": "d03e22c69f9608496e1ce37d060184e808ae9a5a5054a2f58436826e5cd96b2b",
       "route": "/de/werkzeuge/kategorien/kueche/oel-rauchpunkt-tracker/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/pektin-marmeladen-rechner/": {
-      "hash": "0d5a79c1e6a77b158d425a5f955dff8e1d56ec8abd713139303bbf6a8110ec24",
+      "hash": "fcf13ef4d06a2e7c783047b23f7df8c187ec9d3bf54ac116fc5e635e93a57c0d",
       "route": "/de/werkzeuge/kategorien/kueche/pektin-marmeladen-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/pfannen-guide/": {
-      "hash": "f94b34c5bdd80131b2ba328f90869f21f3413a8a1bffce3b12a832311041e3a9",
+      "hash": "1d6e3d75ada5fc890838b11218cd77d420c4b0b1d2f2de222f7eeaba58c2701f",
       "route": "/de/werkzeuge/kategorien/kueche/pfannen-guide/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/pizza-neapolitana-teigrechner/": {
-      "hash": "9b17a020af9467b27e6f64b4eb79ba9fac049c65ef25a03c42fce389694e3431",
+      "hash": "2ed64eae0dc1476bda6edfad9d4a0359a15c3b51f550296f9d97c1f9cc831c58",
       "route": "/de/werkzeuge/kategorien/kueche/pizza-neapolitana-teigrechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/roux-leitfaden/": {
-      "hash": "3737194b410be2e08afb262e13a840909ce6aec9135475198d582310f696aef9",
+      "hash": "6a1cadea1e3acc325d406fa7e50597bd8a5ff8b203cce241612bf2a295de62c2",
       "route": "/de/werkzeuge/kategorien/kueche/roux-leitfaden/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/saeureneutralisator-triebmittel/": {
-      "hash": "c42f080c55f9fd333c1b9f6c498cde6516929ef718061653f03d7ea5591ab038",
+      "hash": "8f6882fb6162cd486f6a3e7e1fbdf913fb9cf0010ecca7153e80802c83bc0788",
       "route": "/de/werkzeuge/kategorien/kueche/saeureneutralisator-triebmittel/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/salzlake/": {
-      "hash": "173a44b6d5c83afd8f22c34bb4dc1df82f5cc856d0dbd2cf786c3c15159eeb67",
+      "hash": "e2f263aedf0dbafe3dafb91a75827d770f6572b85257bc5e23485f0d5009ff6e",
       "route": "/de/werkzeuge/kategorien/kueche/salzlake/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/sauerteig/": {
-      "hash": "187ea30801836ab1b147d59398f1007229fb46272f9695dca72e435ee2988edb",
+      "hash": "582c901cb3e94d3b22b7308bc387292c4b6a602c8c7515571b94d15404d37794",
       "route": "/de/werkzeuge/kategorien/kueche/sauerteig/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/schokoladen-temperierkurve-anleitung/": {
-      "hash": "1da655f30eeeefa5bb6a999398899303e0ba296242ff05e65973a021dbfd447e",
+      "hash": "833a44bc35937c32d50ca1000df4e0d2d609551adffb08f5bce93259670e339b",
       "route": "/de/werkzeuge/kategorien/kueche/schokoladen-temperierkurve-anleitung/"
     },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/sichere-lebensmitteltemperatur-pruefen/": {
+      "hash": "5bdec553799ceab53e5d20a5d702a6351d5f9bb12186c73b5a5685c2d54dc9aa",
+      "route": "/de/werkzeuge/kategorien/kueche/sichere-lebensmitteltemperatur-pruefen/"
+    },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/sous-vide-pasteurizierungs-kurven/": {
-      "hash": "6bfaee982c8c0ad8f3732a16f4425bff698380f0ae3eb936e5471041f03e76ac",
+      "hash": "8c50ae67283d660270f42403b81b8badaa2ecfdbf0347cd9eda6fed89963d371",
       "route": "/de/werkzeuge/kategorien/kueche/sous-vide-pasteurizierungs-kurven/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/spherifikationsbad-rechner/": {
-      "hash": "bbf3dbbbe9fec12d563ac13b38225c49e28bb66914fd0d71581ed5c6459cebb0",
+      "hash": "c48ad77fe8ed4d83d75dcfc8a6687f473e8db504984ab54baaf0a3c42b178cdb",
       "route": "/de/werkzeuge/kategorien/kueche/spherifikationsbad-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/kueche/zutaten-skalierung/": {
-      "hash": "f9bb6f31e7ff7176e5bdb1151ab6ef11546d07bcd4d643f8f04c915fa2f6e17b",
+      "hash": "2332975c38325916af76784c66fb0123d074f5bd14b35dc2c44ca608c17dfc65",
       "route": "/de/werkzeuge/kategorien/kueche/zutaten-skalierung/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/banana-ripeness/": {
-      "hash": "400d4f2630f10809e30d6c125baf60429fc2335ad1e37aaeb67ceda313a8f48f",
+      "hash": "bebf59a78fb9303089f10a45f5cd5bd3f633d40edf7c5f89fe48137e87a898bf",
       "route": "/en/utilities/categories/cooking/banana-ripeness/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/botulism-canning-safety/": {
-      "hash": "57ad8f3ee5829a498da2eccc29c1f5ca9920a497054bf59d84faf20f4d1ee09b",
+      "hash": "180a10e7bac5a78dcebb17e9259b1c250d5391590a299727d1ed477b6da9870b",
       "route": "/en/utilities/categories/cooking/botulism-canning-safety/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/brix-sorbet-density-calculator/": {
-      "hash": "1cd4b4dc677fb8f2321e6d867bf19dbd2badc2fa1b22357d6a069850bd2dcdce",
+      "hash": "e81bd960b4ce8ffca31db8e988b45d55334b5e6bab278701a06614db4fd2a6df",
       "route": "/en/utilities/categories/cooking/brix-sorbet-density-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/cake-pan-size-converter-calculator/": {
-      "hash": "bfe952fa5934b265188004b3a01bf718baf7526c13779210656ca63fea3dcf33",
+      "hash": "b619a75f6427c37e3c1b81e451d8e119a88c7f16a3316e25d83c1e5adb34d369",
       "route": "/en/utilities/categories/cooking/cake-pan-size-converter-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/carry-over-cooking-predictor/": {
-      "hash": "24f2b991ed7b00c18bd54277d1343ce823add8664862df4fb94e430a66176c40",
+      "hash": "f02c09eff9368067c992859e878b4a75bf21042ae75bc4bd32abd6f05a497189",
       "route": "/en/utilities/categories/cooking/carry-over-cooking-predictor/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/cheese-flocculation-multiplier/": {
-      "hash": "cbee7061a22513a57a355160802db7aad75bd0688d5487e6e6e6f5cc205fc145",
+      "hash": "ed219d7c6ad80681062d7e0d33e883670c70983c02a396b892354c15dec42caa",
       "route": "/en/utilities/categories/cooking/cheese-flocculation-multiplier/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/chocolate-tempering-curve-guide/": {
-      "hash": "040a585edc837e8d88f64132ca927e91c58885001671b4bcbac72021f8af9c74",
+      "hash": "83ee4479084a69ce5077d6d1528b40eedbd810b45fbf720d7faffd05d0d40510",
       "route": "/en/utilities/categories/cooking/chocolate-tempering-curve-guide/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/cookware-selector/": {
-      "hash": "4d0eae2907acbbaab4110a104d7bf74d81e23d21b029bbe943cb55d77e6ae4d9",
+      "hash": "8a955a712e91412a519df077dfdb01e3e3b235f38ea71b7254c2b09468973faf",
       "route": "/en/utilities/categories/cooking/cookware-selector/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/dehydrator-moisture-estimator/": {
-      "hash": "6c26eafe5093898481629bc3de55c0471e7e22fb3d36d6f26e9ee2f067a7f9f2",
+      "hash": "866e772ed9548d96247485b2d59572412f13d655ba5f9a2527c71bd0f9c14310",
       "route": "/en/utilities/categories/cooking/dehydrator-moisture-estimator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/dry-aging-meat-estimator/": {
-      "hash": "f865f2f0f2e83743b761d96987a5fb9901bb6edfd53c64991ddd6f583bea66cf",
+      "hash": "e96122f580360400da30c62c9ad697128c825071e7ca06577df95cc6adcee9cc",
       "route": "/en/utilities/categories/cooking/dry-aging-meat-estimator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/emulsion-stability-calculator/": {
-      "hash": "f139a1daf27c8db449689f99354764f6e5b10596ff7416ea7d8c21a00e22d22d",
+      "hash": "3a1951c6abac148e0799274956d4d1a4e021be1429cd60f34821a48f1c2c2291",
       "route": "/en/utilities/categories/cooking/emulsion-stability-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/equilibrium-brining-calculator-meat-fermentation-ratios/": {
-      "hash": "4ec227aab7ff1add5b188e156e7348269065759d5364af6d2ef16065e9748e25",
+      "hash": "b7d5ad668bfae66c42f562b9cbd208c60e1a9f8cadfe2aa116bacbbc3166b459",
       "route": "/en/utilities/categories/cooking/equilibrium-brining-calculator-meat-fermentation-ratios/"
     },
+    "https://www.gamebob.dev/en/utilities/categories/cooking/food-safe-temperature-checker/": {
+      "hash": "e6b26d8d6b47966784d4f0e2ddfc19efb4a00b468cc04eac0f39aa3a29b65039",
+      "route": "/en/utilities/categories/cooking/food-safe-temperature-checker/"
+    },
     "https://www.gamebob.dev/en/utilities/categories/cooking/ice-cream-pac-pod/": {
-      "hash": "934b47dca6a7327faedc26758a1f1b24b82979ccaa5cdcb62ca51e77dec5e360",
+      "hash": "84372e63bf2f3a1d58bf7372f7626503764b069baf4e21aebd913559a8afe76f",
       "route": "/en/utilities/categories/cooking/ice-cream-pac-pod/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/": {
-      "hash": "59bdaf51d43a12a76a919a317951a2c7bf8775d25e1c3d77cb59ad8e0b3a92be",
+      "hash": "3cc8caf8d337c6ec4443b9aab311f8699696682e19ce8106dad05ab947dcd6b1",
       "route": "/en/utilities/categories/cooking/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/kitchen-timer/": {
-      "hash": "62c037d3d9f259e43bfb0dbdb4203a45f381bb33e3f625fa4153b71f5c1bdc61",
+      "hash": "be0aaac0754fd8cf77caa73d9834cb92025b6f4d0d0532121fcaad0adedc6457",
       "route": "/en/utilities/categories/cooking/kitchen-timer/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/koji-inoculation-calculator/": {
-      "hash": "5e21a1a4c38a8a7304ec651eeecfa40ba4298ad52c8c4276556663e4bdd99e19",
+      "hash": "6d884ad61ea11b190edb0eb9eb0be9afc8446c04857fcbdabc6a42444cd0b115",
       "route": "/en/utilities/categories/cooking/koji-inoculation-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/lacto-fermentation-salt-calculator/": {
-      "hash": "2c8320156cba5f17adee5790da15a19d6228ea236670a001c203f1be176619b7",
+      "hash": "9059328ee9ce22da85f61ef36f77b93146517428566227104bcf8bf922f17334",
       "route": "/en/utilities/categories/cooking/lacto-fermentation-salt-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/leavener-acid-neutralizer/": {
-      "hash": "04bfadeec309e9d675e02201756044f06d1ab5820a054164eb559a4d205ce504",
+      "hash": "e45b5a1f878af9caa85d5bdf2d7743ca02ff9475fe3c827b1f581ec0064ee5e3",
       "route": "/en/utilities/categories/cooking/leavener-acid-neutralizer/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/macaron-drying-predictor/": {
-      "hash": "be0d4f9f9f8aa3f178bcdf05dcebf2fabbccee3db549ed1b5da2166499dc2576",
+      "hash": "91b7ca8e05961140a82705da2b768eee9755e7807d51f2fa52ecc8913788ff35",
       "route": "/en/utilities/categories/cooking/macaron-drying-predictor/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/maillard-reaction-optimizer/": {
-      "hash": "af26af5bacbb97f4e184ecfbcafd50706c1303b1cf3d20780c7a4da0c09559b2",
+      "hash": "630b3bd3df864eeff0c24ae7483dd7a212aecaa7fdb97d8a6ae3a64d7e371576",
       "route": "/en/utilities/categories/cooking/maillard-reaction-optimizer/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/meat-binder-transglutaminase-calculator/": {
-      "hash": "9f92f4bbd683a6aa0ed071aaf9a84cc76dcfac68a3e9c2be4f41708c3517b40e",
+      "hash": "f1fee489c249a03d4fd37811c6809b615b2ba3c6fb5e94c23452d0b48c98f8ba",
       "route": "/en/utilities/categories/cooking/meat-binder-transglutaminase-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/meringue-sugar-ratio-calculator-stiff-peaks/": {
-      "hash": "20969636fe1c36c4a57165bc81cac7bf9c014d55797dad2efd11722524ea69d3",
+      "hash": "c82bfeab9f59c02f73e1a93567514c6a5bcc72b84566d551a2b97828b78acb81",
       "route": "/en/utilities/categories/cooking/meringue-sugar-ratio-calculator-stiff-peaks/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/neapolitan-pizza-dough-calculator-authentic-recipe/": {
-      "hash": "73ba6beee6ec70889691f46463ed148bb8af31a5fd4dd163e01ec49487f96d49",
+      "hash": "a15f4ba63cc7142f14b5af80a98db969e800a4895fb67e15b9746be1429b12d9",
       "route": "/en/utilities/categories/cooking/neapolitan-pizza-dough-calculator-authentic-recipe/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/oil-smoke-point-tracker/": {
-      "hash": "daf637bb23baeebd2683fde7a91b8bc9db79599d4112b61bf6fddadf672cd119",
+      "hash": "352dd9e12a8fdea675081bb92d8d565a3633ae13ac87b10ed246e98e5354fada",
       "route": "/en/utilities/categories/cooking/oil-smoke-point-tracker/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/pectin-jam-setting-calculator/": {
-      "hash": "28ac381067ca8075625ce73e8893d2ac2c43db1fa488ca3825e7c0c3c91aa389",
+      "hash": "98daa5f31a75352fc38aa4ac7ede79b6e266c84bcff01356e5783f0ade314827",
       "route": "/en/utilities/categories/cooking/pectin-jam-setting-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/perfect-boiled-egg-timer-altitude-calculator/": {
-      "hash": "d5287b55e57c94833e4765924fc5bdae496cda573ae8f25c79fe06f4d8f51649",
+      "hash": "38ec36cc6126e7c5c233964dd85a9030528301c1cd7c299d9e6f782786b57fc8",
       "route": "/en/utilities/categories/cooking/perfect-boiled-egg-timer-altitude-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/recipe-ingredient-scaler-converter-servings/": {
-      "hash": "e37c0856ceefc80634a26c8ff28e98e79c3af9316d1c65de964fe398ef12460f",
+      "hash": "4a024683e6314c14e06a56a469fecece6f8f6bfa92f824990fbe194e4b655dea",
       "route": "/en/utilities/categories/cooking/recipe-ingredient-scaler-converter-servings/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/roux-ratio-calculator-thickening-sauce-guide/": {
-      "hash": "9bccdfe253b33f1f12481e045c3e390ebcd0c8c25f29932e3607e5cad807fe34",
+      "hash": "eb5768e0d6a5d695921f4deb9a26717831d937b5a32a5e50b40e9d2958dfccdf",
       "route": "/en/utilities/categories/cooking/roux-ratio-calculator-thickening-sauce-guide/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/sourdough-starter-feeding-calculator-ratio-proportions/": {
-      "hash": "f44f92c73d80f3b61722366b063a9e1644a94d212c55f24dbddc24e771846ebd",
+      "hash": "921bc214a4656714847259058cf664cb3baea650fcc6bd06f9f302e55c0acf81",
       "route": "/en/utilities/categories/cooking/sourdough-starter-feeding-calculator-ratio-proportions/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/sous-vide-pasteurization-curves/": {
-      "hash": "10c04855df79be5339a085423214aca534a8eb8968cffe56ed9a6b3a12d73ca2",
+      "hash": "e6005f49b48f614134338eb65642c295cba7cb281028e2b971e5d8a0a42754b6",
       "route": "/en/utilities/categories/cooking/sous-vide-pasteurization-curves/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/spherification-bath-calculator/": {
-      "hash": "d6011a0181a72c7582856b23b27e6e07dcf7d219930b5e32ca4ca6eb3ffe1201",
+      "hash": "a2a1aa27832b95fde676bb4d721d05e31de627e1412c48303161a936b601dd09",
       "route": "/en/utilities/categories/cooking/spherification-bath-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/us-cooking-conversion-calculator-cups-to-grams-fahrenheit/": {
-      "hash": "e13fb198ec283c03cdfa4a16e754a63e58038a28d6a6b55caf681e8b17f4aa6f",
+      "hash": "a8847f736f0994accfb0a3a257fd6e958d6dc84b73ecef1a4df3a6a4f0ba8216",
       "route": "/en/utilities/categories/cooking/us-cooking-conversion-calculator-cups-to-grams-fahrenheit/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/yeast-converter-fresh-dry-sourdough-starter/": {
-      "hash": "f6452cb52a321e5a6618c2e08c043e43e38e2a790f8447c9067b6736f48fe5f8",
+      "hash": "0909eed31e830c327d01c1b5cb534c3deaad2b8543725de37b8df856a48c47a9",
       "route": "/en/utilities/categories/cooking/yeast-converter-fresh-dry-sourdough-starter/"
     },
     "https://www.gamebob.dev/en/utilities/categories/cooking/yeast-fermentation-calculator/": {
-      "hash": "18aff4944847b8ae9e6b5837ac9d78c26f0dcfe97870d48944ae817676cf4343",
+      "hash": "c5a45672c84e13de80293ffaf6b5c7bee72dc555045cc7fcbae60916b334d84c",
       "route": "/en/utilities/categories/cooking/yeast-fermentation-calculator/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/adaptateur-taille-moule-patisserie/": {
-      "hash": "5f6c2022540bbf4989ee7eec29ee90c1f0fca36c1f456b5411b86fd4f3c06660",
+      "hash": "4a5ea3c2bc10a371d169f544c4ff0ebeab938d1c2143add8f8f19729884a4961",
       "route": "/fr/utilitaires/categories/cuisine/adaptateur-taille-moule-patisserie/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/calcul-pate-pizza-napoletaine/": {
-      "hash": "4cae46d34ab6cbec486533425c57c04f826fdbc74b5373f131a8dc1efca2203d",
+      "hash": "9a05a462446df83dfe0cd03b1506bc8e8d32a9a1cd744b1f84e76158fd677b9a",
       "route": "/fr/utilitaires/categories/cuisine/calcul-pate-pizza-napoletaine/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/calculateur-bain-spherification/": {
-      "hash": "e8a278cb41c5b201b0218c1e0753aea07b5c576b84114be6c762d9aa776e3f97",
+      "hash": "abc30d59b33960ad4e2a0959b4e034b9c433b328d89e2d566c5dacf7290a7a37",
       "route": "/fr/utilitaires/categories/cuisine/calculateur-bain-spherification/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/calculateur-densite-brix-sorbet/": {
-      "hash": "841112a7cbd62cc0b59a8f6e0e287c6e30230dcee9cc165bb87d666ebf101598",
+      "hash": "7d4243cf1320481de2fa056ccdcb5bbaa44355be6d58f51ff824ed9fd5bd3b80",
       "route": "/fr/utilitaires/categories/cuisine/calculateur-densite-brix-sorbet/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/calculateur-inoculation-koji/": {
-      "hash": "1af77fd6ba9488db81599bd3083853816344267d792f564b2afe6fd3a7167cef",
+      "hash": "5ce53f66e543d5af4d38b8e5272c15c9cb9c260d7e3a10209e30d482bceb14b9",
       "route": "/fr/utilitaires/categories/cuisine/calculateur-inoculation-koji/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/calculateur-meringue-proportions-sucre-blancs-oeuf/": {
-      "hash": "bf46f32e81715e1f96a8c2bebec36c94b5addbe8b012c9c66135a710c6034944",
+      "hash": "eabe59bfe1ed5f1f4def1df36ef4efae429aa4fe7487ccfa27cee3f188bbdfe1",
       "route": "/fr/utilitaires/categories/cuisine/calculateur-meringue-proportions-sucre-blancs-oeuf/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/calculateur-mise-echelle-recette-ingredients-portions/": {
-      "hash": "2f19b0a20a9c04aac783bcb62494baa29c2230e92c0be23e1aa4c126308efdf8",
+      "hash": "9debf8d5f6bed44d6db0319d0724d8ded439c4529d3aa46d53573efd152c35ff",
       "route": "/fr/utilitaires/categories/cuisine/calculateur-mise-echelle-recette-ingredients-portions/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/calculateur-multiplicateur-floculation-fromage/": {
-      "hash": "cd37ae6de55dc76a1a7dfc7c534110450e3149cef057f6a502f8f2c57e81fe1f",
+      "hash": "e9ce7a527320fbcef6dd353bef088a3969ef5ba37e0d9bda0a081271e7c696b5",
       "route": "/fr/utilitaires/categories/cuisine/calculateur-multiplicateur-floculation-fromage/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/calculateur-pectine-confiture/": {
-      "hash": "f41c1d4d416b497d3c4d8e2e7b87ec33049a38ac6809f310f71ee9c906515808",
+      "hash": "637974fdaba716d25eeb40bd56f0419371edbdf21b5ba623029753b31a8e0c00",
       "route": "/fr/utilitaires/categories/cuisine/calculateur-pectine-confiture/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/calculateur-rafraichissement-levain-proportions-ratio/": {
-      "hash": "9b56cd7470c3d380bc646701d860d696cb9d76452d94342f8b681e33e23888f8",
+      "hash": "ca73cf22d4ac6333e92d2f3ed9a8c7c5d32bdd3d020527af359dd4ccc9f0a219",
       "route": "/fr/utilitaires/categories/cuisine/calculateur-rafraichissement-levain-proportions-ratio/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/calculateur-roux-proportions-sauce-bechamel-veloute/": {
-      "hash": "731a2f45cb66cd13340ae7f6eb8d1eb2e21e051df3ea4c86162083b815e03927",
+      "hash": "7408b99193e4e34f3fc24e83c65dfeff5792ec6d3a2aa40775beeed6b8a6f170",
       "route": "/fr/utilitaires/categories/cuisine/calculateur-roux-proportions-sauce-bechamel-veloute/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/calculateur-saumure-equilibre-fermentation-viande-ratios/": {
-      "hash": "7cc538c13b9e82092da042f5daff5a13b61a9434786128015d117d7f7e110e27",
+      "hash": "00df5215a7c3e656448e30b803441b117e37707295dfc1288379268a8b8909f4",
       "route": "/fr/utilitaires/categories/cuisine/calculateur-saumure-equilibre-fermentation-viande-ratios/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/calculateur-sechage-macarons/": {
-      "hash": "34440565323011a1480db823173f35f7c3820f3df5327d6f23d7fdbb2fefa65d",
+      "hash": "3f463570a185d83ca76d791d2d11aec037f8985de88fce18684c07b2d6976828",
       "route": "/fr/utilitaires/categories/cuisine/calculateur-sechage-macarons/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/calculateur-sel-fermentation-lacto/": {
-      "hash": "ffca2e0aa584676888ee914cf9e9121b3d86334017ca46abca65ec4bbdc2a445",
+      "hash": "623a05f92e4f7198d32153459c055e67b55a3afe8d874eb72fdf0e8f5d0c90e5",
       "route": "/fr/utilitaires/categories/cuisine/calculateur-sel-fermentation-lacto/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/calculateur-stabilite-emulsion/": {
-      "hash": "b57f1a6c63f1832036ae13a49902bf3aeacaeaf5e2fe31d47c1b906e0c984112",
+      "hash": "1d726e8bafec5b5832255f22a797785bc727ab0325563c4631e445006ed9cc3d",
       "route": "/fr/utilitaires/categories/cuisine/calculateur-stabilite-emulsion/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/calculateur-temps-fermentation-levure/": {
-      "hash": "89e27c59e033865a918b037359d5dd3234ae601414c8e33166ad4531b79747c9",
+      "hash": "c2801016f77a58a4795a98ac42febb40d2dad8730bf0c2f8a03180408a6726a1",
       "route": "/fr/utilitaires/categories/cuisine/calculateur-temps-fermentation-levure/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/calculateur-transglutaminase-liaison-viande/": {
-      "hash": "1d3ec290481cfe6981827b206d756938c1109ebd849bdf26271609962cfdeb8a",
+      "hash": "92d00bf06965469fe114798a4942104dd35d20ccd46f349a51eba5c599f8a65d",
       "route": "/fr/utilitaires/categories/cuisine/calculateur-transglutaminase-liaison-viande/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/convertisseur-levure-fraiche-seche-levain/": {
-      "hash": "99886b749a09bb8649564f4bc71f65c17ccd6ffa75687395fdfa2780f1ee57ce",
+      "hash": "eb7f50de0fa03f7a3f2efed0f625e1fdafd043c7e41442c2ab6f89c275cb2ffc",
       "route": "/fr/utilitaires/categories/cuisine/convertisseur-levure-fraiche-seche-levain/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/convertisseur-mesures-cuisine-americaine-cups-grammes/": {
-      "hash": "b214012e3bb01f983c758a207883830e59bd13967d20f6daef1ad5f21329c300",
+      "hash": "0f6b590f65707b0f1ec1da4fd2fca57cbc467fac6945197a7c8d056f7ad08752",
       "route": "/fr/utilitaires/categories/cuisine/convertisseur-mesures-cuisine-americaine-cups-grammes/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/courbes-pasteurisation-sous-vide/": {
-      "hash": "5a5018a86b1cce8cac4fc8f5f9f60d1ea586a49a7da38fd76b22b1c5150f71d6",
+      "hash": "bf010b5c609dbd6d18d778fd6a9af41bd9b9e659e4aa9b7603ebe430dc404e5a",
       "route": "/fr/utilitaires/categories/cuisine/courbes-pasteurisation-sous-vide/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/estimateur-humidite-deshydrateur/": {
-      "hash": "3fbb62b9ee3cbc68edaba1abdbdccafd4b26ca4c797ea78522ed47381006119a",
+      "hash": "7bf358a2855848c8255783af0aa2b5d1d47ef3e5fecf6d9d7ea5a08f2d55083b",
       "route": "/fr/utilitaires/categories/cuisine/estimateur-humidite-deshydrateur/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/estimateur-maturation-viande/": {
-      "hash": "d8659d037b9288055ed8ebacfbe5a7070dc6cef0184aef39aa4f2609f3ded25d",
+      "hash": "21f65a912d135763483553b46f4eb51634d5f64683b33f1a02bc219a4c9d8bf8",
       "route": "/fr/utilitaires/categories/cuisine/estimateur-maturation-viande/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/glace-pac-pod/": {
-      "hash": "51240224103152a90c6137846e298d206a7c100fcfa8a8cfe5e570fb88127c79",
+      "hash": "4737f87691d161148832e756bacd9dd4700ffe9ebca04b4ea82f00981eb88cd0",
       "route": "/fr/utilitaires/categories/cuisine/glace-pac-pod/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/guide-courbe-temperage-chocolat/": {
-      "hash": "0c45ca15446dee9cffc704bce361f4d0a9c0e4d23e8361f7f02e9dde2724c51b",
+      "hash": "0ea9316b1fd68d566d79f055bf3313474a709d973a0793912d71d1629022b3f4",
       "route": "/fr/utilitaires/categories/cuisine/guide-courbe-temperage-chocolat/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/": {
-      "hash": "ceac362954dc80215532a6b94939c2ebf6a40b6a07c3ee1df08d54b4efee228e",
+      "hash": "2b3530f679845cace5e4e75dfef3e8fd3898b4ef6969e1bb58e91610a7da6701",
       "route": "/fr/utilitaires/categories/cuisine/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/maturite-banane/": {
-      "hash": "81dcccfb8b3724d612815f8b979d49f6fa3f3eb1e8256d33a86e4bd033ec828f",
+      "hash": "ec6f0da3879a02ff1d0994afd4e7041c4efb04aebae06ecbd41e87f217be1e10",
       "route": "/fr/utilitaires/categories/cuisine/maturite-banane/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/minuteur-cuisine/": {
-      "hash": "ad5c1bfd16a4773045cb118b5fdf2b8d3b16e3704a856c008ab52343ad61d53b",
+      "hash": "4dc9f544bc99f3dc3681b4467ece13c89bbd569391cbaafdf6591f4cd5fa7dc6",
       "route": "/fr/utilitaires/categories/cuisine/minuteur-cuisine/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/minuteur-oeuf-calculateur-altitude/": {
-      "hash": "a316cae339290725e08f6da43040a6ebf49c633892e98def5b5666b4c641ace3",
+      "hash": "72964a9f0ca26559395b2a041ee21f593ea149a056d220c4d3baa1b302f969af",
       "route": "/fr/utilitaires/categories/cuisine/minuteur-oeuf-calculateur-altitude/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/neutraliseur-acide-levain/": {
-      "hash": "811b544afbd191f53cf5f63ae5fec865f6206a0584bfff4a0ff0c197c7753b90",
+      "hash": "215dbc330634cd6f8a904269a1e23d28e3077be14dee4da97371363ad2884c16",
       "route": "/fr/utilitaires/categories/cuisine/neutraliseur-acide-levain/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/optimiseur-reaction-maillard/": {
-      "hash": "75cd89103bdded63c1716d2674fc9901ced13d4d5cea3141c2137bf47e6b1b34",
+      "hash": "e84a048b764a5d6f33fee6e32e9afc8a657de2b17d861783b7708ebe40070d3a",
       "route": "/fr/utilitaires/categories/cuisine/optimiseur-reaction-maillard/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/predicteur-cuisson-residuelle/": {
-      "hash": "f6f88c63f1e9a82a9abbca386f368b6512fc8cfaa4bca4848ea8690d3b3cd263",
+      "hash": "d6aae2639caa2c0028eae74c9bff0a0e9182add50ad40d14311f46bea6855f68",
       "route": "/fr/utilitaires/categories/cuisine/predicteur-cuisson-residuelle/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/securite-conserves-botulisme/": {
-      "hash": "1d818a759063dd1e44d7893f570090138a868f81c3ec605ed7ef3087ef543acf",
+      "hash": "5845a128abe29ed7ed03ce25bea47ecdb71acb2e8876958c61eb288ba1b94d66",
       "route": "/fr/utilitaires/categories/cuisine/securite-conserves-botulisme/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/selecteur-ustensiles/": {
-      "hash": "75e775d96f934d3c5ceea5554194251a1c7b98dc048d06315994c0ae54a199bf",
+      "hash": "eccb54d32182d6692e7fc4b131b0c2d468afb773def229e9f23082659fda3108",
       "route": "/fr/utilitaires/categories/cuisine/selecteur-ustensiles/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/suivi-point-fumee-huile-friture/": {
-      "hash": "33eb56bd830062f55d0b66b4ee74983c7eada394c91e5823c85757d07ce4f02e",
+      "hash": "3e76eb04435a9b550c3e9413020fc99c5d1ba45a6cb224e38924e5bafddb000f",
       "route": "/fr/utilitaires/categories/cuisine/suivi-point-fumee-huile-friture/"
     },
+    "https://www.gamebob.dev/fr/utilitaires/categories/cuisine/verificateur-temperature-aliments/": {
+      "hash": "306986b9526216cdf474cfa2eafd85dde7c286dc657118ea9c5b211e8acd8d86",
+      "route": "/fr/utilitaires/categories/cuisine/verificateur-temperature-aliments/"
+    },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/botulisme-pengalengan-keamanan/": {
-      "hash": "5767271903a32165606c498f270bc0e89b8d4c63d9855e481e1222a5d18fe452",
+      "hash": "e1de018887ccf2427a0e54173eb9da58f8f47166dbdcab5bbe62c60c55a6250b",
       "route": "/id/utilitas/kategori/dapur/botulisme-pengalengan-keamanan/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/diagnosis-pisang/": {
-      "hash": "ab5563d0c3a843db2819ad9d7057b455e0c37768e8fa7c294787c6dcfebb1df7",
+      "hash": "fb05210a80e1fa0faaa335bf565d427f80bead4e0efe22e055ce5846b7ac3ac1",
       "route": "/id/utilitas/kategori/dapur/diagnosis-pisang/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/es-krim-pac-pod/": {
-      "hash": "c69c1a3ac592b9a41670367a153280a928c70ff3be9b6713641fbfe3519d6b53",
+      "hash": "c8764ab4061d080569d6540b555533acd7867e293a97abd41e32fd362c23b27a",
       "route": "/id/utilitas/kategori/dapur/es-krim-pac-pod/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/estimator-kelembapan-dehidrator/": {
-      "hash": "5566d05cc8a4a4223f9ca682f700b90ca73d249513e076c6a6ca5128f69a5e9f",
+      "hash": "4cd2fd575ef0827a4fcb5d4a068d4dfef020c81a0b59992217f808bd06fc5300",
       "route": "/id/utilitas/kategori/dapur/estimator-kelembapan-dehidrator/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/estimator-pematangan-daging/": {
-      "hash": "fe13dd6b2adaf042926470a4b020f4a7045c609337145a7f31c1e5cf2b4b7cd6",
+      "hash": "e5c78d3f2efd3fc134fd1601812d11d80d9d72e4843c227d7405b341ebb6300e",
       "route": "/id/utilitas/kategori/dapur/estimator-pematangan-daging/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/": {
-      "hash": "4f93031becca23524b46363917815da63c3bbef0ca39dee4a7ef8b0ae50840bf",
+      "hash": "493ab2ed5d338a1c164cb58c4ab8747416fb4102ba6368395aa554c159779d63",
       "route": "/id/utilitas/kategori/dapur/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/kalkulator-adonan-pizza-neapolitan/": {
-      "hash": "8582d66586b218bc64657f5148797280e15ab5ca3244dcc375a4ef9568e87b2d",
+      "hash": "ee333da5ecb84546007da3e48c3146fd36da14afe92e60a74e49cb16dd425c23",
       "route": "/id/utilitas/kategori/dapur/kalkulator-adonan-pizza-neapolitan/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/kalkulator-brix-sorbet/": {
-      "hash": "7450312b2914af2e68ab77ec27a89edbf21d086738235c9b012969b6b3b937c2",
+      "hash": "e4735be51434f2ac8fe3862b63fcbe9c15cb639230673919bac57a7ab229e617",
       "route": "/id/utilitas/kategori/dapur/kalkulator-brix-sorbet/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/kalkulator-garam-fermentasi-laktasi/": {
-      "hash": "cc9fbbeebf0fe7fd973ad95c7a8ab98ab02de9b76f7d64c9be45aa61204d278e",
+      "hash": "25e39bba6f4b2fe314717a4d3257aeb3e802e38c0311948f53e74cd4c6973b3f",
       "route": "/id/utilitas/kategori/dapur/kalkulator-garam-fermentasi-laktasi/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/kalkulator-inokulasi-koji/": {
-      "hash": "e18fbe15a2572a9f9ceaafa373cbc405a9b6b0e42ac7497ba67baf1094f2242d",
+      "hash": "ff8f620d38def2a43fd80436d4f5af6cba7baad8350c9e45cb8296626cba07b8",
       "route": "/id/utilitas/kategori/dapur/kalkulator-inokulasi-koji/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/kalkulator-mandi-sferifikasi/": {
-      "hash": "6a007631d329290448f7b55bdc876f9e4875489d857be1342a13884e975490eb",
+      "hash": "42dc74e899e3f9ff7fddaa7abe571d658bc4c58d935f4819cf62f44194f33101",
       "route": "/id/utilitas/kategori/dapur/kalkulator-mandi-sferifikasi/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/kalkulator-meringue-kaku/": {
-      "hash": "b127c21c3045656ca4628138330756887d24df5060fd298461ca1057d782eb33",
+      "hash": "a0f1ef945c4cca26c7c47f9153bcbed0298080ebae66449f15d0ccc58a52196a",
       "route": "/id/utilitas/kategori/dapur/kalkulator-meringue-kaku/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/kalkulator-multiplikator-flokulasi-keju/": {
-      "hash": "f59ae4b704a3ea280ff94c98c14826ee9885a093b3d14934eb8603087df8a19b",
+      "hash": "7706274de5a684a17e6631ff29708bb104ef71efb5ebfb3df635db7a4b77d654",
       "route": "/id/utilitas/kategori/dapur/kalkulator-multiplikator-flokulasi-keju/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/kalkulator-pektin-selai/": {
-      "hash": "a2a0ddecf9509802fb9923cfb025dde3263eedab5c9a3c18ffe784ec599cec1e",
+      "hash": "867037b44eb471a90944d1cfd9c290184e5f0f1b68d338faa13587dbe246b0dc",
       "route": "/id/utilitas/kategori/dapur/kalkulator-pektin-selai/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/kalkulator-ragi-sourdough/": {
-      "hash": "9f510516b488d569d49d7f4e7bcb943c4ea47c7df3849329def70453d6572511",
+      "hash": "fe2e570e933910cb9c1d4b648ab845b25468be94051c8aaaa7fd5198a984b7bc",
       "route": "/id/utilitas/kategori/dapur/kalkulator-ragi-sourdough/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/kalkulator-stabilitas-emulsi/": {
-      "hash": "f7cc9dd60a5f1f186d824c93025048f1d8ea2e65431b68216a37b0563f270d0e",
+      "hash": "b5949ed8a9b1c88094c9481c9bf71e8a4711b8d0abd81137bfedad10104f646f",
       "route": "/id/utilitas/kategori/dapur/kalkulator-stabilitas-emulsi/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/kalkulator-transglutaminase-perekat-daging/": {
-      "hash": "4b383a9b497bb1b5577e0da32722dd7ed075d10cec7aa788be24bd567111da73",
+      "hash": "e1d55168172f10bef3884bc5799ab2d5c383b6b31951bf5e728e38d4c6e5f237",
       "route": "/id/utilitas/kategori/dapur/kalkulator-transglutaminase-perekat-daging/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/kalkulator-waktu-fermentasi-ragi/": {
-      "hash": "4a5cd7acbe1cee234096a331effbd303319ef01af103f8987242ed893ff800d8",
+      "hash": "0eb328c4402a2ec42ba7e1dbdfc35a36ead84c80be28f4c29fd5a4e4b297169a",
       "route": "/id/utilitas/kategori/dapur/kalkulator-waktu-fermentasi-ragi/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/konverter-ragi-segar-kering-sourdough/": {
-      "hash": "1502f9b5b69531062ae21ce97336fe46e1af0ae3f17edac80e586c0f561024c7",
+      "hash": "9bf02e71e8993aa509502b66841f415927aa2eac419a436b797a0d4320e287c5",
       "route": "/id/utilitas/kategori/dapur/konverter-ragi-segar-kering-sourdough/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/konverter-unit-dapur-amerika/": {
-      "hash": "4b54816bcb8a0668f30f18e446fbbeeb0631d787c2633db25d1770f1dfe5404b",
+      "hash": "7d3b52fb3ca07c2930dc55bf59abc6e05fbe38093e9f02fa05d5470fc72bc213",
       "route": "/id/utilitas/kategori/dapur/konverter-unit-dapur-amerika/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/kurva-pasteurisasi-sous-vide/": {
-      "hash": "996d6e19c2964bc925cfd3f0153526deb246debeee644ba1244c4e529768532e",
+      "hash": "702df472940c7b1a26edddecb2c284c7459921120f0abe6c565577e3c49568f6",
       "route": "/id/utilitas/kategori/dapur/kurva-pasteurisasi-sous-vide/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/larutan-garam/": {
-      "hash": "b47be5b386bf8934539bbd16e348a746050d322251169d98368fe6b4cef683cf",
+      "hash": "6506c3316544f3be9a415bb3ef18728fd3887158789fae0890de55ecf5f8b653",
       "route": "/id/utilitas/kategori/dapur/larutan-garam/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/optimizer-reaksi-maillard/": {
-      "hash": "fc4904cb5898acc355abfea7fc7288c863d7778061aabad014522cd25aabbcea",
+      "hash": "6f2b46d22be8aa425ba743869301a3aa61840947443440a0be155b9434f36841",
       "route": "/id/utilitas/kategori/dapur/optimizer-reaksi-maillard/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/panduan-kurva-tempering-cokelat/": {
-      "hash": "7e0bb89fcebfffe5f6db969ee73e47e907cf0cd001109fd2ef7e969459812af5",
+      "hash": "7a63ea237ab4196ebace6a2f004789d00d9e8ce19c4ef7c2f56246ceff227b87",
       "route": "/id/utilitas/kategori/dapur/panduan-kurva-tempering-cokelat/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/panduan-roux/": {
-      "hash": "e5f3ec0ba0f4f06a18f3e586b6d311ee09a700e2ca06f5fb631baedfe4ffe3ca",
+      "hash": "bfe31bbd8f3cdd1ab534a1b5a77b7f8952957098083e5af49de0b3d57dbe3f48",
       "route": "/id/utilitas/kategori/dapur/panduan-roux/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/panduan-wajan/": {
-      "hash": "644a6e335217a4ded5c5f66a311f9c2cedd5d62d7400c47b8312697611b125b8",
+      "hash": "06097b6fdc2890bdb59bd29b211932f3d55ddfdeded7b76890a3c430a87e1577",
       "route": "/id/utilitas/kategori/dapur/panduan-wajan/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/pelacak-titik-asap-minyak/": {
-      "hash": "db2cecea611f9309587b8954d4b700aa30bcdcf85e738571ede6027135a0b885",
+      "hash": "1676c44729680440b1ef2af5e4d2c7bf0c7a725f76e522c03dd7bc08b0386b0f",
       "route": "/id/utilitas/kategori/dapur/pelacak-titik-asap-minyak/"
     },
+    "https://www.gamebob.dev/id/utilitas/kategori/dapur/pemeriksa-suhu-aman-makanan/": {
+      "hash": "67b43355d3647c2ec2d6979440b1100cb6db102ffdc552cb3d534400d70a9c33",
+      "route": "/id/utilitas/kategori/dapur/pemeriksa-suhu-aman-makanan/"
+    },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/penetral-asam-pengembang/": {
-      "hash": "cc4cc15cbb3e09de697e6f254d66e4782f194df7bbbbfd8ca016ef09840e93f4",
+      "hash": "fd5572fb069f6829b7be64652f6046d88834b9774f881a2c474186770957b39a",
       "route": "/id/utilitas/kategori/dapur/penetral-asam-pengembang/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/pengatur-skala-bahan/": {
-      "hash": "8c6c4fe188eab5ee92178a174f656884c7f49df576ab2e18c239a07c8105174b",
+      "hash": "d1c98485514ce44a206eadf4111511a0d16596f530eb3957d29bcdb0392dff96",
       "route": "/id/utilitas/kategori/dapur/pengatur-skala-bahan/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/pengatur-waktu-dapur/": {
-      "hash": "58f1ea57d01df1acc3b1f2527730721b54678759596e9a5a5f963a4da2132fa0",
+      "hash": "cec741b9d07b6d432e85cf5c336024c1b7782db6f77d535047459306d1345ae3",
       "route": "/id/utilitas/kategori/dapur/pengatur-waktu-dapur/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/pengubah-ukuran-loyang-kue/": {
-      "hash": "bd9e877f7aa1f9dca8acf8221c4d10eb0b2e3d099d23774d7596ce513d65f305",
+      "hash": "09216eac3658295ccbdc0cfc46bdbcb2bfcaeb2444fe59982757e96dd3d9ffc0",
       "route": "/id/utilitas/kategori/dapur/pengubah-ukuran-loyang-kue/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/prediktor-memasak-lanjutan/": {
-      "hash": "225536304f3711fcbe281b00399a36b152e00fd3ec665ffef399e1e9e496176a",
+      "hash": "49b6b8afa8dcad209263054b19fbae943d6cfc762ae30f4de74397a4c90ee91f",
       "route": "/id/utilitas/kategori/dapur/prediktor-memasak-lanjutan/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/prediktor-pengeringan-makaron/": {
-      "hash": "cabac17e6707f3c09439d8b95b18579538089464544f5e71fa5d192b4de2cd16",
+      "hash": "b95f60beec9cf656c378050a18edd892ca503679d0684096d4ee16128508e3cb",
       "route": "/id/utilitas/kategori/dapur/prediktor-pengeringan-makaron/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/dapur/telur/": {
-      "hash": "54bb3f1c28785cbd4560a89f5cf2c54895be9e9efe3c0188e9422f6f55fd9a46",
+      "hash": "4048e0b1161d4dcefbc1dbfba7e37d0016c76679348eefe325923e0a6df76fd9",
       "route": "/id/utilitas/kategori/dapur/telur/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/calcolatore-bagno-sferificazione/": {
-      "hash": "4b8feef1e7717ca427f00ccf0a92d1f866ef518d71a6c6b2d066af6374f27f52",
+      "hash": "efc0c7bb2928c6eb3f514da1f2fc1e297d90f248c0372697c2555a9fa0847de6",
       "route": "/it/utilita/categorie/cucina/calcolatore-bagno-sferificazione/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/calcolatore-densita-brix-sorbetto/": {
-      "hash": "9617923310fdb3286e79b79e4bacdefc0f2324c2b8b78e3cd75592216ca8bbfa",
+      "hash": "2c17738d3edccf92244c9b111a97878990edec90b9087ba7b87b34c7cd6aeb69",
       "route": "/it/utilita/categorie/cucina/calcolatore-densita-brix-sorbetto/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/calcolatore-frollatura-carne/": {
-      "hash": "8457924b386ea7933cbeb78de7ad246baa5c9afa63ac4c6d55ccfd7bd69f9b69",
+      "hash": "56eb56db27a491193be05b24ca5a1f6e5ec7b87e48f79cfab57875b01db5cbbf",
       "route": "/it/utilita/categorie/cucina/calcolatore-frollatura-carne/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/calcolatore-impasto-pizza-napoletana/": {
-      "hash": "1ebf53c415b80eff9432d4cd187ede53d247953445d2e7c49f6fb619d98897c7",
+      "hash": "c3bfc3c677f9314cfc9e78055aadcfadbbfa1c34da0f43408e0999a55d9f0812",
       "route": "/it/utilita/categorie/cucina/calcolatore-impasto-pizza-napoletana/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/calcolatore-inoculazione-koji/": {
-      "hash": "ab36728844b686b26dd15b00a471fdea6a16d8ab5272301917e2fc9642f98b3a",
+      "hash": "fea97ac202314798de050a1b964e1081376c644ab6fb63dbc1c1a9a03c3e3a85",
       "route": "/it/utilita/categorie/cucina/calcolatore-inoculazione-koji/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/calcolatore-meringa-neve/": {
-      "hash": "887ff156a2cbdc10d6001abafad5969e3d65b057347ded6a886b378a831aae79",
+      "hash": "1581c769f32c77b86fccafc5ccf0987e0e53b547d68aec25eb97366f1dd6666a",
       "route": "/it/utilita/categorie/cucina/calcolatore-meringa-neve/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/calcolatore-moltiplicatore-flocculazione-formaggio/": {
-      "hash": "6224505c1445f2a1667e55c04b2c0ecff82ac96ca14125631b373cfb999c2cf5",
+      "hash": "b6e0cd37a50a4974b41620b85735c2dc502698e9c916eee20fbf7a39167c5ff9",
       "route": "/it/utilita/categorie/cucina/calcolatore-moltiplicatore-flocculazione-formaggio/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/calcolatore-pectina-marmellata/": {
-      "hash": "9ca01ea3fa14c9ff6baf76fe0fb65da753384b57767345ecf10f50fd7114edde",
+      "hash": "892907270b4902c15aa82c3588e825f99d8ade8fef744b02d6974e722ccfaa3f",
       "route": "/it/utilita/categorie/cucina/calcolatore-pectina-marmellata/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/calcolatore-rinfresco-pasta-madre/": {
-      "hash": "2e8b7866ed096ff22e86b5ee56dac1db50e1207f4870a1117d972906b2ea972a",
+      "hash": "ca8ea7873d2fccb568f3d01c0a5c0f7e29154e04e9b3f6145ccfff4bd372d7db",
       "route": "/it/utilita/categorie/cucina/calcolatore-rinfresco-pasta-madre/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/calcolatore-sale-fermentazione-latto/": {
-      "hash": "d91829cedcb32ded34665d0f8f95205c724b8e6fd516fcc4e3bd633667d6f1c9",
+      "hash": "d9491b5253472b410d722329468baf884682cd6485ba809261d1b52937ab163f",
       "route": "/it/utilita/categorie/cucina/calcolatore-sale-fermentazione-latto/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/calcolatore-stabilita-emulsione/": {
-      "hash": "4f6adf5913a9f4f7cfd029906e894c7b3a13a8fd49e42a23beaee76be2f68ce5",
+      "hash": "23c98ac7416620bce26a44182b554ae1b46dde4d64a1b028e8e0bc2a98c8e2e2",
       "route": "/it/utilita/categorie/cucina/calcolatore-stabilita-emulsione/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/calcolatore-tempo-fermentazione-lievito/": {
-      "hash": "d176ac155b7c764bf5b6893950e6345c4d2cca90d8761e0133dfb8dfdedf1e60",
+      "hash": "9eb51d203074ecc05423e470d651632f2e8037c073d4ec5fee2d585b3a3e5d76",
       "route": "/it/utilita/categorie/cucina/calcolatore-tempo-fermentazione-lievito/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/calcolatore-umidita-essiccatore/": {
-      "hash": "dd5b42a372234da776bba4a4a5eac099ac6d2ccb3d1f47b47fc5a6242b1f4ba0",
+      "hash": "34a2d57e875078e3bd4a012021cdb79195ee4b8229cfe988c2bbd92b75077704",
       "route": "/it/utilita/categorie/cucina/calcolatore-umidita-essiccatore/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/calcolatrice-transglutaminase-legante-carne/": {
-      "hash": "da153e684703a746cd10b3c1a98067eb0313057e6aa771692158a8253935f91f",
+      "hash": "61f55f41f1e8d2489b122158e70baaf50d51c22c1772b8689685a85f87999b6f",
       "route": "/it/utilita/categorie/cucina/calcolatrice-transglutaminase-legante-carne/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/calcolo-dosi-ricette/": {
-      "hash": "e0e182124600daf78675e93be35aa3d4833afc248675139d71cb964809d7f295",
+      "hash": "56c82851216a2da62656063d6a621e8840806a2e786f6752364c5722f3b999e9",
       "route": "/it/utilita/categorie/cucina/calcolo-dosi-ricette/"
     },
+    "https://www.gamebob.dev/it/utilita/categorie/cucina/controllo-temperatura-alimenti/": {
+      "hash": "6c3383d59a96ba0b239701219b9b0deb06d375e20ddfa81bd04cf72b8abe0326",
+      "route": "/it/utilita/categorie/cucina/controllo-temperatura-alimenti/"
+    },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/convertitore-lievito-fresco-secco-pasta-madre/": {
-      "hash": "4f37b6b2b64c2595ea6ba7416939b1462fe86d55980c34c759736efb00658e8c",
+      "hash": "7f70bc4ab1d7e6e24fd6bafde2f2185abb2f4d2a8b6bad4d30799bc252595601",
       "route": "/it/utilita/categorie/cucina/convertitore-lievito-fresco-secco-pasta-madre/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/convertitore-stampi-pasticceria/": {
-      "hash": "6fe5d5af092980693ce83c266e9b4f1a1b11598addcacf4534314f444d9a85f3",
+      "hash": "7dd0589c2e8ebe6d25d9bac8d0f76e7865c6ddf7c1d62be1c532c27413061095",
       "route": "/it/utilita/categorie/cucina/convertitore-stampi-pasticceria/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/convertitore-unita-cucina-americana/": {
-      "hash": "8cef43bf99bae4079108c2c162ce3016859782aa8a6bfca0bcad0a74ad9e5503",
+      "hash": "43d9bac2de7220835ede6e68f0098fe645774e49129330877d69b42290b75802",
       "route": "/it/utilita/categorie/cucina/convertitore-unita-cucina-americana/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/curve-pastorizzazione-sous-vide/": {
-      "hash": "c7d3e0659ad17ffe9f44a8d4f3d2c8127dbbbb3473bb8edb32d22697ada0a1f0",
+      "hash": "1cddd6e760ab19a017eab42a6664fe88d43d96a57bd310f51b5303c6035f1226",
       "route": "/it/utilita/categorie/cucina/curve-pastorizzazione-sous-vide/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/diagnosi-banane/": {
-      "hash": "5dfacc1a018605d5b1ac1ad65ff3c78f60caaca23cce7c1264dae1d3f8204fe4",
+      "hash": "f669988aa4f059ff9a72f210da1902022a0f5f85f7895ff3b6ffb9213b2a53aa",
       "route": "/it/utilita/categorie/cucina/diagnosi-banane/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/gelato-pac-pod/": {
-      "hash": "c802f906e094eda3084a2c159bd1d1c980d228740d4144fb0ee1838f997801b4",
+      "hash": "6b75cb733ced76095116e316ec8091374d3c5f0172ac71d508a71eccc1cb6c29",
       "route": "/it/utilita/categorie/cucina/gelato-pac-pod/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/guida-curva-temperaggio-cioccolato/": {
-      "hash": "87a68d86ebbe67e8fb69c00ebee4609f5b5a297e17185826051fc0605fedaa81",
+      "hash": "8558df5b2150325b3eaad7ed70bb1a6785145bd0e24e4e6fceee055736325671",
       "route": "/it/utilita/categorie/cucina/guida-curva-temperaggio-cioccolato/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/guida-padelle/": {
-      "hash": "b4084fdaaf7aa1e1c645a53d9deac9b93b64078096944efbe6f017f4ac7d8f85",
+      "hash": "00b0482478f1442db9b2bf5e832cf463be2b322f299ea2b00692d5d703c67afc",
       "route": "/it/utilita/categorie/cucina/guida-padelle/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/guida-roux/": {
-      "hash": "ec18a033c838ac66a18a969f5414f733735acc26898679e3e6fdcfd6b1ff9778",
+      "hash": "21c976c0531176ef3b85f8416571d86c7c8dcac322d3f939ab05ecd1c08912ed",
       "route": "/it/utilita/categorie/cucina/guida-roux/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/": {
-      "hash": "d4e9370b52086e179516aa429220647b0d1d9259707ac16a197e7b1a38837feb",
+      "hash": "1d6e3457c6c26610573be296d4862e916513b016d15a49df6edf67eff66454c6",
       "route": "/it/utilita/categorie/cucina/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/monitor-punto-fumo-olio/": {
-      "hash": "d577b1bab129ce23095275edae0de6bacf8f9f64487e0ff4fe86e8bd3165caea",
+      "hash": "5e1da761c067c9a8be34e526152841028c67f0e860d268e63bec78b323eedb97",
       "route": "/it/utilita/categorie/cucina/monitor-punto-fumo-olio/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/neutralizzatore-acido-lievito/": {
-      "hash": "40cc82ff88e9b5be627840a769b80a0a6dc6143742b8a0b2b5d8023b96c67f73",
+      "hash": "ee43bcc77988615be88f0a4fcba1864709b3072f0f624f9f5fd4afebbc0c450d",
       "route": "/it/utilita/categorie/cucina/neutralizzatore-acido-lievito/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/ottimizzatore-reazione-maillard/": {
-      "hash": "71dd14245e701b0ea917d92bdaaf8e917e2a9422263a6155515645eac1eee609",
+      "hash": "fe39ff30b5a64ba521c3268551621ae548b8e3a9661bab41ccd10965a70f9289",
       "route": "/it/utilita/categorie/cucina/ottimizzatore-reazione-maillard/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/predittore-cottura-residua/": {
-      "hash": "6ebeb6d9ccb90559a31ee3c2564012eb566fde4c55102cdff294bb440c76a909",
+      "hash": "a857fc306325bc927ac5f6474f3f0e39618dca8ab23a4a9b55cb5862314c2dd1",
       "route": "/it/utilita/categorie/cucina/predittore-cottura-residua/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/predittore-essiccazione-macaron/": {
-      "hash": "6a8ff45759038c667869bce23526733c4a75ea100c88076a04716be53d656cbb",
+      "hash": "165e15f44000076b67fc91b1ad54b8298eaf9f7e4c54db486c34d38dba0e2da5",
       "route": "/it/utilita/categorie/cucina/predittore-essiccazione-macaron/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/salamoia/": {
-      "hash": "23593ee7c4d517a89603c049d5e1fa1beb56b80ae2f497de4e3feaa506328cbd",
+      "hash": "68963b6d6198d60d797235edf28dd08b8be362d866106f149037f8ddae3c9add",
       "route": "/it/utilita/categorie/cucina/salamoia/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/sicurezza-conserve-botulismo/": {
-      "hash": "dd5a0d6be8827b9929010d79637b9982912135c69aebb1eed8a15f32de0476c2",
+      "hash": "0fb3d7c5eb7ff7ee5706d3956e87149e61cb1fe366223adcd2a6be45d0ef8da4",
       "route": "/it/utilita/categorie/cucina/sicurezza-conserve-botulismo/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/timer-cucina/": {
-      "hash": "ce81d2d9ec51a133d79a72377e0686b4206b111186ba2722cd0dd20dffe714a0",
+      "hash": "ae6c894e82f6c4d8d659a4c21163721c1999404bb7f382ce72ef6471902c7709",
       "route": "/it/utilita/categorie/cucina/timer-cucina/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/cucina/uova/": {
-      "hash": "44de7a3662f19ea422960d392581f8e999fe2e4a04de798fc3b92b778b82e48c",
+      "hash": "45e1ec5ba28070a6d00fca4ff1fc5e62f66419b6944de1760ab726687d148292",
       "route": "/it/utilita/categorie/cucina/uova/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/banana-ripeness/": {
-      "hash": "1fb80d1a8909949a1a626fdadc80a77059fc3160a960d1b55cc33a4ae36f1814",
+      "hash": "047111656d55e36c0f78c8a9635226a057be8ab6e7c32c3b873b08b69ff8f1bf",
       "route": "/ja/utilities/categories/cooking/banana-ripeness/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/botulism-canning-safety/": {
-      "hash": "1763f072459788a0282ba8f1b095743106440c7575d9b5d9ba777937dbacd705",
+      "hash": "3b075243abc4f5aefed54d4fb3620fe5fa3e49e7eafdda4330e59b1fc1e9e33b",
       "route": "/ja/utilities/categories/cooking/botulism-canning-safety/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/brix-sorbet-density-calculator/": {
-      "hash": "841613fe61cad776d6e4ac69c761af8bce205db2a8afb61ce37a26e2ebb7c8ad",
+      "hash": "1f1051a172d0edfca91be3a2b183408ed7d22da7c3373172c83a3f07e9e188f6",
       "route": "/ja/utilities/categories/cooking/brix-sorbet-density-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/cake-pan-size-converter-calculator/": {
-      "hash": "db86ce0b0db554fbcd2dabe65f711ae139ad32cab91d6e7ed0febbfa4ab28f69",
+      "hash": "1e0c6e054274f288e4641e725e75fd3c2a5419d7b9d0b8c9a37d3992afe756be",
       "route": "/ja/utilities/categories/cooking/cake-pan-size-converter-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/carry-over-cooking-predictor/": {
-      "hash": "9fce0585cf8eef6547352db7c4218867ce63a405591118d00e4889855655d016",
+      "hash": "597fa76bcb326cb2c50d9fdd87aa85200f9c86362d8b5af73f44cb1be5d79d9e",
       "route": "/ja/utilities/categories/cooking/carry-over-cooking-predictor/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/cheese-flocculation-multiplier/": {
-      "hash": "a38fd6d057f40c4971b6c1a5e58175875ed744ed707324b6f1a8152f9a02cea4",
+      "hash": "53719ca1b6d1a00e7b217032f099c48a6de37269bca137eaaab03f1fb4abee77",
       "route": "/ja/utilities/categories/cooking/cheese-flocculation-multiplier/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/chocolate-tempering-curve-guide/": {
-      "hash": "316e9eef38036f35374af225797742cf8ec0618529a694251252d7b3118734bf",
+      "hash": "0fa01f07f4f48528c3125e518e5054898b1bd53ab8d1208cec5d1e0646af4a0f",
       "route": "/ja/utilities/categories/cooking/chocolate-tempering-curve-guide/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/cookware-selector/": {
-      "hash": "34062852eabb472301ef223b86a71bfec55102e427f037672701d0d8e03c26a6",
+      "hash": "24f323d85aaa2d0ed66f8cefa2ea079877832fa47ebcb560fbdac6f58b91984f",
       "route": "/ja/utilities/categories/cooking/cookware-selector/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/dehydrator-moisture-estimator/": {
-      "hash": "6c6ba4cbe8f6075bcd9bf0417b3fde479bd4d697a3a051b4819d3bebecd04f84",
+      "hash": "b369678e7bad53199fb4c4393862b9472e17816618c7d7d46c19233ad4d2fdaa",
       "route": "/ja/utilities/categories/cooking/dehydrator-moisture-estimator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/dry-aging-meat-estimator/": {
-      "hash": "4d53df99fe67b7f1e404c9ddb98eae00cf9bdee52f1db439a54df409fa4a50bd",
+      "hash": "6e1d764e8cc3b055533535a214dfe88afb45623bab5bdb25d51377b556e56beb",
       "route": "/ja/utilities/categories/cooking/dry-aging-meat-estimator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/emulsion-stability-calculator/": {
-      "hash": "c9c1862398ba3ef6e8e8b24d1a8ad2e179d3f44d037e05253da898478927a8fb",
+      "hash": "c1a8c9e712db01501b32639621516eafc89b3e4cb89aa4aee5796b75dc2e41dd",
       "route": "/ja/utilities/categories/cooking/emulsion-stability-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/equilibrium-brining-calculator-meat-fermentation-ratios/": {
-      "hash": "de4948b381ced977aa76274a708a21dfdb9e99ae4d8904cdcfa5f90d747da6b6",
+      "hash": "6cfd2229f871dc3e1357caee82f25bd335f842feca4a7017e68ee7e98093afd1",
       "route": "/ja/utilities/categories/cooking/equilibrium-brining-calculator-meat-fermentation-ratios/"
     },
+    "https://www.gamebob.dev/ja/utilities/categories/cooking/food-safe-temperature-checker/": {
+      "hash": "d1999a3d4908b8b3a9bd55032baf70b165a4a8b6d6e39723961b0ed42336c20e",
+      "route": "/ja/utilities/categories/cooking/food-safe-temperature-checker/"
+    },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/ice-cream-pac-pod/": {
-      "hash": "ae60b213d5df7ea259657fadde17da2bee633d641384ba157f8e545fd42b1b4b",
+      "hash": "f76ab2decf4a2acfd95473da32590169a05d0ad439106dd83432174f3fa26c57",
       "route": "/ja/utilities/categories/cooking/ice-cream-pac-pod/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/": {
-      "hash": "98fcddd671cf6570c4da6e4bc2558c805b2cdc46de081f72f98b710834d70029",
+      "hash": "1d00e504b5675d2e4d90147a8de3ea5ad2bbf84f3cbf8a621aa6597087ee3d6e",
       "route": "/ja/utilities/categories/cooking/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/kitchen-timer/": {
-      "hash": "d254afc0a66527b707f122fdaaf6b1dc6feb273e209f20c619b2d922030aec08",
+      "hash": "b6d9405ffaab5edab30dbf37987f4311386455118fe51f569e8c714ceade7622",
       "route": "/ja/utilities/categories/cooking/kitchen-timer/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/koji-inoculation-calculator/": {
-      "hash": "354a1023193c99deed40f4c9ad0a1ac4232535d56084dc6607097cc4914cc928",
+      "hash": "22ab0213a40099c6ebec718cdfefd754c857a7b1086c1a298ec5a204e08094ca",
       "route": "/ja/utilities/categories/cooking/koji-inoculation-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/lacto-fermentation-salt-calculator/": {
-      "hash": "c74dee3233464ae8bce7bcbfe295f00a67689e4385467dde88e489a897e8fe94",
+      "hash": "af495bf77338cc7a6271bc5aacd4035011c22428c73b4eb7da4afe77bc1a5639",
       "route": "/ja/utilities/categories/cooking/lacto-fermentation-salt-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/leavener-acid-neutralizer/": {
-      "hash": "dbd2c9e40cc6b6d50b4b032ee681cf14b22a08c716a602ed03997e5cf4145083",
+      "hash": "33afe8b7d3101b0d9678fc660c64886ade5c6410bf922ad66a385382d5e9d728",
       "route": "/ja/utilities/categories/cooking/leavener-acid-neutralizer/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/macaron-drying-predictor/": {
-      "hash": "4c7df060c687ba69c237da8947b34ac91384bcebdc02ae6582b6998b91cf2694",
+      "hash": "792cc5796059733c3471d1ed6bdb57c55a9b990b2932836f5b24825dd0c942e3",
       "route": "/ja/utilities/categories/cooking/macaron-drying-predictor/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/maillard-reaction-optimizer/": {
-      "hash": "bdd633b7389d809a5e40cca4c98f21c8800f863da2fba1632122be0ae7ec60d0",
+      "hash": "7abf11fb8840f937efccdafe6a39527377101547417bd64e7bcf9f927da80beb",
       "route": "/ja/utilities/categories/cooking/maillard-reaction-optimizer/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/meat-binder-transglutaminase-calculator/": {
-      "hash": "0e36914d4a420b7ebeaf1c2e60fa1d444f8757353e49341bc7d717be98a42551",
+      "hash": "c6f31742ffec5f4390b2ab58463cf383cd452d3d28266b66bcdfcaccff4f7df9",
       "route": "/ja/utilities/categories/cooking/meat-binder-transglutaminase-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/meringue-sugar-ratio-calculator-stiff-peaks/": {
-      "hash": "2e70f96a5b7c023b357fe27f295ec729510df671ab8b8bbd8d47fa31dfb107d7",
+      "hash": "4d8bfb00cef8695af398eb16ac1688b86a135e6cfac7a3c1f25d1b7311f4b6af",
       "route": "/ja/utilities/categories/cooking/meringue-sugar-ratio-calculator-stiff-peaks/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/neapolitan-pizza-dough-calculator-authentic-recipe/": {
-      "hash": "a0d6a0fc8138694add19d5c5c62a6506167c730fbca9bbcdfe88eb99e9c4eaa6",
+      "hash": "c79d3ab8a63f33829bc908ab805a8646296904a3e5921ab467e11dbb19c7bc2c",
       "route": "/ja/utilities/categories/cooking/neapolitan-pizza-dough-calculator-authentic-recipe/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/oil-smoke-point-tracker/": {
-      "hash": "3994d6206727d28d014424c44d61c0b4c414f4a3a3732f5fab9ca4eb88f58b62",
+      "hash": "14f44750379bafff0d2e866a919074eb699315fe1d7ab617fb54469596fa8412",
       "route": "/ja/utilities/categories/cooking/oil-smoke-point-tracker/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/pectin-jam-setting-calculator/": {
-      "hash": "bbfb2efa7e4550c06f86fa065ff9759eeb2a2c6b24b6b669ab2a51d72ca75155",
+      "hash": "cc00aa376cdd4c72198cdb1e7b57735a5c55ba4a301ff905cce62cdd9e770107",
       "route": "/ja/utilities/categories/cooking/pectin-jam-setting-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/perfect-boiled-egg-timer-altitude-calculator/": {
-      "hash": "a2fc569055c39b923d00007462abc5388e85278bc95710a1e71f4d708b0ea9eb",
+      "hash": "ca1e74463e60edae1bcb117d7d72793110e077e4089826a6a2a8a338a8135e71",
       "route": "/ja/utilities/categories/cooking/perfect-boiled-egg-timer-altitude-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/recipe-ingredient-scaler-converter-servings/": {
-      "hash": "9741473b43cc365493d53805e0d7a6ea7c6b1284b865b764e150c77e3b1ef3e6",
+      "hash": "bbb065a59756a5488c24e07d9ff5301bf26d77c5915165387fd9dcc4969df961",
       "route": "/ja/utilities/categories/cooking/recipe-ingredient-scaler-converter-servings/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/roux-ratio-calculator-thickening-sauce-guide/": {
-      "hash": "50d166486c65164bc183dd2c84cdc4328adab24e9ed6466105368e3ba29e06bc",
+      "hash": "8c9364293283cbf81d1d61a9435d02c5091c95f8ed2b89b7e51d344f7f629349",
       "route": "/ja/utilities/categories/cooking/roux-ratio-calculator-thickening-sauce-guide/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/sourdough-starter-feeding-calculator-ratio-proportions/": {
-      "hash": "2f737cf33dc8f67bcc1c2fe911f988c8605307a2142b80de704ca6ca9b15dd8e",
+      "hash": "17859bf6af357c002acb974b6e67de6dbd3b3c1ed925a0e879823ac21b33de08",
       "route": "/ja/utilities/categories/cooking/sourdough-starter-feeding-calculator-ratio-proportions/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/sous-vide-pasteurization-curves/": {
-      "hash": "475632071780d787acfd6721d08c4350de37d80aa81d0aa076743a6bb34777d8",
+      "hash": "83ffe0fdd1cf16a82975995ba1ffeae76ee44419f50cd2cc6dbc3cba99dba53b",
       "route": "/ja/utilities/categories/cooking/sous-vide-pasteurization-curves/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/spherification-bath-calculator/": {
-      "hash": "124a7a4669a9a943fd3b2b0e70bf902052f53beb0c6bd55752e7f02bfec1a20c",
+      "hash": "e808a89e33a05cdf7ad478309c5580c5f86a18f070502ddf31d6391f0ca0fd9a",
       "route": "/ja/utilities/categories/cooking/spherification-bath-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/us-cooking-conversion-calculator-cups-to-grams-fahrenheit/": {
-      "hash": "1522905c640dfd1b722fbb0bfe729de1aa39325421b789dbd5950208a8756c6d",
+      "hash": "bccd55071431d65f5481a49101f259aa0d44b3add30522ff8009c4d17de21a51",
       "route": "/ja/utilities/categories/cooking/us-cooking-conversion-calculator-cups-to-grams-fahrenheit/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/yeast-converter-fresh-dry-sourdough-starter/": {
-      "hash": "adefc4b29fbb5190bc8ae0a899eca2070ccd4557d5801c43c85317ce45277293",
+      "hash": "9d1878b3c72461ab6f08b163c18d0b66c4a6eb21e071d59b54ffe0f077350f90",
       "route": "/ja/utilities/categories/cooking/yeast-converter-fresh-dry-sourdough-starter/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/cooking/yeast-fermentation-calculator/": {
-      "hash": "bca2b072088a6964e05d5a61d3a9afae2398df87ddf961c4d1a54e7d4aa7190e",
+      "hash": "2da0f2d0d96d984382975d0c892e4f48439e0c6b9d2bfecd63ee7928f4a76a51",
       "route": "/ja/utilities/categories/cooking/yeast-fermentation-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/banana-ripeness/": {
-      "hash": "d2169b52e2ef991923a0ed5971185a4e95df62e6765d9361cd9e955fe84eb6dc",
+      "hash": "cf206d791d13f390e3d6c3182c8fcfcce6f6c3632ca99b228add95dfeb6b5021",
       "route": "/ko/utilities/categories/cooking/banana-ripeness/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/botulism-canning-safety/": {
-      "hash": "4adfefc43fcc8913dbfdb607f8cff2fc6cf42561d2bb33d3b4aad69394b330f2",
+      "hash": "ed516e903c67f788f1b5eebdcb75fd4330d39172369555da714a3ee435dd8828",
       "route": "/ko/utilities/categories/cooking/botulism-canning-safety/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/brix-sorbet-density-calculator/": {
-      "hash": "ad9f3b651e6117d2226d9393967a7fc6c453a809abf48b741b4c1e7f2b4778fa",
+      "hash": "47ef852d91668127096020402e3dd200540aa59b7973c42647bbbe2f020d88a8",
       "route": "/ko/utilities/categories/cooking/brix-sorbet-density-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/cake-pan-size-converter-calculator/": {
-      "hash": "0e7395d62fd723cb29299ff71f54b04c6045756f6498287a28f6458fdc8896d8",
+      "hash": "0a18dbe0cfccba34530ef08a674e5c08c8a2dee2b520b94a87eee41c90cc6bdf",
       "route": "/ko/utilities/categories/cooking/cake-pan-size-converter-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/carry-over-cooking-predictor/": {
-      "hash": "4927168893dcf5bc282f8de67a9a0308c69876c2d6caa62cf521395d7011ceae",
+      "hash": "46e7fe409c7e52dd325ac757558ad91dc0f1cf7626e27255706406ce0deccb07",
       "route": "/ko/utilities/categories/cooking/carry-over-cooking-predictor/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/cheese-flocculation-multiplier/": {
-      "hash": "b136bd52e21e132ae3f47409f6169cbd41df58b7d1954b19fa7b286f05df13cd",
+      "hash": "19e81ec88e0560db73d6f04d246c350a74369074b57cd02aa8a1b6e3daaf565c",
       "route": "/ko/utilities/categories/cooking/cheese-flocculation-multiplier/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/chocolate-tempering-curve-guide/": {
-      "hash": "03fa35bd72e62f3f150e4e1d8334ac819e4bc3e4d0f9326b13da7fb3439f4b19",
+      "hash": "9b0e72823c03ac2e3df42ab9a77e91acb0f4663677a0d6b61a2fe4be7dec83e6",
       "route": "/ko/utilities/categories/cooking/chocolate-tempering-curve-guide/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/cookware-selector/": {
-      "hash": "b1a450c7fcb9a10630d32abf6d4910908730da0f84e296aae41665018d769d3d",
+      "hash": "731763ab8bac69c6f8e10d67c65e6804564e8970c689594d065e404a21bce41d",
       "route": "/ko/utilities/categories/cooking/cookware-selector/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/dehydrator-moisture-estimator/": {
-      "hash": "b02a3641751f54ab56a9d66906e297d55a7fa0177d58db744ddf0cd31fb29258",
+      "hash": "d26310b259804d5caad929515a78a3132b477c28408abcb47d27587e0658711b",
       "route": "/ko/utilities/categories/cooking/dehydrator-moisture-estimator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/dry-aging-meat-estimator/": {
-      "hash": "b49287f2e734b45f768081561c7899548c7c63d0a75ea398d3d6ef1a5fa6ef75",
+      "hash": "94bf43069980d2c9eeff212f4e2094d7bfa53f24a6313b272cf008e0f81c5381",
       "route": "/ko/utilities/categories/cooking/dry-aging-meat-estimator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/emulsion-stability-calculator/": {
-      "hash": "f0a32daa47213323c0f252e2c0b8f42d0deab43e7c775bc87de23c9fe207e895",
+      "hash": "6518ca895047585c623ea43e435281c5523f67676a67e8b75a1a79692c5c238f",
       "route": "/ko/utilities/categories/cooking/emulsion-stability-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/equilibrium-brining-calculator-meat-fermentation-ratios/": {
-      "hash": "ff06b905fc68936c6d136d114fef4c48cbe2e1ca32a1c6c2bbf7169f94ed478b",
+      "hash": "2bb2887a3aeab3a9228169454827e76009c9d4118e243dfc1d5b27140d64fa66",
       "route": "/ko/utilities/categories/cooking/equilibrium-brining-calculator-meat-fermentation-ratios/"
     },
+    "https://www.gamebob.dev/ko/utilities/categories/cooking/food-safe-temperature-checker/": {
+      "hash": "3e1ec41ea12ed17b157942ed10db959022bdd9d3d6f31d0356e26de2892f45d8",
+      "route": "/ko/utilities/categories/cooking/food-safe-temperature-checker/"
+    },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/ice-cream-pac-pod/": {
-      "hash": "87cd437c750caeedcf5cc0456457f1dd5ed54c894e16f3468e7a75d78478c116",
+      "hash": "1ba3e05729aea63ae4708fee4e9c4fe54c3838c45a4511a12d58ec07447b7b27",
       "route": "/ko/utilities/categories/cooking/ice-cream-pac-pod/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/": {
-      "hash": "1a4e15b330ca56c12be6b59fa3aca87fc703c86c1e84f487885101e5f92019a8",
+      "hash": "e86c71f48e5197309cc0f86d75956dae821cc1fe74eab023e78c913aab3f8aea",
       "route": "/ko/utilities/categories/cooking/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/kitchen-timer/": {
-      "hash": "efe8238667fa10dfe26e125768ef3523a2f44b3fb4313ea212503e9b5b7bd429",
+      "hash": "f18f7cff3aa5de0fb5384e76f918ef9f4475e476b0b45a5f1e9b78640c5f6e36",
       "route": "/ko/utilities/categories/cooking/kitchen-timer/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/koji-inoculation-calculator/": {
-      "hash": "11ef6cf59dea3e25cd454936a324d10efc4527607f970363e20483fadee4c41a",
+      "hash": "6b5a6c9b2a5e333661163234e7121d94715bb9328a06f36b1a2c0766e78bb93b",
       "route": "/ko/utilities/categories/cooking/koji-inoculation-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/lacto-fermentation-salt-calculator/": {
-      "hash": "c47698497461e9e0a4cf333e86b75e984836577c41f09c3ef83afd1128ea6553",
+      "hash": "3261e98f0289354f3cedd5e23d909c2ef8ecf19b58b81dfd584ef79633a7581e",
       "route": "/ko/utilities/categories/cooking/lacto-fermentation-salt-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/leavener-acid-neutralizer/": {
-      "hash": "2bdd412f60dc2fc823ef621b3065153f7feb8219b680d72c55cdf555a9e9cbcd",
+      "hash": "3476d6da56702dd15526d2cf063d6fc3a13cb071ff2a32f78115cfb02f662861",
       "route": "/ko/utilities/categories/cooking/leavener-acid-neutralizer/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/macaron-drying-predictor/": {
-      "hash": "9efaae42e81caf9d8ae5515b407de833044121d2ca230cfd4ca41dfd704121c2",
+      "hash": "f8c862d482d346c65b09769d702df6e84184fc010c312a4a64652392ed1506db",
       "route": "/ko/utilities/categories/cooking/macaron-drying-predictor/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/maillard-reaction-optimizer/": {
-      "hash": "c6a5b6525943285d53f42d7b5c67c736d683a1680fd3527b414a561125a27940",
+      "hash": "4404f5d14f8bc6b271908e77be5e00cd672d0313fb8b131120a83e052a7ce2c4",
       "route": "/ko/utilities/categories/cooking/maillard-reaction-optimizer/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/meat-binder-transglutaminase-calculator/": {
-      "hash": "78e46e2591eb2c9d1bd857a64ec2b6c0800ac0225516682fcaa35286b3faeb06",
+      "hash": "a524d221ccd2e893b757b98eea7bc7825beff151df20fdeed6559fd36c206e0f",
       "route": "/ko/utilities/categories/cooking/meat-binder-transglutaminase-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/meringue-sugar-ratio-calculator-stiff-peaks/": {
-      "hash": "4e67d9e5c78de8ca0df7cd6375f94964244f0f0f485b77a06fd00110f54f3664",
+      "hash": "40ba49bde66193e971b387a89f0ecf225788e0437c88ce26f273d8e5d937b1e2",
       "route": "/ko/utilities/categories/cooking/meringue-sugar-ratio-calculator-stiff-peaks/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/neapolitan-pizza-dough-calculator-authentic-recipe/": {
-      "hash": "bf933890e5544fb75dc6c97875c1919d637ed8caa6608f16f0697742920c1f3b",
+      "hash": "b3a062a36f2f1557e76f8d4c7b4410d7143d4dd7f671d14757dfc09a17365706",
       "route": "/ko/utilities/categories/cooking/neapolitan-pizza-dough-calculator-authentic-recipe/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/oil-smoke-point-tracker/": {
-      "hash": "f80bc300b011ca65b654870a787aef3945a01c85acb2fda641dfa57981ef3a5f",
+      "hash": "20ba411093da25d068ed69cf99148b03dfd22211934f2818b9704f748816f08b",
       "route": "/ko/utilities/categories/cooking/oil-smoke-point-tracker/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/pectin-jam-setting-calculator/": {
-      "hash": "e5a32f5997ee1e9ce6fed1bc50dea28d1d02ca3f7f762cda471b79c080acd63b",
+      "hash": "ac25bee6be0651d1a6208846dca23e42766cd0a4089d5e0eb4a43fd76293ea4c",
       "route": "/ko/utilities/categories/cooking/pectin-jam-setting-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/perfect-boiled-egg-timer-altitude-calculator/": {
-      "hash": "d7d0959da0b4b41ad316cf4513705983eab743a1a378bb5d5e9fcb74f75d90f0",
+      "hash": "244a8a7ae4d2e7dceeabbe1c268a4c9ca91ef4fc9bf9d6da4282a6376b58a29c",
       "route": "/ko/utilities/categories/cooking/perfect-boiled-egg-timer-altitude-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/recipe-ingredient-scaler-converter-servings/": {
-      "hash": "4d4487cebadf19aff9cab1211e8d19cf6f27600eab3b8d9fa72696696878ef2b",
+      "hash": "cfe8350805a749606b09583cd2e3c8c187d67ea1f638efa05942741c264072a2",
       "route": "/ko/utilities/categories/cooking/recipe-ingredient-scaler-converter-servings/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/roux-ratio-calculator-thickening-sauce-guide/": {
-      "hash": "e3e1509ebd4980d37550070a132c2db486f96154a9055dd33b5f69416267c255",
+      "hash": "e9aa9513e5fe25047be8243c6c50e1dcc1c1e153be2e6ce5b90af2c52a6a101d",
       "route": "/ko/utilities/categories/cooking/roux-ratio-calculator-thickening-sauce-guide/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/sourdough-starter-feeding-calculator-ratio-proportions/": {
-      "hash": "e3c592ece4d7baf413b0e01438d3b345dc1aceb8d7859d3802de2f851d7a6a5b",
+      "hash": "2c917344422b3b3d5eb41f203bf0e6fd775dfba0e567068af5b31695df52024b",
       "route": "/ko/utilities/categories/cooking/sourdough-starter-feeding-calculator-ratio-proportions/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/sous-vide-pasteurization-curves/": {
-      "hash": "ab51876762ecf90172f1cfa6ed93266558df39b414600be44a5adec576a0efed",
+      "hash": "fffe9bba4f735a9d3a30623349cf7b301f9d9fa74f0fb6cb0b335ef874be6341",
       "route": "/ko/utilities/categories/cooking/sous-vide-pasteurization-curves/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/spherification-bath-calculator/": {
-      "hash": "023fe3ed3596fad295a82707502c1aa4277a4e28d7bcdf3ce8790a39e3538989",
+      "hash": "400b477c19754baf2025c72e1ce4d64ed2c872dad4cc64f0b441c725d3cb1f51",
       "route": "/ko/utilities/categories/cooking/spherification-bath-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/us-cooking-conversion-calculator-cups-to-grams-fahrenheit/": {
-      "hash": "ec9f9f622cb86bbf823c591c4d439d0c4e848dae51cbe74648aa796720203c1a",
+      "hash": "ba5b8873363b72cc9946140dbd2beac5ccb2545c741d6ea3a40657c3d1a0c087",
       "route": "/ko/utilities/categories/cooking/us-cooking-conversion-calculator-cups-to-grams-fahrenheit/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/yeast-converter-fresh-dry-sourdough-starter/": {
-      "hash": "c10bd3977def4ce5b2d06cc2fc824c3832f2a9568e788f169fa15cba40b5ea88",
+      "hash": "798469e6aca4225d5102735f583313f9d5db59cf94df486d073910978b991729",
       "route": "/ko/utilities/categories/cooking/yeast-converter-fresh-dry-sourdough-starter/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/cooking/yeast-fermentation-calculator/": {
-      "hash": "66608c420d0174585ce1cbe5c0fb50049065e52ded3eb7a6a1785df21c91eb8d",
+      "hash": "213196e17d8a53ab30ba2220e1db4eeea4d940d28ccb486afbfd1bfabf2067b4",
       "route": "/ko/utilities/categories/cooking/yeast-fermentation-calculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/amerikaanse-keuken-eenheden-omzetter/": {
-      "hash": "b9d0ee740e943b1c6c2fef213fbd973c75f90e64cc465c0b0c4260a240d0c5db",
+      "hash": "76ba9c1b1e637463567088f5facad6c85d85c69acb3a59f4acbe74976be98a04",
       "route": "/nl/hulpmiddelen/categorieen/keuken/amerikaanse-keuken-eenheden-omzetter/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/bakvorm-omrekenen/": {
-      "hash": "f702a6990a27fc15aa4364a869e78bb2e2305d973c1ae5f60fe65a4f39e66d68",
+      "hash": "3399e232b4658646bdf758285f8e55ee23966ad4291d7b7a6e538048fec2f2b0",
       "route": "/nl/hulpmiddelen/categorieen/keuken/bakvorm-omrekenen/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/bananenrijpheid-conservering/": {
-      "hash": "6132c0a0994c68a9611a7c8ece196e03ffaa1f11ff2125b496d33b3edba4dd2e",
+      "hash": "758b5a590cb1127b615c59637b4466d14140d855650da9f8f75bf63281670b4d",
       "route": "/nl/hulpmiddelen/categorieen/keuken/bananenrijpheid-conservering/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/botulisme-conservering-veiligheid/": {
-      "hash": "f4b32d3e520e45d8ab384f3c60ad94f81193cdd7ef3fc5de9c30b8fa72f02266",
+      "hash": "a583058b2949efda5b90636e8bcab32c1cab18137f0dc4b1ec4df6b4763d0691",
       "route": "/nl/hulpmiddelen/categorieen/keuken/botulisme-conservering-veiligheid/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/brix-sorbet-dichtheid-calculator/": {
-      "hash": "bb641006451a77113a6ce2756cc7b74d55d5a83cddee2ab04d3f223f4f560e6a",
+      "hash": "270e353ebbfab0716fbb6ff0281da75ff09cbe12acf450f2b772ebfbb9ba2ed0",
       "route": "/nl/hulpmiddelen/categorieen/keuken/brix-sorbet-dichtheid-calculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/chocolade-tempereren-curve-gids/": {
-      "hash": "fcf890096e9076617fbb1a9063464363a9e3b321c043e9ab25825bab4790feb3",
+      "hash": "2ef767766e3c8b9d06e791708f73dc75f9583960e9a608e1bb33e6b4094bc3fb",
       "route": "/nl/hulpmiddelen/categorieen/keuken/chocolade-tempereren-curve-gids/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/droogrijpen-vlees-calculator/": {
-      "hash": "4216005fd4a914e25200ff777465190b77affa5817a8a3ec544ff84e8d9db370",
+      "hash": "dec77385e352d829e72492dba4865f61fb23ea641e83f745685ed2bf67e97c3b",
       "route": "/nl/hulpmiddelen/categorieen/keuken/droogrijpen-vlees-calculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/eieren/": {
-      "hash": "dd323d7731c2075dd3af84e716983db5dc31b6301721404802d48215d138bd74",
+      "hash": "fe18fe6aedb39c21829b755312ec19c1c56ea4fe9847ce2059ada3684fda1242",
       "route": "/nl/hulpmiddelen/categorieen/keuken/eieren/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/emulsie-stabiliteit-calculator/": {
-      "hash": "fcbaed7fed056c6a1da951c6b4174a4439ed8265c2225023f28184a6474b6ec4",
+      "hash": "864c956af3bfb466531392776ffdf2052aef153dbaaac191f1ff3e093bad4f8e",
       "route": "/nl/hulpmiddelen/categorieen/keuken/emulsie-stabiliteit-calculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/gist-fermentatietijd-rekenmachine/": {
-      "hash": "78fc3e7db8b977dbf4587c8aa22fe15cdc967fbc4959eecada38942e01a5be52",
+      "hash": "23c34975a172baeb223765667e60a4910ee6a2319e32372006488407035674d6",
       "route": "/nl/hulpmiddelen/categorieen/keuken/gist-fermentatietijd-rekenmachine/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/gistomzetter-vers-droog-zuurdesem/": {
-      "hash": "616fa405541957daf0c2c1e9da7beb3a21200e7ad943d71fda89b89b283d30bf",
+      "hash": "1bb46fba904eaf4f8a657c5f87a3da0adfc5a35d1305965e07d394128c2ab3be",
       "route": "/nl/hulpmiddelen/categorieen/keuken/gistomzetter-vers-droog-zuurdesem/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/ijs-pac-pod-rekentool/": {
-      "hash": "a523e032546cdc99e19057212e2f366e6c5ab5a4ac6f762aefcc0e65f4f4907e",
+      "hash": "fb846c17fa16606d9d080d8629474235a320e6df0b0fb7d83e41d0105157192d",
       "route": "/nl/hulpmiddelen/categorieen/keuken/ijs-pac-pod-rekentool/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/": {
-      "hash": "6923e58ff279fd299d8bbda6e9336d8b1e4d8215ef1b1ca46bd42b9e303ec42a",
+      "hash": "2fb67b95f10f9cc144096b4921e33987ef0af00bc43a5dc62105e37338c95cce",
       "route": "/nl/hulpmiddelen/categorieen/keuken/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/ingredienten-herschalen/": {
-      "hash": "7d25836de7368a21774d7d243f043d33666f607da1a1c4ff7e1d3f8e66bbf549",
+      "hash": "47c98ee40cbe4f90abff616b695b6ba6e9e04cd7d9bc8bffb23f070477852f28",
       "route": "/nl/hulpmiddelen/categorieen/keuken/ingredienten-herschalen/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/kaas-vlokkingsmultiplicator-calculator/": {
-      "hash": "b95e352964b316789c2bdc04de3a7a90f5f5d7d27864ef5edc3d836e75022044",
+      "hash": "2794a795f3e09ae238edad35592fb41332703ee418e506f588d73ed5e0ecf444",
       "route": "/nl/hulpmiddelen/categorieen/keuken/kaas-vlokkingsmultiplicator-calculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/keukentimer/": {
-      "hash": "7f298b11cb3b9e87c27b3ee11cc63aeb81755981037de95588abb403f04d5772",
+      "hash": "83e88ebf4ff2d158cdd885dcecf8e8937e938e97b1b926a32c61e0e06c84f7e1",
       "route": "/nl/hulpmiddelen/categorieen/keuken/keukentimer/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/koji-inoculatie-calculator/": {
-      "hash": "330c2292e4489296827c37a8d7c3d575b29a49bbbe9f0ba204b95eab7d809742",
+      "hash": "cb22db0eccf63b59f3f122fd8c43bd4c3bb6d0a67b1415e37afebbcf5b21b8dd",
       "route": "/nl/hulpmiddelen/categorieen/keuken/koji-inoculatie-calculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/lacto-fermentatie-zoutcalculator/": {
-      "hash": "35abd268fb2b721e4c068bab9ab15f07c1970bd18fd5ddcfa0257bc6632e98d6",
+      "hash": "555048a24504ccb0cbcae15ed1d584f04b1bdb9f1f32c866322a1d4ecf41aa55",
       "route": "/nl/hulpmiddelen/categorieen/keuken/lacto-fermentatie-zoutcalculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/macaron-droogtijd-voorspeller/": {
-      "hash": "7b0f3f985792395d373b6f7d6d4bfe5b2ae6daf19294f4c591f3dacd631428db",
+      "hash": "f34a9fddae431509b4e64f9b4b141fc2656e9d19fa154d30ca473689ac83e9fb",
       "route": "/nl/hulpmiddelen/categorieen/keuken/macaron-droogtijd-voorspeller/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/maillard-reactie-optimalisator/": {
-      "hash": "d6e5fcd2826982d4a97ac75d660ab923bfa6beb8e6d6e216ee2df7eb47ac5133",
+      "hash": "e61dd95e72b75117a9b69b8b6bb47487cba98f01b550ec7d9e637034274d5b5f",
       "route": "/nl/hulpmiddelen/categorieen/keuken/maillard-reactie-optimalisator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/meringue-eiwit-calculator/": {
-      "hash": "e9c09a18dddebf9c77f4d3647a4d8e4d45cf7392daf91a5f628d3c86e730bf30",
+      "hash": "1fc62c30484e81bb378039946461cf75cfc652d336414ae5e2fb86ef04a0c9c1",
       "route": "/nl/hulpmiddelen/categorieen/keuken/meringue-eiwit-calculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/nagaren-voorspeller/": {
-      "hash": "c51a72e28acfd093fbfe09a8941efbeaffaf456b54421a4eed73d65ffd66781b",
+      "hash": "f5aded71ec0b4472a34b6e9e744a655f2fdb94cf052142ceda09d18b35ee18e7",
       "route": "/nl/hulpmiddelen/categorieen/keuken/nagaren-voorspeller/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/napolitaans-pizzadeeg-calculator/": {
-      "hash": "fff5de82c9eb82c5bed51f3722f4bf47435f0a0174cf0a0215cb5f2d2a6b48ff",
+      "hash": "a5b3388cff660866d70aa282a6b93052441a2f71cf1bb08e309e2eb41a5a2195",
       "route": "/nl/hulpmiddelen/categorieen/keuken/napolitaans-pizzadeeg-calculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/olie-rookpunt-tracker/": {
-      "hash": "7b9b9fb249532bd415511b8c9a9b5415c0fb7b8ff5aa50ebb71b38a4b819dd7c",
+      "hash": "caf3e89dca855e358882f1b91399da732d0e4c018438627e9c26c55169220372",
       "route": "/nl/hulpmiddelen/categorieen/keuken/olie-rookpunt-tracker/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/pannengids/": {
-      "hash": "c5b799fa291a1f50f1f8af2d74aba2cb7146f5614abae4a8563f1984dc01a7f4",
+      "hash": "3b24d99627a6f337420ef413c8250d75f5a58d8aa862a0cab0245f89baf3841f",
       "route": "/nl/hulpmiddelen/categorieen/keuken/pannengids/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/pectine-jam-berekeningscalculator/": {
-      "hash": "4f3233394bd9e093615161bbcec985c7d2f55ddd4add5fb0c50eef6c1254f0ba",
+      "hash": "4e39a363dad78a2520062ab7341c4dde5730515835a3e2d50a8fb495ca4ea603",
       "route": "/nl/hulpmiddelen/categorieen/keuken/pectine-jam-berekeningscalculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/pekel/": {
-      "hash": "cf92590a9d527b705456f746df470512837df57ec2d43c458a96935d09553bd3",
+      "hash": "4831b819608927cf325fff75e1e846b50e19b7c3f576545231ad87cbb8c51b35",
       "route": "/nl/hulpmiddelen/categorieen/keuken/pekel/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/roux-gids/": {
-      "hash": "5409274093eebbf50ec2827ace7dc6ae6bbda39aa22da2754208e0e68b519a30",
+      "hash": "41c3535d50f6cd9684af136250d341bbdf64fb2732608b6967bf4c1fee6f0316",
       "route": "/nl/hulpmiddelen/categorieen/keuken/roux-gids/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/sferificatiebad-berekenaar/": {
-      "hash": "c4fcbfbf49204a931a699f65af960e301a66eae8590e659b728d7d7de0f1a4c2",
+      "hash": "97463a528cbb7b9b35e90a2a246d349bd01117d77fe64ba8931da1e85b6d3980",
       "route": "/nl/hulpmiddelen/categorieen/keuken/sferificatiebad-berekenaar/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/sous-vide-pasteurisatiecurven/": {
-      "hash": "f7bbe3d6ff4edade2aabff9c988d1f12d9414acc6c1c796a4977d76681e20c33",
+      "hash": "4e6db3b3ac4530f43c3e6f254adc3c6c5ada63d57c9db316f1388a77b269e066",
       "route": "/nl/hulpmiddelen/categorieen/keuken/sous-vide-pasteurisatiecurven/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/transglutaminase-vleesbinder-calculator/": {
-      "hash": "74125b6c7c78e1b58439ff05a3a6ab1c1e07586dffec858191488cdf02c2bac0",
+      "hash": "4eb6fc4fd374792a0c179427ac2e2becb44a087691e5f637ecd13862cad2dced",
       "route": "/nl/hulpmiddelen/categorieen/keuken/transglutaminase-vleesbinder-calculator/"
     },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/veilige-voedseltemperatuur-controleren/": {
+      "hash": "4e1bdf6c0a0727f560b7c439a13fe121c5b13f9633897e26397eeae9d254f090",
+      "route": "/nl/hulpmiddelen/categorieen/keuken/veilige-voedseltemperatuur-controleren/"
+    },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/vochtcalculator-voedseldrogers/": {
-      "hash": "ecec61e26d281e5bbe6a148076c2992075159c0a78ce4ec6ff13d93d1223f90b",
+      "hash": "fbe52cf6689ba8449af95b5c08d557477ff1ab68b15c5deef5a261a1d72948e0",
       "route": "/nl/hulpmiddelen/categorieen/keuken/vochtcalculator-voedseldrogers/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/zuurdesem-starter-calculator/": {
-      "hash": "ed21c3b75cd2e81e9621eb00f3a814c440cccdf8e2027acf1f23441fb8adde41",
+      "hash": "100e3923b4c6804e1bed55d71f590b89249f88d5f4b169944b98b8ea61bf0f82",
       "route": "/nl/hulpmiddelen/categorieen/keuken/zuurdesem-starter-calculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/keuken/zuurneutralisator-rijsmiddel/": {
-      "hash": "53e1a86b4e04dba20a73b35afd5b6e48475277ebb6ddb59e34e32b36e36866ed",
+      "hash": "361fb1d264039abe26b55fb32e84c30d70558362d474b49588d598a2354ee932",
       "route": "/nl/hulpmiddelen/categorieen/keuken/zuurneutralisator-rijsmiddel/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/botulizm-konserwowanie-bezpieczenstwo/": {
-      "hash": "a61be7ae5f574ca0ac7537d2fc82238d0fa6c75e86aaf5ace625556620d85534",
+      "hash": "2211117c6620e44f702b6094fdfbe0b8ae92e1796fcd18edac65aed08aede2f0",
       "route": "/pl/narzedzia/kategorie/kuchnia/botulizm-konserwowanie-bezpieczenstwo/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/diagnostyka-bananow/": {
-      "hash": "23e0cb9ac2f708abd57c21a9a94908bfeddef202c021a529444480160d055829",
+      "hash": "5cc98728457eb940a9a469f690e924847b5936bfab300ef804fbb08d1f41716a",
       "route": "/pl/narzedzia/kategorie/kuchnia/diagnostyka-bananow/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/": {
-      "hash": "0b790b1210ae4d83d915e706d94268303ec08f7119c2000c239c6067b13f0d6c",
+      "hash": "2511c59b7ea42db968009913c9ac4ca86cd9ab6cc847265a8a7f4d27d4f48e17",
       "route": "/pl/narzedzia/kategorie/kuchnia/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/jajka/": {
-      "hash": "f3b59692087a75411dae019587270653c14c25f3a46180cbe7f6655257da66c9",
+      "hash": "669a5a51dbed4319d9e314f6686a0c7b4280cd30c2820072df2d1589dd428c64",
       "route": "/pl/narzedzia/kategorie/kuchnia/jajka/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/kalkulator-bezy-ubijanie-bialek/": {
-      "hash": "491c7655816d833792b045eba29a7e84c3cea6aa92bb1e847fc8e1a330e51445",
+      "hash": "0fc8b5d768a794c16ee1a9820cf36b743b4fcc6ad9f99f34440eddae5fa1b65b",
       "route": "/pl/narzedzia/kategorie/kuchnia/kalkulator-bezy-ubijanie-bialek/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/kalkulator-ciasta-pizza-napoletanskiej/": {
-      "hash": "8c616fb3d67488965a4d6902fc160b88cf3c6f636b8da1a20e72779326b9b3d4",
+      "hash": "05d466f2f07733a7fadb9838909c9e36829b6d80259ac4fe4f75929cb30646c9",
       "route": "/pl/narzedzia/kategorie/kuchnia/kalkulator-ciasta-pizza-napoletanskiej/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/kalkulator-czasu-fermentacji-drozdzy/": {
-      "hash": "e45a690fe2dad72eec758951acc2d7d923aba8fe72b930740de50c2aa69c75cf",
+      "hash": "10bb05e63ae0d54397239aee7feec7862df604dcfdfe9a6ed1c8a20abf91e315",
       "route": "/pl/narzedzia/kategorie/kuchnia/kalkulator-czasu-fermentacji-drozdzy/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/kalkulator-dojrzewania-miesa/": {
-      "hash": "3bf221af430239748cd62562e4d2fc954fb293a9c8f2e9b6c889b3c2a6e1e73a",
+      "hash": "0f7812345d29c66af70f3700afa2af41277c53aac60778b592c3f66ca883ae46",
       "route": "/pl/narzedzia/kategorie/kuchnia/kalkulator-dojrzewania-miesa/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/kalkulator-gestosci-brix-sorbet/": {
-      "hash": "cd05e566f6b6abe2f7d9191495684b57daff87fe4f3ade23b7aef5bd8b23d54c",
+      "hash": "14938f6e3bf1269867d31d5eb53aaf485464af4a81d2e071158cf029f7ee5e9f",
       "route": "/pl/narzedzia/kategorie/kuchnia/kalkulator-gestosci-brix-sorbet/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/kalkulator-inokulacji-koji/": {
-      "hash": "876d41a723119baf89eaee2ead49a4c1c7bedab1f85530ca0e1b524681a4cd69",
+      "hash": "06f58e2a21a72717e82422e1203cd8718d2734277f7cd1d6c9cdd5938cbd93b4",
       "route": "/pl/narzedzia/kategorie/kuchnia/kalkulator-inokulacji-koji/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/kalkulator-kapieli-sferyfikacji/": {
-      "hash": "c04677915a0798e1736f273d6551b82adc9733412d4167a1906d13d93d298922",
+      "hash": "f99241a3fbad256a4bb8651757fa92050a4e072354c7dcb6a9de15e6cbcb98a0",
       "route": "/pl/narzedzia/kategorie/kuchnia/kalkulator-kapieli-sferyfikacji/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/kalkulator-mnoznika-flokulacji-sera/": {
-      "hash": "6961934b76dc51eb0e0d8dd0c595a5f027c1c4f218dba16da97609d2789c10d8",
+      "hash": "254a430c2bbcfc90512408f4b6982d160d0e3675f88de50f51cb07d805234bc8",
       "route": "/pl/narzedzia/kategorie/kuchnia/kalkulator-mnoznika-flokulacji-sera/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/kalkulator-pektyny-dzemu/": {
-      "hash": "5e1f3b219bfca3b11e56ace530dcfd197334660aab1fcf0a4a55295b8cba82cb",
+      "hash": "a9237f1a5b3ca13d515bfdbe6b150e7d3b1e24193dc3accb9a7e078c7ef3550b",
       "route": "/pl/narzedzia/kategorie/kuchnia/kalkulator-pektyny-dzemu/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/kalkulator-soli-fermentacji-mlekowej/": {
-      "hash": "b45d4d67e1fd53d9bb97f277f0e0feb0a10ed7740d95a11f32b7a91d88d436ca",
+      "hash": "bbf7de5b6ddd533dfa2a4b64709424e49b24a590c4de3c81cfffa10b7497ef05",
       "route": "/pl/narzedzia/kategorie/kuchnia/kalkulator-soli-fermentacji-mlekowej/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/kalkulator-stabilnosci-emulsji/": {
-      "hash": "287b0d994ea0daeffecebc8da4b38c12217738fe0f600937b05b1b2f48dd01b0",
+      "hash": "9cea5a9931ebc137b3b36476bdbaca2ee5760bbd712e65572c3c351bfdc1991f",
       "route": "/pl/narzedzia/kategorie/kuchnia/kalkulator-stabilnosci-emulsji/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/kalkulator-transglutaminazy-wiazacej-mieso/": {
-      "hash": "ca36ca245ffb600a84e2018e98ff0cc12cd4da401cb8f0d7f6fa1937f060882b",
+      "hash": "32e0a1c60352823dafc558a2fbe2920be22435eb4fcc1c6b0dc15a1518d6ad29",
       "route": "/pl/narzedzia/kategorie/kuchnia/kalkulator-transglutaminazy-wiazacej-mieso/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/kalkulator-wilgotnosci-dehydratora/": {
-      "hash": "e64addfa4ffd12977e024d3a51589ccaaba102b1fe57cbc5097a088319d67cc3",
+      "hash": "1405fe459cc2c4e444ad76c615ded763a340015d437fa03428410c6f5efe75c3",
       "route": "/pl/narzedzia/kategorie/kuchnia/kalkulator-wilgotnosci-dehydratora/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/kalkulator-zakwasu-chlebowego/": {
-      "hash": "f6e7304437c937f76592fb0bf3dd635dafc4edcc77ab0d2bfa6ff4836056eb06",
+      "hash": "1beb6cdf31c2adc774bd766234a8aa213e052e70eb0a23825e677d5fb9a58b67",
       "route": "/pl/narzedzia/kategorie/kuchnia/kalkulator-zakwasu-chlebowego/"
     },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/kontrola-bezpiecznej-temperatury-zywnosci/": {
+      "hash": "63b6a78031f39882880718f47f736928457974c0f82c7313c4fa20443dc3275b",
+      "route": "/pl/narzedzia/kategorie/kuchnia/kontrola-bezpiecznej-temperatury-zywnosci/"
+    },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/konwerter-jednostek-kuchni-amerykanskiej/": {
-      "hash": "cbafc6ef809636188573e835fb366aa162b0c725a1b749d3029047a3e014889d",
+      "hash": "f663fbec56c4b6f116e2c2a620205032be13a41bfffaf56ecd3b43651cdea11a",
       "route": "/pl/narzedzia/kategorie/kuchnia/konwerter-jednostek-kuchni-amerykanskiej/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/krzywe-pasteryzacji-sous-vide/": {
-      "hash": "41d37583f9f683cd066b26edb74ef4dcbba455b28b31ae63eba23cfbc929b171",
+      "hash": "9dfc32258459616575aec60ff403c46388e46ad88d837d55cc438d28ea106bc1",
       "route": "/pl/narzedzia/kategorie/kuchnia/krzywe-pasteryzacji-sous-vide/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/lody-kalkulator-pac-pod/": {
-      "hash": "f4ff0ee59db80c31e5f72349c46aa4d135b7bc25beec128f4fcd65663cd8c8d6",
+      "hash": "5963d7dbcf0dcc271e4d1f2f00e44ce53b54621e8973efacc492f47c36114286",
       "route": "/pl/narzedzia/kategorie/kuchnia/lody-kalkulator-pac-pod/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/minutnik-kuchenny/": {
-      "hash": "1be9ad8788475f17075eb3ac134c28d3e63f574f4d8441460566aa5cbbfd002e",
+      "hash": "a7c7f3fa1a5eb50a41243d17014df6790b1a7667cac55cfc74011a26a600774e",
       "route": "/pl/narzedzia/kategorie/kuchnia/minutnik-kuchenny/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/monitor-punktu-dymienia-oleju/": {
-      "hash": "9199b45eaa69764705fa2b0c2f9db44c2ae6efd0dc852d20983f09496a927c0f",
+      "hash": "f7162a179fa17ffab645d1a8994308db1224e2ef6188bfbd825f3050f1891c07",
       "route": "/pl/narzedzia/kategorie/kuchnia/monitor-punktu-dymienia-oleju/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/neutralizator-kwasu-proszek-do-pieczenia/": {
-      "hash": "9a4a661681cc54d9c3d4b2d62d860ad3c1e9add2b08911ecdf9554182f07366b",
+      "hash": "94f200467f9ae1f5912b2ee828383c0f2db96d0eb61d85ea64c01c70b1c34bcc",
       "route": "/pl/narzedzia/kategorie/kuchnia/neutralizator-kwasu-proszek-do-pieczenia/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/optymalizator-reakcji-maillarda/": {
-      "hash": "707358ebc42a892ef1074153ee350e8f2649a766559be28538aea9a2e68cbc96",
+      "hash": "8cbfd1dc5466698f9b20d919e47a5ba4b3b3f57986cf827bef200fde78d43b4a",
       "route": "/pl/narzedzia/kategorie/kuchnia/optymalizator-reakcji-maillarda/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/predyktor-gotowania/": {
-      "hash": "57aa0bc08fd188d9decf82168fb396ec46688dd81a712d6bf25d9db85f13ed0f",
+      "hash": "e677f25e43107dab586ff738943c60f499e332322376fcfde9116e4331ee4da4",
       "route": "/pl/narzedzia/kategorie/kuchnia/predyktor-gotowania/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/predyktor-suszenia-makaronikow/": {
-      "hash": "eae4baedf3c4cf486490833dce18573a81150f549e826461e51548a9519eb76d",
+      "hash": "47fc572cce5fd75f94ba02246a478d0e32691ca44d1a5cfb0274f3816e106082",
       "route": "/pl/narzedzia/kategorie/kuchnia/predyktor-suszenia-makaronikow/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/przelicznik-drozdzy-swieze-suszone-zakwas/": {
-      "hash": "2ff85154cae6d55870cce1773ce6935b63759c34954e9c53b7bb2c5142199eeb",
+      "hash": "3c814d7394d2702ea8550e69093fe29d0b631d395a5c8c1405b04ecb1641badd",
       "route": "/pl/narzedzia/kategorie/kuchnia/przelicznik-drozdzy-swieze-suszone-zakwas/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/przelicznik-form-do-pieczenia/": {
-      "hash": "6dc9d1d7f2d3a2eab1dd52fc7a0985d0fc0cc4fdc3641949df14b13b7cb32e9c",
+      "hash": "1c82c442948fdb05ffe1cd442d00cc8f0feb731f75c27404291e72ca2b38fd57",
       "route": "/pl/narzedzia/kategorie/kuchnia/przelicznik-form-do-pieczenia/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/przeskalowywanie-skladnikow/": {
-      "hash": "97392795e42663baec99a4b2af9194734a6b80b2d9af7e98fe5c3d3f6724c6da",
+      "hash": "c40187b8dc0640f26eba3cbdef6c67f15f87c7c00a87aaad9e133ee7ac63b0a4",
       "route": "/pl/narzedzia/kategorie/kuchnia/przeskalowywanie-skladnikow/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/przewodnik-po-patelniach/": {
-      "hash": "0e53d3980aeb883c28d8773e65948d2cdd336cc29e06aa42a2f04bbd94baf602",
+      "hash": "8b4f68c1d33c946c0cd8a69ff12bf4001a62bca43e26710e0be002e2dda9c801",
       "route": "/pl/narzedzia/kategorie/kuchnia/przewodnik-po-patelniach/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/przewodnik-roux/": {
-      "hash": "9e44b92b58093184464751cf7ae34cab096d5d97d2f8dc644463a729cd4aea85",
+      "hash": "8f02578cb41121fe880845b875f01d160240635e3754fdcbee554d9633243fe6",
       "route": "/pl/narzedzia/kategorie/kuchnia/przewodnik-roux/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/solanka/": {
-      "hash": "28cf152c911a6e03d6e0b98e220a41edfa1d5fd3fdaab0f4f0a7d0e164c16aab",
+      "hash": "ea9755724d1769fd8dbca45939e976c28a2ca4d659413bdb3a6321f87d9cca3c",
       "route": "/pl/narzedzia/kategorie/kuchnia/solanka/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/kuchnia/temperowanie-czekolady-przewodnik-krzywa/": {
-      "hash": "80cf5f84b4cd9944fb62e44faab92ac7444c566c06b23c33bc5d9f70357a4713",
+      "hash": "37c0c941a17e6bfb204040ab7cdbb58d39ff3fb19261d7bca7569ac5bed96499",
       "route": "/pl/narzedzia/kategorie/kuchnia/temperowanie-czekolady-przewodnik-krzywa/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/calculadora-banho-esferificacao/": {
-      "hash": "0cd646a96b0fed7ff3d9184446e51509eacf86ec7fc771f6906b1aa3103b36ee",
+      "hash": "0262024f85cee9d3690a840b855f0d712fd58a4f394ebd52bf84ff4f1755dda5",
       "route": "/pt/utilidades/categorias/cozinha/calculadora-banho-esferificacao/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/calculadora-densidade-brix-sorbet/": {
-      "hash": "082a77a4efca00f49f6393fa490ca8c22760ea76ecf50728e0e2cb0e359d4859",
+      "hash": "da554fc1077454af09ebcb7f8a8207923df3c53491c312462fb4c12ee4a2c135",
       "route": "/pt/utilidades/categorias/cozinha/calculadora-densidade-brix-sorbet/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/calculadora-estabilidade-emulsao/": {
-      "hash": "e069f6c1100d83248b3994367ef4148a2409b726a6feb5789109ac5861e5eec8",
+      "hash": "a8b414b0a95c553eee95b8fe1f18b9c29281132a560caf5d2943ea5a017d80b8",
       "route": "/pt/utilidades/categorias/cozinha/calculadora-estabilidade-emulsao/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/calculadora-inoculacao-koji/": {
-      "hash": "af5a93516a96d836c47a663de81cf11ae8224ab2b8032ee0901f8006c0214b5c",
+      "hash": "57f58552a660df871c2efb08870c60d8d87798caf4d86f511d305820c4b33deb",
       "route": "/pt/utilidades/categorias/cozinha/calculadora-inoculacao-koji/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/calculadora-massa-pizza-napolitana/": {
-      "hash": "e178524ef45e5df94b5dba5078f450de9b50825cfccea5fe9d646b39970603b8",
+      "hash": "bc4ed44419f25c7b035617f4e3207ed88d6d7096e663c217475647b0b263af6d",
       "route": "/pt/utilidades/categorias/cozinha/calculadora-massa-pizza-napolitana/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/calculadora-maturacao-carne/": {
-      "hash": "63e25b6442dcfed1322abf5393d0842ca23c21e636917f47695aacbb2b272c25",
+      "hash": "d9cada3bef088fba8996762809b318653c8c35dba31cda85f45a3472a5aa3a88",
       "route": "/pt/utilidades/categorias/cozinha/calculadora-maturacao-carne/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/calculadora-multiplicador-floculacao-queijo/": {
-      "hash": "47989877f0e536d18b340bbd6858c375fd39d9de7bdc97f10312c8acf201d46e",
+      "hash": "dcf3be988eb902230f9bf525d3dabed249687bcdc5dc98f67064081a7d74125f",
       "route": "/pt/utilidades/categorias/cozinha/calculadora-multiplicador-floculacao-queijo/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/calculadora-pectina-geleia/": {
-      "hash": "cf013def9c3dc041176e49d6a487dd5ee0f5de111b7b435c09209b9c744f029e",
+      "hash": "873aa182e6f69baab582431dccf0dad012e796ea75c295bddfc8551b78c89606",
       "route": "/pt/utilidades/categorias/cozinha/calculadora-pectina-geleia/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/calculadora-ponto-de-neve-merengue/": {
-      "hash": "51aad22c4f12a863581ef6fecd07642ff15e474c9f0cfbe2f2990345e1946997",
+      "hash": "1c4cb89fedf1a085b850e80fe020a0546c352094ac0c417ef26403cfc5cbf297",
       "route": "/pt/utilidades/categorias/cozinha/calculadora-ponto-de-neve-merengue/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/calculadora-refresco-massa-mae/": {
-      "hash": "18adcd0bd84c837e523946c9b50ab75aada7f2a5fb53b4f4e5b2e3046555a115",
+      "hash": "6087aa47ae1d472a91a62c07bcfb0ccbd9421c0f7b3e3b03c499667b0c8701e3",
       "route": "/pt/utilidades/categorias/cozinha/calculadora-refresco-massa-mae/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/calculadora-sal-fermentacao-lactea/": {
-      "hash": "72c09615b5cb1d4501342161c4c41a4f426105cc9987fa597ccda74a3cce6997",
+      "hash": "9e09a3604e47836d9762259aabed4aa2230c7a5fbd58140f49ebd94e5215ec98",
       "route": "/pt/utilidades/categorias/cozinha/calculadora-sal-fermentacao-lactea/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/calculadora-sorvete-pac-pod/": {
-      "hash": "f2397a527f896e5a9a4de9e98f4d8527dee278905d19f3211716ecca7dcade2b",
+      "hash": "38a0d6616b29f3b2577b00fec206b936a042ee3e696c5a35b1232cdea71c6e30",
       "route": "/pt/utilidades/categorias/cozinha/calculadora-sorvete-pac-pod/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/calculadora-tempo-fermentacao-levedura/": {
-      "hash": "fb7b30c4c9ad600f2d1297679441bfc4bc13a327575f3c2303d7eed314b03c4c",
+      "hash": "503fa979706cba4575f923c3808912d62124720704f617b8f4aacf1fae9927f0",
       "route": "/pt/utilidades/categorias/cozinha/calculadora-tempo-fermentacao-levedura/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/calculadora-transglutaminase-ligacao-carne/": {
-      "hash": "d9103217f591272c6b4761cdf055ab211f28150de2335c69710ed7f06773ea3c",
+      "hash": "1ddb583e6b985d9233c3c007609aff8555038dfbfa678dc58308cd18f254d406",
       "route": "/pt/utilidades/categorias/cozinha/calculadora-transglutaminase-ligacao-carne/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/conversor-fermento-fresco-seco-massa-madre/": {
-      "hash": "3e78cd42fb721b63c2d8caad82e386a9680c0d515cc5c096c6743a555a9daa16",
+      "hash": "389a6fbfd002483d07520516d8d17f5b12b3e17e785fa8c597d78c2e28bae5be",
       "route": "/pt/utilidades/categorias/cozinha/conversor-fermento-fresco-seco-massa-madre/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/conversor-formas-bolo/": {
-      "hash": "c4af53d1c0c99882c28a017f24a92a61081106981ff3f4d908301a26c844f550",
+      "hash": "00d31cf52c5bf21e06dd7fd5c9d6d52fe629635f2e62c98d6b52bcede57b2f2a",
       "route": "/pt/utilidades/categorias/cozinha/conversor-formas-bolo/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/conversor-unidades-cozinha-americana/": {
-      "hash": "a88a970456e79194f290e631783811d13b552bf890ed63caceddab6e14871091",
+      "hash": "873b58ebadc6358eec2f76383cf6f0554427dc5e9690abc420c262ef97126c15",
       "route": "/pt/utilidades/categorias/cozinha/conversor-unidades-cozinha-americana/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/curvas-pasteurizacao-sous-vide/": {
-      "hash": "88e4991bbad748f3fee0bfed097bec2de85f636f647df38980e5810ab03e8874",
+      "hash": "178d2df6d0cec85179ba9c4319eae52aefc1959421a6fefa655fd9730f6ddc53",
       "route": "/pt/utilidades/categorias/cozinha/curvas-pasteurizacao-sous-vide/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/diagnostico-bananas/": {
-      "hash": "d800a63b2af70fced48c265a2667f36ed9fdcb41c9b0d2fcef451e9549573ce8",
+      "hash": "eae0ce519c92e886eb21ba08395a2bdb8796db33b57e9a9682a76ab475f890bb",
       "route": "/pt/utilidades/categorias/cozinha/diagnostico-bananas/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/escalador-ingredientes-receitas/": {
-      "hash": "12b5d0bfc3c93d7f854cc22941ba18db5fc4154b99716610a4ae3887b6393152",
+      "hash": "39479ff85928e2b7a62a5450de867c25f40268e9abf25ce4f291a58eb46c3649",
       "route": "/pt/utilidades/categorias/cozinha/escalador-ingredientes-receitas/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/estimador-umidade-desidratador/": {
-      "hash": "5ce4faccac51b4bec3a0d1ffcc68e7d3094b09788d5119f835d6b10974d70d86",
+      "hash": "4bcf1d578985477f087c8cebd9aac1bc3e9618032ebbd89c6377bcf09552e322",
       "route": "/pt/utilidades/categorias/cozinha/estimador-umidade-desidratador/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/guia-curva-tempera-chocolate/": {
-      "hash": "084f4f0e7a8d738995491f0f105c7ce53a369129b7b46bac45f045a14de9d270",
+      "hash": "bd883ce86e71e097770ce1c7ec0a7fbd0f2a0e18ef8c07ccf320769f36564a13",
       "route": "/pt/utilidades/categorias/cozinha/guia-curva-tempera-chocolate/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/guia-frigideiras/": {
-      "hash": "ce3c29a41b57d9b80bb444ddad192ecde234f101f45dc9d0ec1e8edd94887f70",
+      "hash": "fe19c3e02e1dab1d947a65dd7e5abfe2cd56f04141ca44526de6b9fb0046ab14",
       "route": "/pt/utilidades/categorias/cozinha/guia-frigideiras/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/guia-roux-molhos-mae/": {
-      "hash": "03e3635113b4f11356970e491f7f9f9fd57139ce4d1217f4eb167b5f420e0f88",
+      "hash": "ba03565644681a16e635e76943754e5e3337ba82ceb69b5c101a77a0daa2e1e8",
       "route": "/pt/utilidades/categorias/cozinha/guia-roux-molhos-mae/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/": {
-      "hash": "4fa7704807664ae802d9fc31f1895fcfb659f3a48d674d98d0174721bbd714c3",
+      "hash": "3940bea49d825a8bfa7ad9a6e8abd915627e4d7eba3f24db6974741fb394417a",
       "route": "/pt/utilidades/categorias/cozinha/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/monitor-ponto-fumaca-oleo/": {
-      "hash": "23b7844029426fde513adab45fefe7b37607079b853cf85f381c480653098bcc",
+      "hash": "af6af1333415ac38ecf632573399db9b393c3eaba5f44f81751f6effbb123c2b",
       "route": "/pt/utilidades/categorias/cozinha/monitor-ponto-fumaca-oleo/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/neutralizador-acido-fermento/": {
-      "hash": "784ce0a57153b9ba06a945e97df465582269ce8cf1dc3a9ede5d7f48ea03b9cb",
+      "hash": "0abc4deaf37e8caa9c057647d3407a2e71b7e2b51cdfb16a4b75609e161923d4",
       "route": "/pt/utilidades/categorias/cozinha/neutralizador-acido-fermento/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/otimizador-reacao-maillard/": {
-      "hash": "e80639bc0693d27bdd878fb5201975637507321b7b7e9312c68cbda5c459def5",
+      "hash": "37bd38c75e9ea29966b38110d59e8763b56504e13f27e48e61c7731275d4b350",
       "route": "/pt/utilidades/categorias/cozinha/otimizador-reacao-maillard/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/ovos/": {
-      "hash": "b0d780c96f7b3762058f799aae872662da5cc6238226564a82f95416ecce8269",
+      "hash": "5b818362c873d345953175bcbb1735cf02436e9dd9e31dbbe9c6d1f212867f5b",
       "route": "/pt/utilidades/categorias/cozinha/ovos/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/predictor-secagem-macaron/": {
-      "hash": "61000733ac1c4498e64af6fe28e11b9bf44c3067d582dc1d6fd1061ccf914691",
+      "hash": "e2178cdaed40a8fdadedd8a1ccd5b0c942b171330d0b3fc10073b8b41c3aa966",
       "route": "/pt/utilidades/categorias/cozinha/predictor-secagem-macaron/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/preditor-cozimento-residual/": {
-      "hash": "4e45ebbe186cfdd466b21339fbb506f7c6b34b5d4097cb0e246885b612ff1fdf",
+      "hash": "eec0ba4bd86faf60d1601e739445e14cdee7109f1eafe00c78e2640259f85499",
       "route": "/pt/utilidades/categorias/cozinha/preditor-cozimento-residual/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/salmoura/": {
-      "hash": "a7219e4a7688928eec6b3a1d9657b7fb3a36000951491cc7958d94bc53474802",
+      "hash": "62832ec3b1f4b6553bfb9c9aca5751950d41a9d12b3216f8823b67ef845fe659",
       "route": "/pt/utilidades/categorias/cozinha/salmoura/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/seguranca-conservas-botulismo/": {
-      "hash": "762e5d82ad7d506d8f0e01508d54924f23d6cae1242cba26dabbb73a84bd593e",
+      "hash": "b5d6b49f314363e4ff3bd03ebb362f8b8a7397ad3033af27f329b34905a80a3e",
       "route": "/pt/utilidades/categorias/cozinha/seguranca-conservas-botulismo/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/temporizador-cozinha/": {
-      "hash": "0705ecb1a47dadb7f9a34b09de73c16f59ee7b49694a781a32dfb3095c2e0c40",
+      "hash": "ecb687d5e72370d2d9ccf474e38be5a85889c1f643ebc2341806fbf8eaf0609f",
       "route": "/pt/utilidades/categorias/cozinha/temporizador-cozinha/"
     },
+    "https://www.gamebob.dev/pt/utilidades/categorias/cozinha/verificador-temperatura-segura-alimentos/": {
+      "hash": "005834898e45505fbfba21d9ac0f765c63d04ec1fdf827265adbb405f98ea0ee",
+      "route": "/pt/utilidades/categorias/cozinha/verificador-temperatura-segura-alimentos/"
+    },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/amerikanskiy-kuhonnyy-konverter/": {
-      "hash": "efe3635c7976211c74b8fbb9b39a7f6eb80a6f34195276d1a0f00e495376b225",
+      "hash": "e1cdf3ba2e20037afd482813cb51696e7c44fbc6c015b1d6de786b0ba5d039e2",
       "route": "/ru/instrumenty/kategorii/kuhnya/amerikanskiy-kuhonnyy-konverter/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/botulizm-konservirovanie-bezopasnost/": {
-      "hash": "b22854e63ab3a523a791ceaa12215a22f256970c3f5961a4d16239cddf1ddb25",
+      "hash": "260d1b5422183661e1464e792fcf0daa00f16dc223aa4c133e12865afbbd6eb4",
       "route": "/ru/instrumenty/kategorii/kuhnya/botulizm-konservirovanie-bezopasnost/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/degidrator-ocenka-vlazhnosti/": {
-      "hash": "d4a31531db672952c45c99a834087b1b2391667ef1ba6c63c16762e6328bc711",
+      "hash": "673bde18e7bbb2ab5c821e33afb58d43043619cd158c710138202ba8b15ab137",
       "route": "/ru/instrumenty/kategorii/kuhnya/degidrator-ocenka-vlazhnosti/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/diagnostika-bananov/": {
-      "hash": "c952c59cbf197318ba444a5765ba247bc9fb48de40cd83e66747c247adc82a45",
+      "hash": "430f7c98a0c253bd68ee5bce8a3c862a35d970ace94f5ccebc29b7261ae4e2cd",
       "route": "/ru/instrumenty/kategorii/kuhnya/diagnostika-bananov/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/gid-po-skovorodam/": {
-      "hash": "c418de7b97345980c3a1f2cbeb9fc12706c09710dc23991e67e972623c2a5e3f",
+      "hash": "178337f9556f1d20dcd2e99b2480dcbe521e4cce8bd0e751faec827fbdb2ae0c",
       "route": "/ru/instrumenty/kategorii/kuhnya/gid-po-skovorodam/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/": {
-      "hash": "98fb5235ed262d7f2eb17699ace6b626a855afa247a0e485c27cba3882060db5",
+      "hash": "d2278c8e26417a944bb1a817bcb789a96c0e1bb738ff6cdb6ea73db4cf0873fa",
       "route": "/ru/instrumenty/kategorii/kuhnya/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/kalculyator-merengi-belki/": {
-      "hash": "8680643df31350804fc551de8ce57b8d235c83ad1f327c0670cba934b85ff744",
+      "hash": "0d725c3c95da76412d8b17f8ddd127612cd0a70bdf9eaac5302d5c645604e22c",
       "route": "/ru/instrumenty/kategorii/kuhnya/kalculyator-merengi-belki/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/kalkulyator-briks-sorbet/": {
-      "hash": "2f31fbdd7f202c6fa8d4c84a7981082e1f24b6682d4a8defa340af39eaf893d3",
+      "hash": "762397d15a2cc18ea3010c0bca705b1a9ede9ab4917dcec01531a245ac8fe2ca",
       "route": "/ru/instrumenty/kategorii/kuhnya/kalkulyator-briks-sorbet/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/kalkulyator-inokulyatsii-koji/": {
-      "hash": "bdcfd86be03eb49b28741d2ead362c7c3dd19ae51593287f23e50489ae84b4f9",
+      "hash": "d0ea46586bf7eb4f183d4303ce8599edb713031deb0cd8d339ab70e8c03e11c9",
       "route": "/ru/instrumenty/kategorii/kuhnya/kalkulyator-inokulyatsii-koji/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/kalkulyator-mnozhitelya-flokulyatsii-syra/": {
-      "hash": "4fe33cc5fe5921a3a1e8907246412684c3312a44d7f7ffb9ff150f14017e305f",
+      "hash": "acd4a1ff841a78b1abf3b13dba22ec3e145688f7ab3f3bfb2a9f81a5fc85bf03",
       "route": "/ru/instrumenty/kategorii/kuhnya/kalkulyator-mnozhitelya-flokulyatsii-syra/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/kalkulyator-pasterizacii-su-vid/": {
-      "hash": "2a9c87e59199a6ae6b17db42a84af43597548cb989a355e944dbafbf3dda70d2",
+      "hash": "79389aca66da41701c3e69e6d051bba5f655db5151e53286d40673265607a518",
       "route": "/ru/instrumenty/kategorii/kuhnya/kalkulyator-pasterizacii-su-vid/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/kalkulyator-pektina-dzhema/": {
-      "hash": "1dcbf6a66edb92688696f1aa45851958a1c438c57ce453148ba5031381b52662",
+      "hash": "6b3329694e08df5e0bb5618636c2d9c4a84973dcf2536a0ae4a2436d58a9e983",
       "route": "/ru/instrumenty/kategorii/kuhnya/kalkulyator-pektina-dzhema/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/kalkulyator-sferifikatsionnoy-vanny/": {
-      "hash": "1af20327dc4d29c43c99b791309d62ae1d3b511d381f6a297893ef167e8507df",
+      "hash": "a931ff298ee5b216a6848a07e96b374232043f5c03b12320fd08657ab271fd5b",
       "route": "/ru/instrumenty/kategorii/kuhnya/kalkulyator-sferifikatsionnoy-vanny/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/kalkulyator-soli-lakto-fermentatsii/": {
-      "hash": "58a7820c0adf2aa88db22e8231b7fd16921455276ae824452e14722fdc463fac",
+      "hash": "4b74d2b2b21ef62f71d831fe7ca06c02702ebe15d396effdf75076699c3d0985",
       "route": "/ru/instrumenty/kategorii/kuhnya/kalkulyator-soli-lakto-fermentatsii/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/kalkulyator-stabilnosti-emulsii/": {
-      "hash": "dddc81cf963680920811e36a2ba180cc7362ba77dce4f51b9b07384cf6d99896",
+      "hash": "793274481975161f18d9c6dd369cc2c0ec6ea7cb167c74b00a403bd14d2b67e3",
       "route": "/ru/instrumenty/kategorii/kuhnya/kalkulyator-stabilnosti-emulsii/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/kalkulyator-suhogo-sozrevaniya-myasa/": {
-      "hash": "a7e9abb64b4b7f40eb2a78e131c637acc0a58f1f30240715c32c377b8ec6904c",
+      "hash": "406cf9844fab6c3e99588c2be725a3129e10e5ac5467d3f6410a497b9309ce24",
       "route": "/ru/instrumenty/kategorii/kuhnya/kalkulyator-suhogo-sozrevaniya-myasa/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/kalkulyator-testa-dlya-neapolitanskoj-piccy/": {
-      "hash": "0176d6defe1ca072daed320e1fbfe9fb91b1b519c93143327435700cfd0f0d3c",
+      "hash": "14ae31f5f6fc80da9956b52d8da2075e0ab794c2fc84ba6b90635ae6408f3327",
       "route": "/ru/instrumenty/kategorii/kuhnya/kalkulyator-testa-dlya-neapolitanskoj-piccy/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/kalkulyator-transglutaminazy-svyazyvayushchey-myaso/": {
-      "hash": "d8365ea04c708b0ca94e0929d1a66b146e19380263d9ecf8324e57489d5d1840",
+      "hash": "8613687a5a5d58af72b60ae2718ae6304b92a755473daf7f5cd6fb06aea22c6e",
       "route": "/ru/instrumenty/kategorii/kuhnya/kalkulyator-transglutaminazy-svyazyvayushchey-myaso/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/kalkulyator-vremeni-brozheniya-drozhzhey/": {
-      "hash": "75f595ebd04fbd081a289cbb9542f4f274654beffd21ae9e5b4e30b29f9487a3",
+      "hash": "4de2307dd0a1b101b4285f4cabd67e27bf15007961c02a5138c3874abe533174",
       "route": "/ru/instrumenty/kategorii/kuhnya/kalkulyator-vremeni-brozheniya-drozhzhey/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/kalkulyator-zakvaski-dlya-khleba/": {
-      "hash": "03b8c7dc87f6289a72ea0b951a91c3a5316c412c62ee2a728a673c602f84db86",
+      "hash": "fca247db224abc7b14f0b30d44b6a9f05cfade2dda9dc178676e769b503c1d72",
       "route": "/ru/instrumenty/kategorii/kuhnya/kalkulyator-zakvaski-dlya-khleba/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/konverter-drozhzhey-svezhiye-sukhiye-zakvaska/": {
-      "hash": "e711cb891b3216b40fb7c5a34b2d9e2f564aeb932485ac4f58e35d18eafce278",
+      "hash": "c2fd127afe75037c3a7e488e7aa4800d56e4752c318b3fe65cb38eb20cd625f9",
       "route": "/ru/instrumenty/kategorii/kuhnya/konverter-drozhzhey-svezhiye-sukhiye-zakvaska/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/kuhonniy-taymer/": {
-      "hash": "3415bbc93b7f90ef1f66ee596ef114af037e64e18ca4751dddf2596909a988de",
+      "hash": "bce15cabf73b37b36e85b3167a7b6bad3da172bcf697c4bb059d6d54f5a963dd",
       "route": "/ru/instrumenty/kategorii/kuhnya/kuhonniy-taymer/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/morozhenoe-pac-pod/": {
-      "hash": "14a23cdf148d0029d9c61f2694d67eb052b30239954e1252a189ef51fdd26177",
+      "hash": "9033123b5d86be2657396718875a37b9e6f4a7b20f435c58f96490672dba82fa",
       "route": "/ru/instrumenty/kategorii/kuhnya/morozhenoe-pac-pod/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/neytralizator-kisloty-razrykhlitel/": {
-      "hash": "cbb12b6901b68b92b05f27aa07fdb3544a1ed8a0174d7b34331b00ddc3fed89a",
+      "hash": "32a3ce7088183e6fed487b983423c49e9f9a3ec4cc39575292c00a3c065fcc67",
       "route": "/ru/instrumenty/kategorii/kuhnya/neytralizator-kisloty-razrykhlitel/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/optimizator-reakcii-mayyara/": {
-      "hash": "28f180c785af89577549e9d4bd1cd2d3adc1adc774ccbb2c38d727c6f02653f6",
+      "hash": "aedc273cb12db5f1756328c525640996878ef632e19770d519aeb3efac9c0454",
       "route": "/ru/instrumenty/kategorii/kuhnya/optimizator-reakcii-mayyara/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/otslezhivanie-temperatury-dymleniya-masla/": {
-      "hash": "0377ee32a3c55b9daff8cf9effe077003a5593c03940fab1d78297d9151efc15",
+      "hash": "6634f985433d329686e0bf9b850a247188ac6c576e3fc098c341668c6e8de310",
       "route": "/ru/instrumenty/kategorii/kuhnya/otslezhivanie-temperatury-dymleniya-masla/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/pereraschet-ingredientov/": {
-      "hash": "9a7ecdbe0e6b55b3ced4ff3694a9501419941068524543bc4d88742054466fd9",
+      "hash": "7d623e87d01568ab15091d95492551a2b5d16d571c769892ad8a380106e7205a",
       "route": "/ru/instrumenty/kategorii/kuhnya/pereraschet-ingredientov/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/pereschet-form-dlya-vypechki/": {
-      "hash": "aa2522dc41fbaf9ca8891713aa3d9b28dd2b7363eae7f2e3b6308e9bb2faefd9",
+      "hash": "97261bd318aff3a0dd4f52786713ca89b1ccbdbe58e87ee1402bd84596494505",
       "route": "/ru/instrumenty/kategorii/kuhnya/pereschet-form-dlya-vypechki/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/prediktor-prigotovleniya/": {
-      "hash": "088a6e8652f249d53ebf9612dce35c83e062ca0ad954ec933ff14fc71abb9edb",
+      "hash": "16b9334c24604fd2822f834e5b7209c5b2b7db093e7e29342e0ba8033c8dc2e9",
       "route": "/ru/instrumenty/kategorii/kuhnya/prediktor-prigotovleniya/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/prognoz-sushki-makaron/": {
-      "hash": "95a08b06c4aee80127b5d955b5f2d2addef954e48008276f6d98875612758fbe",
+      "hash": "a1d50f9aa67338d9d180f05aedf019b90dd42d09ec2cb0b1906f0aaccf027090",
       "route": "/ru/instrumenty/kategorii/kuhnya/prognoz-sushki-makaron/"
     },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/proverka-bezopasnoj-temperatury-pishchi/": {
+      "hash": "57f1f2213056ed962bdb0683332fac4b6a29c5a63a946b13d0a7a6fabe665ec1",
+      "route": "/ru/instrumenty/kategorii/kuhnya/proverka-bezopasnoj-temperatury-pishchi/"
+    },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/rassol/": {
-      "hash": "958c76d3b528a0dd716440b91d0d90afe8813f740d29d934a93506a9f6613132",
+      "hash": "ea93579ede00ba1ec215ea3660985407bd6f523ae96070a84d21a8e0d89c5058",
       "route": "/ru/instrumenty/kategorii/kuhnya/rassol/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/roux-materialnye-sousy/": {
-      "hash": "5d3eba69985f48309b3b4daa83fd803a52daa918be34cb6eabc6bdb68b31164c",
+      "hash": "dfc5bdc1015d49fec97b43bd79ec31a4b7b51d03122a92123b84fd8d54325f58",
       "route": "/ru/instrumenty/kategorii/kuhnya/roux-materialnye-sousy/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/rukovodstvo-temperirovaniyu-shokolada/": {
-      "hash": "894c60d7151151249541d6252926c45d05e49330b9563e35f46d3ffee79592f8",
+      "hash": "98ffa7e4096b8442c11618206790cb572317b659f0877faea699da106f10c245",
       "route": "/ru/instrumenty/kategorii/kuhnya/rukovodstvo-temperirovaniyu-shokolada/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/kuhnya/tajmer-dlya-yaic/": {
-      "hash": "bcacc9302bd906df35a993e58758523772afc3bdd77cdc9424871072533f5d31",
+      "hash": "ba175bc40685eebb31c4b6320619047454bdde0e46147face2f7476000b62a37",
       "route": "/ru/instrumenty/kategorii/kuhnya/tajmer-dlya-yaic/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/aggur/": {
-      "hash": "67d8d2a035ce9dbc767f9bdb78da734e848c2a82ad14483366f493d9b26a8a07",
+      "hash": "50b4f85ff563ba3946374b8acab4915b6415c475dfec8dccab381c69bc88aa5f",
       "route": "/sv/verktyg/kategorier/kok/aggur/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/bakformsomraknare/": {
-      "hash": "35e3b5230a00a44ea8bcc6e22ac6ce395abd715b10bc8a7534c742a54f6b2448",
+      "hash": "a3a4406930b2fb9e4772b8de96d6e99a194569af7467fc23c87c8d3a9f3f3a52",
       "route": "/sv/verktyg/kategorier/kok/bakformsomraknare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/banandiagnos/": {
-      "hash": "a370ecc10de07dd5b9a7796ddd7f9075102cf6cf1ba125b7dca0c7982fd8fb3d",
+      "hash": "418c4b8896fae75dcf235fed2c9a15cd4fd681c5cec93271aadc2611e1905b14",
       "route": "/sv/verktyg/kategorier/kok/banandiagnos/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/botulism-konservering-sakerhet/": {
-      "hash": "1983eb4a59fc7cb022d97e15bf3ed73732de115eebb271475095e6f9f42f1071",
+      "hash": "96ecd257d8fe0f7c27876a040c4c8f8a369ebbbba33cab640d1b4a070556b540",
       "route": "/sv/verktyg/kategorier/kok/botulism-konservering-sakerhet/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/brix-sorbet-densitetskalkylator/": {
-      "hash": "23ef6bf74c167b002427037bf96b08984edf7cae170e5d03e432f665d8a13b27",
+      "hash": "ca1fc870d5749665278775346c545629f8e64523ac5c55e545bdd3cc12191d41",
       "route": "/sv/verktyg/kategorier/kok/brix-sorbet-densitetskalkylator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/choklad-temperering-kurva-guide/": {
-      "hash": "a86bd1558c843b491af3a553cee413254dae5e07345da7a43383037f0bef7a4e",
+      "hash": "567fecfdfc46d703152ae0a87afd68947c7ea51af1af8a9f08ba8a491f595827",
       "route": "/sv/verktyg/kategorier/kok/choklad-temperering-kurva-guide/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/emulgering-stabilitekalkylator/": {
-      "hash": "62fa4ed66c090ccf548b03c553cbf3e557b8f725738d581c9c53fe23f87aa6fe",
+      "hash": "71a03b8d7d0d2f0e0f16675f45859723cb9b10fea2058548a9bbfae421936756",
       "route": "/sv/verktyg/kategorier/kok/emulgering-stabilitekalkylator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/fuktkalkylator-for-mattork/": {
-      "hash": "4d565abc8a4b1d0d04245678ca0868d6fd0dcc6b0a35a1bd7125fd04907978f3",
+      "hash": "7b1ba6fd10afc57023142f8afda0cd79c5128c0e197705de8a8fdec1519336b4",
       "route": "/sv/verktyg/kategorier/kok/fuktkalkylator-for-mattork/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/glass-pac-pod-beraknare/": {
-      "hash": "be91278c0f34d549e1ff111d85fad225c5c79910325d0342ec52af3d01594bce",
+      "hash": "1100721e7b2d76dcdb5908f84b36ae6f1fc02af6eea80a63226a4b9814306b22",
       "route": "/sv/verktyg/kategorier/kok/glass-pac-pod-beraknare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/": {
-      "hash": "7248a4d18b590d1d7e154842abe5c0727a7ee8f888b3d47b0e648c8033442c99",
+      "hash": "fdb984b0d03ddd2393b2a8098f22f2c6285ec1bc4fcfcaccda47ee8ececc5417",
       "route": "/sv/verktyg/kategorier/kok/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/jast-fermenteringstid-raknare/": {
-      "hash": "9b6fe3de980801bde908451baea21285288b228df320ec9a144e3b23bfbbe681",
+      "hash": "616efe6c346462a69c5621d65c7f13e2838eebfd60085675767112d89ddd7210",
       "route": "/sv/verktyg/kategorier/kok/jast-fermenteringstid-raknare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/jastomvandlare-farsk-torr-surdeg/": {
-      "hash": "3831afd30d5a2b733f29546ef2c62752f75d45d6174a10c96692e84e133ecbd8",
+      "hash": "54a0221786d7ef02250190c3203fee342257eed1f58a5ba2f2a0ed19d9956452",
       "route": "/sv/verktyg/kategorier/kok/jastomvandlare-farsk-torr-surdeg/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/kalkylator-hangmorning-kott/": {
-      "hash": "27ab3fceded7be0d380e3e9bcaf1b5de5422e33fb1170cbedc4dc9695a821505",
+      "hash": "a97fe48acfdb2c6aa976f5f4e1a1eda119c0dfeae509764a9fe9c7e32166dd47",
       "route": "/sv/verktyg/kategorier/kok/kalkylator-hangmorning-kott/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/kalkylator-koji-inokulering/": {
-      "hash": "9eafa5dc3d62a98ebb3b9e8234eb20e9219cdaca8d8af4ff6893c76e36255072",
+      "hash": "4299c211e985f9ba7a3ca4570cfaa89d86426d59d4ceea435a9b8e9c958a23e6",
       "route": "/sv/verktyg/kategorier/kok/kalkylator-koji-inokulering/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/kalkylator-neapolitansk-pizzadeg/": {
-      "hash": "394b1a45f22e63f531a898aaebb8cca662c03e18a42e80b1886b6cf5f4773018",
+      "hash": "074afd463ef4634142ed7cf0d89312d803f5aea84e61199a72f04cb05b11b1e8",
       "route": "/sv/verktyg/kategorier/kok/kalkylator-neapolitansk-pizzadeg/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/kalkylator-ost-flockningsmultiplikator/": {
-      "hash": "92fa16c40a8acc512f9c4c3af48045aff989aa098abba9033a8f825ce8fc518a",
+      "hash": "d11ba13181d2111560b619e682385bf58368a5a318dd25097ebeab8201d19773",
       "route": "/sv/verktyg/kategorier/kok/kalkylator-ost-flockningsmultiplikator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/kokstimer/": {
-      "hash": "46ee95c8da13ab3df1543fa163d7dd27849a2d0174282105b24454d3565e0c14",
+      "hash": "0c0211fd5c30cde026c856d37ea5851a407b239b14d0a0314a59a979a30061d3",
       "route": "/sv/verktyg/kategorier/kok/kokstimer/"
     },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/kok/kontroll-saker-mattemperatur/": {
+      "hash": "0234c9772da74b9ea00933dc8a1100d0c3b939254b8b6ff7e476e1c07e5fb31f",
+      "route": "/sv/verktyg/kategorier/kok/kontroll-saker-mattemperatur/"
+    },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/lacto-fermentering-saltkalkylator/": {
-      "hash": "682edc79c720de260ae76e63d282a8b3406ed086b43b24fb4c280ddd43e599d4",
+      "hash": "7dc53817f613c4ede2245aaae3472073518e6139f20ebe7d50938ddd50c1990e",
       "route": "/sv/verktyg/kategorier/kok/lacto-fermentering-saltkalkylator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/maillardreaktionsoptimerare/": {
-      "hash": "58d5cbd09319f663b421fa58df9ccee72341eff039d5b8900bcba220bd2ca00a",
+      "hash": "2b983a921403990b1697532c470da653668ccdfabe43416970f3463af161b179",
       "route": "/sv/verktyg/kategorier/kok/maillardreaktionsoptimerare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/makron-torkprognos/": {
-      "hash": "4f99c3d030fa4b137320b9bfac4eb8f4fbda479961494ccf06cbd993785d476d",
+      "hash": "a09b86ed21c427273a009454df72c331c8ac18982f68d29e6566a1a626000cb8",
       "route": "/sv/verktyg/kategorier/kok/makron-torkprognos/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/marangkalkylator-aggvita/": {
-      "hash": "f4178cd91f9359681ffe25fdc173ad4c276a85f7ec876adfaa0620137929b3de",
+      "hash": "cb379f5f5b2d402b8675925126155d6b63a0a67887899bf5d0104aedead2384c",
       "route": "/sv/verktyg/kategorier/kok/marangkalkylator-aggvita/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/masterguide-roux-grundsaser/": {
-      "hash": "aed959e400ea120b3a350f2141eb2f058428af96c00a065792c55b3a5f488a89",
+      "hash": "aa32b54bb68d774727a8c7c08fff5ff6e4afc5fdd8e0dd62d39ed3230a791ba3",
       "route": "/sv/verktyg/kategorier/kok/masterguide-roux-grundsaser/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/olje-roekpunkt-matare/": {
-      "hash": "350d69d29e4e34ced3ea83599fe8c255f107c0f15eb512d3298377152e2a2be9",
+      "hash": "a478728792031d11c5132024f07e476f6d8cd990180b9b49b91edb50179d22ca",
       "route": "/sv/verktyg/kategorier/kok/olje-roekpunkt-matare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/omskalning-ingredienser/": {
-      "hash": "abecbe26dc7bc6ab59a8d239c952bba1f61ed37851afc91521935d641e5daff0",
+      "hash": "275e194b68e821471489277e1b066ecfefd7cf7aca389cacfc02cedd0c2772c5",
       "route": "/sv/verktyg/kategorier/kok/omskalning-ingredienser/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/omvandlare-amerikanska-koksenheter/": {
-      "hash": "e98a0b1da1b75455215532667e96e26f0e4a232d18135a80d1d6c6ee10b99e16",
+      "hash": "6cfaaf69ec03ceabcfdcc694a10cfb4c9de2ca423995b31b386210910e3ed96f",
       "route": "/sv/verktyg/kategorier/kok/omvandlare-amerikanska-koksenheter/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/pann-guide/": {
-      "hash": "8c0e36559344440ac5b008900f0dd894160344e8a6d32996eb76af2a80259e0a",
+      "hash": "6be66efe809a734de82b71b6f00afc31d858f21c7e5895a53e67c3d28d7ac331",
       "route": "/sv/verktyg/kategorier/kok/pann-guide/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/pektin-sylt-installningskalkylator/": {
-      "hash": "018ddbd18628f34cc9d9356078164c2ea1d1fbe04df0c58876137f106bc3cbf5",
+      "hash": "96e6527095388d47098338b6644eab2311d07d8a22a49faddf7957c3181c604f",
       "route": "/sv/verktyg/kategorier/kok/pektin-sylt-installningskalkylator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/saltlake/": {
-      "hash": "b49b5d35b545934e0dc9f13a92c63cfaedefab0eaa4070d4af410de9dde629e6",
+      "hash": "6b0ab9b1a106b12ac722e33f44ab0b83573dad4ce4b8279e8827ab614a4039c0",
       "route": "/sv/verktyg/kategorier/kok/saltlake/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/sferifieringsbad-kalkylator/": {
-      "hash": "d141d8d1f7793ff8929dc92d45809da467febd4c9f9f922ac485be0959fcf35a",
+      "hash": "6edbcb761ba7a08a053a27bcf2bdc60101150f4d3da1c4cf41230e2c8843350e",
       "route": "/sv/verktyg/kategorier/kok/sferifieringsbad-kalkylator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/sous-vide-pasteuriseringskurvor/": {
-      "hash": "7f2b9b248d492c06e5a7b8aff90748ff1226e5a079dbb2887bedb9cd0f7b272d",
+      "hash": "4536df9be5890330cf02595ed5f5e53dd25b0bdf6b7570a73ca35e3413b79d44",
       "route": "/sv/verktyg/kategorier/kok/sous-vide-pasteuriseringskurvor/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/surdeg-kalkylator/": {
-      "hash": "a78305312f964de46474b88513a7d68641195dc85d0666f2f2e612e02411455c",
+      "hash": "57422ea10e46c12cb4976eade6b2589222f8d4609ab0470a2e960f2584a0c119",
       "route": "/sv/verktyg/kategorier/kok/surdeg-kalkylator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/syraneutraliserare-bakpulver/": {
-      "hash": "fef60c5595f176bcf4d2a4497b0256677eeb8eb8bd88fd2c1b23cac5276fc5bc",
+      "hash": "fb05aa5223b8e22142cddcec1afbbd6d6d1fee16ff688bfefaac41a27584b5c5",
       "route": "/sv/verktyg/kategorier/kok/syraneutraliserare-bakpulver/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/tillagningsprediktor/": {
-      "hash": "a362f99fd6aef970ae2e50f5691817ab20684c9f958d682d080932f8f0143110",
+      "hash": "b78f481e0a941b86a2e12ebd1c239601034402ada3f84a211df27bb051ba9562",
       "route": "/sv/verktyg/kategorier/kok/tillagningsprediktor/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/kok/transglutaminase-kottbindare-kalkylator/": {
-      "hash": "30302b323b60a98d94626b9cfff8a5ed489bd0ddc5a6da7b82c70ea5a09fb732",
+      "hash": "9473474c477cf1f97798e9463c0956f44289e8cd8fbfd21f0180f397736725d2",
       "route": "/sv/verktyg/kategorier/kok/transglutaminase-kottbindare-kalkylator/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/amerikan-mutfak-olculeri-donusturucu/": {
-      "hash": "6791178bce1b3179d23309c1e970e95d4569e491a87e881976fb1a6e9d09f827",
+      "hash": "284ad988f6bd3aac6a420d5f0bd746e1a2bcd314abdf15e8ae3a03f3f4d07ac9",
       "route": "/tr/araclar/kategoriler/mutfak/amerikan-mutfak-olculeri-donusturucu/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/asit-notrleyici-kabartma-tozu/": {
-      "hash": "62ff078a6728236f58f1b212ee25cc80c592b6bfa8fb4359f3e925bd2704e55c",
+      "hash": "f7fa821c7c9d84a594881f1436fe054ef61bacd2c653face17299f4afd9ad5ce",
       "route": "/tr/araclar/kategoriler/mutfak/asit-notrleyici-kabartma-tozu/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/beze-kar-beyazi-hesaplayici/": {
-      "hash": "5df0006a6db48e8dde053a50ab60b17c1aa6c4ac30bd1ce02bac9b48f22a55d1",
+      "hash": "57a71a20cc9a2c50f9d2b61efdb946deacd916b2c3892e0df88a509daa34b905",
       "route": "/tr/araclar/kategoriler/mutfak/beze-kar-beyazi-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/botulizm-konserve-guvenligi/": {
-      "hash": "3462c95e3d6f9c631a098897978497ffb48b632f62c6a926ba239c5db9fc7eb0",
+      "hash": "745cdd4db8eb9a00141b9d555a5bac55a16c87b037f06f1a7f3b943fccd10df0",
       "route": "/tr/araclar/kategoriler/mutfak/botulizm-konserve-guvenligi/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/brix-sorbet-yogunluk-hesaplayici/": {
-      "hash": "b228205e4f8fc060fbc114e2a98b9fb319830bcf77bebaeb12da780697e26b0b",
+      "hash": "69f063986c1c824fa1218e15e09d04a832765b2982b07695eedf669ebd4ce016",
       "route": "/tr/araclar/kategoriler/mutfak/brix-sorbet-yogunluk-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/cikolata-temperleme-egrisi-kilavuzu/": {
-      "hash": "92bc4a87afdeffbdaec9f70dba7ef43a156b055fc7fdd02e485d75d6f53be48f",
+      "hash": "2c3f8cec8fe3434634cbf00a0f90795e187ac567db3ddb6edcaf58ff4fb289af",
       "route": "/tr/araclar/kategoriler/mutfak/cikolata-temperleme-egrisi-kilavuzu/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/dehidrator-nem-tahmin-edici/": {
-      "hash": "2517a8c25813bbfa348b115d6d5f1d05e6b599cb3b565d3e912a3dcd898d4307",
+      "hash": "c7447fa326aac0a781289e36f429ef67bf0bbc4cb0401008483d6d8c346f1302",
       "route": "/tr/araclar/kategoriler/mutfak/dehidrator-nem-tahmin-edici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/dondurma-pac-pod/": {
-      "hash": "7fbbd8e4f41279efce1b9c107c9bf22f82a76e7c35e952f0656a75ecae7fc6cd",
+      "hash": "2d7ff399b3d33cf3e4e880c8109e5a0c0de5fe50aa542c7df1742079d7db3851",
       "route": "/tr/araclar/kategoriler/mutfak/dondurma-pac-pod/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/eksi-maya-hesaplayici/": {
-      "hash": "8e1466a793b53d38de86cd8982f66bffb41875911b147e5eb4d56baaff545a23",
+      "hash": "1eaa206d791e3e8606d8fd24b9d68dec7b778f8d20c83f72ff27936df7411f6a",
       "route": "/tr/araclar/kategoriler/mutfak/eksi-maya-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/emulsiye-stabilitesi-hesaplayici/": {
-      "hash": "9f634bf5602fe7a8a032d43833b93827c9bbe4192a28dc8c6d85dbbc25efe75d",
+      "hash": "7658bf91905cb2fa5c62a9872254465787b639f65ebf3df81c4f155ff375a58a",
       "route": "/tr/araclar/kategoriler/mutfak/emulsiye-stabilitesi-hesaplayici/"
     },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/gida-guvenli-sicaklik-kontrolu/": {
+      "hash": "3cfc8bcdb610ee2c7b729399f125151aa303cb0359649f972a3f55945cfc2317",
+      "route": "/tr/araclar/kategoriler/mutfak/gida-guvenli-sicaklik-kontrolu/"
+    },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/": {
-      "hash": "95a3c05532ebe1c452a833ab71ae6b29d8ba8476058258462a7897fafd9e23a5",
+      "hash": "6b729605a0023225f3cfaec203f5b1254a81179d8f8658d5fa58bb507243b39d",
       "route": "/tr/araclar/kategoriler/mutfak/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/kek-kalibi-donusturucu/": {
-      "hash": "75a9bd9f0c1c5c23f6e01f741b0ba92906dc6e1a796d227c127c4d9fae77558c",
+      "hash": "308291c62927b0502750f830dd6c0e7c055f6e9b00f46762e789f22ce8ad2a2a",
       "route": "/tr/araclar/kategoriler/mutfak/kek-kalibi-donusturucu/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/koji-asilama-hesaplayici/": {
-      "hash": "d09ef5aecba5aa30c2bbcf08716ef52641c6a74b0eff84868636152c11db36b0",
+      "hash": "b89236507f49604ebe8187be017a2def2d4d318f37c41e089c646b78698648ff",
       "route": "/tr/araclar/kategoriler/mutfak/koji-asilama-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/kurelestirme-banyo-hesaplayici/": {
-      "hash": "637884ee6bd6000c08608f8bbeb119846e844724b05e86ee30c324757bb4b92c",
+      "hash": "fa065009610f972b5a3b3783b61648fda212a5411b7fa9ba0167b6ddab8ed4c3",
       "route": "/tr/araclar/kategoriler/mutfak/kurelestirme-banyo-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/kuru-dinlendirme-et-hesaplayici/": {
-      "hash": "5aaff12bfdf851cd06c7862464c6c17e9b939f56d1ca12685d6d8b85c317975a",
+      "hash": "f855282d2c4039912478f04a96a403a7b7fe5720d61b0a40a8863e23dd3d8df1",
       "route": "/tr/araclar/kategoriler/mutfak/kuru-dinlendirme-et-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/lakto-fermantasyon-tuz-hesaplayici/": {
-      "hash": "b605c434d9de54f20beda13388e36aeb06c94c42246ae87433e0b235d4d10c71",
+      "hash": "65ed268f119c9c312cf664b0ff315c0d822474f6b53c40aaf17927cec338454e",
       "route": "/tr/araclar/kategoriler/mutfak/lakto-fermantasyon-tuz-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/maillard-reaksiyonu-optimize-edici/": {
-      "hash": "cee2807053ea2613216e6476ae44cb7c1ccee35f63f5bf8b2387302f08815bfa",
+      "hash": "0af09c52005f8896ace9f279e9079feab1bf33ddba6906d31f528ba762e14446",
       "route": "/tr/araclar/kategoriler/mutfak/maillard-reaksiyonu-optimize-edici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/makaron-kuruma-tahmincisi/": {
-      "hash": "6272b82562ced473ec6617f923ca7545d9e144b481dfd0c9c5eba5363a75c8a6",
+      "hash": "12c97fa596ff78b3d6cbb20d971727ae619c6e1797b21986ef71207794e340b5",
       "route": "/tr/araclar/kategoriler/mutfak/makaron-kuruma-tahmincisi/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/malzeme-olcekleyici/": {
-      "hash": "d1ba2e6110a723db3188082cbb741f9dfadbd74fb4a1061dfc60531dd76be22e",
+      "hash": "053da148810a254f8465706a3ac41e6d0fbf5ab490cb6b142bd946b74d892aff",
       "route": "/tr/araclar/kategoriler/mutfak/malzeme-olcekleyici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/maya-donusturucu-yas-kuru-eksi-maya/": {
-      "hash": "1eaf0603347cbf89fe3f8691fb73dfd446d7b74f2aa1f63b883bd6eebb726cf9",
+      "hash": "176ec597c97dc918243587ea40dd50c446110ba405d6b3fcac67faee30c3dfd5",
       "route": "/tr/araclar/kategoriler/mutfak/maya-donusturucu-yas-kuru-eksi-maya/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/maya-fermentasyon-suresi-hesaplama/": {
-      "hash": "17a8f14e8dbe8dc998cf79a79049f6fbfcd69076f80e1aeb056b2069900773be",
+      "hash": "66985dd0a005c3203f5eb575e5c45d896ab80fa10d543e9a9e85cb599b32d871",
       "route": "/tr/araclar/kategoriler/mutfak/maya-fermentasyon-suresi-hesaplama/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/meyane-rehberi/": {
-      "hash": "20920dc6da5390bea263a2ff498e18f54db1765274eff0e545fce4997c0435d4",
+      "hash": "4db5c11c50f42003b048534f9153cd77ec40d83c2a4282920b3baababc79b300",
       "route": "/tr/araclar/kategoriler/mutfak/meyane-rehberi/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/mutfak-zamanlayici/": {
-      "hash": "2528b2264dd0bb8696e58c36c64546d4cb4799cd04897677324e5235229086f5",
+      "hash": "4412ba1db732d8a6626da11ac8fca2ae1a9a46f5a0c6a5597f050f9f1d81cbd9",
       "route": "/tr/araclar/kategoriler/mutfak/mutfak-zamanlayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/muz-teshisi/": {
-      "hash": "b06acffa6fa31bd8d3dcc83a4f1be1fdf2b4bfda7c5529a95cd6c2691cace3d6",
+      "hash": "bccd4c8d14e73ecedc2b336287cdf67049ed0f9a814c61c35b0707c11c0c36a0",
       "route": "/tr/araclar/kategoriler/mutfak/muz-teshisi/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/napoli-pizza-hamuru-hesaplayici/": {
-      "hash": "93eee2c2628b089f28a551398add3247c84a29d5a7da77038c07ba324df2dab4",
+      "hash": "b6ea317efdc2275f235883acf877af76a3811bcd9b11dff086b8fbc3ac4f5abc",
       "route": "/tr/araclar/kategoriler/mutfak/napoli-pizza-hamuru-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/pektin-recel-ayar-hesaplayici/": {
-      "hash": "f59cd8a2c10a3e400de79d772f831186bec7c8f489535b6d92da8fd6d25521e2",
+      "hash": "cef501c19dd950184aaf6e0fdd9d567f313fb2dd22aa780cb4f9984d239730c8",
       "route": "/tr/araclar/kategoriler/mutfak/pektin-recel-ayar-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/peynir-puiltilasma-carpani-hesaplayici/": {
-      "hash": "a88b6d22c519a8c2bd3e2bc5d7d02b4efcbde1e704cf7d80af4587785a3044b4",
+      "hash": "ab8cfbd3d0ff3501056481b18ace288ccfd8338b71aaf0e64cdb1e2718453780",
       "route": "/tr/araclar/kategoriler/mutfak/peynir-puiltilasma-carpani-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/pisirme-tahmin-araci/": {
-      "hash": "7627902394c7b0feb557fa63459fa27d6e49f5ef5c21d423541a5f0e48478cbf",
+      "hash": "e513600c0d9dfdfc6cc86687ecbc4f2adb03af0a514f4b7ea4312d4ad5e67186",
       "route": "/tr/araclar/kategoriler/mutfak/pisirme-tahmin-araci/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/salamura/": {
-      "hash": "453245ce1d424f3206b62326eca9af3ac2ac8e35d83ecf0d210595a85561d1e9",
+      "hash": "11e0c02552bd7e4a2d4e24817f621e71473d76447cdb3e66c46fe39b60988f29",
       "route": "/tr/araclar/kategoriler/mutfak/salamura/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/sous-vide-pastorizasyon-egrileri/": {
-      "hash": "bfae13834a4e4c3fae4773b1d4c42b2e1b9c4f77662ea3e9daed2638e2a12c5b",
+      "hash": "9a960ed9dd18db3eb8036fafad2f737c6668d503bc6d8296ed8c5df0366261a0",
       "route": "/tr/araclar/kategoriler/mutfak/sous-vide-pastorizasyon-egrileri/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/tava-rehberi/": {
-      "hash": "23165d5b9ab24841b327c8aceb06f268bbf0e9b6e5945d41cf50f55a37789e61",
+      "hash": "df2649eb87b2cb7aa9b839835f8a0ffca676e8e6e7383b2a3210c54d3e8eb921",
       "route": "/tr/araclar/kategoriler/mutfak/tava-rehberi/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/transglutaminaz-et-baglama-hesaplayici/": {
-      "hash": "da11b1eb061971c2a36bbd909a67a1da85666c2cc4d6f2de7c941af227b369bf",
+      "hash": "91064cd09fcf02dbb4ab485d06c045e5341aca937be7a9555b10934f0b117b90",
       "route": "/tr/araclar/kategoriler/mutfak/transglutaminaz-et-baglama-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/yag-dumanlanma-noktasi-takip/": {
-      "hash": "dda7693696d251c9160584613ad1085fda336a36c0493eb0437584593c689a07",
+      "hash": "9c78ce4dcc24207def690b25f0395430951e8f5f25542b1b107258dcd017f52e",
       "route": "/tr/araclar/kategoriler/mutfak/yag-dumanlanma-noktasi-takip/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/mutfak/yumurta-zamanlayici/": {
-      "hash": "b7b026e7690a31eb439d8247cc90b7bf6dbb5d43cd36eee849f687727c65b2e6",
+      "hash": "31f07369ea4d93749bce5a85a3adef76de4173bd229dbe60052d4134f33bc3c4",
       "route": "/tr/araclar/kategoriler/mutfak/yumurta-zamanlayici/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-bano-esferificacion/": {
-      "hash": "008a734737a2ed93368dad0299fe3d74fe10edffb9a12df3941cbbc3e209e30c",
+      "hash": "5505988db5e0b67e3bbc29ca9524179ce42cb88b2038c6684e4d09a4765cdb9e",
       "route": "/utilidades/calculadora-bano-esferificacion/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-densidad-brix-sorbetes/": {
-      "hash": "4d2499d35c5453923c3e0bd192c3447deef6b6a94bb0c625dcbf2031359f7143",
+      "hash": "a81a31119a8a31a9d9b65ce42e5fc055b234ab69ee6bc23e0827c958d5718978",
       "route": "/utilidades/calculadora-densidad-brix-sorbetes/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-estabilidad-emulsion/": {
-      "hash": "10f9dc847ef1f8c2440298400226f9254f292d4f6859e6d692f80d18ff493364",
+      "hash": "35871ffa0044fb3e3ee9b3ef06368dd0458a64fb517b1def9adba7a6db79016f",
       "route": "/utilidades/calculadora-estabilidad-emulsion/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-inoculacion-koji/": {
-      "hash": "7005e8332ca6d8e29f99f6fcc1fb55e230c88c54389ff08cc34b0138737b2241",
+      "hash": "e632c3f0db99830ab4ec39904525e86a29b45096c8eff849ff8ce2ca26e43e42",
       "route": "/utilidades/calculadora-inoculacion-koji/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-multiplicador-floculacion-queso/": {
-      "hash": "44cbc1d7c7618e4cf1d59d0487d66a5a4351b1e9a8db5d3c987159ec08d26705",
+      "hash": "9e1505fa1e6520fa7af3335718a60565ed3494c3dbec1a0627926f04c54cba78",
       "route": "/utilidades/calculadora-multiplicador-floculacion-queso/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-pectina-mermelada/": {
-      "hash": "9d0d91210e3dfab917beaf0cc0f8bbc70842d53571576fec84d879c79de73aac",
+      "hash": "02b4ac21561ea3d2ec0d1d2297a02185b95918014bf8afd85107af2ab9545b8d",
       "route": "/utilidades/calculadora-pectina-mermelada/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-punto-de-nieve-merengue/": {
-      "hash": "d502257c5dd4432c9a344aed9586811ff2a9c654d538c1e1d953272823e23d3d",
+      "hash": "39d0d1cafcfb0921fdc5f756df86b13f5a1918f6df1df019babdf99b2b020384",
       "route": "/utilidades/calculadora-punto-de-nieve-merengue/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-sal-fermentacion-lacto/": {
-      "hash": "db28e28e9a43479b2c0459080467193aa426585112597c674de5bd09a4837330",
+      "hash": "7ca9612aa16301e5c301614477eeb28ca22922666cd8abbcd5d70d744ab231c3",
       "route": "/utilidades/calculadora-sal-fermentacion-lacto/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-tiempo-fermentacion-levadura/": {
-      "hash": "fd4a7e8a8e0ceed106ddc04de1da2a759849a6b832b3dbd82800e3fb32b2198c",
+      "hash": "b6cdc3e6f78f548a4c667b6a40fb010fd080200b97070d466ca7c1b8ec0273e1",
       "route": "/utilidades/calculadora-tiempo-fermentacion-levadura/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-transglutaminasa-pegamento-carne/": {
-      "hash": "c1b9b0a99b25c7a5bf6598d949a3f405647cbce879f3196385df53f3245f8642",
+      "hash": "f05573c390cfd2f792dc13be9886090da6cfaf797331f2267eb3bbb592fddff3",
       "route": "/utilidades/calculadora-transglutaminasa-pegamento-carne/"
     },
     "https://www.jjlmoya.es/utilidades/categorias/cocina/": {
-      "hash": "f741b90a49a3cfb81eada0b1febaadcfe109a02db5b429062d491895c069c603",
+      "hash": "95c7c2c758e6fda55444c8b59a5d8f7b565a4052aa69eb13e25c7648119f1109",
       "route": "/utilidades/categorias/cocina/"
     },
+    "https://www.jjlmoya.es/utilidades/comprobador-temperatura-segura-alimentos/": {
+      "hash": "cc8061131fc912f7d8aeed13424d83c126250949ece51f8830eefadd22b6c257",
+      "route": "/utilidades/comprobador-temperatura-segura-alimentos/"
+    },
     "https://www.jjlmoya.es/utilidades/conversor-levadura-fresca-seca-masa-madre/": {
-      "hash": "9cd853c480748409f257e923d51d73ca919595e808352cfd93a92a35269d03d5",
+      "hash": "fbb7a48e77dafdbba8301317d43a2795aa2b7a94ba1b43de3b184739caa0172f",
       "route": "/utilidades/conversor-levadura-fresca-seca-masa-madre/"
     },
     "https://www.jjlmoya.es/utilidades/conversor-unidades-cocina-americana/": {
-      "hash": "0d77f59217ab49b38a4251d249c30488259786143ebbf52dc43d5c26215bbe4d",
+      "hash": "82f57cf92016b928edc41e7591075ed38513028971cc8568f85c810cfc565219",
       "route": "/utilidades/conversor-unidades-cocina-americana/"
     },
     "https://www.jjlmoya.es/utilidades/curvas-pasteurizacion-sous-vide/": {
-      "hash": "7755711f6c17c2e659b3a219b1d17a53722d9789ab1f5edaae1db57828263ef9",
+      "hash": "cb4f0b79bd7e04e2be0463ca181e8e3d49438c22350ce2c38a4b685be108557e",
       "route": "/utilidades/curvas-pasteurizacion-sous-vide/"
     },
     "https://www.jjlmoya.es/utilidades/diagnostico-platanos/": {
-      "hash": "8508784d1aaddfcdd1e7b06093076bdc7e60ade6fc8474e2996bb5a3ffe8172f",
+      "hash": "ed593f176aaa3ff8d0361c7109ccdb7a8c7dd2195f617e0b28af8042c03cde2e",
       "route": "/utilidades/diagnostico-platanos/"
     },
     "https://www.jjlmoya.es/utilidades/estimador-humedad-deshidratador/": {
-      "hash": "ec4543582d6700cb63f0ae09540b0c66f382d6da69fbad5c876447c47caff87f",
+      "hash": "91b12791cc1cdff9ad0a6c1ccae4baa985e9f75d01188083611b856e4acde2a0",
       "route": "/utilidades/estimador-humedad-deshidratador/"
     },
     "https://www.jjlmoya.es/utilidades/estimador-maduracion-carne/": {
-      "hash": "1763a0b0ae25450011c4bc25cfd661f1ea778ae7134d286f83ec3f35d7efc8d2",
+      "hash": "ae1c254f78379a614c69365c35210b6052a6f332de1879379e72d06e1e683d02",
       "route": "/utilidades/estimador-maduracion-carne/"
     },
     "https://www.jjlmoya.es/utilidades/guia-curva-templado-chocolate/": {
-      "hash": "236a28c3de161eca2d80e89b08d2eada01bf1730d3dd9e13f216c9ddc8ff5a03",
+      "hash": "f79dbf48c93b1a872ce1bed584151a85463ebd8171d4a59187937ae1f5af2d9d",
       "route": "/utilidades/guia-curva-templado-chocolate/"
     },
     "https://www.jjlmoya.es/utilidades/guia-roux/": {
-      "hash": "1c4bb2ab861bcaff43916048c18219aed567ef1327786a16b93a952d5676b4f8",
+      "hash": "2f3eb902c0677625ed32ed884b08914e80b6876569fb9615692ab43377673adf",
       "route": "/utilidades/guia-roux/"
     },
     "https://www.jjlmoya.es/utilidades/guia-sartenes/": {
-      "hash": "bd8898370c3e6f65abdb301fd32cc300777d5a4d2a4f5ccac4e3c2bb003f918f",
+      "hash": "1c370d2e9e8166cd7f3cf554149ef8c6ccf998c6315fba9df2563c212a2a560f",
       "route": "/utilidades/guia-sartenes/"
     },
     "https://www.jjlmoya.es/utilidades/helado-pac-pod/": {
-      "hash": "024040e553a98bc9b76cd6d21ab2d5c6347ff14747edfafcdb08926cd6913c25",
+      "hash": "ea311c3ffbef0b370c7cb098676c3c134287ee38901f0d6264e6f78a20d82a1b",
       "route": "/utilidades/helado-pac-pod/"
     },
     "https://www.jjlmoya.es/utilidades/huevos/": {
-      "hash": "d8776482963a03e95adfec0a61d186b7461079830094065a77ea42cd72397a01",
+      "hash": "4a64e93514f202edb96e19d63d9fecb0d8fd92e37eba7d3ae834a775e2356b05",
       "route": "/utilidades/huevos/"
     },
     "https://www.jjlmoya.es/utilidades/masa-madre/": {
-      "hash": "094ac393f4e354085e98750cbb08a100e33d145aae4273fd74a041d6d4a57f26",
+      "hash": "a49b00b20c46d83f752dc34ccf533eff3fab2a1bb826c81cc7b250811fbb292d",
       "route": "/utilidades/masa-madre/"
     },
     "https://www.jjlmoya.es/utilidades/moldes/": {
-      "hash": "58e63fffb16c02368a7ec586d96b3ab92ceae730f00616f9acc82eac03e73f37",
+      "hash": "6e7bf778ba1257f34c1164590ebc95948abfba8c2ed444c108f29e89dfc1e8b9",
       "route": "/utilidades/moldes/"
     },
     "https://www.jjlmoya.es/utilidades/monitor-punto-humo-aceite/": {
-      "hash": "c2ff7b6795730e4005fedc7f92d532959fc5f1d7d87ebdfc8c6f12457dbad900",
+      "hash": "a1b968c050fd3722e21760e27836b32baec7b47a921d05b251a5fc4cfdaf6ba2",
       "route": "/utilidades/monitor-punto-humo-aceite/"
     },
     "https://www.jjlmoya.es/utilidades/neutralizador-acido-levadura/": {
-      "hash": "c8261bfb8f381b3479ff1796b2cad48d207819a2d2c8c2a0d18d058822ea2721",
+      "hash": "1d0acd44077b390274d588cab2b58160c01ba84ddf0e70072b0f5c56f76635d5",
       "route": "/utilidades/neutralizador-acido-levadura/"
     },
     "https://www.jjlmoya.es/utilidades/optimizador-reaccion-maillard/": {
-      "hash": "d65d03773479d32375ceea1f593ca914b9f2b168d60a4364f4e90651d73fd633",
+      "hash": "9745fe1e489f61960cad7ea2dfc0502e7b528c5fc3346c9a00aec27b11d924c1",
       "route": "/utilidades/optimizador-reaccion-maillard/"
     },
     "https://www.jjlmoya.es/utilidades/pizza/": {
-      "hash": "b44f46b583b585c920a9dd7783fa45182ace100e9003be3298cf8196c6949fd1",
+      "hash": "caebad959a27fc1430d432aaf06c4c9961a49a0463f07074f1b2a99ed3fc6192",
       "route": "/utilidades/pizza/"
     },
     "https://www.jjlmoya.es/utilidades/predictor-coccion-residual/": {
-      "hash": "f985595d9539d8881b12086622c1325e0231b3d7463563d08d7d52b8a67fca7d",
+      "hash": "1f531732c38837ea7cfc9dbc156a412ddb268c0f810f20662656f51205a36e20",
       "route": "/utilidades/predictor-coccion-residual/"
     },
     "https://www.jjlmoya.es/utilidades/predictor-secado-macarons/": {
-      "hash": "7471145b04c4785ad90c0cedf609aba98cf2633651c71f64233a2ddd0968c516",
+      "hash": "033dff26be332ef7d9286870c9a666cd0bd9cf7c23de1e3f7308bd0d6f422e2b",
       "route": "/utilidades/predictor-secado-macarons/"
     },
     "https://www.jjlmoya.es/utilidades/reescalador-ingredientes/": {
-      "hash": "04332dc77f62cbc0254cd99f253074ba9ce0b1318c3d053edce5ae1af8439b5a",
+      "hash": "47a025af2aad6f8e66cfebc7e7863776976a014da326969eb1da6153f61e9c1c",
       "route": "/utilidades/reescalador-ingredientes/"
     },
     "https://www.jjlmoya.es/utilidades/salmuera/": {
-      "hash": "6a8a9d7caeb174db5000b213ed7ec3edb9d5534cbabb0b0ea28f672bcf4f33cd",
+      "hash": "3b04845e2d49e3bcb8ffc6029e69e045bf34aa6865dbab64070068a8185e43fa",
       "route": "/utilidades/salmuera/"
     },
     "https://www.jjlmoya.es/utilidades/seguridad-conservas-botulismo/": {
-      "hash": "0e68c32d0620d202010dc6240d6b7773c32accc5c1ab67e8844caeb78fae3a00",
+      "hash": "e396ba51aa23b7f66aceab7f27ce6468b4e07321eeef8fbe3954663b3a3f1e78",
       "route": "/utilidades/seguridad-conservas-botulismo/"
     },
     "https://www.jjlmoya.es/utilidades/temporizador-cocina/": {
-      "hash": "ed422c4d0e1a42aec64a01bdd5bf40c0a8027612649321ccfd7cd0f4163a8673",
+      "hash": "46eef126eb7c3030c087702738e3f7e205aa4d8d25789e38b6e1078cec46c010",
       "route": "/utilidades/temporizador-cocina/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/banana-ripeness/": {
-      "hash": "11d9f9009e8d494327e8dbd9661145f97ce58957b8d167843185da71a82f720d",
+      "hash": "19213b4459c6645d954c25d3c6fa3257ad1bde61c7b21839ccf6595ad57d4fc9",
       "route": "/zh/utilities/categories/cooking/banana-ripeness/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/botulism-canning-safety/": {
-      "hash": "d442cfc405d12947ce603059369ff9739835ad2110d6e65ba3390bf651224962",
+      "hash": "fbeddeebfb581f2eac62b4bc22beb4187357cb74f86bfb3995a2396b1f1bc780",
       "route": "/zh/utilities/categories/cooking/botulism-canning-safety/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/brix-sorbet-density-calculator/": {
-      "hash": "2d1a35c76c7c37fe0f02fe0d1e537e88685bada09a0f9c338f0209a069104074",
+      "hash": "c515061c07794552ad4e74891d3db0e4f660f3abda731f89fcf23d02d7a81284",
       "route": "/zh/utilities/categories/cooking/brix-sorbet-density-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/cake-pan-size-converter-calculator/": {
-      "hash": "32bf4cf42696e8ef2e466e14087fc43061f6377b7d8129715a17a1d703890223",
+      "hash": "965842dec4a9858e6ef924353bbcf0e22ac263dcc53fc94ba72579e46d3a73c6",
       "route": "/zh/utilities/categories/cooking/cake-pan-size-converter-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/carry-over-cooking-predictor/": {
-      "hash": "4a43071fcca032e17ef992865d36cbfca09e3755f0552b9838b6a27bdec7ec7f",
+      "hash": "96217a184f6098da4e29119ea9a09a21172dfbd88f30a751402419b58a718e90",
       "route": "/zh/utilities/categories/cooking/carry-over-cooking-predictor/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/cheese-flocculation-multiplier/": {
-      "hash": "8e6163dd8f7b8d3636040d5a950e9fe8646d34ca790ff1b7aac272178ecb3984",
+      "hash": "eee645e5e3252d2fb12babd99b230922a19216cf6a4dfe6c8cc292a8417c3dd1",
       "route": "/zh/utilities/categories/cooking/cheese-flocculation-multiplier/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/chocolate-tempering-curve-guide/": {
-      "hash": "263baea844d73bfe0b779a394106b542c49bccd685941c06c8be60b5b99da216",
+      "hash": "eb669392ad809e172886f2e2981fd03bdc6a42a94699aac8f12aa70620261eb4",
       "route": "/zh/utilities/categories/cooking/chocolate-tempering-curve-guide/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/cookware-selector/": {
-      "hash": "3d527ce1287c8f0a0181e421c449717aa871fc8167fd99c030dfaed9b52f91af",
+      "hash": "34793034ce997af121b46ee1e6cff37da1ce6dacce43ddccb97e8fe020bf3661",
       "route": "/zh/utilities/categories/cooking/cookware-selector/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/dehydrator-moisture-estimator/": {
-      "hash": "09cb7f86f2539c4fb75018effd3a31f485f6c1f333d27430789846aab99d7988",
+      "hash": "8a8771eda03a9bb6029e683f81b65f53d22c0bbda3222a4fd7f23f49bbf6ef34",
       "route": "/zh/utilities/categories/cooking/dehydrator-moisture-estimator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/dry-aging-meat-estimator/": {
-      "hash": "aa18d97f8e5b6b825f2254d89519efd35cc642a6ec99386ce2411cee876f9327",
+      "hash": "f6fde7915dfeb2166546c7184fa821787a7430a4e4e8e4f9804ee252c59ec6ca",
       "route": "/zh/utilities/categories/cooking/dry-aging-meat-estimator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/emulsion-stability-calculator/": {
-      "hash": "e5adc064ed69e5fa0e1c8beaeb5f538ae6c9acc779ef878c3f2fde414c52315b",
+      "hash": "6c1943a3243024ef90b1d4c534758e2e525962c2d5d0f65dc68be1db75683f8c",
       "route": "/zh/utilities/categories/cooking/emulsion-stability-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/equilibrium-brining-calculator-meat-fermentation-ratios/": {
-      "hash": "857a8ffb83725900c59d88dcc5af7625a7ff860ac504cb72675d07d1ac929cd5",
+      "hash": "bf60f2b6cdb693aeeff74c849e33ca0e3815779a46f5da68ee9558defb6516f8",
       "route": "/zh/utilities/categories/cooking/equilibrium-brining-calculator-meat-fermentation-ratios/"
     },
+    "https://www.gamebob.dev/zh/utilities/categories/cooking/food-safe-temperature-checker/": {
+      "hash": "533b543e6ad5dafdb406ec52e7a0a57d82192a6c9b11a23e44e7a6234febc57a",
+      "route": "/zh/utilities/categories/cooking/food-safe-temperature-checker/"
+    },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/ice-cream-pac-pod/": {
-      "hash": "499e45c7b44982abad668863a12424309b726f3a40bc3d8a6198de909afe1d89",
+      "hash": "58adad71e398f5f8139cc6e9846dce6455074eae70ce91c0e710bebfd0371eb4",
       "route": "/zh/utilities/categories/cooking/ice-cream-pac-pod/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/": {
-      "hash": "7a5e936cae9fe124f98a7f4f20bbefe883315550864230312b13fdacaca54e44",
+      "hash": "a9f1ca8e5a0a7980346f2833727460f3fe094cf5e47956883a5764c4897b498d",
       "route": "/zh/utilities/categories/cooking/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/kitchen-timer/": {
-      "hash": "6dfafc41e36fba042bbd56ff181708f8035440178cbf9e33a472141a2732244f",
+      "hash": "0cbd6b5cf046b51dfadb4d1209ad019ffba115b6274cf0f3cfbf43e9d097e025",
       "route": "/zh/utilities/categories/cooking/kitchen-timer/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/koji-inoculation-calculator/": {
-      "hash": "dfa4dd81565fa3d22fb0fccac3e0a32db816e013a6ff6d952122ea4fa09801ef",
+      "hash": "0c86f0fee7eea4e41e75f62c311a71c62eb7642660c70dbfd7b55d1c4fc88bd4",
       "route": "/zh/utilities/categories/cooking/koji-inoculation-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/lacto-fermentation-salt-calculator/": {
-      "hash": "93d0741e08578d74e8a4132f6271fca4ed7d97ebad91c86c672d9ebf342c1329",
+      "hash": "4c4e9a7383005857d325b4b730ddec34624ecedef90f2009bbffae541c66118a",
       "route": "/zh/utilities/categories/cooking/lacto-fermentation-salt-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/leavener-acid-neutralizer/": {
-      "hash": "63c9c3170711c94eb64b85f4127c2468891ecdd695de11abe80598e079fa2749",
+      "hash": "ec7904a954d3d65a0583d7f70f2f8c2b3473dc2faea0fbef5439a77c603ec2e4",
       "route": "/zh/utilities/categories/cooking/leavener-acid-neutralizer/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/macaron-drying-predictor/": {
-      "hash": "712edc69caaeabe0cc99362188266173b93f372573d1f89b519e5e785e9e3b3e",
+      "hash": "fbcc24b964d328f26f79d35ab7299be108bbf039007aa1e5674a5b444d745f57",
       "route": "/zh/utilities/categories/cooking/macaron-drying-predictor/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/maillard-reaction-optimizer/": {
-      "hash": "0c5521a85ffefce30e8b4708927fe38df41385ca42ad68f9c5c31d94cf93d48f",
+      "hash": "42c440f815d86a976a927162d4b0c1a28d4e033cccd80a25988ccb6e35da78f2",
       "route": "/zh/utilities/categories/cooking/maillard-reaction-optimizer/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/meat-binder-transglutaminase-calculator/": {
-      "hash": "a14cb1726d864ee530f49f186cbd68e5f74155b45c135085bd49d3e52b3a492c",
+      "hash": "96b040e1e7b98e156cc1f9922d17f0e479954ecf3ae48ea64d58c544bc392907",
       "route": "/zh/utilities/categories/cooking/meat-binder-transglutaminase-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/meringue-sugar-ratio-calculator-stiff-peaks/": {
-      "hash": "7f53c1cacdd0ba4daa806753ed46023282ae231e0e91950c511af826da80f158",
+      "hash": "eb37703582e6178632c1a828eaeacbbaf16d5d7a09bb3f9aadcfa58ea19ff2a4",
       "route": "/zh/utilities/categories/cooking/meringue-sugar-ratio-calculator-stiff-peaks/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/neapolitan-pizza-dough-calculator-authentic-recipe/": {
-      "hash": "2ee5a0a10e3d4c06d169227af67235224abbb5ab625445ea674e547dca2e83cc",
+      "hash": "b8821aa4fed926a859023f101fa6a8ed0649d9a39dbe0395ea9586a501444455",
       "route": "/zh/utilities/categories/cooking/neapolitan-pizza-dough-calculator-authentic-recipe/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/oil-smoke-point-tracker/": {
-      "hash": "9dd78530d6da8f96a8f700d0a271a2dcd28a159ed61937f4dff141a88b5eeb2f",
+      "hash": "d3c29e396c06775d522a2e8d709aa56d701624012422986f875f68bcc6f18b6c",
       "route": "/zh/utilities/categories/cooking/oil-smoke-point-tracker/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/pectin-jam-setting-calculator/": {
-      "hash": "62c1d03450997a3cb837812a72868d8e85f93c0ce327a37e6af74702494425d4",
+      "hash": "1cdf8b4668d29afc76784942747dbb4ead821e7c2731f2aa5436327fd6bbd266",
       "route": "/zh/utilities/categories/cooking/pectin-jam-setting-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/perfect-boiled-egg-timer-altitude-calculator/": {
-      "hash": "b0330c0c21d74087c37a5c5eac5d400bf17d5d0cc5fb4758d2c091a772892015",
+      "hash": "7386ad412e701c8185127b59a368860fb19ac3f3d7ff11332fdca1cd9e3eeb40",
       "route": "/zh/utilities/categories/cooking/perfect-boiled-egg-timer-altitude-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/recipe-ingredient-scaler-converter-servings/": {
-      "hash": "e843bb88480a03c32adce333fd5484b8cfe4b384c3060a9fffd955e79825b2a5",
+      "hash": "776ffbdd6bd464baafc1789f103752e5f490a5342e424696a495f143df8b839d",
       "route": "/zh/utilities/categories/cooking/recipe-ingredient-scaler-converter-servings/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/roux-ratio-calculator-thickening-sauce-guide/": {
-      "hash": "ca2bca828fc5372cafe1b3bc366a52a0f677a45c9bf770908d1a31ee1c1fde89",
+      "hash": "2b43a11d884d3b3a30b864bdc1438596daf7c1661cc6c0248d5157c501c462a1",
       "route": "/zh/utilities/categories/cooking/roux-ratio-calculator-thickening-sauce-guide/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/sourdough-starter-feeding-calculator-ratio-proportions/": {
-      "hash": "98d073d8a6a2affaa154845afda54a080e099facadf47be1d37f3a0b3f7c0572",
+      "hash": "6186ba9bd3b6b2ceb3147c084c74b941d7d7317b0b81cec81bba6cfba5a3fc25",
       "route": "/zh/utilities/categories/cooking/sourdough-starter-feeding-calculator-ratio-proportions/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/sous-vide-pasteurization-curves/": {
-      "hash": "d4a1adc28a20b21628d81d235ab75c8bc23daa2a64cd64199a7963e40595cb7f",
+      "hash": "dd91804c8b7733b937f02f06c6a10c7afb9df172def5e747ff46c31b7aa08449",
       "route": "/zh/utilities/categories/cooking/sous-vide-pasteurization-curves/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/spherification-bath-calculator/": {
-      "hash": "dd11873249e8dd74fb442c82c0b80558513b7513d08409579f83dd7d8d710afc",
+      "hash": "1c49b664186e0ecbfea580efaedea396675b34793374c143c3134c9a0b9b7517",
       "route": "/zh/utilities/categories/cooking/spherification-bath-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/us-cooking-conversion-calculator-cups-to-grams-fahrenheit/": {
-      "hash": "354365d7d4af8a4716e408c889837495f65a8974e64b8b917a10fc288e32a2eb",
+      "hash": "80e71edcc26a2fac245b21e719bb9ddbcf2d323ce7c33c7b43ca3c88e5209107",
       "route": "/zh/utilities/categories/cooking/us-cooking-conversion-calculator-cups-to-grams-fahrenheit/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/yeast-converter-fresh-dry-sourdough-starter/": {
-      "hash": "33855f2e2521df350904003e1ad91e9cdb98f37cb1372e3c91a3f218c42ce3b3",
+      "hash": "c4c08a1fe14a0cd8862844bb9edc7a714dd26d5b6cd2dbd9d3ee1e5ea1dd83a6",
       "route": "/zh/utilities/categories/cooking/yeast-converter-fresh-dry-sourdough-starter/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/cooking/yeast-fermentation-calculator/": {
-      "hash": "99d9b69b7739e32eab554e6aa2326b4984b4492984da8edb703788d555bda3ad",
+      "hash": "89e3768ec87146a30f5b976f5d1e5534683da7e901edad863eef72aa40860186",
       "route": "/zh/utilities/categories/cooking/yeast-fermentation-calculator/"
     }
   }
