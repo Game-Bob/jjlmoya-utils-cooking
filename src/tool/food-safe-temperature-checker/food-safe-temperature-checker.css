@@ -1,0 +1,490 @@
+.fsc-shell {
+  --fsc-paper: #fbf8f2;
+  --fsc-surface: #fffdf8;
+  --fsc-ink: #28251f;
+  --fsc-muted: #777168;
+  --fsc-line: #e4ded2;
+  --fsc-green: #2f8f69;
+  --fsc-green-soft: #e3f1e9;
+  --fsc-amber: #bd7826;
+  --fsc-amber-soft: #fbefdb;
+  --fsc-red: #b94b3d;
+  --fsc-red-soft: #f9e4df;
+  --fsc-green-highlight: #8cbd72;
+  --fsc-red-highlight: #e09a5e;
+  --fsc-amber-highlight: #dfb44f;
+  --fsc-on-accent: #fff;
+
+  box-sizing: border-box;
+  max-width: 980px;
+  margin: 0 auto;
+  color: var(--fsc-ink);
+  background: var(--fsc-paper);
+  border: 1px solid var(--fsc-line);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.theme-dark .fsc-shell {
+  --fsc-paper: #141d2d;
+  --fsc-surface: #1b2739;
+  --fsc-ink: #f1f5f8;
+  --fsc-muted: #a8b5c7;
+  --fsc-line: #34455c;
+  --fsc-green: #36b982;
+  --fsc-green-soft: #173c38;
+  --fsc-amber: #e4aa55;
+  --fsc-amber-soft: #2b323b;
+  --fsc-red: #ef7168;
+  --fsc-red-soft: #41272c;
+  --fsc-green-highlight: #8dd7b0;
+  --fsc-red-highlight: #f0a080;
+  --fsc-amber-highlight: #f1cf76;
+  --fsc-on-accent: #10231f;
+}
+
+.fsc-eyebrow,
+.fsc-label,
+.fsc-stat span,
+.fsc-rest-row > div > span {
+  margin: 0;
+  color: var(--fsc-muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.fsc-results h3,
+.fsc-controls h3 {
+  margin: 0;
+  color: var(--fsc-ink);
+}
+
+.fsc-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.84fr) minmax(360px, 1.16fr);
+}
+.fsc-controls,
+.fsc-results {
+  padding: 1.55rem 1.75rem;
+}
+.fsc-controls {
+  border-right: 1px solid var(--fsc-line);
+  background: color-mix(in srgb, var(--fsc-paper) 88%, var(--fsc-green-soft));
+}
+.fsc-results {
+  background: var(--fsc-surface);
+}
+.fsc-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+.fsc-section-heading h3 {
+  font-size: 0.92rem;
+  letter-spacing: -0.01em;
+}
+.fsc-step {
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  color: var(--fsc-green);
+  border: 1px solid color-mix(in srgb, var(--fsc-green) 45%, var(--fsc-line));
+  border-radius: 50%;
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+.fsc-temperature-heading {
+  margin-top: 1.7rem;
+}
+.fsc-label {
+  display: block;
+  margin-bottom: 0.45rem;
+}
+
+.fsc-custom-select {
+  position: relative;
+}
+.fsc-select-trigger,
+.fsc-number-input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--fsc-line);
+  border-radius: 11px;
+  background: var(--fsc-surface);
+  color: var(--fsc-ink);
+  font: inherit;
+  font-size: 0.92rem;
+}
+.fsc-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 0.78rem 0.9rem;
+  cursor: pointer;
+  text-align: left;
+}
+.fsc-select-chevron {
+  flex: 0 0 8px;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform 0.18s ease;
+}
+.fsc-select-trigger[aria-expanded="true"] .fsc-select-chevron {
+  transform: rotate(225deg) translate(-1px, -1px);
+}
+.fsc-number-input {
+  padding: 0.76rem 3.8rem 0.76rem 0.9rem;
+  font-size: 1.1rem;
+  font-weight: 750;
+}
+.fsc-select-trigger:focus-visible,
+.fsc-number-input:focus,
+.fsc-unit-button:focus-visible,
+.fsc-select-option:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--fsc-green) 28%, transparent);
+  outline-offset: 1px;
+  border-color: var(--fsc-green);
+}
+.fsc-select-menu {
+  position: absolute;
+  z-index: 5;
+  top: calc(100% + 0.35rem);
+  right: 0;
+  left: 0;
+  max-height: 15rem;
+  margin: 0;
+  padding: 0.3rem;
+  overflow-y: auto;
+  list-style: none;
+  background: var(--fsc-surface);
+  border: 1px solid var(--fsc-line);
+  border-radius: 12px;
+  box-shadow: 0 14px 30px color-mix(in srgb, var(--fsc-ink) 18%, transparent);
+}
+.fsc-select-option {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 0.65rem;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--fsc-ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.86rem;
+  text-align: left;
+}
+.fsc-select-option:hover,
+.fsc-select-option[aria-selected="true"] {
+  background: var(--fsc-green-soft);
+}
+.fsc-food-note {
+  min-height: 2.8rem;
+  margin: 0.65rem 0 0;
+  color: var(--fsc-muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+.fsc-temperature-entry {
+  position: relative;
+}
+.fsc-number-wrap {
+  position: relative;
+}
+.fsc-input-unit {
+  position: absolute;
+  right: 0.9rem;
+  bottom: 0.8rem;
+  color: var(--fsc-muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.fsc-unit-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 0.6rem;
+  border: 1px solid var(--fsc-line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.fsc-unit-button {
+  padding: 0.6rem 0.45rem;
+  border: 0;
+  border-right: 1px solid var(--fsc-line);
+  background: transparent;
+  color: var(--fsc-muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+.fsc-unit-button:last-child {
+  border-right: 0;
+}
+.fsc-unit-button.is-active {
+  background: var(--fsc-green);
+  color: var(--fsc-on-accent);
+}
+
+.fsc-note {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 1.55rem;
+  padding: 0.8rem;
+  background: var(--fsc-amber-soft);
+  border: 1px solid color-mix(in srgb, var(--fsc-amber) 22%, var(--fsc-line));
+  border-radius: 12px;
+}
+.fsc-note-icon {
+  display: grid;
+  flex: 0 0 20px;
+  place-items: center;
+  height: 20px;
+  background: var(--fsc-amber);
+  color: var(--fsc-on-accent);
+  border-radius: 50%;
+  font-size: 0.74rem;
+  font-weight: 900;
+}
+.fsc-note strong {
+  font-size: 0.78rem;
+}
+.fsc-note p {
+  margin: 0.25rem 0 0;
+  color: var(--fsc-muted);
+  font-size: 0.74rem;
+  line-height: 1.45;
+}
+
+.fsc-results-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.fsc-results h3 {
+  margin-top: 0.25rem;
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  letter-spacing: -0.04em;
+}
+.fsc-status-description {
+  min-height: 2.4rem;
+  margin: 0.55rem 0 1rem;
+  color: var(--fsc-muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.fsc-thermometer-panel {
+  display: grid;
+  grid-template-columns: 34px 78px 1fr;
+  align-items: center;
+  gap: 0.8rem;
+  min-height: 180px;
+  padding: 0.9rem 1rem;
+  background: color-mix(in srgb, var(--fsc-paper) 88%, var(--fsc-green-soft));
+  border: 1px solid var(--fsc-line);
+  border-radius: 17px;
+}
+.fsc-thermometer-scale {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  padding: 0.2rem 0 1.15rem;
+  color: var(--fsc-muted);
+  font-size: 0.68rem;
+  text-align: right;
+}
+.fsc-thermometer {
+  position: relative;
+  align-self: stretch;
+  width: 52px;
+  margin: 0 auto;
+}
+.fsc-thermometer-track {
+  position: absolute;
+  bottom: 21px;
+  left: 15px;
+  width: 22px;
+  height: calc(100% - 42px);
+  overflow: hidden;
+  background: var(--fsc-line);
+  border: 3px solid var(--fsc-surface);
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 1px
+    color-mix(in srgb, var(--fsc-ink) 12%, transparent);
+}
+.fsc-thermometer-fill {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 70%;
+  background: linear-gradient(to top, var(--fsc-green), var(--fsc-green-highlight));
+  border-radius: 14px 14px 0 0;
+  transition:
+    height 0.25s ease,
+    background 0.25s ease;
+}
+.fsc-target-marker {
+  position: absolute;
+  right: -39px;
+  left: 25px;
+  height: 2px;
+  bottom: 70%;
+  background: var(--fsc-amber);
+  transition: bottom 0.25s ease;
+}
+.fsc-target-marker span {
+  position: absolute;
+  right: -3px;
+  top: -3px;
+  width: 8px;
+  height: 8px;
+  background: var(--fsc-amber);
+  border-radius: 50%;
+}
+.fsc-thermometer-bulb {
+  position: absolute;
+  bottom: 0;
+  left: 7px;
+  width: 38px;
+  height: 38px;
+  background: var(--fsc-green);
+  border: 3px solid var(--fsc-surface);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--fsc-ink) 12%, transparent);
+}
+.fsc-gauge-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.fsc-gauge-label {
+  color: var(--fsc-muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.fsc-gauge-copy > strong {
+  font-size: clamp(1.65rem, 4vw, 2.25rem);
+  letter-spacing: -0.06em;
+}
+.fsc-gauge-target {
+  margin-top: 0.4rem;
+  color: var(--fsc-muted);
+  font-size: 0.78rem;
+}
+.fsc-gauge-target strong {
+  color: var(--fsc-amber);
+}
+
+.fsc-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+}
+.fsc-stat {
+  padding: 0.7rem;
+  border: 1px solid var(--fsc-line);
+  border-radius: 11px;
+}
+.fsc-stat strong {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+}
+.fsc-stat-target {
+  background: var(--fsc-amber-soft);
+  border-color: color-mix(in srgb, var(--fsc-amber) 20%, var(--fsc-line));
+}
+.fsc-rest-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 0.85rem;
+  padding: 0.65rem 0.75rem;
+  background: color-mix(in srgb, var(--fsc-paper) 80%, var(--fsc-green-soft));
+  border-radius: 10px;
+}
+.fsc-rest-icon {
+  color: var(--fsc-green);
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+.fsc-rest-row strong {
+  display: block;
+  margin-top: 0.12rem;
+  font-size: 0.83rem;
+}
+.fsc-placement-tip {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+  margin: 0;
+  padding: 0.9rem 1.75rem;
+  color: var(--fsc-muted);
+  border-top: 1px solid var(--fsc-line);
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+.fsc-placement-tip span {
+  color: var(--fsc-green);
+  font-size: 1rem;
+}
+.fsc-shell[data-status="below"] .fsc-thermometer-fill {
+  background: linear-gradient(to top, var(--fsc-red), var(--fsc-red-highlight));
+}
+.fsc-shell[data-status="above"] .fsc-thermometer-fill {
+  background: linear-gradient(to top, var(--fsc-amber), var(--fsc-amber-highlight));
+}
+
+@media (max-width: 720px) {
+  .fsc-grid {
+    grid-template-columns: 1fr;
+  }
+  .fsc-controls {
+    border-right: 0;
+    border-bottom: 1px solid var(--fsc-line);
+  }
+}
+
+@media (max-width: 460px) {
+  .fsc-controls,
+  .fsc-results {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .fsc-thermometer-panel {
+    grid-template-columns: 28px 68px 1fr;
+    gap: 0.45rem;
+    padding-right: 0.7rem;
+    padding-left: 0.7rem;
+  }
+  .fsc-stats {
+    gap: 0.35rem;
+  }
+  .fsc-stat {
+    padding: 0.55rem 0.45rem;
+  }
+  .fsc-stat span {
+    font-size: 0.59rem;
+    letter-spacing: 0.06em;
+  }
+  .fsc-placement-tip {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}

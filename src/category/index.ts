@@ -31,6 +31,7 @@ import { dehydratorMoistureEstimator } from '../tool/dehydrator-moisture-estimat
 import { dryAgingMeatEstimator } from '../tool/dry-aging-meat-estimator/entry';
 import { chocolateTemperingCurveGuide } from '../tool/chocolate-tempering-curve-guide/entry';
 import { yeastFermentationCalculator } from '../tool/yeast-fermentation-calculator/entry';
+import { foodSafeTemperatureChecker } from '../tool/food-safe-temperature-checker/entry';
 
 
 export const cookingCategory: CookingCategoryEntry = {
@@ -68,6 +69,7 @@ export const cookingCategory: CookingCategoryEntry = {
     dryAgingMeatEstimator,
     chocolateTemperingCurveGuide,
     yeastFermentationCalculator,
+    foodSafeTemperatureChecker,
   ],
 
 

@@ -31,6 +31,7 @@ export { cheeseFlocculationMultiplier } from './tool/cheese-flocculation-multipl
 export { dehydratorMoistureEstimator } from './tool/dehydrator-moisture-estimator/entry';
 export { dryAgingMeatEstimator } from './tool/dry-aging-meat-estimator/entry';
 export { chocolateTemperingCurveGuide } from './tool/chocolate-tempering-curve-guide/entry';
+export { foodSafeTemperatureChecker } from './tool/food-safe-temperature-checker/entry';
 export { cookingCategory } from './category';
 import { americanKitchenConverter } from './tool/american-kitchen-converter/entry';
 import { bananaCare } from './tool/banana-ripeness/entry';
@@ -65,9 +66,10 @@ import { cheeseFlocculationMultiplier } from './tool/cheese-flocculation-multipl
 import { dehydratorMoistureEstimator } from './tool/dehydrator-moisture-estimator/entry';
 import { dryAgingMeatEstimator } from './tool/dry-aging-meat-estimator/entry';
 import { chocolateTemperingCurveGuide } from './tool/chocolate-tempering-curve-guide/entry';
+import { foodSafeTemperatureChecker } from './tool/food-safe-temperature-checker/entry';
 
 
-export const ALL_ENTRIES = [americanKitchenConverter, bananaCare, brine, cookwareGuide, eggTimer, ingredientRescaler, kitchenTimer, meringuePeak, moldScaler, pizza, rouxGuide, sourdoughCalculator, yeastConverter, yeastFermentationCalculator, lactoFermentationSalt, spherificationBath, iceCreamPacPod, botulismCanningSafety, meatBinder, carryOverCooking, maillardReaction, macaronDrying, brixSorbetDensity, oilSmokePoint, leavenerAcidNeutralizer, pectinJam, sousVidePasteurization, emulsionStabilityCalculator, kojiInoculationCalculator, cheeseFlocculationMultiplier, dehydratorMoistureEstimator, dryAgingMeatEstimator, chocolateTemperingCurveGuide];
+export const ALL_ENTRIES = [americanKitchenConverter, bananaCare, brine, cookwareGuide, eggTimer, ingredientRescaler, kitchenTimer, meringuePeak, moldScaler, pizza, rouxGuide, sourdoughCalculator, yeastConverter, yeastFermentationCalculator, lactoFermentationSalt, spherificationBath, iceCreamPacPod, botulismCanningSafety, meatBinder, carryOverCooking, maillardReaction, macaronDrying, brixSorbetDensity, oilSmokePoint, leavenerAcidNeutralizer, pectinJam, sousVidePasteurization, emulsionStabilityCalculator, kojiInoculationCalculator, cheeseFlocculationMultiplier, dehydratorMoistureEstimator, dryAgingMeatEstimator, chocolateTemperingCurveGuide, foodSafeTemperatureChecker];
 
 
 

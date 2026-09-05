@@ -1,0 +1,121 @@
+---
+import './food-safe-temperature-checker.css';
+import { FOOD_SAFETY_PRESETS } from './logic';
+import type { FoodSafetyCheckerUI } from './entry';
+
+interface Props {
+  ui: FoodSafetyCheckerUI;
+}
+
+const { ui } = Astro.props;
+const firstPreset = FOOD_SAFETY_PRESETS[0]!;
+---
+
+<div class="fsc-shell" data-status="meets" data-ui={JSON.stringify(ui)}>
+  <div class="fsc-grid">
+    <section class="fsc-controls" aria-labelledby="fsc-controls-title">
+      <div class="fsc-section-heading">
+        <span class="fsc-step">01</span>
+        <h3 id="fsc-controls-title">{ui.foodLabel}</h3>
+      </div>
+      <label class="fsc-label" for="fsc-food-trigger">{ui.foodLabel}</label>
+      <div class="fsc-custom-select">
+        <button id="fsc-food-trigger" class="fsc-select-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="fsc-food-options">
+          <span id="fsc-food-value">{ui[firstPreset.nameKey]}</span>
+          <span class="fsc-select-chevron" aria-hidden="true"></span>
+        </button>
+        <ul id="fsc-food-options" class="fsc-select-menu" role="listbox" aria-label={ui.foodLabel} hidden>
+          {FOOD_SAFETY_PRESETS.map((preset, index) => (
+            <li role="presentation">
+              <button class="fsc-select-option" type="button" role="option" aria-selected={index === 0 ? 'true' : 'false'} data-food-id={preset.id}>{ui[preset.nameKey]}</button>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <p id="fsc-food-note" class="fsc-food-note">{ui.poultryNote}</p>
+
+      <div class="fsc-section-heading fsc-temperature-heading">
+        <span class="fsc-step">02</span>
+        <h3>{ui.temperatureLabel}</h3>
+      </div>
+      <div class="fsc-temperature-entry">
+        <label class="fsc-label" for="fsc-temperature-input">{ui.temperatureLabel}</label>
+        <div class="fsc-number-wrap">
+          <input id="fsc-temperature-input" class="fsc-number-input" type="number" min="0" max="100" step="0.1" value="74" inputmode="decimal" />
+          <span id="fsc-input-unit" class="fsc-input-unit">°C</span>
+        </div>
+      </div>
+      <div class="fsc-unit-toggle" role="group" aria-label={ui.temperatureLabel}>
+        <button type="button" class="fsc-unit-button is-active" data-unit="celsius" aria-pressed="true">{ui.unitCelsius}</button>
+        <button type="button" class="fsc-unit-button" data-unit="fahrenheit" aria-pressed="false">{ui.unitFahrenheit}</button>
+      </div>
+
+      <div class="fsc-note">
+        <span class="fsc-note-icon" aria-hidden="true">i</span>
+        <div>
+          <strong>{ui.noteTitle}</strong>
+          <p>{ui.noteText}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="fsc-results" aria-labelledby="fsc-results-title" aria-live="polite">
+      <div class="fsc-results-heading">
+        <div>
+          <p class="fsc-eyebrow">{ui.resultTitle}</p>
+          <h3 id="fsc-results-title"><span id="fsc-status-title">{ui.statusMeets}</span></h3>
+        </div>
+      </div>
+      <p id="fsc-status-description" class="fsc-status-description">{ui.meetsDescription}</p>
+
+      <div class="fsc-thermometer-panel">
+        <div class="fsc-thermometer-scale" aria-hidden="true">
+          <span id="fsc-scale-high">100°</span>
+          <span id="fsc-scale-mid">50°</span>
+          <span id="fsc-scale-low">0°</span>
+        </div>
+        <div class="fsc-thermometer" role="img" aria-label={ui.temperatureLabel}>
+          <div class="fsc-thermometer-track">
+            <div id="fsc-thermometer-fill" class="fsc-thermometer-fill"></div>
+            <div id="fsc-target-marker" class="fsc-target-marker"><span></span></div>
+          </div>
+          <div class="fsc-thermometer-bulb"></div>
+        </div>
+        <div class="fsc-gauge-copy">
+          <span class="fsc-gauge-label">{ui.measuredLabel}</span>
+          <strong id="fsc-measured-value">74°C</strong>
+          <span class="fsc-gauge-target"><span>{ui.targetLabel}</span> <strong id="fsc-target-value">74°C</strong></span>
+        </div>
+      </div>
+
+      <div class="fsc-stats">
+        <div class="fsc-stat">
+          <span>{ui.measuredLabel}</span>
+          <strong id="fsc-stat-measured">74°C</strong>
+        </div>
+        <div class="fsc-stat fsc-stat-target">
+          <span>{ui.targetLabel}</span>
+          <strong id="fsc-stat-target">74°C</strong>
+        </div>
+        <div class="fsc-stat">
+          <span>{ui.differenceLabel}</span>
+          <strong id="fsc-difference">0°C</strong>
+        </div>
+      </div>
+
+      <div class="fsc-rest-row">
+        <span class="fsc-rest-icon" aria-hidden="true">↻</span>
+        <div>
+          <span>{ui.restLabel}</span>
+          <strong id="fsc-rest-value">{ui.noRestNeeded}</strong>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <p class="fsc-placement-tip"><span aria-hidden="true">⌖</span> {ui.placementTip}</p>
+</div>
+
+<script>
+  import './client';
+</script>

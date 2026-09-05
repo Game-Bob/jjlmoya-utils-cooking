@@ -63,12 +63,14 @@ export const ALL_TOOLS: ToolDefinition[] = [
   DEHYDRATOR_MOISTURE_ESTIMATOR_TOOL,
   DRY_AGING_MEAT_ESTIMATOR_TOOL,
   CHOCOLATE_TEMPERING_CURVE_GUIDE_TOOL,
+  FOOD_SAFE_TEMPERATURE_CHECKER_TOOL,
 ];
 import { KOJI_INOCULATION_CALCULATOR_TOOL } from './tool/koji-inoculation-calculator';
 import { CHEESE_FLOCCULATION_MULTIPLIER_TOOL } from './tool/cheese-flocculation-multiplier';
 import { DEHYDRATOR_MOISTURE_ESTIMATOR_TOOL } from './tool/dehydrator-moisture-estimator';
 import { DRY_AGING_MEAT_ESTIMATOR_TOOL } from './tool/dry-aging-meat-estimator';
 import { CHOCOLATE_TEMPERING_CURVE_GUIDE_TOOL } from './tool/chocolate-tempering-curve-guide';
+import { FOOD_SAFE_TEMPERATURE_CHECKER_TOOL } from './tool/food-safe-temperature-checker';
 
 
 
