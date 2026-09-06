@@ -55,7 +55,7 @@ export type FoodSafetyCheckerLocaleContent = ToolLocaleContent<FoodSafetyChecker
 export const foodSafeTemperatureChecker: CookingToolEntry<FoodSafetyCheckerUI> = {
   id: 'food-safe-temperature-checker',
   icons: {
-    bg: 'mdi:food-thermometer-outline',
+    bg: 'mdi:thermometer',
     fg: 'mdi:thermometer-check',
   },
   i18n: {
